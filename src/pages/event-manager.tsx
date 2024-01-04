@@ -4,7 +4,6 @@ import { CreateEventForm } from "../features/add-events-with-needs";
 const EventManager = () => {
   return (
     <div>
-      <h1>Event Manager</h1>
       <CreateEventForm />
     </div>
   );
