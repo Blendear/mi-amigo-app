@@ -1,9 +1,8 @@
 // Table of content for this file is written at the bottom
 import { createSlice, configureStore, PayloadAction } from "@reduxjs/toolkit";
-import { Chunk } from "../../types";
 
 //  _. Initial states
-const ChunkState: Chunk = { isAuthenticated: false };
+const ChunkState: any = { isAuthenticated: false };
 
 //  _. Slices
 //       _._. Slice - Chunk
