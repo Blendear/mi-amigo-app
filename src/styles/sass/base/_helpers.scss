@@ -1,0 +1,8 @@
+//
+//~~ _.  Globally used helper styles (for example "quick fix for floating element") - locally used helpers are in their specific files, where they are used
+//
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: table;
+}
