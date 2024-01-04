@@ -35,7 +35,6 @@ button {
   line-height: typography.$line-height-sm;
   text-align: center;
   color: colors.$quaternary-light;
-  overflow: hidden;
 
   ::placeholder {
     @include fontStylingGlobal();

@@ -1,12 +1,11 @@
 import styles from "src/styles/sass/styles-all.module.scss";
 import { placeholderEventEmpty, EventWithNeeds } from "..";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const CreateEventForm = () => {
-  // const [formData, setFormData] = useState<EventWithNeeds>(
-  //   placeholderEventEmpty
-  // );
   const formDataRef = useRef<EventWithNeeds>(placeholderEventEmpty);
+  const [submittedFormData, setSubmittedFormData] =
+    useState<EventWithNeeds | null>(null);
 
   const handleInputChange = (field: string, value: any) => {
     const fields = field.split(".");
@@ -34,13 +33,13 @@ const CreateEventForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log(formDataRef.current);
+    setSubmittedFormData({ ...formDataRef.current });
   };
 
   return (
     <form
       onSubmit={handleSubmit}
       style={{
-        overflowY: "scroll",
         display: "grid",
         rowGap: "0.2rem",
         margin: "2rem",
@@ -254,6 +253,21 @@ const CreateEventForm = () => {
       </label>
 
       <button type="submit">Create Event</button>
+      <div>
+        {submittedFormData && (
+          <div>
+            <h2>Submitted Form Data:</h2>
+            <pre
+              style={{
+                fontSize: "1rem",
+                display: "grid",
+              }}
+            >
+              {JSON.stringify(submittedFormData, null, 2)}
+            </pre>
+          </div>
+        )}
+      </div>
     </form>
   );
 };
