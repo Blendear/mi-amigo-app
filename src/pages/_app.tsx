@@ -15,10 +15,7 @@ function MyApp({ Component, pageProps }: AppProps<{}>) {
       <Layout>
         <Head>
           {/* //       _._. Title & Meta tags - which will be visible in the browser tab & are good for SEO */}
-          <title>
-            Title wisible in tab & Good for SEO & its what users see when they
-            click to enter your website from search result
-          </title>
+          <title>Mi Amigo | Twój Ziomuś</title>
           {/* for example : <title>iPhone 12 XS Max For Sale in Colorado - Big Discounts | Apple</title>  */}
           <meta
             name="description"
