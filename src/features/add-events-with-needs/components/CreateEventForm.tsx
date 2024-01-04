@@ -1,15 +1,39 @@
 import styles from "src/styles/sass/styles-all.module.scss";
 import { placeholderEventEmpty, EventWithNeeds } from "..";
-import { useState } from "react";
+import { useRef } from "react";
 
 const CreateEventForm = () => {
-  const [formData, setFormData] = useState<EventWithNeeds>(
-    placeholderEventEmpty
-  );
+  // const [formData, setFormData] = useState<EventWithNeeds>(
+  //   placeholderEventEmpty
+  // );
+  const formDataRef = useRef<EventWithNeeds>(placeholderEventEmpty);
+
+  const handleInputChange = (field: string, value: any) => {
+    const fields = field.split(".");
+
+    if (fields.length === 1) {
+      // If it's a top-level field
+      formDataRef.current = {
+        ...formDataRef.current,
+        [field]: value,
+      };
+    } else if (fields.length > 1) {
+      // If it's a nested field
+      formDataRef.current = {
+        ...formDataRef.current,
+        [fields[0]]: {
+          ...formDataRef.current[fields[0]],
+          [fields[1]]: value,
+        },
+      };
+    }
+  };
+
+  console.log("rerender");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(formData);
+    console.log(formDataRef.current);
   };
 
   return (
@@ -29,8 +53,8 @@ const CreateEventForm = () => {
         Name:
         <input
           type="text"
-          value={formData.name}
-          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+          placeholder={formDataRef.current.name}
+          onChange={(e) => handleInputChange("name", e.target.value)}
         />
       </label>
 
@@ -38,10 +62,8 @@ const CreateEventForm = () => {
         Description:
         <input
           type="text"
-          value={formData.description}
-          onChange={(e) =>
-            setFormData({ ...formData, description: e.target.value })
-          }
+          placeholder={formDataRef.current.description}
+          onChange={(e) => handleInputChange("description", e.target.value)}
         />
       </label>
 
@@ -49,66 +71,20 @@ const CreateEventForm = () => {
         Image Path:
         <input
           type="text"
-          value={formData.imagePath}
-          onChange={(e) =>
-            setFormData({ ...formData, imagePath: e.target.value })
-          }
+          placeholder={formDataRef.current.imagePath}
+          onChange={(e) => handleInputChange("imagePath", e.target.value)}
         />
       </label>
 
-      <label>
-        Image Alt Text:
-        <input
-          type="text"
-          value={formData.imageAltText}
-          onChange={(e) =>
-            setFormData({ ...formData, imageAltText: e.target.value })
-          }
-        />
-      </label>
-
-      <label>
-        Event Group ID:
-        <input
-          type="text"
-          value={formData.eventGroupId}
-          onChange={(e) =>
-            setFormData({ ...formData, eventGroupId: e.target.value })
-          }
-        />
-      </label>
-
-      <label>
-        Event Instance ID:
-        <input
-          type="text"
-          value={formData.eventInstanceId}
-          onChange={(e) =>
-            setFormData({ ...formData, eventInstanceId: e.target.value })
-          }
-        />
-      </label>
-
-      <label>
-        GIF Path:
-        <input
-          type="text"
-          value={formData.GIFPath}
-          onChange={(e) =>
-            setFormData({ ...formData, GIFPath: e.target.value })
-          }
-        />
-      </label>
+      {/* Repeat similar pattern for other input fields */}
 
       {/* All Day Long Variant Props */}
       <label>
         Is All Day Long:
         <input
           type="checkbox"
-          checked={formData.isAllDayLong}
-          onChange={(e) =>
-            setFormData({ ...formData, isAllDayLong: e.target.checked })
-          }
+          defaultChecked={formDataRef.current.isAllDayLong}
+          onChange={(e) => handleInputChange("isAllDayLong", e.target.checked)}
         />
       </label>
 
@@ -116,15 +92,12 @@ const CreateEventForm = () => {
         Importance:
         <input
           type="number"
-          value={formData.allDayLongVariantProps.importance}
+          placeholder={formDataRef.current.allDayLongVariantProps.importance.toString()}
           onChange={(e) =>
-            setFormData({
-              ...formData,
-              allDayLongVariantProps: {
-                ...formData.allDayLongVariantProps,
-                importance: +e.target.value as 1 | 2,
-              },
-            })
+            handleInputChange(
+              "allDayLongVariantProps.importance",
+              +e.target.value as 1 | 2
+            )
           }
         />
       </label>
@@ -133,17 +106,16 @@ const CreateEventForm = () => {
         Date:
         <input
           type="date"
-          value={
-            formData.allDayLongVariantProps.date.toISOString().split("T")[0]
+          placeholder={
+            formDataRef.current.allDayLongVariantProps.date
+              .toISOString()
+              .split("T")[0]
           }
           onChange={(e) =>
-            setFormData({
-              ...formData,
-              allDayLongVariantProps: {
-                ...formData.allDayLongVariantProps,
-                date: new Date(e.target.value),
-              },
-            })
+            handleInputChange(
+              "allDayLongVariantProps.date",
+              new Date(e.target.value)
+            )
           }
         />
       </label>
@@ -153,17 +125,14 @@ const CreateEventForm = () => {
         Start Date and Time:
         <input
           type="datetime-local"
-          value={formData.timedVariantProps.startDateAndTime
+          placeholder={formDataRef.current.timedVariantProps.startDateAndTime
             .toISOString()
             .slice(0, -8)}
           onChange={(e) =>
-            setFormData({
-              ...formData,
-              timedVariantProps: {
-                ...formData.timedVariantProps,
-                startDateAndTime: new Date(e.target.value),
-              },
-            })
+            handleInputChange(
+              "timedVariantProps.startDateAndTime",
+              new Date(e.target.value)
+            )
           }
         />
       </label>
@@ -172,17 +141,14 @@ const CreateEventForm = () => {
         End Date and Time:
         <input
           type="datetime-local"
-          value={formData.timedVariantProps.endDateAndTime
+          placeholder={formDataRef.current.timedVariantProps.endDateAndTime
             .toISOString()
             .slice(0, -8)}
           onChange={(e) =>
-            setFormData({
-              ...formData,
-              timedVariantProps: {
-                ...formData.timedVariantProps,
-                endDateAndTime: new Date(e.target.value),
-              },
-            })
+            handleInputChange(
+              "timedVariantProps.endDateAndTime",
+              new Date(e.target.value)
+            )
           }
         />
       </label>
@@ -192,10 +158,8 @@ const CreateEventForm = () => {
         Has Deadline:
         <input
           type="checkbox"
-          checked={formData.hasDeadline}
-          onChange={(e) =>
-            setFormData({ ...formData, hasDeadline: e.target.checked })
-          }
+          defaultChecked={formDataRef.current.hasDeadline}
+          onChange={(e) => handleInputChange("hasDeadline", e.target.checked)}
         />
       </label>
 
@@ -206,14 +170,8 @@ const CreateEventForm = () => {
         Trap:
         <input
           type="text"
-          value={formData.addOns.traps[0]?.name || ""}
-          onChange={
-            (e) => console.log("TODO: onChange from Trap")
-            // setFormData({
-            //   ...formData,
-            //   addOns: { ...formData.addOns, traps: [{ name: e.target.value }] },
-            // })
-          }
+          placeholder={formDataRef.current.addOns.traps[0]?.name || ""}
+          onChange={(e) => console.log("TODO: onChange from Trap")}
         />
       </label>
 
@@ -224,15 +182,9 @@ const CreateEventForm = () => {
         Is Want:
         <input
           type="checkbox"
-          checked={formData.needsFulfilled.isWant}
+          defaultChecked={formDataRef.current.needsFulfilled.isWant}
           onChange={(e) =>
-            setFormData({
-              ...formData,
-              needsFulfilled: {
-                ...formData.needsFulfilled,
-                isWant: e.target.checked,
-              },
-            })
+            handleInputChange("needsFulfilled.isWant", e.target.checked)
           }
         />
       </label>
@@ -244,15 +196,12 @@ const CreateEventForm = () => {
         Start Event Sound:
         <input
           type="text"
-          value={formData.vocalNotifications.startEventSound}
+          placeholder={formDataRef.current.vocalNotifications.startEventSound}
           onChange={(e) =>
-            setFormData({
-              ...formData,
-              vocalNotifications: {
-                ...formData.vocalNotifications,
-                startEventSound: e.target.value,
-              },
-            })
+            handleInputChange(
+              "vocalNotifications.startEventSound",
+              e.target.value
+            )
           }
         />
       </label>
@@ -261,15 +210,15 @@ const CreateEventForm = () => {
         X Minutes Before Start Amount:
         <input
           type="number"
-          value={formData.vocalNotifications.xMinutesBeforeStartAmount || ""}
+          placeholder={
+            formDataRef.current.vocalNotifications.xMinutesBeforeStartAmount?.toString() ||
+            ""
+          }
           onChange={(e) =>
-            setFormData({
-              ...formData,
-              vocalNotifications: {
-                ...formData.vocalNotifications,
-                xMinutesBeforeStartAmount: +e.target.value,
-              },
-            })
+            handleInputChange(
+              "vocalNotifications.xMinutesBeforeStartAmount",
+              +e.target.value
+            )
           }
         />
       </label>
@@ -278,15 +227,14 @@ const CreateEventForm = () => {
         X Minutes Before Start Sound:
         <input
           type="text"
-          value={formData.vocalNotifications.xMinutesBeforeStartSound}
+          placeholder={
+            formDataRef.current.vocalNotifications.xMinutesBeforeStartSound
+          }
           onChange={(e) =>
-            setFormData({
-              ...formData,
-              vocalNotifications: {
-                ...formData.vocalNotifications,
-                xMinutesBeforeStartSound: e.target.value,
-              },
-            })
+            handleInputChange(
+              "vocalNotifications.xMinutesBeforeStartSound",
+              e.target.value
+            )
           }
         />
       </label>
@@ -295,15 +243,12 @@ const CreateEventForm = () => {
         End Event Sound:
         <input
           type="text"
-          value={formData.vocalNotifications.endEventSound}
+          placeholder={formDataRef.current.vocalNotifications.endEventSound}
           onChange={(e) =>
-            setFormData({
-              ...formData,
-              vocalNotifications: {
-                ...formData.vocalNotifications,
-                endEventSound: e.target.value,
-              },
-            })
+            handleInputChange(
+              "vocalNotifications.endEventSound",
+              e.target.value
+            )
           }
         />
       </label>
