@@ -53,6 +53,34 @@ button {
   }
 }
 
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+input {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  border: 0.1rem solid #007a7e;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+  &:checked {
+    background-color: #007a7e;
+  }
+}
+
 input,
 select {
   @include fontStylingGlobal();
