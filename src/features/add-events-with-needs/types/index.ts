@@ -67,3 +67,8 @@ export type AllDBDataOfUser = {
     scheduleOfTimedEvents: ScheduleOfTimedEvents;
   };
 };
+
+export type ImageAndInputProps = {
+  currentValue: string;
+  onChange: (field: string, value: any) => void;
+};

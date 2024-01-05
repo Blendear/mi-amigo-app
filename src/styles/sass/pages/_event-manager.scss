@@ -1,0 +1,11 @@
+.event-manager {
+  &__container {
+  }
+  &__form {
+    &__img-n-input {
+      position: relative;
+      width: 20dvw;
+      aspect-ratio: 16/9;
+    }
+  }
+}
