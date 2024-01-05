@@ -39,9 +39,9 @@
     &__img-n-input {
       width: 100%;
       grid-row: 1;
-
       display: grid;
       row-gap: 1.5rem;
+      grid-template-columns: repeat(2, 1fr);
       & > div {
         position: relative;
         width: 100%;
@@ -49,11 +49,8 @@
         border-radius: 2rem 2rem 0 0;
         overflow: hidden;
       }
-      & > label {
-      }
     }
-    &__gif-path {
-    }
+
     &__props-by-time-dependancy {
       padding: 1rem;
       display: grid;
