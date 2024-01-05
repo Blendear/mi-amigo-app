@@ -8,6 +8,12 @@ const placeholderImagePath = `https://images.unsplash.com/photo-1464375117522-13
 const ImageAndInput = ({ currentValue, onChange }: ImageAndInputProps) => {
   const [imagePath, setImagePath] = useState<string>(placeholderImagePath);
 
+  const generateImagePath = (imagePath: string) => {
+    return imagePath.startsWith("http://") || imagePath.startsWith("https://")
+      ? imagePath
+      : placeholderImagePath;
+  };
+
   return (
     <>
       <div className={styles["event-manager__form__img-n-input"]}>
@@ -26,13 +32,7 @@ const ImageAndInput = ({ currentValue, onChange }: ImageAndInputProps) => {
           placeholder={currentValue}
           onChange={(e) => {
             onChange("name", e.target.value),
-              setImagePath(
-                `https://${
-                  e.target.value !== ""
-                    ? e.target.value
-                    : "images.unsplash.com/photo-1464375117522-1311d6a5b81f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw&auto=format&fit=crop&w=2250&q=80"
-                }`
-              );
+              setImagePath(generateImagePath(e.target.value));
           }}
         />
       </label>
