@@ -25,12 +25,8 @@ html {
 
 @mixin fontStylingGlobal {
   font-family: typography.$font-family-primary;
-  font-size: typography.$font-size-md;
-  font-weight: typography.$font-weight-normal;
-  color: rgb(50, 133, 150);
 }
-body,
-button {
+* {
   @include fontStylingGlobal();
   line-height: typography.$line-height-sm;
   text-align: center;

@@ -2,12 +2,12 @@ import Image from "next/image";
 import styles from "src/styles/sass/styles-all.module.scss";
 import { useState } from "react";
 import {
-  ImageAndInputProps,
+  EventFormSegmentProps,
   placeholderImagePath,
   generateImagePath,
 } from "..";
 
-const ImageAndInput = ({ currentValue, onChange }: ImageAndInputProps) => {
+const ImageAndInput = ({ formDataRef, onChange }: EventFormSegmentProps) => {
   const [imagePath, setImagePath] = useState<string>(placeholderImagePath);
 
   return (
@@ -25,7 +25,7 @@ const ImageAndInput = ({ currentValue, onChange }: ImageAndInputProps) => {
         ImagePath
         <input
           type="text"
-          placeholder={currentValue}
+          placeholder={formDataRef.current.imagePath}
           onChange={(e) => {
             onChange("imagePath", e.target.value),
               setImagePath(generateImagePath(e.target.value));

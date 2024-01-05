@@ -30,7 +30,7 @@ const Footer = () => {
         className={`${styles["layout__footer__caly-container__fragment-1-np-kontaktowe-info"]} ${styles["...wyglad..."]}`}
       >
         {/* <aComponent/> */}
-        FOOTER
+        {/* FOOTER */}
       </div>
 
       <div

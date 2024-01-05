@@ -1,8 +1,10 @@
 //
 // trap1 - include mixins WITHOUT "$" - like " @include mixins.gradient-cross-browser("bg",90deg,colors.$gradient-primary-A,colors.$gradient-primary-B);
 //
-@use "../../../styles/sass/base/typography";
 
+@use "../../../styles/sass/abstracts/colors";
+@use "../../../styles/sass/abstracts/variables";
+@use "../../../styles/sass/base/typography";
 //       _._. Dynamically colored form - colors (theme) for the elements are given as arguments
 @mixin color-theme-and-basic-props-for-forms(
   $bg,
@@ -67,10 +69,7 @@
   }
 }
 
-//
-//~~ _.  Globally used mixins - locally used mixins are in their specific files, where they are used
-//
-//       _._. Dynamically colored form - colors (theme) for the elements are given as arguments
-//
-//       _._. Dynamically colored button - colors (theme) for the elements are given as arguments
-//
+@mixin border-with-radius {
+  border-radius: variables.$border-radius-sm;
+  border: 0.1rem solid rgba(colors.$primary-light, 0.2);
+}

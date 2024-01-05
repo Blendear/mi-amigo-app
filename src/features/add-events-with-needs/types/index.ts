@@ -68,7 +68,7 @@ export type AllDBDataOfUser = {
   };
 };
 
-export type ImageAndInputProps = {
-  currentValue: string;
+export type EventFormSegmentProps = {
+  formDataRef: any;
   onChange: (field: string, value: any) => void;
 };
