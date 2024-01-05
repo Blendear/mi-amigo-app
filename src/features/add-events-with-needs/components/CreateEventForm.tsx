@@ -1,5 +1,5 @@
 import styles from "src/styles/sass/styles-all.module.scss";
-import { placeholderEventEmpty, EventWithNeeds } from "..";
+import { placeholderEventEmpty, EventWithNeeds, ImageAndInput } from "..";
 import { useRef, useState } from "react";
 
 const CreateEventForm = () => {
@@ -48,14 +48,10 @@ const CreateEventForm = () => {
       }}
     >
       {/* General Event Info  */}
-      <label>
-        Name:
-        <input
-          type="text"
-          placeholder={formDataRef.current.name}
-          onChange={(e) => handleInputChange("name", e.target.value)}
-        />
-      </label>
+      <ImageAndInput
+        currentValue={formDataRef.current.name}
+        onChange={handleInputChange}
+      />
 
       <label>
         Description:
