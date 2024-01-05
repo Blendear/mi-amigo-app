@@ -1,11 +1,55 @@
+@use "../../../styles/sass/abstracts/mixins";
+@use "../../../styles/sass/abstracts/colors";
+@use "../../../styles/sass/abstracts/variables";
+@use "../../../styles/sass/base/typography";
+
 .event-manager {
   &__container {
+    display: grid;
   }
   &__form {
+    background-color: black;
+    display: grid;
+    justify-items: center;
+    color: colors.$primary-light;
+    & label {
+      display: grid;
+      justify-items: center;
+      & > input,
+      textarea {
+        border-radius: variables.$border-radius-sm;
+        border: 0.1rem solid rgba(colors.$primary-light, 0.2);
+      }
+    }
+    &__name {
+    }
+    &__description {
+    }
     &__img-n-input {
-      position: relative;
-      width: 20dvw;
-      aspect-ratio: 16/9;
+      grid-row: 1;
+      & > div {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16/9;
+      }
+      & > label {
+      }
+    }
+    &__gif-path {
+    }
+    &__is-all-day-long {
+    }
+    &__all-day-long-variant-props {
+    }
+    &__timed-variant-props {
+    }
+    &__has-deadline {
+    }
+    &__add-ons {
+    }
+    &__needs-fulfilled {
+    }
+    &__vocal-notifications {
     }
   }
 }

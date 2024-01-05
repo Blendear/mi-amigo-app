@@ -28,8 +28,6 @@ const CreateEventForm = () => {
     }
   };
 
-  console.log("rerender");
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log(formDataRef.current);
@@ -37,44 +35,33 @@ const CreateEventForm = () => {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      style={{
-        display: "grid",
-        rowGap: "0.2rem",
-        margin: "2rem",
-        padding: "1rem",
-        backgroundColor: "lightgray",
-      }}
-    >
+    <form className={styles["event-manager__form"]} onSubmit={handleSubmit}>
       {/* General Event Info  */}
-      <ImageAndInput
-        currentValue={formDataRef.current.name}
-        onChange={handleInputChange}
-      />
-
-      <label>
-        Description:
+      <label className={styles["event-manager__form__name"]}>
+        Name
         <input
           type="text"
+          placeholder={formDataRef.current.name}
+          onChange={(e) => handleInputChange("name", e.target.value)}
+        />
+      </label>
+
+      <label className={styles["event-manager__description"]}>
+        Description
+        <textarea
           placeholder={formDataRef.current.description}
           onChange={(e) => handleInputChange("description", e.target.value)}
         />
       </label>
 
-      <label>
-        Image Path:
-        <input
-          type="text"
-          placeholder={formDataRef.current.imagePath}
-          onChange={(e) => handleInputChange("imagePath", e.target.value)}
-        />
-      </label>
-
+      <ImageAndInput
+        currentValue={formDataRef.current.imagePath}
+        onChange={handleInputChange}
+      />
       {/* Repeat similar pattern for other input fields */}
 
       {/* All Day Long Variant Props */}
-      <label>
+      <label className={styles["event-manager__is-all-day-long"]}>
         Is All Day Long:
         <input
           type="checkbox"
@@ -83,7 +70,7 @@ const CreateEventForm = () => {
         />
       </label>
 
-      <label>
+      <label className={styles["event-manager__all-day-long-variant-props"]}>
         Importance:
         <input
           type="number"
@@ -97,7 +84,7 @@ const CreateEventForm = () => {
         />
       </label>
 
-      <label>
+      <label className={styles["event-manager__all-day-long-variant-props"]}>
         Date:
         <input
           type="date"
@@ -116,7 +103,7 @@ const CreateEventForm = () => {
       </label>
 
       {/* Timed Variant Props */}
-      <label>
+      <label className={styles["event-manager__timed-variant-props"]}>
         Start Date and Time:
         <input
           type="datetime-local"
@@ -132,7 +119,7 @@ const CreateEventForm = () => {
         />
       </label>
 
-      <label>
+      <label className={styles["event-manager__timed-variant-props"]}>
         End Date and Time:
         <input
           type="datetime-local"
@@ -149,7 +136,7 @@ const CreateEventForm = () => {
       </label>
 
       {/* Has Deadline */}
-      <label>
+      <label className={styles["event-manager__has-deadline"]}>
         Has Deadline:
         <input
           type="checkbox"
@@ -161,7 +148,7 @@ const CreateEventForm = () => {
       {/* Add Ons */}
       {/* You might want to handle the array fields differently, e.g., add/remove items */}
       {/* For simplicity, let's just add a single "trap" here */}
-      <label>
+      <label className={styles["event-manager__add-ons"]}>
         Trap:
         <input
           type="text"
@@ -173,7 +160,7 @@ const CreateEventForm = () => {
       {/* Repeat similar pattern for protips, places, programs, objects, etc. */}
 
       {/* Needs Fulfilled */}
-      <label>
+      <label className={styles["event-manager__needs-fulfilled"]}>
         Is Want:
         <input
           type="checkbox"
@@ -187,7 +174,7 @@ const CreateEventForm = () => {
       {/* Add other checkboxes for different needs */}
 
       {/* Vocal Notifications */}
-      <label>
+      <label className={styles["event-manager__vocal-notifications"]}>
         Start Event Sound:
         <input
           type="text"
@@ -201,7 +188,7 @@ const CreateEventForm = () => {
         />
       </label>
 
-      <label>
+      <label className={styles["event-manager__vocal-notifications"]}>
         X Minutes Before Start Amount:
         <input
           type="number"
@@ -218,7 +205,7 @@ const CreateEventForm = () => {
         />
       </label>
 
-      <label>
+      <label className={styles["event-manager__vocal-notifications"]}>
         X Minutes Before Start Sound:
         <input
           type="text"
@@ -234,7 +221,7 @@ const CreateEventForm = () => {
         />
       </label>
 
-      <label>
+      <label className={styles["event-manager__vocal-notifications"]}>
         End Event Sound:
         <input
           type="text"
@@ -253,14 +240,7 @@ const CreateEventForm = () => {
         {submittedFormData && (
           <div>
             <h2>Submitted Form Data:</h2>
-            <pre
-              style={{
-                fontSize: "1rem",
-                display: "grid",
-              }}
-            >
-              {JSON.stringify(submittedFormData, null, 2)}
-            </pre>
+            <pre>{JSON.stringify(submittedFormData, null, 2)}</pre>
           </div>
         )}
       </div>

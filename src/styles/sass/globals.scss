@@ -25,16 +25,15 @@ html {
 
 @mixin fontStylingGlobal {
   font-family: typography.$font-family-primary;
-  font-size: typography.$font-size-sm;
+  font-size: typography.$font-size-md;
   font-weight: typography.$font-weight-normal;
+  color: rgb(50, 133, 150);
 }
 body,
 button {
   @include fontStylingGlobal();
-  font-size: typography.$font-size-md;
   line-height: typography.$line-height-sm;
   text-align: center;
-  color: colors.$quaternary-light;
 
   ::placeholder {
     @include fontStylingGlobal();
@@ -68,6 +67,7 @@ input {
 }
 
 input[type="checkbox"] {
+  -webkit-tap-highlight-color: transparent;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -79,6 +79,13 @@ input[type="checkbox"] {
   &:checked {
     background-color: #007a7e;
   }
+}
+
+textarea {
+  resize: none;
+  border: none;
+  background: none;
+  outline: none;
 }
 
 input,
