@@ -10,6 +10,7 @@ import {
   AddOns,
 } from "..";
 import { useRef, useState } from "react";
+import { patchEventsWithNeedsInDB } from "../../..";
 
 const CreateEventForm = () => {
   const formDataRef = useRef<EventWithNeeds>(placeholderEventEmpty);
@@ -41,6 +42,8 @@ const CreateEventForm = () => {
     e.preventDefault();
     console.log(formDataRef.current);
     setSubmittedFormData({ ...formDataRef.current });
+    // TRAP1 - THE WHOLE EVENTS WIHT NEESD DATA OBJECT IS UPDATED - not just the all day events
+    patchEventsWithNeedsInDB("Tobi The Wizard", formDataRef.current);
   };
 
   return (

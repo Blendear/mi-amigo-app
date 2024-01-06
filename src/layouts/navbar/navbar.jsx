@@ -1,5 +1,5 @@
 import styles from "src/styles/sass/styles-all.module.scss";
-import { DialogModal } from "../..";
+import { DialogModal, updateMiAmigoDataOfUser } from "../..";
 import { useState } from "react";
 import { CreateEventForm } from "../../features/add-events-with-needs";
 

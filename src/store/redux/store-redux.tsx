@@ -1,6 +1,11 @@
 import { createSlice, configureStore, PayloadAction } from "@reduxjs/toolkit";
+import { placeholderEventEmpty } from "../../features/add-events-with-needs";
 
-const appDataOfCurrentUser = { nothing: "to see here" };
+const appDataOfCurrentUser = {
+  eventsWithNeeds: {
+    chestWithAllDayLongEvents: [placeholderEventEmpty],
+  },
+};
 
 const appDataOfCurrentUserSlice = createSlice({
   name: "appDataOfCurrentUserSlice",
