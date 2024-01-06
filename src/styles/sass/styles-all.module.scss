@@ -6,5 +6,7 @@
 
 @use "./components/backdrop";
 @use "./components/modal";
+@use "./components/button-that-plays-sound";
+@use "./components/submit-btn";
 
 @use "./pages/event-manager";

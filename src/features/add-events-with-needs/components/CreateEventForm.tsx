@@ -68,10 +68,7 @@ const CreateEventForm = () => {
         formDataRef={formDataRef}
         onChange={handleInputChange}
       />
-      <button
-        type="submit"
-        className={styles["event-manager__form__submit-button"]}
-      >
+      <button type="submit" className={styles["submit-btn"]}>
         Create Event
       </button>
       <div

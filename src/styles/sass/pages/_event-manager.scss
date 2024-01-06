@@ -72,11 +72,7 @@
     }
     &__vocal-notifications {
     }
-    &__submit-button {
-      padding: 1rem;
-      background-color: colors.$primary-light;
-      @include mixins.border-with-radius();
-    }
+
     &__temporary-JSON-visualisation {
       font-size: typography.$font-size-xs;
     }

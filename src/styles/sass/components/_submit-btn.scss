@@ -1,0 +1,11 @@
+@use "../../../styles/sass/abstracts/mixins";
+@use "../../../styles/sass/abstracts/colors";
+@use "../../../styles/sass/abstracts/variables";
+@use "../../../styles/sass/base/typography";
+
+.submit-btn {
+  padding: 1rem;
+  background-color: colors.$primary-light;
+  color: colors.$tertiary-light;
+  @include mixins.border-with-radius();
+}
