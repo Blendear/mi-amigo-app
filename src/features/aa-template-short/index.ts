@@ -19,4 +19,4 @@
 // Example import:
 //
 //          import { SVGItemsToBuy } from "./index";
-export {};
+export * from "./types";

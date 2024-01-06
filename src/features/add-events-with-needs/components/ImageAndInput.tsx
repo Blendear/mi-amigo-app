@@ -6,6 +6,7 @@ import {
   placeholderImagePath,
   generateImagePath,
 } from "..";
+import { ImageWithWrapper } from "../../..";
 
 const ImageAndInput = ({ formDataRef, onChange }: EventFormSegmentProps) => {
   const [imagePath, setImagePath] = useState<string>(placeholderImagePath);
@@ -13,24 +14,8 @@ const ImageAndInput = ({ formDataRef, onChange }: EventFormSegmentProps) => {
 
   return (
     <div className={styles["event-manager__form__img-n-input"]}>
-      <div>
-        <Image
-          src={imagePath}
-          alt={"An image based on the given url image path"}
-          layout="fill"
-          objectFit="cover"
-          priority
-        />
-      </div>
-      <div>
-        <Image
-          src={GIFPath}
-          alt={"An image based on the given url image path"}
-          layout="fill"
-          objectFit="cover"
-          priority
-        />
-      </div>
+      <ImageWithWrapper src={imagePath} width="100%" />
+      <ImageWithWrapper src={GIFPath} width="100%" />
       <label>
         ImagePath
         <input
