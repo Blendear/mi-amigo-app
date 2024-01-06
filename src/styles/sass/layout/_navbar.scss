@@ -1,7 +1,16 @@
-//
-//~~ _.  Navbar grid system & styling
-//
-//       _._. AA
-//
-//           _._._.AAA
-//
+@use "../../../styles/sass/abstracts/mixins";
+@use "../../../styles/sass/abstracts/colors";
+@use "../../../styles/sass/abstracts/variables";
+@use "../../../styles/sass/base/typography";
+
+.navbar {
+  &__container {
+    background-color: colors.$tertiary-light;
+    & > button {
+      width: 5rem;
+      aspect-ratio: 1/1;
+      @include mixins.border-with-radius;
+      font-size: typography.$font-size-lg;
+    }
+  }
+}

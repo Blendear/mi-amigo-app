@@ -20,7 +20,7 @@ const EventManager = () => {
       <ChestButton onClick={openModal} />
       {isModalOpen && (
         <DialogModal isOpen={isModalOpen} onClose={closeModal}>
-          <CreateEventForm />
+          <div>lista getnietyc eventow all day long</div>
         </DialogModal>
       )}
     </div>

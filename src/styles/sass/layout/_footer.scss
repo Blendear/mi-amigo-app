@@ -1,7 +1,10 @@
-//
-//~~ _.  Footer grid system & styling
-//
-//       _._. AA
-//
-//           _._._.AAA
-//
+@use "../../../styles/sass/abstracts/mixins";
+@use "../../../styles/sass/abstracts/colors";
+@use "../../../styles/sass/abstracts/variables";
+@use "../../../styles/sass/base/typography";
+
+.footer {
+  &__container {
+    background-color: colors.$tertiary-light;
+  }
+}

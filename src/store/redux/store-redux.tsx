@@ -1,50 +1,30 @@
-// Table of content for this file is written at the bottom
 import { createSlice, configureStore, PayloadAction } from "@reduxjs/toolkit";
 
-//  _. Initial states
-const ChunkState: any = { isAuthenticated: false };
+const appDataOfCurrentUser = { nothing: "to see here" };
 
-//  _. Slices
-//       _._. Slice - Chunk
-const chunkSlice = createSlice({
-  name: "authenticationSlice",
-  initialState: ChunkState,
+const appDataOfCurrentUserSlice = createSlice({
+  name: "appDataOfCurrentUserSlice",
+  initialState: appDataOfCurrentUser,
   reducers: {
-    login(state) {
-      state.isAuthenticated = true;
-    },
-    logout(state) {
-      state.isAuthenticated = false;
+    setAppDataOfCurrentUser(state, action: PayloadAction<any>) {
+      console.log("current data", state);
+      state = action.payload;
+      console.log("new data", action.payload);
+      console.log("new state", state);
     },
   },
 });
 
-//  _. Store - Redux Toolkit way
 const store = configureStore({
   reducer: {
-    chunkReducer: chunkSlice.reducer,
+    appDataOfCurrentUserReducer: appDataOfCurrentUserSlice.reducer,
   },
 });
 
-//  _. Necessary exports for TS to work
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
 
-//  _. Action Packs - Redux Toolkit way
-export const chunkSliceActions = chunkSlice.actions;
+export const appDataOfCurrentUserSliceActions =
+  appDataOfCurrentUserSlice.actions;
 
 export default store;
-
-//  _. Initial states
-//
-//       _._. In. state - Chunk
-//
-//  _. Slices
-//
-//       _._. Slice - Chunk
-//
-//  _. Store - Redux Toolkit way
-//
-//  _. Necessary exports for TS to work
-//
-//  _. Action Packs - Redux Toolkit way

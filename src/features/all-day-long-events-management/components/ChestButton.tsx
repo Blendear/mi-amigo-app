@@ -6,7 +6,7 @@ const ChestButton = ({ onClick }: ChestButtonProps) => {
   return (
     <button onClick={onClick} className={styles["event-manager__chest-button"]}>
       <ImageWithWrapper
-        src="https://img.lovepik.com/free-png/20210928/lovepik-treasure-chest-png-image_401721161_wh1200.png"
+        src="https://static.vecteezy.com/system/resources/previews/022/913/766/non_2x/game-equipment-chest-illustration-3d-png.png"
         width="10rem"
       />
     </button>

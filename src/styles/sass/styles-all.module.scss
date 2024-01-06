@@ -9,4 +9,7 @@
 @use "./components/button-that-plays-sound";
 @use "./components/submit-btn";
 
+@use "./layout/footer";
+@use "./layout/navbar";
+
 @use "./pages/event-manager";
