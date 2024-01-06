@@ -10,10 +10,8 @@ const Footer = () => {
   const userName = "Tobi The Wizard";
 
   useEffect(() => {
-    console.log("getDataFromDB started");
     const getItemsFromDB = async () => {
       const itemsFromDB = await getMiAmigoDataOfUser(userName, setLoadingState);
-      console.log("getDataFromDB gave us this items: ", itemsFromDB.data);
       dispatch(
         appDataOfCurrentUserSliceActions.setAppDataOfCurrentUser(
           itemsFromDB.data

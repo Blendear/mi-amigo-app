@@ -1,9 +1,8 @@
 import { createSlice, configureStore, PayloadAction } from "@reduxjs/toolkit";
-import { placeholderEventEmpty } from "../../features/add-events-with-needs";
 
 const appDataOfCurrentUser = {
   eventsWithNeeds: {
-    chestWithAllDayLongEvents: [placeholderEventEmpty],
+    chestWithAllDayLongEvents: [],
   },
 };
 
@@ -12,10 +11,9 @@ const appDataOfCurrentUserSlice = createSlice({
   initialState: appDataOfCurrentUser,
   reducers: {
     setAppDataOfCurrentUser(state, action: PayloadAction<any>) {
-      console.log("current data", state);
-      state = action.payload;
-      console.log("new data", action.payload);
-      console.log("new state", state);
+      state.eventsWithNeeds = action.payload.eventsWithNeeds;
+      //TODO: add test of properties setters - remember, thayt you can't just do "state = action.payload"
+      console.log("new events state", state.eventsWithNeeds);
     },
   },
 });
