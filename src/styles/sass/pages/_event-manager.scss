@@ -28,7 +28,8 @@
       display: grid;
       justify-items: center;
       & > input:not([type="checkbox"]),
-      > textarea {
+      > textarea,
+      > select {
         padding: 1rem;
         width: 100%;
         @include mixins.border-with-radius();

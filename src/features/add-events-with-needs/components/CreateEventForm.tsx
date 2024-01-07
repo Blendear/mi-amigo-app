@@ -58,12 +58,12 @@ const CreateEventForm = () => {
         onChange={handleInputChange}
       />
       <label className={styles["event-manager__form__has-deadline"]}>
-        Has Deadline:
-        <input
-          type="checkbox"
-          defaultChecked={formDataRef.current.hasDeadline}
-          onChange={(e) => handleInputChange("hasDeadline", e.target.checked)}
-        />
+        Deadline variant
+        <select defaultValue={formDataRef.current.deadlineVariant}>
+          <option value="none">None</option>
+          <option value="prefer">Prefer</option>
+          <option value="must">Must</option>
+        </select>
       </label>
       <AddOns formDataRef={formDataRef} onChange={handleInputChange} />
       <NeedsFullfilled formDataRef={formDataRef} onChange={handleInputChange} />

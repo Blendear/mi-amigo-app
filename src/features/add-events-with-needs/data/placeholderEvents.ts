@@ -10,14 +10,14 @@ export const placeholderEventEmpty: EventWithNeeds = {
   GIFPath: "",
   isAllDayLong: false,
   allDayLongVariantProps: {
-    importance: 0,
+    importance: "",
     date: new Date(),
   },
   timedVariantProps: {
     startDateAndTime: new Date(),
     endDateAndTime: new Date(),
   },
-  hasDeadline: false,
+  deadlineVariant: "none",
   addOns: {
     traps: [],
     protips: [],
@@ -54,14 +54,14 @@ export const placeholderEvent1: EventWithNeeds = {
   GIFPath: "/path/to/your/image1.gif",
   isAllDayLong: false,
   allDayLongVariantProps: {
-    importance: 1,
+    importance: "",
     date: new Date("2023-01-01T00:00:00Z"),
   },
   timedVariantProps: {
     startDateAndTime: new Date("2023-01-01T08:00:00Z"),
     endDateAndTime: new Date("2023-01-01T09:30:00Z"),
   },
-  hasDeadline: true,
+  deadlineVariant: "must",
   addOns: {
     traps: [],
     protips: [],
@@ -98,14 +98,14 @@ export const placeholderEvent2: EventWithNeeds = {
   GIFPath: "/path/to/your/image2.gif",
   isAllDayLong: true,
   allDayLongVariantProps: {
-    importance: 2,
+    importance: "necessary",
     date: new Date("2023-01-02T00:00:00Z"),
   },
   timedVariantProps: {
     startDateAndTime: new Date("2023-01-02T14:00:00Z"),
     endDateAndTime: new Date("2023-01-02T16:00:00Z"),
   },
-  hasDeadline: false,
+  deadlineVariant: "prefer",
   addOns: {
     traps: [],
     protips: [],

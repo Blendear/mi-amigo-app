@@ -13,17 +13,14 @@ const PropsByTimeDependency = ({ formDataRef, onChange }) => {
       </label>
       <div>
         <label>
-          Importance:
-          <input
-            type="number"
-            placeholder={formDataRef.current.allDayLongVariantProps.importance.toString()}
-            onChange={(e) =>
-              onChange(
-                "allDayLongVariantProps.importance",
-                +e.target.value as 1 | 2
-              )
-            }
-          />
+          Importance
+          <select
+            defaultValue={formDataRef.current.deadlineVariant}
+            required={true}
+          >
+            <option value="necessary">necessary</option>
+            <option value="extra">extra</option>
+          </select>
         </label>
 
         <label>

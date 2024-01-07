@@ -5,14 +5,14 @@ export interface EventWithNeeds
   GIFPath: string;
   isAllDayLong: boolean; // false = is timed
   allDayLongVariantProps: {
-    importance: 0 | 1 | 2;
+    importance: "" | "necessary" | "extra";
     date: Date;
   };
   timedVariantProps: {
     startDateAndTime: Date;
     endDateAndTime: Date;
   };
-  hasDeadline: boolean;
+  deadlineVariant: "none" | "prefer" | "must";
   addOns: {
     traps: EventAddon[];
     protips: EventAddon[];
