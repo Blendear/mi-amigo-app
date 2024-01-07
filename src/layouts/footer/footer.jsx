@@ -9,11 +9,15 @@ import { ImageWithWrapper } from "../..";
 import { FaPlay, FaPause } from "react-icons/fa";
 import { VscDebugRestart } from "react-icons/vsc";
 import { IoIosArrowUp } from "react-icons/io";
+import ReactHowler from "react-howler";
+
 const MyBeautifulTimer = () => {
   const gifTypeRef = useRef("adventure");
+  const howlerRef = useRef(null);
   const [timerKey, setTimerKey] = useState(0);
   const [isTimerPlaying, setIsTimerPlaying] = useState(true);
   const [currentTime, setCurrentTime] = useState(3030);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const handleSetTimer = (minutes, seconds, gifType) => {
     setCurrentTime(minutes * 60 + seconds);
@@ -37,8 +41,21 @@ const MyBeautifulTimer = () => {
     return `${minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
   };
 
+  const handleToggleSound = (newState) => {
+    setIsPlaying(newState);
+    if (newState) {
+      howlerRef.current.seek(0);
+    }
+  };
+
   return (
     <>
+      <ReactHowler
+        ref={howlerRef}
+        src="https://cdn.freesound.org/previews/718/718122_8432823-lq.mp3"
+        playing={isPlaying}
+        loop={false}
+      />
       <svg style={{ height: "0rem" }}>
         <defs>
           <linearGradient id="your-unique-id" x1="1" y1="0" x2="0" y2="0">
@@ -65,6 +82,7 @@ const MyBeautifulTimer = () => {
         strokeWidth={15}
         onComplete={() => {
           setIsTimerPlaying(false);
+          handleToggleSound(true);
         }}
       >
         {({ remainingTime }) => formatTime(remainingTime)}
@@ -85,7 +103,7 @@ const MyBeautifulTimer = () => {
         />
       </button>
       <button
-        onClick={() => handleSetTimer(9, 30, "chill")}
+        onClick={() => handleSetTimer(0, 1, "chill")}
         style={{
           filter: gifTypeRef.current !== "chill" ? "saturate(0%)" : "none",
         }}
@@ -109,6 +127,7 @@ const MyBeautifulTimer = () => {
       <button onClick={handleRestartTimer}>
         <VscDebugRestart fontSize={"3.5rem"} />
       </button>
+      <button onClick={() => handleToggleSound(false)}>D</button>
     </>
   );
 };
