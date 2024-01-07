@@ -10,6 +10,7 @@ import { FaPlay, FaPause } from "react-icons/fa";
 import { VscDebugRestart } from "react-icons/vsc";
 import { IoIosArrowUp } from "react-icons/io";
 import ReactHowler from "react-howler";
+import { IoVolumeMuteOutline } from "react-icons/io5";
 
 const MyBeautifulTimer = () => {
   const gifTypeRef = useRef("adventure");
@@ -20,6 +21,7 @@ const MyBeautifulTimer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handleSetTimer = (minutes, seconds, gifType) => {
+    handleToggleSound(false);
     setCurrentTime(minutes * 60 + seconds);
     setTimerKey((prevKey) => prevKey + 1);
     setIsTimerPlaying(true);
@@ -92,7 +94,7 @@ const MyBeautifulTimer = () => {
         {({ remainingTime }) => formatTime(remainingTime)}
       </CountdownCircleTimer>
       <button
-        onClick={() => handleSetTimer(0, 1, "adventure")}
+        onClick={() => handleSetTimer(0, 3, "adventure")}
         style={{
           filter: gifTypeRef.current !== "adventure" ? "saturate(0%)" : "none",
         }}
@@ -107,7 +109,7 @@ const MyBeautifulTimer = () => {
         />
       </button>
       <button
-        onClick={() => handleSetTimer(0, 1, "chill")}
+        onClick={() => handleSetTimer(0, 3, "chill")}
         style={{
           filter: gifTypeRef.current !== "chill" ? "saturate(0%)" : "none",
         }}
@@ -131,7 +133,9 @@ const MyBeautifulTimer = () => {
       <button onClick={handleRestartTimer}>
         <VscDebugRestart fontSize={"3.5rem"} />
       </button>
-      <button onClick={() => handleToggleSound(false)}>D</button>
+      <button onClick={() => handleToggleSound(false)}>
+        <IoVolumeMuteOutline fontSize={"3.5rem"} />
+      </button>
     </>
   );
 };
