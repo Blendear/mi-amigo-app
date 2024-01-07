@@ -52,7 +52,11 @@ const MyBeautifulTimer = () => {
     <>
       <ReactHowler
         ref={howlerRef}
-        src="https://cdn.freesound.org/previews/718/718122_8432823-lq.mp3"
+        src={
+          gifTypeRef.current === "adventure"
+            ? "/mp3/timer/adventure-end.mp3"
+            : "/mp3/timer/chill-end.mp3"
+        }
         playing={isPlaying}
         loop={false}
       />
@@ -88,7 +92,7 @@ const MyBeautifulTimer = () => {
         {({ remainingTime }) => formatTime(remainingTime)}
       </CountdownCircleTimer>
       <button
-        onClick={() => handleSetTimer(50, 30, "adventure")}
+        onClick={() => handleSetTimer(0, 1, "adventure")}
         style={{
           filter: gifTypeRef.current !== "adventure" ? "saturate(0%)" : "none",
         }}
