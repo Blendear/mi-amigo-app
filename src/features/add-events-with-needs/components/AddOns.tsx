@@ -1,17 +1,28 @@
 import styles from "src/styles/sass/styles-all.module.scss";
+import AddOnType from "./AddOnType"; // Adjust the path based on your project structure
 
 const AddOns = ({ formDataRef, onChange }) => {
+  const types = [
+    "traps",
+    "protips",
+    "places",
+    "programs",
+    "objects",
+    "workflows",
+  ];
+
   return (
     <div className={styles["event-manager__form__add-ons"]}>
-      <label>
-        Trap:
-        <input
-          type="text"
-          placeholder={formDataRef.current.addOns.traps[0]?.name || ""}
-          onChange={(e) => console.log("TODO: onChange from Trap")}
+      {types.map((type) => (
+        <AddOnType
+          key={type}
+          formDataRef={formDataRef}
+          onChange={onChange}
+          type={type}
         />
-      </label>
+      ))}
     </div>
   );
 };
+
 export default AddOns;

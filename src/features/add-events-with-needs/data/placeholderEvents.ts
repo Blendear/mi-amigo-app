@@ -18,13 +18,7 @@ export const placeholderEventEmpty: EventWithNeeds = {
     endDateAndTime: new Date(),
   },
   deadlineVariant: "none",
-  addOns: {
-    traps: [],
-    protips: [],
-    places: [],
-    programs: [],
-    objects: [],
-  },
+  addOnsByVariants: {},
   needsFulfilled: {
     isWant: false,
     isCreate: false,
@@ -62,12 +56,23 @@ export const placeholderEvent1: EventWithNeeds = {
     endDateAndTime: new Date("2023-01-01T09:30:00Z"),
   },
   deadlineVariant: "must",
-  addOns: {
-    traps: [],
-    protips: [],
-    places: [],
-    programs: [],
-    objects: [],
+  addOnsByVariants: {
+    placeholderVariantA: {
+      traps: [],
+      protips: [],
+      places: [],
+      programs: [],
+      objects: [],
+      workflows: [],
+    },
+    placeholderVariantB: {
+      traps: [],
+      protips: [],
+      places: [],
+      programs: [],
+      objects: [],
+      workflows: [],
+    },
   },
   needsFulfilled: {
     isWant: true,
@@ -106,12 +111,15 @@ export const placeholderEvent2: EventWithNeeds = {
     endDateAndTime: new Date("2023-01-02T16:00:00Z"),
   },
   deadlineVariant: "prefer",
-  addOns: {
-    traps: [],
-    protips: [],
-    places: [],
-    programs: [],
-    objects: [],
+  addOnsByVariants: {
+    placeholderVariantA: {
+      traps: [],
+      protips: [],
+      places: [],
+      programs: [],
+      objects: [],
+      workflows: [],
+    },
   },
   needsFulfilled: {
     isWant: false,

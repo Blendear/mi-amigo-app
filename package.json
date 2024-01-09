@@ -26,6 +26,7 @@
     "react-firebase-hooks": "5.1.1",
     "react-howler": "5.2.0",
     "react-icons": "4.7.1",
+    "react-multi-date-picker": "^4.4.1",
     "react-query": "3.39.2",
     "react-redux": "8.0.5",
     "react-router-dom": "5.3.4",

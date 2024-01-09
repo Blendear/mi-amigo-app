@@ -14,3 +14,13 @@
     }
   }
 }
+
+.navbar__datepicker {
+  & > div:nth-of-type(2) {
+    & > div > div > div > div > div > div > div > div:nth-of-type(2) {
+      & > div:nth-of-type(3) {
+        background-color: orange;
+      }
+    }
+  }
+}

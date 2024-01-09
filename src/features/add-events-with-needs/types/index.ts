@@ -13,12 +13,15 @@ export interface EventWithNeeds
     endDateAndTime: Date;
   };
   deadlineVariant: "none" | "prefer" | "must";
-  addOns: {
-    traps: EventAddon[];
-    protips: EventAddon[];
-    places: EventAddon[];
-    programs: EventAddon[];
-    objects: EventAddon[];
+  addOnsByVariants: {
+    [nameOfVariant: string]: {
+      traps: EventAddon[];
+      protips: EventAddon[];
+      places: EventAddon[];
+      programs: EventAddon[];
+      objects: EventAddon[];
+      workflows: EventAddon[];
+    };
   };
   needsFulfilled: {
     isWant: boolean;
@@ -48,14 +51,15 @@ export interface IdentifiableObjectWithVisuals {
 }
 
 export interface EventAddon extends IdentifiableObjectWithVisuals {
-  isLink: boolean;
+  contentAsLink: string;
+  contentAsText: string;
 }
 
 export type ScheduleOfTimedEvents = {
   // 'number' type is safe enough, since a calendar and time-picker will handle the ranges
   [year: number]: {
     [month: number]: {
-      [day: number]: [EventWithNeeds[]];
+      [day: number]: EventWithNeeds[];
     };
   };
 };
