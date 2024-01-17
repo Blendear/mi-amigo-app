@@ -3,15 +3,6 @@ import VideoPlaylistWatcher from "@/features/subapp-yt-watcher/components/VideoP
 const EventDataDisplay = ({ eventData }) => {
   console.log("eventData", eventData);
 
-  const displayArray = (array) => {
-    return array.map((item) => (
-      <div key={item.id}>
-        <p>{item.id}</p>
-        <p>{JSON.stringify(item.name || item.description)}</p>
-      </div>
-    ));
-  };
-
   // variants of this event - "youtubeVideos", "VODs" ... often there is only 1, but sometimes there are different tools for different variats
   const displayAddOnsByVariants = (addOnsByVariants) => {
     return Object.keys(addOnsByVariants).map((eventVariant) => (
@@ -19,15 +10,21 @@ const EventDataDisplay = ({ eventData }) => {
         <h3
           style={{ color: "brown" }}
         >{`Addons of this event-variant: ${eventVariant}`}</h3>
+
         {/* types of addOns - "subApps", "protips" ...*/}
         {Object.keys(addOnsByVariants[eventVariant]).map((addOnType) => (
           <div key={addOnType}>
             <h4 style={{ color: "orange" }}>{addOnType}</h4>
+
             {/* single addOns data objects - data structure depends on the addOn type */}
             {addOnsByVariants[eventVariant][addOnType].map((addOn) => (
               <div key={addOn}>
                 <>{console.log("addOnData", addOn)}</>
                 <h5>Name of addOn : {addOn.subappName || addOn.name}</h5>
+                {/* TODO: Create a separate file wiht an object, that has a keys (like "video-watcher") 
+                and values as components (like <VideoPlaylistWatcher/> and i will pass the whole payload)
+                for subapp components, which I will use as an objetc to get a specific component by name
+                from. Through {}[subappName] */}
                 {addOn.subappName === "video-watcher" ? (
                   <VideoPlaylistWatcher
                     listOfYouTubeVideoIDs={addOn.payload.ytVideoIds}
