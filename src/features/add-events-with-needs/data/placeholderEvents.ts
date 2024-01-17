@@ -59,29 +59,9 @@ export const placeholderEvent1: EventWithNeeds = {
   deadlineVariant: "must",
   addOnsByVariants: {
     placeholderVariantA: {
-      traps: [
-        {
-          id: "",
-          name: "",
-          description: "",
-          imagePath: "",
-          imageAltText: "",
-          contentAsLink: "",
-          contentAsText: "",
-        },
-      ],
-      protips: [],
-      places: [],
-      programs: [],
-      objects: [],
-      workflows: [],
+      subApps: [],
     },
     placeholderVariantB: {
-      traps: [],
-      protips: [],
-      places: [],
-      programs: [],
-      objects: [],
       workflows: [],
     },
   },

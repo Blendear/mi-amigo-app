@@ -16,3 +16,16 @@ export type ImageWithWrapperProps = {
   src: string;
   alt?: string;
 };
+
+export type SubappPayloads = {
+  "video-watcher": {
+    ytVideoIds: string[];
+    VODLinks: string[];
+  };
+  // Add more subapps and their respective payload types as needed
+};
+
+export type Subapp = {
+  subappName: keyof SubappPayloads;
+  payload: SubappPayloads[keyof SubappPayloads];
+};

@@ -1,4 +1,5 @@
 import React from "react";
+import { Subapp } from "@/types";
 
 export interface EventWithNeeds
   extends Omit<IdentifiableObjectWithVisuals, "id"> {
@@ -17,7 +18,7 @@ export interface EventWithNeeds
   deadlineVariant: "none" | "prefer" | "must";
   addOnsByVariants: {
     [nameOfVariant: string]: {
-      subApps?: EventAddon[];
+      subApps?: Subapp[];
       traps?: EventAddon[];
       protips?: EventAddon[];
       places?: EventAddon[];
@@ -53,9 +54,12 @@ export interface IdentifiableObjectWithVisuals {
   imageAltText: string;
 }
 
-export interface EventAddon extends IdentifiableObjectWithVisuals {
-  contentAsLink: string;
-  contentAsText: string;
+export interface EventAddon {
+  name: string;
+  description?: string;
+  imagePath: string;
+  contentAsLink?: string;
+  contentAsText?: string;
 }
 
 export type ScheduleOfTimedEvents = {

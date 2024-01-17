@@ -65,16 +65,35 @@ const hardcodedEventsBecauseOfTheLackOfTime: EventWithNeeds[] = [
     },
     deadlineVariant: "none",
     addOnsByVariants: {
-      youtube: {
+      youtubeVideos: {
         subApps: [
           {
-            id: "",
-            name: "",
-            description: "",
-            imagePath: "",
-            imageAltText: "",
-            contentAsLink: "",
-            contentAsText: "",
+            subappName: "video-watcher",
+            payload: {
+              ytVideoIds: ["IzBuiwjozDc", "JEjFm5kMdtw", "Qhw51Sr5drs"],
+              VODLinks: ["vod-link-1", "vod-link-2", "vod-link-3"],
+            },
+          },
+        ],
+        protips: [
+          {
+            name: "Protip 1",
+            description: "Protip 1 description",
+            imagePath:
+              "https://images.unsplash.com/photo-1642726197634-2a21f764220a?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHlvdXR1YmUlMjBpY29ufGVufDB8fDB8fHww",
+            contentAsLink: "https://google.com",
+            contentAsText: "Protip 1 content as text",
+          },
+        ],
+
+        traps: [
+          {
+            name: "Trap 1",
+            description: "Trap 1 description",
+            imagePath:
+              "https://images.unsplash.com/photo-1642726197634-2a21f764220a?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHlvdXR1YmUlMjBpY29ufGVufDB8fDB8fHww",
+            contentAsLink: "https://google.com",
+            contentAsText: "Trap 1 content as text",
           },
         ],
       },

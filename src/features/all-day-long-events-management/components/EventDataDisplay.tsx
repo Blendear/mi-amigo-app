@@ -1,7 +1,8 @@
 import VideoPlaylistWatcher from "@/features/subapp-yt-watcher/components/VideoPlaylistWatcher";
 
 const EventDataDisplay = ({ eventData }) => {
-  console.log("eee", eventData);
+  console.log("eventData", eventData);
+
   const displayArray = (array) => {
     return array.map((item) => (
       <div key={item.id}>
@@ -11,24 +12,32 @@ const EventDataDisplay = ({ eventData }) => {
     ));
   };
 
+  // variants of this event - "youtubeVideos", "VODs" ... often there is only 1, but sometimes there are different tools for different variats
   const displayAddOnsByVariants = (addOnsByVariants) => {
-    return Object.keys(addOnsByVariants).map((variant) => (
-      <div key={variant}>
-        <h3>{variant}</h3>
-        {Object.keys(addOnsByVariants[variant]).map((property) => (
-          <div key={property}>
-            <h4>{property}</h4>
-            {console.log("property", property)}
-            {displayArray(addOnsByVariants[variant][property])}
-            {property === "subApps" && (
-              <VideoPlaylistWatcher
-                listOfYouTubeVideoIDs={[
-                  "IzBuiwjozDc",
-                  "JEjFm5kMdtw",
-                  "Qhw51Sr5drs",
-                ]}
-              />
-            )}
+    return Object.keys(addOnsByVariants).map((eventVariant) => (
+      <div key={eventVariant}>
+        <h3
+          style={{ color: "brown" }}
+        >{`Addons of this event-variant: ${eventVariant}`}</h3>
+        {/* types of addOns - "subApps", "protips" ...*/}
+        {Object.keys(addOnsByVariants[eventVariant]).map((addOnType) => (
+          <div key={addOnType}>
+            <h4 style={{ color: "orange" }}>{addOnType}</h4>
+            {/* single addOns data objects - data structure depends on the addOn type */}
+            {addOnsByVariants[eventVariant][addOnType].map((addOn) => (
+              <div key={addOn}>
+                <>{console.log("addOnData", addOn)}</>
+                <h5>Name of addOn : {addOn.subappName || addOn.name}</h5>
+                {addOn.subappName === "video-watcher" ? (
+                  <VideoPlaylistWatcher
+                    listOfYouTubeVideoIDs={addOn.payload.ytVideoIds}
+                  />
+                ) : (
+                  // Handle other subApps accordingly
+                  <div>what to show in non-subapps?</div>
+                )}
+              </div>
+            ))}
           </div>
         ))}
       </div>
