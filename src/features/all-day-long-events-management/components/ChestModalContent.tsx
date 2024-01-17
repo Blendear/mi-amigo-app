@@ -5,14 +5,15 @@ import { ImageWithWrapper } from "../../..";
 import { useState, useRef } from "react";
 import DialogModal from "../../../components/DialogModal";
 import EventDataDisplay from "./EventDataDisplay";
+import hardcodedEventsBecauseOfTheLackOfTime from "@/features/add-events-with-needs/data/hardcodedEventsBecauseOfTheLackOfTime";
 
 const ChestModalContent = ({}: ChestModalContentProps) => {
   const eventIndexRef = useRef(0);
-  const chestWithAllDayLongEvents = useAppSelector(
-    (state) =>
-      state.appDataOfCurrentUserReducer.eventsWithNeeds
-        .chestWithAllDayLongEvents
-  );
+  // const chestWithAllDayLongEvents = useAppSelector(
+  //   (state) =>
+  //     state.appDataOfCurrentUserReducer.eventsWithNeeds
+  //       .chestWithAllDayLongEvents
+  // );
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = (index) => {
@@ -23,10 +24,11 @@ const ChestModalContent = ({}: ChestModalContentProps) => {
   const closeModal = () => {
     setIsModalOpen(false);
   };
-  console.log(chestWithAllDayLongEvents[0]);
+  // console.log(chestWithAllDayLongEvents[0]);
+
   return (
     <div>
-      {chestWithAllDayLongEvents.map((event, index) => {
+      {hardcodedEventsBecauseOfTheLackOfTime.map((event, index) => {
         console.log(index);
         return (
           <div
@@ -47,7 +49,13 @@ const ChestModalContent = ({}: ChestModalContentProps) => {
       {isModalOpen && (
         <DialogModal isOpen={isModalOpen} onClose={closeModal}>
           <EventDataDisplay
-            eventData={chestWithAllDayLongEvents[eventIndexRef.current]}
+            // temporarily commented out, because creating an event-editor for all functionalities
+            // is time consuming, and i need those events right now
+            // eventData={chestWithAllDayLongEvents[eventIndexRef.current]}
+
+            eventData={
+              hardcodedEventsBecauseOfTheLackOfTime[eventIndexRef.current]
+            }
           />
         </DialogModal>
       )}

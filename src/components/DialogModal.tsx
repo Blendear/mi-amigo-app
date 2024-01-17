@@ -1,5 +1,6 @@
 import styles from "src/styles/sass/styles-all.module.scss";
 import { DialogModalProps } from "..";
+import { useEffect } from "react";
 
 const DialogModal = ({
   isOpen,
@@ -7,17 +8,42 @@ const DialogModal = ({
   zIndex = 1,
   children,
 }: DialogModalProps) => {
+  const disableBodyOverflow = () => {
+    document.body.classList.add("modal-open");
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant",
+    });
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      disableBodyOverflow();
+      scrollToTop();
+    }
+  }, [isOpen]);
+
+  const handleCloseDialogModal = () => {
+    document.body.classList.remove("modal-open");
+    onClose();
+  };
+
   return (
-    <dialog className={styles["modal"]} style={{ zIndex }} open={isOpen}>
-      <div className={styles["modal__content"]}>
-        <button
-          className={styles["modal__content__close-btn"]}
-          onClick={onClose}
-        >
-          X
-        </button>
-        {children}
-      </div>
+    <dialog
+      className={styles["modal__container"]}
+      style={{ zIndex }}
+      open={isOpen}
+    >
+      <button
+        className={styles["modal__content__close-btn"]}
+        onClick={handleCloseDialogModal}
+      >
+        X
+      </button>
+      {children}
     </dialog>
   );
 };

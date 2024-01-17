@@ -76,3 +76,7 @@ export type EventFormSegmentProps = {
   formDataRef: any;
   onChange: (field: string, value: any) => void;
 };
+
+export type EditOrCreateEventFormProps = {
+  isCreatingANewEvent: boolean;
+};

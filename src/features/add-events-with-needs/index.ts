@@ -1,4 +1,4 @@
-export { default as CreateEventForm } from "./components/CreateEventForm";
+export { default as EditOrCreateEventForm } from "./components/EditOrCreateEventForm";
 export { default as ImageAndInput } from "./components/ImageAndInput";
 export { default as NeedsFullfilled } from "./components/NeedsFullfilled";
 export { default as PropsByTimeDependency } from "./components/PropsByTimeDependency";

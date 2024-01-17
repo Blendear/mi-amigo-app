@@ -10,9 +10,12 @@ import {
   AddOns,
 } from "..";
 import { useRef, useState } from "react";
-import { patchEventsWithNeedsInDB } from "../../..";
+import patchEventsWithNeedsInDB from "../../../utils/patchEventsWithNeedsInDB";
+import { EditOrCreateEventFormProps } from "../types";
 
-const CreateEventForm = () => {
+const EditOrCreateEventForm = ({
+  isCreatingANewEvent,
+}: EditOrCreateEventFormProps) => {
   const formDataRef = useRef<EventWithNeeds>(placeholderEventEmpty);
   const [submittedFormData, setSubmittedFormData] =
     useState<EventWithNeeds | null>(null);
@@ -48,6 +51,9 @@ const CreateEventForm = () => {
 
   return (
     <form className={styles["event-manager__form"]} onSubmit={handleSubmit}>
+      <div style={{ backgroundColor: "red" }}>
+        Creating / Editing is disabled for now - Hardcoded events only
+      </div>
       <NameAndDescription
         formDataRef={formDataRef}
         onChange={handleInputChange}
@@ -71,9 +77,12 @@ const CreateEventForm = () => {
         formDataRef={formDataRef}
         onChange={handleInputChange}
       />
-      <button type="submit" className={styles["submit-btn"]}>
+      {/* <button type="submit" className={styles["submit-btn"]}>
         Create Event
-      </button>
+      </button> */}
+      <div style={{ backgroundColor: "red" }}>
+        Creating / Editing is disabled for now - Hardcoded events only
+      </div>
       <div
         className={styles["event-manager__form__temporary-JSON-visualisation"]}
       >
@@ -88,4 +97,4 @@ const CreateEventForm = () => {
   );
 };
 
-export default CreateEventForm;
+export default EditOrCreateEventForm;

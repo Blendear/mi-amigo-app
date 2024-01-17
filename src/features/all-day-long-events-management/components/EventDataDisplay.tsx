@@ -1,4 +1,5 @@
 const EventDataDisplay = ({ eventData }) => {
+  console.log("eee", eventData);
   const displayArray = (array) => {
     return array.map((item) => (
       <div key={item.id}>
@@ -22,8 +23,6 @@ const EventDataDisplay = ({ eventData }) => {
     ));
   };
 
-  console.log(eventData);
-
   return (
     <div>
       <p>Event Instance ID: {eventData.eventInstanceId}</p>
@@ -36,10 +35,11 @@ const EventDataDisplay = ({ eventData }) => {
       <p>Event Group ID: {eventData.eventGroupId}</p>
       <p>Is All Day Long: {eventData.isAllDayLong ? "Yes" : "No"}</p>
       <p>Deadline Variant: {eventData.deadlineVariant}</p>
-      <p>Start Date and Time: {eventData.timedVariantProps.startDateAndTime}</p>
-      <p>End Date and Time: {eventData.timedVariantProps.endDateAndTime}</p>
-      <p>Importance: {eventData.allDayLongVariantProps.importance}</p>
-      <p>Date: {eventData.allDayLongVariantProps.date}</p>
+      {/* Temoporarily disabled props \/ because the placeholder data is build differently than the DB one? No idea */}
+      {/* <p>Start Date and Time: {eventData.timedVariantProps.startDateAndTime}</p> */}
+      {/* <p>End Date and Time: {eventData.timedVariantProps.endDateAndTime}</p> */}
+      {/* <p>Importance: {eventData.allDayLongVariantProps.importance}</p> */}
+      {/* <p>Date: {eventData.allDayLongVariantProps.date}</p> */}
       <p>Start Event Sound: {eventData.vocalNotifications.startEventSound}</p>
       <p>End Event Sound: {eventData.vocalNotifications.endEventSound}</p>
       <p>

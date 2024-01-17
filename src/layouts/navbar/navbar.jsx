@@ -1,7 +1,7 @@
 import styles from "src/styles/sass/styles-all.module.scss";
 import { DialogModal, updateMiAmigoDataOfUser } from "../..";
 import { useState } from "react";
-import { CreateEventForm } from "../../features/add-events-with-needs";
+import { EditOrCreateEventForm } from "../../features/add-events-with-needs";
 import DatePicker from "react-multi-date-picker";
 import "react-multi-date-picker/styles/colors/teal.css";
 
@@ -36,7 +36,7 @@ const Navbar = () => {
       <button onClick={openModal}>+</button>
       {isModalOpen && (
         <DialogModal isOpen={isModalOpen} onClose={closeModal}>
-          <CreateEventForm />
+          <EditOrCreateEventForm />
         </DialogModal>
       )}
       {/* <MyDatePicker /> */}

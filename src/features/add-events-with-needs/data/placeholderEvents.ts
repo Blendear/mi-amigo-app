@@ -41,7 +41,8 @@ export const placeholderEventEmpty: EventWithNeeds = {
 export const placeholderEvent1: EventWithNeeds = {
   name: "Placeholder Event 1",
   description: "This is a placeholder event description.",
-  imagePath: "/path/to/your/image1.gif",
+  imagePath:
+    "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
   imageAltText: "Placeholder Event 1",
   eventGroupId: "placeholder-group-1",
   eventInstanceId: "instance-1",
