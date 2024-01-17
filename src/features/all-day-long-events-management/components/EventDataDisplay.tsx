@@ -1,3 +1,5 @@
+import VideoPlaylistWatcher from "@/features/subapp-yt-watcher/components/VideoPlaylistWatcher";
+
 const EventDataDisplay = ({ eventData }) => {
   console.log("eee", eventData);
   const displayArray = (array) => {
@@ -16,7 +18,17 @@ const EventDataDisplay = ({ eventData }) => {
         {Object.keys(addOnsByVariants[variant]).map((property) => (
           <div key={property}>
             <h4>{property}</h4>
+            {console.log("property", property)}
             {displayArray(addOnsByVariants[variant][property])}
+            {property === "subApps" && (
+              <VideoPlaylistWatcher
+                listOfYouTubeVideoIDs={[
+                  "IzBuiwjozDc",
+                  "JEjFm5kMdtw",
+                  "Qhw51Sr5drs",
+                ]}
+              />
+            )}
           </div>
         ))}
       </div>
@@ -51,7 +63,7 @@ const EventDataDisplay = ({ eventData }) => {
         {eventData.vocalNotifications.xMinutesBeforeStartSound}
       </p>
 
-      {/* {displayAddOnsByVariants(eventData.addOnsByVariants)} */}
+      {displayAddOnsByVariants(eventData.addOnsByVariants)}
 
       <p>Needs Fulfilled:</p>
       <ul>

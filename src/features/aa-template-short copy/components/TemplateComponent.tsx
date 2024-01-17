@@ -1,5 +1,5 @@
-import styles from "src/styles/sass/styles-all.module.scss";
-import { MyTemporaryStyle } from "..";
+import styles from "@/styles/sass/styles-all.module.scss";
+import { MyTemporaryStyle } from "../types/index";
 
 const AComponent = ({}: MyTemporaryStyle) => {
   return (

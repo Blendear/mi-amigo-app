@@ -1,4 +1,4 @@
-import styles from "src/styles/sass/styles-all.module.scss";
+import styles from "@/styles/sass/styles-all.module.scss";
 import { ChestModalContent } from "../features/all-day-long-events-management";
 import { useState } from "react";
 import { DialogModal } from "..";

@@ -4,6 +4,8 @@
 
 @use "./base/helpers";
 
+@use "./subapps/nested-yt-link";
+
 @use "./components/backdrop";
 @use "./components/modal";
 @use "./components/button-that-plays-sound";

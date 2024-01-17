@@ -1,0 +1,34 @@
+@use "../../../styles/sass/abstracts/mixins";
+@use "../../../styles/sass/abstracts/colors";
+@use "../../../styles/sass/abstracts/variables";
+@use "../../../styles/sass/base/typography";
+
+.tutorial {
+  &__container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 0.5fr 1fr 2fr;
+    color: colors.$secondary-light;
+
+    & > div {
+      grid-row: 2;
+      display: grid;
+      width: 80%;
+      row-gap: 3rem;
+    }
+  }
+  &__video {
+    &__container {
+      display: grid;
+      & > span {
+        position: absolute;
+      }
+      & > div {
+        z-index: 999;
+      }
+    }
+    &__iframe {
+    }
+  }
+}

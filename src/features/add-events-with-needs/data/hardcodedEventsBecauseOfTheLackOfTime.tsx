@@ -1,5 +1,6 @@
 import { placeholderEvent1 } from "@/features/add-events-with-needs/data/placeholderEvents";
 import { EventWithNeeds } from "../types";
+import VideoPlaylistWatcher from "@/features/subapp-yt-watcher/components/VideoPlaylistWatcher";
 /*
 Thats how an object data of an event looks like - an empty one:
 
@@ -45,9 +46,10 @@ Thats how an object data of an event looks like - an empty one:
 const hardcodedEventsBecauseOfTheLackOfTime: EventWithNeeds[] = [
   placeholderEvent1,
   {
-    name: "aaaa",
-    description: "",
-    imagePath: "",
+    name: "Oglądanie",
+    description: "VOD / YT / seriale / Twitch etc.",
+    imagePath:
+      "https://images.unsplash.com/photo-1642726197634-2a21f764220a?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHlvdXR1YmUlMjBpY29ufGVufDB8fDB8fHww",
     imageAltText: "",
     eventGroupId: "",
     eventInstanceId: "",
@@ -62,7 +64,24 @@ const hardcodedEventsBecauseOfTheLackOfTime: EventWithNeeds[] = [
       endDateAndTime: new Date(),
     },
     deadlineVariant: "none",
-    addOnsByVariants: {},
+    addOnsByVariants: {
+      youtube: {
+        subApps: [
+          {
+            id: "",
+            name: "",
+            description: "",
+            imagePath: "",
+            imageAltText: "",
+            contentAsLink: "",
+            contentAsText: "",
+          },
+        ],
+      },
+      VODs: {
+        subApps: [],
+      },
+    },
     needsFulfilled: {
       isWant: false,
       isCreate: false,

@@ -1,4 +1,4 @@
-import styles from "src/styles/sass/styles-all.module.scss";
+import styles from "@/styles/sass/styles-all.module.scss";
 import AddOnType from "./AddOnType"; // Adjust the path based on your project structure
 
 const AddOns = ({ formDataRef, onChange }) => {

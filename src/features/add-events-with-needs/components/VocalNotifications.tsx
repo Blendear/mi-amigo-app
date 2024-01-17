@@ -1,4 +1,4 @@
-import styles from "src/styles/sass/styles-all.module.scss";
+import styles from "@/styles/sass/styles-all.module.scss";
 import { ButtonThatPlaysSound } from "../../..";
 
 const VocalNotifications = ({ formDataRef, onChange }) => {

@@ -1,6 +1,6 @@
 // Table of content for this file is written at the bottom
 
-import "src/styles/sass/globals.scss";
+import "@/styles/sass/globals.scss";
 import type { AppProps } from "next/app";
 import store from "../store/redux/store-redux";
 import { Provider } from "react-redux";

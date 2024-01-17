@@ -1,4 +1,4 @@
-import styles from "src/styles/sass/styles-all.module.scss";
+import styles from "@/styles/sass/styles-all.module.scss";
 import { DialogModal, updateMiAmigoDataOfUser } from "../..";
 import { useState } from "react";
 import { EditOrCreateEventForm } from "../../features/add-events-with-needs";

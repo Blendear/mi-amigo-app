@@ -1,4 +1,4 @@
-import styles from "src/styles/sass/styles-all.module.scss";
+import styles from "@/styles/sass/styles-all.module.scss";
 import { useEffect, useState, useRef } from "react";
 import { getMiAmigoDataOfUser } from "../..";
 import { useAppDispatch } from "../../store/redux/hooks";

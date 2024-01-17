@@ -1,4 +1,4 @@
-import styles from "src/styles/sass/styles-all.module.scss";
+import styles from "@/styles/sass/styles-all.module.scss";
 import { ChestModalContentProps } from "..";
 import { useAppSelector } from "../../../store/redux/hooks";
 import { ImageWithWrapper } from "../../..";
@@ -24,12 +24,10 @@ const ChestModalContent = ({}: ChestModalContentProps) => {
   const closeModal = () => {
     setIsModalOpen(false);
   };
-  // console.log(chestWithAllDayLongEvents[0]);
 
   return (
     <div>
       {hardcodedEventsBecauseOfTheLackOfTime.map((event, index) => {
-        console.log(index);
         return (
           <div
             key={index}
@@ -42,6 +40,7 @@ const ChestModalContent = ({}: ChestModalContentProps) => {
               style={{ width: "100%", display: "grid", justifyItems: "center" }}
             >
               <ImageWithWrapper src={event.imagePath} width="20%" />
+              <div>{event.name}</div>
             </button>
           </div>
         );

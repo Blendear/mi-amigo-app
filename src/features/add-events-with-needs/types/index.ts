@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface EventWithNeeds
   extends Omit<IdentifiableObjectWithVisuals, "id"> {
   eventGroupId: string;
@@ -15,12 +17,13 @@ export interface EventWithNeeds
   deadlineVariant: "none" | "prefer" | "must";
   addOnsByVariants: {
     [nameOfVariant: string]: {
-      traps: EventAddon[];
-      protips: EventAddon[];
-      places: EventAddon[];
-      programs: EventAddon[];
-      objects: EventAddon[];
-      workflows: EventAddon[];
+      subApps?: EventAddon[];
+      traps?: EventAddon[];
+      protips?: EventAddon[];
+      places?: EventAddon[];
+      programs?: EventAddon[];
+      objects?: EventAddon[];
+      workflows?: EventAddon[];
     };
   };
   needsFulfilled: {

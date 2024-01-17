@@ -1,4 +1,4 @@
-import styles from "src/styles/sass/styles-all.module.scss";
+import styles from "@/styles/sass/styles-all.module.scss";
 import { v4 as uuidv4 } from "uuid"; // Import uuidv4 for generating unique IDs
 const AddOnType = ({ formDataRef, onChange, type }) => {
   const handleAddOnsChange = (content, contentType, value) => {

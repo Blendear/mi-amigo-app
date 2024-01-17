@@ -42,7 +42,7 @@
 //                  _._._._. Button with prop - Activate "Delete t h a t Document" onClick (I passed the document id as a prop, for the fun of it - can be added inside the function tho)
 //
 
-import styles from "src/styles/sass/styles-all.module.scss";
+import styles from "@/styles/sass/styles-all.module.scss";
 import { useState, useEffect } from "react";
 //
 //       _._. Connect to Firestore DB ("db" is our custom name - we gave it inside "init-firebase.ts") - for making CRUD operation on our database   &   import neede funtions to operate on colections, documents etc.

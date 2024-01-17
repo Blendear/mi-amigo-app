@@ -7,7 +7,7 @@
 //~~ B.  Historyjka druga ...
 //
 
-import styles from "src/styles/sass/styles-all.module.scss";
+import styles from "@/styles/sass/styles-all.module.scss";
 import { useState } from "react";
 
 import Link from "next/link";
