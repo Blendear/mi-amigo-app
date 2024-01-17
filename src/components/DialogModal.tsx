@@ -13,10 +13,7 @@ const DialogModal = ({
   };
 
   const scrollToTop = () => {
-    window.scroll({
-      top: 0,
-      behavior: "instant"!,
-    });
+    window.scrollTo(0, 1000);
   };
 
   useEffect(() => {
