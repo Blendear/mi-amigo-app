@@ -1,0 +1,21 @@
+import { useState } from "react";
+import styles from "@/styles/sass/styles-all.module.scss";
+
+const ToggleableContent = ({ title, children }) => {
+  const [isContentVisible, setIsContentVisible] = useState(true);
+
+  const toggleVisibility = () => {
+    setIsContentVisible(!isContentVisible);
+  };
+
+  return (
+    <div>
+      <button className={styles["submit-btn"]} onClick={toggleVisibility}>
+        {title}
+      </button>
+      {isContentVisible && <div>{children}</div>}
+    </div>
+  );
+};
+
+export default ToggleableContent;

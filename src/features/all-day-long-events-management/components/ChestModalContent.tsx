@@ -4,7 +4,7 @@ import { useAppSelector } from "../../../store/redux/hooks";
 import { ImageWithWrapper } from "../../..";
 import { useState, useRef } from "react";
 import DialogModal from "../../../components/DialogModal";
-import EventDataDisplay from "./EventDataDisplay";
+import EventDataDisplay from "../../show-event-data/components/EventDataDisplay";
 import hardcodedEventsBecauseOfTheLackOfTime from "@/features/add-events-with-needs/data/hardcodedEventsBecauseOfTheLackOfTime";
 
 const ChestModalContent = ({}: ChestModalContentProps) => {

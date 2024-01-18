@@ -7,9 +7,11 @@ const ImageWithWrapper = ({
   aspectRatio,
   src,
   alt,
+  wrapperClassName,
 }: ImageWithWrapperProps) => {
   return (
     <div
+      className={wrapperClassName}
       style={
         height
           ? {

@@ -1,4 +1,9 @@
+import styles from "@/styles/sass/styles-all.module.scss";
 import VideoPlaylistWatcher from "@/features/subapp-yt-watcher/components/VideoPlaylistWatcher";
+import ImageWithWrapper from "@/components/ImageWithWrapper";
+import { useState } from "react";
+import ToggleableContent from "@/components/ToggleableContent";
+import NeedsFullfilled from "./NeedsFullfilled";
 
 const EventDataDisplay = ({ eventData }) => {
   console.log("eventData", eventData);
@@ -10,12 +15,10 @@ const EventDataDisplay = ({ eventData }) => {
         <h3
           style={{ color: "brown" }}
         >{`Addons of this event-variant: ${eventVariant}`}</h3>
-
         {/* types of addOns - "subApps", "protips" ...*/}
         {Object.keys(addOnsByVariants[eventVariant]).map((addOnType) => (
           <div key={addOnType}>
             <h4 style={{ color: "orange" }}>{addOnType}</h4>
-
             {/* single addOns data objects - data structure depends on the addOn type */}
             {addOnsByVariants[eventVariant][addOnType].map((addOn) => (
               <div key={addOn}>
@@ -43,42 +46,40 @@ const EventDataDisplay = ({ eventData }) => {
 
   return (
     <div>
-      <p>Event Instance ID: {eventData.eventInstanceId}</p>
-      <p> Image Path: {eventData.imagePath}</p>
-      <p>GIF Path: {eventData.GIFPath}</p>
-      <p>Name: {eventData.name}</p>
-      <p>Description: {eventData.description}</p>
-      <p>Image Path: {eventData.imagePath}</p>
-      <p>Image Alt Text: {eventData.imageAltText}</p>
-      <p>Event Group ID: {eventData.eventGroupId}</p>
-      <p>Is All Day Long: {eventData.isAllDayLong ? "Yes" : "No"}</p>
-      <p>Deadline Variant: {eventData.deadlineVariant}</p>
-      {/* Temoporarily disabled props \/ because the placeholder data is build differently than the DB one? No idea */}
-      {/* <p>Start Date and Time: {eventData.timedVariantProps.startDateAndTime}</p> */}
-      {/* <p>End Date and Time: {eventData.timedVariantProps.endDateAndTime}</p> */}
-      {/* <p>Importance: {eventData.allDayLongVariantProps.importance}</p> */}
-      {/* <p>Date: {eventData.allDayLongVariantProps.date}</p> */}
-      <p>Start Event Sound: {eventData.vocalNotifications.startEventSound}</p>
-      <p>End Event Sound: {eventData.vocalNotifications.endEventSound}</p>
-      <p>
-        X Minutes Before Start Amount:{" "}
-        {eventData.vocalNotifications.xMinutesBeforeStartAmount}
-      </p>
-      <p>
-        X Minutes Before Start Sound:{" "}
-        {eventData.vocalNotifications.xMinutesBeforeStartSound}
-      </p>
+      <ImageWithWrapper
+        src={eventData.GIFPath !== "" ? eventData.GIFPath : eventData.imagePath}
+        width="20vw"
+      />
+
+      <h1>{eventData.name}</h1>
+
+      <h2>{eventData.description}</h2>
+
+      <ToggleableContent title="Time And Sound">
+        <p>Is All Day Long: {eventData.isAllDayLong ? "Yes" : "No"}</p>
+        <p>Deadline Variant: {eventData.deadlineVariant}</p>
+        {/* Temoporarily disabled props \/ because the placeholder data is build differently than the DB one? No idea */}
+        {/* <p>Start Date and Time: {eventData.timedVariantProps.startDateAndTime}</p> */}
+        {/* <p>End Date and Time: {eventData.timedVariantProps.endDateAndTime}</p> */}
+        {/* <p>Importance: {eventData.allDayLongVariantProps.importance}</p> */}
+        {/* <p>Date: {eventData.allDayLongVariantProps.date}</p> */}
+        <p>Start Event Sound: {eventData.vocalNotifications.startEventSound}</p>
+        <p>End Event Sound: {eventData.vocalNotifications.endEventSound}</p>
+        <p>
+          X Minutes Before Start Amount:
+          {eventData.vocalNotifications.xMinutesBeforeStartAmount}
+        </p>
+        <p>
+          X Minutes Before Start Sound:
+          {eventData.vocalNotifications.xMinutesBeforeStartSound}
+        </p>
+      </ToggleableContent>
+
+      <ToggleableContent title="Needs Fulfilled">
+        <NeedsFullfilled needs={eventData.needsFulfilled} />
+      </ToggleableContent>
 
       {displayAddOnsByVariants(eventData.addOnsByVariants)}
-
-      <p>Needs Fulfilled:</p>
-      <ul>
-        {Object.keys(eventData.needsFulfilled).map((need) => (
-          <li key={need}>
-            {need}: {eventData.needsFulfilled[need] ? "Yes" : "No"}
-          </li>
-        ))}
-      </ul>
     </div>
   );
 };

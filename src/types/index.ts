@@ -15,6 +15,7 @@ export type ImageWithWrapperProps = {
   aspectRatio?: number;
   src: string;
   alt?: string;
+  wrapperClassName?: string;
 };
 
 export type SubappPayloads = {

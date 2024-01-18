@@ -9,6 +9,10 @@
   box-sizing: inherit;
 }
 
+li {
+  list-style: none;
+}
+
 hr {
   box-sizing: content-box; /* 1 */
   height: 0; /* 1 */

@@ -1,5 +1,6 @@
 @use "./abstracts/colors";
 @use "./abstracts/mixins";
+@use "./abstracts/universal-styles";
 @use "./abstracts/variables";
 
 @use "./base/helpers";
@@ -10,6 +11,8 @@
 @use "./components/modal";
 @use "./components/button-that-plays-sound";
 @use "./components/submit-btn";
+
+@use "./features/show-event-data";
 
 @use "./layout/footer";
 @use "./layout/navbar";
