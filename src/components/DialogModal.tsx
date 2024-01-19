@@ -11,14 +11,14 @@ const DialogModal = ({
   const disableBodyOverflow = () => {
     document.body.classList.add("modal-open");
   };
-
+  /* eslint-disable */
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "instant",
     });
   };
-
+  /* eslint-enable */
   useEffect(() => {
     if (isOpen) {
       disableBodyOverflow();
