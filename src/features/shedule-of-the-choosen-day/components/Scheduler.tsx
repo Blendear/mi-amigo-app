@@ -5,18 +5,10 @@ import DynamicTime from "./CurrentTimeCounter";
 import TimeBlocks15Minutes from "./TimeBlocks15Minutes";
 import formatTimeOutOfDate from "../utils/formatTimeOutOfDate";
 import ImageWithWrapper from "@/components/ImageWithWrapper";
+import { Event } from "../types";
+import calculateEventPosition from "../utils/calculateEventPosition";
+import calculateActiveBlock from "../utils/calculateActiveBlock";
 
-interface Event {
-  id: number;
-  title: string;
-  startDate: Date;
-  endDate: Date;
-  image: string;
-}
-
-interface DailyScheduleProps {
-  events: Event[];
-}
 const placeholderEvents: Event[] = [
   {
     id: 1,
@@ -40,26 +32,6 @@ const Scheduler = () =>
     const scheduleRef = useRef(null);
     const [currentTime, setCurrentTime] = useState(new Date());
 
-    const calculateActiveBlock = () => {
-      const hours = currentTime.getHours();
-      const minutes = currentTime.getMinutes();
-      return hours * 4 + Math.floor(minutes / 15);
-    };
-
-    const calculateEventPosition = (event: Event) => {
-      const start = event.startDate;
-      const end = event.endDate;
-
-      const startBlock =
-        start.getHours() * 4 + Math.floor(start.getMinutes() / 15);
-      const endBlock = end.getHours() * 4 + Math.floor(end.getMinutes() / 15);
-
-      return {
-        gridRowStart: startBlock + 1,
-        gridRowEnd: endBlock + 1,
-      };
-    };
-
     useEffect(() => {
       if (scheduleRef.current) {
         // calculateActiveBlock();
@@ -79,7 +51,9 @@ const Scheduler = () =>
         <DynamicTime setTime={setCurrentTime} />
         <div className={styles["schedule__grid"]}>
           <div className={styles["schedule__grid__time-blocks"]}>
-            <TimeBlocks15Minutes activeBlockNr={calculateActiveBlock()} />
+            <TimeBlocks15Minutes
+              activeBlockNr={calculateActiveBlock(currentTime)}
+            />
           </div>
           <div className={styles["schedule__grid__events"]}>
             {placeholderEvents.map((event) => (
