@@ -5,10 +5,9 @@
 
 .event-manager {
   &__container {
-    height: 100vh;
+    padding: 0 1.5rem;
     display: grid;
     justify-items: center;
-    background-color: colors.$tertiary-light;
   }
   &__chest-button {
   }

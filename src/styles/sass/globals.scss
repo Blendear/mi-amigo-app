@@ -53,6 +53,10 @@ html {
   }
 }
 
+body {
+  background-color: colors.$tertiary-light;
+}
+
 button {
   cursor: pointer;
   border: none;
