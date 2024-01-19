@@ -1,7 +1,7 @@
 import styles from "@/styles/sass/styles-all.module.scss";
 import { DialogModalProps } from "..";
 import { useEffect } from "react";
-
+/* eslint-disable */
 const DialogModal = ({
   isOpen,
   onClose,
@@ -11,15 +11,14 @@ const DialogModal = ({
   const disableBodyOverflow = () => {
     document.body.classList.add("modal-open");
   };
-  /* eslint-disable */
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      // eslint-disable-next-line
       behavior: "instant",
     });
   };
-  /* eslint-enable */
+
   useEffect(() => {
     if (isOpen) {
       disableBodyOverflow();
@@ -50,3 +49,4 @@ const DialogModal = ({
 };
 
 export default DialogModal;
+/* eslint-enable */
