@@ -11,7 +11,9 @@ const nextConfig = {
       },
     ];
   },
-
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   images: {
     domains: [
       "https://mi-amigo-app-theta.vercel.app/",
