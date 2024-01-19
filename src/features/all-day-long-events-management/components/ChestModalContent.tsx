@@ -46,7 +46,7 @@ const ChestModalContent = ({}: ChestModalContentProps) => {
         );
       })}
       {isModalOpen && (
-        <DialogModal isOpen={isModalOpen} onClose={closeModal}>
+        <DialogModal isOpen={isModalOpen} onClose={closeModal} zIndex={1002}>
           <EventDataDisplay
             // temporarily commented out, because creating an event-editor for all functionalities
             // is time consuming, and i need those events right now
