@@ -27,16 +27,18 @@ export interface EventWithNeeds
       workflows?: EventAddon[];
     };
   };
-  needsFulfilled: {
-    isWant: boolean;
-    isCreate: boolean;
-    isAbsorb: boolean;
-    isChill: boolean;
-    isVent: boolean;
-    isSquad: boolean;
-    isActive: boolean;
-    isWilderness: boolean;
-    isFresh: boolean;
+  needsFulfilledByVariant: {
+    [nameOfVariant: string]: {
+      isWant: boolean;
+      isCreate: boolean;
+      isAbsorb: boolean;
+      isChill: boolean;
+      isVent: boolean;
+      isSquad: boolean;
+      isActive: boolean;
+      isWilderness: boolean;
+      isFresh: boolean;
+    };
   };
   vocalNotifications: {
     startEventSound: string;

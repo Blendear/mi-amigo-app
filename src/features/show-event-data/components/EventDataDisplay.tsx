@@ -76,7 +76,7 @@ const EventDataDisplay = ({ eventData }) => {
       </ToggleableContent>
 
       <ToggleableContent title="Needs Fulfilled">
-        <NeedsFullfilled needs={eventData.needsFulfilled} />
+        <NeedsFullfilled needs={eventData.needsFulfilledByVariant} />
       </ToggleableContent>
 
       {displayAddOnsByVariants(eventData.addOnsByVariants)}

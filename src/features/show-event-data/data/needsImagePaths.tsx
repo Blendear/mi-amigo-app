@@ -1,27 +1,27 @@
 const needsImagePaths = {
   isWant: {
-    ifTrue: "https://placehold.co/600x400",
-    ifFalse: "https://placehold.co/300x200",
+    ifTrue: "/images/events-manager/needs-fullfilled/want.png",
+    ifFalse: "/images/events-manager/needs-fullfilled/quest.png",
   },
-  isCreate: "https://placehold.co/600x500",
-  isAbsorb: "https://placehold.co/600x600",
-  isChill: "https://placehold.co/600x700",
-  isVent: "https://placehold.co/600x800",
+  isCreate: "/images/events-manager/needs-fullfilled/create.png",
+  isAbsorb: "/images/events-manager/needs-fullfilled/absorb.png",
+  isChill: "/images/events-manager/needs-fullfilled/chill.png",
+  isVent: "/images/events-manager/needs-fullfilled/vent.png",
   isSquad: {
-    ifTrue: "https://placehold.co/600x900",
-    ifFalse: "https://placehold.co/300x450",
+    ifTrue: "/images/events-manager/needs-fullfilled/someone.png",
+    ifFalse: "/images/events-manager/needs-fullfilled/alone.png",
   },
   isActive: {
-    ifTrue: "https://placehold.co/600x100",
-    ifFalse: "https://placehold.co/300x500",
+    ifTrue: "/images/events-manager/needs-fullfilled/active.png",
+    ifFalse: "/images/events-manager/needs-fullfilled/static.png",
   },
   isWilderness: {
-    ifTrue: "https://placehold.co/600x300",
-    ifFalse: "https://placehold.co/300x550",
+    ifTrue: "/images/events-manager/needs-fullfilled/wilderness.png",
+    ifFalse: "/images/events-manager/needs-fullfilled/home.png",
   },
   isFresh: {
-    ifTrue: "https://placehold.co/600x200",
-    ifFalse: "https://placehold.co/300x600",
+    ifTrue: "/images/events-manager/needs-fullfilled/fresh.png",
+    ifFalse: "/images/events-manager/needs-fullfilled/classic.png",
   },
 };
 

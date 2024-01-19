@@ -44,7 +44,57 @@ Thats how an object data of an event looks like - an empty one:
 */
 
 const hardcodedEventsBecauseOfTheLackOfTime: EventWithNeeds[] = [
-  placeholderEvent1,
+  {
+    name: "Gaming",
+    description: "",
+    imagePath:
+      "https://www.jaxon.gg/wp-content/uploads/2022/10/fortnite-movie.jpg",
+    imageAltText: "",
+    eventGroupId: "",
+    eventInstanceId: "",
+    GIFPath: "",
+    isAllDayLong: false,
+    allDayLongVariantProps: {
+      importance: "",
+      date: new Date(),
+    },
+    timedVariantProps: {
+      startDateAndTime: new Date(),
+      endDateAndTime: new Date(),
+    },
+    deadlineVariant: "none",
+    addOnsByVariants: {},
+    needsFulfilledByVariant: {
+      "z-ekipą": {
+        isWant: true,
+        isCreate: true,
+        isAbsorb: false,
+        isChill: false,
+        isVent: false,
+        isSquad: true,
+        isActive: false,
+        isWilderness: false,
+        isFresh: true,
+      },
+      solo: {
+        isWant: true,
+        isCreate: true,
+        isAbsorb: false,
+        isChill: false,
+        isVent: false,
+        isSquad: false,
+        isActive: false,
+        isWilderness: false,
+        isFresh: false,
+      },
+    },
+    vocalNotifications: {
+      startEventSound: "",
+      xMinutesBeforeStartAmount: null,
+      xMinutesBeforeStartSound: "",
+      endEventSound: "",
+    },
+  },
   {
     name: "Oglądanie",
     description: "VOD / YT / seriale / Twitch etc.",
@@ -101,16 +151,18 @@ const hardcodedEventsBecauseOfTheLackOfTime: EventWithNeeds[] = [
         subApps: [],
       },
     },
-    needsFulfilled: {
-      isWant: false,
-      isCreate: false,
-      isAbsorb: false,
-      isChill: false,
-      isVent: false,
-      isSquad: false,
-      isActive: false,
-      isWilderness: false,
-      isFresh: false,
+    needsFulfilledByVariant: {
+      jakikolwiek: {
+        isWant: false,
+        isCreate: false,
+        isAbsorb: false,
+        isChill: false,
+        isVent: false,
+        isSquad: false,
+        isActive: false,
+        isWilderness: false,
+        isFresh: false,
+      },
     },
     vocalNotifications: {
       startEventSound: "",
