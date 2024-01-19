@@ -45,7 +45,7 @@ const EventDataDisplay = ({ eventData }) => {
   };
 
   return (
-    <div>
+    <section className={styles["event-data-display__container"]}>
       <ImageWithWrapper
         src={eventData.GIFPath !== "" ? eventData.GIFPath : eventData.imagePath}
         width="20vw"
@@ -80,7 +80,7 @@ const EventDataDisplay = ({ eventData }) => {
       </ToggleableContent>
 
       {displayAddOnsByVariants(eventData.addOnsByVariants)}
-    </div>
+    </section>
   );
 };
 

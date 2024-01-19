@@ -10,13 +10,21 @@
     position: absolute;
     top: 0;
     left: 0;
-    padding: 7rem 3rem;
+    padding: 3rem 3rem;
     width: 100%;
     height: 100%;
     border: none;
     display: grid;
     background-color: colors.$tertiary-light;
     overflow: hidden;
+
+    & > *:nth-child(2) {
+      overflow-x: scroll;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
   }
 
   &__close-btn {
@@ -30,6 +38,6 @@
   }
 }
 
-.modal-open {
-  overflow: hidden;
-}
+// .modal--open {
+//   ITS MOVED TO "globals.scss", otherwise it will not work on the body for some reason
+// }
