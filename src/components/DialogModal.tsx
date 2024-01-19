@@ -15,6 +15,7 @@ const DialogModal = ({
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
+      // eslint-disable-next-line
       behavior: "instant",
     });
   };
