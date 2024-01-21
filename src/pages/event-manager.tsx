@@ -5,24 +5,6 @@ import { DialogModal } from "..";
 import ChestButton from "@/features/EventManager/Main/chest-of-daily-planned-and-unplanned-events/components/ChestButton";
 import Scheduler from "@/features/EventManager/Main/shedule-of-hourly-planned-events/components/Scheduler";
 
-const events = [
-  {
-    id: 1,
-    title: "Meeting 1",
-    startTime: "09:00",
-    endTime: "10:15",
-    image: "url-to-image-1.jpg",
-  },
-  {
-    id: 2,
-    title: "Lunch",
-    startTime: "12:30",
-    endTime: "13:15",
-    image: "url-to-image-2.jpg",
-  },
-  // Add more events as needed
-];
-
 const EventManager = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 

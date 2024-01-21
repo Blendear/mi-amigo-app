@@ -47,7 +47,7 @@ import { useState, useEffect } from "react";
 //
 //       _._. Connect to Firestore DB ("db" is our custom name - we gave it inside "init-firebase.ts") - for making CRUD operation on our database   &   import neede funtions to operate on colections, documents etc.
 //
-import { db } from "../features/authentication/lib/init-firebase";
+import { db } from "@/features/FirebaseDB/authentication/lib/init-firebase";
 import {
   addDoc,
   collection, // gets a reference to a chosen collection

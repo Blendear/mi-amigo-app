@@ -1,7 +1,5 @@
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { db } from "../features/authentication/lib/init-firebase";
-import { doc, updateDoc } from "firebase/firestore";
 
 const toastProps = {
   theme: "colored",

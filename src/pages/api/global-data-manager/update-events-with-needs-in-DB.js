@@ -1,4 +1,4 @@
-import { db } from "../../../features/authentication/lib/init-firebase";
+import { db } from "@/features/FirebaseDB/authentication/lib/init-firebase";
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 
 const handler = async (req, res) => {

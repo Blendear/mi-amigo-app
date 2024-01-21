@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 //hook2 - the firebase code should be in a differently amed folder imo, not authentication
 // &
 // every functino should be a separate component, dont you think?
-import { db } from "../features/authentication/lib/init-firebase";
+import { db } from "@/features/FirebaseDB/authentication/lib/init-firebase";
 import {
   addDoc,
   collection, // gets a reference to a chosen collection
