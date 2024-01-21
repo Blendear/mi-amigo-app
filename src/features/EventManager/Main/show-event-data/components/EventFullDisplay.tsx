@@ -27,7 +27,7 @@ const EventFullDisplay = ({ eventData }) => {
                 {/* TODO: Create a separate file wiht an object, that has a keys (like "video-watcher") 
                 and values as components (like <VideoPlaylistWatcher/> and i will pass the whole payload)
                 for subapp components, which I will use as an objetc to get a specific component by name
-                from. Through {}[subappName] */}
+                from. Through {}[subappName]  */}
                 {addOn.subappName === "video-watcher" ? (
                   <VideoPlaylistWatcher
                     listOfYouTubeVideoIDs={addOn.payload.ytVideoIds}
