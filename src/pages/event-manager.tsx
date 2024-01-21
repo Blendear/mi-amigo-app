@@ -20,7 +20,7 @@ const EventManager = () => {
     <div className={styles["event-manager__container"]}>
       <ChestButton onClick={openModal} />
       <Scheduler
-      // events={events}
+      //  events={events}
       />
       {isModalOpen && (
         <DialogModal isOpen={isModalOpen} onClose={closeModal} zIndex={1001}>
