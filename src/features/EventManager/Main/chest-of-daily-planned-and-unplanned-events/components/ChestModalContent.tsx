@@ -1,11 +1,11 @@
 import styles from "@/styles/sass/styles-all.module.scss";
-import { ChestModalContentProps } from "..";
-import { useAppSelector } from "../../../store/redux/hooks";
-import { ImageWithWrapper } from "../../..";
+import { ChestModalContentProps } from "../types";
+import { useAppSelector } from "@/store/redux/hooks";
+import ImageWithWrapper from "@/components/ImageWithWrapper";
 import { useState, useRef } from "react";
-import DialogModal from "../../../components/DialogModal";
-import EventDataDisplay from "../../show-event-data/components/EventDataDisplay";
-import hardcodedEventsBecauseOfTheLackOfTime from "@/features/add-events-with-needs/data/hardcodedEventsBecauseOfTheLackOfTime";
+import DialogModal from "@/components/DialogModal";
+import EventFullDisplay from "../../show-event-data/components/EventFullDisplay";
+import hardcodedEventsBecauseOfTheLackOfTime from "@/features/EventManager/Main/show-event-data/data/hardcodedEventsBecauseOfTheLackOfTime";
 
 const ChestModalContent = ({}: ChestModalContentProps) => {
   const eventIndexRef = useRef(0);
@@ -47,7 +47,7 @@ const ChestModalContent = ({}: ChestModalContentProps) => {
       })}
       {isModalOpen && (
         <DialogModal isOpen={isModalOpen} onClose={closeModal} zIndex={1002}>
-          <EventDataDisplay
+          <EventFullDisplay
             // temporarily commented out, because creating an event-editor for all functionalities
             // is time consuming, and i need those events right now
             // eventData={chestWithAllDayLongEvents[eventIndexRef.current]}

@@ -1,19 +1,17 @@
 import styles from "@/styles/sass/styles-all.module.scss";
-import {
-  placeholderEventEmpty,
-  EventWithNeeds,
-  ImageAndInput,
-  NeedsFullfilled,
-  PropsByTimeDependency,
-  VocalNotifications,
-  NameAndDescription,
-  AddOns,
-} from "..";
+import { placeholderEventEmpty } from "../data/placeholderEvents";
+import { EventWithNeeds } from "../types";
+import AddOns from "./AddOns";
+import ImageAndInput from "./ImageAndInput";
+import NameAndDescription from "./NameAndDescription";
+import NeedsFullfilled from "./NeedsFullfilled";
+import PropsByTimeDependency from "./PropsByTimeDependency";
+import VocalNotifications from "./VocalNotifications";
 import { useRef, useState } from "react";
-import patchEventsWithNeedsInDB from "../../../utils/patchEventsWithNeedsInDB";
+import patchEventsWithNeedsInDB from "@/utils/patchEventsWithNeedsInDB";
 import { EditOrCreateEventFormProps } from "../types";
 
-const EditOrCreateEventForm = ({
+const AnOldEventForm = ({
   isCreatingANewEvent,
 }: EditOrCreateEventFormProps) => {
   const formDataRef = useRef<EventWithNeeds>(placeholderEventEmpty);
@@ -72,7 +70,7 @@ const EditOrCreateEventForm = ({
         </select>
       </label>
       <AddOns formDataRef={formDataRef} onChange={handleInputChange} />
-      <NeedsFullfilled formDataRef={formDataRef} onChange={handleInputChange} />
+      {/* <OLD NeedsFullfilled formDataRef={formDataRef} onChange={handleInputChange} /> */}
       <VocalNotifications
         formDataRef={formDataRef}
         onChange={handleInputChange}
@@ -97,4 +95,4 @@ const EditOrCreateEventForm = ({
   );
 };
 
-export default EditOrCreateEventForm;
+export default AnOldEventForm;

@@ -1,6 +1,4 @@
-import { placeholderEvent1 } from "@/features/add-events-with-needs/data/placeholderEvents";
 import { EventWithNeeds } from "../types";
-import VideoPlaylistWatcher from "@/features/subapp-yt-watcher/components/VideoPlaylistWatcher";
 /*
 Thats how an object data of an event looks like - an empty one:
 

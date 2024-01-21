@@ -1,6 +1,6 @@
 import styles from "@/styles/sass/styles-all.module.scss";
-import { ImageWithWrapper } from "../../..";
-import { ChestButtonProps } from "..";
+import ImageWithWrapper from "@/components/ImageWithWrapper";
+import { ChestButtonProps } from "../types";
 
 const ChestButton = ({ onClick }: ChestButtonProps) => {
   return (

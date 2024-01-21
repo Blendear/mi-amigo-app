@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import formatTimeOutOfDate from "../utils/formatTimeOutOfDate";
 
 const DynamicTime = ({ setTime }) => {
   useEffect(() => {

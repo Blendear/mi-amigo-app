@@ -1,12 +1,9 @@
-import Image from "next/image";
 import styles from "@/styles/sass/styles-all.module.scss";
 import { useState } from "react";
-import {
-  EventFormSegmentProps,
-  placeholderImagePath,
-  generateImagePath,
-} from "..";
-import { ImageWithWrapper } from "../../..";
+import { EventFormSegmentProps } from "../types";
+import { placeholderImagePath } from "../data/placeholderImagePath";
+import { generateImagePath } from "../utils/generateImagePath";
+import ImageWithWrapper from "@/components/ImageWithWrapper";
 
 const ImageAndInput = ({ formDataRef, onChange }: EventFormSegmentProps) => {
   const [imagePath, setImagePath] = useState<string>(placeholderImagePath);

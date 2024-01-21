@@ -1,11 +1,11 @@
 import styles from "@/styles/sass/styles-all.module.scss";
-import VideoPlaylistWatcher from "@/features/subapp-yt-watcher/components/VideoPlaylistWatcher";
+import VideoPlaylistWatcher from "@/features/EventManager/SubApps/subapp-yt-watcher/components/VideoPlaylistWatcher";
 import ImageWithWrapper from "@/components/ImageWithWrapper";
 import { useState } from "react";
 import ToggleableContent from "@/components/ToggleableContent";
 import NeedsFullfilled from "./NeedsFullfilled";
 
-const EventDataDisplay = ({ eventData }) => {
+const EventFullDisplay = ({ eventData }) => {
   console.log("eventData", eventData);
 
   // variants of this event - "youtubeVideos", "VODs" ... often there is only 1, but sometimes there are different tools for different variats
@@ -84,4 +84,4 @@ const EventDataDisplay = ({ eventData }) => {
   );
 };
 
-export default EventDataDisplay;
+export default EventFullDisplay;

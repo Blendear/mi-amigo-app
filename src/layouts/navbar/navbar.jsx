@@ -1,24 +1,7 @@
 import styles from "@/styles/sass/styles-all.module.scss";
-import { DialogModal, updateMiAmigoDataOfUser } from "../..";
+import { DialogModal } from "../..";
 import { useState } from "react";
-import { EditOrCreateEventForm } from "../../features/add-events-with-needs";
-import DatePicker from "react-multi-date-picker";
-import "react-multi-date-picker/styles/colors/teal.css";
-
-const MyDatePicker = () => {
-  const [value, setValue] = useState(new Date());
-
-  return (
-    <DatePicker
-      className="teal"
-      containerClassName={styles["navbar__datepicker"]}
-      value={value}
-      onChange={setValue}
-      range
-      numberOfMonths={2}
-    />
-  );
-};
+import AnOldEventForm from "../../features/add-events-with-needs";
 
 const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -36,10 +19,9 @@ const Navbar = () => {
       <button onClick={openModal}>+</button>
       {isModalOpen && (
         <DialogModal isOpen={isModalOpen} onClose={closeModal}>
-          <EditOrCreateEventForm />
+          <AnOldEventForm />
         </DialogModal>
       )}
-      {/* <MyDatePicker /> */}
     </nav>
   );
 };

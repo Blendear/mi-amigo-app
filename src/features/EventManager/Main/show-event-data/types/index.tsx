@@ -89,3 +89,7 @@ export type EventFormSegmentProps = {
 export type EditOrCreateEventFormProps = {
   isCreatingANewEvent: boolean;
 };
+
+export type NeedsFullfilledProps = {
+  needs: {};
+};
