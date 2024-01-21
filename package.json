@@ -11,6 +11,7 @@
     "compile:sass": "sass --watch src/styles/sass/styles-all.module.scss src/styles/css/styles-all.css"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.3",
     "@reduxjs/toolkit": "1.9.2",
     "@types/firebase": "3.2.1",
     "cypress": "13.1.0",

@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "@/styles/sass/styles-all.module.scss";
 
 const ToggleableContent = ({ title, children }) => {
-  const [isContentVisible, setIsContentVisible] = useState(true);
+  const [isContentVisible, setIsContentVisible] = useState(false);
 
   const toggleVisibility = () => {
     setIsContentVisible(!isContentVisible);
