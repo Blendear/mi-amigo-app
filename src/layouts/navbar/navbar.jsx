@@ -1,7 +1,7 @@
 import styles from "@/styles/sass/styles-all.module.scss";
-import { DialogModal } from "../..";
 import { useState } from "react";
-import AnOldEventForm from "../../features/add-events-with-needs";
+import DialogModal from "@/components/DialogModal";
+import AnOldEventForm from "@/features/EventManager/Main/show-event-data/components/AnOldEventForm";
 
 const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
