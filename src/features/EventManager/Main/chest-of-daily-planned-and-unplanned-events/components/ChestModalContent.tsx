@@ -4,7 +4,7 @@ import { useAppSelector } from "@/store/redux/hooks";
 import ImageWithWrapper from "@/components/ImageWithWrapper";
 import { useState, useRef } from "react";
 import DialogModal from "@/components/DialogModal";
-import EventFullDisplay from "../../show-event-data/components/EventFullDisplay";
+import EventDisplayIdeasForShowDataVariant from "@/features/EventManager/Main/show-event-data/components/EventDisplayIdeasForShowDataVariant";
 import hardcodedEventsBecauseOfTheLackOfTime from "@/features/EventManager/Main/show-event-data/data/hardcodedEventsBecauseOfTheLackOfTime";
 
 const ChestModalContent = ({}: ChestModalContentProps) => {
@@ -47,7 +47,7 @@ const ChestModalContent = ({}: ChestModalContentProps) => {
       })}
       {isModalOpen && (
         <DialogModal isOpen={isModalOpen} onClose={closeModal} zIndex={1002}>
-          <EventFullDisplay
+          <EventDisplayIdeasForShowDataVariant
             // temporarily commented out, because creating an event-editor for all functionalities
             // is time consuming, and i need those events right now
             // eventData={chestWithAllDayLongEvents[eventIndexRef.current]}

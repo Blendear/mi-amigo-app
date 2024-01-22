@@ -1,7 +1,7 @@
 import styles from "@/styles/sass/styles-all.module.scss";
 import { useState } from "react";
 import DialogModal from "@/components/DialogModal";
-import AnOldEventForm from "@/features/EventManager/Main/show-event-data/components/AnOldEventForm";
+import EventDisplay from "@/features/EventManager/Main/show-event-data/components/EventDisplay";
 
 const Navbar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -19,7 +19,7 @@ const Navbar = () => {
       <button onClick={openModal}>+</button>
       {isModalOpen && (
         <DialogModal isOpen={isModalOpen} onClose={closeModal}>
-          <AnOldEventForm />
+          <EventDisplay />
         </DialogModal>
       )}
     </nav>

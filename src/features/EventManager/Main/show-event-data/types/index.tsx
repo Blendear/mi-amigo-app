@@ -1,6 +1,17 @@
 import React from "react";
 import { Subapp } from "@/types";
 
+export type HandleDataChangeProps = {
+  formDataRef: React.MutableRefObject<EventWithNeeds>;
+  field: string;
+  value: any;
+};
+
+export type EventDisplayContextType = {
+  formDataRef: React.MutableRefObject<EventWithNeeds>;
+  handleDataChange: HandleDataChangeProps;
+};
+
 export interface EventWithNeeds
   extends Omit<IdentifiableObjectWithVisuals, "id"> {
   eventGroupId: string;
@@ -83,7 +94,11 @@ export type AllDBDataOfUser = {
 
 export type EventFormSegmentProps = {
   formDataRef: any;
-  onChange: (field: string, value: any) => void;
+  onChange: (
+    a: React.MutableRefObject<EventWithNeeds>,
+    field: string,
+    value: any
+  ) => void;
 };
 
 export type EditOrCreateEventFormProps = {
@@ -93,3 +108,13 @@ export type EditOrCreateEventFormProps = {
 export type NeedsFullfilledProps = {
   needs: {};
 };
+
+export type TogglersOfChaptersProps = {};
+
+export type ChapterOfInfoProps = {};
+
+export type WorkflowsProps = {};
+
+export type StepsProps = {};
+
+export type DangerZoneButtonsProps = {};

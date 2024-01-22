@@ -7,7 +7,7 @@ import { useState } from "react";
 import ToggleableContent from "@/components/ToggleableContent";
 import NeedsFullfilled from "./NeedsFullfilled";
 
-const EventFullDisplay = ({ eventData }) => {
+const EventDisplayIdeasForShowDataVariant = ({ eventData }) => {
   console.log("eventData", eventData);
 
   // variants of this event - "youtubeVideos", "VODs" ... often there is only 1, but sometimes there are different tools for different variats
@@ -86,4 +86,4 @@ const EventFullDisplay = ({ eventData }) => {
   );
 };
 
-export default EventFullDisplay;
+export default EventDisplayIdeasForShowDataVariant;

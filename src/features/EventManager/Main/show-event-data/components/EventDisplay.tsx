@@ -2,46 +2,22 @@ import styles from "@/styles/sass/styles-all.module.scss";
 import { placeholderEventEmpty } from "../data/placeholderEvents";
 import { EventWithNeeds } from "../types";
 import AddOns from "./AddOns";
-import ImageAndInput from "./ImageAndInput";
-import NameAndDescription from "./NameAndDescription";
+import TitleImageNameAndDescription from "./TitleImageNameAndDescription";
 import NeedsFullfilled from "./NeedsFullfilled";
-import PropsByTimeDependency from "./PropsByTimeDependency";
+import TimeBounding from "./TimeBounding";
 import VocalNotifications from "./VocalNotifications";
 import { useRef, useState } from "react";
 import patchEventsWithNeedsInDB from "@/utils/patchEventsWithNeedsInDB";
 import { EditOrCreateEventFormProps } from "../types";
+import handleDataChange from "../utils/handleDataChange";
 
-const AnOldEventForm = ({
-  isCreatingANewEvent,
-}: EditOrCreateEventFormProps) => {
+const EventDisplay = ({ isCreatingANewEvent }: EditOrCreateEventFormProps) => {
   const formDataRef = useRef<EventWithNeeds>(placeholderEventEmpty);
   const [submittedFormData, setSubmittedFormData] =
     useState<EventWithNeeds | null>(null);
 
-  const handleInputChange = (field: string, value: any) => {
-    const fields = field.split(".");
-
-    if (fields.length === 1) {
-      // If it's a top-level field
-      formDataRef.current = {
-        ...formDataRef.current,
-        [field]: value,
-      };
-    } else if (fields.length > 1) {
-      // If it's a nested field
-      formDataRef.current = {
-        ...formDataRef.current,
-        [fields[0]]: {
-          ...formDataRef.current[fields[0]],
-          [fields[1]]: value,
-        },
-      };
-    }
-  };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(formDataRef.current);
     setSubmittedFormData({ ...formDataRef.current });
     // TRAP1 - THE WHOLE EVENTS WIHT NEESD DATA OBJECT IS UPDATED - not just the all day events
     patchEventsWithNeedsInDB("Tobi The Wizard", formDataRef.current);
@@ -52,15 +28,11 @@ const AnOldEventForm = ({
       <div style={{ backgroundColor: "red" }}>
         Creating / Editing is disabled for now - Hardcoded events only
       </div>
-      <NameAndDescription
+      <TitleImageNameAndDescription
         formDataRef={formDataRef}
-        onChange={handleInputChange}
+        onChange={handleDataChange}
       />
-      <ImageAndInput formDataRef={formDataRef} onChange={handleInputChange} />
-      <PropsByTimeDependency
-        formDataRef={formDataRef}
-        onChange={handleInputChange}
-      />
+      <TimeBounding formDataRef={formDataRef} onChange={handleDataChange} />
       <label className={styles["event-manager__form__has-deadline"]}>
         Deadline variant
         <select defaultValue={formDataRef.current.deadlineVariant}>
@@ -69,11 +41,11 @@ const AnOldEventForm = ({
           <option value="must">Must</option>
         </select>
       </label>
-      <AddOns formDataRef={formDataRef} onChange={handleInputChange} />
-      {/* <OLD NeedsFullfilled formDataRef={formDataRef} onChange={handleInputChange} /> */}
+      <AddOns formDataRef={formDataRef} onChange={handleDataChange} />
+      {/* <OLD NeedsFullfilled formDataRef={formDataRef} onChange={handleDataChange} /> */}
       <VocalNotifications
         formDataRef={formDataRef}
-        onChange={handleInputChange}
+        onChange={handleDataChange}
       />
       {/* <button type="submit" className={styles["submit-btn"]}>
         Create Event
@@ -95,4 +67,4 @@ const AnOldEventForm = ({
   );
 };
 
-export default AnOldEventForm;
+export default EventDisplay;
