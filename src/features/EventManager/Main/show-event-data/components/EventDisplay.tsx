@@ -27,12 +27,8 @@ const EventDisplay = (props: EventDisplayProps) => {
   const [currentChapterOfInfo, setCurrentChapterOfInfo] =
     useState<CurrentChapterOfInfo>("workflows");
 
-  const [submittedFormData, setSubmittedFormData] =
-    useState<EventWithNeeds | null>(null);
-
   const handleSubmitNewEventData = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmittedFormData({ ...formDataRef.current });
     // The whole events with needs data object is
     // updated - not just the all day events
     patchEventsWithNeedsInDB("Tobi The Wizard", formDataRef.current);
