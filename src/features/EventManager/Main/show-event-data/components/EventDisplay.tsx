@@ -1,4 +1,7 @@
-import styles from "../styles/EventDisplay.module.css";
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
+import colors from "@/styles/emotion-css-experiment/abstracts/colors";
+
 import { useRef, useState } from "react";
 
 import TitleImageNameAndDescription from "./TitleImageNameAndDescription";
@@ -17,11 +20,20 @@ import { CurrentChapterOfInfo } from "../types";
 import patchEventsWithNeedsInDB from "@/utils/patchEventsWithNeedsInDB";
 import handleDataChange from "../utils/handleDataChange";
 
+const form = css({
+  padding: "2rem",
+  backgroundColor: colors.tertiaryLight,
+  display: "grid",
+  gap: "1.5rem",
+  justifyItems: "center",
+  color: colors.primaryLight,
+});
+
 const EventDisplay = (props: EventDisplayProps) => {
   const isShowing = useRef(props.variant === "showing");
 
   const formDataRef = useRef<EventWithNeeds>(
-    isShowing ? props.event : placeholderEventEmpty
+    !isShowing ? props.event : placeholderEventEmpty
   );
 
   const [currentChapterOfInfo, setCurrentChapterOfInfo] =
@@ -43,10 +55,7 @@ const EventDisplay = (props: EventDisplayProps) => {
         setCurrentChapterOfInfo,
       }}
     >
-      <form
-        // className={styles["event-manager__form"]}
-        onSubmit={handleSubmitNewEventData}
-      >
+      <form css={form} onSubmit={handleSubmitNewEventData}>
         <TitleImageNameAndDescription />
         <TogglersOfChapters />
         <ChapterOfInfo />

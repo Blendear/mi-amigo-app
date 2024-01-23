@@ -19,7 +19,7 @@ const Navbar = () => {
       <button onClick={openModal}>+</button>
       {isModalOpen && (
         <DialogModal isOpen={isModalOpen} onClose={closeModal}>
-          <EventDisplay />
+          <EventDisplay variant="creating" />
         </DialogModal>
       )}
     </nav>

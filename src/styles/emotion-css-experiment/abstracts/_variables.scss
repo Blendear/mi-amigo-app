@@ -1,0 +1,9 @@
+//
+//~~ _.  Globally used variables (global font/grid sizes etc.) - locally used variables are in their specific files, where they are used
+//
+
+// TRAP   -   DONT USE GLOBAL VARIABLES FOR ROW SIZES. ITS ALMOST NEVER HELPFIUL, AND V ERY DANGEROUS, BECAUSE THEY OVERWRITE STUFF ("SPECIFITY" REASONS)
+
+$border-radius-sm: 0.5rem;
+$border-radius-md: 2rem;
+$border-radius-lg: 4rem;

@@ -11,11 +11,11 @@ const TitleImageNameAndDescription = () => {
 
   const [imagePath, setImagePath] = useState<string>(placeholderImagePath);
   const [GIFPath, setGIFPath] = useState<string>(placeholderImagePath);
-
+  console.log("formDataRef", formDataRef);
   return (
     <section>
       <div className={styles["event-manager__form__img-n-input"]}>
-        <ImageWithWrapper src={imagePath} width="100%" />
+        {/* <ImageWithWrapper src={imagePath} width="100%" />
         <ImageWithWrapper src={GIFPath} width="100%" />
         <label>
           ImagePath
@@ -60,7 +60,7 @@ const TitleImageNameAndDescription = () => {
               handleDataChange(formDataRef, "description", e.target.value)
             }
           />
-        </label>
+        </label> */}
       </div>
     </section>
   );
