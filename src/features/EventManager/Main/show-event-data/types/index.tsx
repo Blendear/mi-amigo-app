@@ -1,16 +1,26 @@
 import React from "react";
 import { Subapp } from "@/types";
 
-export type HandleDataChangeProps = {
-  formDataRef: React.MutableRefObject<EventWithNeeds>;
-  field: string;
-  value: any;
-};
+export type HandleDataChange = (
+  formDataRef: React.MutableRefObject<EventWithNeeds>,
+  field: string,
+  value: any
+) => void;
 
 export type EventDisplayContextType = {
   formDataRef: React.MutableRefObject<EventWithNeeds>;
-  handleDataChange: HandleDataChangeProps;
+  handleDataChange: HandleDataChange;
+  currentChapterOfInfo: CurrentChapterOfInfo;
+  setCurrentChapterOfInfo: React.Dispatch<
+    React.SetStateAction<CurrentChapterOfInfo>
+  >;
 };
+
+export type CurrentChapterOfInfo =
+  | "workflows"
+  | "needsFullfilled"
+  | "timeBounding"
+  | "vocalNotifications";
 
 export interface EventWithNeeds
   extends Omit<IdentifiableObjectWithVisuals, "id"> {
@@ -101,17 +111,16 @@ export type EventFormSegmentProps = {
   ) => void;
 };
 
-export type EditOrCreateEventFormProps = {
-  isCreatingANewEvent: boolean;
-};
+export type EventDisplayProps =
+  | { variant: "creating"; event: never }
+  | { variant: "editing"; event: EventWithNeeds }
+  | { variant: "showing"; event: EventWithNeeds };
 
 export type NeedsFullfilledProps = {
   needs: {};
 };
 
 export type TogglersOfChaptersProps = {};
-
-export type ChapterOfInfoProps = {};
 
 export type WorkflowsProps = {};
 

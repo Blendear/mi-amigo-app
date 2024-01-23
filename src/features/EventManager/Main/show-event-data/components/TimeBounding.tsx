@@ -1,7 +1,9 @@
 import styles from "@/styles/sass/styles-all.module.scss";
-import { EventFormSegmentProps } from "../types";
+import { useContext } from "react";
+import EventDisplayContext from "../context/EventDisplayContext";
 
-const TimeBounding = ({ formDataRef, onChange }: EventFormSegmentProps) => {
+const TimeBounding = () => {
+  const { formDataRef, handleDataChange } = useContext(EventDisplayContext);
   return (
     <div className={styles["event-manager__form__props-by-time-dependancy"]}>
       <label>
@@ -10,7 +12,7 @@ const TimeBounding = ({ formDataRef, onChange }: EventFormSegmentProps) => {
           type="checkbox"
           defaultChecked={formDataRef.current.isAllDayLong}
           onChange={(e) =>
-            onChange(formDataRef, "isAllDayLong", e.target.checked)
+            handleDataChange(formDataRef, "isAllDayLong", e.target.checked)
           }
         />
       </label>
@@ -36,7 +38,7 @@ const TimeBounding = ({ formDataRef, onChange }: EventFormSegmentProps) => {
                 .split("T")[0]
             }
             onChange={(e) =>
-              onChange(
+              handleDataChange(
                 formDataRef,
                 "allDayLongVariantProps.date",
                 new Date(e.target.value)
@@ -56,7 +58,7 @@ const TimeBounding = ({ formDataRef, onChange }: EventFormSegmentProps) => {
               .toISOString()
               .slice(0, -8)}
             onChange={(e) =>
-              onChange(
+              handleDataChange(
                 formDataRef,
                 "timedVariantProps.startDateAndTime",
                 new Date(e.target.value)
@@ -73,7 +75,7 @@ const TimeBounding = ({ formDataRef, onChange }: EventFormSegmentProps) => {
               .toISOString()
               .slice(0, -8)}
             onChange={(e) =>
-              onChange(
+              handleDataChange(
                 formDataRef,
                 "timedVariantProps.endDateAndTime",
                 new Date(e.target.value)

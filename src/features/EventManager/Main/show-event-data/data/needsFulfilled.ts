@@ -1,4 +1,4 @@
-export const needsFulfilled = [
+const needsFulfilled = [
   "isWant",
   "isCreate",
   "isAbsorb",
@@ -9,3 +9,5 @@ export const needsFulfilled = [
   "isWilderness",
   "isFresh",
 ];
+
+export default needsFulfilled;

@@ -3,8 +3,15 @@ import styles from "@/styles/sass/styles-all.module.scss";
 import { NeedsFullfilledProps } from "../types/index";
 import ImageWithWrapper from "@/components/ImageWithWrapper";
 import needsImagePaths from "../data/needsImagePaths";
+import { useContext } from "react";
+import EventDisplayContext from "../context/EventDisplayContext";
+import needsFulfilled from "../data/needsFulfilled";
 
-const NeedsFullfilled = ({ needs }: NeedsFullfilledProps) => {
+const needs = needsFulfilled;
+
+const NeedsFullfilled = () => {
+  const { formDataRef, handleDataChange } = useContext(EventDisplayContext);
+
   const [selectedVariant, setSelectedVariant] = useState("");
 
   const handleVariantClick = (variant) => {

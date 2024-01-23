@@ -1,11 +1,12 @@
 import styles from "@/styles/sass/styles-all.module.scss";
 import ButtonThatPlaysSound from "@/components/ButtonThatPlaysSound";
 import { EventFormSegmentProps } from "../types";
+import { useContext } from "react";
+import EventDisplayContext from "../context/EventDisplayContext";
 
-const VocalNotifications = ({
-  formDataRef,
-  onChange,
-}: EventFormSegmentProps) => {
+const VocalNotifications = () => {
+  const { formDataRef, handleDataChange } = useContext(EventDisplayContext);
+
   return (
     <>
       <div className={styles["event-manager__form__vocal-notifications"]}>
@@ -15,7 +16,7 @@ const VocalNotifications = ({
             type="text"
             placeholder={formDataRef.current.vocalNotifications.startEventSound}
             onChange={(e) =>
-              onChange(
+              handleDataChange(
                 formDataRef,
                 "vocalNotifications.startEventSound",
                 e.target.value
@@ -38,7 +39,7 @@ const VocalNotifications = ({
               ""
             }
             onChange={(e) =>
-              onChange(
+              handleDataChange(
                 formDataRef,
                 "vocalNotifications.xMinutesBeforeStartAmount",
                 +e.target.value
@@ -54,7 +55,7 @@ const VocalNotifications = ({
               formDataRef.current.vocalNotifications.xMinutesBeforeStartSound
             }
             onChange={(e) =>
-              onChange(
+              handleDataChange(
                 formDataRef,
                 "vocalNotifications.xMinutesBeforeStartSound",
                 e.target.value
@@ -68,7 +69,7 @@ const VocalNotifications = ({
             type="text"
             placeholder={formDataRef.current.vocalNotifications.endEventSound}
             onChange={(e) =>
-              onChange(
+              handleDataChange(
                 formDataRef,
                 "vocalNotifications.endEventSound",
                 e.target.value
