@@ -6,6 +6,14 @@ const TimeBounding = () => {
   const { formDataRef, handleDataChange } = useContext(EventDisplayContext);
   return (
     <div className={styles["event-manager__form__props-by-time-dependancy"]}>
+      {/* <label className={styles["event-manager__form__has-deadline"]}>
+          Deadline variant
+          <select defaultValue={formDataRef.current.deadlineVariant}>
+            <option value="none">None</option>
+            <option value="prefer">Prefer</option>
+            <option value="must">Must</option>
+          </select>
+        </label> */}
       <label>
         Is All Day Long:
         <input

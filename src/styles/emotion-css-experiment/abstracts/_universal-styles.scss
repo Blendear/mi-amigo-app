@@ -1,8 +1,0 @@
-@use "../../../styles/sass/abstracts/mixins";
-@use "../../../styles/sass/abstracts/colors";
-@use "../../../styles/sass/abstracts/variables";
-@use "../../../styles/sass/base/typography";
-
-.disabled {
-  filter: saturate(0) brightness(0.2);
-}

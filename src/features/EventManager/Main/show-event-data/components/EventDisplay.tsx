@@ -20,7 +20,7 @@ import { CurrentChapterOfInfo } from "../types";
 import patchEventsWithNeedsInDB from "@/utils/patchEventsWithNeedsInDB";
 import handleDataChange from "../utils/handleDataChange";
 
-const form = css({
+const formCss = css({
   padding: "2rem",
   backgroundColor: colors.tertiaryLight,
   display: "grid",
@@ -49,43 +49,18 @@ const EventDisplay = (props: EventDisplayProps) => {
   return (
     <EventDisplayContext.Provider
       value={{
+        variant: props.variant,
         formDataRef,
         handleDataChange,
         currentChapterOfInfo,
         setCurrentChapterOfInfo,
       }}
     >
-      <form css={form} onSubmit={handleSubmitNewEventData}>
+      <form css={formCss} onSubmit={handleSubmitNewEventData}>
         <TitleImageNameAndDescription />
         <TogglersOfChapters />
         <ChapterOfInfo />
         <DangerZoneButtons />
-
-        {/* <label className={styles["event-manager__form__has-deadline"]}>
-          Deadline variant
-          <select defaultValue={formDataRef.current.deadlineVariant}>
-            <option value="none">None</option>
-            <option value="prefer">Prefer</option>
-            <option value="must">Must</option>
-          </select>
-        </label> */}
-
-        {/* <button type="submit" className={styles["submit-btn"]}>
-        Create Event
-      </button> */}
-
-        {/* <div
-          className={
-            styles["event-manager__form__temporary-JSON-visualisation"]
-          }
-        >
-          {submittedFormData && (
-            <div>
-              <h2>Submitted Form Data:</h2>
-              <pre>{JSON.stringify(submittedFormData, null, 2)}</pre>
-            </div>
-          )}
-        </div> */}
       </form>
     </EventDisplayContext.Provider>
   );
