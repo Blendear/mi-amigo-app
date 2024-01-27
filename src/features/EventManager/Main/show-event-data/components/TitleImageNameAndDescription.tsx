@@ -10,18 +10,42 @@ import { CiImageOn } from "react-icons/ci";
 import { MdGif } from "react-icons/md";
 import { contentWithBorder } from "@/styles/emotion-css-experiment/abstracts/universal-styles";
 import { button } from "@/styles/emotion-css-experiment/abstracts/mixins";
+import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
+import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
+import { wrapperWithCenteredSvg } from "@/styles/emotion-css-experiment/abstracts/universal-styles";
 
 const titleINADCss = {
   container: css({
+    width: "100%",
     display: "grid",
-    gridTemplateRows: "repeat(4, 1fr)",
   }),
 
-  imageAndGif: css({}),
+  visualWithInput: css({
+    display: "grid",
+    gridTemplateRows: "1fr max-content",
 
-  name: css([{}, contentWithBorder]),
+    "& > div:nth-of-type(1)": {
+      gridRow: "1/3",
+      gridColumn: "1",
 
-  description: css([{}, contentWithBorder]),
+      " & > span": {
+        borderRadius: `${variables.borderRadius.md} ${variables.borderRadius.md} 0 0`,
+      },
+    },
+
+    "& > div:nth-of-type(2)": {
+      zIndex: 1,
+      gridRow: "2/3",
+      gridColumn: "1",
+      backgroundColor: `rgba(${colors.tertiaryLight},0.8)`,
+      display: "grid",
+      gridTemplateColumns: "1fr 3fr 1fr",
+    },
+  }),
+
+  name: css([{ gridRow: "2 / 4", gridColumn: "1" }, contentWithBorder]),
+
+  description: css([{ gridRow: "3 / 5", gridColumn: "1" }, contentWithBorder]),
 };
 
 const TitleImageNameAndDescription = () => {
@@ -42,16 +66,17 @@ const TitleImageNameAndDescription = () => {
 
   return (
     <section css={titleINADCss.container}>
-      <div css={titleINADCss.imageAndGif}>
+      <div css={titleINADCss.visualWithInput}>
         <ImageWithWrapper
           src={formDataRef.current.GIFPath ? GIFPath : imagePath}
           width="100%"
+          aspectRatio="1.82/1"
         />
         {2 > 1 && (
           // !isShowing.current
           <div>
             <button
-              css={button(!showGIF)}
+              css={[button(!showGIF), wrapperWithCenteredSvg("5rem", "70%")]}
               onClick={() => {
                 setShowGIF(false);
               }}
@@ -81,7 +106,7 @@ const TitleImageNameAndDescription = () => {
               }}
             />
             <button
-              css={button(showGIF)}
+              css={[button(showGIF), wrapperWithCenteredSvg("5rem", "70%")]}
               onClick={() => {
                 setShowGIF(true);
               }}

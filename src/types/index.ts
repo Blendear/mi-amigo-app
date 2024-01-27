@@ -12,7 +12,7 @@ export interface DialogModalProps {
 export type ImageWithWrapperProps = {
   width?: string;
   height?: string;
-  aspectRatio?: number;
+  aspectRatio?: string;
   src: string;
   alt?: string;
   wrapperClassName?: string;

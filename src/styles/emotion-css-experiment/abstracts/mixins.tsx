@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { RGBColorString } from "@/types";
-import colors from "./colors";
+import { colors } from "./colors";
 
 export const button = (
   active: boolean,

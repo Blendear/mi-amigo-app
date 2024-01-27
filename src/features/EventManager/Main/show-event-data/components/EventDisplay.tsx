@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import colors from "@/styles/emotion-css-experiment/abstracts/colors";
+import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 
 import { useRef, useState } from "react";
 
@@ -22,7 +22,6 @@ import handleDataChange from "../utils/handleDataChange";
 
 const eventDisplayCss = {
   container: css({
-    padding: "2rem",
     backgroundColor: colors.tertiaryLight,
     display: "grid",
     gap: "1.5rem",

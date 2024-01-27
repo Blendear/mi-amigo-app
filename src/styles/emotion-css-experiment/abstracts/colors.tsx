@@ -1,7 +1,7 @@
-const colors = {
+export const colors = {
   primaryLight: "255, 255, 255",
   secondaryLight: "0, 122, 126",
-  tertiaryLight: "black",
+  tertiaryLight: "0, 0, 0",
   quaternaryLight: "97, 39, 14",
 
   shadowSharpRight: "0.2rem 0 0rem 0 rgba(0, 0, 0, 0.3)",
@@ -14,5 +14,3 @@ const colors = {
   medium: "74, 74, 74",
   light: "168, 168, 168",
 };
-
-export default colors;
