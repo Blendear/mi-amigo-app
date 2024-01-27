@@ -20,20 +20,23 @@ import { CurrentChapterOfInfo } from "../types";
 import patchEventsWithNeedsInDB from "@/utils/patchEventsWithNeedsInDB";
 import handleDataChange from "../utils/handleDataChange";
 
-const formCss = css({
-  padding: "2rem",
-  backgroundColor: colors.tertiaryLight,
-  display: "grid",
-  gap: "1.5rem",
-  justifyItems: "center",
-  color: colors.primaryLight,
-});
+const eventDisplayCss = {
+  container: css({
+    padding: "2rem",
+    backgroundColor: colors.tertiaryLight,
+    display: "grid",
+    gap: "1.5rem",
+    justifyItems: "center",
+    color: colors.primaryLight,
+  }),
+};
 
 const EventDisplay = (props: EventDisplayProps) => {
+  // isShowing & formDataRef are a useRef object, so they wont cause a rerender
   const isShowing = useRef(props.variant === "showing");
 
   const formDataRef = useRef<EventWithNeeds>(
-    !isShowing ? props.event : placeholderEventEmpty
+    props.variant !== "creating" ? props.event : placeholderEventEmpty
   );
 
   const [currentChapterOfInfo, setCurrentChapterOfInfo] =
@@ -49,14 +52,14 @@ const EventDisplay = (props: EventDisplayProps) => {
   return (
     <EventDisplayContext.Provider
       value={{
-        variant: props.variant,
+        isShowing,
         formDataRef,
         handleDataChange,
         currentChapterOfInfo,
         setCurrentChapterOfInfo,
       }}
     >
-      <form css={formCss} onSubmit={handleSubmitNewEventData}>
+      <form css={eventDisplayCss.container} onSubmit={handleSubmitNewEventData}>
         <TitleImageNameAndDescription />
         <TogglersOfChapters />
         <ChapterOfInfo />

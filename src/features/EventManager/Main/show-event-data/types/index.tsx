@@ -8,7 +8,7 @@ export type HandleDataChange = (
 ) => void;
 
 export type EventDisplayContextType = {
-  variant: "creating" | "editing" | "showing";
+  isShowing: React.MutableRefObject<boolean>;
   formDataRef: React.MutableRefObject<EventWithNeeds>;
   handleDataChange: HandleDataChange;
   currentChapterOfInfo: CurrentChapterOfInfo;
@@ -113,7 +113,7 @@ export type EventFormSegmentProps = {
 };
 
 export type EventDisplayProps =
-  | { variant: "creating"; event: never }
+  | { variant: "creating" }
   | { variant: "editing"; event: EventWithNeeds }
   | { variant: "showing"; event: EventWithNeeds };
 

@@ -30,3 +30,5 @@ export type Subapp = {
   subappName: keyof SubappPayloads;
   payload: SubappPayloads[keyof SubappPayloads];
 };
+
+export type RGBColorString = string | `rgb(${string})`;
