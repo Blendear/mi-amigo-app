@@ -11,6 +11,7 @@ import { MdGif } from "react-icons/md";
 import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
 import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
+import { placeholders } from "@/data/placeholders";
 
 const titleINADCss = {
   container: css({
@@ -54,6 +55,7 @@ const titleINADCss = {
       zIndex: "1",
       gridRow: "2 / 4",
       gridColumn: "1",
+      borderRadius: `0 0 ${variables.borderRadius.md} ${variables.borderRadius.md}`,
     },
   ]),
 
@@ -79,10 +81,10 @@ const TitleImageNameAndDescription = () => {
   // States for rerendering the image/gif after changing url string
   // "formDataRef" is a useRef object, so changing it wouldn't cause a rerender
   const [imagePath, setImagePath] = useState<string>(
-    formDataRef.current.imagePath || placeholderImagePath
+    formDataRef.current.imagePath || placeholders.image.a
   );
   const [GIFPath, setGIFPath] = useState<string>(
-    formDataRef.current.imagePath || placeholderImagePath
+    formDataRef.current.imagePath || placeholders.image.b
   );
 
   const [showGIF, setShowGIF] = useState<boolean>(false);
@@ -92,7 +94,7 @@ const TitleImageNameAndDescription = () => {
     <section css={titleINADCss.container}>
       <div css={titleINADCss.visualWithInput}>
         <ImageWithWrapper
-          src={formDataRef.current.GIFPath ? GIFPath : imagePath}
+          src={formDataRef.current.GIFPath || showGIF ? GIFPath : imagePath}
           width="100%"
           aspectRatio="1.82/1"
         />

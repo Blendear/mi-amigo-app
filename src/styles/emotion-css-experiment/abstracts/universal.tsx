@@ -34,9 +34,9 @@ export const universalCss = {
 
   container: css({
     padding: "1.5rem",
-    border: "1px solid white",
+    border: `0.1rem solid rgb(${colors.whiteLight}, 0.5)`,
     borderRadius: variables.borderRadius.md,
-    boxShadow: `inset 0 0 1.5rem 0.75rem rgba(${colors.whiteLight},0.15)`,
+    boxShadow: `inset 0 0 1rem 0.5rem rgba(${colors.whiteLight},0.15)`,
     backgroundColor: `rgb(${colors.tertiaryLight})`,
   }),
 
