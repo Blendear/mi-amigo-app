@@ -8,16 +8,19 @@ import ImageWithWrapper from "@/components/ImageWithWrapper";
 import EventDisplayContext from "../context/EventDisplayContext";
 import { CiImageOn } from "react-icons/ci";
 import { MdGif } from "react-icons/md";
-import { contentWithBorder } from "@/styles/emotion-css-experiment/abstracts/universal-styles";
-import { button } from "@/styles/emotion-css-experiment/abstracts/mixins";
 import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
 import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
-import { wrapperWithCenteredSvg } from "@/styles/emotion-css-experiment/abstracts/universal-styles";
+import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 
 const titleINADCss = {
   container: css({
     width: "100%",
     display: "grid",
+    gridTemplateRows: "max-content max-content 3.25rem max-content",
+
+    "& *": {
+      fontSize: variables.fontSize.regular,
+    },
   }),
 
   visualWithInput: css({
@@ -40,12 +43,33 @@ const titleINADCss = {
       backgroundColor: `rgba(${colors.tertiaryLight},0.8)`,
       display: "grid",
       gridTemplateColumns: "1fr 3fr 1fr",
+
+      "& > input": {},
     },
   }),
 
-  name: css([{ gridRow: "2 / 4", gridColumn: "1" }, contentWithBorder]),
+  name: css([
+    universalCss.container,
+    {
+      zIndex: "1",
+      gridRow: "2 / 4",
+      gridColumn: "1",
+    },
+  ]),
 
-  description: css([{ gridRow: "3 / 5", gridColumn: "1" }, contentWithBorder]),
+  description: css([
+    universalCss.container,
+    {
+      paddingTop: "4.5rem",
+      gridRow: "3 / 5",
+      gridColumn: "1",
+      boxSizing: "border-box",
+
+      "& > textarea": {
+        height: "12.5rem",
+      },
+    },
+  ]),
 };
 
 const TitleImageNameAndDescription = () => {
@@ -76,7 +100,10 @@ const TitleImageNameAndDescription = () => {
           // !isShowing.current
           <div>
             <button
-              css={[button(!showGIF), wrapperWithCenteredSvg("5rem", "70%")]}
+              css={[
+                universalCss.button(!showGIF),
+                universalCss.wrapperWithCenteredSvg("5rem", "70%"),
+              ]}
               onClick={() => {
                 setShowGIF(false);
               }}
@@ -106,7 +133,10 @@ const TitleImageNameAndDescription = () => {
               }}
             />
             <button
-              css={[button(showGIF), wrapperWithCenteredSvg("5rem", "70%")]}
+              css={[
+                universalCss.button(showGIF),
+                universalCss.wrapperWithCenteredSvg("5rem", "70%"),
+              ]}
               onClick={() => {
                 setShowGIF(true);
               }}
@@ -126,15 +156,16 @@ const TitleImageNameAndDescription = () => {
       />
       {2 > 1 && (
         // showDescription || !isShowing.current
-        <textarea
-          css={titleINADCss.description}
-          disabled={isShowing.current}
-          aria-label="Description"
-          placeholder={formDataRef.current.description}
-          onChange={(e) =>
-            handleDataChange(formDataRef, "description", e.target.value)
-          }
-        />
+        <div css={titleINADCss.description}>
+          <textarea
+            disabled={isShowing.current}
+            aria-label="Description"
+            placeholder={formDataRef.current.description}
+            onChange={(e) =>
+              handleDataChange(formDataRef, "description", e.target.value)
+            }
+          />
+        </div>
       )}
     </section>
   );

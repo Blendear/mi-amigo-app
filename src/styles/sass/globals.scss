@@ -91,6 +91,10 @@ textarea {
   border: none;
   background: none;
   outline: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 input,
