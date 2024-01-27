@@ -7,7 +7,7 @@ export const variables = {
 
   fontSize: {
     regular: "1.5rem",
-    subheading: "2rem",
-    heading: "3rem",
+    subheading: "2.8rem",
+    heading: "4rem",
   },
 };

@@ -121,7 +121,10 @@ export type NeedsFullfilledProps = {
   needs: {};
 };
 
-export type TogglersOfChaptersProps = {};
+export type Chapter = {
+  name: CurrentChapterOfInfo;
+  svg: React.ReactNode;
+};
 
 export type WorkflowsProps = {};
 
