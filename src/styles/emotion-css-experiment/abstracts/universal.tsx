@@ -33,6 +33,8 @@ export const universalCss = {
   }),
 
   container: css({
+    width: "100%",
+    boxSizing: "border-box",
     padding: "1.5rem",
     border: `0.1rem solid rgb(${colors.whiteLight}, 0.5)`,
     borderRadius: variables.borderRadius.md,

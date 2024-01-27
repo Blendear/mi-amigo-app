@@ -24,6 +24,7 @@ const eventDisplayCss = {
   container: css({
     backgroundColor: colors.tertiaryLight,
     display: "grid",
+    gridAutoRows: "max-content",
     gap: "1.5rem",
     justifyItems: "center",
     color: colors.primaryLight,
