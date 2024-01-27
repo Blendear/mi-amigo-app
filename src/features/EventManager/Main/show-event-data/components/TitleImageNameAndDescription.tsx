@@ -44,8 +44,6 @@ const titleINADCss = {
       backgroundColor: `rgba(${colors.tertiaryLight},0.8)`,
       display: "grid",
       gridTemplateColumns: "1fr 3fr 1fr",
-
-      "& > input": {},
     },
   }),
 
@@ -98,8 +96,7 @@ const TitleImageNameAndDescription = () => {
           width="100%"
           aspectRatio="1.82/1"
         />
-        {2 > 1 && (
-          // !isShowing.current
+        {!isShowing.current && (
           <div>
             <button
               css={[
@@ -156,19 +153,19 @@ const TitleImageNameAndDescription = () => {
         placeholder={formDataRef.current.name}
         onChange={(e) => handleDataChange(formDataRef, "name", e.target.value)}
       />
-      {2 > 1 && (
-        // showDescription || !isShowing.current
-        <div css={titleINADCss.description}>
-          <textarea
-            disabled={isShowing.current}
-            aria-label="Description"
-            placeholder={formDataRef.current.description}
-            onChange={(e) =>
-              handleDataChange(formDataRef, "description", e.target.value)
-            }
-          />
-        </div>
-      )}
+      {showDescription ||
+        (!isShowing.current && (
+          <div css={titleINADCss.description}>
+            <textarea
+              disabled={isShowing.current}
+              aria-label="Description"
+              placeholder={formDataRef.current.description}
+              onChange={(e) =>
+                handleDataChange(formDataRef, "description", e.target.value)
+              }
+            />
+          </div>
+        ))}
     </section>
   );
 };
