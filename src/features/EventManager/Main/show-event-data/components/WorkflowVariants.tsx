@@ -34,6 +34,7 @@ const variantsCss = {
 
 const WorkflowVariants = ({}: WorkflowVariantsProps) => {
   const { workflowVariantIndex } = useContext(EventDisplayContext);
+  const [, forceUpdate] = useState(false);
 
   return (
     <SwiperCustom
@@ -41,6 +42,7 @@ const WorkflowVariants = ({}: WorkflowVariantsProps) => {
       spaceBetweenSlides="10rem"
       activeSlide={workflowVariantIndex.current}
       setActiveSlide={(index) => (workflowVariantIndex.current = index)}
+      forceUpdate={forceUpdate}
     >
       {[1, 2, 3, 4].map((slide, index) => (
         <SwiperSlide key={index}>

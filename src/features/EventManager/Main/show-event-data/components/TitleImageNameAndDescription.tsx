@@ -85,6 +85,7 @@ const TitleImageNameAndDescription = () => {
     formDataRef.current.imagePath || placeholders.image.b
   );
 
+  const [, forceUpdate] = useState(false);
   const [showGIF, setShowGIF] = useState<boolean>(false);
   const [showDescription, setShowDescription] = useState<boolean>(false);
 
@@ -105,6 +106,7 @@ const TitleImageNameAndDescription = () => {
               ]}
               onClick={() => {
                 setShowGIF(false);
+                forceUpdate((prev) => !prev);
               }}
             >
               <CiImageOn />

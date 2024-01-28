@@ -13,6 +13,7 @@ export const SwiperCustom = ({
   spaceBetweenSlides,
   activeSlide,
   setActiveSlide,
+  forceUpdate,
   children,
 }: SwiperCustomProps) => {
   return (
@@ -22,6 +23,7 @@ export const SwiperCustom = ({
         onSlideChange={(swiper) => {
           if (setActiveSlide) {
             setActiveSlide(swiper.activeIndex);
+            forceUpdate && forceUpdate((prev) => !prev);
           }
         }}
         spaceBetween={`${spaceBetweenSlides || "1rem"}`}
