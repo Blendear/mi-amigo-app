@@ -15,7 +15,7 @@ export const universalCss = {
       border: "none",
       backgroundColor: bgColor || `rgb(${colors.tertiaryLight})`,
       color: textColor || `rgb(${colors.primaryLight})`,
-      filter: !active && `brightness(0.5)`,
+      filter: !active && `brightness(0.2)`,
 
       "&:enabled": {
         "&:hover": {

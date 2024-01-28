@@ -41,6 +41,11 @@ const EventDisplay = (props: EventDisplayProps) => {
 
   const [currentChapterOfInfo, setCurrentChapterOfInfo] =
     useState<CurrentChapterOfInfo>("workflows");
+  // The indexes for specific chapter parts are saved here, so that jumping
+  // between chapters won't restart the active slide
+  const workflowVariantIndex = useRef<number>(0);
+  const worfklowStepIndex = useRef<number>(0);
+  const workflowBookOfAddonsIndex = useRef<number>(0);
 
   const handleSubmitNewEventData = (e: React.FormEvent) => {
     e.preventDefault();
@@ -57,6 +62,9 @@ const EventDisplay = (props: EventDisplayProps) => {
         handleDataChange,
         currentChapterOfInfo,
         setCurrentChapterOfInfo,
+        workflowVariantIndex,
+        worfklowStepIndex,
+        workflowBookOfAddonsIndex,
       }}
     >
       <form css={eventDisplayCss.container} onSubmit={handleSubmitNewEventData}>

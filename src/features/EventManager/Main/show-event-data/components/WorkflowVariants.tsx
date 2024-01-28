@@ -1,56 +1,15 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import { Swiper } from "swiper/react";
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
-import { EffectCoverflow, Pagination } from "swiper/modules";
-import { SwiperCustomProps } from "../types";
-
-// Example use case on the bottom of this file
-export const SwiperCustom = ({
-  swiperContainerCss,
-  spaceBetweenSlides,
-  activeSlide,
-  setActiveSlide,
-  children,
-}: SwiperCustomProps) => {
-  return (
-    <div css={swiperContainerCss}>
-      <Swiper
-        onSwiper={(swiper) => swiper.slideTo(activeSlide)}
-        onSlideChange={(swiper) => {
-          if (setActiveSlide) {
-            setActiveSlide(swiper.activeIndex);
-          }
-        }}
-        spaceBetween={`${spaceBetweenSlides || "1rem"}`}
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={"auto"}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        pagination={false}
-        modules={[EffectCoverflow, Pagination]}
-      >
-        {children}
-      </Swiper>
-    </div>
-  );
-};
-
-/*
-Example use case, using the build in swiper class names:
-
+import { WorkflowVariantsProps } from "../types";
 import { SwiperCustom } from "./SwiperCustom";
 import { SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
+import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
+import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
+import { useState } from "react";
+import EventDisplayContext from "../context/EventDisplayContext";
+import { useContext, useEffect } from "react";
 
 const variantsCss = {
   container: css({
@@ -73,7 +32,7 @@ const variantsCss = {
   }),
 };
 
-const WorkflowVariants = () => {
+const WorkflowVariants = ({}: WorkflowVariantsProps) => {
   const { workflowVariantIndex } = useContext(EventDisplayContext);
 
   return (
@@ -104,5 +63,3 @@ const WorkflowVariants = () => {
 };
 
 export default WorkflowVariants;
-
-*/

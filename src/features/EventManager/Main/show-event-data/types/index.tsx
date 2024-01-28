@@ -15,6 +15,9 @@ export type EventDisplayContextType = {
   setCurrentChapterOfInfo: React.Dispatch<
     React.SetStateAction<CurrentChapterOfInfo>
   >;
+  workflowVariantIndex: React.MutableRefObject<number>;
+  worfklowStepIndex: React.MutableRefObject<number>;
+  workflowBookOfAddonsIndex: React.MutableRefObject<number>;
 };
 
 export type CurrentChapterOfInfo =
@@ -134,25 +137,12 @@ export type DangerZoneButtonsProps = {};
 
 export type SwiperCustomProps = {
   swiperContainerCss: {};
+  spaceBetweenSlides?: string;
+  activeSlide?: number;
+  setActiveSlide?: (
+    newIndex
+  ) => void | React.Dispatch<React.SetStateAction<number>>;
   children: React.ReactNode;
 };
 
-// container: css({
-//   ".swiper": {
-//     width: "20rem",
-//   },
-
-//   ".swiper-slide": {
-//     borderRadius: "100%",
-//     border: "0.3rem solid white",
-//     background: "linear-gradient(to top, #000000, #414141)",
-//     width: "6rem",
-//     aspectRatio: "1/1",
-//     display: "grid",
-//     justifyItems: "center",
-//     alignItems: "center",
-//     fontSize: variables.fontSize.subheading,
-//   },
-// })
-
-// create a type for it /\
+export type WorkflowVariantsProps = {};
