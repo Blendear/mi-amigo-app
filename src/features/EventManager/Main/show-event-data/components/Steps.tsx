@@ -2,19 +2,17 @@
 import { css } from "@emotion/react";
 import { StepsProps } from "../types";
 
-import { Swiper, SwiperSlide } from "swiper/react";
+import { SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
 
-import { EffectCoverflow, Pagination } from "swiper/modules";
-import ImageWithWrapper from "@/components/ImageWithWrapper";
-import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
+import { SwiperCustom } from "./SwiperCustom";
+import { formatToRomanNumber } from "../utils/formatToRomanNumber";
 
 const stepsCss = {
   container: css({
     ".swiper": {
+      padding: "2rem 0",
       width: "20rem",
     },
 
@@ -30,40 +28,17 @@ const stepsCss = {
       fontSize: variables.fontSize.subheading,
     },
   }),
-
-  swiper: css({ padding: "2rem 0" }),
-
-  slide: css({}),
 };
 
 const Steps = ({}: StepsProps) => {
   return (
-    <div css={stepsCss.container}>
-      <Swiper
-        css={stepsCss.swiper}
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={"auto"}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        pagination={false}
-        modules={[EffectCoverflow, Pagination]}
-      >
-        {["I", "II", "III", "IV", "V", "VI", "VII", "VIII"].map(
-          (slide, index) => (
-            <SwiperSlide key={index}>
-              <div css={stepsCss.slide}>{slide}</div>
-            </SwiperSlide>
-          )
-        )}
-      </Swiper>
-    </div>
+    <SwiperCustom swiperContainerCss={stepsCss.container}>
+      {[1, 2, 3, 4].map((slide, index) => (
+        <SwiperSlide key={index}>
+          <div>{formatToRomanNumber(slide)}</div>
+        </SwiperSlide>
+      ))}
+    </SwiperCustom>
   );
 };
 

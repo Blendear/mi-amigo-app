@@ -131,3 +131,28 @@ export type WorkflowsProps = {};
 export type StepsProps = {};
 
 export type DangerZoneButtonsProps = {};
+
+export type SwiperCustomProps = {
+  swiperContainerCss: {};
+  children: React.ReactNode;
+};
+
+// container: css({
+//   ".swiper": {
+//     width: "20rem",
+//   },
+
+//   ".swiper-slide": {
+//     borderRadius: "100%",
+//     border: "0.3rem solid white",
+//     background: "linear-gradient(to top, #000000, #414141)",
+//     width: "6rem",
+//     aspectRatio: "1/1",
+//     display: "grid",
+//     justifyItems: "center",
+//     alignItems: "center",
+//     fontSize: variables.fontSize.subheading,
+//   },
+// })
+
+// create a type for it /\
