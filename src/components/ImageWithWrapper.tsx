@@ -1,3 +1,5 @@
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
 import Image from "next/image";
 import { ImageWithWrapperProps } from "..";
 
@@ -7,11 +9,11 @@ const ImageWithWrapper = ({
   aspectRatio,
   src,
   alt,
-  wrapperClassName,
+  wrapperCss,
 }: ImageWithWrapperProps) => {
   return (
     <div
-      className={wrapperClassName}
+      css={wrapperCss}
       style={
         height
           ? {

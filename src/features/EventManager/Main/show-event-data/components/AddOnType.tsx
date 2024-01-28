@@ -1,6 +1,12 @@
 import styles from "@/styles/sass/styles-all.module.scss";
 import { v4 as uuidv4 } from "uuid"; // Import uuidv4 for generating unique IDs
-const AddOnType = ({ formDataRef, onChange, type }) => {
+import { useContext } from "react";
+import EventDisplayContext from "../context/EventDisplayContext";
+
+const AddOnType = ({ type }) => {
+  const { formDataRef, handleDataChange, isShowing } =
+    useContext(EventDisplayContext);
+
   const handleAddOnsChange = (content, contentType, value) => {
     const updatedAddOns = { ...formDataRef.current.addOnsByVariants };
 
@@ -26,7 +32,7 @@ const AddOnType = ({ formDataRef, onChange, type }) => {
 
     updatedAddOns[type][content][0] = addOn;
 
-    onChange("addOnsByVariants", updatedAddOns);
+    handleDataChange(formDataRef, "addOnsByVariants", updatedAddOns);
   };
 
   return (
@@ -34,17 +40,17 @@ const AddOnType = ({ formDataRef, onChange, type }) => {
       <h3>{type.charAt(0).toUpperCase() + type.slice(1)}</h3>
 
       {/* Input for the specified type name */}
-      <label>
+      {/* <label>
         Name:
         <input
           type="text"
           placeholder={formDataRef.current.addOnsByVariants[type]?.name || ""}
           onChange={(e) => handleAddOnsChange("name", "text", e.target.value)}
         />
-      </label>
+      </label> */}
 
       {/* Input for description of the specified type */}
-      <label>
+      {/* <label>
         Description:
         <input
           type="text"
@@ -55,10 +61,10 @@ const AddOnType = ({ formDataRef, onChange, type }) => {
             handleAddOnsChange("description", "text", e.target.value)
           }
         />
-      </label>
+      </label> */}
 
       {/* Input for image path of the specified type */}
-      <label>
+      {/* <label>
         Image Path:
         <input
           type="text"
@@ -69,10 +75,10 @@ const AddOnType = ({ formDataRef, onChange, type }) => {
             handleAddOnsChange("imagePath", "text", e.target.value)
           }
         />
-      </label>
+      </label> */}
 
       {/* Input for link content of the specified type */}
-      <label>
+      {/* <label>
         Link Content:
         <input
           type="text"
@@ -83,10 +89,10 @@ const AddOnType = ({ formDataRef, onChange, type }) => {
             handleAddOnsChange("contentAsLink", "text", e.target.value)
           }
         />
-      </label>
+      </label> */}
 
       {/* Input for text content of the specified type */}
-      <label>
+      {/* <label>
         Text Content:
         <input
           type="text"
@@ -97,7 +103,7 @@ const AddOnType = ({ formDataRef, onChange, type }) => {
             handleAddOnsChange("contentAsText", "text", e.target.value)
           }
         />
-      </label>
+      </label> */}
     </div>
   );
 };
