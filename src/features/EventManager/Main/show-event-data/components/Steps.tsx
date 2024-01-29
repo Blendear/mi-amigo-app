@@ -24,7 +24,7 @@ const stepsCss = {
   swiperWrapper: css({
     ".swiper": {
       padding: "2rem 0 1rem 0",
-      width: "20rem",
+      width: "80vw",
       height: "max-content",
     },
 

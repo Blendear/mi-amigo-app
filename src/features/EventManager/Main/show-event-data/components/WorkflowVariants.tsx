@@ -15,7 +15,7 @@ const variantsCss = {
   container: css({
     ".swiper": {
       padding: "2rem 0",
-      width: "20rem",
+      width: "80vw",
     },
 
     ".swiper-slide": {

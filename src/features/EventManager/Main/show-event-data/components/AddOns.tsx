@@ -7,8 +7,6 @@ import { SwiperCustom } from "./SwiperCustom";
 import { formatToRomanNumber } from "../utils/formatToRomanNumber";
 import EventDisplayContext from "../context/EventDisplayContext";
 import { useContext } from "react";
-import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
-import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { useState } from "react";
 import ImageWithWrapper from "@/components/ImageWithWrapper";
 import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
@@ -21,7 +19,7 @@ const addOnsCss = {
   swiperWrapper: css({
     ".swiper": {
       padding: "2rem 0 1rem 0",
-      width: "20rem",
+      width: "80vw",
       height: "max-content",
     },
 

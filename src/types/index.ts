@@ -32,3 +32,5 @@ export type Subapp = {
 };
 
 export type RGBColorString = string | `rgb(${string})`;
+
+export type YouTubeVideoIFrameProps = {};
