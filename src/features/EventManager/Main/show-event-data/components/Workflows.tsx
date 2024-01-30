@@ -11,7 +11,6 @@ const Workflows = ({}: WorkflowsProps) => {
       <WorkflowVariants />
       <Steps />
       <AddOns />
-      <div>c</div>
     </section>
   );
 };

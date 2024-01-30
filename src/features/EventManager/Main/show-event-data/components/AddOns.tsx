@@ -10,6 +10,10 @@ import { useContext } from "react";
 import { useState } from "react";
 import ImageWithWrapper from "@/components/ImageWithWrapper";
 import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
+import HowAndTips from "./HowAndTips";
+import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
+import WhereAndTools from "./WhereAndTools";
+import { booksOfAddonsNames } from "../data/booksOfAddonsNames";
 
 const addOnsCss = {
   container: css({
@@ -28,16 +32,13 @@ const addOnsCss = {
     },
   }),
 
-  addOn: css({}),
-};
+  bookOfAddons: (isActive: boolean) =>
+    css([{}, !isActive && universalCss.disabled]),
 
-const types = [
-  "habits",
-  "how-and-tips",
-  "where",
-  "tool-subapp",
-  "tool-physical-or-3rd-party",
-];
+  addOn: css({
+    margin: "1.5rem",
+  }),
+};
 
 const AddOns = () => {
   const { workflowBookOfAddonsIndex } = useContext(EventDisplayContext);
@@ -55,17 +56,30 @@ const AddOns = () => {
           }
           forceUpdate={forceUpdate}
         >
-          {types.map((slide, index) => (
+          {booksOfAddonsNames.map((slide, index) => (
             <SwiperSlide key={index}>
               <ImageWithWrapper
                 src={`/images/events-manager/addons/${slide}.png`}
-                wrapperCss={addOnsCss.addOn}
+                wrapperCss={addOnsCss.bookOfAddons(
+                  workflowBookOfAddonsIndex.current === index
+                )}
                 width="10rem"
               />
             </SwiperSlide>
           ))}
         </SwiperCustom>
-        <p>{types[workflowBookOfAddonsIndex.current]}</p>
+        <p>{booksOfAddonsNames[workflowBookOfAddonsIndex.current]}</p>
+        <div css={addOnsCss.addOn}>
+          {
+            {
+              habits: <></>,
+              "how-and-tips": <HowAndTips />,
+              where: <WhereAndTools />,
+              "tool-subapp": <WhereAndTools />,
+              "tool-physical-or-3rd-party": <WhereAndTools />,
+            }[booksOfAddonsNames[workflowBookOfAddonsIndex.current]]
+          }
+        </div>
       </div>
     </div>
   );

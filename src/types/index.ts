@@ -1,3 +1,5 @@
+import HowAndTips from "@/features/EventManager/Main/show-event-data/components/HowAndTips";
+
 export type Chunk = {
   isAuthenticated: boolean;
 };
@@ -34,3 +36,5 @@ export type Subapp = {
 export type RGBColorString = string | `rgb(${string})`;
 
 export type YouTubeVideoIFrameProps = {};
+
+export type ModifyContentButtonsProps = {};

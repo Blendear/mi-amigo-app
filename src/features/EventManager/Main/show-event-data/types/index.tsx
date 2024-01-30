@@ -152,6 +152,16 @@ export type SwiperCustomProps = {
 
 export type WorkflowVariantsProps = {};
 
-export type PortalesqueLinkProps = {};
+export type PortalesqueLinkProps = {
+  title: string;
+  linkURL: string;
+  imageOrGifPath: string;
+};
 
 export type DescriptionWithImagesProps = {};
+
+export type WhereAndToolsProps = {};
+
+export type HabitsProps = {};
+
+export type HowAndTipsProps = {};
