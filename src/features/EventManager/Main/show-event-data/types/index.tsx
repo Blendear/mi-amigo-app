@@ -42,14 +42,16 @@ export interface EventWithNeeds
   };
   deadlineVariant: "none" | "prefer" | "must";
   addOnsByVariants: {
-    [nameOfVariant: string]: {
-      subApps?: Subapp[];
-      traps?: EventAddon[];
-      protips?: EventAddon[];
-      places?: EventAddon[];
-      programs?: EventAddon[];
-      objects?: EventAddon[];
-      workflows?: EventAddon[];
+    // "Wrld", "Infiniti" etc.
+    [variantName: string]: {
+      // "Figma", "React", "Css" etc.
+      [stepName: string]: {
+        habits?: number[]; // id's of habits
+        howAndTips?: HowAndTips[];
+        toolsWhere?: Tool[];
+        toolsSubApps?: Subapp[]; // data to locate and equip the subapp
+        toolsPhysicalOrThirdParty?: Tool[];
+      };
     };
   };
   needsFulfilledByVariant: {
@@ -72,6 +74,19 @@ export interface EventWithNeeds
     endEventSound: string;
   };
 }
+
+export type Note = { title: string; description: string };
+
+export type HowAndTips = {
+  ytVideoId: string;
+  notes: Note[];
+};
+
+export type Tool = {
+  title: string;
+  linkURL?: string;
+  imageOrGifPath: string;
+};
 
 export interface IdentifiableObjectWithVisuals {
   id: string;
