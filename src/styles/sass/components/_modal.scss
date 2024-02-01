@@ -15,6 +15,9 @@
     height: 100%;
     border: none;
     display: grid;
+    align-items: start;
+    grid-auto-rows: max-content;
+    row-gap: 2rem;
     background-color: colors.$tertiary-light;
     overflow: hidden;
 
