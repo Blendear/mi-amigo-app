@@ -16,7 +16,6 @@ const appDataOfCurrentUserSlice = createSlice({
     setAppDataOfCurrentUser(state, action: PayloadAction<any>) {
       state.eventsWithNeeds = action.payload.eventsWithNeeds;
       //TODO: add test of properties setters - remember, thayt you can't just do "state = action.payload"
-      console.log("new events state", state.eventsWithNeeds);
     },
   },
 });

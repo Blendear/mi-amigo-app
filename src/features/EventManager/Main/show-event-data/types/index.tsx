@@ -26,6 +26,14 @@ export type CurrentChapterOfInfo =
   | "timeBounding"
   | "vocalNotifications";
 
+export type AddOn = {
+  habits?: number[]; // id's of habits
+  howAndTips?: HowAndTips;
+  toolsWhere?: Tool[];
+  toolsSubApps?: Subapp[]; // data to locate and equip the subapp
+  toolsPhysicalOrThirdParty?: Tool[];
+};
+
 export interface EventWithNeeds
   extends Omit<IdentifiableObjectWithVisuals, "id"> {
   eventGroupId: number; // main id, used to identify the event
@@ -45,13 +53,7 @@ export interface EventWithNeeds
     // "Wrld", "Infiniti" etc.
     [variantName: string]: {
       // "Figma", "React", "Css" etc.
-      [stepName: string]: {
-        habits?: number[]; // id's of habits
-        howAndTips?: HowAndTips[];
-        toolsWhere?: Tool[];
-        toolsSubApps?: Subapp[]; // data to locate and equip the subapp
-        toolsPhysicalOrThirdParty?: Tool[];
-      };
+      [stepName: string]: AddOn;
     };
   };
   needsFulfilledByVariant: {
@@ -178,11 +180,11 @@ export type PortalesqueLinkProps = {
 
 export type DescriptionWithImagesProps = {};
 
-export type WhereAndToolsProps = {};
+export type WhereAndToolsProps = { content: Tool[] | Subapp[] };
 
 export type HabitsProps = {};
 
-export type HowAndTipsProps = {};
+export type HowAndTipsProps = { content: HowAndTips };
 
 export type EventDisplaySmallProps = {
   event: EventWithNeeds;

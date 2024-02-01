@@ -23,8 +23,7 @@ const handler = async (req, res) => {
 
       // Extract the current data from the document
       const currentData = docSnap.data();
-      console.log("current data form DB when updating", currentData);
-      console.log("new data from client", newData);
+
       // Update only the specified nested property "eventsWithNeeds.arrayOfEvents"
       const updatedData = {
         ...currentData,

@@ -51,25 +51,29 @@ const placeholderPortalsByBookOfAddons = {
   ],
 };
 
-const WhereAndTools = ({}: WhereAndToolsProps) => {
-  const { workflowBookOfAddonsIndex } = useContext(EventDisplayContext);
-
-  return (
+const WhereAndTools = ({ content }: WhereAndToolsProps) => {
+  // TODO: Conditionally activate a subapp || the current link, depending no the content type
+  // For now it's only the link 3rd party functionality or no link at all (for the physical tools)
+  return content ? (
     <ul css={whereAndToolsCss.container}>
-      {placeholderPortalsByBookOfAddons[
-        booksOfAddonsNames[workflowBookOfAddonsIndex.current]
-      ].map((portal, index) => {
+      {content.map((portal, index) => {
         return (
           <li key={index}>
-            <PortalesqueLink
-              title={portal.title}
-              linkURL={portal.linkURL}
-              imageOrGifPath={portal.imageOrGifPath}
-            />
+            {portal.hasOwnProperty("subappName") ? (
+              <div>Subapp content - Also a portal, right?</div>
+            ) : (
+              <PortalesqueLink
+                title={portal.title}
+                linkURL={portal.linkURL}
+                imageOrGifPath={portal.imageOrGifPath}
+              />
+            )}
           </li>
         );
       })}
     </ul>
+  ) : (
+    <p>No content</p>
   );
 };
 

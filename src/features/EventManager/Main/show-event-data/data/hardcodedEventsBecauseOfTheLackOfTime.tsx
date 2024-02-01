@@ -29,36 +29,62 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           addOnsByVariants: {
             kolanami: {
               poczatek: {
+                toolsSubApps: [
+                  {
+                    subappName: "video-watcher",
+                    payload: {
+                      ytVideoIds: [],
+                      VODLinks: [],
+                    },
+                  },
+                ],
+                howAndTips: {
+                  ytVideoId: "ErzoS25SFa8",
+                  notes: [
+                    { title: "...", description: "Description 1" },
+                    { title: "Note 2", description: "Description 2" },
+                    { title: "Note 3", description: "Description 3" },
+                  ],
+                },
+
                 toolsPhysicalOrThirdParty: [
                   {
                     title: "tool-title-1",
                     linkURL: "www.twitch.com",
-                    imageOrGifPath: "maybe",
+                    imageOrGifPath: "https://i.imgur.com/3Qo7z3j.gif",
                   },
                 ],
               },
               koniec: {
                 toolsPhysicalOrThirdParty: [
                   {
-                    title: "tool-title-1",
+                    title: "kolanami - koniec - tool-title-1",
                     linkURL: "www.twitch.com",
-                    imageOrGifPath: "maybe",
+                    imageOrGifPath: "https://i.imgur.com/3Qo7z3j.gif",
                   },
                 ],
               },
             },
             lokciami: {
               rozped: {
+                howAndTips: {
+                  ytVideoId: "lovYZqGVPBQ",
+                  notes: [
+                    { title: "Note 3", description: "Description 3" },
+                    { title: "Note 4", description: "Description 4" },
+                  ],
+                },
+
                 toolsPhysicalOrThirdParty: [
                   {
-                    title: "tool-title-1",
+                    title: "lokciami - rozped - tool-title-1",
                     linkURL: "www.google.com",
-                    imageOrGifPath: "nope",
+                    imageOrGifPath: "https://i.imgur.com/3Qo7z3j.gif",
                   },
                   {
-                    title: "tool-title-2",
+                    title: "lokciami - rozped - tool-title-2",
                     linkURL: "www.google.com",
-                    imageOrGifPath: "nope",
+                    imageOrGifPath: "https://i.imgur.com/3Qo7z3j.gif",
                   },
                 ],
               },

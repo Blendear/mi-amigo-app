@@ -57,7 +57,7 @@ const placeholderSteps = [
 const Steps = ({}: StepsProps) => {
   const { formDataRef, workflowVariantIndex, worfklowStepIndex } =
     useContext(EventDisplayContext);
-  // const [update, forceUpdate] = useState(false);
+
   const { update, forceUpdate } = useContext(WorkflowsContext);
 
   const [stepsNames, setStepsNames] = useState([]);

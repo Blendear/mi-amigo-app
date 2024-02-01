@@ -14,6 +14,7 @@ import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universa
 import WhereAndTools from "./WhereAndTools";
 import { booksOfAddonsNames } from "../data/booksOfAddonsNames";
 import WorkflowsContext from "../context/WorkflowsContext";
+import { AddOn } from "../types";
 
 const addOnsCss = {
   container: css({
@@ -47,32 +48,30 @@ const AddOns = () => {
     worfklowStepIndex,
     workflowBookOfAddonsIndex,
   } = useContext(EventDisplayContext);
-  // const [, forceUpdate] = useState(false);
-  const { update, forceUpdate } = useContext(WorkflowsContext);
-  // TODO: Add the book content dynamically, like in steps
 
-  const [addOnData, setAddOnData] = useState({});
+  const { update, forceUpdate } = useContext(WorkflowsContext);
+
+  const [addOnData, setAddOnData] = useState<AddOn>({});
 
   useEffect(() => {
     // TODO: Refactor this patological data getting here & inside "Steps.tsx" one day
-    setAddOnData(
-      // And I did the same with the stepsByVariants
+    const currentStepName = Object.keys(
+      formDataRef.current.addOnsByVariants[
+        Object.keys(formDataRef.current.addOnsByVariants)[
+          workflowVariantIndex.current
+        ]
+      ]
+    )[worfklowStepIndex.current];
+
+    const currentAddOnData = // And I did the same with the stepsByVariants
       formDataRef.current.addOnsByVariants[
         // And I did the same with the stepsByVariants
         Object.keys(formDataRef.current.addOnsByVariants)[
           workflowVariantIndex.current
         ]
-      ][
-        Object.keys(
-          formDataRef.current.addOnsByVariants[
-            Object.keys(formDataRef.current.addOnsByVariants)[
-              workflowVariantIndex.current
-            ]
-          ]
-        )[worfklowStepIndex.current]
-      ]
-    );
-    console.log("addOnData", addOnData);
+      ][currentStepName];
+
+    setAddOnData(currentAddOnData || {});
   }, [update]);
 
   return (
@@ -103,11 +102,13 @@ const AddOns = () => {
         <div css={addOnsCss.addOn}>
           {
             {
-              habits: <></>,
-              "how-and-tips": <HowAndTips />,
-              where: <WhereAndTools />,
-              "tool-subapp": <WhereAndTools />,
-              "tool-physical-or-3rd-party": <WhereAndTools />,
+              habits: <>{/* addOnData.habits */}</>,
+              "how-and-tips": <HowAndTips content={addOnData.howAndTips} />,
+              where: <WhereAndTools content={addOnData.toolsWhere} />,
+              "tool-subapp": <WhereAndTools content={addOnData.toolsSubApps} />,
+              "tool-physical-or-3rd-party": (
+                <WhereAndTools content={addOnData.toolsPhysicalOrThirdParty} />
+              ),
             }[booksOfAddonsNames[workflowBookOfAddonsIndex.current]]
           }
         </div>

@@ -9,13 +9,7 @@ import { useContext } from "react";
 import EventDisplayContext from "../context/EventDisplayContext";
 import { useState } from "react";
 
-const placeholderNotes = [
-  { title: "...", description: "Description 1" },
-  // { title: "Note 2", description: "Description 2" },
-  // { title: "Note 3", description: "Description 3" },
-];
-
-const HowAndTips = ({}: HowAndTipsProps) => {
+const HowAndTips = ({ content }: HowAndTipsProps) => {
   const { isShowing, formDataRef, handleDataChange } =
     useContext(EventDisplayContext);
 
@@ -33,48 +27,53 @@ const HowAndTips = ({}: HowAndTipsProps) => {
 
   return (
     <section>
-      <EditableYTVideo
-        isShowing={!isShowing.current}
-        yTvideoId={"vvdKyNpWQIg"}
-      />
-
-      <ul>
-        {placeholderNotes.map((note, index) => {
-          return (
-            <li key={index}>
-              <input
-                css={[
-                  universalCss.container,
-                  {
-                    borderColor: "purple",
-                  },
-                ]}
-                onClick={() => handleClickTitle(index)}
-                disabled={isShowing.current}
-                aria-label="Title"
-                type="text"
-                placeholder={note.title}
-                // placeholder={formDataRef.current.name}
-                // onChange={(e) => handleDataChange(formDataRef, "name", e.target.value)}
-              />
-              {shownDescriptionID === index && (
-                <div>
-                  <textarea
-                    css={universalCss.container}
+      {content ? (
+        <>
+          <EditableYTVideo
+            isShowing={!isShowing.current}
+            yTvideoId={content.ytVideoId}
+          />
+          <ul>
+            {content.notes.map((note, index) => {
+              return (
+                <li key={index}>
+                  <input
+                    css={[
+                      universalCss.container,
+                      {
+                        borderColor: "purple",
+                      },
+                    ]}
+                    onClick={() => handleClickTitle(index)}
                     disabled={isShowing.current}
-                    aria-label="Description"
-                    placeholder={note.description}
-                    // placeholder={formDataRef.current.description}
-                    // onChange={(e) =>
-                    //   handleDataChange(formDataRef, "description", e.target.value)
-                    // }
+                    aria-label="Title"
+                    type="text"
+                    placeholder={note.title}
+                    // placeholder={formDataRef.current.name}
+                    // onChange={(e) => handleDataChange(formDataRef, "name", e.target.value)}
                   />
-                </div>
-              )}
-            </li>
-          );
-        })}
-      </ul>
+                  {shownDescriptionID === index && (
+                    <div>
+                      <textarea
+                        css={universalCss.container}
+                        disabled={isShowing.current}
+                        aria-label="Description"
+                        placeholder={note.description}
+                        // placeholder={formDataRef.current.description}
+                        // onChange={(e) =>
+                        //   handleDataChange(formDataRef, "description", e.target.value)
+                        // }
+                      />
+                    </div>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </>
+      ) : (
+        <p>No content</p>
+      )}
     </section>
   );
 };

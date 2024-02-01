@@ -22,7 +22,6 @@ const EventDisplaySmall = ({ event }: EventDisplaySmallProps) => {
     <div css={eventDisplaySmallCss.container}>
       <button
         onClick={() => {
-          console.log("setShowModalWithEventDisplay");
           setShowModalWithEventDisplay(true);
         }}
         css={eventDisplaySmallCss.button}

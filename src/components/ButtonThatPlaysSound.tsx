@@ -5,9 +5,8 @@ import { useState } from "react";
 const ButtonThatPlaysSound = ({ src }) => {
   //
   const [isPlaying, setIsPlaying] = useState(false);
-  console.log(src);
+
   const handleToggleSound = () => {
-    console.log(isPlaying);
     setIsPlaying((prev) => !prev);
   };
 

@@ -8,8 +8,6 @@ import ToggleableContent from "@/components/ToggleableContent";
 import NeedsFullfilled from "./NeedsFullfilled";
 
 const EventDisplayIdeasForShowDataVariant = ({ eventData }) => {
-  console.log("eventData", eventData);
-
   // variants of this event - "youtubeVideos", "VODs" ... often there is only 1, but sometimes there are different tools for different variats
   const displayAddOnsByVariants = (addOnsByVariants) => {
     return Object.keys(addOnsByVariants).map((eventVariant) => (
@@ -24,7 +22,6 @@ const EventDisplayIdeasForShowDataVariant = ({ eventData }) => {
             {/* single addOns data objects - data structure depends on the addOn type */}
             {addOnsByVariants[eventVariant][addOnType].map((addOn) => (
               <div key={addOn}>
-                <>{console.log("addOnData", addOn)}</>
                 <h5>Name of addOn : {addOn.subappName || addOn.name}</h5>
                 {/* TODO: Create a separate file wiht an object, that has a keys (like "video-watcher") 
                 and values as components (like <VideoPlaylistWatcher/> and i will pass the whole payload)

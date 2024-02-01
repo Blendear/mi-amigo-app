@@ -78,11 +78,9 @@ const LandingPage = () => {
   //           _._._. (CRUD - R) Get all Documents asynchronously and on every page load (useEffetc with empty dependencies array) from our specified Colleciton ("zakupki-i-zapasy")
   //
   useEffect(() => {
-    console.log("useEffect started");
     //hook1 - refacotr this into 3rd party component \/ it makes a lot of code in this index.ts file
     const getAllDocumentsFromASpecificCollection = async () => {
       const allDocuments = await getDocs(collectionReference);
-      console.log("our data : ", allDocuments);
       //
       //                  _._._._. Change the structure of the data (to "only sexy, readable data format & id of the document - aka documents name") - using build in firestore function "docs" property.   &   save it (set useState)
       //
