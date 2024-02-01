@@ -185,18 +185,5 @@ export type HabitsProps = {};
 export type HowAndTipsProps = {};
 
 export type EventDisplaySmallProps = {
-  // openModalWithThisEventsDetails: () => void;
   event: EventWithNeeds;
-};
-
-export type EventFamilyName =
-  | "library"
-  | "chest-neccessary"
-  | "chest-one-day"
-  | "schedule";
-
-export type EventToOpenIdentifiersRef = {
-  eventFamilyName: EventFamilyName;
-  eventGroupId: number;
-  eventInstanceId?: number;
 };

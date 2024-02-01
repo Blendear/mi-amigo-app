@@ -33,7 +33,7 @@ const variantsCss = {
 };
 
 const WorkflowVariants = ({}: WorkflowVariantsProps) => {
-  const { workflowVariantIndex } = useContext(EventDisplayContext);
+  const { formDataRef, workflowVariantIndex } = useContext(EventDisplayContext);
   const [, forceUpdate] = useState(false);
 
   return (
@@ -44,22 +44,24 @@ const WorkflowVariants = ({}: WorkflowVariantsProps) => {
       setActiveSlide={(index) => (workflowVariantIndex.current = index)}
       forceUpdate={forceUpdate}
     >
-      {[1, 2, 3, 4].map((slide, index) => (
-        <SwiperSlide key={index}>
-          <div
-            css={[
-              universalCss.button(
-                index === workflowVariantIndex.current,
-                `rgb(${colors.tertiaryLight})`,
-                `rgb(${colors.whiteLight})`
-              ),
-              variantsCss.variant,
-            ]}
-          >
-            aaaaaaa
-          </div>
-        </SwiperSlide>
-      ))}
+      {Object.keys(formDataRef.current.addOnsByVariants).map(
+        (variantName, index) => (
+          <SwiperSlide key={index}>
+            <div
+              css={[
+                universalCss.button(
+                  index === workflowVariantIndex.current,
+                  `rgb(${colors.tertiaryLight})`,
+                  `rgb(${colors.whiteLight})`
+                ),
+                variantsCss.variant,
+              ]}
+            >
+              {variantName}
+            </div>
+          </SwiperSlide>
+        )
+      )}
     </SwiperCustom>
   );
 };

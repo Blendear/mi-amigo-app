@@ -3,10 +3,8 @@ import { useEffect, useState } from "react";
 import { useAppDispatch } from "../../store/redux/hooks";
 import { appDataOfCurrentUserSliceActions } from "../../store/redux/store-redux";
 import { IoIosArrowUp } from "react-icons/io";
-import {
-  placeholderEvent1,
-  placeholderEvent2,
-} from "@/features/EventManager/Main/show-event-data/data/placeholderEvents";
+
+import { hardcodedEventsBecauseOfTheLackOfTime } from "@/features/EventManager/Main/show-event-data/data/hardcodedEventsBecauseOfTheLackOfTime";
 import { MyBeautifulTimer } from "@/features/EventManager/Main/pomodoro-timer/components/MyBeautifulTimer";
 
 const Footer = () => {
@@ -22,25 +20,7 @@ const Footer = () => {
       dispatch(
         appDataOfCurrentUserSliceActions.setAppDataOfCurrentUser(
           // itemsFromDB.data
-          {
-            eventsWithNeeds: {
-              chestWithAllDayLongEvents: {
-                necessary: [placeholderEvent1, placeholderEvent2],
-                oneDay: [
-                  placeholderEvent1,
-                  placeholderEvent2,
-                  placeholderEvent2,
-                ],
-              },
-              libraryOfTemplateEvents: [
-                placeholderEvent1,
-                placeholderEvent2,
-                placeholderEvent1,
-                placeholderEvent2,
-              ],
-              sheduleOfHourlyPlannedEvents: [],
-            },
-          }
+          hardcodedEventsBecauseOfTheLackOfTime
         )
       );
     };
