@@ -6,13 +6,14 @@ import { SwiperCustom } from "./SwiperCustom";
 import { formatToRomanNumber } from "../utils/formatToRomanNumber";
 import EventDisplayContext from "../context/EventDisplayContext";
 import { useContext } from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ImageWithWrapper from "@/components/ImageWithWrapper";
 import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
 import HowAndTips from "./HowAndTips";
 import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 import WhereAndTools from "./WhereAndTools";
 import { booksOfAddonsNames } from "../data/booksOfAddonsNames";
+import WorkflowsContext from "../context/WorkflowsContext";
 
 const addOnsCss = {
   container: css({
@@ -40,8 +41,39 @@ const addOnsCss = {
 };
 
 const AddOns = () => {
-  const { workflowBookOfAddonsIndex } = useContext(EventDisplayContext);
-  const [, forceUpdate] = useState(false);
+  const {
+    formDataRef,
+    workflowVariantIndex,
+    worfklowStepIndex,
+    workflowBookOfAddonsIndex,
+  } = useContext(EventDisplayContext);
+  // const [, forceUpdate] = useState(false);
+  const { update, forceUpdate } = useContext(WorkflowsContext);
+  // TODO: Add the book content dynamically, like in steps
+
+  const [addOnData, setAddOnData] = useState({});
+
+  useEffect(() => {
+    // TODO: Refactor this patological data getting here & inside "Steps.tsx" one day
+    setAddOnData(
+      // And I did the same with the stepsByVariants
+      formDataRef.current.addOnsByVariants[
+        // And I did the same with the stepsByVariants
+        Object.keys(formDataRef.current.addOnsByVariants)[
+          workflowVariantIndex.current
+        ]
+      ][
+        Object.keys(
+          formDataRef.current.addOnsByVariants[
+            Object.keys(formDataRef.current.addOnsByVariants)[
+              workflowVariantIndex.current
+            ]
+          ]
+        )[worfklowStepIndex.current]
+      ]
+    );
+    console.log("addOnData", addOnData);
+  }, [update]);
 
   return (
     <div>

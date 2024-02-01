@@ -37,6 +37,15 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                   },
                 ],
               },
+              koniec: {
+                toolsPhysicalOrThirdParty: [
+                  {
+                    title: "tool-title-1",
+                    linkURL: "www.twitch.com",
+                    imageOrGifPath: "maybe",
+                  },
+                ],
+              },
             },
             lokciami: {
               rozped: {

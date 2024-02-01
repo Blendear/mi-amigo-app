@@ -4,14 +4,20 @@ import { WorkflowsProps } from "../types";
 import Steps from "./Steps";
 import WorkflowVariants from "./WorkflowVariants";
 import AddOns from "./AddOns";
+import { useState } from "react";
+import WorkflowsContext from "../context/WorkflowsContext";
 
 const Workflows = ({}: WorkflowsProps) => {
+  const [update, forceUpdate] = useState(false);
+
   return (
-    <section>
-      <WorkflowVariants />
-      <Steps />
-      <AddOns />
-    </section>
+    <WorkflowsContext.Provider value={{ update, forceUpdate }}>
+      <section>
+        <WorkflowVariants />
+        <Steps />
+        <AddOns />
+      </section>
+    </WorkflowsContext.Provider>
   );
 };
 

@@ -10,6 +10,7 @@ import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { useState } from "react";
 import EventDisplayContext from "../context/EventDisplayContext";
 import { useContext, useEffect } from "react";
+import WorkflowsContext from "../context/WorkflowsContext";
 
 const variantsCss = {
   container: css({
@@ -34,7 +35,8 @@ const variantsCss = {
 
 const WorkflowVariants = ({}: WorkflowVariantsProps) => {
   const { formDataRef, workflowVariantIndex } = useContext(EventDisplayContext);
-  const [, forceUpdate] = useState(false);
+  // const [, forceUpdate] = useState(false);
+  const { forceUpdate } = useContext(WorkflowsContext);
 
   return (
     <SwiperCustom

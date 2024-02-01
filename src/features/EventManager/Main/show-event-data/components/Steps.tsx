@@ -9,10 +9,11 @@ import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
 import { SwiperCustom } from "./SwiperCustom";
 import { formatToRomanNumber } from "../utils/formatToRomanNumber";
 import EventDisplayContext from "../context/EventDisplayContext";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { useState } from "react";
+import WorkflowsContext from "../context/WorkflowsContext";
 
 const stepsCss = {
   container: css({
@@ -54,8 +55,26 @@ const placeholderSteps = [
 ];
 
 const Steps = ({}: StepsProps) => {
-  const { worfklowStepIndex } = useContext(EventDisplayContext);
-  const [, forceUpdate] = useState(false);
+  const { formDataRef, workflowVariantIndex, worfklowStepIndex } =
+    useContext(EventDisplayContext);
+  // const [update, forceUpdate] = useState(false);
+  const { update, forceUpdate } = useContext(WorkflowsContext);
+
+  const [stepsNames, setStepsNames] = useState([]);
+
+  useEffect(() => {
+    setStepsNames(
+      // I wrote the addOnsByVariants as an {} with variantNames as string keys, thats why I need to use Object.keys
+      Object.keys(
+        formDataRef.current.addOnsByVariants[
+          // And I did the same with the stepsByVariants
+          Object.keys(formDataRef.current.addOnsByVariants)[
+            workflowVariantIndex.current
+          ]
+        ]
+      )
+    );
+  }, [update]);
 
   return (
     <div css={stepsCss.container}>
@@ -66,7 +85,7 @@ const Steps = ({}: StepsProps) => {
         setActiveSlide={(index) => (worfklowStepIndex.current = index)}
         forceUpdate={forceUpdate}
       >
-        {placeholderSteps.map((slide, index) => (
+        {stepsNames.map((slide, index) => (
           <SwiperSlide key={index}>
             <div
               css={[
@@ -82,7 +101,7 @@ const Steps = ({}: StepsProps) => {
           </SwiperSlide>
         ))}
       </SwiperCustom>
-      <p>{placeholderSteps[worfklowStepIndex.current].name}</p>
+      <p>{stepsNames[worfklowStepIndex.current]}</p>
     </div>
   );
 };
