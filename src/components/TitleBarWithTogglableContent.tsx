@@ -13,14 +13,16 @@ export const TitleBarWithTogglableContent = ({ titleBarContent, children }) => {
   const [showContent, setShowContent] = useState(false);
 
   return (
-    <button
-      css={titleWithContentCss.container}
-      onClick={() => {
-        setShowContent((prev) => !prev);
-      }}
-    >
-      <div>{titleBarContent}</div>
+    <div>
+      <button
+        css={titleWithContentCss.container}
+        onClick={() => {
+          setShowContent((prev) => !prev);
+        }}
+      >
+        <div>{titleBarContent}</div>
+      </button>
       {showContent && <div>{children}</div>}
-    </button>
+    </div>
   );
 };

@@ -1,24 +1,19 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
-
 import { useRef, useState } from "react";
-
 import TitleImageNameAndDescription from "./TitleImageNameAndDescription";
 import TogglersOfChapters from "./TogglersOfChapters";
 import ChapterOfInfo from "./ChapterOfInfo";
 import DangerZoneButtons from "./DangerZoneButtons";
-
 import EventDisplayContext from "../context/EventDisplayContext";
-
 import { placeholderEventEmpty } from "../data/placeholderEvents";
-
 import { EventWithNeeds } from "../types";
 import { EventDisplayProps } from "../types";
 import { CurrentChapterOfInfo } from "../types";
-
 import patchEventsWithNeedsInDB from "@/utils/patchEventsWithNeedsInDB";
 import handleDataChange from "../utils/handleDataChange";
+import EventDisplaySmall from "./EventDisplaySmall";
 
 const eventDisplayCss = {
   container: css({

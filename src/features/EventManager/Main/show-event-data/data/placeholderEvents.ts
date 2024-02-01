@@ -5,8 +5,8 @@ export const placeholderEventEmpty: EventWithNeeds = {
   description: "",
   imagePath: "",
   imageAltText: "",
-  eventGroupId: "",
-  eventInstanceId: "",
+  eventGroupId: 0,
+  eventInstanceId: 0,
   GIFPath: "",
   isAllDayLong: false,
   allDayLongVariantProps: {
@@ -56,9 +56,9 @@ export const placeholderEvent1: EventWithNeeds = {
   imagePath:
     "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
   imageAltText: "Placeholder Event 1",
-  eventGroupId: "placeholder-group-1",
-  eventInstanceId: "instance-1",
-  GIFPath: "/path/to/your/image1.gif",
+  eventGroupId: 1,
+  eventInstanceId: 1,
+  GIFPath: "",
   isAllDayLong: false,
   allDayLongVariantProps: {
     importance: "",
@@ -163,9 +163,9 @@ export const placeholderEvent2: EventWithNeeds = {
   imagePath:
     "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png",
   imageAltText: "Placeholder Event 2",
-  eventGroupId: "placeholder-group-2",
-  eventInstanceId: "instance-2",
-  GIFPath: "/path/to/your/image2.gif",
+  eventGroupId: 2,
+  eventInstanceId: 2,
+  GIFPath: "",
   isAllDayLong: false,
   allDayLongVariantProps: {
     importance: "",

@@ -4,11 +4,16 @@ import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universa
 import { ChestModalContentProps } from "../types";
 import { useAppSelector } from "@/store/redux/hooks";
 import ImageWithWrapper from "@/components/ImageWithWrapper";
-import { useState, useRef } from "react";
+import { useState, useRef, MutableRefObject } from "react";
 import DialogModal from "@/components/DialogModal";
 import hardcodedEventsBecauseOfTheLackOfTime from "@/features/EventManager/Main/show-event-data/data/hardcodedEventsBecauseOfTheLackOfTime";
 import EventDisplay from "@/features/EventManager/Main/show-event-data/components/EventDisplay";
 import { TitleBarWithTogglableContent } from "@/components/TitleBarWithTogglableContent";
+import {
+  EventToOpenIdentifiersRef,
+  EventFamilyName,
+} from "@/features/EventManager/Main/show-event-data/types";
+import EventDisplaySmall from "../../show-event-data/components/EventDisplaySmall";
 
 const chestModalCss = {
   container: css({}),
@@ -17,27 +22,12 @@ const chestModalCss = {
 };
 
 const ChestModalContent = ({}: ChestModalContentProps) => {
-  const [isShowingOrEditing, setIsShowingOrEditing] = useState<
-    "showing" | "editing"
-  >("showing");
-
-  const eventIndexRef = useRef(0);
-
   const chestWithAllDayLongEvents = useAppSelector(
     (state) =>
       state.appDataOfCurrentUserReducer.eventsWithNeeds
         .chestWithAllDayLongEvents
   );
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = (index) => {
-    eventIndexRef.current = index;
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
   // herehere
 
   // TODO: Create a special wrapper for an event "small display",
@@ -45,6 +35,8 @@ const ChestModalContent = ({}: ChestModalContentProps) => {
   // place for the animation on the right. We can use it in the
   // "ChestModalContent", "LibraryPfTemplateEvents" (maybe one day in
   // the schedule too, but its way to customized for now right there)
+  //
+  //     ) 3 columns, where 1st is empty, and 3rd is for the animation
 
   // TODO: Rework the "hardecodedEventsBecauseOfTheLackOfTime" to be
   // an objetc with ALL placeholder data for the "EventManager" feature
@@ -69,30 +61,7 @@ const ChestModalContent = ({}: ChestModalContentProps) => {
           }
         >
           {chestWithAllDayLongEvents.necessary.map((event, index) => {
-            return (
-              <div
-                key={index}
-                css={{
-                  marginTop: "2rem",
-                }}
-              >
-                <button
-                  onClick={() => openModal(index)}
-                  css={{
-                    width: "100%",
-                    display: "grid",
-                    justifyItems: "center",
-                  }}
-                >
-                  <ImageWithWrapper
-                    src={event.imagePath}
-                    width="100%"
-                    aspectRatio="2.63/1"
-                  />
-                  <div>{event.name}</div>
-                </button>
-              </div>
-            );
+            return <EventDisplaySmall key={index} event={event} />;
           })}
         </TitleBarWithTogglableContent>
       </section>
@@ -103,41 +72,10 @@ const ChestModalContent = ({}: ChestModalContentProps) => {
           }
         >
           {chestWithAllDayLongEvents.oneDay.map((event, index) => {
-            return (
-              <div
-                key={index}
-                style={{
-                  marginTop: "2rem",
-                }}
-              >
-                <button
-                  onClick={() => openModal(index)}
-                  style={{
-                    width: "100%",
-                    display: "grid",
-                    justifyItems: "center",
-                  }}
-                >
-                  <ImageWithWrapper
-                    src={event.imagePath}
-                    width="100%"
-                    aspectRatio="2.63/1"
-                  />
-                  <div>{event.name}</div>
-                </button>
-              </div>
-            );
+            return <EventDisplaySmall key={index} event={event} />;
           })}
         </TitleBarWithTogglableContent>
       </section>
-      {isModalOpen && (
-        <DialogModal isOpen={isModalOpen} onClose={closeModal} zIndex={1002}>
-          <EventDisplay
-            variant={isShowingOrEditing}
-            event={chestWithAllDayLongEvents.necessary[eventIndexRef.current]}
-          />
-        </DialogModal>
-      )}
     </div>
   );
 };

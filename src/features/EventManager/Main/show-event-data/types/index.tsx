@@ -28,8 +28,8 @@ export type CurrentChapterOfInfo =
 
 export interface EventWithNeeds
   extends Omit<IdentifiableObjectWithVisuals, "id"> {
-  eventGroupId: string;
-  eventInstanceId: string;
+  eventGroupId: number; // main id, used to identify the event
+  eventInstanceId: number; // used for editing 1 of X copies of this event
   GIFPath: string;
   isAllDayLong: boolean; // false = is timed
   allDayLongVariantProps: {
@@ -133,7 +133,10 @@ export type EventFormSegmentProps = {
 export type EventDisplayProps =
   | { variant: "creating" }
   | { variant: "editing"; event: EventWithNeeds }
-  | { variant: "showing"; event: EventWithNeeds };
+  | {
+      variant: "showing";
+      event: EventWithNeeds;
+    };
 
 export type NeedsFullfilledProps = {
   needs: {};
@@ -180,3 +183,20 @@ export type WhereAndToolsProps = {};
 export type HabitsProps = {};
 
 export type HowAndTipsProps = {};
+
+export type EventDisplaySmallProps = {
+  // openModalWithThisEventsDetails: () => void;
+  event: EventWithNeeds;
+};
+
+export type EventFamilyName =
+  | "library"
+  | "chest-neccessary"
+  | "chest-one-day"
+  | "schedule";
+
+export type EventToOpenIdentifiersRef = {
+  eventFamilyName: EventFamilyName;
+  eventGroupId: number;
+  eventInstanceId?: number;
+};
