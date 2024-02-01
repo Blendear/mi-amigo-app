@@ -1,8 +1,11 @@
 import { createSlice, configureStore, PayloadAction } from "@reduxjs/toolkit";
+import { AppDataOfCurrentUser } from "@/types";
 
-const appDataOfCurrentUser = {
+const appDataOfCurrentUser: AppDataOfCurrentUser = {
   eventsWithNeeds: {
-    chestWithAllDayLongEvents: [],
+    chestWithAllDayLongEvents: { necessary: [], oneDay: [] },
+    libraryOfTemplateEvents: [],
+    sheduleOfHourlyPlannedEvents: [],
   },
 };
 

@@ -1,4 +1,5 @@
 import HowAndTips from "@/features/EventManager/Main/show-event-data/components/HowAndTips";
+import { EventWithNeeds } from "@/features/EventManager/Main/show-event-data/types";
 
 export type Chunk = {
   isAuthenticated: boolean;
@@ -38,3 +39,14 @@ export type RGBColorString = string | `rgb(${string})`;
 export type YouTubeVideoIFrameProps = {};
 
 export type ModifyContentButtonsProps = {};
+
+export type AppDataOfCurrentUser = {
+  eventsWithNeeds: {
+    chestWithAllDayLongEvents: {
+      necessary: EventWithNeeds[];
+      oneDay: EventWithNeeds[];
+    };
+    libraryOfTemplateEvents: EventWithNeeds[];
+    sheduleOfHourlyPlannedEvents: any[]; // TODO: TS types and implement
+  };
+};

@@ -1,4 +1,5 @@
-import styles from "@/styles/sass/styles-all.module.scss";
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
 import { ChestModalContentProps } from "../types";
 import { useAppSelector } from "@/store/redux/hooks";
 import ImageWithWrapper from "@/components/ImageWithWrapper";
@@ -6,8 +7,13 @@ import { useState, useRef } from "react";
 import DialogModal from "@/components/DialogModal";
 import EventDisplayIdeasForShowDataVariant from "@/features/EventManager/Main/show-event-data/components/EventDisplayIdeasForShowDataVariant";
 import hardcodedEventsBecauseOfTheLackOfTime from "@/features/EventManager/Main/show-event-data/data/hardcodedEventsBecauseOfTheLackOfTime";
+import EventDisplay from "@/features/EventManager/Main/show-event-data/components/EventDisplay";
 
 const ChestModalContent = ({}: ChestModalContentProps) => {
+  const [isShowingOrEditing, setIsShowingOrEditing] = useState<
+    "showing" | "editing"
+  >("showing");
+
   const eventIndexRef = useRef(0);
   // const chestWithAllDayLongEvents = useAppSelector(
   //   (state) =>
@@ -47,7 +53,9 @@ const ChestModalContent = ({}: ChestModalContentProps) => {
       })}
       {isModalOpen && (
         <DialogModal isOpen={isModalOpen} onClose={closeModal} zIndex={1002}>
-          <EventDisplayIdeasForShowDataVariant
+          <></>
+          {/* <EventDisplay variant={isShowingOrEditing} event={} /> */}
+          {/* <EventDisplayIdeasForShowDataVariant
             // temporarily commented out, because creating an event-editor for all functionalities
             // is time consuming, and i need those events right now
             // eventData={chestWithAllDayLongEvents[eventIndexRef.current]}
@@ -55,7 +63,7 @@ const ChestModalContent = ({}: ChestModalContentProps) => {
             eventData={
               hardcodedEventsBecauseOfTheLackOfTime[eventIndexRef.current]
             }
-          />
+          /> */}
         </DialogModal>
       )}
     </div>
