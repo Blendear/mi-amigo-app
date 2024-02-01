@@ -55,7 +55,7 @@ const ChestModalContent = ({}: ChestModalContentProps) => {
       <section>
         <TitleBarWithTogglableContent
           titleBarContent={
-            <h2 css={chestModalCss.titleBarWithContent}>Necessary</h2>
+            <h2 css={chestModalCss.titleBarWithContent}>One day</h2>
           }
         >
           {chestWithAllDayLongEvents.oneDay.map((event, index) => {
