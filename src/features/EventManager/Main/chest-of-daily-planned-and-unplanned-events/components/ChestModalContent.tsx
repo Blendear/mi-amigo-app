@@ -1,13 +1,20 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
+import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 import { ChestModalContentProps } from "../types";
 import { useAppSelector } from "@/store/redux/hooks";
 import ImageWithWrapper from "@/components/ImageWithWrapper";
 import { useState, useRef } from "react";
 import DialogModal from "@/components/DialogModal";
-import EventDisplayIdeasForShowDataVariant from "@/features/EventManager/Main/show-event-data/components/EventDisplayIdeasForShowDataVariant";
 import hardcodedEventsBecauseOfTheLackOfTime from "@/features/EventManager/Main/show-event-data/data/hardcodedEventsBecauseOfTheLackOfTime";
 import EventDisplay from "@/features/EventManager/Main/show-event-data/components/EventDisplay";
+import { TitleBarWithTogglableContent } from "@/components/TitleBarWithTogglableContent";
+
+const chestModalCss = {
+  container: css({}),
+
+  titleBarWithContent: css([universalCss.container, {}]),
+};
 
 const ChestModalContent = ({}: ChestModalContentProps) => {
   const [isShowingOrEditing, setIsShowingOrEditing] = useState<
@@ -15,6 +22,7 @@ const ChestModalContent = ({}: ChestModalContentProps) => {
   >("showing");
 
   const eventIndexRef = useRef(0);
+
   const chestWithAllDayLongEvents = useAppSelector(
     (state) =>
       state.appDataOfCurrentUserReducer.eventsWithNeeds
@@ -32,65 +40,83 @@ const ChestModalContent = ({}: ChestModalContentProps) => {
   };
 
   return (
-    <div>
-      <section>For Today</section>
+    <div css={chestModalCss.container}>
       <section>
-        {" "}
-        {chestWithAllDayLongEvents.necessary.map((event, index) => {
-          return (
-            <div
-              key={index}
-              style={{
-                marginTop: "2rem",
-              }}
-            >
-              <button
-                onClick={() => openModal(index)}
-                style={{
-                  width: "100%",
-                  display: "grid",
-                  justifyItems: "center",
-                }}
-              >
-                <ImageWithWrapper
-                  src={event.imagePath}
-                  width="50%"
-                  aspectRatio="2.63/1"
-                />
-                <div>{event.name}</div>
-              </button>
-            </div>
-          );
-        })}
+        <TitleBarWithTogglableContent
+          titleBarContent={
+            <h2 css={chestModalCss.titleBarWithContent}>For Today</h2>
+          }
+        >
+          ....
+        </TitleBarWithTogglableContent>
       </section>
       <section>
-        {" "}
-        {chestWithAllDayLongEvents.oneDay.map((event, index) => {
-          return (
-            <div
-              key={index}
-              style={{
-                marginTop: "2rem",
-              }}
-            >
-              <button
-                onClick={() => openModal(index)}
+        <TitleBarWithTogglableContent
+          titleBarContent={
+            <h2 css={chestModalCss.titleBarWithContent}>Necessary</h2>
+          }
+        >
+          {chestWithAllDayLongEvents.necessary.map((event, index) => {
+            return (
+              <div
+                key={index}
                 style={{
-                  width: "100%",
-                  display: "grid",
-                  justifyItems: "center",
+                  marginTop: "2rem",
                 }}
               >
-                <ImageWithWrapper
-                  src={event.imagePath}
-                  width="50%"
-                  aspectRatio="2.63/1"
-                />
-                <div>{event.name}</div>
-              </button>
-            </div>
-          );
-        })}
+                <button
+                  onClick={() => openModal(index)}
+                  style={{
+                    width: "100%",
+                    display: "grid",
+                    justifyItems: "center",
+                  }}
+                >
+                  <ImageWithWrapper
+                    src={event.imagePath}
+                    width="50%"
+                    aspectRatio="2.63/1"
+                  />
+                  <div>{event.name}</div>
+                </button>
+              </div>
+            );
+          })}
+        </TitleBarWithTogglableContent>
+      </section>
+      <section>
+        <TitleBarWithTogglableContent
+          titleBarContent={
+            <h2 css={chestModalCss.titleBarWithContent}>Necessary</h2>
+          }
+        >
+          {chestWithAllDayLongEvents.oneDay.map((event, index) => {
+            return (
+              <div
+                key={index}
+                style={{
+                  marginTop: "2rem",
+                }}
+              >
+                <button
+                  onClick={() => openModal(index)}
+                  style={{
+                    width: "100%",
+                    display: "grid",
+                    justifyItems: "center",
+                  }}
+                >
+                  <ImageWithWrapper
+                    src={event.imagePath}
+                    width="50%"
+                    aspectRatio="2.63/1"
+                  />
+                  <div>{event.name}</div>
+                </button>
+              </div>
+            );
+          })}
+        </TitleBarWithTogglableContent>
       </section>
       {isModalOpen && (
         <DialogModal isOpen={isModalOpen} onClose={closeModal} zIndex={1002}>
