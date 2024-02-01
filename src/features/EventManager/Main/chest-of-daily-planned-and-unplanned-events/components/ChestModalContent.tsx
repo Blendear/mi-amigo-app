@@ -15,11 +15,11 @@ const ChestModalContent = ({}: ChestModalContentProps) => {
   >("showing");
 
   const eventIndexRef = useRef(0);
-  // const chestWithAllDayLongEvents = useAppSelector(
-  //   (state) =>
-  //     state.appDataOfCurrentUserReducer.eventsWithNeeds
-  //       .chestWithAllDayLongEvents
-  // );
+  const chestWithAllDayLongEvents = useAppSelector(
+    (state) =>
+      state.appDataOfCurrentUserReducer.eventsWithNeeds
+        .chestWithAllDayLongEvents
+  );
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = (index) => {
@@ -33,37 +33,71 @@ const ChestModalContent = ({}: ChestModalContentProps) => {
 
   return (
     <div>
-      {hardcodedEventsBecauseOfTheLackOfTime.map((event, index) => {
-        return (
-          <div
-            key={index}
-            style={{
-              marginTop: "2rem",
-            }}
-          >
-            <button
-              onClick={() => openModal(index)}
-              style={{ width: "100%", display: "grid", justifyItems: "center" }}
+      <section>For Today</section>
+      <section>
+        {" "}
+        {chestWithAllDayLongEvents.necessary.map((event, index) => {
+          return (
+            <div
+              key={index}
+              style={{
+                marginTop: "2rem",
+              }}
             >
-              <ImageWithWrapper src={event.imagePath} width="20%" />
-              <div>{event.name}</div>
-            </button>
-          </div>
-        );
-      })}
+              <button
+                onClick={() => openModal(index)}
+                style={{
+                  width: "100%",
+                  display: "grid",
+                  justifyItems: "center",
+                }}
+              >
+                <ImageWithWrapper
+                  src={event.imagePath}
+                  width="50%"
+                  aspectRatio="2.63/1"
+                />
+                <div>{event.name}</div>
+              </button>
+            </div>
+          );
+        })}
+      </section>
+      <section>
+        {" "}
+        {chestWithAllDayLongEvents.oneDay.map((event, index) => {
+          return (
+            <div
+              key={index}
+              style={{
+                marginTop: "2rem",
+              }}
+            >
+              <button
+                onClick={() => openModal(index)}
+                style={{
+                  width: "100%",
+                  display: "grid",
+                  justifyItems: "center",
+                }}
+              >
+                <ImageWithWrapper
+                  src={event.imagePath}
+                  width="50%"
+                  aspectRatio="2.63/1"
+                />
+                <div>{event.name}</div>
+              </button>
+            </div>
+          );
+        })}
+      </section>
       {isModalOpen && (
         <DialogModal isOpen={isModalOpen} onClose={closeModal} zIndex={1002}>
-          <></>
-          {/* <EventDisplay variant={isShowingOrEditing} event={} /> */}
-          {/* <EventDisplayIdeasForShowDataVariant
-            // temporarily commented out, because creating an event-editor for all functionalities
-            // is time consuming, and i need those events right now
-            // eventData={chestWithAllDayLongEvents[eventIndexRef.current]}
-
-            eventData={
-              hardcodedEventsBecauseOfTheLackOfTime[eventIndexRef.current]
-            }
-          /> */}
+          <EventDisplay
+            variant={isShowingOrEditing}
+            event={chestWithAllDayLongEvents.necessary[eventIndexRef.current]}
+          />
         </DialogModal>
       )}
     </div>

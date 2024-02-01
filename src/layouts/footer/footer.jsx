@@ -3,7 +3,10 @@ import { useEffect, useState } from "react";
 import { useAppDispatch } from "../../store/redux/hooks";
 import { appDataOfCurrentUserSliceActions } from "../../store/redux/store-redux";
 import { IoIosArrowUp } from "react-icons/io";
-import { placeholderEvent1 } from "@/features/EventManager/Main/show-event-data/data/placeholderEvents";
+import {
+  placeholderEvent1,
+  placeholderEvent2,
+} from "@/features/EventManager/Main/show-event-data/data/placeholderEvents";
 import { MyBeautifulTimer } from "@/features/EventManager/Main/pomodoro-timer/components/MyBeautifulTimer";
 
 const Footer = () => {
@@ -22,14 +25,18 @@ const Footer = () => {
           {
             eventsWithNeeds: {
               chestWithAllDayLongEvents: {
-                necessary: [placeholderEvent1, placeholderEvent1],
-                oneDay: [placeholderEvent1],
+                necessary: [placeholderEvent1, placeholderEvent2],
+                oneDay: [
+                  placeholderEvent1,
+                  placeholderEvent2,
+                  placeholderEvent2,
+                ],
               },
               libraryOfTemplateEvents: [
                 placeholderEvent1,
+                placeholderEvent2,
                 placeholderEvent1,
-                placeholderEvent1,
-                placeholderEvent1,
+                placeholderEvent2,
               ],
               sheduleOfHourlyPlannedEvents: [],
             },
