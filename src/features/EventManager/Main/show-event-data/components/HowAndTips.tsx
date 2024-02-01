@@ -36,15 +36,16 @@ const HowAndTips = ({ content }: HowAndTipsProps) => {
           <ul>
             {content.notes.map((note, index) => {
               return (
-                <li key={index}>
+                <li key={index} css={{ display: "grid" }}>
                   <input
                     css={[
                       universalCss.container,
                       {
                         borderColor: "purple",
+                        gridRow: "1",
+                        gridColumn: "1",
                       },
                     ]}
-                    onClick={() => handleClickTitle(index)}
                     disabled={isShowing.current}
                     aria-label="Title"
                     type="text"
@@ -52,6 +53,13 @@ const HowAndTips = ({ content }: HowAndTipsProps) => {
                     // placeholder={formDataRef.current.name}
                     // onChange={(e) => handleDataChange(formDataRef, "name", e.target.value)}
                   />
+                  <button
+                    css={{
+                      gridRow: "1",
+                      gridColumn: "1",
+                    }}
+                    onClick={() => handleClickTitle(index)}
+                  ></button>
                   {shownDescriptionID === index && (
                     <div>
                       <textarea

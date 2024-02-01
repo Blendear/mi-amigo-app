@@ -1,8 +1,5 @@
 import { AppDataOfCurrentUser } from "@/types";
 
-// TODO: Rework the "hardecodedEventsBecauseOfTheLackOfTime" to be
-// an objetc with ALL placeholder data for the "EventManager" feature
-// with separate events for the library, chest and schedule (later on)
 export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
   eventsWithNeeds: {
     chestWithAllDayLongEvents: {
