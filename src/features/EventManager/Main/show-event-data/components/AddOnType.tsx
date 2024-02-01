@@ -7,33 +7,33 @@ const AddOnType = ({ type }) => {
   const { formDataRef, handleDataChange, isShowing } =
     useContext(EventDisplayContext);
 
-  const handleAddOnsChange = (content, contentType, value) => {
-    const updatedAddOns = { ...formDataRef.current.addOnsByVariants };
+  // const handleAddOnsChange = (content, contentType, value) => {
+  //   const updatedAddOns = { ...formDataRef.current.addOnsByVariants };
 
-    if (!updatedAddOns[type]) {
-      updatedAddOns[type] = {};
-    }
+  //   if (!updatedAddOns[type]) {
+  //     updatedAddOns[type] = {};
+  //   }
 
-    if (!updatedAddOns[type][content]) {
-      updatedAddOns[type][content] = [];
-    }
+  //   if (!updatedAddOns[type][content]) {
+  //     updatedAddOns[type][content] = [];
+  //   }
 
-    const addOn = { ...updatedAddOns[type][content][0] };
+  //   const addOn = { ...updatedAddOns[type][content][0] };
 
-    if (!addOn.id) {
-      addOn.id = uuidv4();
-    }
+  //   if (!addOn.id) {
+  //     addOn.id = uuidv4();
+  //   }
 
-    if (!addOn[content]) {
-      addOn[content] = {};
-    }
+  //   if (!addOn[content]) {
+  //     addOn[content] = {};
+  //   }
 
-    addOn[content][contentType] = value;
+  //   addOn[content][contentType] = value;
 
-    updatedAddOns[type][content][0] = addOn;
+  //   updatedAddOns[type][content][0] = addOn;
 
-    handleDataChange(formDataRef, "addOnsByVariants", updatedAddOns);
-  };
+  //   handleDataChange(formDataRef, "addOnsByVariants", updatedAddOns);
+  // };
 
   return (
     <div className={styles["event-manager__form__add-ons__type"]}>

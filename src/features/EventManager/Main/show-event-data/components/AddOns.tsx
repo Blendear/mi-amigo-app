@@ -2,7 +2,6 @@
 import { css } from "@emotion/react";
 import { SwiperSlide } from "swiper/react";
 import "swiper/css";
-import AddOnType from "./AddOnType"; // Adjust the path based on your project structure
 import { SwiperCustom } from "./SwiperCustom";
 import { formatToRomanNumber } from "../utils/formatToRomanNumber";
 import EventDisplayContext from "../context/EventDisplayContext";
