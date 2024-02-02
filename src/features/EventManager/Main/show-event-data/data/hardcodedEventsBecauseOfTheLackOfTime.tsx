@@ -132,10 +132,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           addOnsByVariants: {
             "Mi Amigo": {
               "Przygotuj narzędzia": {
-                habits: [],
                 howAndTips: { ytVideoId: "", notes: [] },
-                toolsWhere: [],
-                toolsSubApps: [],
                 toolsPhysicalOrThirdParty: [
                   {
                     title: "Linear",
@@ -173,7 +170,48 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                 ],
               },
             },
+            INFINITI: {
+              "Przygotuj narzędzia": {
+                howAndTips: { ytVideoId: "", notes: [] },
+                toolsPhysicalOrThirdParty: [
+                  {
+                    title: "Linear",
+                    linkURL:
+                      "https://linear.app/sqrwysynki/issue/SL-59/infiniti-app",
+                    imageOrGifPath:
+                      "https://media.licdn.com/dms/image/D4D0BAQF8WGlksBLY0g/company-logo_200_200/0/1665590651137/linearapp_logo?e=2147483647&v=beta&t=O_5o4iiky8EZ2ZJr9cPeQ64jrILDiYBue_PI-BPxC4c",
+                  },
+                  {
+                    title: "Figma - Templates",
+                    linkURL:
+                      "https://www.figma.com/file/DQqI5zaJfWxJhZ3XYUPih0/Figma_Node_Template--SS?type=design&node-id=3-2&mode=design&t=YR4drQms9bljODLM-0s",
+                    imageOrGifPath:
+                      "https://i.pinimg.com/736x/18/f1/72/18f1727873924ba58fde1f739d11b77b.jpg",
+                  },
+                  {
+                    title: "Figma - INFINITI",
+                    linkURL:
+                      "https://www.figma.com/file/OkfEUmfeGxTgWf6CHIBjip/INFINITI?type=design&node-id=0-1&mode=design&t=TYy36RkAsLfs2hka-0",
+                    imageOrGifPath:
+                      "https://i.pinimg.com/736x/18/f1/72/18f1727873924ba58fde1f739d11b77b.jpg",
+                  },
+                  {
+                    title: "Localhost",
+                    linkURL: "http://localhost:3000/wywolywacz-e-trenera",
+                    imageOrGifPath:
+                      "https://dam.thdstatic.com/content/production/K1_G_U1csswMUsD8MJQ2yA/2Z8QA2KYCKjF2d_fnCi0-w/Original%20file/26",
+                  },
+                  {
+                    title: "ChatGPT",
+                    linkURL: "https://chat.openai.com/",
+                    imageOrGifPath:
+                      "https://s7d1.scene7.com/is/image/dmqualcommprod/getting-personal-with-on-device-ai?$QC_Responsive$&fmt=png-alpha&wid=500",
+                  },
+                ],
+              },
+            },
           },
+
           needsFulfilledByVariant: {
             "'tworzę' w domciu": {
               isWant: false,
