@@ -167,6 +167,7 @@ export type SwiperCustomProps = {
   // in this case, "forceUpdate" will force a rerender of the component
   // in which it's "useState" is stored (for example the parent component)
   forceUpdate?: React.Dispatch<React.SetStateAction<boolean>>;
+  additionalOnSlideChange?: () => void;
   children: React.ReactNode;
 };
 

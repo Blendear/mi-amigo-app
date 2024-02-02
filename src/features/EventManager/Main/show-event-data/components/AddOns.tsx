@@ -6,7 +6,7 @@ import { SwiperCustom } from "./SwiperCustom";
 import { formatToRomanNumber } from "../utils/formatToRomanNumber";
 import EventDisplayContext from "../context/EventDisplayContext";
 import { useContext } from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import ImageWithWrapper from "@/components/ImageWithWrapper";
 import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
 import HowAndTips from "./HowAndTips";
@@ -38,6 +38,7 @@ const addOnsCss = {
 
   addOn: css({
     margin: "1.5rem",
+    height: "65vh",
   }),
 };
 
@@ -51,7 +52,13 @@ const AddOns = () => {
 
   const { update, forceUpdate } = useContext(WorkflowsContext);
 
+  const targetToScrollRef = useRef(null);
+
   const [addOnData, setAddOnData] = useState<AddOn>({});
+
+  const scrollToThisTarget = () => {
+    targetToScrollRef.current?.scrollIntoView();
+  };
 
   useEffect(() => {
     // TODO: Refactor this patological data getting here & inside "Steps.tsx" one day
@@ -85,6 +92,7 @@ const AddOns = () => {
             (workflowBookOfAddonsIndex.current = index)
           }
           forceUpdate={forceUpdate}
+          additionalOnSlideChange={scrollToThisTarget}
         >
           {booksOfAddonsNames.map((slide, index) => (
             <SwiperSlide key={index}>
@@ -99,7 +107,7 @@ const AddOns = () => {
           ))}
         </SwiperCustom>
         <p>{booksOfAddonsNames[workflowBookOfAddonsIndex.current]}</p>
-        <div css={addOnsCss.addOn}>
+        <div css={addOnsCss.addOn} ref={targetToScrollRef}>
           {
             {
               habits: <>{/* addOnData.habits */}</>,

@@ -62,24 +62,28 @@ const PortalesqueLink = ({
         // placeholder={formDataRef.current.name}
         // onChange={(e) => handleDataChange(formDataRef, "name", e.target.value)}
       />
-      <input
-        css={universalCss.container}
-        disabled={isShowing.current}
-        aria-label="Link URL"
-        type="text"
-        placeholder={linkURL}
-        // placeholder={formDataRef.current.name}
-        // onChange={(e) => handleDataChange(formDataRef, "name", e.target.value)}
-      />
-      <input
-        css={universalCss.container}
-        disabled={isShowing.current}
-        aria-label="Image or GIF URL path"
-        type="text"
-        placeholder={imageOrGifPath}
-        // placeholder={formDataRef.current.name}
-        // onChange={(e) => handleDataChange(formDataRef, "name", e.target.value)}
-      />
+      {!isShowing && (
+        <>
+          <input
+            css={universalCss.container}
+            disabled={isShowing.current}
+            aria-label="Link URL"
+            type="text"
+            placeholder={linkURL}
+            // placeholder={formDataRef.current.name}
+            // onChange={(e) => handleDataChange(formDataRef, "name", e.target.value)}
+          />
+          <input
+            css={universalCss.container}
+            disabled={isShowing.current}
+            aria-label="Image or GIF URL path"
+            type="text"
+            placeholder={imageOrGifPath}
+            // placeholder={formDataRef.current.name}
+            // onChange={(e) => handleDataChange(formDataRef, "name", e.target.value)}
+          />
+        </>
+      )}
     </div>
   );
 };
