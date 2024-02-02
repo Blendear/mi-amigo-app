@@ -290,6 +290,15 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                 toolsPhysicalOrThirdParty: [],
               },
             },
+            "Sesja - Soundtracks": {
+              step1: {
+                habits: [],
+                howAndTips: { ytVideoId: "", notes: [] },
+                toolsWhere: [],
+                toolsSubApps: [],
+                toolsPhysicalOrThirdParty: [],
+              },
+            },
           },
 
           needsFulfilledByVariant: {
