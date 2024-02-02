@@ -339,7 +339,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                   {
                     title: "Linear",
                     linkURL:
-                      "https://linear.app/sqrwysynki/issue/SL-41/workflows",
+                      "https://linear.app/mi-amigo/view/df41fdbf-a23c-4e7f-8e4d-bc078a6b9001",
                     imageOrGifPath:
                       "https://media.licdn.com/dms/image/D4D0BAQF8WGlksBLY0g/company-logo_200_200/0/1665590651137/linearapp_logo?e=2147483647&v=beta&t=O_5o4iiky8EZ2ZJr9cPeQ64jrILDiYBue_PI-BPxC4c",
                   },
