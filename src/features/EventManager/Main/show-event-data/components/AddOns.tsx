@@ -39,6 +39,11 @@ const addOnsCss = {
   addOn: css({
     margin: "1.5rem",
     height: "65vh",
+    overflowY: "scroll",
+
+    "&::-webkit-scrollbar": {
+      display: "none",
+    },
   }),
 };
 
