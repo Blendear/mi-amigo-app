@@ -56,9 +56,7 @@ const AddOns = () => {
 
   const [addOnData, setAddOnData] = useState<AddOn>({});
 
-  const scrollToThisTarget = () => {
-    targetToScrollRef.current?.scrollIntoView();
-  };
+  const scrollToThisTarget = () => {};
 
   useEffect(() => {
     // TODO: Refactor this patological data getting here & inside "Steps.tsx" one day
