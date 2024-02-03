@@ -212,7 +212,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
               },
             },
             Marketing: {
-              step1: {
+              "Przygotuj narzędzia": {
                 habits: [],
                 howAndTips: { ytVideoId: "", notes: [] },
                 toolsWhere: [],
@@ -229,7 +229,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
               },
             },
             "Sesja - Gameplay/Minigames Dev": {
-              step1: {
+              "Przygotuj narzędzia": {
                 habits: [],
                 howAndTips: { ytVideoId: "", notes: [] },
                 toolsWhere: [],
@@ -244,9 +244,21 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                   },
                 ],
               },
+              "Sprawdzam questa": {
+                howAndTips: { ytVideoId: "OKI71MWG1sQ", notes: [] },
+              },
+            },
+            "Sesja - Meet Character Dev": {
+              "Przygotuj narzędzia": {
+                habits: [],
+                howAndTips: { ytVideoId: "", notes: [] },
+                toolsWhere: [],
+                toolsSubApps: [],
+                toolsPhysicalOrThirdParty: [],
+              },
             },
             "Sesja - 2D Vis Dev": {
-              step1: {
+              "Przygotuj narzędzia": {
                 habits: [],
                 howAndTips: { ytVideoId: "", notes: [] },
                 toolsWhere: [],
@@ -255,7 +267,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
               },
             },
             "Sesja - 3D Assets": {
-              step1: {
+              "Przygotuj narzędzia": {
                 habits: [],
                 howAndTips: { ytVideoId: "", notes: [] },
                 toolsWhere: [],
@@ -264,7 +276,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
               },
             },
             "Sesja - Live YT/Twitch": {
-              step1: {
+              "Przygotuj narzędzia": {
                 habits: [],
                 howAndTips: { ytVideoId: "", notes: [] },
                 toolsWhere: [],
@@ -273,7 +285,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
               },
             },
             "Sesja - Worldbuilding": {
-              step1: {
+              "Przygotuj narzędzia": {
                 habits: [],
                 howAndTips: { ytVideoId: "", notes: [] },
                 toolsWhere: [],
@@ -282,7 +294,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
               },
             },
             "Sesja - Questlines": {
-              step1: {
+              "Przygotuj narzędzia": {
                 habits: [],
                 howAndTips: { ytVideoId: "", notes: [] },
                 toolsWhere: [],
@@ -291,7 +303,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
               },
             },
             "Sesja - Soundtracks": {
-              step1: {
+              "Przygotuj narzędzia": {
                 habits: [],
                 howAndTips: { ytVideoId: "", notes: [] },
                 toolsWhere: [],
