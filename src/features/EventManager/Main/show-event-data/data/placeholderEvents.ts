@@ -90,7 +90,6 @@ export const placeholderEvent1: EventWithNeeds = {
             subappName: "yt-video-watcher",
             payload: {
               ytVideoIds: ["a1", "b2"],
-              VODLinks: ["111", "222"],
             },
           },
         ],

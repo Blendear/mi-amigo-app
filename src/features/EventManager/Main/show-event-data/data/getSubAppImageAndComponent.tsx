@@ -14,7 +14,11 @@ export const getSubAppImageAndComponent = ({
     "yt-video-watcher": {
       imageOrGifPath:
         "https://neondeco.fr/cdn/shop/products/neon-youtube_1.jpg?v=1678705616",
-      component: <Playlist listOfYouTubeVideoIDs={payload} />,
+      component: payload ? (
+        <Playlist listOfYouTubeVideoIDs={payload.ytVideoIds} />
+      ) : (
+        <></>
+      ),
     },
     "shopping-list": {
       imageOrGifPath: "https://via.placeholder.com/150",
