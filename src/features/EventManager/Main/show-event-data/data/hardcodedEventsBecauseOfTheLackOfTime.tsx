@@ -131,6 +131,67 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           deadlineVariant: "none",
           addOnsByVariants: {
             tradycyjnie: {
+              "Prosiaczki przyszły?": {
+                habits: [],
+                howAndTips: {
+                  ytVideoId: "",
+                  notes: [
+                    {
+                      title: "Sprawdź wiadomości w komunikatorach z toolsów",
+                      description: "",
+                    },
+                  ],
+                },
+                toolsWhere: [],
+                toolsSubApps: [],
+                toolsPhysicalOrThirdParty: [
+                  {
+                    title: "Gmail",
+                    imageOrGifPath:
+                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRehBkcICeAaY5qdgGWJCTIGBP_RYYE4A0ciDVWTpmOWA&s",
+                  },
+                  {
+                    title: "Messenger",
+                    imageOrGifPath:
+                      "https://cdn3.vectorstock.com/i/1000x1000/61/72/facebook-messenger-logo-vector-41086172.jpg",
+                  },
+                  {
+                    title: "Discord",
+                    imageOrGifPath:
+                      "https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxsG72wAo9EWJR4yQWyJJaDb6rYcBtJvTvH3UoAS4JFNDaxGhmKNaMwgElLURlRFeVkLCjkfnXmWtINWZIrPGYq0-&format=source",
+                  },
+                ],
+              },
+              Herbatka: {
+                habits: [],
+                howAndTips: {
+                  ytVideoId: "",
+                  notes: [
+                    {
+                      title:
+                        "Cały termos herbatki na biurko / w podróz, zamiast coli",
+                      description: "",
+                    },
+                  ],
+                },
+                toolsWhere: [],
+                toolsSubApps: [],
+                toolsPhysicalOrThirdParty: [],
+              },
+              "Telefonowe notatki do projektów / worda wpisz": {
+                habits: [],
+                howAndTips: { ytVideoId: "", notes: [] },
+                toolsWhere: [],
+                toolsSubApps: [],
+                toolsPhysicalOrThirdParty: [],
+              },
+              "Ładuj słuchawki, telefon i powerbanka": {
+                habits: [],
+                howAndTips: { ytVideoId: "", notes: [] },
+                toolsWhere: [],
+                toolsSubApps: [],
+                toolsPhysicalOrThirdParty: [],
+              },
               "Tygodniowy Harmonogram przejżyj": {
                 habits: [],
                 howAndTips: { ytVideoId: "", notes: [] },
@@ -144,6 +205,20 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                 toolsWhere: [],
                 toolsSubApps: [],
                 toolsPhysicalOrThirdParty: [],
+              },
+              Zakupki: {
+                habits: [],
+                howAndTips: { ytVideoId: "", notes: [] },
+                toolsWhere: [],
+                toolsSubApps: [],
+                toolsPhysicalOrThirdParty: [
+                  {
+                    title: "SubApp Zakupowy",
+                    imageOrGifPath:
+                      "https://img.freepik.com/premium-vector/cute-banana-cartoon-vector-icon-illustration-logo-mascot-hand-drawn-concept-trandy-cartoon_519183-187.jpg?w=2000",
+                    linkURL: "https://mi-amigo-green.vercel.app/landing-page",
+                  },
+                ],
               },
               "Porcjuj || Rozpisz tegotygodniowe || Przygotuj ingredients || Gotuj":
                 {
@@ -162,6 +237,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                   toolsSubApps: [],
                   toolsPhysicalOrThirdParty: [],
                 },
+
               "Ściągnij || Umyj naczynia": {
                 habits: [],
                 howAndTips: { ytVideoId: "", notes: [] },
@@ -226,6 +302,43 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                 toolsPhysicalOrThirdParty: [],
               },
               "1 z 20 kroków sprzątania, pod wolne weekendy": {
+                habits: [],
+                howAndTips: { ytVideoId: "", notes: [] },
+                toolsWhere: [],
+                toolsSubApps: [],
+                toolsPhysicalOrThirdParty: [],
+              },
+              "Strój ćwiczebny & Armor dzienny przygotuj": {
+                habits: [],
+                howAndTips: {
+                  ytVideoId: "",
+                  notes: [
+                    {
+                      title:
+                        "W 'Toby > Backup > Stylówy ubraniowe--ss' rozpisałeś",
+                      description: "",
+                    },
+                  ],
+                },
+                toolsWhere: [],
+                toolsSubApps: [],
+                toolsPhysicalOrThirdParty: [],
+              },
+              "Paragony podlicz": {
+                habits: [],
+                howAndTips: { ytVideoId: "", notes: [] },
+                toolsWhere: [],
+                toolsSubApps: [],
+                toolsPhysicalOrThirdParty: [],
+              },
+              "Ręczniki & Kocyk & Prześcieradło wymień": {
+                habits: [],
+                howAndTips: { ytVideoId: "", notes: [] },
+                toolsWhere: [],
+                toolsSubApps: [],
+                toolsPhysicalOrThirdParty: [],
+              },
+              Poczta: {
                 habits: [],
                 howAndTips: { ytVideoId: "", notes: [] },
                 toolsWhere: [],
