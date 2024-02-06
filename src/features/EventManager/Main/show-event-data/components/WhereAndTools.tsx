@@ -16,41 +16,6 @@ const whereAndToolsCss = {
   }),
 };
 
-const placeholderPortalsByBookOfAddons = {
-  where: [
-    {
-      title: "Where Portal 1",
-      linkURL: "https://www.google.com",
-      imageOrGifPath:
-        "https://4.bp.blogspot.com/-7EDxlHn4b_A/XKG5NjiEZjI/AAAAAAAABGw/hG92qvWs7uQF-Wxry4N0QYklnYbNqyHBwCKgBGAs/w3440-h1440-c/fantasy-serpent-uhdpaper.com-4K-65.jpg",
-    },
-  ],
-
-  "tool-subapp": [
-    {
-      title: "Tool Subapp Portal 1",
-      linkURL: "https://www.wikipedia.com",
-      imageOrGifPath:
-        "https://res.cloudinary.com/ybmedia/image/upload/c_crop,h_1082,w_1623,x_189,y_0/c_fill,f_auto,h_1200,q_auto,w_1600/v1/m/6/5/656f0e7d8a211461e8c3ffada42b8509930a03d0/25-fun-fantasy-films.jpg",
-    },
-    {
-      title: "Tool Subapp Portal 2",
-      linkURL: "https://www.youtube.com",
-      imageOrGifPath:
-        "https://as1.ftcdn.net/v2/jpg/05/70/08/86/1000_F_570088674_addcp8N71c6bZzsC0tFcVOqkLEW3u9Z2.jpg",
-    },
-  ],
-
-  "tool-physical-or-3rd-party": [
-    {
-      title: "Tool Physical or 3rd Party Portal 1",
-      linkURL: "https://www.twitch.com",
-      imageOrGifPath:
-        "https://w0.peakpx.com/wallpaper/33/563/HD-wallpaper-fantasy-cool-dragon-art-resolution-fantasy-and-background-3440x1440-dragon.jpg",
-    },
-  ],
-};
-
 const WhereAndTools = ({ content }: WhereAndToolsProps) => {
   // TODO: Conditionally activate a subapp || the current link, depending no the content type
   // For now it's only the link 3rd party functionality or no link at all (for the physical tools)
@@ -59,15 +24,11 @@ const WhereAndTools = ({ content }: WhereAndToolsProps) => {
       {content.map((portal, index) => {
         return (
           <li key={index}>
-            {portal.hasOwnProperty("subappName") ? (
-              <div>Subapp content - Also a portal, right?</div>
-            ) : (
-              <PortalesqueLink
-                title={portal.title}
-                linkURL={portal.linkURL}
-                imageOrGifPath={portal.imageOrGifPath}
-              />
-            )}
+            <PortalesqueLink
+              title={portal.title}
+              linkURL={portal.linkURL}
+              imageOrGifPath={portal.imageOrGifPath}
+            />
           </li>
         );
       })}

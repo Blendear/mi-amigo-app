@@ -4,7 +4,7 @@ import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
 import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { HowAndTipsProps } from "../types";
-import EditableYTVideo from "@/features/EventManager/SubApps/yt-watcher/components/EditableYTVideo";
+import VideoEditable from "@/features/EventManager/SubApps/yt-watcher/components/VideoEditable";
 import { useContext } from "react";
 import EventDisplayContext from "../context/EventDisplayContext";
 import { useState } from "react";
@@ -29,7 +29,7 @@ const HowAndTips = ({ content }: HowAndTipsProps) => {
     <section>
       {content ? (
         <>
-          <EditableYTVideo
+          <VideoEditable
             isShowing={!isShowing.current}
             yTvideoId={content.ytVideoId}
           />

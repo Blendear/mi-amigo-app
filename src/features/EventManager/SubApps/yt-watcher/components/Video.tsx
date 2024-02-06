@@ -2,7 +2,7 @@ import styles from "@/styles/sass/styles-all.module.scss";
 
 import YouTube from "react-youtube";
 
-const NestedYoutubeLink = ({ yTvideoId }) => {
+const Video = ({ yTvideoId }) => {
   const opts = {
     height: "100%",
     width: "100%",
@@ -28,4 +28,4 @@ const NestedYoutubeLink = ({ yTvideoId }) => {
     </div>
   );
 };
-export default NestedYoutubeLink;
+export default Video;

@@ -15,6 +15,7 @@ import WhereAndTools from "./WhereAndTools";
 import { booksOfAddonsNames } from "../data/booksOfAddonsNames";
 import WorkflowsContext from "../context/WorkflowsContext";
 import { AddOn } from "../types";
+import SubAppsTogglers from "./SubAppsTogglers";
 
 const addOnsCss = {
   container: css({
@@ -118,7 +119,9 @@ const AddOns = () => {
               habits: <>{/* addOnData.habits */}</>,
               "how-and-tips": <HowAndTips content={addOnData.howAndTips} />,
               where: <WhereAndTools content={addOnData.toolsWhere} />,
-              "tool-subapp": <WhereAndTools content={addOnData.toolsSubApps} />,
+              "tool-subapp": (
+                <SubAppsTogglers content={addOnData.toolsSubApps} />
+              ),
               "tool-physical-or-3rd-party": (
                 <WhereAndTools content={addOnData.toolsPhysicalOrThirdParty} />
               ),

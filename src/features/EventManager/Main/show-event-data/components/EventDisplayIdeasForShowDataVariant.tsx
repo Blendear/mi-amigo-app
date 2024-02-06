@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import styles from "@/styles/sass/styles-all.module.scss";
-import VideoPlaylistWatcher from "@/features/EventManager/SubApps/yt-watcher/components/VideoPlaylistWatcher";
+import Playlist from "@/features/EventManager/SubApps/yt-watcher/components/Playlist";
 import ImageWithWrapper from "@/components/ImageWithWrapper";
 import { useState } from "react";
 import ToggleableContent from "@/components/ToggleableContent";
@@ -28,9 +28,7 @@ const EventDisplayIdeasForShowDataVariant = ({ eventData }) => {
                 for subapp components, which I will use as an objetc to get a specific component by name
                 from. Through {}[subappName] */}
                 {addOn.subappName === "video-watcher" ? (
-                  <VideoPlaylistWatcher
-                    listOfYouTubeVideoIDs={addOn.payload.ytVideoIds}
-                  />
+                  <Playlist listOfYouTubeVideoIDs={addOn.payload.ytVideoIds} />
                 ) : (
                   // Handle other subApps accordingly
                   <div>what to show in non-subapps?</div>

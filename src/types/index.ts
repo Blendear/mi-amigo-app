@@ -22,7 +22,7 @@ export type ImageWithWrapperProps = {
 };
 
 export type SubappPayloads = {
-  "video-watcher": {
+  "yt-video-watcher": {
     ytVideoIds: string[];
     VODLinks: string[];
   };

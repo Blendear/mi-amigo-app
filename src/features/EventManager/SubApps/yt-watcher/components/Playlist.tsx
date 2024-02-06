@@ -1,8 +1,8 @@
 import { useState } from "react";
-import NestedYoutubeLink from "./NestedYoutubeLink";
+import Video from "./Video";
 import { MyTemporaryStyle } from "../types/index";
 
-const VideoPlaylistWatcher = ({ listOfYouTubeVideoIDs }: MyTemporaryStyle) => {
+const Playlist = ({ listOfYouTubeVideoIDs }: MyTemporaryStyle) => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
 
   const handleNextVideo = () => {
@@ -19,7 +19,7 @@ const VideoPlaylistWatcher = ({ listOfYouTubeVideoIDs }: MyTemporaryStyle) => {
 
   return (
     <div>
-      <NestedYoutubeLink yTvideoId={listOfYouTubeVideoIDs[currentVideoIndex]} />
+      <Video yTvideoId={listOfYouTubeVideoIDs[currentVideoIndex]} />
       <div>
         <button onClick={handlePrevVideo}>Previous</button>
         <button onClick={handleNextVideo}>Next</button>
@@ -31,4 +31,4 @@ const VideoPlaylistWatcher = ({ listOfYouTubeVideoIDs }: MyTemporaryStyle) => {
   );
 };
 
-export default VideoPlaylistWatcher;
+export default Playlist;

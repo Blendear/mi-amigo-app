@@ -3,13 +3,13 @@ import { css } from "@emotion/react";
 import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
 import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
-import NestedYoutubeLink from "./NestedYoutubeLink";
+import Video from "./Video";
 import { FaYoutube } from "react-icons/fa";
 
-const EditableYTVideo = ({ isShowing, yTvideoId }) => {
+const VideoEditable = ({ isShowing, yTvideoId }) => {
   return (
     <div>
-      <NestedYoutubeLink yTvideoId={yTvideoId} />
+      <Video yTvideoId={yTvideoId} />
       {!isShowing && (
         <>
           <div
@@ -35,4 +35,4 @@ const EditableYTVideo = ({ isShowing, yTvideoId }) => {
     </div>
   );
 };
-export default EditableYTVideo;
+export default VideoEditable;

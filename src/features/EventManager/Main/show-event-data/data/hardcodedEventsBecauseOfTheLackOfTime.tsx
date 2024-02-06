@@ -28,7 +28,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
               poczatek: {
                 toolsSubApps: [
                   {
-                    subappName: "video-watcher",
+                    subappName: "yt-video-watcher",
                     payload: {
                       ytVideoIds: [],
                       VODLinks: [],

@@ -175,13 +175,13 @@ export type WorkflowVariantsProps = {};
 
 export type PortalesqueLinkProps = {
   title: string;
-  linkURL: string;
+  linkURL?: string;
   imageOrGifPath: string;
 };
 
 export type DescriptionWithImagesProps = {};
 
-export type WhereAndToolsProps = { content: Tool[] | Subapp[] };
+export type WhereAndToolsProps = { content: Tool[] };
 
 export type HabitsProps = {};
 
@@ -189,4 +189,8 @@ export type HowAndTipsProps = { content: HowAndTips };
 
 export type EventDisplaySmallProps = {
   event: EventWithNeeds;
+};
+
+export type SubAppsTogglersProps = {
+  content: Subapp[];
 };

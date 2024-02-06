@@ -50,7 +50,7 @@ const PortalesqueLink = ({
         rel="noopener noreferrer"
       >
         <ImageWithWrapper src={portalGifUrl} width="100%" aspectRatio="1/1" />
-        <ImageWithWrapper src={imageOrGifPath} width="50%" aspectRatio="1/1" />
+        <ImageWithWrapper src={imageOrGifPath} width="65%" aspectRatio="1/1" />
       </a>
 
       <input
