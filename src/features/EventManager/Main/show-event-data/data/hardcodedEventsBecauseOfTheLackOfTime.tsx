@@ -108,6 +108,86 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       oneDay: [
         // TODO: Add those events into "library", after giving acces to th library in the app
         {
+          name: "Oglądanko / Słuchanko",
+          description:
+            "Jakiekolwiek oglądanie / słuchanie treści, od Youtube i Twitch, po Spoti i Storytel",
+          imagePath:
+            "https://www.belloflostsouls.net/wp-content/uploads/2022/03/dnd-halfling-bard-header-e1664727059553.jpg",
+          imageAltText: "",
+          eventGroupId: 0,
+          eventInstanceId: 0,
+          GIFPath: "",
+          isAllDayLong: false,
+          allDayLongVariantProps: {
+            importance: "",
+            date: new Date(),
+          },
+          timedVariantProps: {
+            startDateAndTime: new Date(),
+            endDateAndTime: new Date(),
+          },
+          deadlineVariant: "none",
+          addOnsByVariants: {
+            tradycyjnie: {
+              oglądamy: {
+                habits: [],
+                howAndTips: { ytVideoId: "", notes: [] },
+                toolsWhere: [],
+                toolsSubApps: [
+                  {
+                    subappName: "yt-video-watcher",
+                    payload: {
+                      ytVideoIds: ["58S8RDviTYg", "ebxhUvbq-dQ"],
+                    },
+                  },
+                ],
+                toolsPhysicalOrThirdParty: [],
+              },
+            },
+          },
+          needsFulfilledByVariant: {
+            "chwila dla siebie": {
+              isWant: true,
+              isCreate: false,
+              isAbsorb: true,
+              isChill: false,
+              isVent: false,
+              isSquad: false,
+              isActive: false,
+              isWilderness: false,
+              isFresh: true,
+            },
+            "seansik z duszyczką": {
+              isWant: true,
+              isCreate: false,
+              isAbsorb: true,
+              isChill: false,
+              isVent: false,
+              isSquad: true,
+              isActive: false,
+              isWilderness: false,
+              isFresh: true,
+            },
+            "podróżowanko z tłem": {
+              isWant: true,
+              isCreate: false,
+              isAbsorb: true,
+              isChill: false,
+              isVent: false,
+              isSquad: false,
+              isActive: true,
+              isWilderness: true,
+              isFresh: true,
+            },
+          },
+          vocalNotifications: {
+            startEventSound: "",
+            xMinutesBeforeStartAmount: null,
+            xMinutesBeforeStartSound: "",
+            endEventSound: "",
+          },
+        },
+        {
           name: "Nocna Warta",
           description: "",
           imagePath:
