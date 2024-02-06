@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import styles from "@/styles/sass/styles-all.module.scss";
-import VideoPlaylistWatcher from "@/features/EventManager/SubApps/subapp-yt-watcher/components/VideoPlaylistWatcher";
+import VideoPlaylistWatcher from "@/features/EventManager/SubApps/yt-watcher/components/VideoPlaylistWatcher";
 import ImageWithWrapper from "@/components/ImageWithWrapper";
 import { useState } from "react";
 import ToggleableContent from "@/components/ToggleableContent";

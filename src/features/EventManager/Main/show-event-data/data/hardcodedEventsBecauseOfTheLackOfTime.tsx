@@ -345,13 +345,6 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                 toolsSubApps: [],
                 toolsPhysicalOrThirdParty: [],
               },
-              // ___: {
-              //   habits: [],
-              //   howAndTips: { ytVideoId: "", notes: [] },
-              //   toolsWhere: [],
-              //   toolsSubApps: [],
-              //   toolsPhysicalOrThirdParty: [],
-              // },
             },
           },
           needsFulfilledByVariant: {

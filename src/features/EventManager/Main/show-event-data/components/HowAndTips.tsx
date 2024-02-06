@@ -4,7 +4,7 @@ import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
 import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { HowAndTipsProps } from "../types";
-import EditableYTVideo from "@/features/EventManager/SubApps/subapp-yt-watcher/components/EditableYTVideo";
+import EditableYTVideo from "@/features/EventManager/SubApps/yt-watcher/components/EditableYTVideo";
 import { useContext } from "react";
 import EventDisplayContext from "../context/EventDisplayContext";
 import { useState } from "react";
