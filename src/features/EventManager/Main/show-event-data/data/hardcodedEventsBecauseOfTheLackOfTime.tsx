@@ -71,16 +71,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
               },
             },
             "słuchamy - treść": {
-              "engaging -  całkowicie zajmujące głowę przy braindead aktywności":
+              "engaging - całkowicie zajmujące głowę przy braindead aktywności":
                 {
-                  toolsSubApps: [
-                    {
-                      subappName: "yt-video-watcher",
-                      payload: {
-                        ytVideoIds: [""],
-                      },
-                    },
-                  ],
                   toolsPhysicalOrThirdParty: [
                     {
                       title: "Audiobook - Stop Prawa",
@@ -88,6 +80,13 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                         "https://covers.storytel.com/jpg-640/0408311112571.6cfcc6e0-43ce-4a46-9b8e-ec39392c3d92?optimize=high&quality=70",
                       linkURL:
                         "https://www.storytel.com/pl/books/stop-prawa-187574",
+                    },
+                    {
+                      title: "Audiobook - Złodziejska Magia",
+                      imageOrGifPath:
+                        "https://covers.storytel.com/jpg-640/0408311112571.6cfcc6e0-43ce-4a46-9b8e-ec39392c3d92?optimize=high&quality=70",
+                      linkURL:
+                        "https://www.storytel.com/mh/en/books/z%C5%82odziejska-magia-1336520",
                     },
                   ],
                 },
@@ -158,21 +157,37 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                   {
                     subappName: "yt-video-watcher",
                     payload: {
-                      ytVideoIds: ["d7ON2yxxAWY"],
+                      ytVideoIds: ["a3pz0OOhfEk", "d7ON2yxxAWY"],
                     },
+                  },
+                ],
+                toolsPhysicalOrThirdParty: [
+                  {
+                    title: "Spotify",
+                    imageOrGifPath:
+                      "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+                    linkURL:
+                      "https://open.spotify.com/playlist/6m1MtOP3yQRR7BJyC6aUJe?si=f15d16006fd04efc",
                   },
                 ],
               },
               "defibrylujące, głębokie pioruny": {
-                toolsSubApps: [
+                toolsPhysicalOrThirdParty: [
                   {
-                    subappName: "yt-video-watcher",
-                    payload: {
-                      ytVideoIds: [""],
-                    },
+                    title: "Spotify",
+                    imageOrGifPath:
+                      "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+                    linkURL:
+                      "https://open.spotify.com/playlist/4OqKhqHMeT1vdurU3xEmdR?si=600abb2d9ea14989",
+                  },
+                  {
+                    title: "Spotify",
+                    imageOrGifPath:
+                      "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+                    linkURL:
+                      "https://open.spotify.com/playlist/7u4oojYRzMXigiexbycYSi?si=b43d140e54df498a",
                   },
                 ],
-                toolsPhysicalOrThirdParty: [],
               },
               "defibrylujące karao/rock'owe iskry": {
                 toolsSubApps: [
@@ -184,6 +199,14 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                   },
                 ],
                 toolsPhysicalOrThirdParty: [
+                  {
+                    title: "Spotify",
+                    imageOrGifPath:
+                      "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+                    linkURL:
+                      "https://open.spotify.com/playlist/6uXoc49RxVQ5MuVynGPTK3?si=2a905705f8084cff",
+                  },
+
                   {
                     title: "Spotify",
                     imageOrGifPath:
@@ -203,6 +226,13 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                   },
                 ],
                 toolsPhysicalOrThirdParty: [
+                  {
+                    title: "Spotify",
+                    imageOrGifPath:
+                      "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+                    linkURL:
+                      "https://open.spotify.com/playlist/4t0fKkZM4hKVP9ykjHabmu?si=76c09a3f55ac4b0b",
+                  },
                   {
                     title: "Spotify",
                     imageOrGifPath:
