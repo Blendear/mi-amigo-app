@@ -34,7 +34,28 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                     {
                       subappName: "yt-video-watcher",
                       payload: {
-                        ytVideoIds: [""],
+                        ytVideoIds: [
+                          "2niThmdF9ds",
+                          "fM4DDIS6sMY",
+                          "_OgniM1YurA",
+                          "69ejzRm2Qww",
+                          "cxTmdyoBf8c",
+                          "68mTUM_cGAw",
+                          "H4-96GqPup4",
+                          "DjG1E4n0PcA",
+                          "uVzT6D-yhZg",
+                          "nb6ZCS5dTSo",
+                          "20x9Dj5teN8",
+                          "2cKVAKNni0c",
+                          "okDfCVLvwoY",
+                          "iEQhuCzvYWg",
+                          "xd8dKY6Ozrg",
+                          "QYmKDngX7rY",
+                          "__nI6AlmiyY",
+                          "81Dz26FboU4",
+                          "z_yHozrmGN0",
+                          "RJqca9LVOAQ",
+                        ],
                       },
                     },
                   ],
@@ -52,7 +73,24 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                   {
                     subappName: "yt-video-watcher",
                     payload: {
-                      ytVideoIds: [""],
+                      ytVideoIds: [
+                        "przcjMjI5wE",
+                        "GtYDhcVTNxo",
+                        "t69XMB-PINM",
+                        "hDsdkoln59A",
+                        "tOs8MaK5VvI",
+                        "pCVfMbpfIF4",
+                        "a4FAj3RMgRQ",
+                        "wa9hD-W8nn8",
+                        "jq5qFmfOpaQ",
+                        "3cVTVF6ioaY",
+                        "86lo3MZy7v4",
+                        "3ieaDfD_h6s",
+                        "Qv5u-hKFzhA",
+                        "WBt0T256HD0",
+                        "4BFh0kTOjBA",
+                        "HIs5B2U7US0",
+                      ],
                     },
                   },
                 ],
@@ -63,7 +101,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                   {
                     subappName: "yt-video-watcher",
                     payload: {
-                      ytVideoIds: [""],
+                      ytVideoIds: ["KOEfDvr4DcQ"],
                     },
                   },
                 ],
@@ -73,6 +111,14 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             "słuchamy - treść": {
               "engaging - całkowicie zajmujące głowę przy braindead aktywności":
                 {
+                  toolsSubApps: [
+                    {
+                      subappName: "yt-video-watcher",
+                      payload: {
+                        ytVideoIds: ["iGFGRYN9SZA", "O3H9GX6wzLk"],
+                      },
+                    },
+                  ],
                   toolsPhysicalOrThirdParty: [
                     {
                       title: "Audiobook - Stop Prawa",
@@ -157,7 +203,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                   {
                     subappName: "yt-video-watcher",
                     payload: {
-                      ytVideoIds: ["a3pz0OOhfEk", "d7ON2yxxAWY"],
+                      ytVideoIds: ["a3pz0OOhfEk", "d7ON2yxxAWY", "80IhjDsVVQc"],
                     },
                   },
                 ],
