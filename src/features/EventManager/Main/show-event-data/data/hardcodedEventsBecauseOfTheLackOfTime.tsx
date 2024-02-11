@@ -3,108 +3,7 @@ import { AppDataOfCurrentUser } from "@/types";
 export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
   eventsWithNeeds: {
     chestWithAllDayLongEvents: {
-      necessary: [
-        // {
-        //   name: "Masturbacja kolanami",
-        //   description: "Well, co tu dużo móić",
-        //   imagePath:
-        //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1x1-sUdwSML2IWWa4bMlLjR-qujm13UHLPQ&usqp=CAU",
-        //   imageAltText: "",
-        //   eventGroupId: 1,
-        //   eventInstanceId: 1,
-        //   GIFPath: "",
-        //   isAllDayLong: false,
-        //   allDayLongVariantProps: {
-        //     importance: "",
-        //     date: new Date(),
-        //   },
-        //   timedVariantProps: {
-        //     startDateAndTime: new Date(),
-        //     endDateAndTime: new Date(),
-        //   },
-        //   deadlineVariant: "none",
-        //   addOnsByVariants: {
-        //     kolanami: {
-        //       poczatek: {
-        //         toolsSubApps: [
-        //           {
-        //             subappName: "yt-video-watcher",
-        //             payload: {
-        //               ytVideoIds: ["58S8RDviTYg", "ebxhUvbq-dQ"],
-        //             },
-        //           },
-        //         ],
-        //         howAndTips: {
-        //           ytVideoId: "ErzoS25SFa8",
-        //           notes: [
-        //             { title: "...", description: "Description 1" },
-        //             { title: "Note 2", description: "Description 2" },
-        //             { title: "Note 3", description: "Description 3" },
-        //           ],
-        //         },
-        //         toolsPhysicalOrThirdParty: [
-        //           {
-        //             title: "tool-title-1",
-        //             linkURL: "www.twitch.com",
-        //             imageOrGifPath: "https://i.imgur.com/3Qo7z3j.gif",
-        //           },
-        //         ],
-        //       },
-        //       koniec: {
-        //         toolsPhysicalOrThirdParty: [
-        //           {
-        //             title: "kolanami - koniec - tool-title-1",
-        //             linkURL: "www.twitch.com",
-        //             imageOrGifPath: "https://i.imgur.com/3Qo7z3j.gif",
-        //           },
-        //         ],
-        //       },
-        //     },
-        //     lokciami: {
-        //       rozped: {
-        //         howAndTips: {
-        //           ytVideoId: "lovYZqGVPBQ",
-        //           notes: [
-        //             { title: "Note 3", description: "Description 3" },
-        //             { title: "Note 4", description: "Description 4" },
-        //           ],
-        //         },
-        //         toolsPhysicalOrThirdParty: [
-        //           {
-        //             title: "lokciami - rozped - tool-title-1",
-        //             linkURL: "www.google.com",
-        //             imageOrGifPath: "https://i.imgur.com/3Qo7z3j.gif",
-        //           },
-        //           {
-        //             title: "lokciami - rozped - tool-title-2",
-        //             linkURL: "www.google.com",
-        //             imageOrGifPath: "https://i.imgur.com/3Qo7z3j.gif",
-        //           },
-        //         ],
-        //       },
-        //     },
-        //   },
-        //   needsFulfilledByVariant: {
-        //     variant1: {
-        //       isWant: false,
-        //       isCreate: false,
-        //       isAbsorb: false,
-        //       isChill: false,
-        //       isVent: false,
-        //       isSquad: false,
-        //       isActive: false,
-        //       isWilderness: false,
-        //       isFresh: false,
-        //     },
-        //   },
-        //   vocalNotifications: {
-        //     startEventSound: "",
-        //     xMinutesBeforeStartAmount: null,
-        //     xMinutesBeforeStartSound: "",
-        //     endEventSound: "",
-        //   },
-        // },
-      ],
+      necessary: [],
       oneDay: [
         // TODO: Add those events into "library", after giving acces to th library in the app
         {
@@ -128,16 +27,121 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
           deadlineVariant: "none",
           addOnsByVariants: {
-            tradycyjnie: {
-              oglądamy: {
-                habits: [],
-                howAndTips: { ytVideoId: "", notes: [] },
-                toolsWhere: [],
+            oglądamy: {
+              "rano - wymagajuące engage'u, nie 'podane na tacy', bez adhd, zwolna rozkręcające/inspirujące":
+                {
+                  toolsSubApps: [
+                    {
+                      subappName: "yt-video-watcher",
+                      payload: {
+                        ytVideoIds: [""],
+                      },
+                    },
+                  ],
+                  toolsPhysicalOrThirdParty: [],
+                },
+              "żarełko - enteraining, pomijalna wizualnie treść": {
                 toolsSubApps: [
                   {
                     subappName: "yt-video-watcher",
                     payload: {
-                      ytVideoIds: ["58S8RDviTYg", "ebxhUvbq-dQ"],
+                      ytVideoIds: [""],
+                    },
+                  },
+                ],
+                toolsPhysicalOrThirdParty: [],
+              },
+              "padnięcie - entertainment, audio-visual candy": {
+                toolsSubApps: [
+                  {
+                    subappName: "yt-video-watcher",
+                    payload: {
+                      ytVideoIds: [""],
+                    },
+                  },
+                ],
+                toolsPhysicalOrThirdParty: [],
+              },
+            },
+            "słuchamy - treść": {
+              "engaging -  całkowicie zajmujące głowę przy braindead aktywności":
+                {
+                  toolsSubApps: [
+                    {
+                      subappName: "yt-video-watcher",
+                      payload: {
+                        ytVideoIds: [""],
+                      },
+                    },
+                  ],
+                  toolsPhysicalOrThirdParty: [],
+                },
+
+              "entertaining - dodaje 'want' do piesczę/braindead questa": {
+                toolsSubApps: [
+                  {
+                    subappName: "yt-video-watcher",
+                    payload: {
+                      ytVideoIds: [""],
+                    },
+                  },
+                ],
+                toolsPhysicalOrThirdParty: [],
+              },
+            },
+            "słuchamy - mjusik": {
+              "ambient doprawiacze ciszy": {
+                toolsSubApps: [
+                  {
+                    subappName: "yt-video-watcher",
+                    payload: {
+                      ytVideoIds: [""],
+                    },
+                  },
+                ],
+                toolsPhysicalOrThirdParty: [],
+              },
+              "pobudzające bangery": {
+                toolsSubApps: [
+                  {
+                    subappName: "yt-video-watcher",
+                    payload: {
+                      ytVideoIds: [""],
+                    },
+                  },
+                ],
+                toolsPhysicalOrThirdParty: [],
+              },
+            },
+            "słuchamy - zagłuszacze": {
+              "niskie fq - na niski hałas": {
+                toolsSubApps: [
+                  {
+                    subappName: "yt-video-watcher",
+                    payload: {
+                      ytVideoIds: [""],
+                    },
+                  },
+                ],
+                toolsPhysicalOrThirdParty: [],
+              },
+              "n. & średnie fq - na rozmowy": {
+                toolsSubApps: [
+                  {
+                    subappName: "yt-video-watcher",
+                    payload: {
+                      ytVideoIds: [""],
+                    },
+                  },
+                ],
+                toolsPhysicalOrThirdParty: [],
+              },
+              "ś & wysokie fq - na piski": {
+                toolsSubApps: [
+                  {
+                    subappName: "yt-video-watcher",
+                    payload: {
+                      ytVideoIds: [""],
                     },
                   },
                 ],
