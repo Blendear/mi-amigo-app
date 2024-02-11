@@ -16,6 +16,7 @@ import { booksOfAddonsNames } from "../data/booksOfAddonsNames";
 import WorkflowsContext from "../context/WorkflowsContext";
 import { AddOn } from "../types";
 import SubAppsTogglers from "./SubAppsTogglers";
+import { add, set } from "cypress/types/lodash";
 
 const addOnsCss = {
   container: css({
@@ -61,6 +62,8 @@ const AddOns = () => {
   const targetToScrollRef = useRef(null);
 
   const [addOnData, setAddOnData] = useState<AddOn>({});
+  const [existingBooksOfAddonsNames, setExistingBooksOfAddonsNames] =
+    useState(booksOfAddonsNames);
 
   const scrollToThisTarget = () => {
     targetToScrollRef.current?.scrollIntoView();
@@ -85,6 +88,27 @@ const AddOns = () => {
       ][currentStepName];
 
     setAddOnData(currentAddOnData || {});
+
+    // Add only the books that have data to the swiper slides
+    const booksToRender = [];
+
+    if (currentAddOnData.habits) {
+      booksToRender.push("habits");
+    }
+    if (currentAddOnData.howAndTips) {
+      booksToRender.push("how-and-tips");
+    }
+    if (currentAddOnData.toolsWhere) {
+      booksToRender.push("where");
+    }
+    if (currentAddOnData.toolsSubApps) {
+      booksToRender.push("tool-subapp");
+    }
+    if (currentAddOnData.toolsPhysicalOrThirdParty) {
+      booksToRender.push("tool-physical-or-3rd-party");
+    }
+
+    setExistingBooksOfAddonsNames(booksToRender);
   }, [update]);
 
   return (
@@ -100,10 +124,10 @@ const AddOns = () => {
           forceUpdate={forceUpdate}
           additionalOnSlideChange={scrollToThisTarget}
         >
-          {booksOfAddonsNames.map((slide, index) => (
+          {existingBooksOfAddonsNames.map((addOnName, index) => (
             <SwiperSlide key={index}>
               <ImageWithWrapper
-                src={`/images/events-manager/addons/${slide}.png`}
+                src={`/images/events-manager/addons/${addOnName}.png`}
                 wrapperCss={addOnsCss.bookOfAddons(
                   workflowBookOfAddonsIndex.current === index
                 )}
@@ -112,7 +136,7 @@ const AddOns = () => {
             </SwiperSlide>
           ))}
         </SwiperCustom>
-        <p>{booksOfAddonsNames[workflowBookOfAddonsIndex.current]}</p>
+        <p>{existingBooksOfAddonsNames[workflowBookOfAddonsIndex.current]}</p>
         <div css={addOnsCss.addOn} ref={targetToScrollRef}>
           {
             {
@@ -125,7 +149,7 @@ const AddOns = () => {
               "tool-physical-or-3rd-party": (
                 <WhereAndTools content={addOnData.toolsPhysicalOrThirdParty} />
               ),
-            }[booksOfAddonsNames[workflowBookOfAddonsIndex.current]]
+            }[existingBooksOfAddonsNames[workflowBookOfAddonsIndex.current]]
           }
         </div>
       </div>

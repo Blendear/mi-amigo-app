@@ -28,7 +28,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           deadlineVariant: "none",
           addOnsByVariants: {
             oglądamy: {
-              "rano - wymagajuące engage'u, nie 'podane na tacy', bez adhd, zwolna rozkręcające/inspirujące":
+              "rano/płonę - wymagajuące engage'u, nie 'podane na tacy', bez adhd, zwolna rozkręcające/inspirujące":
                 {
                   toolsSubApps: [
                     {
@@ -38,7 +38,14 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                       },
                     },
                   ],
-                  toolsPhysicalOrThirdParty: [],
+                  toolsPhysicalOrThirdParty: [
+                    {
+                      title: "Storytel",
+                      imageOrGifPath:
+                        "https://www.storytel.com/pl/pl/images/og-image.jpg",
+                      linkURL: "https://www.storytel.com/pl/pl/",
+                    },
+                  ],
                 },
               "żarełko - enteraining, pomijalna wizualnie treść": {
                 toolsSubApps: [
@@ -213,7 +220,6 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           addOnsByVariants: {
             tradycyjnie: {
               "Prosiaczki przyszły?": {
-                habits: [],
                 howAndTips: {
                   ytVideoId: "",
                   notes: [
@@ -223,8 +229,6 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                     },
                   ],
                 },
-                toolsWhere: [],
-                toolsSubApps: [],
                 toolsPhysicalOrThirdParty: [
                   {
                     title: "Gmail",
@@ -244,7 +248,6 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                 ],
               },
               Herbatka: {
-                habits: [],
                 howAndTips: {
                   ytVideoId: "",
                   notes: [
@@ -255,43 +258,12 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                     },
                   ],
                 },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
               },
-              "Telefonowe notatki do projektów / worda wpisz": {
-                habits: [],
-                howAndTips: { ytVideoId: "", notes: [] },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
-              },
-              "Ładuj słuchawki, telefon i powerbanka": {
-                habits: [],
-                howAndTips: { ytVideoId: "", notes: [] },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
-              },
-              "Tygodniowy Harmonogram przejżyj": {
-                habits: [],
-                howAndTips: { ytVideoId: "", notes: [] },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
-              },
-              "Hooksa jednego chcesz ogarnąć?": {
-                habits: [],
-                howAndTips: { ytVideoId: "", notes: [] },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
-              },
+              "Telefonowe notatki do projektów / worda wpisz": {},
+              "Ładuj słuchawki, telefon i powerbanka": {},
+              "Tygodniowy Harmonogram przejżyj": {},
+              "Hooksa jednego chcesz ogarnąć?": {},
               Zakupki: {
-                habits: [],
-                howAndTips: { ytVideoId: "", notes: [] },
-                toolsWhere: [],
-                toolsSubApps: [],
                 toolsPhysicalOrThirdParty: [
                   {
                     title: "SubApp Zakupowy",
@@ -303,7 +275,6 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
               },
               "Porcjuj || Rozpisz tegotygodniowe || Przygotuj ingredients || Gotuj":
                 {
-                  habits: [],
                   howAndTips: {
                     ytVideoId: "",
                     notes: [
@@ -314,20 +285,9 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                       },
                     ],
                   },
-                  toolsWhere: [],
-                  toolsSubApps: [],
-                  toolsPhysicalOrThirdParty: [],
                 },
-
-              "Ściągnij || Umyj naczynia": {
-                habits: [],
-                howAndTips: { ytVideoId: "", notes: [] },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
-              },
+              "Ściągnij || Umyj naczynia": {},
               "Śmieci wychędoż": {
-                habits: [],
                 howAndTips: {
                   ytVideoId: "",
                   notes: [
@@ -338,19 +298,9 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                     },
                   ],
                 },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
               },
-              "Przygotuj || Zrób pranie": {
-                habits: [],
-                howAndTips: { ytVideoId: "", notes: [] },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
-              },
+              "Przygotuj || Zrób pranie": {},
               "Umówiajta 3-3-1": {
-                habits: [],
                 howAndTips: {
                   ytVideoId: "",
                   notes: [
@@ -362,12 +312,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                     },
                   ],
                 },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
               },
               "Tnij, kąp i czyść": {
-                habits: [],
                 howAndTips: {
                   ytVideoId: "",
                   notes: [
@@ -378,19 +324,9 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                     },
                   ],
                 },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
               },
-              "1 z 20 kroków sprzątania, pod wolne weekendy": {
-                habits: [],
-                howAndTips: { ytVideoId: "", notes: [] },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
-              },
+              "1 z 20 kroków sprzątania, pod wolne weekendy": {},
               "Strój ćwiczebny & Armor dzienny przygotuj": {
-                habits: [],
                 howAndTips: {
                   ytVideoId: "",
                   notes: [
@@ -401,31 +337,10 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                     },
                   ],
                 },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
               },
-              "Paragony podlicz": {
-                habits: [],
-                howAndTips: { ytVideoId: "", notes: [] },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
-              },
-              "Ręczniki & Kocyk & Prześcieradło wymień": {
-                habits: [],
-                howAndTips: { ytVideoId: "", notes: [] },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
-              },
-              Poczta: {
-                habits: [],
-                howAndTips: { ytVideoId: "", notes: [] },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
-              },
+              "Paragony podlicz": {},
+              "Ręczniki & Kocyk & Prześcieradło wymień": {},
+              Poczta: {},
             },
           },
           needsFulfilledByVariant: {
@@ -482,7 +397,6 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           addOnsByVariants: {
             "Webowy Asystent - Frontend": {
               "Przygotuj narzędzia": {
-                howAndTips: { ytVideoId: "", notes: [] },
                 toolsPhysicalOrThirdParty: [
                   {
                     title: "Linear",
@@ -522,7 +436,6 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             },
             "Unreal Giera - Fullstack": {
               "Przygotuj narzędzia": {
-                howAndTips: { ytVideoId: "", notes: [] },
                 toolsPhysicalOrThirdParty: [
                   {
                     title: "Unreal Engine",
@@ -561,10 +474,6 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             },
             Marketing: {
               "Przygotuj narzędzia": {
-                habits: [],
-                howAndTips: { ytVideoId: "", notes: [] },
-                toolsWhere: [],
-                toolsSubApps: [],
                 toolsPhysicalOrThirdParty: [
                   {
                     title: "Linear",
@@ -578,10 +487,6 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             },
             "Sesja - Gameplay/Minigames Dev": {
               "Przygotuj narzędzia": {
-                habits: [],
-                howAndTips: { ytVideoId: "", notes: [] },
-                toolsWhere: [],
-                toolsSubApps: [],
                 toolsPhysicalOrThirdParty: [
                   {
                     title: "Linear",
@@ -606,67 +511,25 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
               },
             },
             "Sesja - Meet Character Dev": {
-              "Przygotuj narzędzia": {
-                habits: [],
-                howAndTips: { ytVideoId: "", notes: [] },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
-              },
+              "Przygotuj narzędzia": {},
             },
             "Sesja - 2D Vis Dev": {
-              "Przygotuj narzędzia": {
-                habits: [],
-                howAndTips: { ytVideoId: "", notes: [] },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
-              },
+              "Przygotuj narzędzia": {},
             },
             "Sesja - 3D Assets": {
-              "Przygotuj narzędzia": {
-                habits: [],
-                howAndTips: { ytVideoId: "", notes: [] },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
-              },
+              "Przygotuj narzędzia": {},
             },
             "Sesja - Live YT/Twitch": {
-              "Przygotuj narzędzia": {
-                habits: [],
-                howAndTips: { ytVideoId: "", notes: [] },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
-              },
+              "Przygotuj narzędzia": {},
             },
             "Sesja - Worldbuilding": {
-              "Przygotuj narzędzia": {
-                habits: [],
-                howAndTips: { ytVideoId: "", notes: [] },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
-              },
+              "Przygotuj narzędzia": {},
             },
             "Sesja - Questlines": {
-              "Przygotuj narzędzia": {
-                habits: [],
-                howAndTips: { ytVideoId: "", notes: [] },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
-              },
+              "Przygotuj narzędzia": {},
             },
             "Sesja - Soundtracks": {
-              "Przygotuj narzędzia": {
-                habits: [],
-                howAndTips: { ytVideoId: "", notes: [] },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
-              },
+              "Przygotuj narzędzia": {},
             },
           },
 
@@ -712,7 +575,6 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           addOnsByVariants: {
             "Mi Amigo": {
               "Przygotuj narzędzia": {
-                howAndTips: { ytVideoId: "", notes: [] },
                 toolsPhysicalOrThirdParty: [
                   {
                     title: "Linear",
@@ -752,7 +614,6 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             },
             INFINITI: {
               "Przygotuj narzędzia": {
-                howAndTips: { ytVideoId: "", notes: [] },
                 toolsPhysicalOrThirdParty: [
                   {
                     title: "Linear",
