@@ -121,7 +121,49 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
               },
             },
             "słuchamy - mjusik": {
-              "ambient doprawiacze ciszy": {
+              "cisza doprawiona ambientem": {
+                toolsSubApps: [
+                  {
+                    subappName: "yt-video-watcher",
+                    payload: {
+                      ytVideoIds: ["Z8ANihFXlgU", "s_i4s2yL8T0"],
+                    },
+                  },
+                ],
+                toolsPhysicalOrThirdParty: [],
+              },
+              "chill głębokich niży": {
+                toolsSubApps: [
+                  {
+                    subappName: "yt-video-watcher",
+                    payload: {
+                      ytVideoIds: ["Z8ANihFXlgU", "s_i4s2yL8T0"],
+                    },
+                  },
+                ],
+                toolsPhysicalOrThirdParty: [],
+              },
+              "chill budzącej się przygody": {
+                toolsSubApps: [
+                  {
+                    subappName: "yt-video-watcher",
+                    payload: {
+                      ytVideoIds: ["6l_lLA-Ytls", "WUhMLw6vq8g", "_BroK8h0eZg"],
+                    },
+                  },
+                ],
+              },
+              "płonięcie przygodą": {
+                toolsSubApps: [
+                  {
+                    subappName: "yt-video-watcher",
+                    payload: {
+                      ytVideoIds: ["d7ON2yxxAWY"],
+                    },
+                  },
+                ],
+              },
+              "defibrylujące, głębokie pioruny": {
                 toolsSubApps: [
                   {
                     subappName: "yt-video-watcher",
@@ -132,7 +174,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                 ],
                 toolsPhysicalOrThirdParty: [],
               },
-              "pobudzające bangery": {
+              "defibrylujące karao/rock'owe iskry": {
                 toolsSubApps: [
                   {
                     subappName: "yt-video-watcher",
@@ -141,7 +183,73 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                     },
                   },
                 ],
-                toolsPhysicalOrThirdParty: [],
+                toolsPhysicalOrThirdParty: [
+                  {
+                    title: "Spotify",
+                    imageOrGifPath:
+                      "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+                    linkURL:
+                      "https://open.spotify.com/playlist/41lv5bRYJQYOboGwBZ5RTs?si=b1d5838965e14b9a",
+                  },
+                ],
+              },
+              "defibrylujące, chaotyczne bangery": {
+                toolsSubApps: [
+                  {
+                    subappName: "yt-video-watcher",
+                    payload: {
+                      ytVideoIds: ["gCYcHz2k5x0"],
+                    },
+                  },
+                ],
+                toolsPhysicalOrThirdParty: [
+                  {
+                    title: "Spotify",
+                    imageOrGifPath:
+                      "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+                    linkURL:
+                      "https://open.spotify.com/playlist/4ebfRcRErLsu1YUQJOYS4q?si=baa15067ea954477",
+                  },
+                  {
+                    title: "Spotify",
+                    imageOrGifPath:
+                      "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+                    linkURL:
+                      "https://open.spotify.com/playlist/4Bd7OJIYL2gvi7IDMVFkps?si=e1365fa95236456a",
+                  },
+                  {
+                    title: "Spotify",
+                    imageOrGifPath:
+                      "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+                    linkURL:
+                      "https://open.spotify.com/playlist/0qXIN56lvg0gbpXYQBIOvO?si=b5832da2ed36434c",
+                  },
+                  {
+                    title: "Spotify",
+                    imageOrGifPath:
+                      "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+                    linkURL:
+                      "https://open.spotify.com/playlist/3QdcEI8NTPhJPXPADdzFbI?si=2ae774d6bde94c8f",
+                  },
+                ],
+              },
+              "defibrylujące tekstowe rememberery": {
+                toolsPhysicalOrThirdParty: [
+                  {
+                    title: "Spotify",
+                    imageOrGifPath:
+                      "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+                    linkURL:
+                      "https://open.spotify.com/playlist/5YKbFmAlZpqb6Yu2HXdQn1?si=27a0715b95e74f73",
+                  },
+                  {
+                    title: "Spotify",
+                    imageOrGifPath:
+                      "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+                    linkURL:
+                      "https://open.spotify.com/playlist/6JyDsPPVMMsUBcqRImKP0E?si=8dcc61fca0724a33",
+                  },
+                ],
               },
             },
             "słuchamy - zagłuszacze": {
