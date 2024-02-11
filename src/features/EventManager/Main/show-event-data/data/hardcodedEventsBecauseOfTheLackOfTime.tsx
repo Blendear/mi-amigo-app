@@ -81,7 +81,15 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                       },
                     },
                   ],
-                  toolsPhysicalOrThirdParty: [],
+                  toolsPhysicalOrThirdParty: [
+                    {
+                      title: "Audiobook - Stop Prawa",
+                      imageOrGifPath:
+                        "https://covers.storytel.com/jpg-640/0408311112571.6cfcc6e0-43ce-4a46-9b8e-ec39392c3d92?optimize=high&quality=70",
+                      linkURL:
+                        "https://www.storytel.com/pl/books/stop-prawa-187574",
+                    },
+                  ],
                 },
 
               "entertaining - dodaje 'want' do piesczę/braindead questa": {
@@ -89,7 +97,23 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                   {
                     subappName: "yt-video-watcher",
                     payload: {
-                      ytVideoIds: [""],
+                      ytVideoIds: [
+                        "ESkkfawGzIA",
+                        "wsyPicIwFRU",
+                        "Ain1wmTqlv4",
+                        "5IuCeO1YJBk",
+                        "-tFbgoyUIBE",
+                        "l7-PYDYVRtU",
+                        "U0f3RoMl6fg",
+                        "WDgPcShQh5Q",
+                        "qXdIU0rQYl0",
+                        "NbRgs86V4PA",
+                        "Q1JhXWDdodQ",
+                        "08A_JGzg7Do",
+                        "BWkp2UpDWJs",
+                        "P8R0ARms5Gs",
+                        "fNPQcvQNpOs",
+                      ],
                     },
                   },
                 ],

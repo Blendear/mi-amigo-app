@@ -1,6 +1,16 @@
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
+import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
+import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
+import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 import { useState } from "react";
 import Video from "./Video";
 import { MyTemporaryStyle } from "../types/index";
+
+const playlistCss = {
+  container: css({}),
+  buttons: css({ display: "grid", gridAutoFlow: "column", gap: "1rem" }),
+};
 
 const Playlist = ({ listOfYouTubeVideoIDs }: MyTemporaryStyle) => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
@@ -20,9 +30,19 @@ const Playlist = ({ listOfYouTubeVideoIDs }: MyTemporaryStyle) => {
   return (
     <div>
       <Video yTvideoId={listOfYouTubeVideoIDs[currentVideoIndex]} />
-      <div>
-        <button onClick={handlePrevVideo}>Previous</button>
-        <button onClick={handleNextVideo}>Next</button>
+      <div css={playlistCss.buttons}>
+        <button
+          css={[universalCss.button(true), universalCss.container]}
+          onClick={handlePrevVideo}
+        >
+          Previous
+        </button>
+        <button
+          css={[universalCss.button(true), universalCss.container]}
+          onClick={handleNextVideo}
+        >
+          Next
+        </button>
       </div>
       <p>
         Video {currentVideoIndex + 1} of {listOfYouTubeVideoIDs.length}
