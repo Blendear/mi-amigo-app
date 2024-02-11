@@ -8,7 +8,11 @@ import Video from "./Video";
 import { MyTemporaryStyle } from "../types/index";
 
 const playlistCss = {
-  container: css({}),
+  container: css({
+    display: "grid",
+    gridAutoRows: "max-content",
+    rowGap: "1rem",
+  }),
   buttons: css({ display: "grid", gridAutoFlow: "column", gap: "1rem" }),
 };
 
@@ -28,7 +32,7 @@ const Playlist = ({ listOfYouTubeVideoIDs }: MyTemporaryStyle) => {
   };
 
   return (
-    <div>
+    <div css={playlistCss.container}>
       <Video yTvideoId={listOfYouTubeVideoIDs[currentVideoIndex]} />
       <div css={playlistCss.buttons}>
         <button
