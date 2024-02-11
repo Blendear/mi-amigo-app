@@ -38,6 +38,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                           "2niThmdF9ds",
                           "fM4DDIS6sMY",
                           "_OgniM1YurA",
+                          "Ha1IhpieiWI",
                           "69ejzRm2Qww",
                           "cxTmdyoBf8c",
                           "68mTUM_cGAw",
@@ -48,6 +49,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                           "20x9Dj5teN8",
                           "2cKVAKNni0c",
                           "okDfCVLvwoY",
+                          "hFmAy56IZCE",
                           "iEQhuCzvYWg",
                           "xd8dKY6Ozrg",
                           "QYmKDngX7rY",
@@ -75,6 +77,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                     payload: {
                       ytVideoIds: [
                         "przcjMjI5wE",
+                        "SVkHOn-uA1",
+                        "QjPbSy3XXWM",
                         "GtYDhcVTNxo",
                         "t69XMB-PINM",
                         "hDsdkoln59A",
