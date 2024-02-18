@@ -4,131 +4,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
   eventsWithNeeds: {
     chestWithAllDayLongEvents: {
       necessary: [],
-      oneDay: [
-        // TODO: Add those events into "library", after giving acces to th library in the app
-        {
-          name: "I need help - Księga Potworów",
-          description:
-            "Spis wszystkich spotkanych myślami demonów, sposoób na ich ogranie, a nawet wejście w symbiotyczną znajomość",
-          imagePath: "https://images8.alphacoders.com/113/1132674.jpg",
-          imageAltText: "",
-          eventGroupId: 0,
-          eventInstanceId: 0,
-          GIFPath: "",
-          isAllDayLong: false,
-          allDayLongVariantProps: {
-            importance: "",
-            date: new Date(),
-          },
-          timedVariantProps: {
-            startDateAndTime: new Date(),
-            endDateAndTime: new Date(),
-          },
-          deadlineVariant: "none",
-          addOnsByVariants: {
-            "Przytłoczony/zestresowany życiem/problemem X": {
-              "Z Ewronikiem, Jordanem, Joe'm || Ekipą omów problem": {},
-              "Wicofie. Teraz damy wam z siostrzyczką przykład": {
-                howAndTips: {
-                  ytVideoId: "",
-                  notes: [
-                    {
-                      title: "Ewronik",
-                      description: "_",
-                    },
-                    {
-                      title: "Jordan Peterson",
-                      description: "_",
-                    },
-                  ],
-                },
-              },
-              "Wi all roleplaying kiddos.": {},
-              "Medytnijmy. Dobra. Tyle, że po naszemu.": {},
-            },
-            "Overworked. Wypalam się.": {
-              Mniej: {},
-              "Architekuturj/Rozbij potwora na 1 lub 2 godzinne chunki": {
-                howAndTips: {
-                  ytVideoId: "",
-                  notes: [
-                    {
-                      title:
-                        "Przeraża cię 'nie wiem jak go ograć / gdzie zacząć' po prostu",
-                      description: "_",
-                    },
-                  ],
-                },
-              },
-              "80/20": {
-                howAndTips: {
-                  ytVideoId: "",
-                  notes: [
-                    {
-                      title: "Skup się na istotnych 20% zadań",
-                      description: "_",
-                    },
-                  ],
-                },
-              },
-            },
-            "Chcę chcieć tworzyć, ale nie chce mi się tworzyć": {
-              "'Want' i'Chłonę' w uszy & 'Fresh' quest": {
-                howAndTips: {
-                  ytVideoId: "",
-                  notes: [
-                    {
-                      title:
-                        "Brakuje ci właśnie 'want' i 'fresh', a 'chłonę' zatamuje niechęć",
-                      description:
-                        "Np. Asmongold banteurjący o grze i 3D po paru dniach programowania",
-                    },
-                  ],
-                },
-              },
-            },
-            "Nie chce mi się. NIC.": {
-              "'Want' + 'Wataha' & Omów tą niechęć z nimi": {},
-              "Rememberer odpal": {},
-            },
-            "Kasa. Brakuje mi & Ludzie jej wymagają ode mnie": {
-              "Nie żydzę, a zbieram na...": {
-                howAndTips: {
-                  ytVideoId: "",
-                  notes: [
-                    {
-                      title:
-                        "Powiedz szczerze, 'Wolę mieć na wypad/inwestycję X, niż na item Y'",
-                      description: "_",
-                    },
-                  ],
-                },
-              },
-            },
-            "Problem X": {
-              "Ostatnio zaorało go to": {},
-            },
-          },
-          needsFulfilledByVariant: {
-            variant1: {
-              isWant: false,
-              isCreate: false,
-              isAbsorb: false,
-              isChill: false,
-              isVent: false,
-              isSquad: false,
-              isActive: false,
-              isWilderness: false,
-              isFresh: false,
-            },
-          },
-          vocalNotifications: {
-            startEventSound: "",
-            xMinutesBeforeStartAmount: null,
-            xMinutesBeforeStartSound: "",
-            endEventSound: "",
-          },
-        },
+      oneDay: [],
+      libraryOfTemplateEvents: [
         {
           name: "Oglądanko / Słuchanko",
           description:
@@ -992,6 +869,131 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             "'tworzę' w domciu": {
               isWant: false,
               isCreate: true,
+              isAbsorb: false,
+              isChill: false,
+              isVent: false,
+              isSquad: false,
+              isActive: false,
+              isWilderness: false,
+              isFresh: false,
+            },
+          },
+          vocalNotifications: {
+            startEventSound: "",
+            xMinutesBeforeStartAmount: null,
+            xMinutesBeforeStartSound: "",
+            endEventSound: "",
+          },
+        },
+      ],
+      monstersManual: [
+        {
+          name: "I need help - Księga Potworów",
+          description:
+            "Spis wszystkich spotkanych myślami demonów, sposoób na ich ogranie, a nawet wejście w symbiotyczną znajomość",
+          imagePath: "https://images8.alphacoders.com/113/1132674.jpg",
+          imageAltText: "",
+          eventGroupId: 0,
+          eventInstanceId: 0,
+          GIFPath: "",
+          isAllDayLong: false,
+          allDayLongVariantProps: {
+            importance: "",
+            date: new Date(),
+          },
+          timedVariantProps: {
+            startDateAndTime: new Date(),
+            endDateAndTime: new Date(),
+          },
+          deadlineVariant: "none",
+          addOnsByVariants: {
+            "Przytłoczony/zestresowany życiem/problemem X": {
+              "Z Ewronikiem, Jordanem, Joe'm || Ekipą omów problem": {},
+              "Wicofie. Teraz damy wam z siostrzyczką przykład": {
+                howAndTips: {
+                  ytVideoId: "",
+                  notes: [
+                    {
+                      title: "Ewronik",
+                      description: "_",
+                    },
+                    {
+                      title: "Jordan Peterson",
+                      description: "_",
+                    },
+                  ],
+                },
+              },
+              "Wi all roleplaying kiddos.": {},
+              "Medytnijmy. Dobra. Tyle, że po naszemu.": {},
+            },
+            "Overworked. Wypalam się.": {
+              Mniej: {},
+              "Architekuturj/Rozbij potwora na 1 lub 2 godzinne chunki": {
+                howAndTips: {
+                  ytVideoId: "",
+                  notes: [
+                    {
+                      title:
+                        "Przeraża cię 'nie wiem jak go ograć / gdzie zacząć' po prostu",
+                      description: "_",
+                    },
+                  ],
+                },
+              },
+              "80/20": {
+                howAndTips: {
+                  ytVideoId: "",
+                  notes: [
+                    {
+                      title: "Skup się na istotnych 20% zadań",
+                      description: "_",
+                    },
+                  ],
+                },
+              },
+            },
+            "Chcę chcieć tworzyć, ale nie chce mi się tworzyć": {
+              "'Want' i'Chłonę' w uszy & 'Fresh' quest": {
+                howAndTips: {
+                  ytVideoId: "",
+                  notes: [
+                    {
+                      title:
+                        "Brakuje ci właśnie 'want' i 'fresh', a 'chłonę' zatamuje niechęć",
+                      description:
+                        "Np. Asmongold banteurjący o grze i 3D po paru dniach programowania",
+                    },
+                  ],
+                },
+              },
+            },
+            "Nie chce mi się. NIC.": {
+              "'Want' + 'Wataha' & Omów tą niechęć z nimi": {},
+              "Rememberer odpal": {},
+            },
+            "Kasa. Brakuje mi & Ludzie jej wymagają ode mnie": {
+              "Nie żydzę, a zbieram na...": {
+                howAndTips: {
+                  ytVideoId: "",
+                  notes: [
+                    {
+                      title:
+                        "Powiedz szczerze, 'Wolę mieć na wypad/inwestycję X, niż na item Y'",
+                      description: "_",
+                    },
+                  ],
+                },
+              },
+            },
+            "Problem X": {
+              "Ostatnio zaorało go to": {},
+            },
+          },
+          needsFulfilledByVariant: {
+            variant1: {
+              isWant: false,
+              isCreate: false,
               isAbsorb: false,
               isChill: false,
               isVent: false,

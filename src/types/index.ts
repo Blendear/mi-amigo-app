@@ -44,6 +44,10 @@ export type AppDataOfCurrentUser = {
     chestWithAllDayLongEvents: {
       necessary: EventWithNeeds[];
       oneDay: EventWithNeeds[];
+
+      // temporarily added here, before creating separate places for them
+      libraryOfTemplateEvents?: EventWithNeeds[];
+      monstersManual?: EventWithNeeds[];
     };
     libraryOfTemplateEvents: EventWithNeeds[];
     sheduleOfHourlyPlannedEvents: any[]; // TODO: TS types and implement
