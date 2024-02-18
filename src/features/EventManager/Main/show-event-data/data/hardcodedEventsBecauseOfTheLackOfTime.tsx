@@ -27,18 +27,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           deadlineVariant: "none",
           addOnsByVariants: {
             "Przytłoczony/zestresowany życiem/problemem X": {
-              "Z Ewronikiem, Jordanem, Joe'm || Ekipą omów problem": {
-                habits: [],
-                howAndTips: {
-                  ytVideoId: "",
-                  notes: [],
-                },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
-              },
+              "Z Ewronikiem, Jordanem, Joe'm || Ekipą omów problem": {},
               "Wicofie. Teraz damy wam z siostrzyczką przykład": {
-                habits: [],
                 howAndTips: {
                   ytVideoId: "",
                   notes: [
@@ -52,59 +42,13 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                     },
                   ],
                 },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
               },
-              "Wi all roleplaying kiddos.": {
-                habits: [],
-                howAndTips: {
-                  ytVideoId: "",
-                  notes: [
-                    {
-                      title: "_",
-                      description: "_",
-                    },
-                  ],
-                },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
-              },
-              "Medytnijmy. Dobra. Tyle, że po naszemu.": {
-                habits: [],
-                howAndTips: {
-                  ytVideoId: "",
-                  notes: [
-                    {
-                      title: "_",
-                      description: "_",
-                    },
-                  ],
-                },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
-              },
+              "Wi all roleplaying kiddos.": {},
+              "Medytnijmy. Dobra. Tyle, że po naszemu.": {},
             },
             "Overworked. Wypalam się.": {
-              Mniej: {
-                habits: [],
-                howAndTips: {
-                  ytVideoId: "",
-                  notes: [
-                    {
-                      title: "_",
-                      description: "_",
-                    },
-                  ],
-                },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
-              },
+              Mniej: {},
               "Architekuturj/Rozbij potwora na 1 lub 2 godzinne chunki": {
-                habits: [],
                 howAndTips: {
                   ytVideoId: "",
                   notes: [
@@ -115,12 +59,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                     },
                   ],
                 },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
               },
               "80/20": {
-                habits: [],
                 howAndTips: {
                   ytVideoId: "",
                   notes: [
@@ -130,14 +70,10 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                     },
                   ],
                 },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
               },
             },
             "Chcę chcieć tworzyć, ale nie chce mi się tworzyć": {
               "'Want' i'Chłonę' w uszy & 'Fresh' quest": {
-                habits: [],
                 howAndTips: {
                   ytVideoId: "",
                   notes: [
@@ -149,46 +85,14 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                     },
                   ],
                 },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
               },
             },
             "Nie chce mi się. NIC.": {
-              "'Want' + 'Wataha' & Omów tą niechęć z nimi": {
-                habits: [],
-                howAndTips: {
-                  ytVideoId: "",
-                  notes: [
-                    {
-                      title: "_",
-                      description: "_",
-                    },
-                  ],
-                },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
-              },
-              "Rememberer odpal": {
-                habits: [],
-                howAndTips: {
-                  ytVideoId: "",
-                  notes: [
-                    {
-                      title: "_",
-                      description: "_",
-                    },
-                  ],
-                },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
-              },
+              "'Want' + 'Wataha' & Omów tą niechęć z nimi": {},
+              "Rememberer odpal": {},
             },
             "Kasa. Brakuje mi & Ludzie jej wymagają ode mnie": {
               "Nie żydzę, a zbieram na...": {
-                habits: [],
                 howAndTips: {
                   ytVideoId: "",
                   notes: [
@@ -199,19 +103,10 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                     },
                   ],
                 },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
               },
             },
             "Problem X": {
-              "Ostatnio zaorało go to": {
-                habits: [],
-                howAndTips: { ytVideoId: "", notes: [] },
-                toolsWhere: [],
-                toolsSubApps: [],
-                toolsPhysicalOrThirdParty: [],
-              },
+              "Ostatnio zaorało go to": {},
             },
           },
           needsFulfilledByVariant: {
