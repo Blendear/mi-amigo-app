@@ -3,7 +3,52 @@ import { AppDataOfCurrentUser } from "@/types";
 export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
   eventsWithNeeds: {
     chestWithAllDayLongEvents: {
-      necessary: [],
+      necessary: [
+        {
+          name: "Lukas - Gooogle support kontakt/passy z konta firmowego mi daj",
+          description: "",
+          imagePath:
+            "https://www.google.com/logos/doodles/2020/thank-you-food-service-workers-6753651837108761-2xa.gif",
+          imageAltText: "",
+          eventGroupId: 0,
+          eventInstanceId: 0,
+          GIFPath: "",
+          isAllDayLong: false,
+          allDayLongVariantProps: {
+            importance: "",
+            date: new Date(),
+          },
+          timedVariantProps: {
+            startDateAndTime: new Date(),
+            endDateAndTime: new Date(),
+          },
+          deadlineVariant: "none",
+          addOnsByVariants: {
+            variant1: {
+              step1: {},
+            },
+          },
+          needsFulfilledByVariant: {
+            variant1: {
+              isWant: false,
+              isCreate: false,
+              isAbsorb: false,
+              isChill: false,
+              isVent: false,
+              isSquad: false,
+              isActive: false,
+              isWilderness: false,
+              isFresh: false,
+            },
+          },
+          vocalNotifications: {
+            startEventSound: "",
+            xMinutesBeforeStartAmount: null,
+            xMinutesBeforeStartSound: "",
+            endEventSound: "",
+          },
+        },
+      ],
       oneDay: [],
       libraryOfTemplateEvents: [
         {
