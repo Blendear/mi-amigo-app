@@ -5,6 +5,8 @@ import { ChestModalContentProps } from "../types";
 import { useAppSelector } from "@/store/redux/hooks";
 import { TitleBarWithTogglableContent } from "@/components/TitleBarWithTogglableContent";
 import EventDisplaySmall from "../../show-event-data/components/EventDisplaySmall";
+import { CheckboxesToFilterEvents } from "./CheckboxesToFilterEvents";
+import { useFilterEventsWithCheckboxes } from "../hooks/useFilterEventsWithCheckboxes";
 
 const chestModalCss = {
   container: css({}),
@@ -29,8 +31,32 @@ const ChestModalContent = ({}: ChestModalContentProps) => {
   //
   //     ) 3 columns, where 1st is empty, and 3rd is for the animation
 
+  const { handleCheckboxChange, filterEvents } = useFilterEventsWithCheckboxes({
+    isWant: false,
+    isCreate: false,
+    isAbsorb: false,
+    isChill: false,
+    isVent: false,
+    isSquad: false,
+    isActive: false,
+    isWilderness: false,
+    isFresh: false,
+  });
+
+  const filteredEvents = {
+    necessary: filterEvents(chestWithAllDayLongEvents.necessary),
+    oneDay: filterEvents(chestWithAllDayLongEvents.oneDay),
+    libraryOfTemplateEvents: filterEvents(
+      chestWithAllDayLongEvents.libraryOfTemplateEvents || []
+    ),
+    monstersManual: filterEvents(
+      chestWithAllDayLongEvents.monstersManual || []
+    ),
+  };
+
   return (
     <div css={chestModalCss.container}>
+      <CheckboxesToFilterEvents onChange={handleCheckboxChange} />
       <section>
         <TitleBarWithTogglableContent
           titleBarContent={
@@ -47,7 +73,7 @@ const ChestModalContent = ({}: ChestModalContentProps) => {
             <h2 css={chestModalCss.titleBarWithContent}>Necessary</h2>
           }
         >
-          {chestWithAllDayLongEvents.necessary.map((event, index) => {
+          {filteredEvents.necessary.map((event, index) => {
             return <EventDisplaySmall key={index} event={event} />;
           })}
         </TitleBarWithTogglableContent>
@@ -58,7 +84,7 @@ const ChestModalContent = ({}: ChestModalContentProps) => {
             <h2 css={chestModalCss.titleBarWithContent}>One day</h2>
           }
         >
-          {chestWithAllDayLongEvents.oneDay.map((event, index) => {
+          {filteredEvents.oneDay.map((event, index) => {
             return <EventDisplaySmall key={index} event={event} />;
           })}
         </TitleBarWithTogglableContent>
@@ -69,7 +95,7 @@ const ChestModalContent = ({}: ChestModalContentProps) => {
             <h2 css={chestModalCss.titleBarWithContent}>Monsters Manual</h2>
           }
         >
-          {chestWithAllDayLongEvents.monstersManual.map((event, index) => {
+          {filteredEvents.monstersManual.map((event, index) => {
             return <EventDisplaySmall key={index} event={event} />;
           })}
         </TitleBarWithTogglableContent>
@@ -82,11 +108,9 @@ const ChestModalContent = ({}: ChestModalContentProps) => {
             </h2>
           }
         >
-          {chestWithAllDayLongEvents.libraryOfTemplateEvents.map(
-            (event, index) => {
-              return <EventDisplaySmall key={index} event={event} />;
-            }
-          )}
+          {filteredEvents.libraryOfTemplateEvents.map((event, index) => {
+            return <EventDisplaySmall key={index} event={event} />;
+          })}
         </TitleBarWithTogglableContent>
       </section>
     </div>
