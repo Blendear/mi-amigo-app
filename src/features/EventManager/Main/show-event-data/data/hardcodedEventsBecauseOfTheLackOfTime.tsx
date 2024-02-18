@@ -49,7 +49,52 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
         },
       ],
-      oneDay: [],
+      oneDay: [
+        {
+          name: "Blendlogi na kompa io db zgraj",
+          description: "",
+          imagePath:
+            "https://beebom.com/wp-content/uploads/2023/07/Animated-image-in-OBS-Studio.gif?w=640",
+          imageAltText: "",
+          eventGroupId: 0,
+          eventInstanceId: 0,
+          GIFPath: "",
+          isAllDayLong: false,
+          allDayLongVariantProps: {
+            importance: "",
+            date: new Date(),
+          },
+          timedVariantProps: {
+            startDateAndTime: new Date(),
+            endDateAndTime: new Date(),
+          },
+          deadlineVariant: "none",
+          addOnsByVariants: {
+            variant1: {
+              step1: {},
+            },
+          },
+          needsFulfilledByVariant: {
+            variant1: {
+              isWant: false,
+              isCreate: false,
+              isAbsorb: false,
+              isChill: false,
+              isVent: false,
+              isSquad: false,
+              isActive: false,
+              isWilderness: false,
+              isFresh: false,
+            },
+          },
+          vocalNotifications: {
+            startEventSound: "",
+            xMinutesBeforeStartAmount: null,
+            xMinutesBeforeStartSound: "",
+            endEventSound: "",
+          },
+        },
+      ],
       libraryOfTemplateEvents: [
         {
           name: "Oglądanko / Słuchanko",
