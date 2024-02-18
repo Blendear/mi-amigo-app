@@ -63,6 +63,32 @@ const ChestModalContent = ({}: ChestModalContentProps) => {
           })}
         </TitleBarWithTogglableContent>
       </section>
+      <section>
+        <TitleBarWithTogglableContent
+          titleBarContent={
+            <h2 css={chestModalCss.titleBarWithContent}>Monsters Manual</h2>
+          }
+        >
+          {chestWithAllDayLongEvents.monstersManual.map((event, index) => {
+            return <EventDisplaySmall key={index} event={event} />;
+          })}
+        </TitleBarWithTogglableContent>
+      </section>
+      <section>
+        <TitleBarWithTogglableContent
+          titleBarContent={
+            <h2 css={chestModalCss.titleBarWithContent}>
+              Library of Templates
+            </h2>
+          }
+        >
+          {chestWithAllDayLongEvents.libraryOfTemplateEvents.map(
+            (event, index) => {
+              return <EventDisplaySmall key={index} event={event} />;
+            }
+          )}
+        </TitleBarWithTogglableContent>
+      </section>
     </div>
   );
 };
