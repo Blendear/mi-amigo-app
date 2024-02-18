@@ -103,6 +103,37 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                 toolsSubApps: [],
                 toolsPhysicalOrThirdParty: [],
               },
+              "Architekuturj/Rozbij potwora na 1 lub 2 godzinne chunki": {
+                habits: [],
+                howAndTips: {
+                  ytVideoId: "",
+                  notes: [
+                    {
+                      title:
+                        "Przeraża cię 'nie wiem jak go ograć / gdzie zacząć' po prostu",
+                      description: "_",
+                    },
+                  ],
+                },
+                toolsWhere: [],
+                toolsSubApps: [],
+                toolsPhysicalOrThirdParty: [],
+              },
+              "80/20": {
+                habits: [],
+                howAndTips: {
+                  ytVideoId: "",
+                  notes: [
+                    {
+                      title: "Skup się na istotnych 20% zadań",
+                      description: "_",
+                    },
+                  ],
+                },
+                toolsWhere: [],
+                toolsSubApps: [],
+                toolsPhysicalOrThirdParty: [],
+              },
             },
             "Chcę chcieć tworzyć, ale nie chce mi się tworzyć": {
               "'Fresh' quest projektu weź, np. 3D, jeśli programowałeś": {
