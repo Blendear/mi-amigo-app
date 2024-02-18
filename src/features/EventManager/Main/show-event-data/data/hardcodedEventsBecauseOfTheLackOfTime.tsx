@@ -978,7 +978,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         {
           name: "Poczytanie / Zanurkowanie w dawno nieodwiedzane 'co zrobilem' i 'do zrobienia' części RPGa / projektu odświeżanego za niedługo/teraz",
           description:
-            "BEZ PROBLEMSOLVEOWANIA, Poczytanie / Zanurkowanie w dawno nieodwiedzane 'co zrobilem' i 'do zrobienia' części RPGa.  Np. Ogarnięcie co ogarnąłem z fabułą, albo z mechanika X, na czymstaneło.",
+            "BEZ PROBLEMSOLVEOWANIA. Np. Ogarnięcie co ogarnąłem z fabułą, albo z mechanika X, na czym staneło.",
           imagePath: "",
           imageAltText: "",
           eventGroupId: 0,
