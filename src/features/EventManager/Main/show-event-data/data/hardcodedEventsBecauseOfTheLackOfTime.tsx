@@ -7,6 +7,201 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       oneDay: [
         // TODO: Add those events into "library", after giving acces to th library in the app
         {
+          name: "Rozkminiam - Księga Potworów",
+          description:
+            "Spis wszystkich spotkanych myślami demonów, sposoób na ich ogranie, a nawet wejście w symbiotyczną znajomość",
+          imagePath: "https://images8.alphacoders.com/113/1132674.jpg",
+          imageAltText: "",
+          eventGroupId: 0,
+          eventInstanceId: 0,
+          GIFPath: "",
+          isAllDayLong: false,
+          allDayLongVariantProps: {
+            importance: "",
+            date: new Date(),
+          },
+          timedVariantProps: {
+            startDateAndTime: new Date(),
+            endDateAndTime: new Date(),
+          },
+          deadlineVariant: "none",
+          addOnsByVariants: {
+            "Przytłoczony/zestresowany życiem/problemem X": {
+              "Z Ewronikiem, Jordanem, Joe'm || Ekipą omów problem": {
+                habits: [],
+                howAndTips: {
+                  ytVideoId: "",
+                  notes: [],
+                },
+                toolsWhere: [],
+                toolsSubApps: [],
+                toolsPhysicalOrThirdParty: [],
+              },
+              "Wicofie. Teraz damy wam z siostrzyczką przykład": {
+                habits: [],
+                howAndTips: {
+                  ytVideoId: "",
+                  notes: [
+                    {
+                      title: "Ewronik",
+                      description: "_",
+                    },
+                    {
+                      title: "Jordan Peterson",
+                      description: "_",
+                    },
+                  ],
+                },
+                toolsWhere: [],
+                toolsSubApps: [],
+                toolsPhysicalOrThirdParty: [],
+              },
+              "Wi all roleplaying kiddos.": {
+                habits: [],
+                howAndTips: {
+                  ytVideoId: "",
+                  notes: [
+                    {
+                      title: "_",
+                      description: "_",
+                    },
+                  ],
+                },
+                toolsWhere: [],
+                toolsSubApps: [],
+                toolsPhysicalOrThirdParty: [],
+              },
+              "Medytnijmy. Dobra. Tyle, że po naszemu.": {
+                habits: [],
+                howAndTips: {
+                  ytVideoId: "",
+                  notes: [
+                    {
+                      title: "_",
+                      description: "_",
+                    },
+                  ],
+                },
+                toolsWhere: [],
+                toolsSubApps: [],
+                toolsPhysicalOrThirdParty: [],
+              },
+            },
+            "Overworked. Wypalam się.": {
+              Mniej: {
+                habits: [],
+                howAndTips: {
+                  ytVideoId: "",
+                  notes: [
+                    {
+                      title: "_",
+                      description: "_",
+                    },
+                  ],
+                },
+                toolsWhere: [],
+                toolsSubApps: [],
+                toolsPhysicalOrThirdParty: [],
+              },
+            },
+            "Chcę chcieć tworzyć, ale nie chce mi się tworzyć": {
+              "'Fresh' quest projektu weź, np. 3D, jeśli programowałeś": {
+                habits: [],
+                howAndTips: {
+                  ytVideoId: "",
+                  notes: [
+                    {
+                      title: "_",
+                      description: "_",
+                    },
+                  ],
+                },
+                toolsWhere: [],
+                toolsSubApps: [],
+                toolsPhysicalOrThirdParty: [],
+              },
+            },
+            "Nie chce mi się. NIC.": {
+              "'Want' + 'Wataha' & Omów tą niechęć z nimi": {
+                habits: [],
+                howAndTips: {
+                  ytVideoId: "",
+                  notes: [
+                    {
+                      title: "_",
+                      description: "_",
+                    },
+                  ],
+                },
+                toolsWhere: [],
+                toolsSubApps: [],
+                toolsPhysicalOrThirdParty: [],
+              },
+              "Rememberer odpal": {
+                habits: [],
+                howAndTips: {
+                  ytVideoId: "",
+                  notes: [
+                    {
+                      title: "_",
+                      description: "_",
+                    },
+                  ],
+                },
+                toolsWhere: [],
+                toolsSubApps: [],
+                toolsPhysicalOrThirdParty: [],
+              },
+            },
+            "Kasa. Brakuje mi & Ludzie jej wymagają ode mnie": {
+              "Nie żydzę, a zbieram na...": {
+                habits: [],
+                howAndTips: {
+                  ytVideoId: "",
+                  notes: [
+                    {
+                      title:
+                        "Powiedz szczerze, 'Wolę mieć na wypad/inwestycję X, niż na item Y'",
+                      description: "_",
+                    },
+                  ],
+                },
+                toolsWhere: [],
+                toolsSubApps: [],
+                toolsPhysicalOrThirdParty: [],
+              },
+            },
+            "Problem X": {
+              "Ostatnio zaorało go to": {
+                habits: [],
+                howAndTips: { ytVideoId: "", notes: [] },
+                toolsWhere: [],
+                toolsSubApps: [],
+                toolsPhysicalOrThirdParty: [],
+              },
+            },
+          },
+          needsFulfilledByVariant: {
+            variant1: {
+              isWant: false,
+              isCreate: false,
+              isAbsorb: false,
+              isChill: false,
+              isVent: false,
+              isSquad: false,
+              isActive: false,
+              isWilderness: false,
+              isFresh: false,
+            },
+          },
+          vocalNotifications: {
+            startEventSound: "",
+            xMinutesBeforeStartAmount: null,
+            xMinutesBeforeStartSound: "",
+            endEventSound: "",
+          },
+        },
+        {
           name: "Oglądanko / Słuchanko",
           description:
             "Jakiekolwiek oglądanie / słuchanie treści, od Youtube i Twitch, po Spoti i Storytel",

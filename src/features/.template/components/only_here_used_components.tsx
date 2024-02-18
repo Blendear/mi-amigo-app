@@ -5,8 +5,6 @@ import { css } from "@emotion/react";
 // import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { AComponentProps } from "../types";
 
-const AComponent = ({}: AComponentProps) => {
+export const AComponent = ({}: AComponentProps) => {
   return <div>AComponent</div>;
 };
-
-export default AComponent;
