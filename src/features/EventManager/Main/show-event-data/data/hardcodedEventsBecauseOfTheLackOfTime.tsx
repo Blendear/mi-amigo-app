@@ -136,14 +136,16 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
               },
             },
             "Chcę chcieć tworzyć, ale nie chce mi się tworzyć": {
-              "'Fresh' quest projektu weź, np. 3D, jeśli programowałeś": {
+              "'Want' i'Chłonę' w uszy & 'Fresh' quest": {
                 habits: [],
                 howAndTips: {
                   ytVideoId: "",
                   notes: [
                     {
-                      title: "_",
-                      description: "_",
+                      title:
+                        "Brakuje ci właśnie 'want' i 'fresh', a 'chłonę' zatamuje niechęć",
+                      description:
+                        "Np. Asmongold banteurjący o grze i 3D po paru dniach programowania",
                     },
                   ],
                 },
