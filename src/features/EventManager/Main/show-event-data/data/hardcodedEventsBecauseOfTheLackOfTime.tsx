@@ -975,6 +975,50 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             endEventSound: "",
           },
         },
+        {
+          name: "Poczytanie / Zanurkowanie w dawno nieodwiedzane 'co zrobilem' i 'do zrobienia' części RPGa / projektu odświeżanego za niedługo/teraz",
+          description:
+            "BEZ PROBLEMSOLVEOWANIA, Poczytanie / Zanurkowanie w dawno nieodwiedzane 'co zrobilem' i 'do zrobienia' części RPGa.  Np. Ogarnięcie co ogarnąłem z fabułą, albo z mechanika X, na czymstaneło.",
+          imagePath: "",
+          imageAltText: "",
+          eventGroupId: 0,
+          eventInstanceId: 0,
+          GIFPath: "",
+          isAllDayLong: false,
+          allDayLongVariantProps: {
+            importance: "",
+            date: new Date(),
+          },
+          timedVariantProps: {
+            startDateAndTime: new Date(),
+            endDateAndTime: new Date(),
+          },
+          deadlineVariant: "none",
+          addOnsByVariants: {
+            "czytanie w galerii": {
+              step1: {},
+            },
+          },
+          needsFulfilledByVariant: {
+            "idąc gdzieś, np. w galerii": {
+              isWant: true,
+              isCreate: false,
+              isAbsorb: true,
+              isChill: false,
+              isVent: false,
+              isSquad: false,
+              isActive: false,
+              isWilderness: true,
+              isFresh: true,
+            },
+          },
+          vocalNotifications: {
+            startEventSound: "",
+            xMinutesBeforeStartAmount: null,
+            xMinutesBeforeStartSound: "",
+            endEventSound: "",
+          },
+        },
       ],
       monstersManual: [
         {
