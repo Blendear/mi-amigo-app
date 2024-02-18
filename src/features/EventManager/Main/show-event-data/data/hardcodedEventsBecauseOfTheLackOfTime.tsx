@@ -7,7 +7,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       oneDay: [
         // TODO: Add those events into "library", after giving acces to th library in the app
         {
-          name: "Rozkminiam - Księga Potworów",
+          name: "I need help - Księga Potworów",
           description:
             "Spis wszystkich spotkanych myślami demonów, sposoób na ich ogranie, a nawet wejście w symbiotyczną znajomość",
           imagePath: "https://images8.alphacoders.com/113/1132674.jpg",
