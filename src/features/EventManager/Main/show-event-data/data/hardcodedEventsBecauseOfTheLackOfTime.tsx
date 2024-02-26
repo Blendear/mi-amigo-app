@@ -655,6 +655,17 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           deadlineVariant: "none",
           addOnsByVariants: {
             tradycyjnie: {
+              "Budżet stan aktualizuj o dzisiejsze wydatki": {
+                howAndTips: {
+                  ytVideoId: "",
+                  notes: [
+                    {
+                      title: "Np. Jeśli kupiłeś grę, zmniejsz `Mam na gry`",
+                      description: "",
+                    },
+                  ],
+                },
+              },
               "Prosiaczki przyszły?": {
                 howAndTips: {
                   ytVideoId: "",
