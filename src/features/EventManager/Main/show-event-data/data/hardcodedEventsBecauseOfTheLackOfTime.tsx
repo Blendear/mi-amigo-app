@@ -191,19 +191,19 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                     },
                     {
                       title: "Mam na zdrowie roku 2024",
-                      description: " [ 1010 ] z [ 900 ] zakładanych",
+                      description: " [ Full ] z [ 900 ] zakładanych",
                     },
                     {
                       title: "Mam na naprawy / random wydatki",
-                      description: "[ 300 ] z [ 500 ] zakładanych",
+                      description: "[ Full ] z [ 500 ] zakładanych",
                     },
                     {
                       title: "Mam na przeżycia i podróże",
-                      description: "[ 350 ]",
+                      description: "[ 2551,52 ]",
                     },
                     {
                       title: "Mam na gry",
-                      description: "[ 57.50 ]",
+                      description: "[ 257,50 ]",
                     },
                   ],
                 },
