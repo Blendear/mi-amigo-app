@@ -97,6 +97,127 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       ],
       libraryOfTemplateEvents: [
         {
+          name: "Budżetem miesięcznym / życiowym kupuję",
+          description:
+            "Ile mogę wydać miesięcznie || ogólnie na zainwestowanie coś ponad potrzeby",
+          imagePath:
+            "https://www.bhmpics.com/downloads/wallpaper-shakes-and-fidget/5.daily_login_background_jpg.jpg",
+          imageAltText: "",
+          eventGroupId: 0,
+          eventInstanceId: 0,
+          GIFPath: "",
+          isAllDayLong: false,
+          allDayLongVariantProps: {
+            importance: "",
+            date: new Date(),
+          },
+          timedVariantProps: {
+            startDateAndTime: new Date(),
+            endDateAndTime: new Date(),
+          },
+          deadlineVariant: "none",
+          addOnsByVariants: {
+            _: {
+              _: {
+                howAndTips: {
+                  ytVideoId: "",
+                  notes: [
+                    {
+                      title: "Oto zamysł mojego budżetu",
+                      description: `
+                      Spisuję aktualne finanse
+
+                      Ile mam   |   xxx zł
+                      
+                      Ile miesięcznie zarabiam   |   2.000 zł
+                      
+                      Tworzę milestone'y
+                      
+                      * = taka cena, bo dzielimy się na dwóch / innymi proporcjami
+                      
+                      Życiowe
+                      
+                      Potrzebuję | 21048,48 zł
+                      
+                      12 miesięcy życia w zapasie | 1654,04 * 12 = 19848,48 zł
+                      
+                      ("potrzebuję" minus czarnsa godzina, za to plus gry 50 i podróże 100)
+                      
+                      12 m. zdrowotnych usług | 900 zł
+                      
+                      Random naprawy / czarnogodzinowe wydatki | 300 zł
+                      
+                      Chcę jak skurwysyn | 6000 zł
+                      
+                      Nowy komp | 6000 zł
+                      
+                      Comiesięczne
+                      
+                      Potrzebuję | 1644,04 zł ( ? )
+                      
+                      Jedzenie | 700 zł
+                      
+                      Utitlities (Pasta, krem do golenia etc.) | 100 zł
+                      
+                      Witaminy | 50 zł
+                      
+                      Czynsz | 585,54 zł*
+                      
+                      Tauron | 75 zł* ( ? )
+                      
+                      Internet | 33.50 zł*
+                      
+                      Zdrowie & Czarna godzina & Zapas | 100 zł
+                      
+                      Chcę jak skurwysyn | 400 zł
+                      
+                      Gry | 50 zł
+                      
+                      Podróże & Przeżycia | 350 zł
+                      
+                      Byłoby kuwa sweet
+                      
+                      .
+                      `,
+                    },
+                    {
+                      title: "Mam na życiowe `Potrzebuję` 21048,48 | Tak c:",
+                      description: "",
+                    },
+                    {
+                      title: "Mam na przeżycia i podróże | 350",
+                      description: "",
+                    },
+                    {
+                      title: "Mam na gry | 57.50",
+                      description: "",
+                    },
+                  ],
+                },
+              },
+            },
+          },
+          needsFulfilledByVariant: {
+            variant1: {
+              isWant: true,
+              isCreate: false,
+              isAbsorb: false,
+              isChill: false,
+              isVent: false,
+              isSquad: false,
+              isActive: false,
+              isWilderness: false,
+              isFresh: true,
+            },
+          },
+          vocalNotifications: {
+            startEventSound: "",
+            xMinutesBeforeStartAmount: null,
+            xMinutesBeforeStartSound: "",
+            endEventSound: "",
+          },
+        },
+        {
           name: "Oglądanko / Słuchanko",
           description:
             "Jakiekolwiek oglądanie / słuchanie treści, od Youtube i Twitch, po Spoti i Storytel",
