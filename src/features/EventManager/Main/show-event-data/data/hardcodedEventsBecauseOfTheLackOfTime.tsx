@@ -1292,6 +1292,22 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       ],
     },
     libraryOfTemplateEvents: [],
-    sheduleOfHourlyPlannedEvents: [],
+    sheduleOfHourlyPlannedEvents: [
+      {
+        id: 1,
+        title: "Placeholder Event 1",
+        startDate: new Date(2024, 0, 19, 9, 15), // January 19, 2024, 10:15 AM
+        endDate: new Date(2024, 0, 19, 11, 0), // January 19, 2024, 11:00 AM
+        image: "https://wallpapercave.com/wp/wp1843569.jpg",
+      },
+      {
+        id: 2,
+        title: "Placeholder Event 2",
+        startDate: new Date(2024, 0, 19, 14, 30), // January 19, 2024, 2:30 PM
+        endDate: new Date(2024, 0, 19, 15, 15), // January 19, 2024, 3:15 PM
+        image:
+          "https://cdn.hearthstonetopdecks.com/wp-content/uploads/2018/11/desktop-wallpaper-rastakhans-rumble098.jpg",
+      },
+    ],
   },
 };
