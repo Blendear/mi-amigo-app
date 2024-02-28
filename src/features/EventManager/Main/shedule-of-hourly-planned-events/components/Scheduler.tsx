@@ -34,7 +34,7 @@ const Scheduler = () =>
 
     return (
       <div className={styles["schedule"]}>
-        <p>Czasunio: {formatTimeOutOfDate(currentTime)}</p>
+        {/* <p>Czasunio: {formatTimeOutOfDate(currentTime)}</p> */}
         <DynamicTime setTime={setCurrentTime} />
         <div className={styles["schedule__grid"]}>
           <div className={styles["schedule__grid__time-blocks"]}>
