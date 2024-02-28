@@ -1294,19 +1294,89 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
     libraryOfTemplateEvents: [],
     sheduleOfHourlyPlannedEvents: [
       {
+        id: 0,
+        title: "YT & Nightwatch (15/45)",
+        startDate: new Date(2024, 0, 19, 6, 0), // January 19, 2024, 06:00 AM
+        endDate: new Date(2024, 0, 19, 7, 0),
+        image:
+          "https://assets1.ignimgs.com/2017/01/13/kabal-1280-1484265942243_160w.jpg?width=1280",
+      },
+      {
         id: 1,
-        title: "Placeholder Event 1",
-        startDate: new Date(2024, 0, 19, 9, 15), // January 19, 2024, 10:15 AM
-        endDate: new Date(2024, 0, 19, 11, 0), // January 19, 2024, 11:00 AM
-        image: "https://wallpapercave.com/wp/wp1843569.jpg",
+        title: "Tworzę / Earlier Jedzonko (50/10)",
+        startDate: new Date(2024, 0, 19, 7, 0),
+        endDate: new Date(2024, 0, 19, 8, 0),
+        image:
+          "https://www.dexerto.com/cdn-image/wp-content/uploads/2024/02/13/Whizbangs-Workshop.v1-1.jpg?width=3840&quality=75&format=auto",
       },
       {
         id: 2,
-        title: "Placeholder Event 2",
-        startDate: new Date(2024, 0, 19, 14, 30), // January 19, 2024, 2:30 PM
-        endDate: new Date(2024, 0, 19, 15, 15), // January 19, 2024, 3:15 PM
+        title: "Jedzonko z YT (30)",
+        startDate: new Date(2024, 0, 19, 8, 0),
+        endDate: new Date(2024, 0, 19, 8, 30),
         image:
-          "https://cdn.hearthstonetopdecks.com/wp-content/uploads/2018/11/desktop-wallpaper-rastakhans-rumble098.jpg",
+          "https://static.wikia.nocookie.net/hearthstone_gamepedia/images/1/17/Priest_of_the_Feast_full.jpg/revision/latest?cb=20160807055512",
+      },
+      {
+        id: 3,
+        title: "Tworzę / trening lub nightwatch (50/15 * 3)",
+        startDate: new Date(2024, 0, 19, 8, 30),
+        endDate: new Date(2024, 0, 19, 11, 45),
+        image:
+          "https://www.dexerto.com/cdn-image/wp-content/uploads/2024/02/13/Whizbangs-Workshop.v1-1.jpg?width=3840&quality=75&format=auto",
+      },
+      {
+        id: 4,
+        title: "La Toiletta (30)",
+        startDate: new Date(2024, 0, 19, 11, 45),
+        endDate: new Date(2024, 0, 19, 12, 15),
+        image:
+          "https://storage.googleapis.com/pai-images/b32936677c904bf09fe002c7895dcce5.jpeg",
+      },
+      {
+        id: 5,
+        title: "Drzemusia (30)",
+        startDate: new Date(2024, 0, 19, 15, 0),
+        endDate: new Date(2024, 0, 19, 15, 30),
+        image:
+          "https://preview.redd.it/nwzxu16avgp01.jpg?auto=webp&s=b71fbea1d7e6f973dcdcc1dc47231169b89bdacd",
+      },
+      {
+        id: 6,
+        title: "Jedzonko z YT (30)",
+        startDate: new Date(2024, 0, 19, 15, 30),
+        endDate: new Date(2024, 0, 19, 16, 0),
+        image: "https://images.alphacoders.com/125/1252351.png",
+      },
+      {
+        id: 7,
+        title: "MeTime / Zuzu / Ekipka / Spontaniczny amigo (2,5h)",
+        startDate: new Date(2024, 0, 19, 16, 0),
+        endDate: new Date(2024, 0, 19, 18, 30),
+        image: "https://wallpapercave.com/wp/wp1843569.jpg",
+      },
+      {
+        id: 8,
+        title: "Gotowankowy lub Zakupowy Nightwatch (60)",
+        startDate: new Date(2024, 0, 19, 18, 30),
+        endDate: new Date(2024, 0, 19, 19, 30),
+        image: "https://i.ytimg.com/vi/H-_jP9zM8vk/maxresdefault.jpg",
+      },
+      {
+        id: 9,
+        title: "Kąpielowo-golny nightwatch (30)",
+        startDate: new Date(2024, 0, 19, 19, 30),
+        endDate: new Date(2024, 0, 19, 20, 0),
+        image:
+          "https://static.wikia.nocookie.net/hearthstone_gamepedia/images/6/6a/Rest_and_Relaxation_full.jpg/revision/latest?cb=20210407211101",
+      },
+      {
+        id: 10,
+        title: "Audiobuczek z głąsku z szoszo (30)",
+        startDate: new Date(2024, 0, 19, 21, 45),
+        endDate: new Date(2024, 0, 19, 22, 15),
+        image:
+          "https://static.wikia.nocookie.net/hearthstone_gamepedia/images/7/74/Babbling_Book_full.jpg/revision/latest/scale-to-width-down/400?cb=20160807055711",
       },
     ],
   },
