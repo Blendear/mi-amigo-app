@@ -14,10 +14,10 @@ const caloriesOfTodaysMealsCss = {
       gridAutoFlow: "column",
       gridTemplateColumns: "7fr 3fr",
       justifyItems: "start",
+      fontSize: "2rem",
 
       "& *": {
         color: "orange",
-        fontsize: "2rem",
       },
 
       "& > div": {

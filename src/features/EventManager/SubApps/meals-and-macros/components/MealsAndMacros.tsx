@@ -27,7 +27,7 @@ const mealsAndMacrosCss = {
 
       "& *": {
         color: "orange",
-        fontsize: "2rem",
+        fontSize: "2rem",
       },
 
       "& > div": {
