@@ -1,26 +1,74 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 // import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
-// import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
+import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 // import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { IngredientProps } from "../types";
 import { useRef, useState } from "react";
 
 const ingredientCss = {
-  container: css({
-    // gridRow: "1 / 3",
-    // padding: "1rem",
-    // width: "100%",
-    // boxSizing: "border-box",
-    // aspectRatio: "2/1",
-    // backgroundColor: `rgb(${colors.primaryLight})`,
-    // display: "grid",
-    // gridTemplateRows: "1fr",
-    // justifyItems: "center",
-    // fontSize: "clamp(1rem, 4vw, 2rem)",
-    // "& div:nth-child(1)": {
-    //   backgroundColor: "yellow",
-    // },
+  container: css(universalCss.container),
+
+  header: css({
+    display: "grid",
+    gridAutoFlow: "column",
+    gridTemplateColumns: "1fr max-content",
+    justifyItems: "start",
+    borderBottom: "1px solid rgb(255,255,255,0.5)",
+
+    "& > span:nth-of-type(2)": {
+      justifySelf: "end",
+    },
+  }),
+
+  amount: css({
+    display: "grid",
+    gridTemplateColumns: "1fr max-content max-content",
+    justifyItems: "end",
+
+    "& *": {
+      color: "rgb(255,255,255,0.5)",
+    },
+
+    "& > div:first-of-type": {
+      justifySelf: "start",
+    },
+    "& > input": {
+      backgroundColor: "rgb(255,255,255,0.125)",
+      width: "5rem",
+      textAlign: "end",
+    },
+
+    "& > div": {
+      justifySelf: "end",
+      display: "flex",
+    },
+  }),
+
+  macrosList: css({
+    "& *": {
+      color: "rgb(255,255,255,0.5)",
+    },
+
+    // add a line to divide the list with the amount
+    "&:before": {
+      content: '""',
+      display: "block",
+      height: "1px",
+      width: "100%",
+      backgroundColor: "rgb(255,255,255,0.5)",
+      margin: "0.5rem 0",
+    },
+
+    "& > li": {
+      display: "grid",
+      gridTemplateColumns: "1fr max-content",
+      justifyItems: "start",
+
+      "& > div:nth-of-type(2)": {
+        justifySelf: "end",
+      },
+    },
   }),
 };
 
@@ -28,15 +76,15 @@ export const Ingredient = ({ details }: IngredientProps) => {
   // const amount = useRef(details.amount);
   const [amount, setAmount] = useState(details.amount);
   return (
-    <div css={ingredientCss}>
-      <h3>
+    <div css={ingredientCss.container}>
+      <h3 css={ingredientCss.header}>
         <span>{details.name}</span>
-        <span>{`${
+        <span>{` ${
           (details.macros.calories * amount) / details.macros.forThisAmount
-        }`}</span>
+        } kcal`}</span>
       </h3>
 
-      <div css={{ display: "flex" }}>
+      <div css={ingredientCss.amount}>
         <div>Amount</div>
         <input
           type="number"
@@ -48,8 +96,8 @@ export const Ingredient = ({ details }: IngredientProps) => {
         <div>{details.macros.forThisUnit}</div>
       </div>
 
-      <ul>
-        <li css={{ display: "flex" }}>
+      <ul css={ingredientCss.macrosList}>
+        <li>
           <div>kcal</div>
           <div>{`${details.macros.calories} / ${details.macros.forThisAmount}${details.macros.forThisUnit}`}</div>
         </li>

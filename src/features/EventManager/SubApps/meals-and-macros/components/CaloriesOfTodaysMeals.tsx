@@ -1,17 +1,38 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 // import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
-// import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
+import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 // import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { useContext } from "react";
 import { MealsAndMacrosContext } from "../context/MealsAndMacrosContext";
+
+const caloriesOfTodaysMealsCss = {
+  container: css([
+    universalCss.container,
+    {
+      display: "grid",
+      gridAutoFlow: "column",
+      gridTemplateColumns: "7fr 3fr",
+      justifyItems: "start",
+
+      "& *": {
+        color: "orange",
+      },
+
+      "& > div": {
+        justifySelf: "end",
+        display: "flex",
+      },
+    },
+  ]),
+};
 
 export const CaloriesOfTodaysMeals = () => {
   const { payload, dayOfMealPlanIndex, mealOfTheDayIndex } = useContext(
     MealsAndMacrosContext
   );
 
-  const getTotalMealCalories = () => {
+  const getTotalDailyCalories = () => {
     let totalCalories = 0;
 
     payload.periodOfDaysOfEating[dayOfMealPlanIndex.current].forEach((meal) => {
@@ -26,8 +47,12 @@ export const CaloriesOfTodaysMeals = () => {
   };
 
   return (
-    <div>
-      <p>{`Todays default calories | ${getTotalMealCalories()}`}</p>
+    <div css={caloriesOfTodaysMealsCss.container}>
+      <p>{`Daily *`}</p>
+      <div>
+        <div>{`${getTotalDailyCalories()}`}</div>
+        <span>🔥</span>
+      </div>
     </div>
   );
 };

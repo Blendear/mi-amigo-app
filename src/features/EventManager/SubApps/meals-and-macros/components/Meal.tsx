@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 // import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
-// import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
+import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 // import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { MealProps } from "../types";
 import { useState } from "react";
@@ -10,6 +10,29 @@ import Video from "@/features/EventManager/SubApps/yt-watcher/components/Video";
 import { Ingredient } from "./Ingredient";
 import { MealsAndMacrosContext } from "../context/MealsAndMacrosContext";
 import { useContext } from "react";
+
+const mealCss = {
+  container: css(universalCss.container),
+
+  totalCalories: css([
+    universalCss.container,
+    {
+      display: "grid",
+      gridAutoFlow: "column",
+      gridTemplateColumns: "7fr 3fr",
+      justifyItems: "start",
+
+      "& *": {
+        color: "orange",
+      },
+
+      "& > div": {
+        justifySelf: "end",
+        display: "flex",
+      },
+    },
+  ]),
+};
 
 export const Meal = ({ details, hideContentUnderNamedButton }: MealProps) => {
   const { payload, dayOfMealPlanIndex, mealOfTheDayIndex } = useContext(
@@ -35,7 +58,7 @@ export const Meal = ({ details, hideContentUnderNamedButton }: MealProps) => {
   };
 
   return (
-    <div>
+    <div css={mealCss.container}>
       {hideContentUnderNamedButton && (
         <button
           onClick={() => {
@@ -54,7 +77,13 @@ export const Meal = ({ details, hideContentUnderNamedButton }: MealProps) => {
               return <Ingredient key={index} details={ingredient} />;
             })}
           </ul>
-          <div>{`Meals default calories | ${getTotalMealCalories()}`}</div>
+          <div css={mealCss.totalCalories}>
+            <p>{`Meal *`}</p>
+            <div>
+              <div>{`${getTotalMealCalories()}`}</div>
+              <span>🔥</span>
+            </div>
+          </div>
         </div>
       )}
     </div>

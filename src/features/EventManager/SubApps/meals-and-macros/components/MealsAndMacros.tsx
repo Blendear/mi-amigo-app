@@ -1,5 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
+import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
+import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
+import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 import { MealsAndMacrosProps } from "../types";
 import { useRef, useState } from "react";
 import { MealsAndMacrosContext } from "../context/MealsAndMacrosContext";
@@ -8,6 +11,38 @@ import { MealOfTheDay } from "./MealOfTheDay";
 import { Meal } from "./Meal";
 import { CaloriesOfTodaysMeals } from "./CaloriesOfTodaysMeals";
 import { useEffect } from "react";
+
+const mealsAndMacrosCss = {
+  container: css({
+    padding: "1rem 1rem 3rem 1rem",
+  }),
+
+  additionalCalories: css([
+    universalCss.container,
+    {
+      display: "grid",
+      gridAutoFlow: "column",
+      gridTemplateColumns: "7fr 3fr",
+      justifyItems: "start",
+
+      "& *": {
+        color: "orange",
+      },
+
+      "& > div": {
+        justifySelf: "end",
+        display: "flex",
+
+        "& > input": {
+          width: "5rem",
+          textAlign: "end",
+        },
+      },
+    },
+  ]),
+
+  explanation: css({ fontSize: "1.1rem", color: `darkgrey` }),
+};
 
 export const MealsAndMacros = ({ payload }: MealsAndMacrosProps) => {
   const [update, forceUpdate] = useState(false);
@@ -37,7 +72,7 @@ export const MealsAndMacros = ({ payload }: MealsAndMacrosProps) => {
         mealOfTheDayIndex,
       }}
     >
-      <section>
+      <section css={mealsAndMacrosCss.container}>
         <button
           onClick={() => {
             setContentVariant((prev) => {
@@ -61,17 +96,24 @@ export const MealsAndMacros = ({ payload }: MealsAndMacrosProps) => {
             />
             <CaloriesOfTodaysMeals />
             {/* save and get it from local storage */}
-            <div>
-              <label htmlFor="additionalCalories">
-                Additional calories eaten:
-              </label>
-              <input
-                type="number"
-                id="additionalCalories"
-                defaultValue={additionalCalories}
-                onChange={(e) => setAdditionalCalories(e.target.value)}
-              />
+            <div css={mealsAndMacrosCss.additionalCalories}>
+              <label htmlFor="additionalCalories">Additional</label>
+              <div>
+                <input
+                  type="number"
+                  id="additionalCalories"
+                  defaultValue={additionalCalories}
+                  onChange={(e) => setAdditionalCalories(e.target.value)}
+                />
+                <span>🔥</span>
+              </div>
             </div>
+
+            <p css={mealsAndMacrosCss.explanation}>
+              {
+                "* Default value, without recounting after ingredient amounts change"
+              }
+            </p>
           </div>
         ) : (
           // Show all meals
