@@ -4,21 +4,50 @@ import { css } from "@emotion/react";
 // import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 // import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { IngredientProps } from "../types";
-import { useState } from "react";
+import { useRef, useState } from "react";
+
+const ingredientCss = {
+  container: css({
+    // gridRow: "1 / 3",
+    // padding: "1rem",
+    // width: "100%",
+    // boxSizing: "border-box",
+    // aspectRatio: "2/1",
+    // backgroundColor: `rgb(${colors.primaryLight})`,
+    // display: "grid",
+    // gridTemplateRows: "1fr",
+    // justifyItems: "center",
+    // fontSize: "clamp(1rem, 4vw, 2rem)",
+    // "& div:nth-child(1)": {
+    //   backgroundColor: "yellow",
+    // },
+  }),
+};
 
 export const Ingredient = ({ details }: IngredientProps) => {
+  // const amount = useRef(details.amount);
   const [amount, setAmount] = useState(details.amount);
-
   return (
-    <div>
+    <div css={ingredientCss}>
       <h3>
         <span>{details.name}</span>
-        <span>{`${amount} ${details.unit}`}</span>
+        <span>{`${
+          (details.macros.calories * amount) / details.macros.forThisAmount
+        }`}</span>
       </h3>
+
       <div css={{ display: "flex" }}>
-        <div>Amount</div> <input type="number" value={details.amount} />
+        <div>Amount</div>
+        <input
+          type="number"
+          defaultValue={amount}
+          onChange={(e) => {
+            setAmount(Number(e.target.value));
+          }}
+        />
         <div>{details.macros.forThisUnit}</div>
       </div>
+
       <ul>
         <li css={{ display: "flex" }}>
           <div>kcal</div>

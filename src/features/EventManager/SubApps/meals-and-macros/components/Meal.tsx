@@ -8,11 +8,33 @@ import { useState } from "react";
 import ImageWithWrapper from "@/components/ImageWithWrapper";
 import Video from "@/features/EventManager/SubApps/yt-watcher/components/Video";
 import { Ingredient } from "./Ingredient";
+import { MealsAndMacrosContext } from "../context/MealsAndMacrosContext";
+import { useContext } from "react";
 
 export const Meal = ({ details, hideContentUnderNamedButton }: MealProps) => {
+  const { payload, dayOfMealPlanIndex, mealOfTheDayIndex } = useContext(
+    MealsAndMacrosContext
+  );
+
   const [hideDetails, setHideDetails] = useState(
     hideContentUnderNamedButton || false
   );
+
+  const [caloriesOfThisMeal, setCaloriesOfThisMeal] = useState(0);
+
+  const getTotalMealCalories = () => {
+    let totalCalories = 0;
+
+    payload.periodOfDaysOfEating[dayOfMealPlanIndex.current][
+      mealOfTheDayIndex.current
+    ].ingredients.forEach((ingredient) => {
+      totalCalories +=
+        (ingredient.macros.calories / ingredient.macros.forThisAmount) *
+        ingredient.amount;
+    });
+
+    return totalCalories;
+  };
 
   return (
     <div>
@@ -34,6 +56,7 @@ export const Meal = ({ details, hideContentUnderNamedButton }: MealProps) => {
               return <Ingredient key={index} details={ingredient} />;
             })}
           </ul>
+          <div>{`Meals default calories | ${getTotalMealCalories()}`}</div>
         </div>
       )}
     </div>

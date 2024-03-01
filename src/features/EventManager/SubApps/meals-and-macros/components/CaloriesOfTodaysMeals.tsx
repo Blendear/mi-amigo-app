@@ -7,11 +7,27 @@ import { useContext } from "react";
 import { MealsAndMacrosContext } from "../context/MealsAndMacrosContext";
 
 export const CaloriesOfTodaysMeals = () => {
-  const { caloriesOfChosenDay } = useContext(MealsAndMacrosContext);
+  const { payload, dayOfMealPlanIndex, mealOfTheDayIndex } = useContext(
+    MealsAndMacrosContext
+  );
+
+  const getTotalMealCalories = () => {
+    let totalCalories = 0;
+
+    payload.periodOfDaysOfEating[dayOfMealPlanIndex.current].forEach((meal) => {
+      meal.ingredients.forEach((ingredient) => {
+        totalCalories +=
+          (ingredient.macros.calories / ingredient.macros.forThisAmount) *
+          ingredient.amount;
+      });
+    });
+
+    return totalCalories;
+  };
 
   return (
     <div>
-      <p>{`Todays calories | ${caloriesOfChosenDay.current}`}</p>
+      <p>{`Todays default calories | ${getTotalMealCalories()}`}</p>
     </div>
   );
 };
