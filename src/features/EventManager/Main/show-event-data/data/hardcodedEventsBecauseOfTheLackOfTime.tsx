@@ -258,8 +258,9 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                       mealsAvailable: [
                         {
                           name: "Kabanosy z bułkami",
-                          imagePaths: "images/aaa.png",
-                          ytVideoId: "1234567",
+                          imagePaths:
+                            "https://polskie-mieso.pl/wp-content/uploads/2021/03/kabanosy.jpg",
+                          ytVideoId: "F1Hq8eVOMHs",
                           ingredients: [
                             {
                               name: "Kabanosy",
@@ -285,8 +286,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                         },
                         {
                           name: "Makaron z cukinia i kurczakiem",
-                          imagePaths: "images/aaa.png",
-                          ytVideoId: "1234567",
+                          imagePaths: "/images/aaa.png",
+                          ytVideoId: "Fb_IljnhwTo",
                           ingredients: [
                             {
                               name: "Makaron",
@@ -325,8 +326,9 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                         1: [
                           {
                             name: "Kabanosy z bułkami",
-                            imagePaths: "images/aaa.png",
-                            ytVideoId: "1234567",
+                            imagePaths:
+                              "https://polskie-mieso.pl/wp-content/uploads/2021/03/kabanosy.jpg",
+                            ytVideoId: "F1Hq8eVOMHs",
                             ingredients: [
                               {
                                 name: "Kabanosy",
@@ -352,8 +354,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                           },
                           {
                             name: "Makaron z cukinia i kurczakiem",
-                            imagePaths: "images/aaa.png",
-                            ytVideoId: "1234567",
+                            imagePaths: "/images/aaa.png",
+                            ytVideoId: "Fb_IljnhwTo",
                             ingredients: [
                               {
                                 name: "Makaron",
@@ -391,8 +393,9 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                         2: [
                           {
                             name: "Kabanosy z bułkami",
-                            imagePaths: "images/aaa.png",
-                            ytVideoId: "1234567",
+                            imagePaths:
+                              "https://polskie-mieso.pl/wp-content/uploads/2021/03/kabanosy.jpg",
+                            ytVideoId: "F1Hq8eVOMHs",
                             ingredients: [
                               {
                                 name: "Kabanosy",

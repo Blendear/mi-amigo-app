@@ -54,7 +54,7 @@ export const MealsAndMacros = ({ payload }: MealsAndMacrosProps) => {
           // Show all meals
           <div>
             {payload.mealsAvailable.map((meal, index) => (
-              <Meal details={meal} key={index} />
+              <Meal hideContentUnderNamedButton details={meal} key={index} />
             ))}
           </div>
         )}
