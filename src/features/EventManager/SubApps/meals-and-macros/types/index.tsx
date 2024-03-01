@@ -1,1 +1,1 @@
-export type MealsAndMacrosProps = {};
+export type MealsAndMacrosProps = { payload: {} };

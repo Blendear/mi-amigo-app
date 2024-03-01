@@ -1,5 +1,6 @@
 import Playlist from "@/features/EventManager/SubApps/yt-watcher/components/Playlist";
 import { SubappPayloads } from "@/types";
+import { MealsAndMacros } from "@/features/EventManager/SubApps/meals-and-macros/components/MealsAndMacros";
 
 type getSubAppImageAndComponentProps = {
   subAppName;
@@ -23,6 +24,10 @@ export const getSubAppImageAndComponent = ({
     "shopping-list": {
       imageOrGifPath: "https://via.placeholder.com/150",
       component: <></>,
+    },
+    "meals-and-macros": {
+      imageOrGifPath: "https://via.placeholder.com/150",
+      component: <MealsAndMacros payload={payload} />,
     },
   }[subAppName];
 };
