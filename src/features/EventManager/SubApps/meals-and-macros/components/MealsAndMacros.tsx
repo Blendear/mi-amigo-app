@@ -7,6 +7,7 @@ import { PeriodOfDaysOfEating } from "./PeriodOfDaysOfEating";
 import { MealOfTheDay } from "./MealOfTheDay";
 import { Meal } from "./Meal";
 import { CaloriesOfTodaysMeals } from "./CaloriesOfTodaysMeals";
+import { useEffect } from "react";
 
 export const MealsAndMacros = ({ payload }: MealsAndMacrosProps) => {
   const [update, forceUpdate] = useState(false);
@@ -15,7 +16,16 @@ export const MealsAndMacros = ({ payload }: MealsAndMacrosProps) => {
   const [contentVariant, setContentVariant] = useState<"periods" | "all-meals">(
     "periods"
   );
-  const caloriesOfChosenDay = useRef(0);
+
+  const [additionalCalories, setAdditionalCalories] = useState(() => {
+    // Get value from local storage, default to 0 if not present
+    return localStorage.getItem("additionalCalories") || "0";
+  });
+
+  useEffect(() => {
+    // Store additional calories in local storage whenever it changes
+    localStorage.setItem("additionalCalories", additionalCalories);
+  }, [additionalCalories]);
 
   return (
     <MealsAndMacrosContext.Provider
@@ -25,7 +35,6 @@ export const MealsAndMacros = ({ payload }: MealsAndMacrosProps) => {
         payload,
         dayOfMealPlanIndex,
         mealOfTheDayIndex,
-        caloriesOfChosenDay,
       }}
     >
       <section>
@@ -52,7 +61,17 @@ export const MealsAndMacros = ({ payload }: MealsAndMacrosProps) => {
             />
             <CaloriesOfTodaysMeals />
             {/* save and get it from local storage */}
-            <div>{`Additional calories eaten: ${"1"}`}</div>
+            <div>
+              <label htmlFor="additionalCalories">
+                Additional calories eaten:
+              </label>
+              <input
+                type="number"
+                id="additionalCalories"
+                defaultValue={additionalCalories}
+                onChange={(e) => setAdditionalCalories(e.target.value)}
+              />
+            </div>
           </div>
         ) : (
           // Show all meals

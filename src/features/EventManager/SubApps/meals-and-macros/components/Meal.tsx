@@ -20,8 +20,6 @@ export const Meal = ({ details, hideContentUnderNamedButton }: MealProps) => {
     hideContentUnderNamedButton || false
   );
 
-  const [caloriesOfThisMeal, setCaloriesOfThisMeal] = useState(0);
-
   const getTotalMealCalories = () => {
     let totalCalories = 0;
 
