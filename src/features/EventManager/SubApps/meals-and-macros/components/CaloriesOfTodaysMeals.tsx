@@ -17,6 +17,7 @@ const caloriesOfTodaysMealsCss = {
 
       "& *": {
         color: "orange",
+        fontsize: "2rem",
       },
 
       "& > div": {
