@@ -10,6 +10,7 @@ const caloriesOfTodaysMealsCss = {
   container: css([
     universalCss.container,
     {
+      margin: "3rem 0 0 0",
       display: "grid",
       gridAutoFlow: "column",
       gridTemplateColumns: "7fr 3fr",
