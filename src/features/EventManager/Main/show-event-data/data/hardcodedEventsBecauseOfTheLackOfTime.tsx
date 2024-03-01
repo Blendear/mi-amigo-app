@@ -283,6 +283,43 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                             },
                           ],
                         },
+                        {
+                          name: "Makaron z cukinia i kurczakiem",
+                          imagePaths: "images/aaa.png",
+                          ytVideoId: "1234567",
+                          ingredients: [
+                            {
+                              name: "Makaron",
+                              amount: 105,
+                              unit: "g",
+                              macros: {
+                                forThisAmount: 100,
+                                forThisUnit: "g",
+                                calories: 550,
+                              },
+                            },
+                            {
+                              name: "Cukinia",
+                              amount: 1,
+                              unit: "szt",
+                              macros: {
+                                forThisAmount: 1,
+                                forThisUnit: "szt",
+                                calories: 178,
+                              },
+                            },
+                            {
+                              name: "Kurczak",
+                              amount: 1,
+                              unit: "szt",
+                              macros: {
+                                forThisAmount: 1,
+                                forThisUnit: "szt",
+                                calories: 178,
+                              },
+                            },
+                          ],
+                        },
                       ],
                       periodOfDaysOfEating: {
                         1: [
@@ -340,6 +377,35 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                               },
                               {
                                 name: "Kurczak",
+                                amount: 1,
+                                unit: "szt",
+                                macros: {
+                                  forThisAmount: 1,
+                                  forThisUnit: "szt",
+                                  calories: 178,
+                                },
+                              },
+                            ],
+                          },
+                        ],
+                        2: [
+                          {
+                            name: "Kabanosy z bułkami",
+                            imagePaths: "images/aaa.png",
+                            ytVideoId: "1234567",
+                            ingredients: [
+                              {
+                                name: "Kabanosy",
+                                amount: 105,
+                                unit: "g",
+                                macros: {
+                                  forThisAmount: 100,
+                                  forThisUnit: "g",
+                                  calories: 550,
+                                },
+                              },
+                              {
+                                name: "Bułki",
                                 amount: 1,
                                 unit: "szt",
                                 macros: {

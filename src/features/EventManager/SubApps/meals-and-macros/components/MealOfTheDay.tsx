@@ -32,7 +32,8 @@ const variantsCss = {
 };
 
 export const MealOfTheDay = ({}) => {
-  const { forceUpdate, mealOfTheDayIndex } = useContext(MealsAndMacrosContext);
+  const { forceUpdate, dayOfMealPlanIndex, mealOfTheDayIndex, payload } =
+    useContext(MealsAndMacrosContext);
 
   return (
     <SwiperCustom
@@ -42,25 +43,24 @@ export const MealOfTheDay = ({}) => {
       setActiveSlide={(index) => (mealOfTheDayIndex.current = index)}
       forceUpdate={forceUpdate}
     >
-      {[
-        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-        21, 22, 23, 24, 25, 26, 27, 28,
-      ].map((dayNumber, index) => (
-        <SwiperSlide key={index}>
-          <div
-            css={[
-              universalCss.button(
-                index === mealOfTheDayIndex.current,
-                `rgb(${colors.tertiaryLight})`,
-                `rgb(${colors.whiteLight})`
-              ),
-              variantsCss.variant,
-            ]}
-          >
-            {dayNumber}
-          </div>
-        </SwiperSlide>
-      ))}
+      {payload.periodOfDaysOfEating[dayOfMealPlanIndex.current].map(
+        (meal, index) => (
+          <SwiperSlide key={index}>
+            <div
+              css={[
+                universalCss.button(
+                  index === mealOfTheDayIndex.current,
+                  `rgb(${colors.tertiaryLight})`,
+                  `rgb(${colors.whiteLight})`
+                ),
+                variantsCss.variant,
+              ]}
+            >
+              {meal.name}
+            </div>
+          </SwiperSlide>
+        )
+      )}
     </SwiperCustom>
   );
 };

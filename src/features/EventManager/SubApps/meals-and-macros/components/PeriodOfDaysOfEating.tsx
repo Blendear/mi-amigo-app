@@ -32,27 +32,23 @@ const variantsCss = {
 };
 
 export const PeriodOfDaysOfEating = ({}) => {
-  const { forceUpdate, dayOfMealPlanIndex, mealOfTheDayIndex } = useContext(
-    MealsAndMacrosContext
-  );
+  const { forceUpdate, dayOfMealPlanIndex, mealOfTheDayIndex, payload } =
+    useContext(MealsAndMacrosContext);
 
   return (
     <SwiperCustom
       swiperContainerCss={variantsCss.container}
       spaceBetweenSlides="10rem"
-      activeSlide={dayOfMealPlanIndex.current}
-      setActiveSlide={(index) => (dayOfMealPlanIndex.current = index)}
+      activeSlide={dayOfMealPlanIndex.current - 1}
+      setActiveSlide={(index) => (dayOfMealPlanIndex.current = index + 1)}
       forceUpdate={forceUpdate}
     >
-      {[
-        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-        21, 22, 23, 24, 25, 26, 27, 28,
-      ].map((dayNumber, index) => (
+      {Object.keys(payload.periodOfDaysOfEating).map((dayNumber, index) => (
         <SwiperSlide key={index}>
           <div
             css={[
               universalCss.button(
-                index === dayOfMealPlanIndex.current,
+                index === dayOfMealPlanIndex.current - 1,
                 `rgb(${colors.tertiaryLight})`,
                 `rgb(${colors.whiteLight})`
               ),
