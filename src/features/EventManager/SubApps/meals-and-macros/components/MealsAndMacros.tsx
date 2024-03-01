@@ -15,6 +15,7 @@ export const MealsAndMacros = ({ payload }: MealsAndMacrosProps) => {
   const [contentVariant, setContentVariant] = useState<"periods" | "all-meals">(
     "periods"
   );
+  const caloriesOfChosenDay = useRef(0);
 
   return (
     <MealsAndMacrosContext.Provider
@@ -24,6 +25,7 @@ export const MealsAndMacros = ({ payload }: MealsAndMacrosProps) => {
         payload,
         dayOfMealPlanIndex,
         mealOfTheDayIndex,
+        caloriesOfChosenDay,
       }}
     >
       <section>
@@ -49,6 +51,8 @@ export const MealsAndMacros = ({ payload }: MealsAndMacrosProps) => {
               }
             />
             <CaloriesOfTodaysMeals />
+            {/* save and get it from local storage */}
+            <div>{`Additional calories eaten: ${"1"}`}</div>
           </div>
         ) : (
           // Show all meals

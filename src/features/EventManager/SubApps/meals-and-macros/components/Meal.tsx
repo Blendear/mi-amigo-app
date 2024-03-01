@@ -7,6 +7,7 @@ import { MealProps } from "../types";
 import { useState } from "react";
 import ImageWithWrapper from "@/components/ImageWithWrapper";
 import Video from "@/features/EventManager/SubApps/yt-watcher/components/Video";
+import { Ingredient } from "./Ingredient";
 
 export const Meal = ({ details, hideContentUnderNamedButton }: MealProps) => {
   const [hideDetails, setHideDetails] = useState(
@@ -28,6 +29,11 @@ export const Meal = ({ details, hideContentUnderNamedButton }: MealProps) => {
       {(!hideContentUnderNamedButton || !hideDetails) && (
         <div>
           <Video yTvideoId={details.ytVideoId} />
+          <ul>
+            {details.ingredients.map((ingredient, index) => {
+              return <Ingredient key={index} details={ingredient} />;
+            })}
+          </ul>
         </div>
       )}
     </div>
