@@ -21,10 +21,41 @@ export type ImageWithWrapperProps = {
   wrapperCss?: {};
 };
 
-export type SubappPayloads = {
-  "yt-video-watcher": {
-    ytVideoIds: string[];
+export type Ingredient = {
+  name: string;
+  amount: number;
+  unit: string; // of measurement
+  macros: {
+    forThisAmount: number;
+    forThisUnit: string;
+    calories: number;
+    proteins?: number;
+    carbs?: number;
+    fats?: number;
   };
+};
+
+export type Meal = {
+  name: string;
+  imagePaths: string;
+  ytVideoId: string; // "how to prepare it" video
+  ingredients: Ingredient[];
+};
+
+export type MealsAndMacrosSubAppPayload = {
+  mealsAvailable: Meal[];
+  periodOfDaysOfEating: {
+    [dayIndex: number]: Meal[];
+  };
+};
+
+export type YTVideoWatcherSubAppPayload = {
+  ytVideoIds: string[];
+};
+
+export type SubappPayloads = {
+  "yt-video-watcher": YTVideoWatcherSubAppPayload;
+  "meals-and-macros": MealsAndMacrosSubAppPayload;
   // Add more subapps and their respective payload types as needed
 };
 
@@ -52,4 +83,5 @@ export type AppDataOfCurrentUser = {
     libraryOfTemplateEvents: EventWithNeeds[];
     sheduleOfHourlyPlannedEvents: any[]; // TODO: TS types and implement
   };
+  subApps: Subapp[];
 };
