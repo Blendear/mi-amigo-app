@@ -5,6 +5,50 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
     chestWithAllDayLongEvents: {
       necessary: [
         {
+          name: "PIT rozlicz (z Lukasem?) & Workflow stwórz pod to",
+          description: "To trwa chwileczkę, online do zrobiernia",
+          imagePath:
+            "https://cdn.dribbble.com/users/3581847/screenshots/9165289/media/275ebf8aeb8432d048f5b66bcbdfbd4d.gif",
+          imageAltText: "",
+          eventGroupId: 0,
+          eventInstanceId: 0,
+          GIFPath: "",
+          isAllDayLong: false,
+          allDayLongVariantProps: {
+            importance: "",
+            date: new Date(),
+          },
+          timedVariantProps: {
+            startDateAndTime: new Date(),
+            endDateAndTime: new Date(),
+          },
+          deadlineVariant: "none",
+          addOnsByVariants: {
+            variant1: {
+              step1: {},
+            },
+          },
+          needsFulfilledByVariant: {
+            variant1: {
+              isWant: false,
+              isCreate: false,
+              isAbsorb: false,
+              isChill: false,
+              isVent: false,
+              isSquad: false,
+              isActive: false,
+              isWilderness: false,
+              isFresh: false,
+            },
+          },
+          vocalNotifications: {
+            startEventSound: "",
+            xMinutesBeforeStartAmount: null,
+            xMinutesBeforeStartSound: "",
+            endEventSound: "",
+          },
+        },
+        {
           name: "Lukas - Gooogle support kontakt/passy z konta firmowego mi daj",
           description: "",
           imagePath:
@@ -48,13 +92,190 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             endEventSound: "",
           },
         },
+        {
+          name: "Dotacje unijne na dział. gospodarczą",
+          description:
+            "Rozpisz i dowiedz się telefonicznie / z linka lukasa / od innych - co trzeba zrobić i jak zwiekszyc szanse na next time & skąd wiedzieć kiedyd okładnie są next times",
+          imagePath:
+            "https://cdn.streamlabs.com/users/23272890/library/cute_money.gif",
+          imageAltText: "",
+          eventGroupId: 0,
+          eventInstanceId: 0,
+          GIFPath: "",
+          isAllDayLong: false,
+          allDayLongVariantProps: {
+            importance: "",
+            date: new Date(),
+          },
+          timedVariantProps: {
+            startDateAndTime: new Date(),
+            endDateAndTime: new Date(),
+          },
+          deadlineVariant: "none",
+          addOnsByVariants: {
+            variant1: {
+              step1: {},
+            },
+          },
+          needsFulfilledByVariant: {
+            variant1: {
+              isWant: false,
+              isCreate: false,
+              isAbsorb: false,
+              isChill: false,
+              isVent: false,
+              isSquad: false,
+              isActive: false,
+              isWilderness: false,
+              isFresh: false,
+            },
+          },
+          vocalNotifications: {
+            startEventSound: "",
+            xMinutesBeforeStartAmount: null,
+            xMinutesBeforeStartSound: "",
+            endEventSound: "",
+          },
+        },
       ],
       oneDay: [
+        {
+          name: "edytowalny mi amigo calendar / dodawania w appce wydarzen (zrob dedykowany firebase account pod mi amigo po prostu) niż wrld. trace ogrom czasu na re-orderingu caledarza czy przepisywanie todo's etc",
+          description: "",
+          imagePath:
+            "https://i.gifer.com/origin/04/0479f858b813dc34eb808c990c380919.gif",
+          imageAltText: "",
+          eventGroupId: 0,
+          eventInstanceId: 0,
+          GIFPath: "",
+          isAllDayLong: false,
+          allDayLongVariantProps: {
+            importance: "",
+            date: new Date(),
+          },
+          timedVariantProps: {
+            startDateAndTime: new Date(),
+            endDateAndTime: new Date(),
+          },
+          deadlineVariant: "none",
+          addOnsByVariants: {
+            variant1: {
+              step1: {},
+            },
+          },
+          needsFulfilledByVariant: {
+            variant1: {
+              isWant: false,
+              isCreate: false,
+              isAbsorb: false,
+              isChill: false,
+              isVent: false,
+              isSquad: false,
+              isActive: false,
+              isWilderness: false,
+              isFresh: false,
+            },
+          },
+          vocalNotifications: {
+            startEventSound: "",
+            xMinutesBeforeStartAmount: null,
+            xMinutesBeforeStartSound: "",
+            endEventSound: "",
+          },
+        },
+        {
+          name: "devlogi wplanuj w codzienny tworzenie, NAWET TE NIEWRLDOWSKIE",
+          description: "",
+          imagePath:
+            "https://media.indiedb.com/images/members/3/2980/2979813/profile/gif2.gif",
+          imageAltText: "",
+          eventGroupId: 0,
+          eventInstanceId: 0,
+          GIFPath: "",
+          isAllDayLong: false,
+          allDayLongVariantProps: {
+            importance: "",
+            date: new Date(),
+          },
+          timedVariantProps: {
+            startDateAndTime: new Date(),
+            endDateAndTime: new Date(),
+          },
+          deadlineVariant: "none",
+          addOnsByVariants: {
+            variant1: {
+              step1: {},
+            },
+          },
+          needsFulfilledByVariant: {
+            variant1: {
+              isWant: false,
+              isCreate: false,
+              isAbsorb: false,
+              isChill: false,
+              isVent: false,
+              isSquad: false,
+              isActive: false,
+              isWilderness: false,
+              isFresh: false,
+            },
+          },
+          vocalNotifications: {
+            startEventSound: "",
+            xMinutesBeforeStartAmount: null,
+            xMinutesBeforeStartSound: "",
+            endEventSound: "",
+          },
+        },
         {
           name: "Blendlogi na kompa io db zgraj",
           description: "",
           imagePath:
             "https://beebom.com/wp-content/uploads/2023/07/Animated-image-in-OBS-Studio.gif?w=640",
+          imageAltText: "",
+          eventGroupId: 0,
+          eventInstanceId: 0,
+          GIFPath: "",
+          isAllDayLong: false,
+          allDayLongVariantProps: {
+            importance: "",
+            date: new Date(),
+          },
+          timedVariantProps: {
+            startDateAndTime: new Date(),
+            endDateAndTime: new Date(),
+          },
+          deadlineVariant: "none",
+          addOnsByVariants: {
+            variant1: {
+              step1: {},
+            },
+          },
+          needsFulfilledByVariant: {
+            variant1: {
+              isWant: false,
+              isCreate: false,
+              isAbsorb: false,
+              isChill: false,
+              isVent: false,
+              isSquad: false,
+              isActive: false,
+              isWilderness: false,
+              isFresh: false,
+            },
+          },
+          vocalNotifications: {
+            startEventSound: "",
+            xMinutesBeforeStartAmount: null,
+            xMinutesBeforeStartSound: "",
+            endEventSound: "",
+          },
+        },
+        {
+          name: "Wpisz onenoteowy hook1 i hook2 do mi amigo do 'one day' etc,",
+          description: "",
+          imagePath:
+            "https://i.pinimg.com/originals/42/a0/1c/42a01cd7d928a9f62f166c98a15f1b30.gif",
           imageAltText: "",
           eventGroupId: 0,
           eventInstanceId: 0,
@@ -872,6 +1093,18 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           deadlineVariant: "none",
           addOnsByVariants: {
             tradycyjnie: {
+              "Telefonowe Linearowe zadania wpisz w prawdziwe miejsce na PC": {
+                howAndTips: {
+                  ytVideoId: "",
+                  notes: [
+                    {
+                      title: "Zapominasz o gold nuggetsach wykminionych",
+                      description:
+                        "Bo zapisujesz gold-nuggets wiedzy  / update'u życia, i zapominasz otym, bo nie wprowadzasz w część używanego, oryginalnego workflowu",
+                    },
+                  ],
+                },
+              },
               "Budżet stan aktualizuj o dzisiejsze wydatki": {
                 howAndTips: {
                   ytVideoId: "",
@@ -1059,13 +1292,29 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
           deadlineVariant: "none",
           addOnsByVariants: {
+            "W S Z Y S T K I E": {
+              // temporary solution against repeating this stepts ine very variant
+              "Estimate rób & Ogień adekwatnie do etapu (HATP) używaj": {
+                howAndTips: {
+                  ytVideoId: "hook1",
+                  notes: [
+                    {
+                      title: "Użyj tego 'estimates' template'u na górze issues",
+                      description:
+                        // 0.5 hardcoded value, because mostly it's max 30 minutes of work for "H" stage
+                        "H | __ / [0.5] A | __ / [__] T | __ / [__] P | __ / [__] - DOPIERO po skonczeniu etapu H wpisuejz zalozenie etapu A, po A zalozenie etapu T (bo nie wiesz jeszcze ile bedzie do tworzenia z A etc.",
+                    },
+                  ],
+                },
+              },
+            },
             "Webowy Asystent - Frontend": {
               "Przygotuj narzędzia": {
                 toolsPhysicalOrThirdParty: [
                   {
                     title: "Linear",
                     linkURL:
-                      "https://linear.app/infiniti/roadmap/webowy-asystent-08d8f5e2f9bd/all",
+                      "https://linear.app/wrld-rpg/roadmap/webowy-asystent-7b3509ba11ba/all",
                     imageOrGifPath:
                       "https://media.licdn.com/dms/image/D4D0BAQF8WGlksBLY0g/company-logo_200_200/0/1665590651137/linearapp_logo?e=2147483647&v=beta&t=O_5o4iiky8EZ2ZJr9cPeQ64jrILDiYBue_PI-BPxC4c",
                   },
@@ -1155,7 +1404,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                   {
                     title: "Linear",
                     linkURL:
-                      "https://linear.app/infiniti/roadmap/sesje-399949a60a78/all",
+                      "https://linear.app/wrld-rpg/project/gameplay-minigames-dev-310da64689e5",
                     imageOrGifPath:
                       "https://media.licdn.com/dms/image/D4D0BAQF8WGlksBLY0g/company-logo_200_200/0/1665590651137/linearapp_logo?e=2147483647&v=beta&t=O_5o4iiky8EZ2ZJr9cPeQ64jrILDiYBue_PI-BPxC4c",
                   },
