@@ -137,6 +137,50 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             endEventSound: "",
           },
         },
+        {
+          name: "Webdev - Kosztorys swój zrób & Zleceniodawców znajdź (Tomek Saska / Rodzice Zuzy) & Cover letter zautomaytzowany & CV wysyłanie stwórz",
+          description: "",
+          imagePath:
+            "https://cdn.dribbble.com/users/1124806/screenshots/4871258/ezgif.com-optimize.gif",
+          imageAltText: "",
+          eventGroupId: 0,
+          eventInstanceId: 0,
+          GIFPath: "",
+          isAllDayLong: false,
+          allDayLongVariantProps: {
+            importance: "",
+            date: new Date(),
+          },
+          timedVariantProps: {
+            startDateAndTime: new Date(),
+            endDateAndTime: new Date(),
+          },
+          deadlineVariant: "none",
+          addOnsByVariants: {
+            variant1: {
+              step1: {},
+            },
+          },
+          needsFulfilledByVariant: {
+            variant1: {
+              isWant: false,
+              isCreate: false,
+              isAbsorb: false,
+              isChill: false,
+              isVent: false,
+              isSquad: false,
+              isActive: false,
+              isWilderness: false,
+              isFresh: false,
+            },
+          },
+          vocalNotifications: {
+            startEventSound: "",
+            xMinutesBeforeStartAmount: null,
+            xMinutesBeforeStartSound: "",
+            endEventSound: "",
+          },
+        },
       ],
       oneDay: [
         {
