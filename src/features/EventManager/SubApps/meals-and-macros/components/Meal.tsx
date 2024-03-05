@@ -18,7 +18,6 @@ const mealCss = {
     universalCss.container,
     {
       display: "grid",
-      gridAutoFlow: "column",
       gridTemplateColumns: "7fr 3fr",
       justifyItems: "start",
 
@@ -32,6 +31,7 @@ const mealCss = {
       },
 
       "& > div:nth-of-type(2)": {
+        gridColumn: "2 / 3",
         color: "darkgrey",
       },
     },

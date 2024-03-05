@@ -603,6 +603,26 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                             },
                           ],
                         },
+                        {
+                          name: "Makaron z cukinia i kurczakiem",
+                          imagePaths: "/images/aaa.png",
+                          ytVideoId: "Fb_IljnhwTo",
+                          ingredients: [
+                            {
+                              name: "Makaron",
+                              amount: 100,
+                              unit: "g",
+                              macros: {
+                                forThisAmount: 100,
+                                calories: 550,
+                              },
+                              priceDetails: {
+                                price: 2.99,
+                                forThisAmount: 100,
+                              },
+                            },
+                          ],
+                        },
                       ],
                       periodOfDaysOfEating: {
                         1: [
