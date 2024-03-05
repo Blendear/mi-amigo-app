@@ -604,21 +604,476 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                           ],
                         },
                         {
-                          name: "Makaron z cukinia i kurczakiem",
-                          imagePaths: "/images/aaa.png",
-                          ytVideoId: "Fb_IljnhwTo",
+                          name: "Makaron ze szpinakiem i suszonymi pomidorami",
+                          imagePaths:
+                            "https://www.lastingredient.com/wp-content/uploads/2022/02/sun-dried-tomato-pasta1.jpg",
+                          ytVideoId:
+                            "Ugotować makaron.Szpinak pokroić. Na patelnię na średnim ogniu dać masło,  pokrojony czosnek i dużo soli. Rozgrzać aż masło się roztopi. Nie można dopuścić, by spaliło się. Dodać szpinak i mieszać od czasu do czasu. Gdy szpinak będzie miękki, dodać sos sojowy i pokrojone pomidory suszone. Do smaku dodać łyżkę oleju z pomidorów. Przyprawić do smaku - powinien być mocny.Ugotowany makaron odcedzić na sitku i wsypać na patelnie. Smażyć ze szpinakiem, aż wszystko się obklei. Dosolić, jeżeli jest za mało wyraziste.",
                           ingredients: [
                             {
-                              name: "Makaron",
+                              name: "Makaron Świderek",
+                              description: "Carrefour - Marka X",
+                              amount: 0,
+                              unit: "g",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                            {
+                              name: "Szpinak",
+                              description: "Mrożony czy zwykly lepszy?",
+                              amount: 125,
+                              unit: "g",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                            {
+                              name: "Pomidory suszone & Olej z nich",
+                              description: "___",
+                              amount: 0,
+                              unit: "___",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                            {
+                              name: "Sos sojowy",
+                              description: "___",
+                              amount: 0,
+                              unit: "ml",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                            {
+                              name: "Masło",
+                              description: "___",
+                              amount: 0,
+                              unit: "g",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                            {
+                              name: "Przyprawa Chimichurri",
+                              description: "___",
+                              amount: 20,
+                              unit: "___",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                            {
+                              name: "Przyprawa Czosnek Granulowany",
+                              description: "___",
+                              amount: 30,
+                              unit: "___",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                            {
+                              name: "Przyprawa Adobo",
+                              description: "___",
+                              amount: 0,
+                              unit: "___",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                            {
+                              name: "Sól",
+                              description: "___",
+                              amount: 0,
+                              unit: "g",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                          ],
+                        },
+                        {
+                          name: "Kurczak teriyaki z ryżem",
+                          imagePaths:
+                            "https://szefpoleca.pl/wp-content/uploads/2022/10/smazony-kurczak-w-sosie-teriyaki.webp",
+                          ytVideoId: "___",
+                          ingredients: [
+                            {
+                              name: "Kurczak",
+                              description: "___",
+                              amount: 500,
+                              unit: "g",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                            {
+                              name: "Sos teriyaki",
+                              description: "___",
+                              amount: 0,
+                              unit: "g",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                            {
+                              name: "Ryż",
+                              description: "___",
                               amount: 100,
                               unit: "g",
                               macros: {
-                                forThisAmount: 100,
-                                calories: 550,
+                                forThisAmount: 0,
+                                calories: 0,
                               },
                               priceDetails: {
-                                price: 2.99,
-                                forThisAmount: 100,
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                            {
+                              name: "Olej",
+                              description: "Kujawski? Z pestek winogron?",
+                              amount: 0,
+                              unit: "___",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                            {
+                              name: "Brokuł",
+                              description: "___",
+                              amount: 0,
+                              unit: "___",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                          ],
+                        },
+                        {
+                          name: "Nuggetsy z ziemniakami i papryką",
+                          imagePaths:
+                            "https://media.istockphoto.com/id/1272925171/pl/zdj%C4%99cie/sma%C5%BCone-nuggetsy-z-kurczaka-z-gotowanymi-ziemniakami-i-%C5%9Bwie%C5%BCymi-warzywami-na-drewnianym.jpg?s=1024x1024&w=is&k=20&c=WFo4-wQTp94mvE7ru0B6W72QAvc6LgSk3jR69qG58ig=",
+                          ytVideoId: "___",
+                          ingredients: [
+                            {
+                              name: "Kurczak pierś",
+                              description: "___",
+                              amount: 80,
+                              unit: "g",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                            {
+                              name: "Ziemniaki",
+                              description: "Młode? Najtańsze? Od kogoś?",
+                              amount: 0,
+                              unit: "___",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                            {
+                              name: "Olej",
+                              description: "___",
+                              amount: 0,
+                              unit: "___",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                            {
+                              name: "Papryka",
+                              description: "___",
+                              amount: 0,
+                              unit: "___",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                            {
+                              name: "Przyprawa do kurczaka",
+                              description: "___",
+                              amount: 0,
+                              unit: "___",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                            {
+                              name: "Jajko",
+                              description: "Do panierki | L'ka",
+                              amount: 0,
+                              unit: "___",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                            {
+                              name: "Panierka ryżowa z CH",
+                              description: "___",
+                              amount: 0,
+                              unit: "___",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                          ],
+                        },
+                        {
+                          name: "Rolady z kluskami i surówką z czerwonej kapusty",
+                          imagePaths:
+                            "https://jaw.pl/wp-content/uploads/2020/04/bistro-1.jpg",
+                          ytVideoId: "___",
+                          ingredients: [
+                            {
+                              name: "Rolada wołowa(?)",
+                              description: "___",
+                              amount: 0,
+                              unit: "g",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                            {
+                              name: "Kluski",
+                              description: "___",
+                              amount: 0,
+                              unit: "g",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                            {
+                              name: "Surówka",
+                              description: "___",
+                              amount: 0,
+                              unit: "g",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                            {
+                              name: "Sos pieczeniowy ciemny",
+                              description: "___",
+                              amount: 0,
+                              unit: "ml",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                          ],
+                        },
+                        {
+                          name: "Hamubrgery z indykiem",
+                          imagePaths:
+                            "https://www.gardengourmet.pl/sites/default/files/recipes/5b11702b20c86f9a29b833635dd6617d_200828_mediamonks_gg_spicytarian.jpg",
+                          ytVideoId: "___",
+                          ingredients: [
+                            {
+                              name: "Mięso mielone z indyka",
+                              description: "___",
+                              amount: 0,
+                              unit: "g",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                            {
+                              name: "Bułki",
+                              description: "___",
+                              amount: 0,
+                              unit: "szt",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                            {
+                              name: "Ser Wegański",
+                              description: "___",
+                              amount: 0,
+                              unit: "g",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                            {
+                              name: "Sałata",
+                              description: "___",
+                              amount: 0,
+                              unit: "g",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                            {
+                              name: "Panierka ryżowa z CH",
+                              description: "___",
+                              amount: 0,
+                              unit: "g",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                            {
+                              name: "Olej",
+                              description: "___",
+                              amount: 0,
+                              unit: "ml",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
                               },
                             },
                           ],
