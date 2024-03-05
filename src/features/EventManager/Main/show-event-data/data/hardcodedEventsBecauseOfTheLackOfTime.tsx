@@ -1078,6 +1078,80 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                             },
                           ],
                         },
+                        {
+                          name: "Tortilla",
+                          imagePaths:
+                            "https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/tortilla-z-kurczakiem-01.jpg",
+                          ytVideoId: "___",
+                          ingredients: [],
+                        },
+                        {
+                          name: "Risotto z kurczakiem i groszkiem",
+                          imagePaths:
+                            "https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/tortilla-z-kurczakiem-01.jpg",
+                          ytVideoId: "___",
+                          ingredients: [],
+                        },
+                        {
+                          name: "Ryż na mleku z cynamonem",
+                          imagePaths: "__",
+                          ytVideoId: "___",
+                          ingredients: [
+                            {
+                              name: "__",
+                              amount: 0,
+                              unit: "__",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                          ],
+                        },
+                        {
+                          name: "Buchty z kisielem malinowym",
+                          imagePaths: "__",
+                          ytVideoId: "___",
+                          ingredients: [
+                            {
+                              name: "__",
+                              amount: 0,
+                              unit: "__",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                          ],
+                        },
+                        {
+                          name: "__",
+                          imagePaths: "__",
+                          ytVideoId: "___",
+                          ingredients: [
+                            {
+                              name: "__",
+                              amount: 0,
+                              unit: "__",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                          ],
+                        },
                       ],
                       periodOfDaysOfEating: {
                         1: [
