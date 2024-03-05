@@ -23,20 +23,25 @@ export type ImageWithWrapperProps = {
 
 export type Ingredient = {
   name: string;
+  description?: string;
   amount: number;
   unit: string; // of measurement
   macros: {
     forThisAmount: number;
-    forThisUnit: string;
     calories: number;
     proteins?: number;
     carbs?: number;
     fats?: number;
   };
+  priceDetails: {
+    price: number;
+    forThisAmount: number;
+  };
 };
 
 export type Meal = {
   name: string;
+  description?: string;
   imagePaths: string;
   ytVideoId: string; // "how to prepare it" video
   ingredients: Ingredient[];

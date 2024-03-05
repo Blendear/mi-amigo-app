@@ -93,30 +93,30 @@ export const Ingredient = ({ details }: IngredientProps) => {
             setAmount(Number(e.target.value));
           }}
         />
-        <div>{details.macros.forThisUnit}</div>
+        <div>{details.unit}</div>
       </div>
 
       <ul css={ingredientCss.macrosList}>
         <li>
           <div>kcal</div>
-          <div>{`${details.macros.calories} / ${details.macros.forThisAmount}${details.macros.forThisUnit}`}</div>
+          <div>{`${details.macros.calories} / ${details.macros.forThisAmount}${details.unit}`}</div>
         </li>
         {details.macros.proteins && (
           <li css={{ display: "flex" }}>
             <div>Proteins</div>
-            <div>{`${details.macros.proteins} / ${details.macros.forThisAmount}${details.macros.forThisUnit}`}</div>
+            <div>{`${details.macros.proteins} / ${details.macros.forThisAmount}${details.unit}`}</div>
           </li>
         )}
         {details.macros.carbs && (
           <li css={{ display: "flex" }}>
             <div>Carbs</div>
-            <div>{`${details.macros.carbs} / ${details.macros.forThisAmount}${details.macros.forThisUnit}`}</div>
+            <div>{`${details.macros.carbs} / ${details.macros.forThisAmount}${details.unit}`}</div>
           </li>
         )}
         {details.macros.fats && (
           <li css={{ display: "flex" }}>
             <div>Fats</div>
-            <div>{`${details.macros.fats} / ${details.macros.forThisAmount}${details.macros.forThisUnit}`}</div>
+            <div>{`${details.macros.fats} / ${details.macros.forThisAmount}${details.unit}`}</div>
           </li>
         )}
       </ul>

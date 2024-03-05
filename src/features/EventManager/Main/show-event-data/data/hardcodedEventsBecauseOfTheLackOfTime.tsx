@@ -529,12 +529,17 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                           ingredients: [
                             {
                               name: "Kabanosy",
+                              description:
+                                "Tarczyński - drób/wieprz (nie wędzone)",
                               amount: 105,
                               unit: "g",
                               macros: {
                                 forThisAmount: 100,
-                                forThisUnit: "g",
                                 calories: 550,
+                              },
+                              priceDetails: {
+                                price: 6.99,
+                                forThisAmount: 105,
                               },
                             },
                             {
@@ -543,8 +548,11 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                               unit: "szt",
                               macros: {
                                 forThisAmount: 1,
-                                forThisUnit: "szt",
                                 calories: 178,
+                              },
+                              priceDetails: {
+                                price: 0.5,
+                                forThisAmount: 1,
                               },
                             },
                           ],
@@ -556,12 +564,15 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                           ingredients: [
                             {
                               name: "Makaron",
-                              amount: 105,
+                              amount: 100,
                               unit: "g",
                               macros: {
                                 forThisAmount: 100,
-                                forThisUnit: "g",
                                 calories: 550,
+                              },
+                              priceDetails: {
+                                price: 2.99,
+                                forThisAmount: 100,
                               },
                             },
                             {
@@ -570,18 +581,24 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                               unit: "szt",
                               macros: {
                                 forThisAmount: 1,
-                                forThisUnit: "szt",
                                 calories: 178,
+                              },
+                              priceDetails: {
+                                price: 2.99,
+                                forThisAmount: 1,
                               },
                             },
                             {
                               name: "Kurczak",
-                              amount: 1,
-                              unit: "szt",
+                              amount: 500,
+                              unit: "g",
                               macros: {
-                                forThisAmount: 1,
-                                forThisUnit: "szt",
+                                forThisAmount: 100,
                                 calories: 178,
+                              },
+                              priceDetails: {
+                                price: 29.99,
+                                forThisAmount: 1000,
                               },
                             },
                           ],
@@ -601,8 +618,11 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                                 unit: "g",
                                 macros: {
                                   forThisAmount: 100,
-                                  forThisUnit: "g",
                                   calories: 550,
+                                },
+                                priceDetails: {
+                                  price: 6.99,
+                                  forThisAmount: 105,
                                 },
                               },
                               {
@@ -611,8 +631,11 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                                 unit: "szt",
                                 macros: {
                                   forThisAmount: 1,
-                                  forThisUnit: "szt",
                                   calories: 178,
+                                },
+                                priceDetails: {
+                                  price: 0.5,
+                                  forThisAmount: 1,
                                 },
                               },
                             ],
@@ -624,12 +647,15 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                             ingredients: [
                               {
                                 name: "Makaron",
-                                amount: 105,
+                                amount: 100,
                                 unit: "g",
                                 macros: {
                                   forThisAmount: 100,
-                                  forThisUnit: "g",
                                   calories: 550,
+                                },
+                                priceDetails: {
+                                  price: 2.99,
+                                  forThisAmount: 100,
                                 },
                               },
                               {
@@ -638,18 +664,24 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                                 unit: "szt",
                                 macros: {
                                   forThisAmount: 1,
-                                  forThisUnit: "szt",
                                   calories: 178,
+                                },
+                                priceDetails: {
+                                  price: 2.99,
+                                  forThisAmount: 1,
                                 },
                               },
                               {
                                 name: "Kurczak",
-                                amount: 1,
-                                unit: "szt",
+                                amount: 500,
+                                unit: "g",
                                 macros: {
-                                  forThisAmount: 1,
-                                  forThisUnit: "szt",
+                                  forThisAmount: 100,
                                   calories: 178,
+                                },
+                                priceDetails: {
+                                  price: 29.99,
+                                  forThisAmount: 1000,
                                 },
                               },
                             ],
@@ -668,8 +700,11 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                                 unit: "g",
                                 macros: {
                                   forThisAmount: 100,
-                                  forThisUnit: "g",
                                   calories: 550,
+                                },
+                                priceDetails: {
+                                  price: 6.99,
+                                  forThisAmount: 105,
                                 },
                               },
                               {
@@ -678,8 +713,11 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                                 unit: "szt",
                                 macros: {
                                   forThisAmount: 1,
-                                  forThisUnit: "szt",
                                   calories: 178,
+                                },
+                                priceDetails: {
+                                  price: 0.5,
+                                  forThisAmount: 1,
                                 },
                               },
                             ],
