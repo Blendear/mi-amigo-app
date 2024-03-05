@@ -101,6 +101,7 @@ export const Ingredient = ({ details }: IngredientProps) => {
           <div>kcal</div>
           <div>{`${details.macros.calories} / ${details.macros.forThisAmount}${details.unit}`}</div>
         </li>
+
         {details.macros.proteins && (
           <li css={{ display: "flex" }}>
             <div>Proteins</div>
@@ -119,6 +120,13 @@ export const Ingredient = ({ details }: IngredientProps) => {
             <div>{`${details.macros.fats} / ${details.macros.forThisAmount}${details.unit}`}</div>
           </li>
         )}
+
+        <li css={{ display: "flex" }}>
+          <div>Price</div>
+          <div>{`${details.priceDetails.price} / ${
+            details.priceDetails.forThisAmount
+          }${"zł"}`}</div>
+        </li>
       </ul>
     </div>
   );

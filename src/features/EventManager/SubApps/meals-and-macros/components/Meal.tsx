@@ -30,6 +30,10 @@ const mealCss = {
         justifySelf: "end",
         display: "flex",
       },
+
+      "& > div:nth-of-type(2)": {
+        color: "darkgrey",
+      },
     },
   ]),
 };
@@ -57,6 +61,21 @@ export const Meal = ({ details, hideContentUnderNamedButton }: MealProps) => {
     return totalCalories;
   };
 
+  const getTotalMealPrice = () => {
+    let totalPrice = 0;
+
+    payload.periodOfDaysOfEating[dayOfMealPlanIndex.current][
+      mealOfTheDayIndex.current
+    ].ingredients.forEach((ingredient) => {
+      totalPrice +=
+        (ingredient.priceDetails.price /
+          ingredient.priceDetails.forThisAmount) *
+        ingredient.amount;
+    });
+
+    return totalPrice;
+  };
+
   return (
     <div css={mealCss.container}>
       {hideContentUnderNamedButton && (
@@ -82,6 +101,10 @@ export const Meal = ({ details, hideContentUnderNamedButton }: MealProps) => {
             <div>
               <div>{`${getTotalMealCalories()}`}</div>
               <span>🔥</span>
+            </div>
+            <div>
+              <div>{`${getTotalMealPrice()}`}</div>
+              <span>💸</span>
             </div>
           </div>
         </div>
