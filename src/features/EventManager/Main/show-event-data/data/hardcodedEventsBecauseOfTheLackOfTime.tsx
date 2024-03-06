@@ -1747,7 +1747,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                   ],
                 },
               },
-              "Zęby":{}
+              "Zęby (dla Halo)": {},
               "Prosiaczki przyszły?": {
                 howAndTips: {
                   ytVideoId: "",
