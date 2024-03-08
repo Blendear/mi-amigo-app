@@ -2331,15 +2331,15 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
               },
             },
             "Chcę chcieć tworzyć, ale nie chce mi się tworzyć": {
-              "'Want' i'Chłonę' w uszy & 'Fresh' quest": {
+              "'Want' i'Chłonę' w uszy & PEWNY, 'Fresh', 'Pieszczę' quest": {
                 howAndTips: {
                   ytVideoId: "",
                   notes: [
                     {
                       title:
-                        "Brakuje ci właśnie 'want' i 'fresh', a 'chłonę' zatamuje niechęć",
+                        "Brakuje ci właśnie 'want' i 'fresh', a'chłonę' zatamuje niechęć",
                       description:
-                        "Np. Asmongold banteurjący o grze i 3D po paru dniach programowania",
+                        "Koniecznienie z PEWNYM pieszczę (samo chłonę to u mnie x-godzinyn copying mechanizm w limbo opierdolu i misery), np. 3d model wg planu / lineart wedle szkiców. A chłone - Np. Asmongold banteurjący o grze i 3D po paru dniach programowania",
                     },
                   ],
                 },
