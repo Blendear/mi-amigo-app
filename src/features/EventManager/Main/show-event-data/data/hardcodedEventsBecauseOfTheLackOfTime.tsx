@@ -1328,6 +1328,23 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                       subappName: "yt-video-watcher",
                       payload: {
                         ytVideoIds: [
+                          "eFmpqhvedt8",
+                          "gbIo779mqMc",
+                          "j9arClwT26Y",
+                          "iEQhuCzvYWg",
+                          "o48X3_XQ9to",
+                          "K0z7Avc9ZtY",
+                          "__nI6AlmiyY",
+                          "kpsPBjvJGPQ",
+                          "Ita90e7JZAk",
+                          "9ge6TBxcQDs",
+                          "OEjqozzylWM",
+                          "q3XuFWhV8xI",
+                          "8JbBzs1SntA",
+                          "XiyVOavrM04",
+                          "HvATNFwz6q0",
+                          "r5c5rTtA-rM",
+                          "XtCmgZc_ntE",
                           "2niThmdF9ds",
                           "fM4DDIS6sMY",
                           "_OgniM1YurA",
@@ -1369,6 +1386,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                     subappName: "yt-video-watcher",
                     payload: {
                       ytVideoIds: [
+                        "UnaNF1cw-PM",
+                        "hR9hJ3tQals",
                         "przcjMjI5wE",
                         "SVkHOn-uA1",
                         "QjPbSy3XXWM",
@@ -1406,56 +1425,30 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
               },
             },
             "słuchamy - treść": {
-              "engaging - całkowicie zajmujące głowę przy braindead aktywności":
-                {
-                  toolsSubApps: [
-                    {
-                      subappName: "yt-video-watcher",
-                      payload: {
-                        ytVideoIds: ["iGFGRYN9SZA", "O3H9GX6wzLk"],
-                      },
-                    },
-                  ],
-                  toolsPhysicalOrThirdParty: [
-                    {
-                      title: "Audiobook - Stop Prawa",
-                      imageOrGifPath:
-                        "https://covers.storytel.com/jpg-640/0408311112571.6cfcc6e0-43ce-4a46-9b8e-ec39392c3d92?optimize=high&quality=70",
-                      linkURL:
-                        "https://www.storytel.com/pl/books/stop-prawa-187574",
-                    },
-                    {
-                      title: "Audiobook - Złodziejska Magia",
-                      imageOrGifPath:
-                        "https://covers.storytel.com/jpg-640/0408311112571.6cfcc6e0-43ce-4a46-9b8e-ec39392c3d92?optimize=high&quality=70",
-                      linkURL:
-                        "https://www.storytel.com/mh/en/books/z%C5%82odziejska-magia-1336520",
-                    },
-                  ],
-                },
-
-              "entertaining - dodaje 'want' do piesczę/braindead questa": {
+              "engaging - wymaga oddania się": {
+                toolsPhysicalOrThirdParty: [
+                  {
+                    title: "Audiobook - Stop Prawa",
+                    imageOrGifPath:
+                      "https://covers.storytel.com/jpg-640/0408311112571.6cfcc6e0-43ce-4a46-9b8e-ec39392c3d92?optimize=high&quality=70",
+                    linkURL:
+                      "https://www.storytel.com/pl/books/stop-prawa-187574",
+                  },
+                  {
+                    title: "Audiobook - Złodziejska Magia",
+                    imageOrGifPath:
+                      "https://covers.storytel.com/jpg-640/0408311112571.6cfcc6e0-43ce-4a46-9b8e-ec39392c3d92?optimize=high&quality=70",
+                    linkURL:
+                      "https://www.storytel.com/mh/en/books/z%C5%82odziejska-magia-1336520",
+                  },
+                ],
+              },
+              "entertaining - w tle może lecieć": {
                 toolsSubApps: [
                   {
                     subappName: "yt-video-watcher",
                     payload: {
-                      ytVideoIds: [
-                        "ESkkfawGzIA",
-                        "wsyPicIwFRU",
-                        "Ain1wmTqlv4",
-                        "5IuCeO1YJBk",
-                        "-tFbgoyUIBE",
-                        "l7-PYDYVRtU",
-                        "U0f3RoMl6fg",
-                        "WDgPcShQh5Q",
-                        "qXdIU0rQYl0",
-                        "NbRgs86V4PA",
-                        "Q1JhXWDdodQ",
-                        "08A_JGzg7Do",
-                        "BWkp2UpDWJs",
-                        "P8R0ARms5Gs",
-                        "fNPQcvQNpOs",
-                      ],
+                      ytVideoIds: ["ESkkfawGzIA"],
                     },
                   },
                 ],
