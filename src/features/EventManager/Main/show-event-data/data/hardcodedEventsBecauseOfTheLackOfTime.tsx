@@ -2353,6 +2353,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
               },
             },
             "Nie chce mi się. NIC.": {
+              "Potrzebujesz się spotkać z amigo || wyjść do galerii do ludzi chociaż":
+                {},
               "Gitarra. Naucz się a banger song": {},
               "'Want' + 'Wataha' & Omów tą niechęć z nimi": {},
               "Rememberer odpal": {},
