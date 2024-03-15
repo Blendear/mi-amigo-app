@@ -2295,7 +2295,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             "Nie chce mi się. NIC.": {
               "Potrzebujesz się spotkać z amigo || wyjść do galerii do ludzi chociaż":
                 {},
-              "TYLKO dlatego że o tym myślisz & że trzeba myśleć do robienia czegoś - dlatego to czujesz. Dlatego SŁUCHAWKI, odpal workflow 'Tworzę', najlepiej 'Pieszczę' + MÓWIONY podcast pod maximum zajęcia i po 5 minut muzyka":
+              "TYLKO dlatego że o tym myślisz & że trzeba myśleć do robienia czegoś - dlatego to czujesz. Dlatego SŁUCHAWKI, odpal workflow 'Tworzę', najlepiej 'Pieszczę' + MÓWIONY (najlepiej friends, like PKP or CR) podcast pod maximum zajęcia i po 5 minut muzyka":
                 {},
               "Gitarra. Naucz się a banger song": {},
               "'Want' + 'Wataha' & Omów tą niechęć z nimi": {},
