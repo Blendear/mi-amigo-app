@@ -1920,6 +1920,12 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           addOnsByVariants: {
             "W S Z Y S T K I E": {
               // temporary solution against repeating this stepts ine very variant
+              "YT'bowe Omówienie 'gdzie co jest' zobacz": {
+                howAndTips: {
+                  ytVideoId: "ZzNv4HVHs2Q",
+                  notes: [],
+                },
+              },
               "Estimate rób & Ogień adekwatnie do etapu (HATP) używaj": {
                 howAndTips: {
                   ytVideoId: "hook1",
