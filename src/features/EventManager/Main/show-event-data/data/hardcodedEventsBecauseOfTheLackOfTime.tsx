@@ -1730,6 +1730,13 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                   ],
                 },
               },
+              "(H) Przećwicz 5 minut 'Mam potrzebę X, odpalam Mi Amigowksie Y'":
+                {
+                  howAndTips: {
+                    ytVideoId: "",
+                    notes: [],
+                  },
+                },
               "Budżet stan aktualizuj o dzisiejsze wydatki": {
                 howAndTips: {
                   ytVideoId: "",
