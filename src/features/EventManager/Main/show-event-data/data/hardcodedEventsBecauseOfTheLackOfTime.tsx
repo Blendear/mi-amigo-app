@@ -1928,6 +1928,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           addOnsByVariants: {
             "W S Z Y S T K I E": {
               // temporary solution against repeating this stepts ine very variant
+              "Otwierasz `Dzisiaj` view w Linear || Szukasz guza w dedykowanym dla pod-projektu linku do lineara":
+                {},
               "YT'bowe Omówienie 'gdzie co jest' zobacz": {
                 howAndTips: {
                   ytVideoId: "ZzNv4HVHs2Q",
