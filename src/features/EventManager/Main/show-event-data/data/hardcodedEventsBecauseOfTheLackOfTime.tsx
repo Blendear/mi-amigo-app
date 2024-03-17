@@ -2303,6 +2303,10 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
               "'Want' + 'Wataha' & Omów tą niechęć z nimi": {},
               "Rememberer odpal": {},
             },
+            "Planuję 5h, zamiast tworzyć w 1h i w 2h nakierować / poprawić": {
+              "Fail fast. BANALNIE I PRZYJMENIE jest poprawić surowy szkic, W UJ TRUDNO jest idealnie zapełnmić pusta kartkę za pierwszym razem":
+                {},
+            },
             "Przytłoczony/zestresowany życiem/problemem X": {
               "Z Ewronikiem, Jordanem, Joe'm || Ekipą omów problem": {},
               "Wicofie. Teraz damy wam z siostrzyczką przykład": {
