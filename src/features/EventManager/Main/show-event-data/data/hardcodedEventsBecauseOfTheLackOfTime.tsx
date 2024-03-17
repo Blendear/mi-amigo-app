@@ -1928,7 +1928,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           addOnsByVariants: {
             "W S Z Y S T K I E": {
               // temporary solution against repeating this stepts ine very variant
-              "Otwierasz `Dzisiaj` view w Linear || Szukasz guza w dedykowanym dla pod-projektu linku do lineara":
+              "Start dnia = `Dzisiaj` view w Linear | Koniec dnia = Estimate'ując czas, updateujesz `Dzisiaj`, szukając guza w dedykowanym dla pod-projektu linku do lineara":
                 {},
               "YT'bowe Omówienie 'gdzie co jest' zobacz": {
                 howAndTips: {
