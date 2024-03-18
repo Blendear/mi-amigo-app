@@ -2067,8 +2067,14 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                 },
               },
             },
+
             "Sesja - Meet Character Dev": {
-              "Przygotuj narzędzia": {},
+              "Użyj omówienia YT i templatki data objectu": {
+                howAndTips: {
+                  ytVideoId: "9ExlfEK9JCY",
+                  notes: [],
+                },
+              },
             },
             "Sesja - 2D Vis Dev": {
               "Przygotuj narzędzia": {},
