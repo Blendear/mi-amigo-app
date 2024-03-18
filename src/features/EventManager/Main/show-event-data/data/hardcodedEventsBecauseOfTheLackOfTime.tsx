@@ -1748,6 +1748,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                   ],
                 },
               },
+              "Odkurz co-poniedziałkowo": {},
               "Zęby (dla Halo)": {},
               "Jedno 'necessary' quest z Mi Amigo?": {},
               "Prosiaczki przyszły?": {
