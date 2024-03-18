@@ -1817,7 +1817,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                     ],
                   },
                 },
-              "Ściągnij || Umyj naczynia": {},
+              "ZLEW TEŻ i naczynia ZABEZPIECZ przed kapaniem na drewno (dając na suszarkę lub wytrzyj) po umyciu || Ściągnij ":
+                {},
               "Śmieci wychędoż": {
                 howAndTips: {
                   ytVideoId: "",
