@@ -2303,7 +2303,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           deadlineVariant: "none",
           addOnsByVariants: {
             "Nie chce mi się. NIC.": {
-              "Potrzebujesz się spotkać z amigo || wyjść do galerii do ludzi chociaż":
+              "Potrzebujesz się 'focusmate' lub spotkać live z amigo || wyjść do galerii do ludzi chociaż":
                 {},
               "TYLKO dlatego że o tym myślisz & że trzeba myśleć do robienia czegoś - dlatego to czujesz. Dlatego SŁUCHAWKI, odpal workflow 'Tworzę', najlepiej 'Pieszczę' + MÓWIONY (najlepiej friends, like PKP or CR) podcast pod maximum zajęcia i po 5 minut muzyka":
                 {},
