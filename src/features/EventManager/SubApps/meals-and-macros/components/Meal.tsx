@@ -86,6 +86,9 @@ export const Meal = ({ details, hideContentUnderNamedButton }: MealProps) => {
         >
           <ImageWithWrapper src={details.imagePaths} width="16rem" />
           <p>{details.name}</p>
+          <p css={{ fontSize: "0.8rem" }}>
+            {details.description ? details.description : ""}
+          </p>
         </button>
       )}
       {(!hideContentUnderNamedButton || !hideDetails) && (
