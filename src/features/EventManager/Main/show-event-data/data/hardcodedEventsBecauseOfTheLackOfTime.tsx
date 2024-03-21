@@ -1177,6 +1177,48 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                           ],
                         },
                         {
+                          name: "Makaron z pesto",
+                          imagePaths:
+                            "https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/makaron-z-kurczakiem-i-pesto-00.jpg",
+                          ytVideoId: "___",
+                          ingredients: [
+                            {
+                              name: "__",
+                              amount: 0,
+                              unit: "__",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                          ],
+                        },
+                        {
+                          name: "Zapiekanka z serem, borkułami, ziemniakami, makaronem i kurczakiem",
+                          imagePaths:
+                            "https://poprostupycha.com.pl/wp-content/uploads/2021/04/zapiekanka-z-brokulami_11.jpg",
+                          ytVideoId: "___",
+                          ingredients: [
+                            {
+                              name: "__",
+                              amount: 0,
+                              unit: "__",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                          ],
+                        },
+                        {
                           name: "Łosoś z kaszą bulgur i niebieską kapustą",
                           imagePaths:
                             "https://bi.im-g.pl/im/6c/48/17/z24413804Q,Losos-z-piekarnika.jpg",
