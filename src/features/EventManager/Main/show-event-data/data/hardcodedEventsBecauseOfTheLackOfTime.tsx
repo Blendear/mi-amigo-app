@@ -528,10 +528,10 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                           ytVideoId: "F1Hq8eVOMHs",
                           ingredients: [
                             {
-                              name: "Kabanosy",
+                              name: "Kabanosy | Cała paczka | Tarczyński drób-wieprz",
                               description:
                                 "Tarczyński - drób/wieprz (nie wędzone)",
-                              amount: 105,
+                              amount: 105, // whole package
                               unit: "g",
                               macros: {
                                 forThisAmount: 100,
@@ -543,15 +543,28 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                               },
                             },
                             {
-                              name: "Bułki",
-                              amount: 1,
+                              name: "Bułka",
+                              amount: 2,
                               unit: "szt",
                               macros: {
                                 forThisAmount: 1,
-                                calories: 178,
+                                calories: 180,
                               },
                               priceDetails: {
                                 price: 0.5,
+                                forThisAmount: 1,
+                              },
+                            },
+                            {
+                              name: "Masło Wegańskie | 1/5 z 200g kostki | Rama - Carrefour",
+                              amount: 40, // 200 / 5 = 40g for 2 buns
+                              unit: "g",
+                              macros: {
+                                forThisAmount: 100,
+                                calories: 720,
+                              },
+                              priceDetails: {
+                                price: 4.99,
                                 forThisAmount: 1,
                               },
                             },
@@ -564,34 +577,34 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                           ytVideoId: "Fb_IljnhwTo",
                           ingredients: [
                             {
-                              name: "Makaron",
-                              amount: 100,
+                              name: "Makaron | porcja = 1/6 z 750g, czyli 1,5 opakowania po 0.5 | Simply z pszenicy - Carrefour",
+                              amount: 125, // 750 (1.5 * 500g package) / 6 = 125
                               unit: "g",
                               macros: {
                                 forThisAmount: 100,
-                                calories: 550,
+                                calories: 351,
                               },
                               priceDetails: {
-                                price: 2.99,
-                                forThisAmount: 100,
+                                price: 5.63,
+                                forThisAmount: 1000,
                               },
                             },
                             {
-                              name: "Cukinia",
-                              amount: 1,
-                              unit: "szt",
+                              name: "Cukinia | porcja = 1/6 z 1100g, czyli 2 średnie sztuki",
+                              amount: 183, // 1100 (2 pieces) / 6 = 183.33
+                              unit: "g",
                               macros: {
-                                forThisAmount: 1,
-                                calories: 178,
+                                forThisAmount: 100,
+                                calories: 62,
                               },
                               priceDetails: {
-                                price: 2.99,
-                                forThisAmount: 1,
+                                price: 8.99,
+                                forThisAmount: 1000,
                               },
                             },
                             {
-                              name: "Kurczak",
-                              amount: 500,
+                              name: "Kurczak Filet Z Piersi | porcja = 1/6 z 500g",
+                              amount: 83.33, // 500 / 6 = 83.33
                               unit: "g",
                               macros: {
                                 forThisAmount: 100,

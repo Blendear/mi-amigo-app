@@ -120,6 +120,10 @@ export const MealsAndMacros = ({ payload }: MealsAndMacrosProps) => {
         ) : (
           // Show all meals
           <div>
+            <p>
+              KOCHANIUTKI, widziana porcja oznacza 1/6 ugotowanej całości,
+              żebyśmy - ja i Zuza - mieli 1 porcję danego dania przez 3 dni
+            </p>
             {payload.mealsAvailable.map((meal, index) => (
               <Meal hideContentUnderNamedButton details={meal} key={index} />
             ))}
