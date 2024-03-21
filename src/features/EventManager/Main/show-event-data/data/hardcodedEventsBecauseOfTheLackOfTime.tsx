@@ -1261,6 +1261,27 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                           ],
                         },
                         {
+                          name: "Pierogi nie-zapiekane",
+                          imagePaths:
+                            "https://ocdn.eu/pulscms-transforms/1/SsJk9kpTURBXy84Zjg0NTA5NmY3OGM2YzczYjQzZmY5ODY4ZTdjMjUzMi5qcGeTlQMAIs0D6M0CMpMJpmFlNjg3ZQaTBc0EsM0Cdt4AAaEwAQ/pierogi-z-kapusta-i-grzybami-to-potrawa-ktorej-nie-moze-zabraknac-na-wigilijnym-stole.jpg",
+                          ytVideoId: "___",
+                          ingredients: [
+                            {
+                              name: "__",
+                              amount: 0,
+                              unit: "__",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                          ],
+                        },
+                        {
                           name: "Buchty z kisielem malinowym",
                           imagePaths:
                             "https://bi.im-g.pl/im/9d/d4/18/z26036381K,Kluski-na-parze-z-truskawkami.jpg",
