@@ -75,6 +75,7 @@ export const MealsAndMacros = ({ payload }: MealsAndMacrosProps) => {
     >
       <section css={mealsAndMacrosCss.container}>
         <button
+          css={universalCss.button}
           onClick={() => {
             setContentVariant((prev) => {
               return prev === "periods" ? "all-meals" : "periods";

@@ -817,7 +817,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                           ],
                         },
                         {
-                          name: "Nuggetsy z ziemniakami i papryką",
+                          name: "Nuggetsy z ziemniakami i marchewką",
                           imagePaths:
                             "https://media.istockphoto.com/id/1272925171/pl/zdj%C4%99cie/sma%C5%BCone-nuggetsy-z-kurczaka-z-gotowanymi-ziemniakami-i-%C5%9Bwie%C5%BCymi-warzywami-na-drewnianym.jpg?s=1024x1024&w=is&k=20&c=WFo4-wQTp94mvE7ru0B6W72QAvc6LgSk3jR69qG58ig=",
                           ytVideoId: "___",
@@ -987,7 +987,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                           ],
                         },
                         {
-                          name: "Hamubrgery z indykiem",
+                          name: "Hamubrgery z indykiem i ogórkami kiszonymi",
                           imagePaths:
                             "https://www.gardengourmet.pl/sites/default/files/recipes/5b11702b20c86f9a29b833635dd6617d_200828_mediamonks_gg_spicytarian.jpg",
                           ytVideoId: "___",
@@ -1093,8 +1093,114 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                           ingredients: [],
                         },
                         {
+                          name: "Kasza orkiszowa z kurczakiem, sosem i kalafiorem",
+                          imagePaths:
+                            "https://www.jestemfit.pl/upload/gallery/2016/04/id_11074_1460718284_750x500.jpg",
+                          ytVideoId: "___",
+                          ingredients: [
+                            {
+                              name: "__",
+                              amount: 0,
+                              unit: "__",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                          ],
+                        },
+                        {
+                          name: "0kcal Konjac Makaron, makaron chiński, kurczak i sos chiński",
+                          imagePaths:
+                            "https://files.ketodietapp.com/Blog/files/2021/03/shirataki-noodles-preparation.jpg",
+                          ytVideoId: "___",
+                          ingredients: [
+                            {
+                              name: "__",
+                              amount: 0,
+                              unit: "__",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                          ],
+                        },
+                        {
+                          name: "Chilli concarne z mięsem z indyka i papryką",
+                          imagePaths:
+                            "https://static.fajnegotowanie.pl/media/uploads/media_image/original/przepis/1125/chili-con-carne.jpg",
+                          ytVideoId: "___",
+                          ingredients: [
+                            {
+                              name: "__",
+                              amount: 0,
+                              unit: "__",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                          ],
+                        },
+                        {
+                          name: "Spaghetti z mięsem z indyka",
+                          imagePaths:
+                            "https://ojciecgotuje.pl/wp-content/uploads/2019/05/Spaghetti-Bolognese.jpg",
+                          ytVideoId: "___",
+                          ingredients: [
+                            {
+                              name: "__",
+                              amount: 0,
+                              unit: "__",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                          ],
+                        },
+                        {
+                          name: "Łosoś z kaszą bulgur i niebieską kapustą",
+                          imagePaths:
+                            "https://bi.im-g.pl/im/6c/48/17/z24413804Q,Losos-z-piekarnika.jpg",
+                          ytVideoId: "___",
+                          ingredients: [
+                            {
+                              name: "__",
+                              amount: 0,
+                              unit: "__",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                          ],
+                        },
+                        {
                           name: "Ryż na mleku z cynamonem",
-                          imagePaths: "__",
+                          imagePaths:
+                            "https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/ryz_zapiekany_z_jablkami_01.jpg",
                           ytVideoId: "___",
                           ingredients: [
                             {
@@ -1114,7 +1220,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                         },
                         {
                           name: "Buchty z kisielem malinowym",
-                          imagePaths: "__",
+                          imagePaths:
+                            "https://bi.im-g.pl/im/9d/d4/18/z26036381K,Kluski-na-parze-z-truskawkami.jpg",
                           ytVideoId: "___",
                           ingredients: [
                             {
@@ -1133,8 +1240,30 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                           ],
                         },
                         {
-                          name: "__",
-                          imagePaths: "__",
+                          name: "Tosty z serem, szynką i ogórkami",
+                          imagePaths:
+                            "https://cdn.galleries.smcloud.net/t/photos/gf-yQnT-XLAc-diUq_pizza-tosty-ekspresowe-kanapki-na-cieplo.jpg",
+                          ytVideoId: "___",
+                          ingredients: [
+                            {
+                              name: "__",
+                              amount: 0,
+                              unit: "__",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                          ],
+                        },
+                        {
+                          name: "Bułki z kremem czekoladowym",
+                          imagePaths:
+                            "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Nutella_bread_12-2015.jpg/2560px-Nutella_bread_12-2015.jpg",
                           ytVideoId: "___",
                           ingredients: [
                             {
