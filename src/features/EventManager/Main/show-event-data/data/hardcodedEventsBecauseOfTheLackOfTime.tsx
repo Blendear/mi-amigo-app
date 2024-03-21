@@ -528,9 +528,9 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                           ytVideoId: "F1Hq8eVOMHs",
                           ingredients: [
                             {
-                              name: "Kabanosy | Cała paczka | Tarczyński drób-wieprz",
+                              name: "Kabanosy",
                               description:
-                                "Tarczyński - drób/wieprz (nie wędzone)",
+                                "Cała paczka | Tarczyński - drób/wieprz (nie wędzone)",
                               amount: 105, // whole package
                               unit: "g",
                               macros: {
@@ -544,6 +544,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                             },
                             {
                               name: "Bułka",
+                              description:
+                                "Średnia, wyższa kajzerka lub kwadratowa z ziarnami",
                               amount: 2,
                               unit: "szt",
                               macros: {
@@ -556,7 +558,9 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                               },
                             },
                             {
-                              name: "Masło Wegańskie | 1/5 z 200g kostki | Rama - Carrefour",
+                              name: "Masło Wegańskie",
+                              description:
+                                "1/5 z 200g kostki | Rama - Carrefour",
                               amount: 40, // 200 / 5 = 40g for 2 buns
                               unit: "g",
                               macros: {
@@ -577,7 +581,9 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                           ytVideoId: "Fb_IljnhwTo",
                           ingredients: [
                             {
-                              name: "Makaron | porcja = 1/6 z 750g, czyli 1,5 opakowania po 0.5 | Simply z pszenicy - Carrefour",
+                              name: "Makaron",
+                              description:
+                                "porcja = 1/6 z 750g, czyli 1,5 opakowania po 0.5 | Simply z pszenicy - Carrefour",
                               amount: 125, // 750 (1.5 * 500g package) / 6 = 125
                               unit: "g",
                               macros: {
@@ -590,7 +596,9 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                               },
                             },
                             {
-                              name: "Cukinia | porcja = 1/6 z 1100g, czyli 2 średnie sztuki",
+                              name: "Cukinia",
+                              description:
+                                "porcja = 1/6 z 1100g, czyli 2 średnie sztuki",
                               amount: 183, // 1100 (2 pieces) / 6 = 183.33
                               unit: "g",
                               macros: {
@@ -603,7 +611,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                               },
                             },
                             {
-                              name: "Kurczak Filet Z Piersi | porcja = 1/6 z 500g",
+                              name: "Kurczak Filet Z Piersi",
+                              description: "porcja = 1/6 z 500g",
                               amount: 83.33, // 500 / 6 = 83.33
                               unit: "g",
                               macros: {
@@ -613,6 +622,21 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                               priceDetails: {
                                 price: 29.99,
                                 forThisAmount: 1000,
+                              },
+                            },
+                            {
+                              name: "Olej rzepakowy",
+                              description:
+                                "porcja = 1/6 z xg, czyli Y łyżek | Kujawski - Carrefour",
+                              amount: 0,
+                              unit: "ml",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
                               },
                             },
                           ],
@@ -625,45 +649,48 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                             "Ugotować makaron.Szpinak pokroić. Na patelnię na średnim ogniu dać masło,  pokrojony czosnek i dużo soli. Rozgrzać aż masło się roztopi. Nie można dopuścić, by spaliło się. Dodać szpinak i mieszać od czasu do czasu. Gdy szpinak będzie miękki, dodać sos sojowy i pokrojone pomidory suszone. Do smaku dodać łyżkę oleju z pomidorów. Przyprawić do smaku - powinien być mocny.Ugotowany makaron odcedzić na sitku i wsypać na patelnie. Smażyć ze szpinakiem, aż wszystko się obklei. Dosolić, jeżeli jest za mało wyraziste.",
                           ingredients: [
                             {
-                              name: "Makaron Świderek",
-                              description: "Carrefour - Marka X",
-                              amount: 0,
+                              name: "Makaron",
+                              description:
+                                "porcja = 1/6 z 750g, czyli 1,5 opakowania po 0.5 | Simply z pszenicy - Carrefour",
+                              amount: 125, // 750 (1.5 * 500g package) / 6 = 125
                               unit: "g",
                               macros: {
-                                forThisAmount: 0,
-                                calories: 0,
+                                forThisAmount: 100,
+                                calories: 351,
                               },
                               priceDetails: {
-                                price: 0,
-                                forThisAmount: 0,
+                                price: 5.63,
+                                forThisAmount: 1000,
                               },
                             },
                             {
-                              name: "Szpinak",
-                              description: "Mrożony czy zwykly lepszy?",
-                              amount: 125,
+                              name: "Szpinak KONIECZNIE TAŃSZY, Mrożony Brykiet",
+                              description:
+                                "porcja = 1/6 z 900g, czyli z 2 opakowań po 450g | Carrefour",
+                              amount: 150,
                               unit: "g",
                               macros: {
-                                forThisAmount: 0,
-                                calories: 0,
+                                forThisAmount: 100,
+                                calories: 19,
                               },
                               priceDetails: {
-                                price: 0,
-                                forThisAmount: 0,
+                                price: 3.19,
+                                forThisAmount: 450,
                               },
                             },
                             {
                               name: "Pomidory suszone & Olej z nich",
-                              description: "___",
-                              amount: 0,
-                              unit: "___",
+                              description:
+                                "1/6 z 135g, czyli połowy słoika | Ole! - Carrefour",
+                              amount: 270,
+                              unit: "g",
                               macros: {
-                                forThisAmount: 0,
-                                calories: 0,
+                                forThisAmount: 100,
+                                calories: 538,
                               },
                               priceDetails: {
-                                price: 0,
-                                forThisAmount: 0,
+                                price: 11.79,
+                                forThisAmount: 270,
                               },
                             },
                             {
@@ -681,17 +708,18 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                               },
                             },
                             {
-                              name: "Masło",
-                              description: "___",
-                              amount: 0,
+                              name: "Masło Wegańskie",
+                              description:
+                                "1/5 z 200g kostki | Rama - Carrefour",
+                              amount: 40, // 200 / 5 = 40g for 2 buns
                               unit: "g",
                               macros: {
-                                forThisAmount: 0,
-                                calories: 0,
+                                forThisAmount: 100,
+                                calories: 720,
                               },
                               priceDetails: {
-                                price: 0,
-                                forThisAmount: 0,
+                                price: 4.99,
+                                forThisAmount: 1,
                               },
                             },
                             {
