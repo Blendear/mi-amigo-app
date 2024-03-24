@@ -611,6 +611,20 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                               },
                             },
                             {
+                              name: "Sos śmietanowy",
+                              description: "",
+                              amount: 0, // hook1 - food tracking
+                              unit: "g",
+                              macros: {
+                                forThisAmount: 0,
+                                calories: 0,
+                              },
+                              priceDetails: {
+                                price: 0,
+                                forThisAmount: 0,
+                              },
+                            },
+                            {
                               name: "Kurczak Filet Z Piersi",
                               description: "porcja = 1/6 z 500g",
                               amount: 83.33, // 500 / 6 = 83.33
@@ -628,7 +642,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                               name: "Olej rzepakowy",
                               description:
                                 "porcja = 1/6 z xg, czyli Y łyżek | Kujawski - Carrefour",
-                              amount: 0,
+                              amount: 0, // hook1 - food tracking
                               unit: "ml",
                               macros: {
                                 forThisAmount: 0,
@@ -695,7 +709,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                             },
                             {
                               name: "Sos sojowy",
-                              description: "___",
+                              description: "___", // hook1 - food tracking
                               amount: 0,
                               unit: "ml",
                               macros: {
@@ -724,7 +738,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                             },
                             {
                               name: "Przyprawa Chimichurri",
-                              description: "___",
+                              description: "___", // hook1 - food tracking
                               amount: 20,
                               unit: "___",
                               macros: {
@@ -738,7 +752,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                             },
                             {
                               name: "Przyprawa Czosnek Granulowany",
-                              description: "___",
+                              description: "___", // hook1 - food tracking
                               amount: 30,
                               unit: "___",
                               macros: {
@@ -752,7 +766,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                             },
                             {
                               name: "Przyprawa Adobo",
-                              description: "___",
+                              description: "___", // hook1 - food tracking
                               amount: 0,
                               unit: "___",
                               macros: {
@@ -766,7 +780,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                             },
                             {
                               name: "Sól",
-                              description: "___",
+                              description: "___", // hook1 - food tracking
                               amount: 0,
                               unit: "g",
                               macros: {
@@ -787,17 +801,17 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                           ytVideoId: "___",
                           ingredients: [
                             {
-                              name: "Kurczak",
-                              description: "___",
-                              amount: 500,
+                              name: "Kurczak Filet Z Piersi",
+                              description: "porcja = 1/6 z 500g",
+                              amount: 83.33, // 500 / 6 = 83.33
                               unit: "g",
                               macros: {
-                                forThisAmount: 0,
-                                calories: 0,
+                                forThisAmount: 100,
+                                calories: 178,
                               },
                               priceDetails: {
-                                price: 0,
-                                forThisAmount: 0,
+                                price: 29.99,
+                                forThisAmount: 1000,
                               },
                             },
                             {
@@ -2163,39 +2177,23 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           deadlineVariant: "none",
           addOnsByVariants: {
             "W S Z Y S T K I E": {
-              // temporary solution against repeating this stepts ine very variant
-              "Start dnia = `Dzisiaj` view w Linear | Koniec dnia = Estimate'ując czas, updateujesz `Dzisiaj`, szukając guza w dedykowanym dla pod-projektu linku do lineara":
-                {},
-              "YT'bowe Omówienie 'gdzie co jest' zobacz": {
+              "Znajdź podprojekt & co w nim teraz zrobić, żeby progresować next milestone projektu":
+                {
+                  howAndTips: {
+                    ytVideoId: "5y7qQtFM3Sk",
+                    notes: [],
+                  },
+                },
+              "Nie pamiętasz 'gdzie co jest'? Zobacz ten filmik": {
                 howAndTips: {
                   ytVideoId: "ZzNv4HVHs2Q",
                   notes: [],
-                },
-              },
-              "Estimate rób & Ogień adekwatnie do etapu (HATP) używaj": {
-                howAndTips: {
-                  ytVideoId: "hook1",
-                  notes: [
-                    {
-                      title: "Użyj tego 'estimates' template'u na górze issues",
-                      description:
-                        // 0.5 hardcoded value, because mostly it's max 30 minutes of work for "H" stage
-                        "H | __ / [0.5] A | __ / [__] T | __ / [__] P | __ / [__] - DOPIERO po skonczeniu etapu H wpisuejz zalozenie etapu A, po A zalozenie etapu T (bo nie wiesz jeszcze ile bedzie do tworzenia z A etc.",
-                    },
-                  ],
                 },
               },
             },
             "Webowy Asystent - Frontend": {
               "Przygotuj narzędzia": {
                 toolsPhysicalOrThirdParty: [
-                  {
-                    title: "Linear",
-                    linkURL:
-                      "https://linear.app/wrld-rpg/roadmap/webowy-asystent-7b3509ba11ba/all",
-                    imageOrGifPath:
-                      "https://media.licdn.com/dms/image/D4D0BAQF8WGlksBLY0g/company-logo_200_200/0/1665590651137/linearapp_logo?e=2147483647&v=beta&t=O_5o4iiky8EZ2ZJr9cPeQ64jrILDiYBue_PI-BPxC4c",
-                  },
                   {
                     title: "Figma - Templates",
                     linkURL:
@@ -2233,13 +2231,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                     imageOrGifPath:
                       "https://eu-images.contentstack.com/v3/assets/blt740a130ae3c5d529/blt1374d89863bb9247/650f069dce47f98019322d48/placeholder-social.png",
                   },
-                  {
-                    title: "Linear",
-                    linkURL:
-                      "https://linear.app/infiniti/roadmap/unreal-giera-48ecc7b55a37/all",
-                    imageOrGifPath:
-                      "https://media.licdn.com/dms/image/D4D0BAQF8WGlksBLY0g/company-logo_200_200/0/1665590651137/linearapp_logo?e=2147483647&v=beta&t=O_5o4iiky8EZ2ZJr9cPeQ64jrILDiYBue_PI-BPxC4c",
-                  },
+
                   {
                     title: "Figma - Templates",
                     linkURL:
@@ -2263,71 +2255,30 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                 ],
               },
             },
-            Marketing: {
-              "Przygotuj narzędzia": {
-                toolsPhysicalOrThirdParty: [
-                  {
-                    title: "Linear",
-                    linkURL:
-                      "https://linear.app/infiniti/roadmap/marketing-15eb0183f4b1/all",
-                    imageOrGifPath:
-                      "https://media.licdn.com/dms/image/D4D0BAQF8WGlksBLY0g/company-logo_200_200/0/1665590651137/linearapp_logo?e=2147483647&v=beta&t=O_5o4iiky8EZ2ZJr9cPeQ64jrILDiYBue_PI-BPxC4c",
-                  },
-                ],
-              },
-            },
-            "Sesja - Gameplay/Minigames Dev": {
-              "Przygotuj narzędzia": {
-                toolsPhysicalOrThirdParty: [
-                  {
-                    title: "Linear",
-                    linkURL:
-                      "https://linear.app/wrld-rpg/project/gameplay-minigames-dev-310da64689e5",
-                    imageOrGifPath:
-                      "https://media.licdn.com/dms/image/D4D0BAQF8WGlksBLY0g/company-logo_200_200/0/1665590651137/linearapp_logo?e=2147483647&v=beta&t=O_5o4iiky8EZ2ZJr9cPeQ64jrILDiYBue_PI-BPxC4c",
-                  },
-                ],
-              },
-              "Sprawdzam questa": {
-                howAndTips: {
-                  ytVideoId: "OKI71MWG1sQ",
-                  notes: [
-                    {
-                      title: "Dodaj 'workflow creation' rozdział",
-                      description:
-                        "1. Mój podział od 'One day', po  progresowe etapy etc. \n 2.Wyłącz defaultowe 'Auto-close stale issues' \n 3.Dodaj szybki przebieg tworzenia/używania view'ów",
-                    },
-                  ],
-                },
-              },
-            },
+            Marketing: {},
+            "Sesja - Gameplay/Minigames Dev": {},
 
             "Sesja - Meet Character Dev": {
-              "Użyj omówienia YT i templatki data objectu": {
+              "Idź krokami Workflow Warlorda": {
                 howAndTips: {
                   ytVideoId: "9ExlfEK9JCY",
                   notes: [],
                 },
               },
             },
-            "Sesja - 2D Vis Dev": {
-              "Przygotuj narzędzia": {},
-            },
-            "Sesja - 3D Assets": {
-              "Przygotuj narzędzia": {},
-            },
-            "Sesja - Live YT/Twitch": {
-              "Przygotuj narzędzia": {},
-            },
-            "Sesja - Worldbuilding": {
-              "Przygotuj narzędzia": {},
-            },
+            "Sesja - 2D Vis Dev": {},
+            "Sesja - 3D Assets": {},
+            "Sesja - Live YT/Twitch": {},
+            "Sesja - Worldbuilding": {},
             "Sesja - Questlines": {
-              "Przygotuj narzędzia": {},
+              "Idź krokami Workflow Warlorda": {
+                howAndTips: {
+                  ytVideoId: "Itq7xqUGmxI",
+                  notes: [],
+                },
+              },
             },
-            "Sesja - Soundtracks": {
-              "Przygotuj narzędzia": {},
-            },
+            "Sesja - Soundtracks": {},
           },
 
           needsFulfilledByVariant: {
