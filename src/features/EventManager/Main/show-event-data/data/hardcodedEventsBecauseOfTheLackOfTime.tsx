@@ -2255,8 +2255,9 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                 ],
               },
             },
+            // Marketing: {},
 
-            "Sesja - Gameplay/Minigames Dev": {},
+            // "Sesja - Gameplay/Minigames Dev": {},
 
             "Sesja - Meet Character Dev": {
               "Idź krokami Workflow Warlorda": {
@@ -2266,10 +2267,10 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                 },
               },
             },
-            "Sesja - 2D Vis Dev": {},
-            "Sesja - 3D Assets": {},
-            "Sesja - Live YT/Twitch": {},
-            "Sesja - Worldbuilding": {},
+            // "Sesja - 2D Vis Dev": {},
+            // "Sesja - 3D Assets": {},
+            // "Sesja - Live YT/Twitch": {},
+            // "Sesja - Worldbuilding": {},
             "Sesja - Questlines": {
               "Idź krokami Workflow Warlorda": {
                 howAndTips: {
@@ -2278,7 +2279,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                 },
               },
             },
-            "Sesja - Soundtracks": {},
+            // "Sesja - Soundtracks": {},
           },
 
           needsFulfilledByVariant: {
