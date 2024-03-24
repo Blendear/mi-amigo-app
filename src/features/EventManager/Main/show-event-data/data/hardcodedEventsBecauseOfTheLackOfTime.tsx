@@ -2255,7 +2255,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                 ],
               },
             },
-            Marketing: {},
+
             "Sesja - Gameplay/Minigames Dev": {},
 
             "Sesja - Meet Character Dev": {
