@@ -1697,11 +1697,25 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                   {
                     subappName: "yt-video-watcher",
                     payload: {
-                      ytVideoIds: ["8vXe48xQSoo"],
+                      ytVideoIds: ["nygpgrl8Wps", "4ZH6oCD6Ih0", "8vXe48xQSoo"],
                     },
                   },
                 ],
-                toolsPhysicalOrThirdParty: [],
+                toolsPhysicalOrThirdParty: [
+                  {
+                    title: "Ewronik - gaming z ekipą",
+                    imageOrGifPath:
+                      "https://play-lh.googleusercontent.com/QLQzL-MXtxKEDlbhrQCDw-REiDsA9glUH4m16syfar_KVLRXlzOhN7tmAceiPerv4Jg",
+                    linkURL:
+                      "https://www.twitch.tv/ewroon/videos?filter=all&sort=time",
+                  },
+                  {
+                    title: "Graham Norton Show",
+                    imageOrGifPath:
+                      "https://ichef.bbci.co.uk/images/ic/1200x675/p080f5wc.jpg",
+                    linkURL: "https://www.dailymotion.com/tgnshow/playlists",
+                  },
+                ],
               },
             },
             "słuchamy - mjusik": {
