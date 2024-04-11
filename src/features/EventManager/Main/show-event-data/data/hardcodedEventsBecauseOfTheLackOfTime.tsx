@@ -1724,7 +1724,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                   {
                     subappName: "yt-video-watcher",
                     payload: {
-                      ytVideoIds: ["Z8ANihFXlgU", "s_i4s2yL8T0"],
+                      ytVideoIds: ["Kodqwraxa1I", "Z8ANihFXlgU", "s_i4s2yL8T0"],
                     },
                   },
                 ],
