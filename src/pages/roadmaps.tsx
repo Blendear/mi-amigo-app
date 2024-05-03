@@ -9,7 +9,6 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { DialogModal } from "@/features/EventManager/Main/dialog-modals/components/DialogModal";
 import dynamic from "next/dynamic";
 import Video from "@/features/EventManager/SubApps/yt-watcher/components/Video";
-import { initial } from "cypress/types/lodash";
 
 export type DiagramsDataType = {
   [key: string]: {
@@ -18,7 +17,7 @@ export type DiagramsDataType = {
   };
 };
 
-const importedUncalculatedDiagramsData = {
+const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges = {
   sql: {
     initialNodes: [
       {
@@ -33,15 +32,15 @@ const importedUncalculatedDiagramsData = {
             {
               variant: "Gamer Speech",
               ytVideoId: "dQw4w9WgXcQ",
-              notesToTheVideo: ["This is a note", "This is another note"],
-              description: "This is a description",
+              notesToTheVideo: [],
+              description: "Timestamp 1:00 - 2:53",
               additionalLinks: [],
             },
             {
               variant: "Censored Speech",
               ytVideoId: "dQw4w9WgXcQ",
-              notesToTheVideo: ["This is a note", "This is another note"],
-              description: "This is a description",
+              notesToTheVideo: [],
+              description: "",
               additionalLinks: [],
             },
           ],
@@ -60,14 +59,14 @@ const importedUncalculatedDiagramsData = {
               variant: "Gamer Speech",
               ytVideoId: "dQw4w9WgXcQ",
               notesToTheVideo: ["This is a note", "This is another note"],
-              description: "This is a description",
+              description: "",
               additionalLinks: [],
             },
             {
               variant: "Censored Speech",
               ytVideoId: "aaaaaaaaaaa",
-              notesToTheVideo: ["This is a note", "This is another note"],
-              description: "This is a description",
+              notesToTheVideo: [],
+              description: "Timestamp 13:08 - 15:04",
               additionalLinks: [],
             },
           ],
@@ -85,15 +84,15 @@ const importedUncalculatedDiagramsData = {
             {
               variant: "Gamer Speech",
               ytVideoId: "dQw4w9WgXcQ",
-              notesToTheVideo: ["This is a note", "This is another note"],
-              description: "This is a description",
+              notesToTheVideo: [],
+              description: "Timestamp 09:00 - 10:00",
               additionalLinks: [],
             },
             {
               variant: "Censored Speech",
               ytVideoId: "dQw4w9WgXcQ",
               notesToTheVideo: ["This is a note", "This is another note"],
-              description: "This is a description",
+              description: "Timestamp  10:00 - 11:30",
               additionalLinks: [],
             },
           ],
@@ -111,15 +110,15 @@ const importedUncalculatedDiagramsData = {
             {
               variant: "Gamer Speech",
               ytVideoId: "dQw4w9WgXcQ",
-              notesToTheVideo: ["This is a note", "This is another note"],
-              description: "This is a description",
+              notesToTheVideo: [],
+              description: "",
               additionalLinks: [],
             },
             {
               variant: "Censored Speech",
               ytVideoId: "dQw4w9WgXcQ",
-              notesToTheVideo: ["This is a note", "This is another note"],
-              description: "This is a description",
+              notesToTheVideo: [],
+              description: "Timestamp 4:20 - 6:60",
               additionalLinks: [],
             },
           ],
@@ -137,14 +136,14 @@ const importedUncalculatedDiagramsData = {
             {
               variant: "Gamer Speech",
               ytVideoId: "dQw4w9WgXcQ",
-              notesToTheVideo: ["This is a note", "This is another note"],
+              notesToTheVideo: [],
               description: "This is a description",
               additionalLinks: [],
             },
             {
               variant: "Censored Speech",
               ytVideoId: "dQw4w9WgXcQ",
-              notesToTheVideo: ["This is a note", "This is another note"],
+              notesToTheVideo: [],
               description: "This is a description",
               additionalLinks: [],
             },
@@ -163,14 +162,14 @@ const importedUncalculatedDiagramsData = {
             {
               variant: "Gamer Speech",
               ytVideoId: "dQw4w9WgXcQ",
-              notesToTheVideo: ["This is a note", "This is another note"],
+              notesToTheVideo: [],
               description: "This is a description",
               additionalLinks: [],
             },
             {
               variant: "Censored Speech",
               ytVideoId: "dQw4w9WgXcQ",
-              notesToTheVideo: ["This is a note", "This is another note"],
+              notesToTheVideo: [],
               description: "This is a description",
               additionalLinks: [],
             },
@@ -189,15 +188,15 @@ const importedUncalculatedDiagramsData = {
             {
               variant: "Gamer Speech",
               ytVideoId: "dQw4w9WgXcQ",
-              notesToTheVideo: ["This is a note", "This is another note"],
-              description: "This is a description",
+              notesToTheVideo: [],
+              description: "Timestamp 13:00 - 14:00",
               additionalLinks: [],
             },
             {
               variant: "Censored Speech",
               ytVideoId: "dQw4w9WgXcQ",
-              notesToTheVideo: ["This is a note", "This is another note"],
-              description: "This is a description",
+              notesToTheVideo: [],
+              description: "Timestamp 34:00 - 36:00",
               additionalLinks: [],
             },
           ],
@@ -219,7 +218,7 @@ const importedUncalculatedDiagramsData = {
             {
               variant: "Gamer Speech",
               ytVideoId: "dQw4w9WgXcQ",
-              notesToTheVideo: ["This is a note", "This is another note"],
+              notesToTheVideo: [],
               description: "This is a description",
               additionalLinks: [],
             },
@@ -238,7 +237,7 @@ const importedUncalculatedDiagramsData = {
             {
               variant: "Censored Speech",
               ytVideoId: "dQw4w9WgXcQ",
-              notesToTheVideo: ["This is a note", "This is another note"],
+              notesToTheVideo: [],
               description: "This is a description",
               additionalLinks: [],
             },
@@ -258,7 +257,7 @@ const importedUncalculatedDiagramsData = {
             {
               variant: "Censored Speech",
               ytVideoId: "dQw4w9WgXcQ",
-              notesToTheVideo: ["This is a note", "This is another note"],
+              notesToTheVideo: [],
               description: "This is a description",
               additionalLinks: [],
             },
@@ -316,12 +315,13 @@ export const getDiagram = (nodes) => {
 };
 
 export const diagramsData: DiagramsDataType = Object.keys(
-  importedUncalculatedDiagramsData
+  importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges
 ).reduce(
   (acc, diagramName) => ({
     ...acc,
     [diagramName]: getDiagram(
-      importedUncalculatedDiagramsData[diagramName].initialNodes
+      importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges[diagramName]
+        .initialNodes
     ),
   }),
   {}
