@@ -19,6 +19,7 @@ const EventManager = () => {
   return (
     <div className={styles["event-manager__container"]}>
       <ChestButton onClick={openModal} />
+      {/* <Diagram /> */}
       <Scheduler
       //  events={events}
       />
