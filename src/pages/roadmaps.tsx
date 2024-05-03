@@ -78,7 +78,7 @@ const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges = {
           levelOfNestedness: 1,
           label: "Syntax AAA",
           imagePath: "https://placehold.co/600x400",
-          daysBeforeRepetitionNeeded: 7,
+          daysBeforeRepetitionNeeded: 69,
           lastRepeatDateString: "2024-05-01T00:00:00",
           videosAndNotesByVariants: [
             {
@@ -367,7 +367,7 @@ export const DiagramNameSetters = ({ setDiagramName, diagramName }) => {
 };
 
 export const BtnsdaysBeforeRepetitionNeeded = ({ nodeDataRef }) => {
-  const titles = [1, 3, 7, 14, 30];
+  const titles = [1, 3, 7, 14, 30, "TODO"];
 
   const [currentTitle, setCurrentTitle] = useState(
     nodeDataRef.current.daysBeforeRepetitionNeeded
@@ -388,7 +388,7 @@ export const BtnsdaysBeforeRepetitionNeeded = ({ nodeDataRef }) => {
               nodeDataRef.current.daysBeforeRepetitionNeeded = title;
             }}
           >
-            {title} days
+            {title} {title === "TODO" ? "" : "days"}
           </button>
         );
       })}
@@ -496,6 +496,7 @@ export const getNodeBorderColor = (node) => {
     "today or tomorrow": "orange",
     "3-7 days": "yellow",
     "over a week": "green",
+    "TODO: create it": "purple",
   }[
     (() => {
       const dateNow = new Date();
@@ -519,8 +520,10 @@ export const getNodeBorderColor = (node) => {
         colorOfBorder = "today or tomorrow";
       } else if (deadlineOfRepetition <= 7) {
         colorOfBorder = "3-7 days";
-      } else {
+      } else if (deadlineOfRepetition <= 30) {
         colorOfBorder = "over a week";
+      } else {
+        colorOfBorder = "TODO: create it";
       }
 
       return colorOfBorder;
@@ -541,9 +544,22 @@ const Roadmaps = () => {
     for (const diagramName in newDiagrams) {
       for (const node of newDiagrams[diagramName].initialNodes) {
         // give each node a style based on the days left before repetition is needed
+
+        const newColor = getNodeBorderColor(node);
+
+        const todoStyling =
+          newColor === "purple"
+            ? {
+                color: "white",
+                backgroundColor: "purple",
+              }
+            : {};
+
         node.style = {
-          borderColor: getNodeBorderColor(node),
+          borderColor: newColor,
           borderWidth: "5px",
+
+          ...todoStyling,
         };
 
         // calculate the position (y) based on the amount of other nodes & (x) levelOfNestedness
