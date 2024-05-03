@@ -5,7 +5,7 @@ import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 import "reactflow/dist/style.css";
 import ReactFlow, { MiniMap, Node, Edge, Background } from "reactflow";
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { DialogModal } from "@/features/EventManager/Main/dialog-modals/components/DialogModal";
 import dynamic from "next/dynamic";
 import Video from "@/features/EventManager/SubApps/yt-watcher/components/Video";
@@ -26,7 +26,8 @@ export const diagramsData: DiagramsDataType = {
         data: {
           label: "What and why is SQL",
           imagePath: "https://placehold.co/600x400",
-          whenToRepeat: "1 day",
+          daysBeforeRepetitionNeeded: 1,
+          lastRepeatDateString: "2024-05-01T00:00:00",
           videosAndNotesByVariants: [
             {
               variant: "Gamer Speech",
@@ -51,7 +52,8 @@ export const diagramsData: DiagramsDataType = {
         data: {
           label: "Basic Syntax",
           imagePath: "https://placehold.co/600x400",
-          whenToRepeat: "3 days",
+          daysBeforeRepetitionNeeded: 3,
+          lastRepeatDateString: "2024-05-01T00:00:00",
           videosAndNotesByVariants: [
             {
               variant: "Gamer Speech",
@@ -83,7 +85,8 @@ export const diagramsData: DiagramsDataType = {
         data: {
           label: "What and why is PHP",
           imagePath: "https://placehold.co/600x400",
-          whenToRepeat: "2 weeks",
+          daysBeforeRepetitionNeeded: 14,
+          lastRepeatDateString: "2024-05-01T00:00:00",
           videosAndNotesByVariants: [
             {
               variant: "Gamer Speech",
@@ -101,7 +104,8 @@ export const diagramsData: DiagramsDataType = {
         data: {
           label: "Basic Syntax",
           imagePath: "https://placehold.co/600x400",
-          whenToRepeat: "1 week",
+          daysBeforeRepetitionNeeded: 7,
+          lastRepeatDateString: "2024-05-01T00:00:00",
           videosAndNotesByVariants: [
             {
               variant: "Censored Speech",
@@ -120,7 +124,8 @@ export const diagramsData: DiagramsDataType = {
         data: {
           label: "Joining Queries",
           imagePath: "https://placehold.co/600x400",
-          whenToRepeat: "1 month",
+          daysBeforeRepetitionNeeded: 30,
+          lastRepeatDateString: "2024-05-01T00:00:00",
           videosAndNotesByVariants: [
             {
               variant: "Censored Speech",
@@ -175,11 +180,11 @@ export const DiagramNameSetters = ({ setDiagramName }) => {
   );
 };
 
-export const BtnsWhenToRepeat = ({ nodeDataRef }) => {
-  const titles = ["1 day", "3 days", "1 week", "2 weeks", "1 month"];
+export const BtnsdaysBeforeRepetitionNeeded = ({ nodeDataRef }) => {
+  const titles = [1, 3, 7, 14, 30];
 
   const [currentTitle, setCurrentTitle] = useState(
-    nodeDataRef.current.whenToRepeat
+    nodeDataRef.current.daysBeforeRepetitionNeeded
   );
 
   return (
@@ -194,10 +199,10 @@ export const BtnsWhenToRepeat = ({ nodeDataRef }) => {
             ]}
             onClick={() => {
               setCurrentTitle(titles[index]);
-              nodeDataRef.current.whenToRepeat = title;
+              nodeDataRef.current.daysBeforeRepetitionNeeded = title;
             }}
           >
-            {title}
+            {title} days
           </button>
         );
       })}
@@ -242,7 +247,8 @@ export const DetailsBasedOnVariant = ({ nodeDataRef, nodeId }) => {
       </p>
       <Video
         yTvideoId={
-          nodeDataRef.current.videosAndNotesByVariants[variantIndex].ytVideoId
+          nodeDataRef.current.videosAndNotesByVariants[variantIndex]
+            .ytVideoId || ""
         }
       />
     </>
@@ -250,6 +256,7 @@ export const DetailsBasedOnVariant = ({ nodeDataRef, nodeId }) => {
 };
 
 export const DiagramDetailsModal = ({
+  diagrams,
   diagramName,
   nodeId,
   setNodeId,
@@ -258,9 +265,7 @@ export const DiagramDetailsModal = ({
   const Details = () => {
     const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false);
 
-    const nodeDataRef = useRef(
-      diagramsData[diagramName].initialNodes[nodeId].data
-    );
+    const nodeDataRef = useRef(diagrams[diagramName].initialNodes[nodeId].data);
 
     return (
       <div>
@@ -268,21 +273,15 @@ export const DiagramDetailsModal = ({
           Diagram: {diagramName} Node: {nodeId}
         </p>
 
-        <BtnsWhenToRepeat nodeDataRef={nodeDataRef} />
+        <BtnsdaysBeforeRepetitionNeeded nodeDataRef={nodeDataRef} />
 
         <DetailsBasedOnVariant nodeDataRef={nodeDataRef} nodeId={nodeId} />
 
         <button
           onClick={() => {
-            // TODO: Trigge the updateNode function from the parent component
-            updateNode("style", diagramName, nodeId, {
-              backgroundColor: {
-                "1 day": "red",
-                "3 days": "orange",
-                "1 week": "yellow",
-                "2 weeks": "green",
-                "1 month": "blue",
-              }[nodeDataRef.current.whenToRepeat],
+            updateNode("data", diagramName, nodeId, {
+              daysBeforeRepetitionNeeded:
+                nodeDataRef.current.daysBeforeRepetitionNeeded,
             });
           }}
           css={[
@@ -308,12 +307,67 @@ export const DiagramDetailsModal = ({
   );
 };
 
+export const getNodeBorderColor = (node) => {
+  return {
+    "past deadline": "red",
+    "today or tomorrow": "orange",
+    "3-7 days": "yellow",
+    "over a week": "green",
+  }[
+    (() => {
+      const dateNow = new Date();
+
+      const lastRepeatDate = new Date(node.data.lastRepeatDateString);
+
+      const differenceInDays = Math.floor(
+        (dateNow.getTime() - lastRepeatDate.getTime()) / (1000 * 60 * 60 * 24)
+      );
+
+      const deadlineOfRepetition =
+        node.data.daysBeforeRepetitionNeeded - differenceInDays;
+
+      let colorOfBorder = "";
+
+      if (deadlineOfRepetition < 0) {
+        colorOfBorder = "past deadline";
+      } else if (deadlineOfRepetition === 0) {
+        colorOfBorder = "today or tomorrow";
+      } else if (deadlineOfRepetition <= 2) {
+        colorOfBorder = "today or tomorrow";
+      } else if (deadlineOfRepetition <= 7) {
+        colorOfBorder = "3-7 days";
+      } else {
+        colorOfBorder = "over a week";
+      }
+
+      return colorOfBorder;
+    })()
+  ];
+};
+
 const Roadmaps = () => {
   const [diagrams, setDiagrams] = useState(diagramsData);
 
   const [diagramName, setDiagramName] = useState("sql");
 
   const [nodeId, setNodeId] = useState(null);
+
+  useEffect(() => {
+    // give all the nodes a background color based on the value that comes from
+    // comparing days of lastRepeatDate - current date and the daysBeforeRepetitionNeeded value
+
+    const newDiagrams = { ...diagrams };
+
+    for (const diagramName in newDiagrams) {
+      for (const node of newDiagrams[diagramName].initialNodes) {
+        node.style = {
+          borderColor: getNodeBorderColor(node),
+
+          borderWidth: "5px",
+        };
+      }
+    }
+  }, [diagrams]);
 
   const updateNode = useCallback(
     (whatToUpdate, diagramName, nodeId, newNodeData) => {
@@ -328,19 +382,10 @@ const Roadmaps = () => {
     []
   );
 
-  // TODO: Remake all prop passing into a context
   return (
     <div>
       <DiagramNameSetters setDiagramName={setDiagramName} />
 
-      <button
-        onClick={() => {
-          //   updateNode("data", diagramName, 1, { label: "New label" });
-          updateNode("style", diagramName, 1, { backgroundColor: "green" });
-        }}
-      >
-        Color new
-      </button>
       <Diagram
         diagrams={diagrams}
         diagramName={diagramName}
@@ -348,6 +393,7 @@ const Roadmaps = () => {
       />
 
       <DiagramDetailsModal
+        diagrams={diagrams}
         diagramName={diagramName}
         nodeId={nodeId}
         setNodeId={setNodeId}
