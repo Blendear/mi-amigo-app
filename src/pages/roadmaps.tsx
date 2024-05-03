@@ -9,6 +9,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { DialogModal } from "@/features/EventManager/Main/dialog-modals/components/DialogModal";
 import dynamic from "next/dynamic";
 import Video from "@/features/EventManager/SubApps/yt-watcher/components/Video";
+import { initial } from "cypress/types/lodash";
 
 export type DiagramsDataType = {
   [key: string]: {
@@ -17,11 +18,10 @@ export type DiagramsDataType = {
   };
 };
 
-export const diagramsData: DiagramsDataType = {
+const importedUncalculatedDiagramsData = {
   sql: {
     initialNodes: [
       {
-        id: "0",
         position: { x: 0, y: 0 },
         data: {
           levelOfNestedness: 0,
@@ -48,7 +48,6 @@ export const diagramsData: DiagramsDataType = {
         },
       },
       {
-        id: "1",
         position: { x: 0, y: 0 },
         data: {
           levelOfNestedness: 0,
@@ -75,7 +74,6 @@ export const diagramsData: DiagramsDataType = {
         },
       },
       {
-        id: "2",
         position: { x: 0, y: 0 },
         data: {
           levelOfNestedness: 1,
@@ -102,7 +100,6 @@ export const diagramsData: DiagramsDataType = {
         },
       },
       {
-        id: "3",
         position: { x: 0, y: 0 },
         data: {
           levelOfNestedness: 1,
@@ -129,7 +126,6 @@ export const diagramsData: DiagramsDataType = {
         },
       },
       {
-        id: "4",
         position: { x: 0, y: 0 },
         data: {
           levelOfNestedness: 2,
@@ -156,7 +152,6 @@ export const diagramsData: DiagramsDataType = {
         },
       },
       {
-        id: "5",
         position: { x: 0, y: 0 },
         data: {
           levelOfNestedness: 1,
@@ -182,15 +177,37 @@ export const diagramsData: DiagramsDataType = {
           ],
         },
       },
+      {
+        position: { x: 0, y: 0 },
+        data: {
+          levelOfNestedness: 0,
+          label: "Debugging",
+          imagePath: "https://placehold.co/600x400",
+          daysBeforeRepetitionNeeded: 14,
+          lastRepeatDateString: "2024-05-01T00:00:00",
+          videosAndNotesByVariants: [
+            {
+              variant: "Gamer Speech",
+              ytVideoId: "dQw4w9WgXcQ",
+              notesToTheVideo: ["This is a note", "This is another note"],
+              description: "This is a description",
+              additionalLinks: [],
+            },
+            {
+              variant: "Censored Speech",
+              ytVideoId: "dQw4w9WgXcQ",
+              notesToTheVideo: ["This is a note", "This is another note"],
+              description: "This is a description",
+              additionalLinks: [],
+            },
+          ],
+        },
+      },
     ],
-
-    initialEdges: [{ id: "e0-1", source: "0", target: "1" }],
   },
-
   php: {
     initialNodes: [
       {
-        id: "0",
         position: { x: 0, y: 0 },
         data: {
           levelOfNestedness: 0,
@@ -210,7 +227,6 @@ export const diagramsData: DiagramsDataType = {
         },
       },
       {
-        id: "1",
         position: { x: 0, y: 0 },
         data: {
           levelOfNestedness: 0,
@@ -231,7 +247,6 @@ export const diagramsData: DiagramsDataType = {
       },
 
       {
-        id: "2",
         position: { x: 0, y: 0 },
         data: {
           levelOfNestedness: 0,
@@ -251,10 +266,66 @@ export const diagramsData: DiagramsDataType = {
         },
       },
     ],
-
-    initialEdges: [{ id: "e0-1", source: "0", target: "1" }],
   },
 };
+
+const createEdges = (nodes) => {
+  const edges = [];
+  for (let i = 1; i < nodes.length; i++) {
+    let closestPrecedingNodeIndex = -1;
+    let minDistance = Infinity;
+    for (let j = i - 1; j >= 0; j--) {
+      if (nodes[j].data.levelOfNestedness < nodes[i].data.levelOfNestedness) {
+        const distance = i - j;
+        if (distance < minDistance) {
+          closestPrecedingNodeIndex = j;
+          minDistance = distance;
+        }
+      }
+    }
+    if (closestPrecedingNodeIndex !== -1) {
+      edges.push({
+        id: `e${closestPrecedingNodeIndex}-${i}`,
+        source: nodes[closestPrecedingNodeIndex].id,
+        target: nodes[i].id,
+      });
+    } else {
+      edges.push({
+        id: `e${0}-${i}`,
+        source: nodes[0].id,
+        target: nodes[i].id,
+      });
+    }
+  }
+  return edges;
+};
+
+export const getDiagram = (nodes) => {
+  // Assigning ids based on the index
+  const nodesWithCalculatedIds = nodes.map((node, index) => {
+    return {
+      ...node,
+      id: index.toString(),
+    };
+  });
+
+  return {
+    initialNodes: nodesWithCalculatedIds,
+    initialEdges: createEdges(nodesWithCalculatedIds),
+  };
+};
+
+export const diagramsData: DiagramsDataType = Object.keys(
+  importedUncalculatedDiagramsData
+).reduce(
+  (acc, diagramName) => ({
+    ...acc,
+    [diagramName]: getDiagram(
+      importedUncalculatedDiagramsData[diagramName].initialNodes
+    ),
+  }),
+  {}
+);
 
 export const Diagram = ({ diagrams, diagramName, setNodeId }) => {
   return (
