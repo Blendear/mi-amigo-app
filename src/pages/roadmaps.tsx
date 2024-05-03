@@ -24,6 +24,7 @@ export const diagramsData: DiagramsDataType = {
         id: "0",
         position: { x: 0, y: 0 },
         data: {
+          levelOfNestedness: 0,
           label: "What and why is SQL",
           imagePath: "https://placehold.co/600x400",
           daysBeforeRepetitionNeeded: 1,
@@ -48,8 +49,9 @@ export const diagramsData: DiagramsDataType = {
       },
       {
         id: "1",
-        position: { x: 0, y: 100 },
+        position: { x: 0, y: 0 },
         data: {
+          levelOfNestedness: 0,
           label: "Basic Syntax",
           imagePath: "https://placehold.co/600x400",
           daysBeforeRepetitionNeeded: 3,
@@ -72,6 +74,114 @@ export const diagramsData: DiagramsDataType = {
           ],
         },
       },
+      {
+        id: "2",
+        position: { x: 0, y: 0 },
+        data: {
+          levelOfNestedness: 1,
+          label: "Syntax AAA",
+          imagePath: "https://placehold.co/600x400",
+          daysBeforeRepetitionNeeded: 7,
+          lastRepeatDateString: "2024-05-01T00:00:00",
+          videosAndNotesByVariants: [
+            {
+              variant: "Gamer Speech",
+              ytVideoId: "dQw4w9WgXcQ",
+              notesToTheVideo: ["This is a note", "This is another note"],
+              description: "This is a description",
+              additionalLinks: [],
+            },
+            {
+              variant: "Censored Speech",
+              ytVideoId: "dQw4w9WgXcQ",
+              notesToTheVideo: ["This is a note", "This is another note"],
+              description: "This is a description",
+              additionalLinks: [],
+            },
+          ],
+        },
+      },
+      {
+        id: "3",
+        position: { x: 0, y: 0 },
+        data: {
+          levelOfNestedness: 1,
+          label: "Syntax BBB",
+          imagePath: "https://placehold.co/600x400",
+          daysBeforeRepetitionNeeded: 7,
+          lastRepeatDateString: "2024-05-01T00:00:00",
+          videosAndNotesByVariants: [
+            {
+              variant: "Gamer Speech",
+              ytVideoId: "dQw4w9WgXcQ",
+              notesToTheVideo: ["This is a note", "This is another note"],
+              description: "This is a description",
+              additionalLinks: [],
+            },
+            {
+              variant: "Censored Speech",
+              ytVideoId: "dQw4w9WgXcQ",
+              notesToTheVideo: ["This is a note", "This is another note"],
+              description: "This is a description",
+              additionalLinks: [],
+            },
+          ],
+        },
+      },
+      {
+        id: "4",
+        position: { x: 0, y: 0 },
+        data: {
+          levelOfNestedness: 2,
+          label: "Child of Syntax BBB",
+          imagePath: "https://placehold.co/600x400",
+          daysBeforeRepetitionNeeded: 7,
+          lastRepeatDateString: "2024-05-01T00:00:00",
+          videosAndNotesByVariants: [
+            {
+              variant: "Gamer Speech",
+              ytVideoId: "dQw4w9WgXcQ",
+              notesToTheVideo: ["This is a note", "This is another note"],
+              description: "This is a description",
+              additionalLinks: [],
+            },
+            {
+              variant: "Censored Speech",
+              ytVideoId: "dQw4w9WgXcQ",
+              notesToTheVideo: ["This is a note", "This is another note"],
+              description: "This is a description",
+              additionalLinks: [],
+            },
+          ],
+        },
+      },
+      {
+        id: "5",
+        position: { x: 0, y: 0 },
+        data: {
+          levelOfNestedness: 1,
+          label: "Syntax CCC",
+          imagePath: "https://placehold.co/600x400",
+          daysBeforeRepetitionNeeded: 7,
+          lastRepeatDateString: "2024-05-01T00:00:00",
+          videosAndNotesByVariants: [
+            {
+              variant: "Gamer Speech",
+              ytVideoId: "dQw4w9WgXcQ",
+              notesToTheVideo: ["This is a note", "This is another note"],
+              description: "This is a description",
+              additionalLinks: [],
+            },
+            {
+              variant: "Censored Speech",
+              ytVideoId: "dQw4w9WgXcQ",
+              notesToTheVideo: ["This is a note", "This is another note"],
+              description: "This is a description",
+              additionalLinks: [],
+            },
+          ],
+        },
+      },
     ],
 
     initialEdges: [{ id: "e0-1", source: "0", target: "1" }],
@@ -83,6 +193,7 @@ export const diagramsData: DiagramsDataType = {
         id: "0",
         position: { x: 0, y: 0 },
         data: {
+          levelOfNestedness: 0,
           label: "What and why is PHP",
           imagePath: "https://placehold.co/600x400",
           daysBeforeRepetitionNeeded: 14,
@@ -100,8 +211,9 @@ export const diagramsData: DiagramsDataType = {
       },
       {
         id: "1",
-        position: { x: 0, y: 100 },
+        position: { x: 0, y: 0 },
         data: {
+          levelOfNestedness: 0,
           label: "Basic Syntax",
           imagePath: "https://placehold.co/600x400",
           daysBeforeRepetitionNeeded: 7,
@@ -120,8 +232,9 @@ export const diagramsData: DiagramsDataType = {
 
       {
         id: "2",
-        position: { x: 0, y: 200 },
+        position: { x: 0, y: 0 },
         data: {
+          levelOfNestedness: 0,
           label: "Joining Queries",
           imagePath: "https://placehold.co/600x400",
           daysBeforeRepetitionNeeded: 30,
@@ -145,13 +258,12 @@ export const diagramsData: DiagramsDataType = {
 
 export const Diagram = ({ diagrams, diagramName, setNodeId }) => {
   return (
-    <div style={{ width: "100vw", height: "500px" }}>
+    <div style={{ width: "100vw", height: "85vh" }}>
       <ReactFlow
         nodes={diagrams[diagramName].initialNodes}
         edges={diagrams[diagramName].initialEdges}
         onNodeClick={(e, nodeClicked) => {
           setNodeId(parseInt(nodeClicked.id));
-          console.log("nodeClicked", nodeClicked.id);
         }}
       >
         <MiniMap nodeStrokeWidth={3} />
@@ -160,19 +272,22 @@ export const Diagram = ({ diagrams, diagramName, setNodeId }) => {
   );
 };
 
-export const DiagramNameSetters = ({ setDiagramName }) => {
+export const DiagramNameSetters = ({ setDiagramName, diagramName }) => {
   return (
-    <div>
-      {Object.keys(diagramsData).map((diagramName) => {
+    <div css={{ display: "grid", gridAutoFlow: "column" }}>
+      {Object.keys(diagramsData).map((currentName) => {
         return (
           <button
-            key={diagramName}
-            css={universalCss.container}
+            key={currentName}
+            css={[
+              universalCss.container,
+              universalCss.button(currentName === diagramName),
+            ]}
             onClick={() => {
-              setDiagramName(diagramName);
+              setDiagramName(currentName);
             }}
           >
-            {diagramName}
+            {currentName}
           </button>
         );
       })}
@@ -224,7 +339,6 @@ export const DetailsBasedOnVariant = ({ nodeDataRef, nodeId }) => {
           ]}
           onClick={() => {
             setVariantIndex(index);
-            console.log("variantIndex", variantIndex);
           }}
         >
           {variant.variant}
@@ -232,8 +346,6 @@ export const DetailsBasedOnVariant = ({ nodeDataRef, nodeId }) => {
       );
     }
   );
-
-  //   console.log("rerender");
 
   return (
     <>
@@ -353,18 +465,29 @@ const Roadmaps = () => {
   const [nodeId, setNodeId] = useState(null);
 
   useEffect(() => {
-    // give all the nodes a background color based on the value that comes from
-    // comparing days of lastRepeatDate - current date and the daysBeforeRepetitionNeeded value
-
     const newDiagrams = { ...diagrams };
 
     for (const diagramName in newDiagrams) {
       for (const node of newDiagrams[diagramName].initialNodes) {
+        // give each node a style based on the days left before repetition is needed
         node.style = {
           borderColor: getNodeBorderColor(node),
-
           borderWidth: "5px",
         };
+
+        // calculate the position (y) based on the amount of other nodes & (x) levelOfNestedness
+        const leftMarginBasedOnLevelOfNestedness =
+          node.data.levelOfNestedness * 150;
+
+        let newPosition =
+          newDiagrams[diagramName].initialNodes.length > 1
+            ? {
+                x: leftMarginBasedOnLevelOfNestedness,
+                y: 100 * parseInt(node.id),
+              }
+            : { x: leftMarginBasedOnLevelOfNestedness, y: 0 };
+
+        node.position = newPosition;
       }
     }
   }, [diagrams]);
@@ -384,7 +507,10 @@ const Roadmaps = () => {
 
   return (
     <div>
-      <DiagramNameSetters setDiagramName={setDiagramName} />
+      <DiagramNameSetters
+        setDiagramName={setDiagramName}
+        diagramName={diagramName}
+      />
 
       <Diagram
         diagrams={diagrams}
