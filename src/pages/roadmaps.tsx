@@ -337,7 +337,7 @@ export const Diagram = ({ diagrams, diagramName, setNodeId }) => {
           setNodeId(parseInt(nodeClicked.id));
         }}
       >
-        <MiniMap nodeStrokeWidth={3} />
+        {/* <MiniMap nodeStrokeWidth={3} /> */}
       </ReactFlow>
     </div>
   );
