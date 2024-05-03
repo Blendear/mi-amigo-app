@@ -57,4 +57,27 @@ export const universalCss = {
         height: svgSize,
       },
     }),
+
+  navbarButtonsList: css({
+    padding: "15px 5px",
+    width: "100%",
+    display: "grid",
+    gridTemplateColumns: "repeat(5, 1fr)",
+    gridAutoColumns: "max-content",
+    color: `rgb(${colors.whiteLight})`,
+
+    "& > button": {
+      gridRow: "1",
+      width: "100%",
+      fontSize: "4rem",
+      display: "grid",
+      justifyItems: "center",
+      // width: "max-content",
+      // aspectRatio: "1/1",
+    },
+
+    "& > button:last-of-type": {
+      gridColumn: "5",
+    },
+  }),
 };
