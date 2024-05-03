@@ -1,11 +1,23 @@
 import "reactflow/dist/style.css";
-import ReactFlow, { MiniMap } from "reactflow";
+import ReactFlow, { MiniMap, Node, Edge } from "reactflow";
 import { useState } from "react";
 import { DialogModal } from "@/features/EventManager/Main/dialog-modals/components/DialogModal";
 import dynamic from "next/dynamic";
-import { parse } from "path";
 
-export const diagramsData = {
+export type DiagramsDataType = {
+  [key: string]: {
+    initialNodes: Node[];
+    initialEdges: Edge[];
+    nodeDetailsById: {
+      details: {
+        title: string;
+        description: string;
+      };
+    }[];
+  };
+};
+
+export const diagramsData: DiagramsDataType = {
   sql: {
     initialNodes: [
       { id: "0", position: { x: 0, y: 0 }, data: { label: "0" } },
@@ -125,7 +137,6 @@ export const DiagramDetailsModal = ({ diagramName, nodeId, setNodeId }) => {
           Diagram: {diagramName} Node: {nodeId}
         </p>
         <p>
-          {" "}
           {nodeId &&
             diagramsData[diagramName].nodeDetailsById[nodeId].details
               .description}
