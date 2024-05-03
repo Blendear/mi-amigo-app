@@ -113,6 +113,25 @@ export const diagramsData: DiagramsDataType = {
           ],
         },
       },
+
+      {
+        id: "2",
+        position: { x: 0, y: 200 },
+        data: {
+          label: "Joining Queries",
+          imagePath: "https://placehold.co/600x400",
+          whenToRepeat: "1 month",
+          videosAndNotesByVariants: [
+            {
+              variant: "Censored Speech",
+              ytVideoId: "dQw4w9WgXcQ",
+              notesToTheVideo: ["This is a note", "This is another note"],
+              description: "This is a description",
+              additionalLinks: [],
+            },
+          ],
+        },
+      },
     ],
 
     initialEdges: [{ id: "e0-1", source: "0", target: "1" }],
