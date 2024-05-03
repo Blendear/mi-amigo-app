@@ -17,11 +17,11 @@ export const universalCss = {
       color: textColor || `rgb(${colors.primaryLight})`,
       filter: !active && `brightness(0.2)`,
 
-      "&:enabled": {
-        "&:hover": {
-          filter: `brightness(0.5)`,
-        },
-      },
+      // "&:enabled": {
+      //   "&:hover": {
+      //     filter: `brightness(0.5)`,
+      //   },
+      // },
 
       "&:disabled": {
         filter: `saturate(0)`,
