@@ -1,10 +1,20 @@
 import React from "react";
 
+export type OptimisticAndPessimisticValue = {
+  optimistic: number;
+  pessimistic: number;
+};
+
 export type ProjectCostCalculatorContextType = {
   hourlyRate: React.MutableRefObject<number>;
-  numberOfHours: React.MutableRefObject<number>;
-  numberToMultiplyTheHoursWith: React.MutableRefObject<number>;
-  sumOfTime: React.MutableRefObject<number>;
+  numberOfHours: React.MutableRefObject<OptimisticAndPessimisticValue>;
+  listOfnumbersToMultiplyTheHoursWith: React.MutableRefObject<{
+    [key: string]: number;
+  }>;
+  finalMultiplier;
+  sumOfTime: React.MutableRefObject<OptimisticAndPessimisticValue>;
+  sumOfMoney: React.MutableRefObject<OptimisticAndPessimisticValue>;
+  updateHoursNumber;
 };
 
 export type AComponentProps = {};

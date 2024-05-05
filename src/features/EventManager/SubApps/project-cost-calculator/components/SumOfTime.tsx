@@ -26,24 +26,46 @@ const SumOfTimeCss = {
 };
 
 export const SumOfTime = ({}: SumOfTimeProps) => {
-  const { numberOfHours, numberToMultiplyTheHoursWith, sumOfTime } = useContext(
-    ProjectCostCalculatorContext
-  );
+  const {
+    numberOfHours,
+    listOfnumbersToMultiplyTheHoursWith,
+    finalMultiplier,
+    sumOfTime,
+  } = useContext(ProjectCostCalculatorContext);
 
-  const [sumOfTimeState, setSumOfTimeState] = useState<number>(0);
+  const [sum, setSum] = useState({
+    optimistic: 0,
+    pessimistic: 0,
+  });
 
-  // recalculate the sum of time whenever the number of hours or the number to multiply the hours with changes
   useEffect(() => {
-    const newSumOfTime =
-      numberOfHours.current * numberToMultiplyTheHoursWith.current;
-    sumOfTime.current = newSumOfTime;
-    setSumOfTimeState(newSumOfTime);
-  }, [numberOfHours, numberToMultiplyTheHoursWith, sumOfTime]);
+    const newFinalMultiplier = Object.values(
+      listOfnumbersToMultiplyTheHoursWith.current
+    ).reduce((sum, currentNumber) => sum + currentNumber);
+
+    finalMultiplier.current = newFinalMultiplier;
+
+    const newSum = {
+      optimistic: numberOfHours.current.optimistic * finalMultiplier.current,
+      pessimistic: numberOfHours.current.pessimistic * finalMultiplier.current,
+    };
+
+    sumOfTime.current = newSum;
+
+    setSum(newSum);
+  }, [
+    numberOfHours,
+    listOfnumbersToMultiplyTheHoursWith,
+    finalMultiplier,
+    sumOfTime,
+  ]);
 
   return (
     <section css={universalCss.container}>
       <h2>Sum of time</h2>
-      <div>{sumOfTimeState}</div>
+      <div>
+        {sum.optimistic} - {sum.pessimistic}
+      </div>
     </section>
   );
 };

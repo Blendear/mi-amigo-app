@@ -6,6 +6,7 @@ import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { SumOfMoneyProps } from "../types";
 import { useContext, useEffect, useState } from "react";
 import { ProjectCostCalculatorContext } from "../context/ProjectCostCalculatorContext";
+import { sum } from "cypress/types/lodash";
 
 const SumOfMoneyCss = {
   container: css({
@@ -26,19 +27,32 @@ const SumOfMoneyCss = {
 };
 
 export const SumOfMoney = ({}: SumOfMoneyProps) => {
-  const { hourlyRate, sumOfTime } = useContext(ProjectCostCalculatorContext);
+  const { hourlyRate, sumOfTime, sumOfMoney } = useContext(
+    ProjectCostCalculatorContext
+  );
 
-  const [sumOfMoneyState, setSumOfMoneyState] = useState<number>(0);
+  const [sum, setSum] = useState({
+    optimistic: 0,
+    pessimistic: 0,
+  });
 
   useEffect(() => {
-    const newSumOfMoney = hourlyRate.current * sumOfTime.current;
-    setSumOfMoneyState(newSumOfMoney);
-  }, [hourlyRate, sumOfTime]);
+    const newSum = {
+      optimistic: hourlyRate.current * sumOfTime.current.optimistic,
+      pessimistic: hourlyRate.current * sumOfTime.current.pessimistic,
+    };
+
+    sumOfMoney.current = newSum;
+
+    setSum(newSum);
+  }, [hourlyRate, sumOfTime, sumOfMoney]);
 
   return (
     <section css={universalCss.container}>
       <h2>Sum of cost</h2>
-      <div>{sumOfMoneyState}</div>
+      <div>
+        {sum.optimistic} - {sum.pessimistic}
+      </div>
     </section>
   );
 };
