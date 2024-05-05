@@ -13,6 +13,7 @@ import { Payment } from "@/features/EventManager/SubApps/project-cost-calculator
 import { SumOfTime } from "@/features/EventManager/SubApps/project-cost-calculator/components/SumOfTime";
 import { SumOfMoney } from "@/features/EventManager/SubApps/project-cost-calculator/components/SumOfMoney";
 import { useRef } from "react";
+import dynamic from "next/dynamic";
 
 const ProjectCostCCss = {
   container: css({}),
@@ -109,4 +110,7 @@ const ProjectCostCalculator = () => {
   );
 };
 
-export default ProjectCostCalculator;
+// export default ProjectCostCalculator;
+export default dynamic(() => Promise.resolve(ProjectCostCalculator), {
+  ssr: false,
+});
