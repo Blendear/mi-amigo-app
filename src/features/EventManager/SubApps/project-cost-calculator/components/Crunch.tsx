@@ -4,6 +4,8 @@ import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
 import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { CrunchProps } from "../types";
+import { useContext } from "react";
+import { ProjectCostCalculatorContext } from "../context/ProjectCostCalculatorContext";
 
 // two words fully written, the rest are initials
 const OneTwoTFWCNCss = {
@@ -25,5 +27,8 @@ const OneTwoTFWCNCss = {
 };
 
 export const Crunch = ({}: CrunchProps) => {
+  const { hourlyRate, numberOfHours, numberToMultiplyTheHoursWith, sumOfTime } =
+    useContext(ProjectCostCalculatorContext);
+
   return <div>AComponent</div>;
 };

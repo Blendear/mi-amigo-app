@@ -4,6 +4,8 @@ import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
 import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { PaymentProps } from "../types";
+import { useContext } from "react";
+import { ProjectCostCalculatorContext } from "../context/ProjectCostCalculatorContext";
 
 // two words fully written, the rest are initials
 const PaymentCss = {
@@ -25,5 +27,8 @@ const PaymentCss = {
 };
 
 export const Payment = ({}: PaymentProps) => {
+  const { hourlyRate, numberOfHours, numberToMultiplyTheHoursWith, sumOfTime } =
+    useContext(ProjectCostCalculatorContext);
+
   return <div>AComponent</div>;
 };

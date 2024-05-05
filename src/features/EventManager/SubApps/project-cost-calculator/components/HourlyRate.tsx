@@ -40,7 +40,9 @@ export const HourlyRate = ({}: HourlyRateProps) => {
 
   return (
     <section css={universalCss.container}>
-      <label htmlFor="numberInput">Hourly rate</label>
+      <h2>
+        <label htmlFor="numberInput">Hourly rate</label>
+      </h2>
       <input
         css={{ backgroundColor: "rgb(255,255,255,0.2)" }}
         type="number"
