@@ -27,8 +27,9 @@ const OneTwoTFWCNCss = {
 };
 
 export const Crunch = ({}: CrunchProps) => {
-  const { hourlyRate, numberOfHours, numberToMultiplyTheHoursWith, sumOfTime } =
-    useContext(ProjectCostCalculatorContext);
+  const { hourlyRate, numberOfHours, sumOfTime } = useContext(
+    ProjectCostCalculatorContext
+  );
 
   return <div>AComponent</div>;
 };

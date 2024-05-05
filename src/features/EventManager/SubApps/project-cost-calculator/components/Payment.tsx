@@ -27,8 +27,9 @@ const PaymentCss = {
 };
 
 export const Payment = ({}: PaymentProps) => {
-  const { hourlyRate, numberOfHours, numberToMultiplyTheHoursWith, sumOfTime } =
-    useContext(ProjectCostCalculatorContext);
+  const { hourlyRate, numberOfHours, sumOfTime } = useContext(
+    ProjectCostCalculatorContext
+  );
 
   return <div>AComponent</div>;
 };

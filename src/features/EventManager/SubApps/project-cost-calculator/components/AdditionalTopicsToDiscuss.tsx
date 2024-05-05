@@ -31,7 +31,7 @@ export const AdditionalTopicsToDiscuss =
     const {
       hourlyRate,
       numberOfHours,
-      numberToMultiplyTheHoursWith,
+
       sumOfTime,
     } = useContext(ProjectCostCalculatorContext);
 
