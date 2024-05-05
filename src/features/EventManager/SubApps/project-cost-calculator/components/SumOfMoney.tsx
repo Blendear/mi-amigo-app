@@ -4,7 +4,7 @@ import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
 import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { SumOfMoneyProps } from "../types";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ProjectCostCalculatorContext } from "../context/ProjectCostCalculatorContext";
 
 const SumOfMoneyCss = {
@@ -26,8 +26,19 @@ const SumOfMoneyCss = {
 };
 
 export const SumOfMoney = ({}: SumOfMoneyProps) => {
-  const { hourlyRate, numberOfHours, numberToMultiplyTheHoursWith, sumOfTime } =
-    useContext(ProjectCostCalculatorContext);
+  const { hourlyRate, sumOfTime } = useContext(ProjectCostCalculatorContext);
 
-  return <div>AComponent</div>;
+  const [sumOfMoneyState, setSumOfMoneyState] = useState<number>(0);
+
+  useEffect(() => {
+    const newSumOfMoney = hourlyRate.current * sumOfTime.current;
+    setSumOfMoneyState(newSumOfMoney);
+  }, [hourlyRate, sumOfTime]);
+
+  return (
+    <section css={universalCss.container}>
+      <h2>Sum of cost</h2>
+      <div>{sumOfMoneyState}</div>
+    </section>
+  );
 };
