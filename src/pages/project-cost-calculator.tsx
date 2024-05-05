@@ -5,6 +5,13 @@ import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universa
 import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { ProjectCostCalculatorContext } from "@/features/EventManager/SubApps/project-cost-calculator/context/ProjectCostCalculatorContext";
 import { BtnTutorialOpener } from "@/features/EventManager/Main/tutorial/components/BtnTutorialOpener";
+import { HourlyRate } from "@/features/EventManager/SubApps/project-cost-calculator/components/HourlyRate";
+import { ProjectGlobalAndSpecificAspects } from "@/features/EventManager/SubApps/project-cost-calculator/components/ProjectGlobalAndSpecificAspects";
+import { AdditionalTopicsToDiscuss } from "@/features/EventManager/SubApps/project-cost-calculator/components/AdditionalTopicsToDiscuss";
+import { Crunch } from "@/features/EventManager/SubApps/project-cost-calculator/components/Crunch";
+import { Payment } from "@/features/EventManager/SubApps/project-cost-calculator/components/Payment";
+import { SumOfTime } from "@/features/EventManager/SubApps/project-cost-calculator/components/SumOfTime";
+import { SumOfMoney } from "@/features/EventManager/SubApps/project-cost-calculator/components/SumOfMoney";
 
 const ProjectCostCCss = {
   container: css({}),
@@ -23,9 +30,20 @@ const ProjectCostCalculator = () => {
     <ProjectCostCalculatorContext.Provider value={{}}>
       <article css={ProjectCostCCss.container}>
         <NavbarButtons />
-        {/* 
-        
-        */}
+
+        <HourlyRate />
+
+        <ProjectGlobalAndSpecificAspects />
+
+        <AdditionalTopicsToDiscuss />
+
+        <Crunch />
+
+        <Payment />
+
+        <SumOfTime />
+
+        <SumOfMoney />
       </article>
     </ProjectCostCalculatorContext.Provider>
   );
