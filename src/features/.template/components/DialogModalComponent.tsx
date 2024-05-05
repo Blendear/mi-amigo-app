@@ -4,7 +4,7 @@ import { css } from "@emotion/react";
 // import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 // import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 // import { DialogModal } from "@/features/dialog-modals/components/DialogModal";
-import { DialogModal } from "../../dialog-modals/components/DialogModal";
+import { DialogModal } from "@/features/EventManager/Main/dialog-modals/components/DialogModal";
 import { useRouter } from "next/router";
 import { useState } from "react";
 

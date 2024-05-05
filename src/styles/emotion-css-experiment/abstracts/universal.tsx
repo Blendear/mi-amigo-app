@@ -76,8 +76,8 @@ export const universalCss = {
       // aspectRatio: "1/1",
     },
 
-    "& > button:last-of-type": {
-      gridColumn: "5",
-    },
+    // "& > button:last-of-type": {
+    //   gridColumn: "5",
+    // },
   }),
 };
