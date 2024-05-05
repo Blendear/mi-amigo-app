@@ -1,4 +1,11 @@
-export type ProjectCostCalculatorContextType = {};
+import React from "react";
+
+export type ProjectCostCalculatorContextType = {
+  hourlyRate: React.MutableRefObject<number>;
+  numberOfHours: React.MutableRefObject<number>;
+  numberToMultiplyTheHoursWith: React.MutableRefObject<number>;
+  sumOfTime: React.MutableRefObject<number>;
+};
 
 export type AComponentProps = {};
 

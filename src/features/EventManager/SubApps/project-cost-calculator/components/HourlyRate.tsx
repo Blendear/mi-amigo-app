@@ -4,6 +4,9 @@ import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
 import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { HourlyRateProps } from "../types";
+import { useContext, useState } from "react";
+import { parse } from "path";
+import { ProjectCostCalculatorContext } from "../context/ProjectCostCalculatorContext";
 
 // two words fully written, the rest are initials
 const HourlyRateCss = {
@@ -25,5 +28,27 @@ const HourlyRateCss = {
 };
 
 export const HourlyRate = ({}: HourlyRateProps) => {
-  return <section>AComponent</section>;
+  const { hourlyRate } = useContext(ProjectCostCalculatorContext);
+
+  const [inputNumber, setInputNumber] = useState<number>(60);
+
+  const handleChange = (event) => {
+    const newValue = parseInt(event.target.value);
+    setInputNumber(newValue);
+    hourlyRate.current = newValue;
+  };
+
+  return (
+    <section css={universalCss.container}>
+      <label htmlFor="numberInput">Hourly rate</label>
+      <input
+        css={{ backgroundColor: "rgb(255,255,255,0.2)" }}
+        type="number"
+        id="numberInput"
+        value={inputNumber}
+        onChange={handleChange}
+        placeholder="Enter a number"
+      />
+    </section>
+  );
 };

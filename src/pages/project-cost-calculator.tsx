@@ -12,6 +12,7 @@ import { Crunch } from "@/features/EventManager/SubApps/project-cost-calculator/
 import { Payment } from "@/features/EventManager/SubApps/project-cost-calculator/components/Payment";
 import { SumOfTime } from "@/features/EventManager/SubApps/project-cost-calculator/components/SumOfTime";
 import { SumOfMoney } from "@/features/EventManager/SubApps/project-cost-calculator/components/SumOfMoney";
+import { useRef } from "react";
 
 const ProjectCostCCss = {
   container: css({}),
@@ -26,8 +27,23 @@ export const NavbarButtons = () => {
 };
 
 const ProjectCostCalculator = () => {
+  // Everything other than hourlyrate and the two sums components, affect the number of hours
+  // and the number to multiply the hours with. The sum of time is then passed to the SumOfTime
+  // and multiplied by the hourly rate to get the numeric content of SumOfMoney.
+  const hourlyRate = useRef(0);
+  const numberOfHours = useRef(0);
+  const numberToMultiplyTheHoursWith = useRef(0);
+  const sumOfTime = useRef(0);
+
   return (
-    <ProjectCostCalculatorContext.Provider value={{}}>
+    <ProjectCostCalculatorContext.Provider
+      value={{
+        hourlyRate,
+        numberOfHours,
+        numberToMultiplyTheHoursWith,
+        sumOfTime,
+      }}
+    >
       <article css={ProjectCostCCss.container}>
         <NavbarButtons />
 
