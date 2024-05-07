@@ -6,6 +6,7 @@ import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universa
 import { useState } from "react";
 import Video from "../../yt-watcher/components/Video";
 import { DataPropertyOfTheinitialNode } from "../types";
+import ImageWithWrapper from "@/components/ImageWithWrapper";
 
 export type DetailsBasedOnVariantProps = {
   nodeDataRef: React.MutableRefObject<DataPropertyOfTheinitialNode>;
@@ -51,6 +52,14 @@ export const DetailsBasedOnVariant = ({
               {btnsVariantSetters}
             </div>
           )}
+
+          <ImageWithWrapper
+            src={
+              nodeDataRef.current.videosAndNotesByVariants[variantIndex]
+                .explanation.quickShort.fun.imagePath
+            }
+            alt="visualisation of the more fun, quick reminder"
+          />
 
           {/* <Video
             yTvideoId={

@@ -23,28 +23,28 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
               {
                 variant: "My way",
                 explanation: {
-                  quickReminder: {
-                    shortDescriptionFun: {
+                  quickShort: {
+                    fun: {
+                      imagePath: "https://placehold.co/600x400",
+                      text: "",
+                    },
+                    serious: {
                       imagePath: "",
                       text: "",
                     },
                   },
-                  shortDescriptionSerious: {
-                    imagePath: "",
-                    text: "",
-                  },
-                },
-                longFull: {
-                  video: {
-                    ytVideoId: "dQw4w9WgXcQ",
-                    importantNotes: {
-                      proposalsToUpdateTheVideoWith: [],
-                      friendlyProtips: [],
-                    },
 
-                    additionalLinks: [],
+                  longFull: {
+                    video: {
+                      ytVideoId: "dQw4w9WgXcQ",
+                      importantNotes: {
+                        proposalsToUpdateTheVideoWith: [],
+                        friendlyProtips: [],
+                      },
+                      additionalLinks: [],
+                    },
+                    transcript: [],
                   },
-                  transcript: [],
                 },
                 exercisesWithSolutions: [],
               },
@@ -64,28 +64,28 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
               {
                 variant: "My way",
                 explanation: {
-                  quickReminder: {
-                    shortDescriptionFun: {
+                  quickShort: {
+                    fun: {
+                      imagePath: "https://placehold.co/600x400",
+                      text: "",
+                    },
+                    serious: {
                       imagePath: "",
                       text: "",
                     },
                   },
-                  shortDescriptionSerious: {
-                    imagePath: "",
-                    text: "",
-                  },
-                },
-                longFull: {
-                  video: {
-                    ytVideoId: "dQw4w9WgXcQ",
-                    importantNotes: {
-                      proposalsToUpdateTheVideoWith: [],
-                      friendlyProtips: [],
-                    },
 
-                    additionalLinks: [],
+                  longFull: {
+                    video: {
+                      ytVideoId: "dQw4w9WgXcQ",
+                      importantNotes: {
+                        proposalsToUpdateTheVideoWith: [],
+                        friendlyProtips: [],
+                      },
+                      additionalLinks: [],
+                    },
+                    transcript: [],
                   },
-                  transcript: [],
                 },
                 exercisesWithSolutions: [],
               },
@@ -105,28 +105,28 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
               {
                 variant: "My way",
                 explanation: {
-                  quickReminder: {
-                    shortDescriptionFun: {
+                  quickShort: {
+                    fun: {
+                      imagePath: "https://placehold.co/600x400",
+                      text: "",
+                    },
+                    serious: {
                       imagePath: "",
                       text: "",
                     },
                   },
-                  shortDescriptionSerious: {
-                    imagePath: "",
-                    text: "",
-                  },
-                },
-                longFull: {
-                  video: {
-                    ytVideoId: "dQw4w9WgXcQ",
-                    importantNotes: {
-                      proposalsToUpdateTheVideoWith: [],
-                      friendlyProtips: [],
-                    },
 
-                    additionalLinks: [],
+                  longFull: {
+                    video: {
+                      ytVideoId: "dQw4w9WgXcQ",
+                      importantNotes: {
+                        proposalsToUpdateTheVideoWith: [],
+                        friendlyProtips: [],
+                      },
+                      additionalLinks: [],
+                    },
+                    transcript: [],
                   },
-                  transcript: [],
                 },
                 exercisesWithSolutions: [],
               },
@@ -147,28 +147,28 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
               {
                 variant: "My way",
                 explanation: {
-                  quickReminder: {
-                    shortDescriptionFun: {
+                  quickShort: {
+                    fun: {
+                      imagePath: "https://placehold.co/600x400",
+                      text: "",
+                    },
+                    serious: {
                       imagePath: "",
                       text: "",
                     },
                   },
-                  shortDescriptionSerious: {
-                    imagePath: "",
-                    text: "",
-                  },
-                },
-                longFull: {
-                  video: {
-                    ytVideoId: "dQw4w9WgXcQ",
-                    importantNotes: {
-                      proposalsToUpdateTheVideoWith: [],
-                      friendlyProtips: [],
-                    },
 
-                    additionalLinks: [],
+                  longFull: {
+                    video: {
+                      ytVideoId: "dQw4w9WgXcQ",
+                      importantNotes: {
+                        proposalsToUpdateTheVideoWith: [],
+                        friendlyProtips: [],
+                      },
+                      additionalLinks: [],
+                    },
+                    transcript: [],
                   },
-                  transcript: [],
                 },
                 exercisesWithSolutions: [],
               },
@@ -187,28 +187,28 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
               {
                 variant: "My way",
                 explanation: {
-                  quickReminder: {
-                    shortDescriptionFun: {
+                  quickShort: {
+                    fun: {
+                      imagePath: "https://placehold.co/600x400",
+                      text: "",
+                    },
+                    serious: {
                       imagePath: "",
                       text: "",
                     },
                   },
-                  shortDescriptionSerious: {
-                    imagePath: "",
-                    text: "",
-                  },
-                },
-                longFull: {
-                  video: {
-                    ytVideoId: "dQw4w9WgXcQ",
-                    importantNotes: {
-                      proposalsToUpdateTheVideoWith: [],
-                      friendlyProtips: [],
-                    },
 
-                    additionalLinks: [],
+                  longFull: {
+                    video: {
+                      ytVideoId: "dQw4w9WgXcQ",
+                      importantNotes: {
+                        proposalsToUpdateTheVideoWith: [],
+                        friendlyProtips: [],
+                      },
+                      additionalLinks: [],
+                    },
+                    transcript: [],
                   },
-                  transcript: [],
                 },
                 exercisesWithSolutions: [],
               },
@@ -227,28 +227,28 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
               {
                 variant: "My way",
                 explanation: {
-                  quickReminder: {
-                    shortDescriptionFun: {
+                  quickShort: {
+                    fun: {
+                      imagePath: "https://placehold.co/600x400",
+                      text: "",
+                    },
+                    serious: {
                       imagePath: "",
                       text: "",
                     },
                   },
-                  shortDescriptionSerious: {
-                    imagePath: "",
-                    text: "",
-                  },
-                },
-                longFull: {
-                  video: {
-                    ytVideoId: "dQw4w9WgXcQ",
-                    importantNotes: {
-                      proposalsToUpdateTheVideoWith: [],
-                      friendlyProtips: [],
-                    },
 
-                    additionalLinks: [],
+                  longFull: {
+                    video: {
+                      ytVideoId: "dQw4w9WgXcQ",
+                      importantNotes: {
+                        proposalsToUpdateTheVideoWith: [],
+                        friendlyProtips: [],
+                      },
+                      additionalLinks: [],
+                    },
+                    transcript: [],
                   },
-                  transcript: [],
                 },
                 exercisesWithSolutions: [],
               },
@@ -267,28 +267,28 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
               {
                 variant: "My way",
                 explanation: {
-                  quickReminder: {
-                    shortDescriptionFun: {
+                  quickShort: {
+                    fun: {
+                      imagePath: "https://placehold.co/600x400",
+                      text: "",
+                    },
+                    serious: {
                       imagePath: "",
                       text: "",
                     },
                   },
-                  shortDescriptionSerious: {
-                    imagePath: "",
-                    text: "",
-                  },
-                },
-                longFull: {
-                  video: {
-                    ytVideoId: "dQw4w9WgXcQ",
-                    importantNotes: {
-                      proposalsToUpdateTheVideoWith: [],
-                      friendlyProtips: [],
-                    },
 
-                    additionalLinks: [],
+                  longFull: {
+                    video: {
+                      ytVideoId: "dQw4w9WgXcQ",
+                      importantNotes: {
+                        proposalsToUpdateTheVideoWith: [],
+                        friendlyProtips: [],
+                      },
+                      additionalLinks: [],
+                    },
+                    transcript: [],
                   },
-                  transcript: [],
                 },
                 exercisesWithSolutions: [],
               },
@@ -307,28 +307,28 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
               {
                 variant: "My way",
                 explanation: {
-                  quickReminder: {
-                    shortDescriptionFun: {
+                  quickShort: {
+                    fun: {
+                      imagePath: "https://placehold.co/600x400",
+                      text: "",
+                    },
+                    serious: {
                       imagePath: "",
                       text: "",
                     },
                   },
-                  shortDescriptionSerious: {
-                    imagePath: "",
-                    text: "",
-                  },
-                },
-                longFull: {
-                  video: {
-                    ytVideoId: "dQw4w9WgXcQ",
-                    importantNotes: {
-                      proposalsToUpdateTheVideoWith: [],
-                      friendlyProtips: [],
-                    },
 
-                    additionalLinks: [],
+                  longFull: {
+                    video: {
+                      ytVideoId: "dQw4w9WgXcQ",
+                      importantNotes: {
+                        proposalsToUpdateTheVideoWith: [],
+                        friendlyProtips: [],
+                      },
+                      additionalLinks: [],
+                    },
+                    transcript: [],
                   },
-                  transcript: [],
                 },
                 exercisesWithSolutions: [],
               },
@@ -407,28 +407,28 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
               {
                 variant: "My way",
                 explanation: {
-                  quickReminder: {
-                    shortDescriptionFun: {
+                  quickShort: {
+                    fun: {
+                      imagePath: "https://placehold.co/600x400",
+                      text: "",
+                    },
+                    serious: {
                       imagePath: "",
                       text: "",
                     },
                   },
-                  shortDescriptionSerious: {
-                    imagePath: "",
-                    text: "",
-                  },
-                },
-                longFull: {
-                  video: {
-                    ytVideoId: "dQw4w9WgXcQ",
-                    importantNotes: {
-                      proposalsToUpdateTheVideoWith: [],
-                      friendlyProtips: [],
-                    },
 
-                    additionalLinks: [],
+                  longFull: {
+                    video: {
+                      ytVideoId: "dQw4w9WgXcQ",
+                      importantNotes: {
+                        proposalsToUpdateTheVideoWith: [],
+                        friendlyProtips: [],
+                      },
+                      additionalLinks: [],
+                    },
+                    transcript: [],
                   },
-                  transcript: [],
                 },
                 exercisesWithSolutions: [],
               },
@@ -447,28 +447,28 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
               {
                 variant: "My way",
                 explanation: {
-                  quickReminder: {
-                    shortDescriptionFun: {
+                  quickShort: {
+                    fun: {
+                      imagePath: "https://placehold.co/600x400",
+                      text: "",
+                    },
+                    serious: {
                       imagePath: "",
                       text: "",
                     },
                   },
-                  shortDescriptionSerious: {
-                    imagePath: "",
-                    text: "",
-                  },
-                },
-                longFull: {
-                  video: {
-                    ytVideoId: "dQw4w9WgXcQ",
-                    importantNotes: {
-                      proposalsToUpdateTheVideoWith: [],
-                      friendlyProtips: [],
-                    },
 
-                    additionalLinks: [],
+                  longFull: {
+                    video: {
+                      ytVideoId: "dQw4w9WgXcQ",
+                      importantNotes: {
+                        proposalsToUpdateTheVideoWith: [],
+                        friendlyProtips: [],
+                      },
+                      additionalLinks: [],
+                    },
+                    transcript: [],
                   },
-                  transcript: [],
                 },
                 exercisesWithSolutions: [],
               },

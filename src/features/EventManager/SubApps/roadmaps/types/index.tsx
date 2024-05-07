@@ -10,30 +10,30 @@ export type DataPropertyOfTheinitialNode = {
     variant: string; // name of the way of explanation (everyone reacts to different ways of expalantions better or worse) like "Gamer Slang" or "Censored" aka"Formal Speech"
 
     explanation: {
-      quickReminder: {
-        shortDescriptionFun: {
+      quickShort: {
+        fun: {
+          imagePath: string;
+          text: string;
+        };
+
+        serious: {
           imagePath: string;
           text: string;
         };
       };
 
-      shortDescriptionSerious: {
-        imagePath: string;
-        text: string;
-      };
-    };
-
-    longFull: {
-      video: {
-        ytVideoId: string;
-        importantNotes: {
-          proposalsToUpdateTheVideoWith: string[]; // temporary, before the video gets updated or the proposal gets rejected - like "the X in A is false, its actually Y"
-          friendlyProtips: string[]; // like "watch wiuth subtitles & at 0.75 speed - the guy speaks fast!"
+      longFull: {
+        video: {
+          ytVideoId: string;
+          importantNotes: {
+            proposalsToUpdateTheVideoWith: string[]; // temporary, before the video gets updated or the proposal gets rejected - like "the X in A is false, its actually Y"
+            friendlyProtips: string[]; // like "watch wiuth subtitles & at 0.75 speed - the guy speaks fast!"
+          };
+          additionalLinks: { title: string; url: string }[];
         };
-        additionalLinks: { title: string; url: string }[];
-      };
 
-      transcript: { typeOfContent: "img" | "txt"; content: string }[]; // it will be renrered as images and/or text chunks. Like a list of milestones captured from the video
+        transcript: { typeOfContent: "img" | "txt"; content: string }[]; // it will be renrered as images and/or text chunks. Like a list of milestones captured from the video
+      };
     };
 
     // actual use cases examples ot train along
