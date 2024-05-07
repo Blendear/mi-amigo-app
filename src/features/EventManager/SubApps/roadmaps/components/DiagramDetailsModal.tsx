@@ -8,6 +8,7 @@ import { BtnsDaysBeforeRepetitionNeeded } from "./BtnsDaysBeforeRepetitionNeeded
 import { DetailsBasedOnVariant } from "./DetailsBasedOnVariant";
 import { DialogModal } from "@/features/EventManager/Main/dialog-modals/components/DialogModal";
 import { RoadmapsContext } from "../context/RoadmapsContext";
+import { DataPropertyOfTheinitialNode } from "../types";
 
 export const DiagramDetailsModal = () => {
   const { diagrams, diagramName, nodeId, setNodeId, updateNode } =
@@ -16,7 +17,9 @@ export const DiagramDetailsModal = () => {
   const Details = () => {
     const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false);
 
-    const nodeDataRef = useRef(diagrams[diagramName].initialNodes[nodeId].data);
+    const nodeDataRef = useRef<DataPropertyOfTheinitialNode>(
+      diagrams[diagramName].initialNodes[nodeId].data
+    );
 
     return (
       <div

@@ -5,9 +5,22 @@ import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 import { useState } from "react";
 import Video from "../../yt-watcher/components/Video";
+import { DataPropertyOfTheinitialNode } from "../types";
 
-export const DetailsBasedOnVariant = ({ nodeDataRef, nodeId }) => {
+export type DetailsBasedOnVariantProps = {
+  nodeDataRef: React.MutableRefObject<DataPropertyOfTheinitialNode>;
+  //TODO : add the type
+  nodeId;
+};
+
+export const DetailsBasedOnVariant = ({
+  nodeDataRef,
+  nodeId,
+}: DetailsBasedOnVariantProps) => {
   const [variantIndex, setVariantIndex] = useState(0);
+
+  const contentVariantsAmount =
+    nodeDataRef.current.videosAndNotesByVariants.length;
 
   const btnsVariantSetters = nodeDataRef.current.videosAndNotesByVariants.map(
     (variant, index) => {
@@ -30,26 +43,29 @@ export const DetailsBasedOnVariant = ({ nodeDataRef, nodeId }) => {
 
   return (
     <>
-      {nodeId && nodeDataRef.current.videosAndNotesByVariants.length > 0 ? (
+      {nodeId && contentVariantsAmount > 0 ? (
         <>
-          <div css={{ display: "grid", gridAutoFlow: "column" }}>
-            {btnsVariantSetters}
-          </div>
+          {/* There's no point of showing multiple ways of teaching to choose from, if there's only one currently available */}
+          {contentVariantsAmount > 1 && (
+            <div css={{ display: "grid", gridAutoFlow: "column" }}>
+              {btnsVariantSetters}
+            </div>
+          )}
 
-          <Video
+          {/* <Video
             yTvideoId={
               nodeDataRef.current.videosAndNotesByVariants[variantIndex]
                 .ytVideoId || ""
             }
-          />
-
+          /> */}
+          {/* 
           <p>
             {
               nodeDataRef.current.videosAndNotesByVariants[variantIndex]
                 .description
             }
-          </p>
-
+          </p> */}
+          {/* 
           {nodeDataRef.current.videosAndNotesByVariants[variantIndex]
             .notesToTheVideo.length > 0 && (
             <div css={universalCss.container}>
@@ -82,7 +98,7 @@ export const DetailsBasedOnVariant = ({ nodeDataRef, nodeId }) => {
                 })}
               </ul>
             </div>
-          )}
+          )} */}
         </>
       ) : (
         <p css={{ color: "red" }}>No videosAndNotesByVariants </p>
