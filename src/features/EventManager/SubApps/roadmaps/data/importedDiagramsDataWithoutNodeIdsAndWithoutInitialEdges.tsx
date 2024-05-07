@@ -1,11 +1,24 @@
 export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges = {
   sql: {
     initialNodes: [
+      // TODO: Check why the first node is not being displayed
       {
         position: { x: 0, y: 0 },
         data: {
           levelOfNestedness: 0,
-          label: "What and why is SQL",
+          label: "___",
+          imagePath: "https://placehold.co/600x400",
+          daysBeforeRepetitionNeeded: 1,
+          lastRepeatDateString: "2024-05-01T00:00:00",
+          videosAndNotesByVariants: [],
+        },
+      },
+      {
+        position: { x: 0, y: 0 },
+        data: {
+          levelOfNestedness: 0,
+          label: "Po kiego grzyba nam SQL?",
+          // label: "What and why is SQL",
           imagePath: "https://placehold.co/600x400",
           daysBeforeRepetitionNeeded: 1,
           lastRepeatDateString: "2024-05-01T00:00:00",
@@ -13,9 +26,9 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges = {
             {
               variant: "Gamer Speech",
               ytVideoId: "dQw4w9WgXcQ",
-              notesToTheVideo: [],
+              notesToTheVideo: ["Note for testing"],
               description: "Timestamp 1:00 - 2:53",
-              additionalLinks: [],
+              additionalLinks: ["https://placehold.co/50x400"],
             },
             {
               variant: "Censored Speech",
@@ -31,7 +44,8 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges = {
         position: { x: 0, y: 0 },
         data: {
           levelOfNestedness: 0,
-          label: "Basic Syntax",
+          label: "Podstawowa pisownia (aka Syntax)",
+          // label: "Basic Syntax",
           imagePath: "https://placehold.co/600x400",
           daysBeforeRepetitionNeeded: 3,
           lastRepeatDateString: "2024-05-01T00:00:00",
@@ -41,7 +55,10 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges = {
               ytVideoId: "dQw4w9WgXcQ",
               notesToTheVideo: ["This is a note", "This is another note"],
               description: "",
-              additionalLinks: [],
+              additionalLinks: [
+                "https://placehold.co/50x400",
+                "https://placehold.co/600x1200",
+              ],
             },
             {
               variant: "Censored Speech",
@@ -56,8 +73,10 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges = {
       {
         position: { x: 0, y: 0 },
         data: {
-          levelOfNestedness: 1,
-          label: "Syntax AAA",
+          levelOfNestedness: 0,
+          label:
+            "Modyfikowanie sposobu budowy danych (Data Definition Language)",
+          // label: "Data Definition Language (DDL)",
           imagePath: "https://placehold.co/600x400",
           daysBeforeRepetitionNeeded: 69,
           lastRepeatDateString: "2024-05-01T00:00:00",
@@ -82,8 +101,8 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges = {
       {
         position: { x: 0, y: 0 },
         data: {
-          levelOfNestedness: 1,
-          label: "Syntax BBB",
+          levelOfNestedness: 0,
+          label: "Modyfikowanie wartości danych (Data Manipulation Language)",
           imagePath: "https://placehold.co/600x400",
           daysBeforeRepetitionNeeded: 7,
           lastRepeatDateString: "2024-05-01T00:00:00",
@@ -108,34 +127,8 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges = {
       {
         position: { x: 0, y: 0 },
         data: {
-          levelOfNestedness: 2,
-          label: "Child of Syntax BBB",
-          imagePath: "https://placehold.co/600x400",
-          daysBeforeRepetitionNeeded: 7,
-          lastRepeatDateString: "2024-05-01T00:00:00",
-          videosAndNotesByVariants: [
-            {
-              variant: "Gamer Speech",
-              ytVideoId: "dQw4w9WgXcQ",
-              notesToTheVideo: [],
-              description: "This is a description",
-              additionalLinks: [],
-            },
-            {
-              variant: "Censored Speech",
-              ytVideoId: "dQw4w9WgXcQ",
-              notesToTheVideo: [],
-              description: "This is a description",
-              additionalLinks: [],
-            },
-          ],
-        },
-      },
-      {
-        position: { x: 0, y: 0 },
-        data: {
-          levelOfNestedness: 1,
-          label: "Syntax CCC",
+          levelOfNestedness: 0,
+          label: "Agregowanie zapytań (Aggregate queries)",
           imagePath: "https://placehold.co/600x400",
           daysBeforeRepetitionNeeded: 7,
           lastRepeatDateString: "2024-05-01T00:00:00",
@@ -161,7 +154,33 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges = {
         position: { x: 0, y: 0 },
         data: {
           levelOfNestedness: 0,
-          label: "Debugging",
+          label: "Narzucanie ograniczeń na dane (Data Constraints)",
+          imagePath: "https://placehold.co/600x400",
+          daysBeforeRepetitionNeeded: 7,
+          lastRepeatDateString: "2024-05-01T00:00:00",
+          videosAndNotesByVariants: [
+            {
+              variant: "Gamer Speech",
+              ytVideoId: "dQw4w9WgXcQ",
+              notesToTheVideo: [],
+              description: "This is a description",
+              additionalLinks: [],
+            },
+            {
+              variant: "Censored Speech",
+              ytVideoId: "dQw4w9WgXcQ",
+              notesToTheVideo: [],
+              description: "This is a description",
+              additionalLinks: [],
+            },
+          ],
+        },
+      },
+      {
+        position: { x: 0, y: 0 },
+        data: {
+          levelOfNestedness: 0,
+          label: "Łączenie zapytań (JOIN queries)",
           imagePath: "https://placehold.co/600x400",
           daysBeforeRepetitionNeeded: 14,
           lastRepeatDateString: "2024-05-01T00:00:00",
@@ -183,6 +202,62 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges = {
           ],
         },
       },
+      {
+        position: { x: 0, y: 0 },
+        data: {
+          levelOfNestedness: 0,
+          label: "Zapytania w zapytaniu... incepcja (Sub Queries)",
+          imagePath: "https://placehold.co/600x400",
+          daysBeforeRepetitionNeeded: 14,
+          lastRepeatDateString: "2024-05-01T00:00:00",
+          videosAndNotesByVariants: [],
+        },
+      },
+      {
+        position: { x: 0, y: 0 },
+        data: {
+          levelOfNestedness: 0,
+          label:
+            "Zaawansowane funkcje SQL aka czary arcymaga (Advanced SQL functions)",
+          imagePath: "https://placehold.co/600x400",
+          daysBeforeRepetitionNeeded: 14,
+          lastRepeatDateString: "2024-05-01T00:00:00",
+          videosAndNotesByVariants: [],
+        },
+      },
+      {
+        position: { x: 0, y: 0 },
+        data: {
+          levelOfNestedness: 0,
+          label: "Widoki (Views)",
+          imagePath: "https://placehold.co/600x400",
+          daysBeforeRepetitionNeeded: 14,
+          lastRepeatDateString: "2024-05-01T00:00:00",
+          videosAndNotesByVariants: [],
+        },
+      },
+      {
+        position: { x: 0, y: 0 },
+        data: {
+          levelOfNestedness: 0,
+          label: "Transakcje (Transactions)",
+          imagePath: "https://placehold.co/600x400",
+          daysBeforeRepetitionNeeded: 69,
+          lastRepeatDateString: "2024-05-01T00:00:00",
+          videosAndNotesByVariants: [],
+        },
+      },
+      {
+        position: { x: 0, y: 0 },
+        data: {
+          levelOfNestedness: 0,
+          label: "... Ciąg dalszy nastąpi ...",
+          imagePath: "https://placehold.co/600x400",
+          daysBeforeRepetitionNeeded: 30,
+          lastRepeatDateString: "2024-05-01T00:00:00",
+          videosAndNotesByVariants: [],
+        },
+      },
     ],
   },
   php: {
@@ -191,7 +266,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges = {
         position: { x: 0, y: 0 },
         data: {
           levelOfNestedness: 0,
-          label: "What and why is PHP",
+          label: "___",
           imagePath: "https://placehold.co/600x400",
           daysBeforeRepetitionNeeded: 14,
           lastRepeatDateString: "2024-05-01T00:00:00",
@@ -210,29 +285,9 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges = {
         position: { x: 0, y: 0 },
         data: {
           levelOfNestedness: 0,
-          label: "Basic Syntax",
+          label: "Tajemnice istnienia",
           imagePath: "https://placehold.co/600x400",
           daysBeforeRepetitionNeeded: 7,
-          lastRepeatDateString: "2024-05-01T00:00:00",
-          videosAndNotesByVariants: [
-            {
-              variant: "Censored Speech",
-              ytVideoId: "dQw4w9WgXcQ",
-              notesToTheVideo: [],
-              description: "This is a description",
-              additionalLinks: [],
-            },
-          ],
-        },
-      },
-
-      {
-        position: { x: 0, y: 0 },
-        data: {
-          levelOfNestedness: 0,
-          label: "Joining Queries",
-          imagePath: "https://placehold.co/600x400",
-          daysBeforeRepetitionNeeded: 30,
           lastRepeatDateString: "2024-05-01T00:00:00",
           videosAndNotesByVariants: [
             {

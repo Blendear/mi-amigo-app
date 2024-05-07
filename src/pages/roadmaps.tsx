@@ -56,7 +56,7 @@ const Roadmaps = () => {
           newDiagrams[diagramName].initialNodes.length > 1
             ? {
                 x: leftMarginBasedOnLevelOfNestedness,
-                y: 100 * parseInt(node.id),
+                y: 125 * parseInt(node.id),
               }
             : { x: leftMarginBasedOnLevelOfNestedness, y: 0 };
 

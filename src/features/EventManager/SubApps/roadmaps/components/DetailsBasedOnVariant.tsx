@@ -30,20 +30,63 @@ export const DetailsBasedOnVariant = ({ nodeDataRef, nodeId }) => {
 
   return (
     <>
-      <div css={{ display: "grid", gridAutoFlow: "column" }}>
-        {btnsVariantSetters}
-      </div>
-      <p>
-        {nodeId &&
-          nodeDataRef.current.videosAndNotesByVariants[variantIndex]
-            .description}
-      </p>
-      <Video
-        yTvideoId={
-          nodeDataRef.current.videosAndNotesByVariants[variantIndex]
-            .ytVideoId || ""
-        }
-      />
+      {nodeId && nodeDataRef.current.videosAndNotesByVariants.length > 0 ? (
+        <>
+          <div css={{ display: "grid", gridAutoFlow: "column" }}>
+            {btnsVariantSetters}
+          </div>
+
+          <Video
+            yTvideoId={
+              nodeDataRef.current.videosAndNotesByVariants[variantIndex]
+                .ytVideoId || ""
+            }
+          />
+
+          <p>
+            {
+              nodeDataRef.current.videosAndNotesByVariants[variantIndex]
+                .description
+            }
+          </p>
+
+          {nodeDataRef.current.videosAndNotesByVariants[variantIndex]
+            .notesToTheVideo.length > 0 && (
+            <div css={universalCss.container}>
+              <h2>Notes to include in the video</h2>
+              <ul>
+                {nodeDataRef.current.videosAndNotesByVariants[
+                  variantIndex
+                ].notesToTheVideo.map((note, index) => {
+                  return <li key={index}>{note}</li>;
+                })}
+              </ul>
+            </div>
+          )}
+
+          {nodeDataRef.current.videosAndNotesByVariants[variantIndex]
+            .additionalLinks.length > 0 && (
+            <div css={universalCss.container}>
+              <h2>Notes to include in the video</h2>
+              <ul>
+                {nodeDataRef.current.videosAndNotesByVariants[
+                  variantIndex
+                ].additionalLinks.map((link, index) => {
+                  return (
+                    <li key={index}>
+                      <a href={link} target="_blank" rel="noreferrer">
+                        {link}
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          )}
+        </>
+      ) : (
+        <p css={{ color: "red" }}>No videosAndNotesByVariants </p>
+      )}
     </>
   );
 };

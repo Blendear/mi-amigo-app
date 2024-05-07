@@ -19,7 +19,12 @@ export const DiagramDetailsModal = () => {
     const nodeDataRef = useRef(diagrams[diagramName].initialNodes[nodeId].data);
 
     return (
-      <div>
+      <div
+        css={{
+          display: "grid",
+          rowGap: "4rem",
+        }}
+      >
         <p>
           Diagram: {diagramName} Node: {nodeId}
         </p>
