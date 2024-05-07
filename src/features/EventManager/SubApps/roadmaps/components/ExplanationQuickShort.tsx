@@ -17,17 +17,26 @@ export const ExplanationQuickShort = () => {
         <h2 css={universalCss.container}>Wyjaśnienie - Krótkie</h2>
       }
     >
-      <p>{contentChosen.explanation.quickShort.serious.text}</p>
+      <div
+        css={{
+          "& *": {
+            fontSize: "2rem",
+          },
+        }}
+      >
+        {/* serious */}
+        <p>{contentChosen.explanation.quickShort.serious.text}</p>
 
-      {/* fun */}
-      <ImageWithWrapper
-        src={contentChosen.explanation.quickShort.fun.imagePath}
-        width="100%"
-        aspectRatio="16/9"
-        alt="visualisation of the more fun, quick reminder"
-      />
+        {/* fun */}
+        <ImageWithWrapper
+          src={contentChosen.explanation.quickShort.fun.imagePath}
+          width="100%"
+          aspectRatio="16/9"
+          alt="visualisation of the more fun, quick reminder"
+        />
 
-      <p>{contentChosen.explanation.quickShort.fun.text}</p>
+        <p>{contentChosen.explanation.quickShort.fun.text}</p>
+      </div>
     </TitleBarWithTogglableContent>
   );
 };

@@ -25,18 +25,16 @@ export const DiagramDetailsModal = () => {
     return (
       <DetailsContext.Provider value={{ nodeDataRef }}>
         <div css={{ display: "grid", justifyItems: "center" }}>
-          {" "}
           <div
             css={{
               display: "grid",
               rowGap: "4rem",
-              maxWidth: "500px",
+
+              "@media (orientation: landscape)": {
+                width: "800px",
+              },
             }}
           >
-            <p>
-              Diagram: {diagramName} Node: {nodeId}
-            </p>
-
             {/* TODO: Use the context nodeDataRef instead of the props passing in the components below */}
             <BtnsDaysBeforeRepetitionNeeded nodeDataRef={nodeDataRef} />
 

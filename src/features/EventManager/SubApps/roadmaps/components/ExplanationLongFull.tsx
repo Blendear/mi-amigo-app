@@ -9,6 +9,7 @@ import { ContentVariantContext } from "../context/ContentVariantContext";
 import Video from "../../yt-watcher/components/Video";
 import { FaLink, FaExclamation } from "react-icons/fa";
 import { Exercises } from "./Exercises";
+import { TitleBarWithTogglableContent } from "@/components/TitleBarWithTogglableContent";
 
 export const ExplanationLongFull = () => {
   const { contentChosen } = useContext(ContentVariantContext);
@@ -22,79 +23,102 @@ export const ExplanationLongFull = () => {
   return (
     <section>
       {/* Explanation */}
-      <h2 css={universalCss.container}>Wyjaśnienie - Długie</h2>
-
-      {/* Variant Toggler  */}
-      <button
-        css={[
-          universalCss.container,
-          {
-            width: "max-content",
-            backgroundColor: "white",
-            color: "black",
-          },
-        ]}
-        onClick={() => {
-          setExplanationVariant(
-            explanationVariant === "video" ? "transcript" : "video"
-          );
-        }}
+      <TitleBarWithTogglableContent
+        titleBarContent={
+          <h2 css={universalCss.container}>Wyjaśnienie - Długie</h2>
+        }
       >
-        Pokaż video / transkrypt
-      </button>
-
-      {explanationVariant === "video" ? (
-        // Explanation - Video
-        <div>
-          <Video yTvideoId={videoVariant.ytVideoId} />
-
-          <div
-            css={{
-              width: "max-content",
+        {/* TODO: insetad of this div, refacotr the code so that "Exercises" is imported outsdie of the "Explanation" component. */}
+        <div
+          css={{
+            "& *": {
+              fontSize: "2rem",
+            },
+          }}
+        >
+          {/* Variant Toggler  */}
+          <button
+            css={[
+              universalCss.container,
+              {
+                width: "max-content",
+                backgroundColor: "white",
+                color: "black",
+              },
+            ]}
+            onClick={() => {
+              setExplanationVariant(
+                explanationVariant === "video" ? "transcript" : "video"
+              );
             }}
           >
-            {videoVariant.importantNotes.friendlyProtips.map(
-              (protip, index) => (
-                <div
-                  key={index}
-                  css={{ display: "grid", gridAutoFlow: "column" }}
-                >
-                  <FaExclamation />
-                  <p key={index}>{protip}</p>
-                </div>
-              )
-            )}
-          </div>
+            Pokaż video / transkrypt
+          </button>
+          {explanationVariant === "video" ? (
+            // Explanation - Video
+            <div
+              css={{
+                "& > div:first-of-type": {
+                  aspectRatio: "16/9",
+                },
+              }}
+            >
+              <Video yTvideoId={videoVariant.ytVideoId} />
 
-          <div
-            css={{
-              width: "max-content",
-            }}
-          >
-            {videoVariant.additionalLinks.map((link, index) => (
-              <a
-                key={index}
-                href={link.url}
-                css={{ display: "grid", gridAutoFlow: "column" }}
+              <div
+                css={{
+                  width: "max-content",
+                }}
               >
-                <FaLink />
-                <p>{link.title}</p>
-              </a>
-            ))}
-          </div>
+                {videoVariant.importantNotes.friendlyProtips.map(
+                  (protip, index) => (
+                    <div
+                      key={index}
+                      css={{ display: "grid", gridAutoFlow: "column" }}
+                    >
+                      <FaExclamation />
+                      <p key={index}>{protip}</p>
+                    </div>
+                  )
+                )}
+              </div>
+
+              <div
+                css={{
+                  width: "max-content",
+                }}
+              >
+                {videoVariant.additionalLinks.map((link, index) => (
+                  <a
+                    key={index}
+                    href={link.url}
+                    css={{ display: "grid", gridAutoFlow: "column" }}
+                  >
+                    <FaLink />
+                    <p>{link.title}</p>
+                  </a>
+                ))}
+              </div>
+            </div>
+          ) : (
+            // Explanation - Transcript
+            <div>
+              {transcriptVariant.map((transcriptChunk, index) => {
+                return transcriptChunk.typeOfContent === "img" ? (
+                  <ImageWithWrapper
+                    key={index}
+                    src={transcriptChunk.content}
+                    width="100%"
+                    aspectRatio="16/9"
+                  />
+                ) : (
+                  <p key={index}>{transcriptChunk.content}</p>
+                );
+              })}
+            </div>
+          )}
         </div>
-      ) : (
-        // Explanation - Transcript
-        <div>
-          {transcriptVariant.map((transcriptChunk, index) => {
-            return transcriptChunk.typeOfContent === "img" ? (
-              <ImageWithWrapper key={index} src={transcriptChunk.content} />
-            ) : (
-              <p key={index}>{transcriptChunk.content}</p>
-            );
-          })}
-        </div>
-      )}
+      </TitleBarWithTogglableContent>
 
       {/* Exercises */}
       <Exercises contentChosen={contentChosen} />

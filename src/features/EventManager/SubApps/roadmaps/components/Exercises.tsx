@@ -5,6 +5,7 @@ import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 import ImageWithWrapper from "@/components/ImageWithWrapper";
 import { useState } from "react";
+import { TitleBarWithTogglableContent } from "@/components/TitleBarWithTogglableContent";
 
 export const Exercises = ({ contentChosen }) => {
   const [activeExerciseIndex, setActiveExerciseIndex] = useState(0);
@@ -34,47 +35,61 @@ export const Exercises = ({ contentChosen }) => {
   };
 
   return (
-    <div>
-      <h2 css={universalCss.container}>Ćwiczenia</h2>
-
-      <ImageWithWrapper
-        src={
-          contentChosen.exercisesWithSolutions[activeExerciseIndex].imagePath
-        }
-        width="100%"
-        aspectRatio="16/9"
-      />
-
-      {/* Buttons for navigation */}
-      <div
-        css={css`
-          display: flex;
-          justify-content: space-between;
-          margin-top: 20px;
-        `}
+    <div css={{ marginTop: "4rem" }}>
+      <TitleBarWithTogglableContent
+        titleBarContent={<h2 css={universalCss.container}>Ćwiczenia</h2>}
       >
-        <button onClick={handleSetToFirst} disabled={activeExerciseIndex === 0}>
-          First
-        </button>
-        <button
-          onClick={handleDecrementIndex}
-          disabled={activeExerciseIndex === 0}
+        <div
+          css={{
+            "& *": {
+              fontSize: "2rem",
+            },
+          }}
         >
-          Previous
-        </button>
-        <button
-          onClick={handleIncrementIndex}
-          disabled={activeExerciseIndex === totalExercises - 1}
-        >
-          Next
-        </button>
-        <button
-          onClick={handleSetToLast}
-          disabled={activeExerciseIndex === totalExercises - 1}
-        >
-          Last
-        </button>
-      </div>
+          <ImageWithWrapper
+            src={
+              contentChosen.exercisesWithSolutions[activeExerciseIndex]
+                .imagePath
+            }
+            width="100%"
+            aspectRatio="16/9"
+          />
+
+          {/* Buttons for navigation */}
+          <div
+            css={css`
+              display: flex;
+              justify-content: space-between;
+              margin-top: 20px;
+            `}
+          >
+            <button
+              onClick={handleSetToFirst}
+              disabled={activeExerciseIndex === 0}
+            >
+              First
+            </button>
+            <button
+              onClick={handleDecrementIndex}
+              disabled={activeExerciseIndex === 0}
+            >
+              Previous
+            </button>
+            <button
+              onClick={handleIncrementIndex}
+              disabled={activeExerciseIndex === totalExercises - 1}
+            >
+              Next
+            </button>
+            <button
+              onClick={handleSetToLast}
+              disabled={activeExerciseIndex === totalExercises - 1}
+            >
+              Last
+            </button>
+          </div>
+        </div>
+      </TitleBarWithTogglableContent>
     </div>
   );
 };
