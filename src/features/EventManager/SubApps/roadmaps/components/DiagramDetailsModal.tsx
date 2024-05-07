@@ -9,6 +9,7 @@ import { DetailsBasedOnVariant } from "./DetailsBasedOnVariant";
 import { DialogModal } from "@/features/EventManager/Main/dialog-modals/components/DialogModal";
 import { RoadmapsContext } from "../context/RoadmapsContext";
 import { DataPropertyOfTheinitialNode } from "../types";
+import { DetailsContext } from "../context/DetailsContext";
 
 export const DiagramDetailsModal = () => {
   const { diagrams, diagramName, nodeId, setNodeId, updateNode } =
@@ -22,35 +23,42 @@ export const DiagramDetailsModal = () => {
     );
 
     return (
-      <div
-        css={{
-          display: "grid",
-          rowGap: "4rem",
-        }}
-      >
-        <p>
-          Diagram: {diagramName} Node: {nodeId}
-        </p>
+      <DetailsContext.Provider value={{ nodeDataRef }}>
+        <div css={{ display: "grid", justifyItems: "center" }}>
+          {" "}
+          <div
+            css={{
+              display: "grid",
+              rowGap: "4rem",
+              maxWidth: "500px",
+            }}
+          >
+            <p>
+              Diagram: {diagramName} Node: {nodeId}
+            </p>
 
-        <BtnsDaysBeforeRepetitionNeeded nodeDataRef={nodeDataRef} />
+            {/* TODO: Use the context nodeDataRef instead of the props passing in the components below */}
+            <BtnsDaysBeforeRepetitionNeeded nodeDataRef={nodeDataRef} />
 
-        <DetailsBasedOnVariant nodeDataRef={nodeDataRef} nodeId={nodeId} />
+            <DetailsBasedOnVariant nodeDataRef={nodeDataRef} nodeId={nodeId} />
 
-        <button
-          onClick={() => {
-            updateNode("data", diagramName, nodeId, {
-              daysBeforeRepetitionNeeded:
-                nodeDataRef.current.daysBeforeRepetitionNeeded,
-            });
-          }}
-          css={[
-            universalCss.container,
-            { backgroundColor: hasUnsavedChanges ? "green" : "grey" },
-          ]}
-        >
-          Save changes
-        </button>
-      </div>
+            <button
+              onClick={() => {
+                updateNode("data", diagramName, nodeId, {
+                  daysBeforeRepetitionNeeded:
+                    nodeDataRef.current.daysBeforeRepetitionNeeded,
+                });
+              }}
+              css={[
+                universalCss.container,
+                { backgroundColor: hasUnsavedChanges ? "green" : "grey" },
+              ]}
+            >
+              Save changes
+            </button>
+          </div>
+        </div>
+      </DetailsContext.Provider>
     );
   };
 

@@ -7,6 +7,9 @@ import { useState } from "react";
 import Video from "../../yt-watcher/components/Video";
 import { DataPropertyOfTheinitialNode } from "../types";
 import ImageWithWrapper from "@/components/ImageWithWrapper";
+import { ExplanationQuickShort } from "./ExplanationQuickShort";
+import { ContentVariantContext } from "../context/ContentVariantContext";
+import { ExplanationLongFull } from "./ExplanationLongFull";
 
 export type DetailsBasedOnVariantProps = {
   nodeDataRef: React.MutableRefObject<DataPropertyOfTheinitialNode>;
@@ -43,38 +46,40 @@ export const DetailsBasedOnVariant = ({
   );
 
   return (
-    <>
-      {nodeId && contentVariantsAmount > 0 ? (
-        <>
-          {/* There's no point of showing multiple ways of teaching to choose from, if there's only one currently available */}
-          {contentVariantsAmount > 1 && (
-            <div css={{ display: "grid", gridAutoFlow: "column" }}>
-              {btnsVariantSetters}
-            </div>
-          )}
+    <ContentVariantContext.Provider
+      value={{
+        contentChosen:
+          nodeDataRef.current.videosAndNotesByVariants[variantIndex],
+      }}
+    >
+      <>
+        {nodeId && contentVariantsAmount > 0 ? (
+          <>
+            {/* There's no point of showing multiple ways of teaching to choose from, if there's only one currently available */}
+            {contentVariantsAmount > 1 && (
+              <div css={{ display: "grid", gridAutoFlow: "column" }}>
+                {btnsVariantSetters}
+              </div>
+            )}
 
-          <ImageWithWrapper
-            src={
-              nodeDataRef.current.videosAndNotesByVariants[variantIndex]
-                .explanation.quickShort.fun.imagePath
-            }
-            alt="visualisation of the more fun, quick reminder"
-          />
+            <ExplanationQuickShort />
 
-          {/* <Video
+            <ExplanationLongFull />
+
+            {/* <Video
             yTvideoId={
               nodeDataRef.current.videosAndNotesByVariants[variantIndex]
                 .ytVideoId || ""
             }
           /> */}
-          {/* 
+            {/* 
           <p>
             {
               nodeDataRef.current.videosAndNotesByVariants[variantIndex]
                 .description
             }
           </p> */}
-          {/* 
+            {/* 
           {nodeDataRef.current.videosAndNotesByVariants[variantIndex]
             .notesToTheVideo.length > 0 && (
             <div css={universalCss.container}>
@@ -108,10 +113,11 @@ export const DetailsBasedOnVariant = ({
               </ul>
             </div>
           )} */}
-        </>
-      ) : (
-        <p css={{ color: "red" }}>No videosAndNotesByVariants </p>
-      )}
-    </>
+          </>
+        ) : (
+          <p css={{ color: "red" }}>No videosAndNotesByVariants </p>
+        )}
+      </>
+    </ContentVariantContext.Provider>
   );
 };

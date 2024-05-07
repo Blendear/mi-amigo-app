@@ -17,7 +17,6 @@ export type DataPropertyOfTheinitialNode = {
         };
 
         serious: {
-          imagePath: string;
           text: string;
         };
       };
@@ -26,7 +25,8 @@ export type DataPropertyOfTheinitialNode = {
         video: {
           ytVideoId: string;
           importantNotes: {
-            proposalsToUpdateTheVideoWith: string[]; // temporary, before the video gets updated or the proposal gets rejected - like "the X in A is false, its actually Y"
+            // unnecessary for now
+            // proposalsToUpdateTheVideoWith: string[]; // temporary, before the video gets updated or the proposal gets rejected - like "the X in A is false, its actually Y"
             friendlyProtips: string[]; // like "watch wiuth subtitles & at 0.75 speed - the guy speaks fast!"
           };
           additionalLinks: { title: string; url: string }[];
@@ -66,4 +66,13 @@ export type RoadmapsContextType = {
   nodeId;
   setNodeId;
   updateNode;
+};
+
+export type DetailsContextType = {
+  nodeDataRef: React.MutableRefObject<DataPropertyOfTheinitialNode>;
+};
+
+export type ContentVariantContextType = {
+  // TODO: Check if this i a valid way of writing it's type
+  contentChosen: DataPropertyOfTheinitialNode["videosAndNotesByVariants"][0];
 };

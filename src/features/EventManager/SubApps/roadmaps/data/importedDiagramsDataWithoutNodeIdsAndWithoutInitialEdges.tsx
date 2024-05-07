@@ -26,11 +26,10 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                   quickShort: {
                     fun: {
                       imagePath: "https://placehold.co/600x400",
-                      text: "",
+                      text: "fun quickshorrt",
                     },
                     serious: {
-                      imagePath: "",
-                      text: "",
+                      text: "serious quickshort",
                     },
                   },
 
@@ -38,7 +37,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     video: {
                       ytVideoId: "dQw4w9WgXcQ",
                       importantNotes: {
-                        proposalsToUpdateTheVideoWith: [],
+                        // proposalsToUpdateTheVideoWith: [],
                         friendlyProtips: [],
                       },
                       additionalLinks: [],
@@ -46,7 +45,20 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [],
+                exercisesWithSolutions: [
+                  {
+                    imagePath: "https://placehold.co/1200x400",
+                  },
+                  {
+                    imagePath: "https://placehold.co/770x700",
+                  },
+                  {
+                    imagePath: "https://placehold.co/666x666",
+                  },
+                  {
+                    imagePath: "https://placehold.co/20x70",
+                  },
+                ],
               },
             ],
           },
@@ -67,11 +79,10 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                   quickShort: {
                     fun: {
                       imagePath: "https://placehold.co/600x400",
-                      text: "",
+                      text: "fun quickshorrt",
                     },
                     serious: {
-                      imagePath: "",
-                      text: "",
+                      text: "serious quickshort",
                     },
                   },
 
@@ -79,15 +90,56 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     video: {
                       ytVideoId: "dQw4w9WgXcQ",
                       importantNotes: {
-                        proposalsToUpdateTheVideoWith: [],
-                        friendlyProtips: [],
+                        // proposalsToUpdateTheVideoWith: [],
+                        friendlyProtips: [
+                          "Watch with subtitles & at 0.75 speed.",
+                        ],
                       },
-                      additionalLinks: [],
+                      additionalLinks: [
+                        {
+                          title: "SQL for beginners",
+                          url: "https://www.youtube.com/watch?v=HXV3zeQKqGY",
+                        },
+                      ],
                     },
-                    transcript: [],
+                    transcript: [
+                      {
+                        typeOfContent: "txt",
+                        content: "This is the first node",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content: "https://placehold.co/600x400",
+                      },
+                      {
+                        typeOfContent: "txt",
+                        content: "This is the second  node",
+                      },
+                      {
+                        typeOfContent: "txt",
+                        content: "This is the third node",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content: "https://placehold.co/600x400",
+                      },
+                    ],
                   },
                 },
-                exercisesWithSolutions: [],
+                exercisesWithSolutions: [
+                  {
+                    imagePath: "https://placehold.co/1200x400",
+                  },
+                  {
+                    imagePath: "https://placehold.co/770x700",
+                  },
+                  {
+                    imagePath: "https://placehold.co/666x666",
+                  },
+                  {
+                    imagePath: "https://placehold.co/20x70",
+                  },
+                ],
               },
             ],
           },
@@ -108,11 +160,10 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                   quickShort: {
                     fun: {
                       imagePath: "https://placehold.co/600x400",
-                      text: "",
+                      text: "fun quickshorrt",
                     },
                     serious: {
-                      imagePath: "",
-                      text: "",
+                      text: "serious quickshort",
                     },
                   },
 
@@ -120,7 +171,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     video: {
                       ytVideoId: "dQw4w9WgXcQ",
                       importantNotes: {
-                        proposalsToUpdateTheVideoWith: [],
+                        // proposalsToUpdateTheVideoWith: [],
                         friendlyProtips: [],
                       },
                       additionalLinks: [],
@@ -128,7 +179,20 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [],
+                exercisesWithSolutions: [
+                  {
+                    imagePath: "https://placehold.co/1200x400",
+                  },
+                  {
+                    imagePath: "https://placehold.co/770x700",
+                  },
+                  {
+                    imagePath: "https://placehold.co/666x666",
+                  },
+                  {
+                    imagePath: "https://placehold.co/20x70",
+                  },
+                ],
               },
             ],
           },
@@ -150,11 +214,10 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                   quickShort: {
                     fun: {
                       imagePath: "https://placehold.co/600x400",
-                      text: "",
+                      text: "fun quickshorrt",
                     },
                     serious: {
-                      imagePath: "",
-                      text: "",
+                      text: "serious quickshort",
                     },
                   },
 
@@ -162,7 +225,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     video: {
                       ytVideoId: "dQw4w9WgXcQ",
                       importantNotes: {
-                        proposalsToUpdateTheVideoWith: [],
+                        // proposalsToUpdateTheVideoWith: [],
                         friendlyProtips: [],
                       },
                       additionalLinks: [],
@@ -170,7 +233,20 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [],
+                exercisesWithSolutions: [
+                  {
+                    imagePath: "https://placehold.co/1200x400",
+                  },
+                  {
+                    imagePath: "https://placehold.co/770x700",
+                  },
+                  {
+                    imagePath: "https://placehold.co/666x666",
+                  },
+                  {
+                    imagePath: "https://placehold.co/20x70",
+                  },
+                ],
               },
             ],
           },
@@ -190,11 +266,10 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                   quickShort: {
                     fun: {
                       imagePath: "https://placehold.co/600x400",
-                      text: "",
+                      text: "fun quickshorrt",
                     },
                     serious: {
-                      imagePath: "",
-                      text: "",
+                      text: "serious quickshort",
                     },
                   },
 
@@ -202,7 +277,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     video: {
                       ytVideoId: "dQw4w9WgXcQ",
                       importantNotes: {
-                        proposalsToUpdateTheVideoWith: [],
+                        // proposalsToUpdateTheVideoWith: [],
                         friendlyProtips: [],
                       },
                       additionalLinks: [],
@@ -210,7 +285,20 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [],
+                exercisesWithSolutions: [
+                  {
+                    imagePath: "https://placehold.co/1200x400",
+                  },
+                  {
+                    imagePath: "https://placehold.co/770x700",
+                  },
+                  {
+                    imagePath: "https://placehold.co/666x666",
+                  },
+                  {
+                    imagePath: "https://placehold.co/20x70",
+                  },
+                ],
               },
             ],
           },
@@ -230,11 +318,10 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                   quickShort: {
                     fun: {
                       imagePath: "https://placehold.co/600x400",
-                      text: "",
+                      text: "fun quickshorrt",
                     },
                     serious: {
-                      imagePath: "",
-                      text: "",
+                      text: "serious quickshort",
                     },
                   },
 
@@ -242,7 +329,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     video: {
                       ytVideoId: "dQw4w9WgXcQ",
                       importantNotes: {
-                        proposalsToUpdateTheVideoWith: [],
+                        // proposalsToUpdateTheVideoWith: [],
                         friendlyProtips: [],
                       },
                       additionalLinks: [],
@@ -250,7 +337,20 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [],
+                exercisesWithSolutions: [
+                  {
+                    imagePath: "https://placehold.co/1200x400",
+                  },
+                  {
+                    imagePath: "https://placehold.co/770x700",
+                  },
+                  {
+                    imagePath: "https://placehold.co/666x666",
+                  },
+                  {
+                    imagePath: "https://placehold.co/20x70",
+                  },
+                ],
               },
             ],
           },
@@ -270,11 +370,10 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                   quickShort: {
                     fun: {
                       imagePath: "https://placehold.co/600x400",
-                      text: "",
+                      text: "fun quickshorrt",
                     },
                     serious: {
-                      imagePath: "",
-                      text: "",
+                      text: "serious quickshort",
                     },
                   },
 
@@ -282,7 +381,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     video: {
                       ytVideoId: "dQw4w9WgXcQ",
                       importantNotes: {
-                        proposalsToUpdateTheVideoWith: [],
+                        // proposalsToUpdateTheVideoWith: [],
                         friendlyProtips: [],
                       },
                       additionalLinks: [],
@@ -290,7 +389,20 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [],
+                exercisesWithSolutions: [
+                  {
+                    imagePath: "https://placehold.co/1200x400",
+                  },
+                  {
+                    imagePath: "https://placehold.co/770x700",
+                  },
+                  {
+                    imagePath: "https://placehold.co/666x666",
+                  },
+                  {
+                    imagePath: "https://placehold.co/20x70",
+                  },
+                ],
               },
             ],
           },
@@ -310,11 +422,10 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                   quickShort: {
                     fun: {
                       imagePath: "https://placehold.co/600x400",
-                      text: "",
+                      text: "fun quickshorrt",
                     },
                     serious: {
-                      imagePath: "",
-                      text: "",
+                      text: "serious quickshort",
                     },
                   },
 
@@ -322,7 +433,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     video: {
                       ytVideoId: "dQw4w9WgXcQ",
                       importantNotes: {
-                        proposalsToUpdateTheVideoWith: [],
+                        // proposalsToUpdateTheVideoWith: [],
                         friendlyProtips: [],
                       },
                       additionalLinks: [],
@@ -330,7 +441,20 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [],
+                exercisesWithSolutions: [
+                  {
+                    imagePath: "https://placehold.co/1200x400",
+                  },
+                  {
+                    imagePath: "https://placehold.co/770x700",
+                  },
+                  {
+                    imagePath: "https://placehold.co/666x666",
+                  },
+                  {
+                    imagePath: "https://placehold.co/20x70",
+                  },
+                ],
               },
             ],
           },
@@ -410,11 +534,10 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                   quickShort: {
                     fun: {
                       imagePath: "https://placehold.co/600x400",
-                      text: "",
+                      text: "fun quickshorrt",
                     },
                     serious: {
-                      imagePath: "",
-                      text: "",
+                      text: "serious quickshort",
                     },
                   },
 
@@ -422,7 +545,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     video: {
                       ytVideoId: "dQw4w9WgXcQ",
                       importantNotes: {
-                        proposalsToUpdateTheVideoWith: [],
+                        // proposalsToUpdateTheVideoWith: [],
                         friendlyProtips: [],
                       },
                       additionalLinks: [],
@@ -430,7 +553,20 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [],
+                exercisesWithSolutions: [
+                  {
+                    imagePath: "https://placehold.co/1200x400",
+                  },
+                  {
+                    imagePath: "https://placehold.co/770x700",
+                  },
+                  {
+                    imagePath: "https://placehold.co/666x666",
+                  },
+                  {
+                    imagePath: "https://placehold.co/20x70",
+                  },
+                ],
               },
             ],
           },
@@ -450,11 +586,10 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                   quickShort: {
                     fun: {
                       imagePath: "https://placehold.co/600x400",
-                      text: "",
+                      text: "fun quickshorrt",
                     },
                     serious: {
-                      imagePath: "",
-                      text: "",
+                      text: "serious quickshort",
                     },
                   },
 
@@ -462,7 +597,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     video: {
                       ytVideoId: "dQw4w9WgXcQ",
                       importantNotes: {
-                        proposalsToUpdateTheVideoWith: [],
+                        // proposalsToUpdateTheVideoWith: [],
                         friendlyProtips: [],
                       },
                       additionalLinks: [],
@@ -470,7 +605,20 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [],
+                exercisesWithSolutions: [
+                  {
+                    imagePath: "https://placehold.co/1200x400",
+                  },
+                  {
+                    imagePath: "https://placehold.co/770x700",
+                  },
+                  {
+                    imagePath: "https://placehold.co/666x666",
+                  },
+                  {
+                    imagePath: "https://placehold.co/20x70",
+                  },
+                ],
               },
             ],
           },
