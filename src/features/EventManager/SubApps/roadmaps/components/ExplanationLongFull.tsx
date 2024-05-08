@@ -14,7 +14,7 @@ import { TitleBarWithTogglableContent } from "@/components/TitleBarWithTogglable
 export const ExplanationLongFull = () => {
   const { contentChosen } = useContext(ContentVariantContext);
 
-  const [explanationVariant, setExplanationVariant] = useState("video");
+  const [explanationVariant, setExplanationVariant] = useState("transcript");
 
   const videoVariant = contentChosen.explanation.longFull.video;
 
@@ -92,6 +92,8 @@ export const ExplanationLongFull = () => {
                   <a
                     key={index}
                     href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     css={{ display: "grid", gridAutoFlow: "column" }}
                   >
                     <FaLink />
@@ -105,14 +107,31 @@ export const ExplanationLongFull = () => {
             <div>
               {transcriptVariant.map((transcriptChunk, index) => {
                 return transcriptChunk.typeOfContent === "img" ? (
-                  <ImageWithWrapper
-                    key={index}
-                    src={transcriptChunk.content}
-                    width="100%"
-                    aspectRatio="16/9"
-                  />
+                  <div
+                    css={{
+                      margin: `3rem 0`,
+                      padding: "3rem 1rem",
+                      border: `1px solid white`,
+                    }}
+                  >
+                    <ImageWithWrapper
+                      key={index}
+                      src={transcriptChunk.content}
+                      width="100%"
+                      aspectRatio="946/713"
+                    />
+                  </div>
                 ) : (
-                  <p key={index}>{transcriptChunk.content}</p>
+                  <p
+                    key={index}
+                    css={{
+                      margin: `1rem 0`,
+                      padding: "3rem 1rem",
+                      border: `1px solid white`,
+                    }}
+                  >
+                    {transcriptChunk.content}
+                  </p>
                 );
               })}
             </div>

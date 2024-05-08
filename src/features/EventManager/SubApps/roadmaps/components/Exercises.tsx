@@ -6,6 +6,7 @@ import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universa
 import ImageWithWrapper from "@/components/ImageWithWrapper";
 import { useState } from "react";
 import { TitleBarWithTogglableContent } from "@/components/TitleBarWithTogglableContent";
+import { FaLink } from "react-icons/fa";
 
 export const Exercises = ({ contentChosen }) => {
   const [activeExerciseIndex, setActiveExerciseIndex] = useState(0);
@@ -46,48 +47,82 @@ export const Exercises = ({ contentChosen }) => {
             },
           }}
         >
-          <ImageWithWrapper
-            src={
-              contentChosen.exercisesWithSolutions[activeExerciseIndex]
-                .imagePath
-            }
-            width="100%"
-            aspectRatio="16/9"
-          />
+          {contentChosen.exercisesWithSolutions.length > 0 && (
+            <>
+              <div
+                css={{
+                  border: `1px solid white`,
+                }}
+              >
+                <ImageWithWrapper
+                  src={
+                    contentChosen.exercisesWithSolutions[activeExerciseIndex]
+                      .imagePath
+                  }
+                  width="100%"
+                  aspectRatio="946/713"
+                />
+              </div>
 
-          {/* Buttons for navigation */}
-          <div
-            css={css`
-              display: flex;
-              justify-content: space-between;
-              margin-top: 20px;
-            `}
-          >
-            <button
+              {/* Buttons for navigation */}
+              <div
+                css={css`
+                  display: flex;
+                  justify-content: space-between;
+                  margin-top: 20px;
+                `}
+              >
+                {/* <button
               onClick={handleSetToFirst}
               disabled={activeExerciseIndex === 0}
             >
               First
-            </button>
-            <button
-              onClick={handleDecrementIndex}
-              disabled={activeExerciseIndex === 0}
-            >
-              Previous
-            </button>
-            <button
-              onClick={handleIncrementIndex}
-              disabled={activeExerciseIndex === totalExercises - 1}
-            >
-              Next
-            </button>
-            <button
+            </button> */}
+                <button
+                  onClick={handleDecrementIndex}
+                  disabled={activeExerciseIndex === 0}
+                >
+                  Previous
+                </button>
+                <button
+                  onClick={handleIncrementIndex}
+                  disabled={activeExerciseIndex === totalExercises - 1}
+                >
+                  Next
+                </button>
+                {/* <button
               onClick={handleSetToLast}
               disabled={activeExerciseIndex === totalExercises - 1}
             >
               Last
-            </button>
-          </div>
+            </button> */}
+              </div>
+            </>
+          )}
+
+          {contentChosen.linksToExercises && (
+            <div
+              css={{
+                marginTop: "6rem",
+                width: "max-content",
+                display: "grid",
+                gap: "3rem",
+              }}
+            >
+              {contentChosen.linksToExercises.map((link, index) => (
+                <a
+                  key={index}
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  css={{ display: "grid", gridAutoFlow: "column" }}
+                >
+                  <FaLink />
+                  <p>{link}</p>
+                </a>
+              ))}
+            </div>
+          )}
         </div>
       </TitleBarWithTogglableContent>
     </div>

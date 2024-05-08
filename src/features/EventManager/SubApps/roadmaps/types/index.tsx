@@ -41,6 +41,8 @@ export type DataPropertyOfTheinitialNode = {
       // it's an object, since maybe some additional props will be added in the future
       imagePath: string;
     }[];
+
+    linksToExercises?: string[];
   }[];
 };
 

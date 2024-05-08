@@ -336,11 +336,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -379,11 +375,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -422,11 +414,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -465,11 +453,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -508,11 +492,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -551,11 +531,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -594,11 +570,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -637,11 +609,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -680,11 +648,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -723,11 +687,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -766,11 +726,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -809,11 +765,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -905,11 +857,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -929,10 +877,10 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                   quickShort: {
                     fun: {
                       imagePath: "https://placehold.co/600x400",
-                      text: "f quickshorrt",
+                      text: "Wybieram ciebie, seler!",
                     },
                     serious: {
-                      text: "s quickshort",
+                      text: "Wybiera kolumny tabeli (z bazy danych), które chcesz wyświetlić",
                     },
                   },
 
@@ -945,14 +893,28 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       },
                       additionalLinks: [],
                     },
-                    transcript: [],
+                    transcript: [
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/SELECT.png",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/SELECT3.png",
+                      },
+                      {
+                        typeOfContent: "txt",
+                        content:
+                          "( ! ) Samo SELECT nic nie zwróci. Niezbędne będą dodatkowe słowa klucze",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/SELECT2.png",
+                      },
+                    ],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -975,7 +937,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       text: "f quickshorrt",
                     },
                     serious: {
-                      text: "s quickshort",
+                      text: "Określa tabele, z których należy dokonać wyszukiwania",
                     },
                   },
 
@@ -988,13 +950,23 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       },
                       additionalLinks: [],
                     },
-                    transcript: [],
+                    transcript: [
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/FROM.png",
+                      },
+                      {
+                        typeOfContent: "txt",
+                        content:
+                          "Wskazówka - FROM nie ogranicza się to tylko do SELECT. Ma zastosowanie również do innych operacji, np. UPDATE i DELETE, które omówimy w inych rozdziałach",
+                      },
+                    ],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
+                exercisesWithSolutions: [],
+
+                linksToExercises: [
+                  "https://www.w3schools.com/sql/exercise.asp?filename=exercise_select1",
                 ],
               },
             ],
@@ -1018,7 +990,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       text: "f quickshorrt",
                     },
                     serious: {
-                      text: "s quickshort",
+                      text: "Jeżeli warunek określony w klauzuli WHERE jest spełniony, to dopiero zwraca konkretną wartość z tabeli",
                     },
                   },
 
@@ -1031,13 +1003,18 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       },
                       additionalLinks: [],
                     },
-                    transcript: [],
+                    transcript: [
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/WHERE.png",
+                      },
+                    ],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
+                exercisesWithSolutions: [],
+
+                linksToExercises: [
+                  "https://www.w3schools.com/sql/exercise.asp?filename=exercise_where1",
                 ],
               },
             ],
@@ -1061,7 +1038,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       text: "f quickshorrt",
                     },
                     serious: {
-                      text: "s quickshort",
+                      text: "Sortuje wyniki z instrukcji SELECT w kolejności rosnącej lub malejącej",
                     },
                   },
 
@@ -1074,13 +1051,22 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       },
                       additionalLinks: [],
                     },
-                    transcript: [],
+                    transcript: [
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/ORDERBY.png",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/ORDERBY2.png",
+                      },
+                    ],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
+                exercisesWithSolutions: [],
+
+                linksToExercises: [
+                  "https://www.w3schools.com/sql/exercise.asp?filename=exercise_orderby1",
                 ],
               },
             ],
@@ -1121,11 +1107,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -1165,11 +1147,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -1192,7 +1170,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       text: "f quickshorrt",
                     },
                     serious: {
-                      text: "s quickshort",
+                      text: "Dodaje nowy wiersz danych do wszystkich lub konkretnych, wybranych kolumn tabeli",
                     },
                   },
 
@@ -1205,12 +1183,51 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       },
                       additionalLinks: [],
                     },
-                    transcript: [],
+                    transcript: [
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/INSERT.png",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/INSERT2.png",
+                      },
+                      {
+                        typeOfContent: "txt",
+                        content:
+                          "( ! ) kolumny w poleceniu SELECT i INSERT INTO muszą być ułożone w tej samej kolejności, a ich typy danych muszą być zgodne.",
+                      },
+                      {
+                        typeOfContent: "txt",
+                        content:
+                          "( ! ) Upewnij się, że tabela bazy danych ma wystarczającą ilość miejsca do przechowywania wstawionych danych, w przeciwnym razie spowoduje to błąd OVERFLOW.",
+                      },
+                      {
+                        typeOfContent: "txt",
+                        content:
+                          "( ! ) Zawsze upewnij się, że w kolumnach podano prawidłowe i zgodne typy danych. Silnik SQL nie pozwoli na dodanie danych, które nie odpowiadają zadeklarowanemu typowi danych kolumny.",
+                      },
+                    ],
                   },
                 },
                 exercisesWithSolutions: [
                   {
-                    imagePath: "https://placehold.co/1200x400",
+                    imagePath: "/images/roadmaps/INSERT-1-PYT.png",
+                  },
+                  {
+                    imagePath: "/images/roadmaps/INSERT-1-ODP.png",
+                  },
+                  {
+                    imagePath: "/images/roadmaps/INSERT-2-PYT.png",
+                  },
+                  {
+                    imagePath: "/images/roadmaps/INSERT-2-ODP.png",
+                  },
+                  {
+                    imagePath: "/images/roadmaps/INSERT-3-PYT.png",
+                  },
+                  {
+                    imagePath: "/images/roadmaps/INSERT-3-ODP.png",
                   },
                 ],
               },
@@ -1235,7 +1252,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       text: "f quickshorrt",
                     },
                     serious: {
-                      text: "s quickshort",
+                      text: "Aktualizuje / modyfikuje wartość wierszy w wybranych kolumnach",
                     },
                   },
 
@@ -1248,13 +1265,23 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       },
                       additionalLinks: [],
                     },
-                    transcript: [],
+                    transcript: [
+                      {
+                        typeOfContent: "txt",
+                        content:
+                          "( ! ) Klauzula WHEREw UPDATEinstrukcji określa, które rekordy należy zmodyfikować. Jeżeli pominiesz WHEREklauzulę, wszystkie rekordy w tabeli zostaną zaktualizowane",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/UPDATE.png",
+                      },
+                    ],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
+                exercisesWithSolutions: [],
+
+                linksToExercises: [
+                  "https://www.w3schools.com/sql/exercise.asp?filename=exercise_update1",
                 ],
               },
             ],
@@ -1278,7 +1305,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       text: "f quickshorrt",
                     },
                     serious: {
-                      text: "s quickshort",
+                      text: "Służy do usuwania istniejących wierszy w tabeli. Nie można tego cofnąć.",
                     },
                   },
 
@@ -1291,13 +1318,27 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       },
                       additionalLinks: [],
                     },
-                    transcript: [],
+                    transcript: [
+                      {
+                        typeOfContent: "txt",
+                        content:
+                          "( ! ) Zachowaj szczególną ostrożność podczas używania instrukcji DELETE. Jeśli pominiesz klauzulę WHERE, wszystkie rekordy zostaną usunięte!",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/DELETE.png",
+                      },
+                      {
+                        typeOfContent: "txt",
+                        content:
+                          "( ! ) Pamiętaj, zawsze upewnij się, że masz kopię zapasową i potwierdź, że usuwasz prawidłowe dane przed uruchomieniem polecenia DELETE",
+                      },
+                    ],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
+                exercisesWithSolutions: [],
+                linksToExercises: [
+                  "https://www.w3schools.com/sql/exercise.asp?filename=exercise_delete1",
                 ],
               },
             ],
@@ -1391,11 +1432,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -1434,11 +1471,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -1477,11 +1510,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -1520,11 +1549,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -1563,11 +1588,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -1658,11 +1679,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -1701,11 +1718,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -1744,11 +1757,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -1787,11 +1796,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -1830,11 +1835,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -1873,11 +1874,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -1916,11 +1913,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -1959,11 +1952,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -2002,11 +1991,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -2097,11 +2082,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -2140,11 +2121,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -2183,11 +2160,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -2226,11 +2199,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -2269,11 +2238,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -2364,11 +2329,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -2407,11 +2368,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -2450,11 +2407,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -2493,11 +2446,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -2536,11 +2485,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },
@@ -2579,11 +2524,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     transcript: [],
                   },
                 },
-                exercisesWithSolutions: [
-                  {
-                    imagePath: "https://placehold.co/1200x400",
-                  },
-                ],
+                exercisesWithSolutions: [],
               },
             ],
           },

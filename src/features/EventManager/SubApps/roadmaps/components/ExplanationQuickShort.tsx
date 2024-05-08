@@ -28,14 +28,18 @@ export const ExplanationQuickShort = () => {
         <p>{contentChosen.explanation.quickShort.serious.text}</p>
 
         {/* fun */}
-        <ImageWithWrapper
-          src={contentChosen.explanation.quickShort.fun.imagePath}
-          width="100%"
-          aspectRatio="16/9"
-          alt="visualisation of the more fun, quick reminder"
-        />
+        {contentChosen.explanation.quickShort.fun.text !== "f quickshorrt" && (
+          <>
+            <ImageWithWrapper
+              src={contentChosen.explanation.quickShort.fun.imagePath}
+              width="100%"
+              aspectRatio="16/9"
+              alt="visualisation of the more fun, quick reminder"
+            />
 
-        <p>{contentChosen.explanation.quickShort.fun.text}</p>
+            <p>{contentChosen.explanation.quickShort.fun.text}</p>
+          </>
+        )}
       </div>
     </TitleBarWithTogglableContent>
   );
