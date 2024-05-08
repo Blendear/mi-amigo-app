@@ -2014,7 +2014,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       text: "f quickshorrt",
                     },
                     serious: {
-                      text: "s quickshort",
+                      text: "Ograniczenia służą do ograniczania typu danych, które można umieścić w tabeli. Zapewnia to dokładność i wiarygodność danych w tabeli.",
                     },
                   },
 
@@ -2052,7 +2052,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
           position: { x: 0, y: 0 },
           data: {
             levelOfNestedness: 1,
-            label: " Klucz główny (Primary key)",
+            label: "Klucz główny (Primary key)",
             imagePath: "https://placehold.co/600x400",
             daysBeforeRepetitionNeeded: 69,
             lastRepeatDateString: "2024-05-01T00:00:00",
@@ -2066,7 +2066,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       text: "f quickshorrt",
                     },
                     serious: {
-                      text: "s quickshort",
+                      text: "Ogranicza tą wartość 'Musisz być wyjątkowa w każdym wierszu'. Dzięki temu wartość przeznaczona jest wtedy do jednoznacznej identyfikacji każdego z rekordów tabeli.",
                     },
                   },
 
@@ -2079,7 +2079,38 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       },
                       additionalLinks: [],
                     },
-                    transcript: [],
+                    transcript: [
+                      {
+                        typeOfContent: "txt",
+                        content:
+                          "Klucze podstawowe muszą zawierać UNIKALNE wartości. Dokładnie tak samo, jak ograniczenie UNIQUE, ale w tabeli może znajdować się wiele unikalnych ograniczeń, ale tylko jedno ograniczenie PRIMARY KEY na tabelę.",
+                      },
+                      {
+                        typeOfContent: "txt",
+                        content:
+                          "Możesz zdefiniować klucz podstawowy w SQL podczas tworzenia lub modyfikowania tabeli.",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/PRIMARY-KEY.png",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/PRIMARY-KEY2.png",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/PRIMARY-KEY3.png",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/PRIMARY-KEY4.png",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/PRIMARY-KEY5.png",
+                      },
+                    ],
                   },
                 },
                 exercisesWithSolutions: [],
@@ -2105,7 +2136,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       text: "f quickshorrt",
                     },
                     serious: {
-                      text: "s quickshort",
+                      text: "KLUCZ OBCY to pole (lub zbiór pól) w jednej tabeli, które odnosi się do KLUCZA PODSTAWOWOWEGO w innej tabeli.   Zapobiega działaniom, które mogłyby zniszczyć połączenia między tabelami.  ",
                     },
                   },
 
@@ -2118,7 +2149,25 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       },
                       additionalLinks: [],
                     },
-                    transcript: [],
+                    transcript: [
+                      {
+                        typeOfContent: "txt",
+                        content:
+                          "Ograniczenie FOREIGN KEY uniemożliwia wstawienie nieprawidłowych danych do kolumny klucza obcego, ponieważ musi to być jedna z wartości zawartych w tabeli nadrzędnej.",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/FOREIGN-KEY.png",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/FOREIGN-KEY2.png",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/FOREIGN-KEY3.png",
+                      },
+                    ],
                   },
                 },
                 exercisesWithSolutions: [],
@@ -2144,7 +2193,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       text: "f quickshorrt",
                     },
                     serious: {
-                      text: "s quickshort",
+                      text: "zapewnia, że ​​wszystkie wartości w kolumnie są różne; oznacza to, że każda wartość w kolumnie powinna wystąpić tylko raz.",
                     },
                   },
 
@@ -2157,7 +2206,21 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       },
                       additionalLinks: [],
                     },
-                    transcript: [],
+                    transcript: [
+                      {
+                        typeOfContent: "txt",
+                        content:
+                          "Jaka jest różnica między UNIQUE a PRIMARY KEY? Obydwa ograniczenia UNIQUE i PRIMARY KEY zapewniają gwarancję niepowtarzalności kolumny lub zestawu kolumn. Jednak klucz podstawowy nie może zawierać wartości NULL, ponieważ jednoznacznie identyfikuje każdy wiersz, a każda tabela może mieć tylko jeden klucz podstawowy. Z drugiej strony UNIQUE dopuszcza jedną wartość NULL, a tabela może mieć wiele ograniczeń typu UNIQUE.",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/UNIQUE.png",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/UNIQUE2.png",
+                      },
+                    ],
                   },
                 },
                 exercisesWithSolutions: [],
@@ -2183,7 +2246,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       text: "f quickshorrt",
                     },
                     serious: {
-                      text: "s quickshort",
+                      text: "NOT NULL gwarantuje, że kolumna nie może mieć wiersa z wartością NULL (czyli braku wypełnienia tego pola). Jest to sposób na wymuszenie, aby dane pola były obowiązkowe podczas tworzenia/modyfikowania tabeli ",
                     },
                   },
 
@@ -2196,7 +2259,16 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       },
                       additionalLinks: [],
                     },
-                    transcript: [],
+                    transcript: [
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/NOT-NULL.png",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/NOT-NULL2.png",
+                      },
+                    ],
                   },
                 },
                 exercisesWithSolutions: [],
@@ -2222,7 +2294,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       text: "f quickshorrt",
                     },
                     serious: {
-                      text: "s quickshort",
+                      text: "ograniczenie ograniczające zakres wartości, które można umieścić w kolumnie, np. 'wartość ta musi być między 5 a 25'",
                     },
                   },
 
@@ -2235,9 +2307,63 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       },
                       additionalLinks: [],
                     },
-                    transcript: [],
+                    transcript: [
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/CHECK.png",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/CHECK2.png",
+                      },
+                    ],
                   },
                 },
+                exercisesWithSolutions: [],
+              },
+            ],
+          },
+        },
+        {
+          position: { x: 0, y: 0 },
+          data: {
+            levelOfNestedness: 1,
+            label: "DEFAULT",
+            imagePath: "https://placehold.co/600x400",
+            daysBeforeRepetitionNeeded: 69,
+            lastRepeatDateString: "2024-05-01T00:00:00",
+            videosAndNotesByVariants: [
+              {
+                variant: "My way",
+                explanation: {
+                  quickShort: {
+                    fun: {
+                      imagePath: "https://placehold.co/600x400",
+                      text: "f quickshorrt",
+                    },
+                    serious: {
+                      text: "Zapewnia wartość domyślną dla wierszy tej kolumny, jeśli żadna nie została określona.",
+                    },
+                  },
+
+                  longFull: {
+                    video: {
+                      ytVideoId: "dQw4w9WgXcQ",
+                      importantNotes: {
+                        // proposalsToUpdateTheVideoWith: [],
+                        friendlyProtips: [],
+                      },
+                      additionalLinks: [],
+                    },
+                    transcript: [
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/DEFAULT.png",
+                      },
+                    ],
+                  },
+                },
+                // TODO: Add exervcises to all "ograniczenia (constraints)'
                 exercisesWithSolutions: [],
               },
             ],
@@ -2348,6 +2474,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                     ],
                   },
                 },
+                // TODO: add exercises to all "łączenie zapytań (JOIN queries)"
                 exercisesWithSolutions: [],
               },
             ],
@@ -2529,7 +2656,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       text: "f quickshorrt",
                     },
                     serious: {
-                      text: "tabela jest łączona ze sobą. Np. tabela pracowników łączona z samą sobą, aby znaleźć menedżerów i podwładnych.",
+                      text: "tabela jest łączona z kopią siebie. Np. tabela pracowników łączona z samą sobą, aby znaleźć menedżerów i podwładnych.",
                     },
                   },
 
@@ -2543,6 +2670,23 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       additionalLinks: [],
                     },
                     transcript: [
+                      {
+                        typeOfContent: "txt",
+                        content:
+                          "Prosty przykład : Self join może być trudny do zrozumienia, ale spróbujmy tak - wyobraź sobie, że masz stół z klockami. Na tym stole są klocki, z których każdy ma etykietę z twoim imieniem i miastem, w którym mieszkasz. Teraz chcesz znaleźć inne osoby, które mieszkają w tym samym mieście co ty, ale nie są tobą.`SELF JOIN` to ogarnie.  `SELF JOIN`  jest jak to, że bierzesz dwie kopie tej samej listy klocków i sprawdzasz, czy którykolwiek klocek z jednej listy pasuje do klocka z drugiej listy pod względem miasta, ale nie jest taki sam jak twój. Na przykład, jeśli jesteś Tomkiem z miasta Warszawa, to self join pozwoliłby Ci znaleźć inne osoby z Warszawy na liście, ale nie obejmując Ciebie samego. To pozwala na znalezienie innych ludzi z twojego miasta na tej samej liście.",
+                      },
+                      {
+                        typeOfContent: "txt",
+                        content: "SQL'owski przykład",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/SELF-JOIN.png",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/SELF-JOIN2.png",
+                      },
                       {
                         typeOfContent: "txt",
                         content:
@@ -2599,7 +2743,8 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       },
                       {
                         typeOfContent: "img",
-                        content: "/images/roadmaps/UNION-JOIN.png",
+                        content:
+                          "/images/roadmaps/UNION-AND-UNION-ALL-JOIN.png",
                       },
                     ],
                   },
