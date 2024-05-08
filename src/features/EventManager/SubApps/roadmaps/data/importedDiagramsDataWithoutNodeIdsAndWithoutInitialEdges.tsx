@@ -777,7 +777,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
             levelOfNestedness: 0,
             label: "Modyfikowanie wartości danych (Data Manipulation Language)",
             imagePath: "https://placehold.co/600x400",
-            daysBeforeRepetitionNeeded: 69,
+            daysBeforeRepetitionNeeded: 30,
             lastRepeatDateString: "2024-05-01T00:00:00",
             videosAndNotesByVariants: [
               {
@@ -829,7 +829,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
             levelOfNestedness: 1,
             label: "Zależne od SELECT",
             imagePath: "https://placehold.co/600x400",
-            daysBeforeRepetitionNeeded: 69,
+            daysBeforeRepetitionNeeded: 30,
             lastRepeatDateString: "2024-05-01T00:00:00",
             videosAndNotesByVariants: [
               {
@@ -868,7 +868,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
             levelOfNestedness: 2,
             label: "SELECT",
             imagePath: "https://placehold.co/600x400",
-            daysBeforeRepetitionNeeded: 69,
+            daysBeforeRepetitionNeeded: 30,
             lastRepeatDateString: "2024-05-01T00:00:00",
             videosAndNotesByVariants: [
               {
@@ -925,7 +925,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
             levelOfNestedness: 2,
             label: "FROM",
             imagePath: "https://placehold.co/600x400",
-            daysBeforeRepetitionNeeded: 69,
+            daysBeforeRepetitionNeeded: 30,
             lastRepeatDateString: "2024-05-01T00:00:00",
             videosAndNotesByVariants: [
               {
@@ -978,7 +978,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
             levelOfNestedness: 2,
             label: "WHERE",
             imagePath: "https://placehold.co/600x400",
-            daysBeforeRepetitionNeeded: 69,
+            daysBeforeRepetitionNeeded: 30,
             lastRepeatDateString: "2024-05-01T00:00:00",
             videosAndNotesByVariants: [
               {
@@ -1026,7 +1026,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
             levelOfNestedness: 2,
             label: "ORDER BY",
             imagePath: "https://placehold.co/600x400",
-            daysBeforeRepetitionNeeded: 69,
+            daysBeforeRepetitionNeeded: 30,
             lastRepeatDateString: "2024-05-01T00:00:00",
             videosAndNotesByVariants: [
               {
@@ -1079,7 +1079,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
             label:
               "Inne, wyjaśnione w dalszej części kursu (GROUP BY, HAVING, JOIN)",
             imagePath: "https://placehold.co/600x400",
-            daysBeforeRepetitionNeeded: 69,
+            daysBeforeRepetitionNeeded: 30,
             lastRepeatDateString: "2024-05-01T00:00:00",
             videosAndNotesByVariants: [
               {
@@ -1119,7 +1119,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
             levelOfNestedness: 1,
             label: "Niezależne od SELECT",
             imagePath: "https://placehold.co/600x400",
-            daysBeforeRepetitionNeeded: 69,
+            daysBeforeRepetitionNeeded: 30,
             lastRepeatDateString: "2024-05-01T00:00:00",
             videosAndNotesByVariants: [
               {
@@ -1158,7 +1158,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
             levelOfNestedness: 2,
             label: "INSERT",
             imagePath: "https://placehold.co/600x400",
-            daysBeforeRepetitionNeeded: 69,
+            daysBeforeRepetitionNeeded: 30,
             lastRepeatDateString: "2024-05-01T00:00:00",
             videosAndNotesByVariants: [
               {
@@ -1240,7 +1240,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
             levelOfNestedness: 2,
             label: "UPDATE",
             imagePath: "https://placehold.co/600x400",
-            daysBeforeRepetitionNeeded: 69,
+            daysBeforeRepetitionNeeded: 30,
             lastRepeatDateString: "2024-05-01T00:00:00",
             videosAndNotesByVariants: [
               {
@@ -1293,7 +1293,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
             levelOfNestedness: 2,
             label: "DELETE",
             imagePath: "https://placehold.co/600x400",
-            daysBeforeRepetitionNeeded: 69,
+            daysBeforeRepetitionNeeded: 30,
             lastRepeatDateString: "2024-05-01T00:00:00",
             videosAndNotesByVariants: [
               {
@@ -2313,7 +2313,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       text: "f quickshorrt",
                     },
                     serious: {
-                      text: "s quickshort",
+                      text: "Zwraca te rekordy (rezultaty) dwóch tabel, które mają pasujące wartości w obu tabelach. Rezultat jest zlepkiem kolumn z tych tabel.",
                     },
                   },
 
@@ -2326,7 +2326,26 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       },
                       additionalLinks: [],
                     },
-                    transcript: [],
+                    transcript: [
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/JOINS-ALL.png",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content:
+                          "/images/roadmaps/TABLES-INNER-JOIN-AND-LEFT-JOIN.png",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/INNER-JOIN.png",
+                      },
+                      {
+                        typeOfContent: "txt",
+                        content:
+                          "( ! ) Zwraca tylko pasujące wiersze z obu tabel. Jeśli nie ma dopasowania, zwracany jest pusty wynik.  ",
+                      },
+                    ],
                   },
                 },
                 exercisesWithSolutions: [],
@@ -2352,7 +2371,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       text: "f quickshorrt",
                     },
                     serious: {
-                      text: "s quickshort",
+                      text: "zwraca wszystkie rekordy z lewej tabeli i dopasowane rekordy z prawej tabeli. Wynik jest NULLpo prawej stronie, jeśli nie ma dopasowania.",
                     },
                   },
 
@@ -2365,7 +2384,21 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       },
                       additionalLinks: [],
                     },
-                    transcript: [],
+                    transcript: [
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/JOINS-ALL.png",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content:
+                          "/images/roadmaps/TABLES-INNER-JOIN-AND-LEFT-JOIN.png",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/LEFT-JOIN.png",
+                      },
+                    ],
                   },
                 },
                 exercisesWithSolutions: [],
@@ -2391,7 +2424,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       text: "f quickshorrt",
                     },
                     serious: {
-                      text: "s quickshort",
+                      text: "zwraca wszystkie rekordy z prawej tabeli i dopasowane rekordy z lewej tabeli",
                     },
                   },
 
@@ -2404,7 +2437,20 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       },
                       additionalLinks: [],
                     },
-                    transcript: [],
+                    transcript: [
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/JOINS-ALL.png",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/TABLE-RIGHT-JOIN.png",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/RIGHT-JOIN.png",
+                      },
+                    ],
                   },
                 },
                 exercisesWithSolutions: [],
@@ -2430,7 +2476,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       text: "f quickshorrt",
                     },
                     serious: {
-                      text: "s quickshort",
+                      text: "łączy wyniki lewej i prawej tabeli. Zwraca wszystkie (dopasowane oraz te niedopasowane) wiersze z tabel.",
                     },
                   },
 
@@ -2443,7 +2489,21 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       },
                       additionalLinks: [],
                     },
-                    transcript: [],
+                    transcript: [
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/JOINS-ALL.png",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content:
+                          "/images/roadmaps/TABLE-FULL-UNION-AND-CROSS-JOIN.png",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/FULL-JOIN.png",
+                      },
+                    ],
                   },
                 },
                 exercisesWithSolutions: [],
@@ -2469,7 +2529,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       text: "f quickshorrt",
                     },
                     serious: {
-                      text: "s quickshort",
+                      text: "tabela jest łączona ze sobą. Np. tabela pracowników łączona z samą sobą, aby znaleźć menedżerów i podwładnych.",
                     },
                   },
 
@@ -2482,7 +2542,13 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       },
                       additionalLinks: [],
                     },
-                    transcript: [],
+                    transcript: [
+                      {
+                        typeOfContent: "txt",
+                        content:
+                          "( ! ) Należy zauważyć, że ponieważ jest to operacja łączenia na tej samej tabeli, należy użyć aliasów dla tabel, aby uniknąć nieporozumień podczas operacji łączenia.",
+                      },
+                    ],
                   },
                 },
                 exercisesWithSolutions: [],
@@ -2494,7 +2560,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
           position: { x: 0, y: 0 },
           data: {
             levelOfNestedness: 1,
-            label: "Cross join",
+            label: "Union Join",
             imagePath: "https://placehold.co/600x400",
             daysBeforeRepetitionNeeded: 69,
             lastRepeatDateString: "2024-05-01T00:00:00",
@@ -2521,7 +2587,79 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
                       },
                       additionalLinks: [],
                     },
-                    transcript: [],
+                    transcript: [
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/JOINS-ALL.png",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content:
+                          "/images/roadmaps/TABLE-FULL-UNION-AND-CROSS-JOIN.png",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/UNION-JOIN.png",
+                      },
+                    ],
+                  },
+                },
+                exercisesWithSolutions: [],
+              },
+            ],
+          },
+        },
+        {
+          position: { x: 0, y: 0 },
+          data: {
+            levelOfNestedness: 1,
+            label: "Cross join",
+            imagePath: "https://placehold.co/600x400",
+            daysBeforeRepetitionNeeded: 69,
+            lastRepeatDateString: "2024-05-01T00:00:00",
+            videosAndNotesByVariants: [
+              {
+                variant: "My way",
+                explanation: {
+                  quickShort: {
+                    fun: {
+                      imagePath: "https://placehold.co/600x400",
+                      text: "f quickshorrt",
+                    },
+                    serious: {
+                      text: "służy do łączenia każdego wiersza pierwszej tabeli z każdym wierszem drugiej tabeli. Jest również znany jako iloczyn kartezjański dwóch tabel.",
+                    },
+                  },
+
+                  longFull: {
+                    video: {
+                      ytVideoId: "dQw4w9WgXcQ",
+                      importantNotes: {
+                        // proposalsToUpdateTheVideoWith: [],
+                        friendlyProtips: [],
+                      },
+                      additionalLinks: [],
+                    },
+                    transcript: [
+                      {
+                        typeOfContent: "txt",
+                        content:
+                          "( ! ) Problem z łączeniem krzyżowym polega na tym, że może skutkować dużą liczbą wierszy i dużym zużyciem zasobów. Dlatego niezwykle ważne jest, aby korzystać z nich mądrze i tylko wtedy, gdy jest to konieczne.",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/JOINS-ALL.png",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content:
+                          "/images/roadmaps/TABLE-FULL-UNION-AND-CROSS-JOIN.png",
+                      },
+                      {
+                        typeOfContent: "img",
+                        content: "/images/roadmaps/CROSS-JOIN.png",
+                      },
+                    ],
                   },
                 },
                 exercisesWithSolutions: [],
