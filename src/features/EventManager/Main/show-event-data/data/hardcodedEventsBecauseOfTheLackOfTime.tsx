@@ -831,7 +831,6 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                             forThisAmount: 0,
                           },
                         },
-
                         {
                           id: 21,
                           name: "Papryka",
@@ -850,7 +849,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                         {
                           id: 22,
                           name: "Przyprawa do kurczaka",
-                          description: "___",
+                          description: "_ | Selgros",
                           amount: 0,
                           unit: "___",
                           macros: {
@@ -865,7 +864,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                         {
                           id: 23,
                           name: "Jajko",
-                          description: "Do panierki | L'ka",
+                          description: "L'ka | Carrefour",
                           amount: 0,
                           unit: "___",
                           macros: {
@@ -880,7 +879,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                         {
                           id: 24,
                           name: "Panierka ryżowa z CH",
-                          description: "___",
+                          description: "Gramy | Szwajcarska",
                           amount: 0,
                           unit: "___",
                           macros: {
@@ -1061,6 +1060,263 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                             forThisAmount: 1,
                           },
                         },
+                        {
+                          id: 36,
+                          name: "Sos pieczeniowy jasny",
+                          description: "1 paczka | ??? - Carrefour",
+                          amount: 1,
+                          unit: "szt",
+                          macros: {
+                            forThisAmount: 1,
+                            calories: 0,
+                          },
+                          priceDetails: {
+                            price: 0,
+                            forThisAmount: 1,
+                          },
+                        },
+                        {
+                          id: 37,
+                          name: "Makaron Konjac",
+                          description: "1 paczka | ??? - Carrefour",
+                          amount: 0,
+                          unit: "g",
+                          macros: {
+                            forThisAmount: 1,
+                            calories: 0,
+                          },
+                          priceDetails: {
+                            price: 0,
+                            forThisAmount: 1,
+                          },
+                        },
+                        {
+                          id: 38,
+                          name: "Makaron Chiński, pasma",
+                          description: "1 paczka | ??? - Carrefour",
+                          amount: 0,
+                          unit: "g",
+                          macros: {
+                            forThisAmount: 1,
+                            calories: 0,
+                          },
+                          priceDetails: {
+                            price: 0,
+                            forThisAmount: 1,
+                          },
+                        },
+                        {
+                          id: 39,
+                          name: "Sos chiński",
+                          description: "1 paczka | ??? - Carrefour",
+                          amount: 1,
+                          unit: "szt",
+                          macros: {
+                            forThisAmount: 1,
+                            calories: 0,
+                          },
+                          priceDetails: {
+                            price: 0,
+                            forThisAmount: 1,
+                          },
+                        },
+                        {
+                          id: 40,
+                          name: "Pesto",
+                          description: "1 łyżka | ??? - Carrefour",
+                          amount: 1,
+                          unit: "szt",
+                          macros: {
+                            forThisAmount: 1,
+                            calories: 0,
+                          },
+                          priceDetails: {
+                            price: 0,
+                            forThisAmount: 1,
+                          },
+                        },
+                        {
+                          id: 41,
+                          name: "Łosoś",
+                          description: "Gramy, bez skóry | ??? - Carrefour",
+                          amount: 0,
+                          unit: "g",
+                          macros: {
+                            forThisAmount: 1,
+                            calories: 0,
+                          },
+                          priceDetails: {
+                            price: 0,
+                            forThisAmount: 1,
+                          },
+                        },
+                        {
+                          id: 42,
+                          name: "Kasza Bulgur",
+                          description: "1 torebka 100g | ??? - Carrefour",
+                          amount: 1,
+                          unit: "szt",
+                          macros: {
+                            forThisAmount: 1,
+                            calories: 0,
+                          },
+                          priceDetails: {
+                            price: 0,
+                            forThisAmount: 1,
+                          },
+                        },
+                        {
+                          id: 43,
+                          name: "Niebieska kapusta",
+                          description: "Gramy | ??? - Carrefour",
+                          amount: 0,
+                          unit: "g",
+                          macros: {
+                            forThisAmount: 1,
+                            calories: 0,
+                          },
+                          priceDetails: {
+                            price: 0,
+                            forThisAmount: 1,
+                          },
+                        },
+                        {
+                          id: 44,
+                          name: "Ryż biały",
+                          description: "1 torebka 100g | ??? - Carrefour",
+                          amount: 1,
+                          unit: "szt",
+                          macros: {
+                            forThisAmount: 1,
+                            calories: 0,
+                          },
+                          priceDetails: {
+                            price: 0,
+                            forThisAmount: 1,
+                          },
+                        },
+                        {
+                          id: 45,
+                          name: "Erytrytol, NIE KSYLITOL (Drogi)",
+                          description: "Gramy | ??? - Carrefour",
+                          amount: 1,
+                          unit: "g",
+                          macros: {
+                            forThisAmount: 1,
+                            calories: 0,
+                          },
+                          priceDetails: {
+                            price: 0,
+                            forThisAmount: 1,
+                          },
+                        },
+                        {
+                          id: 46,
+                          name: "Cynamon",
+                          description: "Gramy | ??? - Carrefour",
+                          amount: 1,
+                          unit: "g",
+                          macros: {
+                            forThisAmount: 1,
+                            calories: 0,
+                          },
+                          priceDetails: {
+                            price: 0,
+                            forThisAmount: 1,
+                          },
+                        },
+                        {
+                          id: 47,
+                          name: "Pierogi Ruskie",
+                          description: "Paczka 250g | ??? - Carrefour",
+                          amount: 1,
+                          unit: "szt",
+                          macros: {
+                            forThisAmount: 1,
+                            calories: 0,
+                          },
+                          priceDetails: {
+                            price: 0,
+                            forThisAmount: 1,
+                          },
+                        },
+                        {
+                          id: 48,
+                          name: "Buchty",
+                          description: "Sztuka | ??? - Carrefour",
+                          amount: 1,
+                          unit: "szt",
+                          macros: {
+                            forThisAmount: 1,
+                            calories: 0,
+                          },
+                          priceDetails: {
+                            price: 0,
+                            forThisAmount: 1,
+                          },
+                        },
+                        {
+                          id: 49,
+                          name: "kisiel malinowy",
+                          description: "1 saszetka | ??? - Carrefour",
+                          amount: 1,
+                          unit: "szt",
+                          macros: {
+                            forThisAmount: 1,
+                            calories: 0,
+                          },
+                          priceDetails: {
+                            price: 0,
+                            forThisAmount: 1,
+                          },
+                        },
+                        {
+                          id: 50,
+                          name: "Chleb Tostowy",
+                          description:
+                            "Sztuka | Najtanszy, pszenny??? - Carrefour",
+                          amount: 1,
+                          unit: "szt",
+                          macros: {
+                            forThisAmount: 1,
+                            calories: 0,
+                          },
+                          priceDetails: {
+                            price: 0,
+                            forThisAmount: 1,
+                          },
+                        },
+                        {
+                          id: 51,
+                          name: "Ogórek klasyczny",
+                          description: "Średni, wielkość ??? | Carrefour",
+                          amount: 1,
+                          unit: "szt",
+                          macros: {
+                            forThisAmount: 1,
+                            calories: 0,
+                          },
+                          priceDetails: {
+                            price: 0,
+                            forThisAmount: 1,
+                          },
+                        },
+                        {
+                          id: 52,
+                          name: "Krem czekoladowy bez cukru (CH)",
+                          description:
+                            "1 łyżeczka (wysokość nabrania taka jak głębokość łyżeczki)| Szwajcarski",
+                          amount: 1,
+                          unit: "szt",
+                          macros: {
+                            forThisAmount: 1,
+                            calories: 0,
+                          },
+                          priceDetails: {
+                            price: 0,
+                            forThisAmount: 1,
+                          },
+                        },
                       ],
                       mealsAvailable: [
                         {
@@ -1124,29 +1380,30 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                           ytVideoId: "___",
                           ingredientsIds: [28, 1, 9, 29, 30, 31],
                         },
-                        {
-                          id: 7,
-                          name: "Tortilla",
-                          imagePaths:
-                            "https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/tortilla-z-kurczakiem-01.jpg",
-                          ytVideoId: "___",
-                          ingredientsIds: [],
-                        },
-                        {
-                          id: 8,
-                          name: "Risotto z kurczakiem i groszkiem",
-                          imagePaths:
-                            "https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/tortilla-z-kurczakiem-01.jpg",
-                          ytVideoId: "___",
-                          ingredientsIds: [],
-                        },
+                        // {
+                        //   id: 7,
+                        //   name: "Tortilla",
+                        //   imagePaths:
+                        //     "https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/tortilla-z-kurczakiem-01.jpg",
+                        //   ytVideoId: "___",
+                        //   ingredientsIds: [],
+                        // },
+                        // {
+                        //   id: 8,
+                        //   name: "Risotto z kurczakiem i groszkiem",
+                        //   imagePaths:
+                        //     "https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/tortilla-z-kurczakiem-01.jpg",
+                        //   ytVideoId: "___",
+                        //   ingredientsIds: [],
+                        // },
+                        // ccc
                         {
                           id: 9,
-                          name: "Kasza orkiszowa z kurczakiem, sosem i kalafiorem",
+                          name: "Kasza orkiszowa z kurczakiem, sosem piecz. jasnym i kalafiorem",
                           imagePaths:
                             "https://www.jestemfit.pl/upload/gallery/2016/04/id_11074_1460718284_750x500.jpg",
                           ytVideoId: "___",
-                          ingredientsIds: [],
+                          ingredientsIds: [32, 33, 36, 8],
                         },
                         {
                           id: 10,
@@ -1154,16 +1411,16 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                           imagePaths:
                             "https://files.ketodietapp.com/Blog/files/2021/03/shirataki-noodles-preparation.jpg",
                           ytVideoId: "___",
-                          ingredientsIds: [],
+                          ingredientsIds: [8],
                         },
-                        {
-                          id: 11,
-                          name: "Chilli concarne z mięsem z indyka i papryką",
-                          imagePaths:
-                            "https://static.fajnegotowanie.pl/media/uploads/media_image/original/przepis/1125/chili-con-carne.jpg",
-                          ytVideoId: "___",
-                          ingredientsIds: [],
-                        },
+                        // {
+                        //   id: 11,
+                        //   name: "Chilli concarne z mięsem z indyka i papryką",
+                        //   imagePaths:
+                        //     "https://static.fajnegotowanie.pl/media/uploads/media_image/original/przepis/1125/chili-con-carne.jpg",
+                        //   ytVideoId: "___",
+                        //   ingredientsIds: [],
+                        // },
                         {
                           id: 12,
                           name: "Spaghetti z mięsem z indyka",
@@ -1186,7 +1443,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                           imagePaths:
                             "https://poprostupycha.com.pl/wp-content/uploads/2021/04/zapiekanka-z-brokulami_11.jpg",
                           ytVideoId: "___",
-                          ingredientsIds: [],
+                          ingredientsIds: [8],
                         },
                         {
                           id: 15,
