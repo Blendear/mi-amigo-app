@@ -4,7 +4,7 @@ import { css } from "@emotion/react";
 import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 // import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { MealProps } from "../types";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import ImageWithWrapper from "@/components/ImageWithWrapper";
 import Video from "@/features/EventManager/SubApps/yt-watcher/components/Video";
 import { Ingredient } from "./Ingredient";
@@ -47,12 +47,23 @@ export const Meal = ({ details, hideContentUnderNamedButton }: MealProps) => {
     hideContentUnderNamedButton || false
   );
 
+  const currentMeal = useMemo(() => {
+    return payload.mealsAvailable[
+      payload.periodOfDaysOfEating[dayOfMealPlanIndex.current][
+        mealOfTheDayIndex.current
+      ].mealId
+    ];
+  }, [
+    dayOfMealPlanIndex,
+    mealOfTheDayIndex,
+    payload.mealsAvailable,
+    payload.periodOfDaysOfEating,
+  ]);
+
   const getTotalMealCalories = () => {
     let totalCalories = 0;
 
-    payload.periodOfDaysOfEating[dayOfMealPlanIndex.current][
-      mealOfTheDayIndex.current
-    ].ingredients.forEach((ingredient) => {
+    currentMeal.ingredients.forEach((ingredient) => {
       totalCalories +=
         (ingredient.macros.calories / ingredient.macros.forThisAmount) *
         ingredient.amount;
@@ -64,9 +75,7 @@ export const Meal = ({ details, hideContentUnderNamedButton }: MealProps) => {
   const getTotalMealPrice = () => {
     let totalPrice = 0;
 
-    payload.periodOfDaysOfEating[dayOfMealPlanIndex.current][
-      mealOfTheDayIndex.current
-    ].ingredients.forEach((ingredient) => {
+    currentMeal.ingredients.forEach((ingredient) => {
       totalPrice +=
         (ingredient.priceDetails.price /
           ingredient.priceDetails.forThisAmount) *

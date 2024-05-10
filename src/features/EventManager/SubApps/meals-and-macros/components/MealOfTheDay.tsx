@@ -56,7 +56,7 @@ export const MealOfTheDay = ({}) => {
                 variantsCss.variant,
               ]}
             >
-              {meal.name}
+              {payload.mealsAvailable[meal.mealId].name}
             </div>
           </SwiperSlide>
         )

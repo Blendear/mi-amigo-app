@@ -40,6 +40,7 @@ export type Ingredient = {
 };
 
 export type Meal = {
+  id: number;
   name: string;
   description?: string;
   imagePaths: string;
@@ -50,7 +51,14 @@ export type Meal = {
 export type MealsAndMacrosSubAppPayload = {
   mealsAvailable: Meal[];
   periodOfDaysOfEating: {
-    [dayIndex: number]: Meal[];
+    // index and an optional "nonDefaultAmount" ais more optimal instead of writing aaaaaaaaaaaaaaa
+    // duplicate "Meal" objectsa ain two places on every updatea of its data
+    [dayIndex: number]: {
+      mealId: number;
+      // it must be an array of numbers,a since it will be used for an array of ingredients
+      // (3 values will be needed to uverwrite - 0 means "dont change default in this ingredient")
+      nonDefaultAmounts?: number[];
+    }[];
   };
 };
 

@@ -37,13 +37,17 @@ export const CaloriesOfTodaysMeals = () => {
   const getTotalDailyCalories = () => {
     let totalCalories = 0;
 
-    payload.periodOfDaysOfEating[dayOfMealPlanIndex.current].forEach((meal) => {
-      meal.ingredients.forEach((ingredient) => {
-        totalCalories +=
-          (ingredient.macros.calories / ingredient.macros.forThisAmount) *
-          ingredient.amount;
-      });
-    });
+    payload.periodOfDaysOfEating[dayOfMealPlanIndex.current].forEach(
+      (mealReference) => {
+        payload.mealsAvailable[mealReference.mealId].ingredients.forEach(
+          (ingredient) => {
+            totalCalories +=
+              (ingredient.macros.calories / ingredient.macros.forThisAmount) *
+              ingredient.amount;
+          }
+        );
+      }
+    );
 
     return totalCalories;
   };

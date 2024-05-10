@@ -91,8 +91,10 @@ export const MealsAndMacros = ({ payload }: MealsAndMacrosProps) => {
             {/* Shows only the chosen meal of the chosen day */}
             <Meal
               details={
-                payload.periodOfDaysOfEating[dayOfMealPlanIndex.current][
-                  mealOfTheDayIndex.current
+                payload.mealsAvailable[
+                  payload.periodOfDaysOfEating[dayOfMealPlanIndex.current][
+                    mealOfTheDayIndex.current
+                  ].mealId
                 ]
               }
             />

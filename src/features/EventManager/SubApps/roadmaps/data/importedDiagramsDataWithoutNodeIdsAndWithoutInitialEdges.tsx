@@ -1558,6 +1558,46 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
           position: { x: 0, y: 0 },
           data: {
             levelOfNestedness: 1,
+            label: "DELETE",
+            imagePath: "https://placehold.co/600x400",
+            daysBeforeRepetitionNeeded: 69,
+            lastRepeatDateString: "2024-05-01T00:00:00",
+            videosAndNotesByVariants: [
+              {
+                variant: "My way",
+                explanation: {
+                  quickShort: {
+                    fun: {
+                      imagePath: "https://placehold.co/600x400",
+                      text: "f quickshorrt",
+                    },
+                    serious: {
+                      text: "Usuwa jeden lub więcej wierszy z tabeli",
+                    },
+                  },
+
+                  longFull: {
+                    video: {
+                      ytVideoId: "dQw4w9WgXcQ",
+                      importantNotes: {
+                        // proposalsToUpdateTheVideoWith: [],
+                        friendlyProtips: [],
+                      },
+                      additionalLinks: [],
+                    },
+                    transcript: [],
+                  },
+                },
+                exercisesWithSolutions: [],
+              },
+            ],
+          },
+        },
+        {
+          position: { x: 0, y: 0 },
+          data: {
+            levelOfNestedness: 1,
+            // TODO: Syntax jest wszedzie inny. A czasem w ogolew nie dziala. uwzgledniac ten rozdzial?
             label: "RENAME",
             imagePath: "https://placehold.co/600x400",
             daysBeforeRepetitionNeeded: 69,
@@ -2002,7 +2042,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
             levelOfNestedness: 0,
             label: "Narzucanie ograniczeń na dane (Data Constraints)",
             imagePath: "https://placehold.co/600x400",
-            daysBeforeRepetitionNeeded: 7,
+            daysBeforeRepetitionNeeded: 30,
             lastRepeatDateString: "2024-05-01T00:00:00",
             videosAndNotesByVariants: [
               {
@@ -2052,9 +2092,9 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
           position: { x: 0, y: 0 },
           data: {
             levelOfNestedness: 1,
-            label: "Klucz główny (Primary key)",
+            label: "Klucz główny (PRIMARY KEY)",
             imagePath: "https://placehold.co/600x400",
-            daysBeforeRepetitionNeeded: 69,
+            daysBeforeRepetitionNeeded: 30,
             lastRepeatDateString: "2024-05-01T00:00:00",
             videosAndNotesByVariants: [
               {
@@ -2122,9 +2162,9 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
           position: { x: 0, y: 0 },
           data: {
             levelOfNestedness: 1,
-            label: "Klucz obcy (Foreign key)",
+            label: "Klucz obcy (FOREIGN KEY)",
             imagePath: "https://placehold.co/600x400",
-            daysBeforeRepetitionNeeded: 69,
+            daysBeforeRepetitionNeeded: 30,
             lastRepeatDateString: "2024-05-01T00:00:00",
             videosAndNotesByVariants: [
               {
@@ -2179,9 +2219,9 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
           position: { x: 0, y: 0 },
           data: {
             levelOfNestedness: 1,
-            label: "Unikatowy (Unique)",
+            label: "Unikatowy (UNIQUE)",
             imagePath: "https://placehold.co/600x400",
-            daysBeforeRepetitionNeeded: 69,
+            daysBeforeRepetitionNeeded: 30,
             lastRepeatDateString: "2024-05-01T00:00:00",
             videosAndNotesByVariants: [
               {
@@ -2234,7 +2274,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
             levelOfNestedness: 1,
             label: "NOT NULL",
             imagePath: "https://placehold.co/600x400",
-            daysBeforeRepetitionNeeded: 69,
+            daysBeforeRepetitionNeeded: 30,
             lastRepeatDateString: "2024-05-01T00:00:00",
             videosAndNotesByVariants: [
               {
@@ -2282,7 +2322,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
             levelOfNestedness: 1,
             label: "CHECK",
             imagePath: "https://placehold.co/600x400",
-            daysBeforeRepetitionNeeded: 69,
+            daysBeforeRepetitionNeeded: 30,
             lastRepeatDateString: "2024-05-01T00:00:00",
             videosAndNotesByVariants: [
               {
@@ -2330,7 +2370,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
             levelOfNestedness: 1,
             label: "DEFAULT",
             imagePath: "https://placehold.co/600x400",
-            daysBeforeRepetitionNeeded: 69,
+            daysBeforeRepetitionNeeded: 30,
             lastRepeatDateString: "2024-05-01T00:00:00",
             videosAndNotesByVariants: [
               {
@@ -2375,7 +2415,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
             levelOfNestedness: 0,
             label: "Łączenie zapytań (JOIN queries)",
             imagePath: "https://placehold.co/600x400",
-            daysBeforeRepetitionNeeded: 14,
+            daysBeforeRepetitionNeeded: 30,
             lastRepeatDateString: "2024-05-01T00:00:00",
             videosAndNotesByVariants: [
               {
@@ -2427,7 +2467,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
             levelOfNestedness: 1,
             label: "INNER JOIN",
             imagePath: "https://placehold.co/600x400",
-            daysBeforeRepetitionNeeded: 69,
+            daysBeforeRepetitionNeeded: 30,
             lastRepeatDateString: "2024-05-01T00:00:00",
             videosAndNotesByVariants: [
               {
@@ -2486,7 +2526,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
             levelOfNestedness: 1,
             label: "LEFT JOIN",
             imagePath: "https://placehold.co/600x400",
-            daysBeforeRepetitionNeeded: 69,
+            daysBeforeRepetitionNeeded: 30,
             lastRepeatDateString: "2024-05-01T00:00:00",
             videosAndNotesByVariants: [
               {
@@ -2539,7 +2579,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
             levelOfNestedness: 1,
             label: "RIGHT JOIN",
             imagePath: "https://placehold.co/600x400",
-            daysBeforeRepetitionNeeded: 69,
+            daysBeforeRepetitionNeeded: 30,
             lastRepeatDateString: "2024-05-01T00:00:00",
             videosAndNotesByVariants: [
               {
@@ -2591,7 +2631,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
             levelOfNestedness: 1,
             label: "FULL OUTER JOIN",
             imagePath: "https://placehold.co/600x400",
-            daysBeforeRepetitionNeeded: 69,
+            daysBeforeRepetitionNeeded: 30,
             lastRepeatDateString: "2024-05-01T00:00:00",
             videosAndNotesByVariants: [
               {
@@ -2644,7 +2684,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
             levelOfNestedness: 1,
             label: "Self Join",
             imagePath: "https://placehold.co/600x400",
-            daysBeforeRepetitionNeeded: 69,
+            daysBeforeRepetitionNeeded: 30,
             lastRepeatDateString: "2024-05-01T00:00:00",
             videosAndNotesByVariants: [
               {
@@ -2706,7 +2746,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
             levelOfNestedness: 1,
             label: "Union Join",
             imagePath: "https://placehold.co/600x400",
-            daysBeforeRepetitionNeeded: 69,
+            daysBeforeRepetitionNeeded: 30,
             lastRepeatDateString: "2024-05-01T00:00:00",
             videosAndNotesByVariants: [
               {
@@ -2760,7 +2800,7 @@ export const importedDiagramsDataWithoutNodeIdsAndWithoutInitialEdges: ImportedD
             levelOfNestedness: 1,
             label: "Cross join",
             imagePath: "https://placehold.co/600x400",
-            daysBeforeRepetitionNeeded: 69,
+            daysBeforeRepetitionNeeded: 30,
             lastRepeatDateString: "2024-05-01T00:00:00",
             videosAndNotesByVariants: [
               {
