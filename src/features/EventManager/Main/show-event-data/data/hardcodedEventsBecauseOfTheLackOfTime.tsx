@@ -955,47 +955,110 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                         {
                           id: 29,
                           name: "Mięso mielone z indyka",
-                          description: "___",
-                          amount: 0,
+                          description: "Na gramy | Carrefour",
+                          amount: 750,
                           unit: "g",
                           macros: {
-                            forThisAmount: 0,
-                            calories: 0,
+                            forThisAmount: 100,
+                            calories: 138,
                           },
                           priceDetails: {
-                            price: 0,
-                            forThisAmount: 0,
+                            price: 18.89,
+                            forThisAmount: 750,
                           },
                         },
 
                         {
                           id: 30,
-                          name: "Ser Wegański",
-                          description: "___",
-                          amount: 0,
-                          unit: "g",
+                          name: "Ser Bez Laktozy",
+                          description:
+                            "1/12 (hook1 - sprawdz sam też) paczki, czyli 1 plaster | Mlekovita - Carrefour",
+                          amount: 1,
+                          unit: "szt",
                           macros: {
-                            forThisAmount: 0,
-                            calories: 0,
+                            forThisAmount: 1,
+                            calories: 42, // (hook1 - sprawdz sam też na opakoniu w sklepie)
                           },
                           priceDetails: {
-                            price: 0,
-                            forThisAmount: 0,
+                            price: 5.99,
+                            forThisAmount: 12,
                           },
                         },
                         {
                           id: 31,
-                          name: "Sałata",
-                          description: "___",
-                          amount: 0,
-                          unit: "g",
+                          name: "Sałata karbowana",
+                          description:
+                            "1 bukiet - Nie warto liczyć kalorii, 50kcal na cały bukiet | Carrefour",
+                          amount: 1,
+                          unit: "szt",
                           macros: {
-                            forThisAmount: 0,
+                            forThisAmount: 1,
                             calories: 0,
                           },
                           priceDetails: {
-                            price: 0,
-                            forThisAmount: 0,
+                            price: 4.99,
+                            forThisAmount: 1,
+                          },
+                        },
+                        {
+                          id: 32,
+                          name: "Kalafior",
+                          description: "Dupny, ~880g, 1 otwarta dłoń",
+                          amount: 1,
+                          unit: "szt",
+                          macros: {
+                            forThisAmount: 1,
+                            calories: 238,
+                          },
+                          priceDetails: {
+                            price: 12.59,
+                            forThisAmount: 1,
+                          },
+                        },
+                        {
+                          id: 33,
+                          name: "Kasza orkiszowa",
+                          description: "1 torebka po 100g | Cenos - Carrefour",
+                          amount: 1,
+                          unit: "szt",
+                          macros: {
+                            forThisAmount: 1,
+                            calories: 345,
+                          },
+                          priceDetails: {
+                            price: 6.55,
+                            forThisAmount: 3,
+                          },
+                        },
+                        {
+                          id: 34,
+                          name: "Sos spaghetti",
+                          description:
+                            "Cała paczka | Żółte opaowanie (winiary?) - Carrefour",
+                          amount: 1,
+                          unit: "szt",
+                          macros: {
+                            forThisAmount: 1,
+                            calories: 125,
+                          },
+                          priceDetails: {
+                            price: 3.89,
+                            forThisAmount: 1,
+                          },
+                        },
+                        {
+                          id: 35,
+                          name: "Makaron spaghetti",
+                          description: "Na gramy | Marka Carrefourowska",
+                          amount: 500,
+                          unit: "g",
+                          macros: {
+                            forThisAmount: 100,
+                            calories: 354,
+                          },
+                          priceDetails: {
+                            price: 3.9,
+                            forThisAmount: 1,
                           },
                         },
                       ],
@@ -1035,11 +1098,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                           imagePaths:
                             "https://szefpoleca.pl/wp-content/uploads/2022/10/smazony-kurczak-w-sosie-teriyaki.webp",
                           ytVideoId: "___",
-                          ingredientsIds: [
-                            8,
-
-                            9, 17, 18, 19,
-                          ],
+                          ingredientsIds: [8, 9, 17, 18, 19],
                         },
                         {
                           id: 4,
@@ -1111,7 +1170,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                           imagePaths:
                             "https://ojciecgotuje.pl/wp-content/uploads/2019/05/Spaghetti-Bolognese.jpg",
                           ytVideoId: "___",
-                          ingredientsIds: [],
+                          ingredientsIds: [9, 29, 34, 35],
                         },
                         {
                           id: 13,
@@ -1119,7 +1178,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                           imagePaths:
                             "https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/makaron-z-kurczakiem-i-pesto-00.jpg",
                           ytVideoId: "___",
-                          ingredientsIds: [],
+                          ingredientsIds: [5],
                         },
                         {
                           id: 14,
