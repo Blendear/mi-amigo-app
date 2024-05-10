@@ -698,34 +698,33 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                         {
                           id: 12,
                           name: "Sos sojowy",
-                          description: "___",
-                          amount: 0,
+                          description: "1 łyżka = 10ml | TaoTao - Carrefour",
+                          amount: 10,
                           unit: "ml",
                           macros: {
-                            forThisAmount: 0,
-                            calories: 0,
+                            forThisAmount: 100,
+                            calories: 27,
                           },
                           priceDetails: {
-                            price: 0,
-                            forThisAmount: 0,
+                            price: 150,
+                            forThisAmount: 5.99,
                           },
                         },
-
-                        {
-                          id: 13,
-                          name: "Przyprawa Chimichurri",
-                          description: "___",
-                          amount: 20,
-                          unit: "___",
-                          macros: {
-                            forThisAmount: 0,
-                            calories: 0,
-                          },
-                          priceDetails: {
-                            price: 0,
-                            forThisAmount: 0,
-                          },
-                        },
+                        // {
+                        //   id: 13,
+                        //   name: "Przyprawa Chimichurri",
+                        //   description: "___",
+                        //   amount: 20,
+                        //   unit: "___",
+                        //   macros: {
+                        //     forThisAmount: 0,
+                        //     calories: 0,
+                        //   },
+                        //   priceDetails: {
+                        //     price: 0,
+                        //     forThisAmount: 0,
+                        //   },
+                        // },
                         {
                           id: 14,
                           name: "Przyprawa Czosnek Granulowany",
@@ -741,25 +740,25 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                             forThisAmount: 0,
                           },
                         },
-                        {
-                          id: 15,
-                          name: "Przyprawa Adobo",
-                          description: "___",
-                          amount: 0,
-                          unit: "___",
-                          macros: {
-                            forThisAmount: 0,
-                            calories: 0,
-                          },
-                          priceDetails: {
-                            price: 0,
-                            forThisAmount: 0,
-                          },
-                        },
+                        // {
+                        //   id: 15,
+                        //   name: "Przyprawa Adobo",
+                        //   description: "___",
+                        //   amount: 0,
+                        //   unit: "___",
+                        //   macros: {
+                        //     forThisAmount: 0,
+                        //     calories: 0,
+                        //   },
+                        //   priceDetails: {
+                        //     price: 0,
+                        //     forThisAmount: 0,
+                        //   },
+                        // },
                         {
                           id: 16,
                           name: "Sól",
-                          description: "___",
+                          description: "Nie licz, 0kcal",
                           amount: 0,
                           unit: "g",
                           macros: {
@@ -774,7 +773,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                         {
                           id: 17,
                           name: "Sos teriyaki",
-                          description: "___",
+                          description: "hook1 - w carreofurze nie ma chyba?",
                           amount: 0,
                           unit: "g",
                           macros: {
@@ -788,32 +787,33 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                         },
                         {
                           id: 18,
-                          name: "Ryż",
-                          description: "___",
+                          name: "Ryż biały",
+                          description:
+                            "Gramy | Kuchnia Gosposi 1kg pakowany- Carrefur",
                           amount: 100,
                           unit: "g",
                           macros: {
-                            forThisAmount: 0,
-                            calories: 0,
+                            forThisAmount: 100,
+                            calories: 341,
                           },
                           priceDetails: {
-                            price: 0,
-                            forThisAmount: 0,
+                            price: 6.65,
+                            forThisAmount: 1000,
                           },
                         },
                         {
                           id: 19,
                           name: "Brokuł",
-                          description: "___",
-                          amount: 0,
-                          unit: "___",
+                          description: "1szt = 500g | Carrefour",
+                          amount: 1,
+                          unit: "szt",
                           macros: {
-                            forThisAmount: 0,
-                            calories: 0,
+                            forThisAmount: 1,
+                            calories: 155,
                           },
                           priceDetails: {
-                            price: 0,
-                            forThisAmount: 0,
+                            price: 6.59,
+                            forThisAmount: 1,
                           },
                         },
                         {
@@ -834,16 +834,16 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                         {
                           id: 21,
                           name: "Papryka",
-                          description: "___",
-                          amount: 0,
-                          unit: "___",
+                          description: "Szt | Carrefour",
+                          amount: 1,
+                          unit: "szt",
                           macros: {
-                            forThisAmount: 0,
-                            calories: 0,
+                            forThisAmount: 1,
+                            calories: 70,
                           },
                           priceDetails: {
-                            price: 0,
-                            forThisAmount: 0,
+                            price: 3,
+                            forThisAmount: 1,
                           },
                         },
                         {
@@ -857,89 +857,90 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                             calories: 0,
                           },
                           priceDetails: {
-                            price: 0,
+                            price: 0, //hook1
                             forThisAmount: 0,
                           },
                         },
                         {
                           id: 23,
                           name: "Jajko",
-                          description: "L'ka | Carrefour",
-                          amount: 0,
-                          unit: "___",
+                          description: "L'ka | Marka Carrefourowska",
+                          amount: 1,
+                          unit: "szt",
                           macros: {
-                            forThisAmount: 0,
-                            calories: 0,
+                            forThisAmount: 1,
+                            calories: 95,
                           },
                           priceDetails: {
-                            price: 0,
-                            forThisAmount: 0,
+                            price: 19.39,
+                            forThisAmount: 20,
                           },
                         },
                         {
                           id: 24,
                           name: "Panierka ryżowa z CH",
-                          description: "Gramy | Szwajcarska",
-                          amount: 0,
-                          unit: "___",
+                          description:
+                            "1 łyżka  = 5g (hook1 sprawdz to) (licz wysokosc napelnienia równa głębokości łyżki)| Szwajcarska",
+                          amount: 5, // hook1
+                          unit: "g",
                           macros: {
-                            forThisAmount: 0,
-                            calories: 0,
+                            forThisAmount: 100,
+                            calories: 356,
                           },
                           priceDetails: {
-                            price: 0,
-                            forThisAmount: 0,
+                            price: 0, //hook1
+                            forThisAmount: 300,
                           },
                         },
                         {
                           id: 25,
-                          name: "Rolada wołowa(?)",
+                          name: "Rolada wołowa / Zraz wołowy",
                           description: "___",
-                          amount: 0,
-                          unit: "g",
+                          amount: 1,
+                          unit: "szt",
                           macros: {
-                            forThisAmount: 0,
-                            calories: 0,
+                            forThisAmount: 1,
+                            calories: 269,
                           },
                           priceDetails: {
-                            price: 0,
-                            forThisAmount: 0,
+                            price: 0, //hook1
+                            forThisAmount: 1,
                           },
                         },
                         {
                           id: 26,
                           name: "Kluski",
-                          description: "___",
-                          amount: 0,
-                          unit: "g",
+                          description: "Paczka 500g | Carrefour",
+                          amount: 1,
+                          unit: "szt",
                           macros: {
-                            forThisAmount: 0,
-                            calories: 0,
+                            forThisAmount: 1,
+                            calories: 775,
                           },
                           priceDetails: {
-                            price: 0,
-                            forThisAmount: 0,
+                            price: 7.55,
+                            forThisAmount: 1,
                           },
                         },
                         {
                           id: 27,
-                          name: "Surówka z niebieskiej kapusty",
-                          description: "___",
-                          amount: 0,
-                          unit: "g",
+                          name: "Buraczki (z) chrzanem?)",
+                          description: "Pudełko 480g | Multismak - Carrefour",
+                          amount: 1,
+                          unit: "szt",
                           macros: {
-                            forThisAmount: 0,
-                            calories: 0,
+                            forThisAmount: 1,
+                            calories: 412.5,
                           },
                           priceDetails: {
-                            price: 0,
-                            forThisAmount: 0,
+                            price: 4.89,
+                            forThisAmount: 1,
                           },
                         },
                         {
                           id: 28,
                           name: "Sos pieczeniowy ciemny",
-                          description: "___",
+                          description: "___", //hook1
                           amount: 0,
                           unit: "ml",
                           macros: {
@@ -954,7 +955,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                         {
                           id: 29,
                           name: "Mięso mielone z indyka",
-                          description: "Na gramy | Carrefour",
+                          description: "Na gramy | Indykpol - Carrefour",
                           amount: 750,
                           unit: "g",
                           macros: {
@@ -1063,81 +1064,82 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                         {
                           id: 36,
                           name: "Sos pieczeniowy jasny",
-                          description: "1 paczka | ??? - Carrefour",
+                          description: "1 paczka | Winiary żółty - Carrefour",
                           amount: 1,
                           unit: "szt",
                           macros: {
                             forThisAmount: 1,
-                            calories: 0,
+                            calories: 96,
                           },
                           priceDetails: {
-                            price: 0,
+                            price: 2.85,
                             forThisAmount: 1,
                           },
                         },
                         {
                           id: 37,
                           name: "Makaron Konjac",
-                          description: "1 paczka | ??? - Carrefour",
-                          amount: 0,
+                          description: "Gramy| ??? - Carrefour",
+                          amount: 100,
                           unit: "g",
                           macros: {
-                            forThisAmount: 1,
-                            calories: 0,
+                            forThisAmount: 100,
+                            calories: 6,
                           },
                           priceDetails: {
-                            price: 0,
-                            forThisAmount: 1,
+                            price: 0, //hook1
+                            forThisAmount: 100,
                           },
                         },
                         {
                           id: 38,
-                          name: "Makaron Chiński, pasma",
-                          description: "1 paczka | ??? - Carrefour",
-                          amount: 0,
-                          unit: "g",
+                          name: "Makaron Chiński, a la spaghetti",
+                          description: "1 paczka 100g | Tao Tao - Carrefour",
+                          amount: 1,
+                          unit: "szt",
                           macros: {
                             forThisAmount: 1,
-                            calories: 0,
+                            calories: 350,
                           },
                           priceDetails: {
-                            price: 0,
+                            price: 5.65,
                             forThisAmount: 1,
                           },
                         },
                         {
                           id: 39,
                           name: "Sos chiński",
-                          description: "1 paczka | ??? - Carrefour",
+                          description: "1 paczka | Knorr - Carrefour",
                           amount: 1,
                           unit: "szt",
                           macros: {
                             forThisAmount: 1,
-                            calories: 0,
+                            calories: 112.85,
                           },
                           priceDetails: {
-                            price: 0,
+                            price: 4.29,
                             forThisAmount: 1,
                           },
                         },
                         {
                           id: 40,
                           name: "Pesto",
-                          description: "1 łyżka | ??? - Carrefour",
-                          amount: 1,
-                          unit: "szt",
+                          description:
+                            "1 łyżka = 20g | Marka Carrefourowska (Classic)",
+                          amount: 20,
+                          unit: "g",
                           macros: {
-                            forThisAmount: 1,
-                            calories: 0,
+                            forThisAmount: 100,
+                            calories: 454,
                           },
                           priceDetails: {
-                            price: 0,
-                            forThisAmount: 1,
+                            price: 6.69,
+                            forThisAmount: 190,
                           },
                         },
                         {
                           id: 41,
-                          name: "Łosoś",
+                          name: "Łosoś", // hook1
                           description: "Gramy, bez skóry | ??? - Carrefour",
                           amount: 0,
                           unit: "g",
@@ -1153,120 +1155,108 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                         {
                           id: 42,
                           name: "Kasza Bulgur",
-                          description: "1 torebka 100g | ??? - Carrefour",
+                          description:
+                            "1 torebka 100g | Marka Carrefourowska (Extra)",
                           amount: 1,
                           unit: "szt",
                           macros: {
                             forThisAmount: 1,
-                            calories: 0,
+                            calories: 333,
                           },
                           priceDetails: {
-                            price: 0,
-                            forThisAmount: 1,
+                            price: 4.25,
+                            forThisAmount: 4,
                           },
                         },
                         {
                           id: 43,
                           name: "Niebieska kapusta",
-                          description: "Gramy | ??? - Carrefour",
-                          amount: 0,
+                          description: "1 łyżka = | Rolnik - Carrefour",
+                          amount: 15,
                           unit: "g",
                           macros: {
-                            forThisAmount: 1,
-                            calories: 0,
+                            forThisAmount: 100,
+                            calories: 37,
                           },
                           priceDetails: {
-                            price: 0,
-                            forThisAmount: 1,
-                          },
-                        },
-                        {
-                          id: 44,
-                          name: "Ryż biały",
-                          description: "1 torebka 100g | ??? - Carrefour",
-                          amount: 1,
-                          unit: "szt",
-                          macros: {
-                            forThisAmount: 1,
-                            calories: 0,
-                          },
-                          priceDetails: {
-                            price: 0,
-                            forThisAmount: 1,
+                            price: 4.79,
+                            forThisAmount: 360,
                           },
                         },
                         {
                           id: 45,
                           name: "Erytrytol, NIE KSYLITOL (Drogi)",
                           description: "Gramy | ??? - Carrefour",
-                          amount: 1,
+                          amount: 500,
                           unit: "g",
                           macros: {
-                            forThisAmount: 1,
-                            calories: 0,
+                            forThisAmount: 100,
+                            calories: 20,
                           },
                           priceDetails: {
-                            price: 0,
-                            forThisAmount: 1,
+                            price: 19.99,
+                            forThisAmount: 500,
                           },
                         },
                         {
                           id: 46,
-                          name: "Cynamon",
-                          description: "Gramy | ??? - Carrefour",
-                          amount: 1,
+                          name: "Cynamon mielony (fiolka)",
+                          description:
+                            "1 łyzka płaska = g | Kamias - Carrefour",
+                          amount: 4,
                           unit: "g",
                           macros: {
-                            forThisAmount: 1,
-                            calories: 0,
+                            forThisAmount: 100,
+                            calories: 247,
                           },
                           priceDetails: {
-                            price: 0,
-                            forThisAmount: 1,
+                            price: 8.79,
+                            forThisAmount: 39,
                           },
                         },
                         {
                           id: 47,
                           name: "Pierogi Ruskie",
-                          description: "Paczka 250g | ??? - Carrefour",
+                          description:
+                            "Paczka 500g | Marka Carrefourowska (Classic)",
                           amount: 1,
                           unit: "szt",
                           macros: {
                             forThisAmount: 1,
-                            calories: 0,
+                            calories: 988,
                           },
                           priceDetails: {
-                            price: 0,
+                            price: 6.75,
                             forThisAmount: 1,
                           },
                         },
                         {
                           id: 48,
-                          name: "Buchty",
-                          description: "Sztuka | ??? - Carrefour",
+                          name: "Buchty aka 'Kluski na parze'",
+                          description: "Opakowanie 300g | Marka Carrefourowska",
                           amount: 1,
                           unit: "szt",
                           macros: {
                             forThisAmount: 1,
-                            calories: 0,
+                            calories: 783,
                           },
                           priceDetails: {
-                            price: 0,
+                            price: 3.79,
                             forThisAmount: 1,
                           },
                         },
                         {
                           id: 49,
-                          name: "kisiel malinowy",
-                          description: "1 saszetka | ??? - Carrefour",
+                          name: "Kisiel malinowy",
+                          description: "1 saszetka | Dr Oetker - Carrefour",
                           amount: 1,
                           unit: "szt",
                           macros: {
                             forThisAmount: 1,
-                            calories: 0,
+                            calories: 77,
                           },
                           priceDetails: {
-                            price: 0,
+                            price: 1.55,
                             forThisAmount: 1,
                           },
                         },
@@ -1274,30 +1264,30 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                           id: 50,
                           name: "Chleb Tostowy",
                           description:
-                            "Sztuka | Najtanszy, pszenny??? - Carrefour",
+                            "kromka | Pszenny, Marka Carrefourowska (Classic)",
                           amount: 1,
                           unit: "szt",
                           macros: {
-                            forThisAmount: 1,
-                            calories: 0,
+                            forThisAmount: 1, // hook1 ???
+                            calories: 244, // for 100g
                           },
                           priceDetails: {
-                            price: 0,
-                            forThisAmount: 1,
+                            price: 3.19,
+                            forThisAmount: 1, // for whole package 500g
                           },
                         },
                         {
                           id: 51,
                           name: "Ogórek klasyczny",
-                          description: "Średni, wielkość ??? | Carrefour",
+                          description: "Średni, wielkość 1.5 dłoni | Carrefour",
                           amount: 1,
                           unit: "szt",
                           macros: {
                             forThisAmount: 1,
-                            calories: 0,
+                            calories: 25,
                           },
                           priceDetails: {
-                            price: 0,
+                            price: 2.99,
                             forThisAmount: 1,
                           },
                         },
@@ -1305,16 +1295,16 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                           id: 52,
                           name: "Krem czekoladowy bez cukru (CH)",
                           description:
-                            "1 łyżeczka (wysokość nabrania taka jak głębokość łyżeczki)| Szwajcarski",
-                          amount: 1,
-                          unit: "szt",
+                            "1 łyżeczka = 15g (wysokość nabrania taka jak głębokość łyżeczki)| Szwajcarski",
+                          amount: 15,
+                          unit: "g",
                           macros: {
-                            forThisAmount: 1,
-                            calories: 0,
+                            forThisAmount: 100,
+                            calories: 565,
                           },
                           priceDetails: {
-                            price: 0,
-                            forThisAmount: 1,
+                            price: 0, //hook1
+                            forThisAmount: 270,
                           },
                         },
                       ],
@@ -1343,8 +1333,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                           ytVideoId:
                             "Ugotować makaron.Szpinak pokroić. Na patelnię na średnim ogniu dać masło,  pokrojony czosnek i dużo soli. Rozgrzać aż masło się roztopi. Nie można dopuścić, by spaliło się. Dodać szpinak i mieszać od czasu do czasu. Gdy szpinak będzie miękki, dodać sos sojowy i pokrojone pomidory suszone. Do smaku dodać łyżkę oleju z pomidorów. Przyprawić do smaku - powinien być mocny.Ugotowany makaron odcedzić na sitku i wsypać na patelnie. Smażyć ze szpinakiem, aż wszystko się obklei. Dosolić, jeżeli jest za mało wyraziste.",
                           ingredientsIds: [
-                            5, 3, 10, 11, 12, 13, 14,
-                            // 15, - Isn't necessary IMO
+                            5, 3, 10, 11, 12, 14,
+                            // 15, 13 - Isn't necessary IMO
                             16,
                           ],
                         },
