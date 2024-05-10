@@ -1,5 +1,6 @@
 import HowAndTips from "@/features/EventManager/Main/show-event-data/components/HowAndTips";
 import { EventWithNeeds } from "@/features/EventManager/Main/show-event-data/types";
+import { Ingredient } from "@/features/EventManager/SubApps/meals-and-macros/components/Ingredient";
 
 export type Chunk = {
   isAuthenticated: boolean;
@@ -22,6 +23,7 @@ export type ImageWithWrapperProps = {
 };
 
 export type Ingredient = {
+  id: number;
   name: string;
   description?: string;
   amount: number;
@@ -45,10 +47,11 @@ export type Meal = {
   description?: string;
   imagePaths: string;
   ytVideoId: string; // "how to prepare it" video
-  ingredients: Ingredient[];
+  ingredientsIds: number[];
 };
 
 export type MealsAndMacrosSubAppPayload = {
+  ingredientsAvailable: Ingredient[];
   mealsAvailable: Meal[];
   periodOfDaysOfEating: {
     // index and an optional "nonDefaultAmount" ais more optimal instead of writing aaaaaaaaaaaaaaa
