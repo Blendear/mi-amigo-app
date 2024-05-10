@@ -60,10 +60,16 @@ export const Meal = ({ details, hideContentUnderNamedButton }: MealProps) => {
     payload.periodOfDaysOfEating,
   ]);
 
+  const currentIngredients = useMemo(() => {
+    return currentMeal.ingredientsIds.map((ingredientId) => {
+      return payload.ingredientsAvailable[ingredientId];
+    });
+  }, [currentMeal.ingredientsIds, payload.ingredientsAvailable]);
+
   const getTotalMealCalories = () => {
     let totalCalories = 0;
 
-    currentMeal.ingredients.forEach((ingredient) => {
+    currentIngredients.forEach((ingredient) => {
       totalCalories +=
         (ingredient.macros.calories / ingredient.macros.forThisAmount) *
         ingredient.amount;
@@ -75,7 +81,7 @@ export const Meal = ({ details, hideContentUnderNamedButton }: MealProps) => {
   const getTotalMealPrice = () => {
     let totalPrice = 0;
 
-    currentMeal.ingredients.forEach((ingredient) => {
+    currentIngredients.forEach((ingredient) => {
       totalPrice +=
         (ingredient.priceDetails.price /
           ingredient.priceDetails.forThisAmount) *
@@ -104,7 +110,7 @@ export const Meal = ({ details, hideContentUnderNamedButton }: MealProps) => {
         <div>
           <Video yTvideoId={details.ytVideoId} />
           <ul>
-            {details.ingredients.map((ingredient, index) => {
+            {currentIngredients.map((ingredient, index) => {
               return <Ingredient key={index} details={ingredient} />;
             })}
           </ul>

@@ -3,7 +3,7 @@ import { css } from "@emotion/react";
 // import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
 import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 // import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
-import { useContext } from "react";
+import { useContext, useMemo } from "react";
 import { MealsAndMacrosContext } from "../context/MealsAndMacrosContext";
 
 const caloriesOfTodaysMealsCss = {
@@ -39,11 +39,14 @@ export const CaloriesOfTodaysMeals = () => {
 
     payload.periodOfDaysOfEating[dayOfMealPlanIndex.current].forEach(
       (mealReference) => {
-        payload.mealsAvailable[mealReference.mealId].ingredients.forEach(
-          (ingredient) => {
+        payload.mealsAvailable[mealReference.mealId].ingredientsIds.forEach(
+          (ingredientId) => {
+            const currentIngredient =
+              payload.ingredientsAvailable[ingredientId];
             totalCalories +=
-              (ingredient.macros.calories / ingredient.macros.forThisAmount) *
-              ingredient.amount;
+              (currentIngredient.macros.calories /
+                currentIngredient.macros.forThisAmount) *
+              currentIngredient.amount;
           }
         );
       }
