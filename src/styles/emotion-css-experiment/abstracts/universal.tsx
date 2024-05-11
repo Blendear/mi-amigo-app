@@ -23,9 +23,9 @@ export const universalCss = {
       //   },
       // },
 
-      "&:disabled": {
-        filter: `saturate(0)`,
-      },
+      // "&:disabled": {
+      //   filter: `saturate(0)`,
+      // },
     }),
 
   disabled: css({

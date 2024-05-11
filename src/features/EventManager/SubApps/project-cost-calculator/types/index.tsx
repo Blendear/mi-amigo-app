@@ -59,7 +59,38 @@ export type TimeRangesVariantType = {
 export type TimeRangeType = "5-30" | "30-60" | "60-120" | "120-240" | "240-480";
 
 export type CalculationContentOfWebApp = {
-  defaultStatesThatMultiplyTheTimeSum: StatesThatMultiplyTheTimeSumType;
+  defaultStatesThatMultiplyTheTimeSum: // NOT the same type as "StatesThatMultiplyTheTimeSumType", since it also needs the possibleOptions prop to
+  // dynamically create the radio buttons
+  {
+    translationAutomatically: {
+      value: "no" | "yes";
+      possibleOptions: ["no", "yes"];
+    };
+    responsiveForBrowsers: {
+      value: "single" | "all";
+      possibleOptions: ["single", "all"];
+    };
+    responsiveForScreenSizes: {
+      value: "1" | "2" | "3";
+      possibleOptions: ["1", "2", "3"];
+    };
+    responsiveForDisabilities: {
+      value: "no" | "yes";
+      possibleOptions: ["no", "yes"];
+    };
+    stylisationDesign: {
+      value: "mvp" | "design basic" | "design unique";
+      possibleOptions: ["mvp", "design basic", "design unique"];
+    };
+    stylisationAnimationAmountOfStates: {
+      value: "0" | "1" | "2" | "3" | "4" | "5";
+      possibleOptions: ["0", "1", "2", "3", "4", "5"];
+    };
+    stylisationAnimationAmountOfComplexStates: {
+      value: "0" | "1" | "2" | "3" | "4" | "5";
+      possibleOptions: ["0", "1", "2", "3", "4", "5"];
+    };
+  };
 
   specificFeatures: SpecificFeatureType[];
 
@@ -73,20 +104,25 @@ export type StatesThatMultiplyTheTimeSumType = {
   // will be used to set the default values of the items inside specificFeatures array
   translationAutomatically: "no" | "yes";
   responsiveForBrowsers: "single" | "all";
-  responsiveForScreenSizes: 1 | 2 | 3; // Out of 3 possible, so mobile, tablet, desktop
+  responsiveForScreenSizes: "1" | "2" | "3"; // Out of 3 possible, so mobile, tablet, desktop
   responsiveForDisabilities: "no" | "yes";
   stylisationDesign: "mvp" | "design basic" | "design unique";
   // Usually there's one/two, but some creative ideas will have more
   // like "depending on the mouse and screen position and onHover, onClick etc."
-  stylisationAnimationAmountOfStates: 0 | 1 | 2 | 3 | 4 | 5;
+  stylisationAnimationAmountOfStates: "0" | "1" | "2" | "3" | "4" | "5";
   // 2 = two of the amount of state swill be complex
-  stylisationAnimationAmountOfComplexStates: 0 | 1 | 2 | 3 | 4 | 5;
+  stylisationAnimationAmountOfComplexStates: "0" | "1" | "2" | "3" | "4" | "5";
 };
 
 export type ProjectType = {
   name: string;
   imagePath: string;
-  calculationContent: CalculationContentOfWebApp;
+  // There will be other types added for concept art, 3d modelling etc.
+  //
+  // But all will have the 3 main props, defaultStatesThatMultiplyTheTimeSum,
+  // specificFeatures and multipliersForAllFeaturesAsOne
+  // TODO: Create a parent that forces such a structure
+  calculationContent: CalculationContentOfWebApp | {};
 };
 
 export type ProjectCostCalculatorContextType = {
@@ -114,7 +150,12 @@ export type ProjectDefaultCheckboxesAndFeaturesContextType = {
   userChoicesRef: React.MutableRefObject<UserChoicesType>;
 };
 
-export type DefaultStateProps = { radioValues: string[] };
+export type DefaultStateProps = {
+  stateName: string;
+  radioValues: string[];
+};
+
+export type DefaultCheckboxStatesSettersContextType = {};
 
 export type AComponentProps = {};
 

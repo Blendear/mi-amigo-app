@@ -6,6 +6,7 @@ import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { useContext, useState } from "react";
 import { DefaultStateProps, ProjectType } from "../types";
 import { ProjectDefaultCheckboxesAndFeaturesContext } from "../context/ProjectDefaultCheckboxesAndFeatures";
+import { DefaultCheckboxStatesSettersContext } from "../context/DefaultCheckboxStatesSetters";
 
 // two words fully written, the rest are initials
 const DefaultStateCss = {
@@ -26,7 +27,7 @@ const DefaultStateCss = {
   }),
 };
 
-export const DefaultState = ({ radioValues }: DefaultStateProps) => {
+export const DefaultState = ({ stateName, radioValues }: DefaultStateProps) => {
   const { userChoicesRef } = useContext(
     ProjectDefaultCheckboxesAndFeaturesContext
   );
@@ -38,19 +39,20 @@ export const DefaultState = ({ radioValues }: DefaultStateProps) => {
 
     const updatedFinalChoice: ProjectType = {
       ...userChoicesRef.current.finalChoice,
+      // Update the prop with the name of the "stateName" variable with the selected option value
+      // For example "stylisationDesign" key to "mvp" | "design basic" | "design unique" value
+      [stateName]: event.target.value,
     };
 
     userChoicesRef.current = {
       ...userChoicesRef.current,
-      finalChoice: {
-        ...userChoicesRef.current.finalChoice,
-        finalChoiceContent: event.target.value,
-      },
+      finalChoice: updatedFinalChoice,
     };
   };
 
   return (
-    <div>
+    <fieldset css={{ all: "unset" }}>
+      <legend>{stateName}</legend>
       {radioValues.map((radioValue, index) => {
         return (
           <label key={index}>
@@ -64,6 +66,6 @@ export const DefaultState = ({ radioValues }: DefaultStateProps) => {
           </label>
         );
       })}
-    </div>
+    </fieldset>
   );
 };
