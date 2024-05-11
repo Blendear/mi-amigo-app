@@ -32,7 +32,7 @@ const ProjectCostCalculator = () => {
   // and the number to multiply the hours with. The sum of time is then passed to the SumOfTime
   // and multiplied by the hourly rate to get the numeric content of SumOfMoney.
 
-  const hourlyRate = useRef(0);
+  const hourlyRate = useRef(60);
 
   // Hours will be added/subtracted - whenever a cost position changes
   // For example, adding a new feature from the cost-area of 6-10 hours, will add 6 gours to the

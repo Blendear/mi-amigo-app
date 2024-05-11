@@ -4,7 +4,7 @@ import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
 import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { SumOfMoneyProps } from "../types";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { ProjectCostCalculatorContext } from "../context/ProjectCostCalculatorContext";
 import { sum } from "cypress/types/lodash";
 
@@ -31,6 +31,11 @@ export const SumOfMoney = ({}: SumOfMoneyProps) => {
     ProjectCostCalculatorContext
   );
 
+  // The sum of money will be multiplied by the VATMultiplier, which is 12% by default
+  // & 32% if the sum of money is more than 120000 (10k a month)
+  // It changes will change whenever the sum of money changes
+  const VATMultiplier = useRef(0.12);
+
   const [sum, setSum] = useState({
     optimistic: 0,
     pessimistic: 0,
@@ -45,6 +50,12 @@ export const SumOfMoney = ({}: SumOfMoneyProps) => {
     sumOfMoney.current = newSum;
 
     setSum(newSum);
+
+    if (newSum.optimistic > 120000) {
+      VATMultiplier.current = 0.32;
+    } else {
+      VATMultiplier.current = 0.12;
+    }
   }, [hourlyRate, sumOfTime, sumOfMoney]);
 
   return (
@@ -52,6 +63,11 @@ export const SumOfMoney = ({}: SumOfMoneyProps) => {
       <h2>Sum of cost</h2>
       <div>
         {sum.optimistic} - {sum.pessimistic}
+      </div>
+      <h2>Sum of actual money for the developer</h2>
+      <div>
+        {sum.optimistic * VATMultiplier.current} -
+        {sum.pessimistic * VATMultiplier.current}
       </div>
     </section>
   );
