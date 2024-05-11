@@ -27,14 +27,13 @@ const SumOfMoneyCss = {
 };
 
 export const SumOfMoney = ({}: SumOfMoneyProps) => {
-  const { hourlyRate, sumOfTime, sumOfMoney } = useContext(
-    ProjectCostCalculatorContext
-  );
+  const { hourlyRate, sumOfHoursByRateType, sumOfTime, sumOfMoney } =
+    useContext(ProjectCostCalculatorContext);
 
-  // The sum of money will be multiplied by the VATMultiplier, which is 12% by default
+  // The sum of money will be multiplied by the VATDivider, which is 12% by default
   // & 32% if the sum of money is more than 120000 (10k a month)
   // It changes will change whenever the sum of money changes
-  const VATMultiplier = useRef(0.12);
+  const VATDivider = useRef(0.12);
 
   const [sum, setSum] = useState({
     optimistic: 0,
@@ -42,19 +41,20 @@ export const SumOfMoney = ({}: SumOfMoneyProps) => {
   });
 
   useEffect(() => {
-    const newSum = {
-      optimistic: hourlyRate.current * sumOfTime.current.optimistic,
-      pessimistic: hourlyRate.current * sumOfTime.current.pessimistic,
+    const newSumOfMoney = {
+      optimistic: sumOfTime.current.optimistic * sumOfTime.current.optimistic,
+      pessimistic:
+        sumOfTime.current.pessimistic * sumOfTime.current.pessimistic,
     };
 
-    sumOfMoney.current = newSum;
+    sumOfMoney.current = newSumOfMoney;
 
-    setSum(newSum);
+    setSum(newSumOfMoney);
 
-    if (newSum.optimistic > 120000) {
-      VATMultiplier.current = 0.32;
+    if (newSumOfMoney.optimistic > 120000) {
+      VATDivider.current = 0.32;
     } else {
-      VATMultiplier.current = 0.12;
+      VATDivider.current = 0.12;
     }
   }, [hourlyRate, sumOfTime, sumOfMoney]);
 
@@ -66,8 +66,8 @@ export const SumOfMoney = ({}: SumOfMoneyProps) => {
       </div>
       <h2>Sum of actual money for the developer</h2>
       <div>
-        {sum.optimistic * VATMultiplier.current} -
-        {sum.pessimistic * VATMultiplier.current}
+        {(sum.optimistic / VATDivider.current).toFixed(2)} -
+        {(sum.pessimistic / VATDivider.current).toFixed(2)}
       </div>
     </section>
   );

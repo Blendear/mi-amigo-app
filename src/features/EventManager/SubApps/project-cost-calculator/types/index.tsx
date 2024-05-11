@@ -5,12 +5,25 @@ export type OptimisticAndPessimisticValue = {
   pessimistic: number;
 };
 
+export type SumOfHoursByRateType = {
+  sprintCall: OptimisticAndPessimisticValue;
+  logicalProblemsolving: OptimisticAndPessimisticValue;
+  creativeProblemsolving: OptimisticAndPessimisticValue;
+};
+
 export type ProjectCostCalculatorContextType = {
-  hourlyRate: React.MutableRefObject<number>;
-  numberOfHours: React.MutableRefObject<OptimisticAndPessimisticValue>;
+  hourlyRate: React.MutableRefObject<{
+    sprintCall: number;
+    logicalProblemsolving: number;
+    creativeProblemsolving: number;
+  }>;
+
+  sumOfHoursByRateType: React.MutableRefObject<SumOfHoursByRateType>;
+
   listOfnumbersToMultiplyTheHoursWith: React.MutableRefObject<{
     [key: string]: number;
   }>;
+
   finalMultiplier: React.MutableRefObject<number>;
   sumOfTime: React.MutableRefObject<OptimisticAndPessimisticValue>;
   sumOfMoney: React.MutableRefObject<OptimisticAndPessimisticValue>;

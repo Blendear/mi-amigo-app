@@ -7,6 +7,7 @@ import { HourlyRateProps } from "../types";
 import { useContext, useState } from "react";
 import { parse } from "path";
 import { ProjectCostCalculatorContext } from "../context/ProjectCostCalculatorContext";
+import { Rate } from "./Rate";
 
 // two words fully written, the rest are initials
 const HourlyRateCss = {
@@ -30,26 +31,33 @@ const HourlyRateCss = {
 export const HourlyRate = ({}: HourlyRateProps) => {
   const { hourlyRate } = useContext(ProjectCostCalculatorContext);
 
-  const [inputNumber, setInputNumber] = useState<number>(60);
-
-  const handleChange = (event) => {
-    const newValue = parseInt(event.target.value);
-    setInputNumber(newValue);
-    hourlyRate.current = newValue;
+  const onChangeOfAnyRate = (
+    rateType: "sprintCall" | "logicalProblemSolving" | "creativeProblemSolving",
+    newAmount: number
+  ) => {
+    hourlyRate.current = { ...hourlyRate.current, [rateType]: newAmount };
   };
 
   return (
     <section css={universalCss.container}>
-      <h2>
-        <label htmlFor="numberInput">Hourly rate</label>
-      </h2>
-      <input
-        css={{ backgroundColor: "rgb(255,255,255,0.2)" }}
-        type="number"
-        id="numberInput"
-        value={inputNumber}
-        onChange={handleChange}
-        placeholder="Enter a number"
+      <h2>Hourly Rates</h2>
+
+      <Rate
+        inputsHtmlFor="sprintCall"
+        label="Pre / Post Sprint Call"
+        onChangeOfAnyRate={onChangeOfAnyRate}
+      />
+
+      <Rate
+        inputsHtmlFor="logicalProblemsolving"
+        label="Logical Problemsolving"
+        onChangeOfAnyRate={onChangeOfAnyRate}
+      />
+
+      <Rate
+        inputsHtmlFor="creativeProblemsolving"
+        label="Creative Problemsolving"
+        onChangeOfAnyRate={onChangeOfAnyRate}
       />
     </section>
   );

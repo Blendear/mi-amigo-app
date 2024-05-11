@@ -3,7 +3,7 @@ import { css } from "@emotion/react";
 import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
 import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
-import { SumOfTimeProps } from "../types";
+import { SumOfHoursByRateType, SumOfTimeProps } from "../types";
 import { useContext, useEffect, useState } from "react";
 import { ProjectCostCalculatorContext } from "../context/ProjectCostCalculatorContext";
 
@@ -27,7 +27,7 @@ const SumOfTimeCss = {
 
 export const SumOfTime = ({}: SumOfTimeProps) => {
   const {
-    numberOfHours,
+    sumOfHoursByRateType,
     listOfnumbersToMultiplyTheHoursWith,
     finalMultiplier,
     sumOfTime,
@@ -45,16 +45,53 @@ export const SumOfTime = ({}: SumOfTimeProps) => {
 
     finalMultiplier.current = newFinalMultiplier;
 
-    const newSum = {
-      optimistic: numberOfHours.current.optimistic * finalMultiplier.current,
-      pessimistic: numberOfHours.current.pessimistic * finalMultiplier.current,
+    const newSumOfHoursByRateType: SumOfHoursByRateType =
+      // every optimistic and [pessimistic shouldsimply be multiplied by the newFinalMultiplier
+      {
+        sprintCall: {
+          optimistic:
+            sumOfHoursByRateType.current.sprintCall.optimistic *
+            newFinalMultiplier,
+          pessimistic:
+            sumOfHoursByRateType.current.sprintCall.pessimistic *
+            newFinalMultiplier,
+        },
+        logicalProblemsolving: {
+          optimistic:
+            sumOfHoursByRateType.current.logicalProblemsolving.optimistic *
+            newFinalMultiplier,
+          pessimistic:
+            sumOfHoursByRateType.current.logicalProblemsolving.pessimistic *
+            newFinalMultiplier,
+        },
+        creativeProblemsolving: {
+          optimistic:
+            sumOfHoursByRateType.current.creativeProblemsolving.optimistic *
+            newFinalMultiplier,
+          pessimistic:
+            sumOfHoursByRateType.current.creativeProblemsolving.pessimistic *
+            newFinalMultiplier,
+        },
+      };
+
+    sumOfHoursByRateType.current = newSumOfHoursByRateType;
+
+    const newSumOfSums = {
+      optimistic: Object.values(newSumOfHoursByRateType).reduce(
+        (acc, rateType) => acc + rateType.optimistic,
+        0
+      ),
+      pessimistic: Object.values(newSumOfHoursByRateType).reduce(
+        (acc, rateType) => acc + rateType.pessimistic,
+        0
+      ),
     };
 
-    sumOfTime.current = newSum;
+    sumOfTime.current = newSumOfSums;
 
-    setSum(newSum);
+    setSum(newSumOfSums);
   }, [
-    numberOfHours,
+    sumOfHoursByRateType,
     listOfnumbersToMultiplyTheHoursWith,
     finalMultiplier,
     sumOfTime,
@@ -62,9 +99,9 @@ export const SumOfTime = ({}: SumOfTimeProps) => {
 
   return (
     <section css={universalCss.container}>
-      <h2>Sum of time</h2>
+      <h2>Sum of time (Hours)</h2>
       <div>
-        {sum.optimistic} - {sum.pessimistic}
+        {sum.optimistic.toFixed(2)} - {sum.pessimistic.toFixed(2)}
       </div>
     </section>
   );

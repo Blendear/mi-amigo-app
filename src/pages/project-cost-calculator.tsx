@@ -32,15 +32,29 @@ const ProjectCostCalculator = () => {
   // and the number to multiply the hours with. The sum of time is then passed to the SumOfTime
   // and multiplied by the hourly rate to get the numeric content of SumOfMoney.
 
-  const hourlyRate = useRef(60);
+  const hourlyRate = useRef({
+    sprintCall: 30,
+    logicalProblemsolving: 60,
+    creativeProblemsolving: 90,
+  });
 
   // Hours will be added/subtracted - whenever a cost position changes
   // For example, adding a new feature from the cost-area of 6-10 hours, will add 6 gours to the
   // numberOfOptimisticHours and 10 hours to the numberOfPessimisticHours, so that the sum shows
   // a realistic range of assumed hours.
-  const numberOfHours = useRef({
-    optimistic: 0,
-    pessimistic: 0,
+  const sumOfHoursByRateType = useRef({
+    sprintCall: {
+      optimistic: 0,
+      pessimistic: 0,
+    },
+    logicalProblemsolving: {
+      optimistic: 0,
+      pessimistic: 0,
+    },
+    creativeProblemsolving: {
+      optimistic: 0,
+      pessimistic: 0,
+    },
   });
 
   // specific chapters will modify specific key values - whenever a cost position changes
@@ -65,15 +79,20 @@ const ProjectCostCalculator = () => {
 
   const updateHoursNumber = (
     actionType: "-" | "+",
+    rateType: "sprintCall" | "logicalProblemSolving" | "creativeProblemSolving",
     numberToModifyOptimisticHours: number,
     numberToModifyPessimisticHours: number
   ) => {
     if (actionType === "+") {
-      numberOfHours.current.optimistic += numberToModifyOptimisticHours;
-      numberOfHours.current.pessimistic += numberToModifyPessimisticHours;
+      sumOfHoursByRateType.current[rateType].optimistic +=
+        numberToModifyOptimisticHours;
+      sumOfHoursByRateType.current[rateType].pessimistic +=
+        numberToModifyPessimisticHours;
     } else if (actionType === "-") {
-      numberOfHours.current.optimistic -= numberToModifyOptimisticHours;
-      numberOfHours.current.pessimistic -= numberToModifyPessimisticHours;
+      sumOfHoursByRateType.current[rateType].optimistic -=
+        numberToModifyOptimisticHours;
+      sumOfHoursByRateType.current[rateType].pessimistic -=
+        numberToModifyPessimisticHours;
     }
   };
 
@@ -81,7 +100,7 @@ const ProjectCostCalculator = () => {
     <ProjectCostCalculatorContext.Provider
       value={{
         hourlyRate,
-        numberOfHours,
+        sumOfHoursByRateType,
         listOfnumbersToMultiplyTheHoursWith,
         finalMultiplier,
         sumOfTime,
