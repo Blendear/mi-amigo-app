@@ -7,7 +7,7 @@ import { useContext } from "react";
 import { ChooserProps } from "../types";
 
 // two words fully written, the rest are initials
-const OneTwoTFWCNCss = {
+const ChooserCss = {
   container: css({
     // gridRow: "1 / 3",
     // padding: "1rem",
@@ -45,5 +45,15 @@ export const Chooser = ({ userChoicesRef }: ChooserProps) => {
   //     ) A : Yes? show them, by repeating the 1. step
   //     ) B : No? continue
   // 5. Set the finalChoice to the chosen choice data object & Close the Chooser DialogModal
-  return <div>Chooser</div>;
+  return (
+    <div>
+      <div css={ChooserCss.container}>
+        {/* <BreadCrumbs /> */}
+
+        <button>Choose option</button>
+
+        {/* <DialogModal> */}
+      </div>
+    </div>
+  );
 };

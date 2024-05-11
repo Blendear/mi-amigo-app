@@ -6,7 +6,6 @@ import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { ProjectCostCalculatorContext } from "@/features/EventManager/SubApps/project-cost-calculator/context/ProjectCostCalculatorContext";
 import { BtnTutorialOpener } from "@/features/EventManager/Main/tutorial/components/BtnTutorialOpener";
 import { HourlyRate } from "@/features/EventManager/SubApps/project-cost-calculator/components/HourlyRate";
-import { ProjectGlobalAndSpecificAspects } from "@/features/EventManager/SubApps/project-cost-calculator/components/ProjectGlobalAndSpecificAspects";
 import { AdditionalTopicsToDiscuss } from "@/features/EventManager/SubApps/project-cost-calculator/components/AdditionalTopicsToDiscuss";
 import { Crunch } from "@/features/EventManager/SubApps/project-cost-calculator/components/Crunch";
 import { Payment } from "@/features/EventManager/SubApps/project-cost-calculator/components/Payment";
@@ -15,6 +14,7 @@ import { SumOfMoney } from "@/features/EventManager/SubApps/project-cost-calcula
 import { useRef } from "react";
 import dynamic from "next/dynamic";
 import { placeholderprojectsAvailable } from "@/features/EventManager/SubApps/project-cost-calculator/data/placeholderProjectsAvailable";
+import { ProjectDefaultCheckboxesAndFeatures } from "@/features/EventManager/SubApps/project-cost-calculator/components/ProjectDefaultCheckboxesAndFeatures";
 
 const ProjectCostCCss = {
   container: css({}),
@@ -122,7 +122,7 @@ const ProjectCostCalculator = () => {
 
         <HourlyRate />
 
-        <ProjectGlobalAndSpecificAspects />
+        <ProjectDefaultCheckboxesAndFeatures />
 
         <AdditionalTopicsToDiscuss />
 

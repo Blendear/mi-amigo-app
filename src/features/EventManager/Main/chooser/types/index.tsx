@@ -1,22 +1,26 @@
 export type Choice = {
   // Its a recursive way of creating a nested levels of of choices
-  // If the array is empty, it means that the choice is final
+  // FinalChoice is when there's no "choices" prop, yet there is "finalChoice" prop
   imagePath: string;
   name: string;
-  choices: Choice[];
+  choices?: Choice[];
+  finalChoiceContent?: FinalChoice;
 };
 
-export type UserChoicesRefType = {
+export type UserChoicesType = {
   choices: Choice[];
 
   // List of indexes, instead of a single one, because it can be 2+ levels of choices,
   // for example 3 choices when its  a chapter inside a chapter inside a main chapters list
   continuousChoicesIndexes: [];
 
-  //Actual data object
-  finalChoice: {};
+  // Actual data object
+  finalChoice: FinalChoice;
 };
 
+// is "any" the only option to allow any type of data as the FinalChoice?
+export type FinalChoice = any;
+
 export type ChooserProps = {
-  userChoicesRef: React.MutableRefObject<UserChoicesRefType>;
+  userChoicesRef: React.MutableRefObject<UserChoicesType>;
 };

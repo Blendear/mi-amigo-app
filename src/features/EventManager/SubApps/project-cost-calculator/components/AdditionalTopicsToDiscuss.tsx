@@ -30,7 +30,6 @@ export const AdditionalTopicsToDiscuss =
   ({}: AdditionalTopicsToDiscussProps) => {
     const {
       hourlyRate,
-      numberOfHours,
 
       sumOfTime,
     } = useContext(ProjectCostCalculatorContext);

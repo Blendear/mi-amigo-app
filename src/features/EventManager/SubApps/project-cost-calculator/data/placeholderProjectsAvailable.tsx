@@ -1,15 +1,26 @@
-export const placeholderprojectsAvailable = [
+import { ProjectVariantType } from "../types";
+
+export const placeholderprojectsAvailable: ProjectVariantType[] = [
   {
-    variantName: "Custom",
-    projects: [{ name: "New project", imagePath: "/images/aaa" }],
+    name: "Custom",
+    imagePath: "/images/111",
+    projects: [
+      { name: "New project", imagePath: "/images/aaa", calculationContent: {} },
+    ],
   },
   {
-    variantName: "Web App",
+    name: "Web App",
+    imagePath: "/images/222",
     projects: [
-      { name: "INFINITI App", imagePath: "/images/bbb" },
+      {
+        name: "INFINITI App",
+        imagePath: "/images/bbb",
+        calculationContent: {},
+      },
       {
         name: "Wrld App",
         imagePath: "/images/ccc",
+        calculationContent: {},
       },
     ],
   },
