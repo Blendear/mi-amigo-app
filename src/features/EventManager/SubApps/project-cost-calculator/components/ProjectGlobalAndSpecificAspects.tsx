@@ -4,7 +4,7 @@ import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
 import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { ProjectGlobalAndSpecificAspectsProps } from "../types";
-import { GlobalModifiers } from "./GlobalModifiers";
+import { DefaultCheckboxStatesSetters } from "./DefaultCheckboxStatesSetters";
 import { SpecificFeatures } from "./SpecificFeatures";
 
 // two words fully written, the rest are initials
@@ -30,7 +30,9 @@ export const ProjectGlobalAndSpecificAspects =
   ({}: ProjectGlobalAndSpecificAspectsProps) => {
     return (
       <section>
-        <GlobalModifiers />
+        {/* They set the default avalue sof the checkboxes, for example 
+        "isResponsibe" or "isTranslated" */}
+        <DefaultCheckboxStatesSetters />
 
         <SpecificFeatures />
       </section>

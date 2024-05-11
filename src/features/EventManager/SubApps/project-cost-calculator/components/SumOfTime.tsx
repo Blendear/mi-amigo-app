@@ -28,7 +28,7 @@ const SumOfTimeCss = {
 export const SumOfTime = ({}: SumOfTimeProps) => {
   const {
     sumOfHoursByRateType,
-    listOfnumbersToMultiplyTheHoursWith,
+    multipliersForAllFeaturesAsOne,
     finalMultiplier,
     sumOfTime,
   } = useContext(ProjectCostCalculatorContext);
@@ -40,7 +40,7 @@ export const SumOfTime = ({}: SumOfTimeProps) => {
 
   useEffect(() => {
     const newFinalMultiplier = Object.values(
-      listOfnumbersToMultiplyTheHoursWith.current
+      multipliersForAllFeaturesAsOne.current
     ).reduce((sum, currentNumber) => sum + currentNumber);
 
     finalMultiplier.current = newFinalMultiplier;
@@ -92,7 +92,7 @@ export const SumOfTime = ({}: SumOfTimeProps) => {
     setSum(newSumOfSums);
   }, [
     sumOfHoursByRateType,
-    listOfnumbersToMultiplyTheHoursWith,
+    multipliersForAllFeaturesAsOne,
     finalMultiplier,
     sumOfTime,
   ]);

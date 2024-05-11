@@ -3,10 +3,9 @@ import { css } from "@emotion/react";
 import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
 import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
-import { GlobalModifiersProps } from "../types";
 
 // two words fully written, the rest are initials
-const GlobalModifiersCss = {
+const DefaultCheckboxSSCss = {
   container: css({
     // gridRow: "1 / 3",
     // padding: "1rem",
@@ -24,6 +23,6 @@ const GlobalModifiersCss = {
   }),
 };
 
-export const GlobalModifiers = ({}: GlobalModifiersProps) => {
+export const DefaultCheckboxStatesSetters = () => {
   return <div>AComponent</div>;
 };

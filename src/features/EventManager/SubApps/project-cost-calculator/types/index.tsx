@@ -11,6 +11,13 @@ export type SumOfHoursByRateType = {
   creativeProblemsolving: OptimisticAndPessimisticValue;
 };
 
+export type ProjectVariantType = {
+  variantName: string;
+  projects: ProjectType[];
+};
+
+export type ProjectType = {};
+
 export type ProjectCostCalculatorContextType = {
   hourlyRate: React.MutableRefObject<{
     sprintCall: number;
@@ -18,9 +25,16 @@ export type ProjectCostCalculatorContextType = {
     creativeProblemsolving: number;
   }>;
 
+  projectsAvailable: React.MutableRefObject<ProjectVariantType[]>;
+
+  chosenProjectIdentifiers: React.MutableRefObject<{
+    variantIndex: number;
+    projectIndex: number;
+  }>;
+
   sumOfHoursByRateType: React.MutableRefObject<SumOfHoursByRateType>;
 
-  listOfnumbersToMultiplyTheHoursWith: React.MutableRefObject<{
+  multipliersForAllFeaturesAsOne: React.MutableRefObject<{
     [key: string]: number;
   }>;
 
