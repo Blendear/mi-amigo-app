@@ -14,7 +14,7 @@ import { SumOfTime } from "@/features/EventManager/SubApps/project-cost-calculat
 import { SumOfMoney } from "@/features/EventManager/SubApps/project-cost-calculator/components/SumOfMoney";
 import { useRef } from "react";
 import dynamic from "next/dynamic";
-import { placeholderprojectsAvailable } from "@/features/EventManager/SubApps/project-cost-calculator/data/placeholderprojectsAvailable";
+import { placeholderprojectsAvailable } from "@/features/EventManager/SubApps/project-cost-calculator/data/placeholderProjectsAvailable";
 
 const ProjectCostCCss = {
   container: css({}),
@@ -42,11 +42,6 @@ const ProjectCostCalculator = () => {
   // As "useRef", for a future possibility of getting the data from localStorage
   const projectsAvailable = useRef(placeholderprojectsAvailable);
 
-  const chosenProjectIdentifiers = useRef({
-    variantIndex: 0, // Like "webapp", "concept art", "3d model" etc.
-    projectIndex: 0, // Like (if "webapp" is chosen) "App A", "Feature for App B", App C, App D" etc.
-  });
-
   // Hours will be added/subtracted - whenever a cost position changes
   // For example, adding a new feature from the cost-area of 6-10 hours, will add 6 gours to the
   // numberOfOptimisticHours and 10 hours to the numberOfPessimisticHours, so that the sum shows
@@ -68,11 +63,9 @@ const ProjectCostCalculator = () => {
 
   // Specific chapters will modify specific key values - whenever a cost position changes
 
-  // They will multiply the SINGLE sum of hours of a feature if its "isResponsive", "isTranslated","isStylised" etc. is true
-  const multipliersForSpecificFeatures = useRef({
-    crunch: 0,
-    payment: 0,
-  });
+  // multipliersForSpecificFeatures - will be inside the "Feature" component,
+  // because the level of stylisation will affect the "stylisation" multiplier,
+  // while all the multipliers will at the end affect (multiply) the sum of hours
 
   // They will multiply the sum of all features (after summing their times)
   const multipliersForAllFeaturesAsOne = useRef({
@@ -116,7 +109,6 @@ const ProjectCostCalculator = () => {
       value={{
         hourlyRate,
         projectsAvailable,
-        chosenProjectIdentifiers,
         sumOfHoursByRateType,
         multipliersForAllFeaturesAsOne,
         finalMultiplier,

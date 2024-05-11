@@ -3,12 +3,11 @@ import { css } from "@emotion/react";
 import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
 import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
-import { CrunchProps } from "../types";
-import { useContext } from "react";
-import { ProjectCostCalculatorContext } from "../context/ProjectCostCalculatorContext";
+import { SpecificFeaturesProps } from "../types";
+import { useRef } from "react";
 
 // two words fully written, the rest are initials
-const OneTwoTFWCNCss = {
+const SpecificFeaturesCss = {
   container: css({
     // gridRow: "1 / 3",
     // padding: "1rem",
@@ -26,8 +25,13 @@ const OneTwoTFWCNCss = {
   }),
 };
 
-export const Crunch = ({}: CrunchProps) => {
-  const { hourlyRate, sumOfTime } = useContext(ProjectCostCalculatorContext);
+export const ListOfSpecificFeatures = ({}: SpecificFeaturesProps) => {
+  // They will multiply the SINGLE sum of hours of a feature if its "isResponsive", "isTranslated","isStylised" etc. is true
+  const multipliersForSpecificFeatures = useRef({
+    translation: 0,
+    responsiveness: 0,
+    stylisation: 0,
+  });
 
   return <div>AComponent</div>;
 };

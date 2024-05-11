@@ -16,7 +16,10 @@ export type ProjectVariantType = {
   projects: ProjectType[];
 };
 
-export type ProjectType = {};
+export type ProjectType = {
+  name: string;
+  imagePath: string;
+};
 
 export type ProjectCostCalculatorContextType = {
   hourlyRate: React.MutableRefObject<{
@@ -26,11 +29,6 @@ export type ProjectCostCalculatorContextType = {
   }>;
 
   projectsAvailable: React.MutableRefObject<ProjectVariantType[]>;
-
-  chosenProjectIdentifiers: React.MutableRefObject<{
-    variantIndex: number;
-    projectIndex: number;
-  }>;
 
   sumOfHoursByRateType: React.MutableRefObject<SumOfHoursByRateType>;
 
