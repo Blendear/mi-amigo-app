@@ -13,9 +13,9 @@ export const universalCss = {
     css({
       borderRadius: "1rem",
       border: "none",
-      backgroundColor: bgColor || `rgb(${colors.tertiaryLight})`,
-      color: textColor || `rgb(${colors.primaryLight})`,
-      filter: !active && `brightness(0.2)`,
+      backgroundColor: bgColor || `rgb(${colors.whiteLight})`,
+      color: textColor || `rgb(0,0,0)`,
+      filter: !active && `brightness(0.5) saturate(0)`,
 
       // "&:enabled": {
       //   "&:hover": {

@@ -19,44 +19,52 @@ export type ProjectVariantType = {
 };
 
 export type SpecificFeatureType = {
+  name: string;
   // userStory's will be written at first, during the cal with the client
   // The developer will then write the feature properties accordingly
   userStory: string;
 
-  featureBuildingBlocks: {
-    name: string;
-    // Used for explaining something about this block to the client, for example why it's
-    // so hard or event more precisely about what this block means etc.
-    developerComment: string;
-    // if true, it will makr the whole building block as "needs research before calculation will be possible"
-    needsResearchBeforeCalculationWillBePossible: boolean;
-    // For example buying stock images
-    thirdPartyCosts: number;
+  featureBuildingBlocks: BuildingBlockType[];
+};
 
-    // Funcitonality of button = logical
-    // Creating a pre-given design of button = logical
-    // Creating a handcrafted design of button = creative
-    timeRangesByVariant: {
-      logicalProblemsolving: TimeRangesVariantType;
-      creativeProblemsolving: TimeRangesVariantType;
-    };
+export type BuildingBlockType = {
+  name: string;
+  // Used for explaining something about this block to the dev or the client, for example why it's
+  // so hard or event more precisely about what this block means etc.
+  descriptionOrdeveloperComment: string;
+  // if true, it will makr the whole building block as "needs research before calculation will be possible"
+  needsResearchBeforeCalculationWillBePossible: boolean;
+  // For example buying stock images
+  thirdPartyCosts: number;
 
-    statesThatMultiplyTheTimeSum: StatesThatMultiplyTheTimeSumType;
+  // Funcitonality of button = logical
+  // Creating a pre-given design of button = logical
+  // Creating a handcrafted design of button = creative
+  timeRangesByVariant: {
+    logicalProblemsolving: TimeRangesVariantType;
+    creativeProblemsolving: TimeRangesVariantType;
+  };
 
-    copiesAmounts: {
-      "100%": number; // 3 same svg's
-      "75-99%": number; // -II- but each with different name and color
-      "50-74%": number; // -II- but each with different onHover animation
-    };
-  }[];
+  statesThatMultiplyTheTimeSum: StatesThatMultiplyTheTimeSumType;
+
+  copiesAmounts: {
+    "100%": number; // 3 same svg's
+    "75-99%": number; // -II- but each with different name and color
+    "50-74%": number; // -II- but each with different onHover animation
+  };
 };
 
 export type TimeRangesVariantType = {
-  timeRange: { optimistic: TimeRangeType; pessimistic: TimeRangeType };
+  timeRange: PredefinedOptimisticAndPessimisticValue;
 };
 
-// More than 480 minutes aka 4 hours = You should break it down into smaller parts
-export type TimeRangeType = "5-30" | "30-60" | "60-120" | "120-240" | "240-480";
+export type PredefinedOptimisticAndPessimisticValue =
+  // More than 480 minutes aka 4 hours = You should break it down into smaller parts
+  | { optimistic: 5; pessimistic: 30 }
+  | { optimistic: 30; pessimistic: 60 }
+  | { optimistic: 60; pessimistic: 120 }
+  | { optimistic: 120; pessimistic: 240 }
+  | { optimistic: 240; pessimistic: 480 };
 
 export type CalculationContentOfWebApp = {
   defaultStatesThatMultiplyTheTimeSum: // NOT the same type as "StatesThatMultiplyTheTimeSumType", since it also needs the possibleOptions prop to
@@ -117,6 +125,8 @@ export type StatesThatMultiplyTheTimeSumType = {
 export type ProjectType = {
   name: string;
   imagePath: string;
+  // If it's false, then the calculation data won't be pre-filled
+  isAPrebuildOne: boolean;
   // There will be other types added for concept art, 3d modelling etc.
   //
   // But all will have the 3 main props, defaultStatesThatMultiplyTheTimeSum,
@@ -134,6 +144,8 @@ export type ProjectCostCalculatorContextType = {
 
   projectsAvailable: React.MutableRefObject<ProjectVariantType[]>;
 
+  areDefaultCheckboxStatesSettersConfirmed: React.MutableRefObject<boolean>;
+
   sumOfHoursByRateType: React.MutableRefObject<SumOfHoursByRateType>;
 
   multipliersForAllFeaturesAsOne: React.MutableRefObject<{
@@ -148,11 +160,14 @@ export type ProjectCostCalculatorContextType = {
 
 export type ProjectDefaultCheckboxesAndFeaturesContextType = {
   userChoicesRef: React.MutableRefObject<UserChoicesType>;
+  isProjectAPrebuildOne: boolean;
 };
 
 export type DefaultStateProps = {
   stateName: string;
   radioValues: string[];
+  // Is "" when "isProjectAPrebuildOne" is false
+  defaultValue: string;
 };
 
 export type DefaultCheckboxStatesSettersContextType = {};
@@ -176,3 +191,18 @@ export type SumOfMoneyProps = {};
 export type SumOfTimeProps = {};
 
 export type AdditionalTopicsToDiscussProps = {};
+
+export type FeatureProps = {
+  feature: SpecificFeatureType;
+  featureIndex: number;
+};
+
+export type BuildingBlockProps = {
+  block: BuildingBlockType;
+  featureIndex: number;
+  blockIndex: number;
+};
+
+export type BuildingBlockContextType = {
+  buildingBlockStateBeforeSavingRef: React.MutableRefObject<BuildingBlockType>;
+};

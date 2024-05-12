@@ -42,6 +42,8 @@ const ProjectCostCalculator = () => {
   // As "useRef", for a future possibility of getting the data from localStorage
   const projectsAvailable = useRef(placeholderprojectsAvailable);
 
+  const areDefaultCheckboxStatesSettersConfirmed = useRef(false);
+
   // Hours will be added/subtracted - whenever a cost position changes
   // For example, adding a new feature from the cost-area of 6-10 hours, will add 6 gours to the
   // numberOfOptimisticHours and 10 hours to the numberOfPessimisticHours, so that the sum shows
@@ -109,6 +111,7 @@ const ProjectCostCalculator = () => {
       value={{
         hourlyRate,
         projectsAvailable,
+        areDefaultCheckboxStatesSettersConfirmed,
         sumOfHoursByRateType,
         multipliersForAllFeaturesAsOne,
         finalMultiplier,

@@ -5,7 +5,6 @@ import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universa
 import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { ProjectGlobalAndSpecificAspectsProps, ProjectType } from "../types";
 import { DefaultCheckboxStatesSetters } from "./DefaultCheckboxStatesSetters";
-import { ListOfSpecificFeatures } from "./Feature";
 import { useContext, useEffect, useMemo, useRef, useState } from "react";
 import { ProjectCostCalculatorContext } from "../context/ProjectCostCalculatorContext";
 import { Chooser } from "@/features/EventManager/Main/chooser/components/Chooser";
@@ -16,6 +15,7 @@ import {
 } from "@/features/EventManager/Main/chooser/types";
 import { placeholderprojectsAvailable } from "../data/placeholderProjectsAvailable";
 import { ProjectDefaultCheckboxesAndFeaturesContext } from "../context/ProjectDefaultCheckboxesAndFeatures";
+import { SpecificFeatures } from "./SpecificFeatures";
 
 // two words fully written, the rest are initials
 const ProjectGASACss = {
@@ -84,7 +84,11 @@ export const ProjectDefaultCheckboxesAndFeatures = () => {
 
   return (
     <ProjectDefaultCheckboxesAndFeaturesContext.Provider
-      value={{ userChoicesRef }}
+      value={{
+        userChoicesRef,
+        isProjectAPrebuildOne:
+          userChoicesRef.current.finalChoice.isAPrebuildOne,
+      }}
     >
       <section>
         <Chooser userChoicesRef={userChoicesRef} />
@@ -95,7 +99,7 @@ export const ProjectDefaultCheckboxesAndFeatures = () => {
                 "isResponsibe" or "isTranslated" */}
             <DefaultCheckboxStatesSetters />
 
-            <ListOfSpecificFeatures />
+            <SpecificFeatures />
           </>
         )}
       </section>

@@ -27,7 +27,11 @@ const DefaultStateCss = {
   }),
 };
 
-export const DefaultState = ({ stateName, radioValues }: DefaultStateProps) => {
+export const DefaultState = ({
+  stateName,
+  radioValues,
+  defaultValue,
+}: DefaultStateProps) => {
   const { userChoicesRef } = useContext(
     ProjectDefaultCheckboxesAndFeaturesContext
   );

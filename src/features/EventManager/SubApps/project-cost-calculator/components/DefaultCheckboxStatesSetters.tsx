@@ -7,6 +7,7 @@ import { useContext, useMemo, useRef, useState } from "react";
 import { DefaultState } from "./DefaultState";
 import { ProjectDefaultCheckboxesAndFeaturesContext } from "../context/ProjectDefaultCheckboxesAndFeatures";
 import { DefaultCheckboxStatesSettersContext } from "../context/DefaultCheckboxStatesSetters";
+import { ProjectCostCalculatorContext } from "../context/ProjectCostCalculatorContext";
 
 const defaultCheckboxSSCss = {
   container: css([
@@ -32,7 +33,11 @@ const defaultCheckboxSSCss = {
 };
 
 export const DefaultCheckboxStatesSetters = () => {
-  const { userChoicesRef } = useContext(
+  const { areDefaultCheckboxStatesSettersConfirmed } = useContext(
+    ProjectCostCalculatorContext
+  );
+
+  const { userChoicesRef, isProjectAPrebuildOne } = useContext(
     ProjectDefaultCheckboxesAndFeaturesContext
   );
 
@@ -50,14 +55,21 @@ export const DefaultCheckboxStatesSetters = () => {
           return (
             <DefaultState
               key={index}
-              stateName={state.value}
+              stateName={stateName}
               radioValues={state.possibleOptions}
+              defaultValue={isProjectAPrebuildOne ? state.value : ""}
             />
           );
         })}
 
         {/* Yup, it's always enabled */}
-        <button>Confirm default states</button>
+        <button
+          onClick={() => {
+            areDefaultCheckboxStatesSettersConfirmed.current = true;
+          }}
+        >
+          Confirm default states
+        </button>
       </div>
     </DefaultCheckboxStatesSettersContext.Provider>
   );
