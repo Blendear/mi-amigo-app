@@ -12,6 +12,7 @@ import { useRef } from "react";
 import { TitleBarWithTogglableContent } from "@/components/TitleBarWithTogglableContent";
 import { BuildingBlock } from "./BuildingBlock";
 import { IoMdAddCircleOutline } from "react-icons/io";
+import { RangesOfSums } from "./RangesOfSums";
 
 // two words fully written, the rest are initials
 const SpecificFeaturesCss = {
@@ -102,6 +103,30 @@ export const Feature = ({ feature, featureIndex }: FeatureProps) => {
           })}
         </div>
       </TitleBarWithTogglableContent>
+
+      <RangesOfSums
+        variant={{ resource: "time", resourceVariant: "min", isMainSum: false }}
+        logicalRangeOfSums={{
+          pessimistic: 5,
+          optimistic: 30,
+        }}
+        creativeRangeOfSums={{
+          pessimistic: 30,
+          optimistic: 60,
+        }}
+      />
+
+      <RangesOfSums
+        variant={{ resource: "money", isMainSum: false }}
+        logicalRangeOfSums={{
+          pessimistic: 5,
+          optimistic: 30,
+        }}
+        creativeRangeOfSums={{
+          pessimistic: 30,
+          optimistic: 60,
+        }}
+      />
     </div>
   );
 };

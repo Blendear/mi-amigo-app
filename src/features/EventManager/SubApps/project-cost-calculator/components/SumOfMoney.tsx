@@ -7,6 +7,7 @@ import { SumOfMoneyProps } from "../types";
 import { useContext, useEffect, useRef, useState } from "react";
 import { ProjectCostCalculatorContext } from "../context/ProjectCostCalculatorContext";
 import { sum } from "cypress/types/lodash";
+import { RangesOfSums } from "./RangesOfSums";
 
 const SumOfMoneyCss = {
   container: css({
@@ -61,14 +62,41 @@ export const SumOfMoney = ({}: SumOfMoneyProps) => {
   return (
     <section css={universalCss.container}>
       <h2>Sum of cost</h2>
-      <div>
+      {/* <div>
         {sum.optimistic} - {sum.pessimistic}
-      </div>
+      </div> */}
+      <RangesOfSums
+        variant={{ resource: "time", resourceVariant: "min", isMainSum: true }}
+        logicalRangeOfSums={{
+          pessimistic: 5,
+          optimistic: 30,
+        }}
+        creativeRangeOfSums={{
+          pessimistic: 30,
+          optimistic: 60,
+        }}
+      />
       <h2>Sum of actual money for the developer</h2>
-      <div>
+      {/* <div>
         {(sum.optimistic / VATDivider.current).toFixed(2)} -
         {(sum.pessimistic / VATDivider.current).toFixed(2)}
-      </div>
+      </div> */}
+      <RangesOfSums
+        variant={{
+          resource: "time",
+          resourceVariant: "min",
+          isMainSum: true,
+          showFinalSumOnly: true,
+        }}
+        logicalRangeOfSums={{
+          pessimistic: 5,
+          optimistic: 30,
+        }}
+        creativeRangeOfSums={{
+          pessimistic: 30,
+          optimistic: 60,
+        }}
+      />
     </section>
   );
 };

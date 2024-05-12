@@ -6,6 +6,7 @@ import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { SumOfHoursByRateType, SumOfTimeProps } from "../types";
 import { useContext, useEffect, useState } from "react";
 import { ProjectCostCalculatorContext } from "../context/ProjectCostCalculatorContext";
+import { RangesOfSums } from "./RangesOfSums";
 
 const SumOfTimeCss = {
   container: css({
@@ -100,9 +101,20 @@ export const SumOfTime = ({}: SumOfTimeProps) => {
   return (
     <section css={universalCss.container}>
       <h2>Sum of time (Hours)</h2>
-      <div>
+      {/* <div>
         {sum.optimistic.toFixed(2)} - {sum.pessimistic.toFixed(2)}
-      </div>
+      </div> */}
+      <RangesOfSums
+        variant={{ resource: "time", resourceVariant: "min", isMainSum: false }}
+        logicalRangeOfSums={{
+          pessimistic: 5,
+          optimistic: 30,
+        }}
+        creativeRangeOfSums={{
+          pessimistic: 30,
+          optimistic: 60,
+        }}
+      />
     </section>
   );
 };

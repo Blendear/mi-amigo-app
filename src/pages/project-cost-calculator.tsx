@@ -17,7 +17,7 @@ import { placeholderprojectsAvailable } from "@/features/EventManager/SubApps/pr
 import { ProjectDefaultCheckboxesAndFeatures } from "@/features/EventManager/SubApps/project-cost-calculator/components/ProjectDefaultCheckboxesAndFeatures";
 
 const ProjectCostCCss = {
-  container: css({}),
+  container: css({ padding: "0 0 15rem 0" }),
 };
 
 export const NavbarButtons = () => {
