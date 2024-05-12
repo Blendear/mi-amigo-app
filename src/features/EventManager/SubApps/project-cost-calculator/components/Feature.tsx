@@ -177,7 +177,6 @@ export const calculateFinalRangeOfSums = (
   currentFeature,
   hourlyRate: HourlyRateType
 ) => {
-  //
   const sumOfLogicalTime = {
     optimistic: 0,
     pessimistic: 0,
@@ -193,7 +192,17 @@ export const calculateFinalRangeOfSums = (
     pessimistic: 0,
   };
 
-  const sumOfMoney = {
+  const sumOfLogicalMoney = {
+    optimistic: 0,
+    pessimistic: 0,
+  };
+
+  const sumOfCreativeMoney = {
+    optimistic: 0,
+    pessimistic: 0,
+  };
+
+  const sumOfBothLogicalAndCreativeMoney = {
     optimistic: 0,
     pessimistic: 0,
   };
@@ -284,7 +293,7 @@ export const calculateFinalRangeOfSums = (
       sumOfCreativeTime.optimistic += parseInt(block.copiesAmounts["100%"]);
       sumOfCreativeTime.pessimistic += parseInt(block.copiesAmounts["100%"]);
     }
-    // // "75-99%" = any value > 0   ->   sum * 1.25
+    // "75-99%" = any value > 0   ->   sum * 1.25
     if (block.copiesAmounts["75-99%"] > 0) {
       sumOfLogicalTime.optimistic *=
         parseInt(block.copiesAmounts["75-99%"]) * 1.25;
@@ -295,7 +304,7 @@ export const calculateFinalRangeOfSums = (
       sumOfCreativeTime.pessimistic *=
         parseInt(block.copiesAmounts["75-99%"]) * 1.25;
     }
-    // // "50-74%" = any value > 0   ->    sum * 1.5
+    // "50-74%" = any value > 0   ->    sum * 1.5
     if (block.copiesAmounts["50-74%"] > 0) {
       sumOfLogicalTime.optimistic *=
         parseInt(block.copiesAmounts["50-74%"]) * 1.5;
@@ -308,28 +317,49 @@ export const calculateFinalRangeOfSums = (
     }
   });
 
-  // Count the sum of money by
+  // Count both sums of money by
   //     ) Dividng by 60 to get the hours
   //     ) Multiplying the hours by the hourly rate of the SPECIFIC TYPE of problemsolving
   //     ) Round (equalor higher) the result to the nearest integer
-  sumOfMoney.pessimistic = Math.ceil(
-    (sumOfLogicalTime.pessimistic / 60) * hourlyRate.logicalProblemsolving +
-      (sumOfCreativeTime.pessimistic / 60) * hourlyRate.creativeProblemsolving
+  sumOfLogicalMoney.pessimistic = Math.ceil(
+    (sumOfLogicalTime.pessimistic / 60) * hourlyRate.logicalProblemsolving
   );
-  sumOfMoney.optimistic = Math.ceil(
-    (sumOfLogicalTime.optimistic / 60) * hourlyRate.logicalProblemsolving +
-      (sumOfCreativeTime.optimistic / 60) * hourlyRate.creativeProblemsolving
+  sumOfLogicalMoney.optimistic = Math.ceil(
+    (sumOfLogicalTime.optimistic / 60) * hourlyRate.logicalProblemsolving
   );
 
-  // Add the third party costs
+  sumOfCreativeMoney.pessimistic = Math.ceil(
+    (sumOfCreativeTime.pessimistic / 60) * hourlyRate.creativeProblemsolving
+  );
+  sumOfCreativeMoney.optimistic = Math.ceil(
+    (sumOfCreativeTime.optimistic / 60) * hourlyRate.creativeProblemsolving
+  );
+
+  // Add the third party costs to the logical sum of money
   currentFeature.featureBuildingBlocks.forEach((block) => {
-    // TODO: Add inputs dedicated to third party costs
-    sumOfMoney.optimistic += block.thirdPartyCosts;
-    sumOfMoney.pessimistic += block.thirdPartyCosts;
+    // TODO: Add inputs dedicated to third party costs a
+    sumOfLogicalMoney.optimistic += block.thirdPartyCosts;
+    sumOfLogicalMoney.pessimistic += block.thirdPartyCosts;
   });
+
+  // Sum up times
+  sumOfBothLogicalAndCreativeTimes.pessimistic =
+    sumOfLogicalTime.pessimistic + sumOfCreativeTime.pessimistic;
+  sumOfBothLogicalAndCreativeTimes.optimistic =
+    sumOfLogicalTime.optimistic + sumOfCreativeTime.optimistic;
+
+  // Sum up money
+  sumOfBothLogicalAndCreativeMoney.pessimistic =
+    sumOfLogicalMoney.pessimistic + sumOfCreativeMoney.pessimistic;
+  sumOfBothLogicalAndCreativeMoney.optimistic =
+    sumOfLogicalMoney.optimistic + sumOfCreativeMoney.optimistic;
 
   return {
     sumOfLogicalTime,
-    sumOfMoney,
+    sumOfCreativeTime,
+    sumOfBothLogicalAndCreativeTimes,
+    sumOfLogicalMoney,
+    sumOfCreativeMoney,
+    sumOfBothLogicalAndCreativeMoney,
   };
 };

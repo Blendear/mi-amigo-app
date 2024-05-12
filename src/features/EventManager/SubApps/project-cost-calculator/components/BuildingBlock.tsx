@@ -129,6 +129,11 @@ export const BuildingBlock = ({
               <p>Research Needed</p>
             </button>
 
+            <NumberInputField
+              propName={"thirdPartyCosts"}
+              labelName={"thirdPartyCosts"}
+            />
+
             <DescriptionOrComment />
 
             {/* Select fields */}
@@ -268,13 +273,20 @@ export const NumberInputField = ({ propName, labelName }) => {
     useContext(BuildingBlockContext);
 
   const [value, setValue] = useState(
-    buildingBlockStateBeforeSavingRef.current.copiesAmounts[propName] || 0
+    propName === "thirdPartyCosts"
+      ? buildingBlockStateBeforeSavingRef.current[propName]
+      : buildingBlockStateBeforeSavingRef.current.copiesAmounts[propName]
   );
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
-    buildingBlockStateBeforeSavingRef.current.copiesAmounts[propName] =
-      e.target.value;
+
+    propName === "thirdPartyCosts"
+      ? (buildingBlockStateBeforeSavingRef.current[propName] = parseInt(
+          e.target.value
+        ))
+      : (buildingBlockStateBeforeSavingRef.current.copiesAmounts[propName] =
+          parseInt(e.target.value));
   };
 
   return (
