@@ -100,12 +100,12 @@ export const SumOfTime = ({}: SumOfTimeProps) => {
 
   return (
     <section css={universalCss.container}>
-      <h2>Sum of time (Hours)</h2>
+      <h2>Sum of time</h2>
       {/* <div>
         {sum.optimistic.toFixed(2)} - {sum.pessimistic.toFixed(2)}
       </div> */}
       <RangesOfSums
-        variant={{ resource: "time", resourceVariant: "min", isMainSum: false }}
+        variant={{ resource: "time", resourceVariant: "min", isMainSum: true }}
         logicalRangeOfSums={{
           pessimistic: 5,
           optimistic: 30,

@@ -55,16 +55,17 @@ export type BuildingBlockType = {
 };
 
 export type TimeRangesVariantType = {
-  timeRange: PredefinedOptimisticAndPessimisticValue;
+  timeRange: OptimisticAndPessimisticValue;
+  // timeRange: PredefinedOptimisticAndPessimisticValue;
 };
 
-export type PredefinedOptimisticAndPessimisticValue =
-  // More than 480 minutes aka 4 hours = You should break it down into smaller parts
-  | { optimistic: 5; pessimistic: 30 }
-  | { optimistic: 30; pessimistic: 60 }
-  | { optimistic: 60; pessimistic: 120 }
-  | { optimistic: 120; pessimistic: 240 }
-  | { optimistic: 240; pessimistic: 480 };
+// export type PredefinedOptimisticAndPessimisticValue =
+//   // More than 480 minutes aka 4 hours = You should break it down into smaller parts
+//   | { optimistic: 5; pessimistic: 30 }
+//   | { optimistic: 30; pessimistic: 60 }
+//   | { optimistic: 60; pessimistic: 120 }
+//   | { optimistic: 120; pessimistic: 240 }
+//   | { optimistic: 240; pessimistic: 480 };
 
 export type CalculationContentOfWebApp = {
   defaultStatesThatMultiplyTheTimeSum: // NOT the same type as "StatesThatMultiplyTheTimeSumType", since it also needs the possibleOptions prop to
@@ -136,11 +137,7 @@ export type ProjectType = {
 };
 
 export type ProjectCostCalculatorContextType = {
-  hourlyRate: React.MutableRefObject<{
-    sprintCall: number;
-    logicalProblemsolving: number;
-    creativeProblemsolving: number;
-  }>;
+  hourlyRate: React.MutableRefObject<HourlyRateType>;
 
   projectsAvailable: React.MutableRefObject<ProjectVariantType[]>;
 
@@ -156,6 +153,12 @@ export type ProjectCostCalculatorContextType = {
   sumOfTime: React.MutableRefObject<OptimisticAndPessimisticValue>;
   sumOfMoney: React.MutableRefObject<OptimisticAndPessimisticValue>;
   updateHoursNumber;
+};
+
+export type HourlyRateType = {
+  sprintCall: number;
+  logicalProblemsolving: number;
+  creativeProblemsolving: number;
 };
 
 export type ProjectDefaultCheckboxesAndFeaturesContextType = {

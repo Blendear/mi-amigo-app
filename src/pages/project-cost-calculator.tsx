@@ -15,6 +15,7 @@ import { useRef } from "react";
 import dynamic from "next/dynamic";
 import { placeholderprojectsAvailable } from "@/features/EventManager/SubApps/project-cost-calculator/data/placeholderProjectsAvailable";
 import { ProjectDefaultCheckboxesAndFeatures } from "@/features/EventManager/SubApps/project-cost-calculator/components/ProjectDefaultCheckboxesAndFeatures";
+import { HourlyRateType } from "@/features/EventManager/SubApps/project-cost-calculator/types";
 
 const ProjectCostCCss = {
   container: css({ padding: "0 0 15rem 0" }),
@@ -33,7 +34,7 @@ const ProjectCostCalculator = () => {
   // and the number to multiply the hours with. The sum of time is then passed to the SumOfTime
   // and multiplied by the hourly rate to get the numeric content of SumOfMoney.
 
-  const hourlyRate = useRef({
+  const hourlyRate = useRef<HourlyRateType>({
     sprintCall: 30,
     logicalProblemsolving: 60,
     creativeProblemsolving: 90,

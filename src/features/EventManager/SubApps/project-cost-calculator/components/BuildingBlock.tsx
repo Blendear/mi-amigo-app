@@ -228,6 +228,20 @@ export const SelectField = ({ propName, labelName, availableOptions }) => {
     useContext(BuildingBlockContext);
 
   const onChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    // Logical and creative problemsolving have are stored in a different prop than the statesThatMultiplyTheTimeSum
+    if (
+      propName === "logicalProblemsolving" ||
+      propName === "creativeProblemsolving"
+    ) {
+      buildingBlockStateBeforeSavingRef.current.timeRangesByVariant[
+        propName
+      ].timeRange = {
+        // Parsing is necessary since it's a "string-string" value
+        optimistic: parseInt(e.target.value.split("-")[0]),
+        pessimistic: parseInt(e.target.value.split("-")[1]),
+      };
+    }
+
     buildingBlockStateBeforeSavingRef.current.statesThatMultiplyTheTimeSum[
       propName
     ] = e.target.value;
