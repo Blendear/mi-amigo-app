@@ -219,7 +219,8 @@ export const calculateFinalRangeOfSums = (
     sumOfCreativeTime.pessimistic +=
       block.timeRangesByVariant.creativeProblemsolving.timeRange.pessimistic;
 
-    // TODO: Check if the times added/multiplied are legit
+    // TODO: Check if the values oftimes added/multiplied are legit
+    // TODO: Check if the calculations are correct in the end
 
     // "translationAutomatically" = "yes"   ->   + 5 minutes
     if (block.statesThatMultiplyTheTimeSum.translationAutomatically === "yes") {
@@ -317,22 +318,28 @@ export const calculateFinalRangeOfSums = (
     }
   });
 
+  // Format the sums of times into hours (keep the decimal part)
+  sumOfLogicalTime.optimistic = sumOfLogicalTime.optimistic / 60;
+  sumOfLogicalTime.pessimistic = sumOfLogicalTime.pessimistic / 60;
+
+  sumOfCreativeTime.optimistic = sumOfCreativeTime.optimistic / 60;
+  sumOfCreativeTime.pessimistic = sumOfCreativeTime.pessimistic / 60;
+
   // Count both sums of money by
-  //     ) Dividng by 60 to get the hours
   //     ) Multiplying the hours by the hourly rate of the SPECIFIC TYPE of problemsolving
   //     ) Round (equalor higher) the result to the nearest integer
   sumOfLogicalMoney.pessimistic = Math.ceil(
-    (sumOfLogicalTime.pessimistic / 60) * hourlyRate.logicalProblemsolving
+    sumOfLogicalTime.pessimistic * hourlyRate.logicalProblemsolving
   );
   sumOfLogicalMoney.optimistic = Math.ceil(
-    (sumOfLogicalTime.optimistic / 60) * hourlyRate.logicalProblemsolving
+    sumOfLogicalTime.optimistic * hourlyRate.logicalProblemsolving
   );
 
   sumOfCreativeMoney.pessimistic = Math.ceil(
-    (sumOfCreativeTime.pessimistic / 60) * hourlyRate.creativeProblemsolving
+    sumOfCreativeTime.pessimistic * hourlyRate.creativeProblemsolving
   );
   sumOfCreativeMoney.optimistic = Math.ceil(
-    (sumOfCreativeTime.optimistic / 60) * hourlyRate.creativeProblemsolving
+    sumOfCreativeTime.optimistic * hourlyRate.creativeProblemsolving
   );
 
   // Add the third party costs to the logical sum of money
@@ -340,7 +347,7 @@ export const calculateFinalRangeOfSums = (
     // TODO: Add inputs dedicated to third party costs a
     sumOfLogicalMoney.optimistic += block.thirdPartyCosts;
     sumOfLogicalMoney.pessimistic += block.thirdPartyCosts;
-  });
+  }); //
 
   // Sum up times
   sumOfBothLogicalAndCreativeTimes.pessimistic =
