@@ -3,10 +3,15 @@ import { css } from "@emotion/react";
 import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
 import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
-import { FeatureProps, SpecificFeaturesProps } from "../types";
+import {
+  BuildingBlockType,
+  FeatureProps,
+  SpecificFeaturesProps,
+} from "../types";
 import { useRef } from "react";
 import { TitleBarWithTogglableContent } from "@/components/TitleBarWithTogglableContent";
 import { BuildingBlock } from "./BuildingBlock";
+import { IoMdAddCircleOutline } from "react-icons/io";
 
 // two words fully written, the rest are initials
 const SpecificFeaturesCss = {
@@ -27,6 +32,35 @@ const SpecificFeaturesCss = {
   }),
 };
 
+const placeholderBuildingBlock: BuildingBlockType = {
+  name: "New Building Block",
+  descriptionOrdeveloperComment: "New Building Block",
+  needsResearchBeforeCalculationWillBePossible: false,
+  thirdPartyCosts: 0,
+  timeRangesByVariant: {
+    logicalProblemsolving: {
+      timeRange: { optimistic: 5, pessimistic: 30 },
+    },
+    creativeProblemsolving: {
+      timeRange: { optimistic: 5, pessimistic: 30 },
+    },
+  },
+  statesThatMultiplyTheTimeSum: {
+    translationAutomatically: "no",
+    responsiveForBrowsers: "all",
+    responsiveForScreenSizes: "3",
+    responsiveForDisabilities: "no",
+    stylisationDesign: "design basic",
+    stylisationAnimationAmountOfStates: "2",
+    stylisationAnimationAmountOfComplexStates: "1",
+  },
+  copiesAmounts: {
+    "100%": 1,
+    "75-99%": 0,
+    "50-74%": 2,
+  },
+};
+
 export const Feature = ({ feature, featureIndex }: FeatureProps) => {
   // They will multiply the SINGLE sum of hours of a feature if its "isResponsive", "isTranslated","isStylised" etc. is true
   const multipliersForSpecificFeatures = useRef({
@@ -34,6 +68,12 @@ export const Feature = ({ feature, featureIndex }: FeatureProps) => {
     responsiveness: 0,
     stylisation: 0,
   });
+
+  const addNewBuildingBlock = () => {
+    feature.featureBuildingBlocks.push(placeholderBuildingBlock);
+
+    console.log("feature.featureBuildingBlocks", feature.featureBuildingBlocks);
+  };
 
   return (
     <div css={universalCss.container}>
@@ -44,20 +84,22 @@ export const Feature = ({ feature, featureIndex }: FeatureProps) => {
           </TitleBarWithTogglableContent>
         </div>
         <div css={universalCss.container}>
-          <TitleBarWithTogglableContent
-            titleBarContent={<h4>Building Blocks</h4>}
-          >
-            {feature.featureBuildingBlocks.map((block, index) => {
-              return (
-                <BuildingBlock
-                  key={index}
-                  block={block}
-                  featureIndex={featureIndex}
-                  blockIndex={index}
-                />
-              );
-            })}
-          </TitleBarWithTogglableContent>
+          <div>
+            <h4>Building Blocks</h4>
+            <button onClick={addNewBuildingBlock}>
+              <IoMdAddCircleOutline />
+            </button>
+          </div>
+          {feature.featureBuildingBlocks.map((block, index) => {
+            return (
+              <BuildingBlock
+                key={index}
+                block={block}
+                featureIndex={featureIndex}
+                blockIndex={index}
+              />
+            );
+          })}
         </div>
       </TitleBarWithTogglableContent>
     </div>

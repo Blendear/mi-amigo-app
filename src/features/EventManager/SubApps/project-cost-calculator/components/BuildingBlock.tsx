@@ -65,6 +65,50 @@ export const BuildingBlock = ({
       !isResearchNeeded;
   };
 
+  const deleteBlock = () => {
+    console.log(
+      "before dleete",
+      userChoicesRef.current.finalChoice.calculationContent.specificFeatures[
+        featureIndex
+      ]
+    );
+
+    userChoicesRef.current.finalChoice.calculationContent.specificFeatures[
+      featureIndex
+    ].featureBuildingBlocks =
+      userChoicesRef.current.finalChoice.calculationContent.specificFeatures[
+        featureIndex
+      ].featureBuildingBlocks.filter((block, index) => index !== blockIndex);
+
+    console.log(
+      "after dleete",
+      userChoicesRef.current.finalChoice.calculationContent.specificFeatures[
+        featureIndex
+      ]
+    );
+  };
+
+  const saveBlock = () => {
+    console.log(
+      "before save",
+      userChoicesRef.current.finalChoice.calculationContent.specificFeatures[
+        featureIndex
+      ].featureBuildingBlocks[blockIndex]
+    );
+
+    userChoicesRef.current.finalChoice.calculationContent.specificFeatures[
+      featureIndex
+    ].featureBuildingBlocks[blockIndex] =
+      buildingBlockStateBeforeSavingRef.current;
+
+    console.log(
+      "after save",
+      userChoicesRef.current.finalChoice.calculationContent.specificFeatures[
+        featureIndex
+      ].featureBuildingBlocks[blockIndex]
+    );
+  };
+
   return (
     <BuildingBlockContext.Provider
       value={{ buildingBlockStateBeforeSavingRef }}
@@ -133,6 +177,22 @@ export const BuildingBlock = ({
               );
             })}
           </div>
+
+          {/* Input fields */}
+          <h6>Copies amounts</h6>
+          <div>___________</div>
+          <NumberInputField propName={"100%"} labelName={"100%"} />
+          <NumberInputField propName={"75-99%"} labelName={"75-99%"} />
+          <NumberInputField propName={"50-74%"} labelName={"50-74%"} />
+
+          <div>
+            <button css={universalCss.button(true)} onClick={deleteBlock}>
+              Delete Block
+            </button>
+            <button css={universalCss.button(true)} onClick={saveBlock}>
+              Save Block
+            </button>
+          </div>
         </TitleBarWithTogglableContent>
       </div>
     </BuildingBlockContext.Provider>
@@ -185,6 +245,28 @@ export const SelectField = ({ propName, labelName, availableOptions }) => {
           );
         })}
       </select>
+    </div>
+  );
+};
+
+export const NumberInputField = ({ propName, labelName }) => {
+  const { buildingBlockStateBeforeSavingRef } =
+    useContext(BuildingBlockContext);
+
+  const [value, setValue] = useState(
+    buildingBlockStateBeforeSavingRef.current.copiesAmounts[propName] || 0
+  );
+
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(e.target.value);
+    buildingBlockStateBeforeSavingRef.current.copiesAmounts[propName] =
+      e.target.value;
+  };
+
+  return (
+    <div>
+      <label>{labelName}</label>
+      <input type="number" onChange={onChange} value={value} />
     </div>
   );
 };

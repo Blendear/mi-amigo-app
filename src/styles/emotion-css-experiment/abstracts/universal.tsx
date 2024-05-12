@@ -11,6 +11,7 @@ export const universalCss = {
     bgColor?: RGBColorString
   ) =>
     css({
+      padding: "5px 10px",
       borderRadius: "1rem",
       border: "none",
       backgroundColor: bgColor || `rgb(${colors.whiteLight})`,
