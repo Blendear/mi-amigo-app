@@ -50,7 +50,7 @@ export const RangesOfSums = ({
             <div css={universalCss.wrapperWithCenteredSvg("30px", "80%")}>
               <GiBrain />
             </div>
-            <div>{`${logicalRangeOfSums.pessimistic}-${logicalRangeOfSums.optimistic}`}</div>
+            <div>{`${logicalRangeOfSums.optimistic}-${logicalRangeOfSums.pessimistic}`}</div>
           </>
         )}
       </div>
@@ -61,7 +61,7 @@ export const RangesOfSums = ({
             <div css={universalCss.wrapperWithCenteredSvg("30px", "80%")}>
               <IoSparkles />
             </div>
-            <div>{`${creativeRangeOfSums.pessimistic}-${creativeRangeOfSums.optimistic}`}</div>
+            <div>{`${creativeRangeOfSums.optimistic}-${creativeRangeOfSums.pessimistic}`}</div>
           </>
         )}{" "}
       </div>
@@ -71,9 +71,9 @@ export const RangesOfSums = ({
           <FaEquals />
         </div>
         <div>
-          {`${
+          {`${creativeRangeOfSums.optimistic + logicalRangeOfSums.optimistic}-${
             creativeRangeOfSums.pessimistic + logicalRangeOfSums.pessimistic
-          }-${creativeRangeOfSums.optimistic + logicalRangeOfSums.optimistic}`}
+          }`}
         </div>
         <p css={{ margin: "0 0 0 3px" }}>
           {variant.resource === "time" ? variant.resourceVariant : "$"}

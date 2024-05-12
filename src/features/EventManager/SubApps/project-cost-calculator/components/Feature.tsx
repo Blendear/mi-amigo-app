@@ -126,48 +126,51 @@ export const Ranges = ({ featureIndex }) => {
     ProjectDefaultCheckboxesAndFeaturesContext
   );
 
-  const [currentFeature, setFeature] = useState<SpecificFeatureType>(
-    userChoicesRef.current.finalChoice.calculationContent.specificFeatures[
-      featureIndex
-    ]
+  // const [currentFeature, setFeature] = useState<SpecificFeatureType>(
+  //   userChoicesRef.current.finalChoice.calculationContent.specificFeatures[
+  //     featureIndex
+  //   ]
+  // );
+
+  const [featuresRangesOfSums, setFeaturesRangesOfSums] = useState(
+    calculateFinalRangeOfSums(
+      userChoicesRef.current.finalChoice.calculationContent.specificFeatures[
+        featureIndex
+      ],
+      hourlyRate.current
+    )
   );
 
   useEffect(() => {
-    setFeature(
-      userChoicesRef.current.finalChoice.calculationContent.specificFeatures[
-        featureIndex
-      ]
+    setFeaturesRangesOfSums(
+      calculateFinalRangeOfSums(
+        userChoicesRef.current.finalChoice.calculationContent.specificFeatures[
+          featureIndex
+        ],
+        hourlyRate.current
+      )
     );
-  }, [userChoicesRef, featureIndex]);
+    console.log("featuresRangesOfSums", featuresRangesOfSums);
+    // console.log("featuresRangesOfSums", featuresRangesOfSums);
+    // setFeature(
+    //   userChoicesRef.current.finalChoice.calculationContent.specificFeatures[
+    //     featureIndex
+    //   ]
+    // );
+  }, [featureIndex, hourlyRate, userChoicesRef]);
 
-  console.log(
-    "calculateFinalRangeOfSums()",
-    calculateFinalRangeOfSums(currentFeature, hourlyRate.current)
-  );
   return (
     <>
       <RangesOfSums
         variant={{ resource: "time", resourceVariant: "min", isMainSum: false }}
-        logicalRangeOfSums={{
-          pessimistic: 5,
-          optimistic: 30,
-        }}
-        creativeRangeOfSums={{
-          pessimistic: 30,
-          optimistic: 60,
-        }}
+        logicalRangeOfSums={featuresRangesOfSums.sumOfLogicalTime}
+        creativeRangeOfSums={featuresRangesOfSums.sumOfCreativeTime}
       />
 
       <RangesOfSums
         variant={{ resource: "money", isMainSum: false }}
-        logicalRangeOfSums={{
-          pessimistic: 5,
-          optimistic: 30,
-        }}
-        creativeRangeOfSums={{
-          pessimistic: 30,
-          optimistic: 60,
-        }}
+        logicalRangeOfSums={featuresRangesOfSums.sumOfLogicalMoney}
+        creativeRangeOfSums={featuresRangesOfSums.sumOfCreativeMoney}
       />
     </>
   );
@@ -318,12 +321,20 @@ export const calculateFinalRangeOfSums = (
     }
   });
 
-  // Format the sums of times into hours (keep the decimal part)
-  sumOfLogicalTime.optimistic = sumOfLogicalTime.optimistic / 60;
-  sumOfLogicalTime.pessimistic = sumOfLogicalTime.pessimistic / 60;
+  // Format the sums of times into hours (keep only 2 decimal places)
+  sumOfLogicalTime.optimistic = parseFloat(
+    (sumOfLogicalTime.optimistic / 60).toFixed(2)
+  );
+  sumOfLogicalTime.pessimistic = parseFloat(
+    (sumOfLogicalTime.pessimistic / 60).toFixed(2)
+  );
 
-  sumOfCreativeTime.optimistic = sumOfCreativeTime.optimistic / 60;
-  sumOfCreativeTime.pessimistic = sumOfCreativeTime.pessimistic / 60;
+  sumOfCreativeTime.optimistic = parseFloat(
+    (sumOfCreativeTime.optimistic / 60).toFixed(2)
+  );
+  sumOfCreativeTime.pessimistic = parseFloat(
+    (sumOfCreativeTime.pessimistic / 60).toFixed(2)
+  );
 
   // Count both sums of money by
   //     ) Multiplying the hours by the hourly rate of the SPECIFIC TYPE of problemsolving
