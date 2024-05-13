@@ -10,7 +10,7 @@ import {
   SpecificFeatureType,
   SpecificFeaturesProps,
 } from "../types";
-import { useContext, useEffect, useRef, useState } from "react";
+import { memo, useContext, useEffect, useRef, useState } from "react";
 import { TitleBarWithTogglableContent } from "@/components/TitleBarWithTogglableContent";
 import { BuildingBlock } from "./BuildingBlock";
 import { IoMdAddCircleOutline } from "react-icons/io";
@@ -18,24 +18,10 @@ import { RangesOfSums } from "./RangesOfSums";
 import { ProjectDefaultCheckboxesAndFeaturesContext } from "../context/ProjectDefaultCheckboxesAndFeatures";
 import { parse } from "path";
 import { ProjectCostCalculatorContext } from "../context/ProjectCostCalculatorContext";
+import { FeatureContext } from "../context/FeatureContext";
 
-// two words fully written, the rest are initials
-const SpecificFeaturesCss = {
-  container: css({
-    // gridRow: "1 / 3",
-    // padding: "1rem",
-    // width: "100%",
-    // boxSizing: "border-box",
-    // aspectRatio: "2/1",
-    // backgroundColor: `rgb(${colors.primaryLight})`,
-    // display: "grid",
-    // gridTemplateRows: "1fr",
-    // justifyItems: "center",
-    // fontSize: "clamp(1rem, 4vw, 2rem)",
-    // "& div:nth-child(1)": {
-    //   backgroundColor: "yellow",
-    // },
-  }),
+const featuresCss = {
+  container: css({}),
 };
 
 const placeholderBuildingBlock: BuildingBlockType = {
@@ -68,54 +54,50 @@ const placeholderBuildingBlock: BuildingBlockType = {
 };
 
 export const Feature = ({ feature, featureIndex }: FeatureProps) => {
-  // They will multiply the SINGLE sum of hours of a feature if its "isResponsive", "isTranslated","isStylised" etc. is true
-
-  const { userChoicesRef } = useContext(
-    ProjectDefaultCheckboxesAndFeaturesContext
-  );
-
-  const multipliersForSpecificFeatures = useRef({
-    translation: 0,
-    responsiveness: 0,
-    stylisation: 0,
-  });
+  // Triggered on "save" of builing block.  Otherwise the Freature would be rerendered on every change of the building block
+  // which is a l o t, since it's like a form with dozens of inputs
+  const [updateOfFeature, forceUpdateOfFeature] = useState(false);
 
   const addNewBuildingBlock = () => {
     feature.featureBuildingBlocks.push(placeholderBuildingBlock);
-
+    forceUpdateOfFeature((prev) => !prev);
     console.log("feature.featureBuildingBlocks", feature.featureBuildingBlocks);
   };
 
   return (
-    <div css={universalCss.container}>
-      <TitleBarWithTogglableContent titleBarContent={<h3>{feature.name}</h3>}>
-        <div css={universalCss.container}>
-          <TitleBarWithTogglableContent titleBarContent={<h4>User Story</h4>}>
-            {feature.userStory}
-          </TitleBarWithTogglableContent>
-        </div>
-        <div css={universalCss.container}>
-          <div>
-            <h4>Building Blocks</h4>
-            <button onClick={addNewBuildingBlock}>
-              <IoMdAddCircleOutline />
-            </button>
+    <FeatureContext.Provider value={{ updateOfFeature, forceUpdateOfFeature }}>
+      <div css={universalCss.container}>
+        <TitleBarWithTogglableContent titleBarContent={<h3>{feature.name}</h3>}>
+          <div css={universalCss.container}>
+            <TitleBarWithTogglableContent titleBarContent={<h4>User Story</h4>}>
+              {feature.userStory}
+            </TitleBarWithTogglableContent>
           </div>
-          {feature.featureBuildingBlocks.map((block, index) => {
-            return (
-              <BuildingBlock
-                key={index}
-                block={block}
-                featureIndex={featureIndex}
-                blockIndex={index}
-              />
-            );
-          })}
-        </div>
-      </TitleBarWithTogglableContent>
 
-      <Ranges featureIndex={featureIndex} />
-    </div>
+          <div css={universalCss.container}>
+            <div>
+              <h4>Building Blocks</h4>
+              <button onClick={addNewBuildingBlock}>
+                <IoMdAddCircleOutline />
+              </button>
+            </div>
+
+            {feature.featureBuildingBlocks.map((block, index) => {
+              return (
+                <BuildingBlock
+                  key={index}
+                  block={block}
+                  featureIndex={featureIndex}
+                  blockIndex={index}
+                />
+              );
+            })}
+          </div>
+        </TitleBarWithTogglableContent>
+
+        <Ranges featureIndex={featureIndex} />
+      </div>
+    </FeatureContext.Provider>
   );
 };
 
@@ -126,11 +108,7 @@ export const Ranges = ({ featureIndex }) => {
     ProjectDefaultCheckboxesAndFeaturesContext
   );
 
-  // const [currentFeature, setFeature] = useState<SpecificFeatureType>(
-  //   userChoicesRef.current.finalChoice.calculationContent.specificFeatures[
-  //     featureIndex
-  //   ]
-  // );
+  const { updateOfFeature } = useContext(FeatureContext);
 
   const [featuresRangesOfSums, setFeaturesRangesOfSums] = useState(
     calculateFinalRangeOfSums(
@@ -150,14 +128,7 @@ export const Ranges = ({ featureIndex }) => {
         hourlyRate.current
       )
     );
-    console.log("featuresRangesOfSums", featuresRangesOfSums);
-    // console.log("featuresRangesOfSums", featuresRangesOfSums);
-    // setFeature(
-    //   userChoicesRef.current.finalChoice.calculationContent.specificFeatures[
-    //     featureIndex
-    //   ]
-    // );
-  }, [featureIndex, hourlyRate, userChoicesRef]);
+  }, [featureIndex, hourlyRate, userChoicesRef, updateOfFeature]);
 
   return (
     <>

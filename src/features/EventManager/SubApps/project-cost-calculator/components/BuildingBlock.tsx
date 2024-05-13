@@ -10,6 +10,7 @@ import { TitleBarWithTogglableContent } from "@/components/TitleBarWithTogglable
 import { FaRegBookmark } from "react-icons/fa";
 import { ProjectDefaultCheckboxesAndFeaturesContext } from "../context/ProjectDefaultCheckboxesAndFeatures";
 import { BuildingBlockContext } from "../context/BuildingBlockContext";
+import { FeatureContext } from "../context/FeatureContext";
 
 // two words fully written, the rest are initials
 const buildingBlockCss = {
@@ -47,6 +48,8 @@ export const BuildingBlock = ({
   const { userChoicesRef } = useContext(
     ProjectDefaultCheckboxesAndFeaturesContext
   );
+
+  const { forceUpdateOfFeature } = useContext(FeatureContext);
 
   const selectInputsForDefaultStatesThatMultiplyTheTimeSum =
     userChoicesRef.current.finalChoice.calculationContent
@@ -86,6 +89,8 @@ export const BuildingBlock = ({
         featureIndex
       ]
     );
+
+    forceUpdateOfFeature((prev) => !prev);
   };
 
   const saveBlock = () => {
@@ -107,6 +112,8 @@ export const BuildingBlock = ({
         featureIndex
       ].featureBuildingBlocks[blockIndex]
     );
+
+    forceUpdateOfFeature((prev) => !prev);
   };
 
   return (
