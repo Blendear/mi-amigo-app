@@ -4,13 +4,15 @@ import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
 import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { BuildingBlockProps, BuildingBlockType, PaymentProps } from "../types";
-import { useContext, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { ProjectCostCalculatorContext } from "../context/ProjectCostCalculatorContext";
 import { TitleBarWithTogglableContent } from "@/components/TitleBarWithTogglableContent";
 import { FaRegBookmark } from "react-icons/fa";
 import { ProjectDefaultCheckboxesAndFeaturesContext } from "../context/ProjectDefaultCheckboxesAndFeatures";
 import { BuildingBlockContext } from "../context/BuildingBlockContext";
 import { FeatureContext } from "../context/FeatureContext";
+import { useAppDispatch, useAppSelector } from "@/store/redux/hooks";
+import { fRFeaturesRangesSliceActions } from "@/store/redux/store-redux";
 
 // two words fully written, the rest are initials
 const buildingBlockCss = {
@@ -41,6 +43,10 @@ export const BuildingBlock = ({
   featureIndex,
   blockIndex,
 }: BuildingBlockProps) => {
+  const dispatch = useAppDispatch();
+
+  console.log("BuildingBlock rerendered");
+
   const [isResearchNeeded, setIsResearchNeeded] = useState(
     block.needsResearchBeforeCalculationWillBePossible
   );
@@ -48,8 +54,6 @@ export const BuildingBlock = ({
   const { userChoicesRef } = useContext(
     ProjectDefaultCheckboxesAndFeaturesContext
   );
-
-  const { forceUpdateOfFeature } = useContext(FeatureContext);
 
   const selectInputsForDefaultStatesThatMultiplyTheTimeSum =
     userChoicesRef.current.finalChoice.calculationContent
@@ -69,13 +73,6 @@ export const BuildingBlock = ({
   };
 
   const deleteBlock = () => {
-    console.log(
-      "before dleete",
-      userChoicesRef.current.finalChoice.calculationContent.specificFeatures[
-        featureIndex
-      ]
-    );
-
     userChoicesRef.current.finalChoice.calculationContent.specificFeatures[
       featureIndex
     ].featureBuildingBlocks =
@@ -83,37 +80,16 @@ export const BuildingBlock = ({
         featureIndex
       ].featureBuildingBlocks.filter((block, index) => index !== blockIndex);
 
-    console.log(
-      "after dleete",
-      userChoicesRef.current.finalChoice.calculationContent.specificFeatures[
-        featureIndex
-      ]
-    );
-
-    forceUpdateOfFeature((prev) => !prev);
+    dispatch(fRFeaturesRangesSliceActions.forceRerender());
   };
 
   const saveBlock = () => {
-    console.log(
-      "before save",
-      userChoicesRef.current.finalChoice.calculationContent.specificFeatures[
-        featureIndex
-      ].featureBuildingBlocks[blockIndex]
-    );
-
     userChoicesRef.current.finalChoice.calculationContent.specificFeatures[
       featureIndex
     ].featureBuildingBlocks[blockIndex] =
       buildingBlockStateBeforeSavingRef.current;
 
-    console.log(
-      "after save",
-      userChoicesRef.current.finalChoice.calculationContent.specificFeatures[
-        featureIndex
-      ].featureBuildingBlocks[blockIndex]
-    );
-
-    forceUpdateOfFeature((prev) => !prev);
+    dispatch(fRFeaturesRangesSliceActions.forceRerender());
   };
 
   return (

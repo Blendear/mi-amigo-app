@@ -19,96 +19,37 @@ import { ProjectDefaultCheckboxesAndFeaturesContext } from "../context/ProjectDe
 import { parse } from "path";
 import { ProjectCostCalculatorContext } from "../context/ProjectCostCalculatorContext";
 import { FeatureContext } from "../context/FeatureContext";
+import UserStoryAndBuildingBlocks from "./UserStoryAndBuildingBlocks";
+import { useAppSelector, useAppDispatch } from "@/store/redux/hooks";
+import { fRFeaturesRangesSliceActions } from "@/store/redux/store-redux";
 
 const featuresCss = {
   container: css({}),
 };
 
-const placeholderBuildingBlock: BuildingBlockType = {
-  name: "New Building Block",
-  descriptionOrdeveloperComment: "New Building Block",
-  needsResearchBeforeCalculationWillBePossible: false,
-  thirdPartyCosts: 0,
-  timeRangesByVariant: {
-    logicalProblemsolving: {
-      timeRange: { optimistic: 5, pessimistic: 30 },
-    },
-    creativeProblemsolving: {
-      timeRange: { optimistic: 5, pessimistic: 30 },
-    },
-  },
-  statesThatMultiplyTheTimeSum: {
-    translationAutomatically: "no",
-    responsiveForBrowsers: "all",
-    responsiveForScreenSizes: "3",
-    responsiveForDisabilities: "no",
-    stylisationDesign: "design basic",
-    stylisationAnimationAmountOfStates: "2",
-    stylisationAnimationAmountOfComplexStates: "1",
-  },
-  copiesAmounts: {
-    "100%": 1,
-    "75-99%": 0,
-    "50-74%": 2,
-  },
-};
-
 export const Feature = ({ feature, featureIndex }: FeatureProps) => {
-  // Triggered on "save" of builing block.  Otherwise the Freature would be rerendered on every change of the building block
-  // which is a l o t, since it's like a form with dozens of inputs
-  const [updateOfFeature, forceUpdateOfFeature] = useState(false);
-
-  const addNewBuildingBlock = () => {
-    feature.featureBuildingBlocks.push(placeholderBuildingBlock);
-    forceUpdateOfFeature((prev) => !prev);
-    console.log("feature.featureBuildingBlocks", feature.featureBuildingBlocks);
-  };
-
   return (
-    <FeatureContext.Provider value={{ updateOfFeature, forceUpdateOfFeature }}>
-      <div css={universalCss.container}>
-        <TitleBarWithTogglableContent titleBarContent={<h3>{feature.name}</h3>}>
-          <div css={universalCss.container}>
-            <TitleBarWithTogglableContent titleBarContent={<h4>User Story</h4>}>
-              {feature.userStory}
-            </TitleBarWithTogglableContent>
-          </div>
+    <div css={universalCss.container}>
+      <UserStoryAndBuildingBlocks
+        feature={feature}
+        featureIndex={featureIndex}
+      />
 
-          <div css={universalCss.container}>
-            <div>
-              <h4>Building Blocks</h4>
-              <button onClick={addNewBuildingBlock}>
-                <IoMdAddCircleOutline />
-              </button>
-            </div>
-
-            {feature.featureBuildingBlocks.map((block, index) => {
-              return (
-                <BuildingBlock
-                  key={index}
-                  block={block}
-                  featureIndex={featureIndex}
-                  blockIndex={index}
-                />
-              );
-            })}
-          </div>
-        </TitleBarWithTogglableContent>
-
-        <Ranges featureIndex={featureIndex} />
-      </div>
-    </FeatureContext.Provider>
+      <FeaturesRanges featureIndex={featureIndex} />
+    </div>
   );
 };
 
-export const Ranges = ({ featureIndex }) => {
+export const FeaturesRanges = ({ featureIndex }) => {
+  const { fRFeaturesRanges } = useAppSelector((state) => state);
+
+  const dispatch = useAppDispatch();
+
   const { hourlyRate } = useContext(ProjectCostCalculatorContext);
 
   const { userChoicesRef } = useContext(
     ProjectDefaultCheckboxesAndFeaturesContext
   );
-
-  const { updateOfFeature } = useContext(FeatureContext);
 
   const [featuresRangesOfSums, setFeaturesRangesOfSums] = useState(
     calculateFinalRangeOfSums(
@@ -128,12 +69,16 @@ export const Ranges = ({ featureIndex }) => {
         hourlyRate.current
       )
     );
-  }, [featureIndex, hourlyRate, userChoicesRef, updateOfFeature]);
+  }, [fRFeaturesRanges, featureIndex, hourlyRate, userChoicesRef]);
 
   return (
     <>
       <RangesOfSums
-        variant={{ resource: "time", resourceVariant: "min", isMainSum: false }}
+        variant={{
+          resource: "time",
+          resourceVariant: "min",
+          isMainSum: false,
+        }}
         logicalRangeOfSums={featuresRangesOfSums.sumOfLogicalTime}
         creativeRangeOfSums={featuresRangesOfSums.sumOfCreativeTime}
       />

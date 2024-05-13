@@ -223,6 +223,6 @@ export type RangesOfSumsProps = {
 };
 
 export type FeatureContextType = {
-  updateOfFeature: boolean;
-  forceUpdateOfFeature: React.Dispatch<React.SetStateAction<boolean>>;
+  feature: SpecificFeatureType;
+  featureIndex: number;
 };

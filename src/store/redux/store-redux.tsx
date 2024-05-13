@@ -9,6 +9,21 @@ const appDataOfCurrentUser: AppDataOfCurrentUser = {
   },
 };
 
+// Usef for forcing rerenders of components.
+// Why not useContext? Because useContext forces children to rerender in some cases
+// (when there's a non-useRef value, like useState, for example) so it's not an
+// actual substitute for a state management tool like Redux. That's cleaner, actually
+//
+// fR = force rerender
+const fRFeaturesRanges = {
+  // the prop names are the names of the components but in camelcase
+  forceRerender: false,
+};
+
+const fRUserStoryAndBuildingBlocks = {
+  forceRerender: false,
+};
+
 const appDataOfCurrentUserSlice = createSlice({
   name: "appDataOfCurrentUserSlice",
   initialState: appDataOfCurrentUser,
@@ -20,8 +35,32 @@ const appDataOfCurrentUserSlice = createSlice({
   },
 });
 
+const fRFeaturesRangesSlice = createSlice({
+  name: "fRFeaturesRangesSlice",
+  initialState: fRFeaturesRanges,
+  reducers: {
+    forceRerender(state) {
+      state.forceRerender = !state.forceRerender;
+    },
+  },
+});
+
+const fRUserStoryAndBuildingBlocksSlice = createSlice({
+  name: "fRUserStoryAndBuildingBlocksSlice",
+  initialState: fRUserStoryAndBuildingBlocks,
+  reducers: {
+    forceRerender(state) {
+      state.forceRerender = !state.forceRerender;
+    },
+  },
+});
+
 const store = configureStore({
   reducer: {
+    // forced rerenders
+    fRFeaturesRanges: fRFeaturesRangesSlice.reducer,
+    fRUserStoryAndBuildingBlocks: fRUserStoryAndBuildingBlocksSlice.reducer,
+
     appDataOfCurrentUserReducer: appDataOfCurrentUserSlice.reducer,
   },
 });
@@ -31,5 +70,8 @@ export type AppDispatch = typeof store.dispatch;
 
 export const appDataOfCurrentUserSliceActions =
   appDataOfCurrentUserSlice.actions;
+export const fRFeaturesRangesSliceActions = fRFeaturesRangesSlice.actions;
+export const fRUserStoryAndBuildingBlocksSliceActions =
+  fRUserStoryAndBuildingBlocksSlice.actions;
 
 export default store;
