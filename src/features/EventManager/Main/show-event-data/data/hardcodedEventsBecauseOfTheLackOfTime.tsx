@@ -2589,7 +2589,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       {
         id: 101,
         title:
-          "L. Lepię (2) [T.Saska] > [LTC] > [Mi Amigo (P.C.C. & Cldr) | Wrld RPG]",
+          "L. Lepię & P. Pieszczę (1.5 & 1) [T.Saska] > [LTC] > [Mi Amigo (P.C.C. & Cldr) | Wrld RPG]",
         startDate: new Date(2024, 0, 19, 9, 45),
         endDate: new Date(2024, 0, 19, 12, 15),
         image:
