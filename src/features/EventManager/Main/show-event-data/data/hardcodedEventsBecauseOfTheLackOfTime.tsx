@@ -2555,43 +2555,77 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
     sheduleOfHourlyPlannedEvents: [
       {
         id: 0,
-        title: "YT & Nightwatch (15/45)",
+        title: "YT & Nightwatch (15/30)",
         startDate: new Date(2024, 0, 19, 6, 0), // January 19, 2024, 06:00 AM
         endDate: new Date(2024, 0, 19, 7, 0),
         image:
           "https://assets1.ignimgs.com/2017/01/13/kabal-1280-1484265942243_160w.jpg?width=1280",
       },
       {
-        id: 1,
-        title: "Tworzę / Earlier Jedzonko (50/10)",
-        startDate: new Date(2024, 0, 19, 7, 0),
-        endDate: new Date(2024, 0, 19, 8, 0),
+        id: 100,
+        title: "YT & Nightwatch (15/45)",
+        startDate: new Date(2024, 0, 19, 6, 0), // January 19, 2024, 06:00 AM
+        endDate: new Date(2024, 0, 19, 7, 0),
         image:
-          "https://www.dexerto.com/cdn-image/wp-content/uploads/2024/02/13/Whizbangs-Workshop.v1-1.jpg?width=3840&quality=75&format=auto",
+          "https://assets1.ignimgs.com/2017/01/13/kabal-1280-1484265942243_160w.jpg?width=1280",
       },
+
       {
         id: 2,
-        title: "Jedzonko z YT (30)",
-        startDate: new Date(2024, 0, 19, 8, 0),
-        endDate: new Date(2024, 0, 19, 8, 30),
+        title: "Jedzonko na 1 lub 2 razy zjedzone (30))",
+        startDate: new Date(2024, 0, 19, 7, 0),
+        endDate: new Date(2024, 0, 19, 7, 30),
         image:
           "https://static.wikia.nocookie.net/hearthstone_gamepedia/images/1/17/Priest_of_the_Feast_full.jpg/revision/latest?cb=20160807055512",
       },
       {
-        id: 3,
-        title: "Tworzę / trening lub nightwatch (50/15 * 3)",
-        startDate: new Date(2024, 0, 19, 8, 30),
-        endDate: new Date(2024, 0, 19, 11, 45),
+        id: 1,
+        title: "P. Pieszczę & K. Kreuję (0.5 & 1.5) [Wrld RPG]",
+        startDate: new Date(2024, 0, 19, 7, 30),
+        endDate: new Date(2024, 0, 19, 9, 30),
         image:
           "https://www.dexerto.com/cdn-image/wp-content/uploads/2024/02/13/Whizbangs-Workshop.v1-1.jpg?width=3840&quality=75&format=auto",
       },
       {
+        id: 3,
+        title: "Słucham & 1sza połowa treningu 'od pasa w górę' (15)",
+        startDate: new Date(2024, 0, 19, 9, 30),
+        endDate: new Date(2024, 0, 19, 10, 0),
+        image:
+          "https://store-images.s-microsoft.com/image/apps.36788.66915708565277087.92a7f9c3-e394-4fbf-841e-3d065f91d41a.7d021b57-059f-4a91-99a2-76aefa87c421?q=90&w=480&h=270",
+      },
+      {
+        id: 101,
+        title:
+          "L. Lepię (2) [T.Saska] > [LTC] > [Mi Amigo (P.C.C. & Cldr) | Wrld RPG]",
+        startDate: new Date(2024, 0, 19, 10, 0),
+        endDate: new Date(2024, 0, 19, 12, 0),
+        image:
+          "https://www.dexerto.com/cdn-image/wp-content/uploads/2024/02/13/Whizbangs-Workshop.v1-1.jpg?width=3840&quality=75&format=auto",
+      },
+      {
+        id: 102,
+        title: "Słucham & 2ga połowa treningu 'od pasa w górę' (30)",
+        startDate: new Date(2024, 0, 19, 12, 0),
+        endDate: new Date(2024, 0, 19, 12, 30),
+        image:
+          "https://store-images.s-microsoft.com/image/apps.36788.66915708565277087.92a7f9c3-e394-4fbf-841e-3d065f91d41a.7d021b57-059f-4a91-99a2-76aefa87c421?q=90&w=480&h=270",
+      },
+      {
         id: 4,
         title: "La Toiletta (30)",
-        startDate: new Date(2024, 0, 19, 11, 45),
-        endDate: new Date(2024, 0, 19, 12, 15),
+        startDate: new Date(2024, 0, 19, 12, 30),
+        endDate: new Date(2024, 0, 19, 13, 0),
         image:
           "https://storage.googleapis.com/pai-images/b32936677c904bf09fe002c7895dcce5.jpeg",
+      },
+      {
+        id: 101,
+        title: "P. Pieszczę (1) [Wrld RPG]",
+        startDate: new Date(2024, 0, 19, 13, 30),
+        endDate: new Date(2024, 0, 19, 14, 30),
+        image:
+          "https://www.dexerto.com/cdn-image/wp-content/uploads/2024/02/13/Whizbangs-Workshop.v1-1.jpg?width=3840&quality=75&format=auto",
       },
       {
         id: 5,
@@ -2604,8 +2638,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       {
         id: 6,
         title: "Jedzonko z YT (30)",
-        startDate: new Date(2024, 0, 19, 15, 30),
-        endDate: new Date(2024, 0, 19, 16, 0),
+        startDate: new Date(2024, 0, 19, 14, 30),
+        endDate: new Date(2024, 0, 19, 15, 0),
         image: "https://images.alphacoders.com/125/1252351.png",
       },
       {

@@ -49,6 +49,7 @@ const Scheduler = () =>
                   key={event.id}
                   className={styles["schedule__grid__events__event"]}
                   style={calculateEventPosition(event)}
+                  css={{ fontSize: "1rem" }}
                 >
                   <ImageWithWrapper src={event.image} width="100%" />
                   <div>{event.title}</div>
