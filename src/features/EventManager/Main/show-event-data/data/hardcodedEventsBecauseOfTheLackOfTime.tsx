@@ -5,54 +5,11 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
     chestWithAllDayLongEvents: {
       necessary: [
         {
-          name: "PIT rozlicz (z Lukasem?) & Workflow stwórz pod to",
-          description: "To trwa chwileczkę, online do zrobiernia",
+          name: "Testowy tydzień 'ideolo' wprowadź w życie",
+          description:
+            "co 2 dzien inny ekipa gamingowa / inna gra, i co drugi inny aktywnosc duporuszna etc.",
           imagePath:
-            "https://cdn.dribbble.com/users/3581847/screenshots/9165289/media/275ebf8aeb8432d048f5b66bcbdfbd4d.gif",
-          imageAltText: "",
-          eventGroupId: 0,
-          eventInstanceId: 0,
-          GIFPath: "",
-          isAllDayLong: false,
-          allDayLongVariantProps: {
-            importance: "",
-            date: new Date(),
-          },
-          timedVariantProps: {
-            startDateAndTime: new Date(),
-            endDateAndTime: new Date(),
-          },
-          deadlineVariant: "none",
-          addOnsByVariants: {
-            variant1: {
-              step1: {},
-            },
-          },
-          needsFulfilledByVariant: {
-            variant1: {
-              isWant: false,
-              isCreate: false,
-              isAbsorb: false,
-              isChill: false,
-              isVent: false,
-              isSquad: false,
-              isActive: false,
-              isWilderness: false,
-              isFresh: false,
-            },
-          },
-          vocalNotifications: {
-            startEventSound: "",
-            xMinutesBeforeStartAmount: null,
-            xMinutesBeforeStartSound: "",
-            endEventSound: "",
-          },
-        },
-        {
-          name: "Lukas - Gooogle support kontakt/passy z konta firmowego mi daj",
-          description: "",
-          imagePath:
-            "https://www.google.com/logos/doodles/2020/thank-you-food-service-workers-6753651837108761-2xa.gif",
+            "https://paperlypeople.com/wp-content/uploads/2015/09/yellow-is-for-admin.png",
           imageAltText: "",
           eventGroupId: 0,
           eventInstanceId: 0,

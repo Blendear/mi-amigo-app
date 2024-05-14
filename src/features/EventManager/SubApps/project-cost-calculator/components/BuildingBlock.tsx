@@ -100,6 +100,9 @@ export const BuildingBlock = ({
       ].featureBuildingBlocks.filter((block, index) => index !== blockIndex);
 
     dispatch(forceRerenderSliceActions.forceRerender("FeatureRanges"));
+    dispatch(
+      forceRerenderSliceActions.forceRerender("UserStoryAndBuildingBlocks")
+    );
   };
 
   const saveBlock = () => {
