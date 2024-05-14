@@ -12,9 +12,7 @@ import { FaEquals } from "react-icons/fa";
 
 const rangesOfSumsCss = {
   container: css({
-    display: "grid",
-    gridTemplateColumns: "repeat(3, 1fr)",
-    justifyItems: "start",
+    width: "max-content",
   }),
 
   range: (isMainSum) =>

@@ -12,7 +12,7 @@ import { ProjectDefaultCheckboxesAndFeaturesContext } from "../context/ProjectDe
 import { BuildingBlockContext } from "../context/BuildingBlockContext";
 import { FeatureContext } from "../context/FeatureContext";
 import { useAppDispatch, useAppSelector } from "@/store/redux/hooks";
-import { fRFeaturesRangesSliceActions } from "@/store/redux/store-redux";
+import { forceRerenderSliceActions } from "@/store/redux/store-redux";
 
 // two words fully written, the rest are initials
 const buildingBlockCss = {
@@ -80,7 +80,7 @@ export const BuildingBlock = ({
         featureIndex
       ].featureBuildingBlocks.filter((block, index) => index !== blockIndex);
 
-    dispatch(fRFeaturesRangesSliceActions.forceRerender());
+    dispatch(forceRerenderSliceActions.forceRerender("FeatureRanges"));
   };
 
   const saveBlock = () => {
@@ -89,7 +89,7 @@ export const BuildingBlock = ({
     ].featureBuildingBlocks[blockIndex] =
       buildingBlockStateBeforeSavingRef.current;
 
-    dispatch(fRFeaturesRangesSliceActions.forceRerender());
+    dispatch(forceRerenderSliceActions.forceRerender("FeatureRanges"));
   };
 
   return (
