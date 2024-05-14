@@ -105,7 +105,7 @@ export const SumOfTime = ({}: SumOfTimeProps) => {
         {sum.optimistic.toFixed(2)} - {sum.pessimistic.toFixed(2)}
       </div> */}
       <RangesOfSums
-        variant={{ resource: "time", resourceVariant: "min", isMainSum: true }}
+        variant={{ resource: "time", isMainSum: true }}
         logicalRangeOfSums={{
           pessimistic: 5,
           optimistic: 30,

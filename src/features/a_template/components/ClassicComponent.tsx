@@ -4,7 +4,6 @@ import { css } from "@emotion/react";
 // import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 // import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { AComponentProps } from "../types";
-
 // two words fully written, the rest are initials
 const OneTwoTFWCNCss = {
   container: css({

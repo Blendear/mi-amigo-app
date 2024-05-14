@@ -66,7 +66,7 @@ export const SumOfMoney = ({}: SumOfMoneyProps) => {
         {sum.optimistic} - {sum.pessimistic}
       </div> */}
       <RangesOfSums
-        variant={{ resource: "time", resourceVariant: "min", isMainSum: true }}
+        variant={{ resource: "time", isMainSum: true }}
         logicalRangeOfSums={{
           pessimistic: 5,
           optimistic: 30,
@@ -84,7 +84,6 @@ export const SumOfMoney = ({}: SumOfMoneyProps) => {
       <RangesOfSums
         variant={{
           resource: "time",
-          resourceVariant: "min",
           isMainSum: true,
           showFinalSumOnly: true,
         }}

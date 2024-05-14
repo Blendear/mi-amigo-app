@@ -11,7 +11,8 @@ import { BuildingBlock } from "./BuildingBlock";
 import { TitleBarWithTogglableContent } from "@/components/TitleBarWithTogglableContent";
 import { FeatureContext } from "../context/FeatureContext";
 import { useAppSelector, useAppDispatch } from "@/store/redux/hooks";
-import { fRUserStoryAndBuildingBlocksSliceActions } from "@/store/redux/store-redux";
+import { forceRerenderSliceActions } from "@/store/redux/store-redux";
+import { useForceRerender } from "@/hooks/useForceRerender";
 
 // two words fully written, the rest are initials
 const OneTwoTFWCNCss = {
@@ -62,25 +63,15 @@ const placeholderBuildingBlock: BuildingBlockType = {
 };
 
 const UserStoryAndBuildingBlocks = ({ feature, featureIndex }) => {
-  // TODO remake this into a acustom hook?
-  //
-  // forced rerenders based on the components dedicated redux prop state
-  //     ) if "userStoryAndBuildingBlocks" changes
-  //     ) "forceRender" wiht "useEffect"
-  const { fRUserStoryAndBuildingBlocks } = useAppSelector((state) => state);
+  useForceRerender("UserStoryAndBuildingBlocks");
+
   const dispatch = useAppDispatch();
-  const [_, forceRerender] = useState(false);
-  useEffect(() => {
-    forceRerender((prev) => !prev);
-  }, [fRUserStoryAndBuildingBlocks]);
-  console.log("UserStoryAndBuildingBlocks mounted");
 
   const addNewBuildingBlock = () => {
     feature.featureBuildingBlocks.push(placeholderBuildingBlock);
-
-    dispatch(fRUserStoryAndBuildingBlocksSliceActions.forceRerender());
-
-    console.log("feature.featureBuildingBlocks", feature.featureBuildingBlocks);
+    dispatch(
+      forceRerenderSliceActions.forceRerender("UserStoryAndBuildingBlocks")
+    );
   };
 
   return (

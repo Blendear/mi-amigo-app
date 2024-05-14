@@ -21,7 +21,6 @@ import { ProjectCostCalculatorContext } from "../context/ProjectCostCalculatorCo
 import { FeatureContext } from "../context/FeatureContext";
 import UserStoryAndBuildingBlocks from "./UserStoryAndBuildingBlocks";
 import { useAppSelector, useAppDispatch } from "@/store/redux/hooks";
-import { fRFeaturesRangesSliceActions } from "@/store/redux/store-redux";
 
 const featuresCss = {
   container: css({}),
@@ -41,7 +40,7 @@ export const Feature = ({ feature, featureIndex }: FeatureProps) => {
 };
 
 export const FeaturesRanges = ({ featureIndex }) => {
-  const { fRFeaturesRanges } = useAppSelector((state) => state);
+  const { forceRerenderReducer } = useAppSelector((state) => state);
 
   const dispatch = useAppDispatch();
 
@@ -69,14 +68,18 @@ export const FeaturesRanges = ({ featureIndex }) => {
         hourlyRate.current
       )
     );
-  }, [fRFeaturesRanges, featureIndex, hourlyRate, userChoicesRef]);
+  }, [
+    forceRerenderReducer.FeatureRanges,
+    featureIndex,
+    hourlyRate,
+    userChoicesRef,
+  ]);
 
   return (
     <>
       <RangesOfSums
         variant={{
           resource: "time",
-          resourceVariant: "min",
           isMainSum: false,
         }}
         logicalRangeOfSums={featuresRangesOfSums.sumOfLogicalTime}

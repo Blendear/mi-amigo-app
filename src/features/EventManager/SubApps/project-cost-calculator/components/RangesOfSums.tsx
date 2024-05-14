@@ -76,7 +76,7 @@ export const RangesOfSums = ({
           }`}
         </div>
         <p css={{ margin: "0 0 0 3px" }}>
-          {variant.resource === "time" ? variant.resourceVariant : "$"}
+          {variant.resource === "time" ? "h" : "$"}
         </p>
       </div>
 

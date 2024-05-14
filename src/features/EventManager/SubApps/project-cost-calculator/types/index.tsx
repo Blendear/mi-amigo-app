@@ -213,7 +213,6 @@ export type BuildingBlockContextType = {
 export type RangesOfSumsProps = {
   variant: {
     resource: "time" | "money";
-    resourceVariant?: "hours" | "min";
     isMainSum: boolean;
     showFinalSumOnly?: true;
   };
