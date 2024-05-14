@@ -2555,14 +2555,6 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
     sheduleOfHourlyPlannedEvents: [
       {
         id: 0,
-        title: "YT & Nightwatch (15/30)",
-        startDate: new Date(2024, 0, 19, 6, 0), // January 19, 2024, 06:00 AM
-        endDate: new Date(2024, 0, 19, 7, 0),
-        image:
-          "https://assets1.ignimgs.com/2017/01/13/kabal-1280-1484265942243_160w.jpg?width=1280",
-      },
-      {
-        id: 100,
         title: "YT & Nightwatch (15/45)",
         startDate: new Date(2024, 0, 19, 6, 0), // January 19, 2024, 06:00 AM
         endDate: new Date(2024, 0, 19, 7, 0),
@@ -2628,6 +2620,13 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           "https://www.dexerto.com/cdn-image/wp-content/uploads/2024/02/13/Whizbangs-Workshop.v1-1.jpg?width=3840&quality=75&format=auto",
       },
       {
+        id: 6,
+        title: "Jedzonko z YT (30)",
+        startDate: new Date(2024, 0, 19, 14, 30),
+        endDate: new Date(2024, 0, 19, 15, 0),
+        image: "https://images.alphacoders.com/125/1252351.png",
+      },
+      {
         id: 5,
         title: "Drzemusia (30)",
         startDate: new Date(2024, 0, 19, 15, 0),
@@ -2636,31 +2635,32 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           "https://preview.redd.it/nwzxu16avgp01.jpg?auto=webp&s=b71fbea1d7e6f973dcdcc1dc47231169b89bdacd",
       },
       {
-        id: 6,
-        title: "Jedzonko z YT (30)",
-        startDate: new Date(2024, 0, 19, 14, 30),
-        endDate: new Date(2024, 0, 19, 15, 0),
-        image: "https://images.alphacoders.com/125/1252351.png",
+        id: 50,
+        title: "Giełda (60)",
+        startDate: new Date(2024, 0, 19, 15, 30),
+        endDate: new Date(2024, 0, 19, 16, 30),
+        image:
+          "https://www.investopedia.com/thmb/ASStR21rMu9-9_nj1x07H83zbUs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/close-up-of-stock-market-data-on-digital-display-1058454392-c48e2501742f4c21ad57c25d6a087bd0.jpg",
       },
       {
         id: 7,
         title: "MeTime / Zuzu / Ekipka / Spontaniczny amigo (2,5h)",
-        startDate: new Date(2024, 0, 19, 16, 0),
-        endDate: new Date(2024, 0, 19, 18, 30),
+        startDate: new Date(2024, 0, 19, 16, 30),
+        endDate: new Date(2024, 0, 19, 19, 0),
         image: "https://wallpapercave.com/wp/wp1843569.jpg",
       },
       {
         id: 8,
         title: "Gotowankowy lub Zakupowy Nightwatch (60)",
-        startDate: new Date(2024, 0, 19, 18, 30),
-        endDate: new Date(2024, 0, 19, 19, 30),
+        startDate: new Date(2024, 0, 19, 19, 0),
+        endDate: new Date(2024, 0, 19, 20, 0),
         image: "https://i.ytimg.com/vi/H-_jP9zM8vk/maxresdefault.jpg",
       },
       {
         id: 9,
         title: "Kąpielowo-golny nightwatch (30)",
-        startDate: new Date(2024, 0, 19, 19, 30),
-        endDate: new Date(2024, 0, 19, 20, 0),
+        startDate: new Date(2024, 0, 19, 20, 0),
+        endDate: new Date(2024, 0, 19, 20, 30),
         image:
           "https://static.wikia.nocookie.net/hearthstone_gamepedia/images/6/6a/Rest_and_Relaxation_full.jpg/revision/latest?cb=20210407211101",
       },
