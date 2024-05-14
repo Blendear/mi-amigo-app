@@ -2590,24 +2590,24 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         id: 101,
         title:
           "L. Lepię (2) [T.Saska] > [LTC] > [Mi Amigo (P.C.C. & Cldr) | Wrld RPG]",
-        startDate: new Date(2024, 0, 19, 10, 0),
-        endDate: new Date(2024, 0, 19, 12, 0),
+        startDate: new Date(2024, 0, 19, 9, 45),
+        endDate: new Date(2024, 0, 19, 12, 15),
         image:
           "https://www.dexerto.com/cdn-image/wp-content/uploads/2024/02/13/Whizbangs-Workshop.v1-1.jpg?width=3840&quality=75&format=auto",
       },
       {
         id: 102,
         title: "Słucham & 2ga połowa treningu 'od pasa w górę' (30)",
-        startDate: new Date(2024, 0, 19, 12, 0),
-        endDate: new Date(2024, 0, 19, 12, 30),
+        startDate: new Date(2024, 0, 19, 12, 15),
+        endDate: new Date(2024, 0, 19, 12, 45),
         image:
           "https://store-images.s-microsoft.com/image/apps.36788.66915708565277087.92a7f9c3-e394-4fbf-841e-3d065f91d41a.7d021b57-059f-4a91-99a2-76aefa87c421?q=90&w=480&h=270",
       },
       {
         id: 4,
         title: "La Toiletta (30)",
-        startDate: new Date(2024, 0, 19, 12, 30),
-        endDate: new Date(2024, 0, 19, 13, 0),
+        startDate: new Date(2024, 0, 19, 12, 45),
+        endDate: new Date(2024, 0, 19, 13, 15),
         image:
           "https://storage.googleapis.com/pai-images/b32936677c904bf09fe002c7895dcce5.jpeg",
       },
