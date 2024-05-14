@@ -16,10 +16,16 @@ import { hardcodedEventsBecauseOfTheLackOfTime } from "../../show-event-data/dat
 const Scheduler = () =>
   // { events }: DailyScheduleProps
   {
+    const scrollHereRef = useRef(null);
+    const dontScrollHereRef = useRef(null);
+
+    const executeScroll = () => scrollHereRef.current?.scrollIntoView();
+
     const scheduleRef = useRef(null);
     const [currentTime, setCurrentTime] = useState(new Date());
 
     useEffect(() => {
+      executeScroll();
       if (scheduleRef.current) {
         // calculateActiveBlock();
         const activeBlockElement = scheduleRef.current.querySelector(
@@ -44,19 +50,29 @@ const Scheduler = () =>
           </div>
           <div className={styles["schedule__grid__events"]}>
             {hardcodedEventsBecauseOfTheLackOfTime.eventsWithNeeds.sheduleOfHourlyPlannedEvents.map(
-              (event) => (
-                <div
-                  key={event.id}
-                  className={styles["schedule__grid__events__event"]}
-                  style={calculateEventPosition(event)}
-                  css={{ fontSize: "1rem" }}
-                >
-                  <ImageWithWrapper src={event.image} width="100%" />
-                  <div>{event.title}</div>
-                </div>
-              )
+              (event, index) => {
+                const eventPosition = calculateEventPosition(event);
+                const activeBlockPosition = calculateActiveBlock(currentTime);
+                const isEventActive =
+                  activeBlockPosition + 1 >= eventPosition.gridRowStart &&
+                  activeBlockPosition + 1 <= eventPosition.gridRowEnd;
+
+                return (
+                  <div
+                    ref={isEventActive ? scrollHereRef : dontScrollHereRef}
+                    key={event.id}
+                    className={styles["schedule__grid__events__event"]}
+                    style={calculateEventPosition(event)}
+                    css={{ fontSize: "1rem" }}
+                  >
+                    <ImageWithWrapper src={event.image} width="100%" />
+                    <div>{event.title}</div>
+                  </div>
+                );
+              }
             )}
           </div>
+          <div>Test</div>
         </div>
       </div>
     );
