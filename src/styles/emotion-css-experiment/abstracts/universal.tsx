@@ -81,4 +81,9 @@ export const universalCss = {
     //   gridColumn: "5",
     // },
   }),
+
+  input: css({
+    width: "120px",
+    backgroundColor: `rgb(${colors.whiteLight}, 0.2)`,
+  }),
 };

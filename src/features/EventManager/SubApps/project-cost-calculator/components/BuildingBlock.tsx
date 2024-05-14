@@ -36,6 +36,25 @@ const buildingBlockCss = {
       gridTemplateColumns: "1fr 5fr",
     },
   ]),
+
+  inputs: css({
+    display: "grid",
+    rowGap: "5px",
+
+    "& > h6": {
+      fontSize: variables.fontSize.subheading,
+    },
+
+    "& > div": {
+      display: "grid",
+      gridTemplateColumns: "1fr max-content",
+      fontSize: variables.fontSize.regular,
+
+      "& label": {
+        justifySelf: "start",
+      },
+    },
+  }),
 };
 
 export const BuildingBlock = ({
@@ -111,20 +130,23 @@ export const BuildingBlock = ({
               </div>
               <p>Research Needed</p>
             </button>
+          </div>
 
+          <div css={buildingBlockCss.inputs}>
+            <DescriptionOrComment />
+
+            <h6>Third Party Costs</h6>
             <NumberInputField
               propName={"thirdPartyCosts"}
-              labelName={"thirdPartyCosts"}
+              labelName={"Third Party Costs (Hosting / Stock etc.)"}
             />
-
-            <DescriptionOrComment />
 
             {/* Select fields */}
             <h6>Problemsolving</h6>
-            <div>___________</div>
+
             <SelectField
               propName={"logicalProblemsolving"}
-              labelName={"logicalProblemsolving"}
+              labelName={"Logical Problemsolving"}
               availableOptions={[
                 "5-30",
                 "30-60",
@@ -136,7 +158,7 @@ export const BuildingBlock = ({
 
             <SelectField
               propName={"creativeProblemsolving"}
-              labelName={"creativeProblemsolving"}
+              labelName={"Creative Problemsolving"}
               availableOptions={[
                 "5-30",
                 "30-60",
@@ -147,7 +169,7 @@ export const BuildingBlock = ({
             />
 
             <h6>Multipliers</h6>
-            <div>___________</div>
+
             {Object.keys(
               selectInputsForDefaultStatesThatMultiplyTheTimeSum
             ).map((stateName) => {
@@ -155,7 +177,37 @@ export const BuildingBlock = ({
                 <SelectField
                   key={stateName}
                   propName={stateName}
-                  labelName={stateName}
+                  labelName={(() => {
+                    let returnString = stateName;
+
+                    switch (stateName) {
+                      case "translationAutomatically":
+                        returnString = "Translation";
+                        break;
+                      case "responsiveForBrowsers":
+                        returnString = "Responsive for Browsers";
+                        break;
+                      case "responsiveForScreenSizes":
+                        returnString = "Responsive for Screen Sizes";
+                        break;
+                      case "responsiveForDisabilities":
+                        returnString = "Responsive for Disabilities";
+                        break;
+                      case "stylisationDesign":
+                        returnString = "Design";
+                        break;
+                      case "stylisationAnimationAmountOfStates":
+                        returnString = "Animation Amount of States";
+                        break;
+                      case "stylisationAnimationAmountOfComplexStates":
+                        returnString = "Animation Amount of Complex States";
+                        break;
+
+                      default:
+                        returnString = stateName;
+                    }
+                    return returnString;
+                  })()}
                   availableOptions={
                     selectInputsForDefaultStatesThatMultiplyTheTimeSum[
                       stateName
@@ -164,15 +216,14 @@ export const BuildingBlock = ({
                 />
               );
             })}
+
+            {/* Input fields */}
+            <h6>Copies amounts</h6>
+
+            <NumberInputField propName={"100%"} labelName={"100%"} />
+            <NumberInputField propName={"75-99%"} labelName={"75-99%"} />
+            <NumberInputField propName={"50-74%"} labelName={"50-74%"} />
           </div>
-
-          {/* Input fields */}
-          <h6>Copies amounts</h6>
-          <div>___________</div>
-          <NumberInputField propName={"100%"} labelName={"100%"} />
-          <NumberInputField propName={"75-99%"} labelName={"75-99%"} />
-          <NumberInputField propName={"50-74%"} labelName={"50-74%"} />
-
           <div>
             <button css={universalCss.button(true)} onClick={deleteBlock}>
               Delete Block
@@ -187,6 +238,15 @@ export const BuildingBlock = ({
   );
 };
 
+const descriptionOrCommentCss = {
+  container: css({
+    width: "100%",
+    height: "100px",
+    backgroundColor: "rgb(255,255,255,0.2)",
+    fontSize: variables.fontSize.regular,
+  }),
+};
+
 export const DescriptionOrComment = () => {
   const { buildingBlockStateBeforeSavingRef } =
     useContext(BuildingBlockContext);
@@ -198,6 +258,7 @@ export const DescriptionOrComment = () => {
 
   return (
     <textarea
+      css={descriptionOrCommentCss.container}
       placeholder="Description"
       value={
         buildingBlockStateBeforeSavingRef.current
@@ -238,10 +299,17 @@ export const SelectField = ({ propName, labelName, availableOptions }) => {
   return (
     <div>
       <label>{labelName}</label>
-      <select onChange={onChange}>
+      <select
+        css={{ backgroundColor: "rgb(0,0,0,0)", width: "120px" }}
+        onChange={onChange}
+      >
         {availableOptions.map((option) => {
           return (
-            <option key={option} value={option}>
+            <option
+              css={{ backgroundColor: "grey" }}
+              key={option}
+              value={option}
+            >
               {option}
             </option>
           );
@@ -275,7 +343,12 @@ export const NumberInputField = ({ propName, labelName }) => {
   return (
     <div>
       <label>{labelName}</label>
-      <input type="number" onChange={onChange} value={value} />
+      <input
+        css={universalCss.input}
+        type="number"
+        onChange={onChange}
+        value={value}
+      />
     </div>
   );
 };
