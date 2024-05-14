@@ -2613,7 +2613,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
       {
         id: 101,
-        title: "P. Pieszczę (1) [Wrld RPG]",
+        title: "P. Pieszczę (1) [Mi Amigo | Wrld RPG]",
         startDate: new Date(2024, 0, 19, 13, 30),
         endDate: new Date(2024, 0, 19, 14, 30),
         image:
