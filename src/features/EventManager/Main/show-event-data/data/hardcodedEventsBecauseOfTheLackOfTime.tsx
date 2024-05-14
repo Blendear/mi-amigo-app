@@ -2582,7 +2582,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         id: 3,
         title: "Słucham & 1sza połowa treningu 'od pasa w górę' (15)",
         startDate: new Date(2024, 0, 19, 9, 30),
-        endDate: new Date(2024, 0, 19, 10, 0),
+        endDate: new Date(2024, 0, 19, 9, 45),
         image:
           "https://store-images.s-microsoft.com/image/apps.36788.66915708565277087.92a7f9c3-e394-4fbf-841e-3d065f91d41a.7d021b57-059f-4a91-99a2-76aefa87c421?q=90&w=480&h=270",
       },
