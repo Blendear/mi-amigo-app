@@ -1914,7 +1914,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
           deadlineVariant: "none",
           workflowAkaBookOfKnowledgeLink:
-            "https://www.dropbox.com/scl/fo/lvbyk2jqgsifv0mxia1jf/AMZtoKnAR7JsNyBwZcSoWSw?rlkey=3y106aofjvk20oi9hlere3uz3&st=1arwt1i8&dl=0",
+            "https://www.dropbox.com/personal/Workflows%20(Ksi%C4%99gi%20Wiedzy)/Nocna%20Warta#",
           addOnsByVariants: {
             tradycyjnie: {
               "Telefonowe Linearowe zadania wpisz w prawdziwe miejsce na PC": {
