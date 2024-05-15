@@ -87,7 +87,9 @@ export const MealsAndMacros = ({ payload }: MealsAndMacrosProps) => {
         {contentVariant === "periods" ? (
           <div>
             <PeriodOfDaysOfEating />
+
             <MealOfTheDay />
+
             {/* Shows only the chosen meal of the chosen day */}
             <Meal
               details={
@@ -99,6 +101,7 @@ export const MealsAndMacros = ({ payload }: MealsAndMacrosProps) => {
               }
             />
             <CaloriesOfTodaysMeals />
+
             {/* save and get it from local storage */}
             <div css={mealsAndMacrosCss.additionalCalories}>
               <label htmlFor="additionalCalories">Additional</label>

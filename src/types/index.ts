@@ -102,3 +102,8 @@ export type AppDataOfCurrentUser = {
   // The SubApp payload for the given event is stored in the state of the event. Because oftenly,
   // like in Yt Watcher, the videos are depended on the event. Not one global state
 };
+
+export type GlobalReduxContextsType = {
+  // SubApp - MealsAndMacros
+  MealsAndMacros: { globalSubAppData: MealsAndMacrosSubAppPayload };
+};

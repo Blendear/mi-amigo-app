@@ -1,5 +1,6 @@
 import { createSlice, configureStore, PayloadAction } from "@reduxjs/toolkit";
-import { AppDataOfCurrentUser } from "@/types";
+import { AppDataOfCurrentUser, GlobalReduxContextsType } from "@/types";
+import { hardcodedEventsBecauseOfTheLackOfTime } from "@/features/EventManager/Main/show-event-data/data/hardcodedEventsBecauseOfTheLackOfTime";
 
 // Why context and appDataOfCurrentUser separately? Because contexts are for countering prop drilling only,
 // and appDataOfCurrentUser is for reading/editing data of the current user
@@ -15,10 +16,16 @@ const appDataOfCurrentUser: AppDataOfCurrentUser = {
 // Why not useContext? Because useContext forces children to rerender in some cases
 // (when there's a non-useRef value, like useState, for example) so it's not an
 // actual substitute for a state management tool like Redux. That's cleaner, actually
-const contexts = {
-  ChildA: { keyNameA: "valueA" },
-  ChildB: { keyNameA: "valueB" },
-};
+const contexts =
+  // :
+  // GlobalReduxContextsType
+  {
+    // ChildA: { keyNameA: "valueA" },
+    // ChildB: { keyNameA: "valueB" },
+    // MealsAndMacros: { globalSubAppData: hardcodedEventsBecauseOfTheLackOfTime.eventsWithNeeds.libraryOfTemplateEvents.find(
+    //
+    // ) },
+  };
 // We don't need to write the "fR" prefix in the state name, because the "forceRerender" is already in
 // the name of the state path when we will use the useAppSelector hook
 const forceRerender = {

@@ -22,25 +22,27 @@ const Workflows = ({}: WorkflowsProps) => {
         to the necessary "Resources" folder with dedicated content */}
         {/* <WorkflowVariants /> */}
         {/* <Steps /> */}
-        {/* <AddOns /> */}
+        <div>
+          {formDataRef.current.workflowAkaBookOfKnowledgeLink ? (
+            <a
+              css={[
+                universalCss.wrapperWithCenteredSvg("10rem", "50%"),
+                {
+                  justifySelf: "center",
+                },
+              ]}
+              target="_blank"
+              rel="noreferrer"
+              href={formDataRef.current.workflowAkaBookOfKnowledgeLink}
+            >
+              <FaExternalLinkAlt />
+            </a>
+          ) : (
+            <p>Sorry, no link to a Workflow (KW) was given</p>
+          )}
+        </div>
 
-        {formDataRef.current.workflowAkaBookOfKnowledgeLink ? (
-          <a
-            css={[
-              universalCss.wrapperWithCenteredSvg("10rem", "50%"),
-              {
-                justifySelf: "center",
-              },
-            ]}
-            target="_blank"
-            rel="noreferrer"
-            href={formDataRef.current.workflowAkaBookOfKnowledgeLink}
-          >
-            <FaExternalLinkAlt />
-          </a>
-        ) : (
-          <p>Sorry, no link to a Workflow (KW) was given</p>
-        )}
+        <AddOns />
       </section>
     </WorkflowsContext.Provider>
   );
