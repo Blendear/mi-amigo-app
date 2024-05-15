@@ -49,6 +49,7 @@ export interface EventWithNeeds
     endDateAndTime: Date;
   };
   deadlineVariant: "none" | "prefer" | "must";
+  workflowAkaBookOfKnowledgeLink?: string;
   addOnsByVariants: {
     // "Wrld", "Infiniti" etc.
     [variantName: string]: {

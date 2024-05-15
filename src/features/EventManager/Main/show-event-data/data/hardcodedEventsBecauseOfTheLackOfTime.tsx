@@ -1913,6 +1913,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             endDateAndTime: new Date(),
           },
           deadlineVariant: "none",
+          workflowAkaBookOfKnowledgeLink:
+            "https://www.dropbox.com/scl/fo/lvbyk2jqgsifv0mxia1jf/AMZtoKnAR7JsNyBwZcSoWSw?rlkey=3y106aofjvk20oi9hlere3uz3&st=ijbicgyg&dl=0",
           addOnsByVariants: {
             tradycyjnie: {
               "Telefonowe Linearowe zadania wpisz w prawdziwe miejsce na PC": {
