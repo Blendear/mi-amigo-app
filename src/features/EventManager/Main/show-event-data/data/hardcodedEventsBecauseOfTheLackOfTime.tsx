@@ -1612,12 +1612,27 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
               "engaging - wymaga oddania się": {
                 toolsPhysicalOrThirdParty: [
                   {
+                    title: "Audiobook - Ziemiomorze",
+                    imageOrGifPath:
+                      "https://play-lh.googleusercontent.com/E7Son8NCq7CSqiberd-FabMUehC3DqCSvp_ow5qzHbu9ZshPq_xnwx_guf2S8g4ErMM",
+                    linkURL:
+                      "https://audioteka.com/pl/search/cycle?query=Ziemiomorze",
+                  },
+                  {
+                    title: "Audiobook - Terry Pratchett",
+                    imageOrGifPath:
+                      "https://play-lh.googleusercontent.com/E7Son8NCq7CSqiberd-FabMUehC3DqCSvp_ow5qzHbu9ZshPq_xnwx_guf2S8g4ErMM",
+                    linkURL:
+                      "https://audioteka.com/pl/search/author?query=Terry%20Pratchett",
+                  },
+                  {
                     title: "Audiobook - Stop Prawa",
                     imageOrGifPath:
                       "https://covers.storytel.com/jpg-640/0408311112571.6cfcc6e0-43ce-4a46-9b8e-ec39392c3d92?optimize=high&quality=70",
                     linkURL:
                       "https://www.storytel.com/pl/books/stop-prawa-187574",
                   },
+
                   {
                     title: "Audiobook - Złodziejska Magia",
                     imageOrGifPath:
@@ -1993,6 +2008,30 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
               "Telefonowe notatki do projektów / worda wpisz": {},
               "Ładuj słuchawki, telefon i powerbanka": {},
               "Tygodniowy Harmonogram przejżyj": {},
+              "Umówiajta 3-3-1": {
+                howAndTips: {
+                  ytVideoId: "",
+                  notes: [
+                    {
+                      title:
+                        "Tradycje stwórz, regularnie, przewidywalnie spontanicznie spotkanie organizując",
+                      description:
+                        "'Umówmy się co tydzień na X brzmi strasznie dla nieplanujących osób'. Lepiej podświadomie nawyki wyrabiać bez presji",
+                    },
+                    {
+                      title:
+                        "3 we-time, 3 amigo-time, 1 me-time, wg poniższej rozpiski",
+                      description:
+                        "* PORANNY żeby mieć po co wstawac \n nawyki nowe bros \n * tradycje \n * kursy \n * świeże przeżycia/wypadziki \n * Facebook \n * PIK wroclaw \n * Kiwi Portal\n * duporuch\n * online gaming / LAN-planszówkowe",
+                    },
+                    {
+                      title: "eventy w next tygodniach ogarnij",
+                      description:
+                        "wrocławskie portale \n red bull events \n fantasy events",
+                    },
+                  ],
+                },
+              },
               "Hooksa jednego chcesz ogarnąć?": {},
               Zakupki: {
                 toolsPhysicalOrThirdParty: [
@@ -2032,19 +2071,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                 },
               },
               "Przygotuj || Zrób pranie": {},
-              "Umówiajta 3-3-1": {
-                howAndTips: {
-                  ytVideoId: "",
-                  notes: [
-                    {
-                      title:
-                        "3 we-time, 3 amigo-time, 1 me-time, wg poniższej rozpiski",
-                      description:
-                        "* PORANNY żeby mieć po co wstawac \n nawyki nowe bros \n * tradycje \n * kursy \n * świeże przeżycia/wypadziki \n * Facebook \n * PIK wroclaw \n * Kiwi Portal\n * duporuch\n * online gaming / LAN-planszówkowe",
-                    },
-                  ],
-                },
-              },
+
               "Tnij, kąp i czyść": {
                 howAndTips: {
                   ytVideoId: "",
@@ -2244,6 +2271,67 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
               isActive: false,
               isWilderness: false,
               isFresh: false,
+            },
+          },
+          vocalNotifications: {
+            startEventSound: "",
+            xMinutesBeforeStartAmount: null,
+            xMinutesBeforeStartSound: "",
+            endEventSound: "",
+          },
+        },
+        {
+          name: "Budżetem miesięcznym / życiowym kupuję",
+          description:
+            "Ile mogę wydać miesięcznie || ogólnie na zainwestowanie coś ponad potrzeby",
+          imagePath:
+            "https://www.bhmpics.com/downloads/wallpaper-shakes-and-fidget/5.daily_login_background_jpg.jpg",
+          imageAltText: "",
+          eventGroupId: 0,
+          eventInstanceId: 0,
+          GIFPath: "",
+          isAllDayLong: false,
+          allDayLongVariantProps: {
+            importance: "",
+            date: new Date(),
+          },
+          timedVariantProps: {
+            startDateAndTime: new Date(),
+            endDateAndTime: new Date(),
+          },
+          deadlineVariant: "none",
+          addOnsByVariants: {
+            _: {
+              _: {
+                howAndTips: {
+                  ytVideoId: "",
+                  notes: [
+                    {
+                      title:
+                        "Warte notatki do przemienienia w część do workflowu",
+                      description: `
+                    Gry:
+                    ) Monster Hunter One (coop ma)
+                    ) Enter The Gungoen (save scumming pod niefrusturjący roguelike experience)
+                      
+                      `,
+                    },
+                  ],
+                },
+              },
+            },
+          },
+          needsFulfilledByVariant: {
+            variant1: {
+              isWant: true,
+              isCreate: false,
+              isAbsorb: false,
+              isChill: false,
+              isVent: false,
+              isSquad: false,
+              isActive: false,
+              isWilderness: false,
+              isFresh: true,
             },
           },
           vocalNotifications: {
