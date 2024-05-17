@@ -2613,12 +2613,11 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           "https://storage.googleapis.com/pai-images/b32936677c904bf09fe002c7895dcce5.jpeg",
       },
       {
-        id: 101,
-        title: "P. Pieszczę (1) [Mi Amigo (P.C.C. & Cldr) | Wrld RPG]",
-        startDate: new Date(2024, 0, 19, 13, 30),
-        endDate: new Date(2024, 0, 19, 14, 30),
-        image: "https://pliki.propertynews.pl/i/06/43/23/064323_r0_940.jpg",
-        // "https://www.dexerto.com/cdn-image/wp-content/uploads/2024/02/13/Whizbangs-Workshop.v1-1.jpg?width=3840&quality=75&format=auto",
+        id: 107,
+        title: "FUN - MeTime / Zuzu / Ekipka / Spontaniczny amigo (1)",
+        startDate: new Date(2024, 0, 19, 13, 15),
+        endDate: new Date(2024, 0, 19, 14, 15),
+        image: "https://wallpapercave.com/wp/wp1843569.jpg",
       },
       {
         id: 6,
@@ -2636,16 +2635,16 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           "https://preview.redd.it/nwzxu16avgp01.jpg?auto=webp&s=b71fbea1d7e6f973dcdcc1dc47231169b89bdacd",
       },
       {
-        id: 50,
-        title: "Giełda (60)",
-        startDate: new Date(2024, 0, 19, 15, 30),
-        endDate: new Date(2024, 0, 19, 16, 30),
-        image:
-          "https://www.investopedia.com/thmb/ASStR21rMu9-9_nj1x07H83zbUs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/close-up-of-stock-market-data-on-digital-display-1058454392-c48e2501742f4c21ad57c25d6a087bd0.jpg",
+        id: 101,
+        title: "P. Pieszczę (1) [Mi Amigo (P.C.C. & Cldr) | Wrld RPG]",
+        startDate: new Date(2024, 0, 19, 13, 30),
+        endDate: new Date(2024, 0, 19, 14, 30),
+        image: "https://pliki.propertynews.pl/i/06/43/23/064323_r0_940.jpg",
+        // "https://www.dexerto.com/cdn-image/wp-content/uploads/2024/02/13/Whizbangs-Workshop.v1-1.jpg?width=3840&quality=75&format=auto",
       },
       {
         id: 7,
-        title: "MeTime / Zuzu / Ekipka / Spontaniczny amigo (2,5h)",
+        title: "FUN - MeTime / Zuzu / Ekipka / Spontaniczny amigo (2,5h)",
         startDate: new Date(2024, 0, 19, 16, 30),
         endDate: new Date(2024, 0, 19, 19, 0),
         image: "https://wallpapercave.com/wp/wp1843569.jpg",
@@ -2664,6 +2663,14 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         endDate: new Date(2024, 0, 19, 20, 30),
         image:
           "https://static.wikia.nocookie.net/hearthstone_gamepedia/images/6/6a/Rest_and_Relaxation_full.jpg/revision/latest?cb=20210407211101",
+      },
+      {
+        id: 50,
+        title: "Giełda (60)",
+        startDate: new Date(2024, 0, 19, 20, 30),
+        endDate: new Date(2024, 0, 19, 21, 30),
+        image:
+          "https://www.investopedia.com/thmb/ASStR21rMu9-9_nj1x07H83zbUs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/close-up-of-stock-market-data-on-digital-display-1058454392-c48e2501742f4c21ad57c25d6a087bd0.jpg",
       },
       {
         id: 10,
