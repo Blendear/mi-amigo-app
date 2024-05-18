@@ -27,7 +27,7 @@ export const getSubAppImageAndComponent = ({
     },
     "meals-and-macros": {
       imageOrGifPath: "https://via.placeholder.com/150",
-      component: <MealsAndMacros payload={payload} />,
+      component: <MealsAndMacros globalSubAppData={payload} />,
     },
   }[subAppName];
 };
