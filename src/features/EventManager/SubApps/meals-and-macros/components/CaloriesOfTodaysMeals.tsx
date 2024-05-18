@@ -47,6 +47,10 @@ export const CaloriesOfTodaysMeals = () => {
   const getTotalDailyCalories = () => {
     let totalCalories = 0;
 
+    // Yes, all the ingredients of all the meals of the day are counted
+    // since nothing is actually calculating all the meals calories/prices
+    // The meal calories / price calculation is only for the chosen meal,
+    // not for all of the daily meals
     MealsAndMacros.globalSubAppData.periodOfDaysOfEating[
       MealsAndMacros.dayOfMealPlanIndex
     ].forEach((mealReference) => {
