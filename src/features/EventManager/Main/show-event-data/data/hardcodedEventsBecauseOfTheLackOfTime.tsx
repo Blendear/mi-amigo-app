@@ -1959,16 +1959,18 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 11,
             name: "Pomidory suszone & Olej z nich",
-            description: "1/6 z 135g, czyli połowy słoika | Ole! - Carrefour",
-            amount: 270,
+            description:
+              "porcja = 1/6 słoika NEETO, aka 57.5/6. ALE SŁOIK TO W POŁOWEI OLEJ, więc kalorie i geramature porcji licz netto, | Ole! - Carrefour",
+            amount: 9.58, //115 / 2 = 57.5 TODO: Check if thats the actual amonts of calories for "netto" tomato
             unit: "g",
             macros: {
               forThisAmount: 100,
-              calories: 538,
+              calories: 178,
             },
             priceDetails: {
-              price: 11.79,
-              forThisAmount: 270,
+              // price: 11.79,
+              price: 8.15,
+              forThisAmount: 230,
             },
           },
           {
@@ -2602,7 +2604,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             ytVideoId:
               "Ugotować makaron.Szpinak pokroić. Na patelnię na średnim ogniu dać masło,  pokrojony czosnek i dużo soli. Rozgrzać aż masło się roztopi. Nie można dopuścić, by spaliło się. Dodać szpinak i mieszać od czasu do czasu. Gdy szpinak będzie miękki, dodać sos sojowy i pokrojone pomidory suszone. Do smaku dodać łyżkę oleju z pomidorów. Przyprawić do smaku - powinien być mocny.Ugotowany makaron odcedzić na sitku i wsypać na patelnie. Smażyć ze szpinakiem, aż wszystko się obklei. Dosolić, jeżeli jest za mało wyraziste.",
             ingredientsIds: [
-              5, 3, 10, 11, 12, 14,
+              5, 10, 11, 12, 14,
               // 15, 13 - Isn't necessary IMO
               16,
             ],
