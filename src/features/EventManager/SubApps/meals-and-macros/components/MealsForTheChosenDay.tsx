@@ -10,7 +10,8 @@ import { UnplannedEatenCalories } from "./UnplannedEatenCalories";
 // import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 // import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 
-const OneTwoTFWCNCss = {
+// two words fully written, the rest are initials
+const mealsFTCDCss = {
   container: css({
     // gridRow: "1 / 3",
     // padding: "1rem",
@@ -37,6 +38,8 @@ const OneTwoTFWCNCss = {
     // },
     //
   }),
+
+  explanation: css({ fontSize: "1.1rem", color: `lightgreen` }),
 };
 
 export const MealsForTheChosenDay = () => {
@@ -49,6 +52,12 @@ export const MealsForTheChosenDay = () => {
       <MealOfTheDayChooser />
 
       <ChosenMealOfTheDay />
+
+      <p css={mealsFTCDCss.explanation}>
+        {
+          "* The sum of calories / prices of the meal & day won't change after you change the amount of the given ingredient. it's a future upgrade"
+        }
+      </p>
 
       <CaloriesOfTodaysMeals />
 

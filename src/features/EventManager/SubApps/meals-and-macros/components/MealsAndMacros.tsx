@@ -15,8 +15,6 @@ const mealsAndMacrosCss = {
   container: css({
     padding: "1rem 1rem 15rem 1rem",
   }),
-
-  explanation: css({ fontSize: "1.1rem", color: `darkgrey` }),
 };
 
 export const MealsAndMacros = ({ globalSubAppData }: MealsAndMacrosProps) => {
