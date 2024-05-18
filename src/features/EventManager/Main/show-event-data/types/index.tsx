@@ -160,9 +160,7 @@ export type SwiperCustomProps = {
   swiperContainerCss: {};
   spaceBetweenSlides?: string;
   activeSlide?: number;
-  setActiveSlide?: (
-    newIndex
-  ) => void | React.Dispatch<React.SetStateAction<number>>;
+  setActiveSlide?: (newIndex) => void;
   // "forceUpdate" is used when the "activeSlide" is saved as a "useRef"
   // Storing a "activeSlide" inside a "useState" would auto-rerender, but
   // in this case, "forceUpdate" will force a rerender of the component

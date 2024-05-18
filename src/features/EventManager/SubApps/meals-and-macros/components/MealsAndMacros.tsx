@@ -4,13 +4,12 @@ import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
 import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 import { MealsAndMacrosProps } from "../types";
-import { useRef, useState } from "react";
-import { MealsAndMacrosContext } from "../context/MealsAndMacrosContext";
-import { PeriodOfDaysOfEating } from "./PeriodOfDaysOfEating";
-import { MealOfTheDay } from "./MealOfTheDay";
-import { Meal } from "./Meal";
-import { CaloriesOfTodaysMeals } from "./CaloriesOfTodaysMeals";
 import { useEffect } from "react";
+import { useAppDispatch, useAppSelector } from "@/store/redux/hooks";
+import { contextsSliceActions } from "@/store/redux/store-redux";
+import { MealsForTheChosenDay } from "./MealsForTheChosenDay";
+import { AllAvailableMeals } from "./AllAvailableMeals";
+import { WhichMealsToShowChooser } from "./WhichMealsToShowChooser";
 
 const mealsAndMacrosCss = {
   container: css({
@@ -45,96 +44,38 @@ const mealsAndMacrosCss = {
   explanation: css({ fontSize: "1.1rem", color: `darkgrey` }),
 };
 
-export const MealsAndMacros = ({ payload }: MealsAndMacrosProps) => {
-  const [update, forceUpdate] = useState(false);
-  const dayOfMealPlanIndex = useRef(1);
-  const mealOfTheDayIndex = useRef(0);
-  const [contentVariant, setContentVariant] = useState<"periods" | "all-meals">(
-    "periods"
-  );
+export const MealsAndMacros = ({ globalSubAppData }: MealsAndMacrosProps) => {
+  const { MealsAndMacros } = useAppSelector((state) => state.contextsReducer);
 
-  const [additionalCalories, setAdditionalCalories] = useState(() => {
-    // Get value from local storage, default to 0 if not present
-    return localStorage.getItem("additionalCalories") || "0";
-  });
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
-    // Store additional calories in local storage whenever it changes
-    localStorage.setItem("additionalCalories", additionalCalories);
-  }, [additionalCalories]);
+    dispatch(
+      contextsSliceActions.setContextKeyValue({
+        contextName: "MealsAndMacros",
+        keyName: "globalSubAppData",
+        newValue: globalSubAppData,
+      })
+    );
+  }, []);
 
   return (
-    <MealsAndMacrosContext.Provider
-      value={{
-        update,
-        forceUpdate,
-        payload,
-        dayOfMealPlanIndex,
-        mealOfTheDayIndex,
-      }}
-    >
-      <section css={mealsAndMacrosCss.container}>
-        <button
-          css={[universalCss.container, universalCss.button]}
-          onClick={() => {
-            setContentVariant((prev) => {
-              return prev === "periods" ? "all-meals" : "periods";
-            });
-          }}
-        >
-          {contentVariant}
-        </button>
-        {contentVariant === "periods" ? (
-          <div>
-            <PeriodOfDaysOfEating />
+    <section css={mealsAndMacrosCss.container}>
+      <WhichMealsToShowChooser />
 
-            <MealOfTheDay />
-
-            {/* Shows only the chosen meal of the chosen day */}
-            <Meal
-              details={
-                payload.mealsAvailable[
-                  payload.periodOfDaysOfEating[dayOfMealPlanIndex.current][
-                    mealOfTheDayIndex.current
-                  ].mealId
-                ]
-              }
-            />
-            <CaloriesOfTodaysMeals />
-
-            {/* save and get it from local storage */}
-            <div css={mealsAndMacrosCss.additionalCalories}>
-              <label htmlFor="additionalCalories">Additional</label>
-              <div>
-                <input
-                  type="number"
-                  id="additionalCalories"
-                  defaultValue={additionalCalories}
-                  onChange={(e) => setAdditionalCalories(e.target.value)}
-                />
-                <span>🔥</span>
-              </div>
-            </div>
-
-            <p css={mealsAndMacrosCss.explanation}>
-              {
-                "* Default value, without recounting after ingredient amounts change"
-              }
-            </p>
-          </div>
+      {/* It takes a split second for the context to update and create the globalSubAppData, that's why this
+      ".mealsAvailable.length > 0" check is necessary, to not throw errors on the initial render */}
+      {MealsAndMacros.globalSubAppData.mealsAvailable.length > 0 ? (
+        MealsAndMacros.contentVariant === "periods" ? (
+          <MealsForTheChosenDay />
         ) : (
-          // Show all meals
-          <div>
-            <p>
-              KOCHANIUTKI, widziana porcja oznacza 1/6 ugotowanej całości,
-              żebyśmy - ja i Zuza - mieli 1 porcję danego dania przez 3 dni
-            </p>
-            {payload.mealsAvailable.map((meal, index) => (
-              <Meal hideContentUnderNamedButton details={meal} key={index} />
-            ))}
-          </div>
-        )}
-      </section>
-    </MealsAndMacrosContext.Provider>
+          <AllAvailableMeals />
+        )
+      ) : (
+        <div>
+          No meals exist - you need to add at least one to use this subapp
+        </div>
+      )}
+    </section>
   );
 };

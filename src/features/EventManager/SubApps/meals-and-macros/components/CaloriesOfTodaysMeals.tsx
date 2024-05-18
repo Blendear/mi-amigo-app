@@ -33,6 +33,16 @@ export const CaloriesOfTodaysMeals = () => {
   const { payload, dayOfMealPlanIndex, mealOfTheDayIndex } = useContext(
     MealsAndMacrosContext
   );
+  // const [additionalCalories, setAdditionalCalories] = useState(() => {
+  //   // Get value from local storage, default to 0 if not present
+  //   return "0";
+  //   // return global?.localStorage.getItem("additionalCalories") || "0";
+  // });
+
+  // useEffect(() => {
+  //   // Store additional calories in local storage whenever it changes
+  //   global?.localStorage.setItem("additionalCalories", additionalCalories);
+  // }, [additionalCalories]);
 
   const getTotalDailyCalories = () => {
     let totalCalories = 0;

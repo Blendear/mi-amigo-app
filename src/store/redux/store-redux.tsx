@@ -5,34 +5,50 @@ import { hardcodedEventsBecauseOfTheLackOfTime } from "@/features/EventManager/M
 // Why context and appDataOfCurrentUser separately? Because contexts are for countering prop drilling only,
 // and appDataOfCurrentUser is for reading/editing data of the current user
 //
-// One big data tree structure for stroing all the data of the current user
-const appDataOfCurrentUser: AppDataOfCurrentUser = {
-  eventsWithNeeds: {
-    chestWithAllDayLongEvents: { necessary: [], oneDay: [] },
-    libraryOfTemplateEvents: [],
-    sheduleOfHourlyPlannedEvents: [],
-  },
-};
+// Dyanmic global data, like the props to specific subapps based on what the user has inserted in the localStorage
+const appDataOfCurrentUser: AppDataOfCurrentUser =
+  hardcodedEventsBecauseOfTheLackOfTime;
+
 // Why not useContext? Because useContext forces children to rerender in some cases
 // (when there's a non-useRef value, like useState, for example) so it's not an
 // actual substitute for a state management tool like Redux. That's cleaner, actually
-const contexts =
-  // :
-  // GlobalReduxContextsType
-  {
-    // ChildA: { keyNameA: "valueA" },
-    // ChildB: { keyNameA: "valueB" },
-    // MealsAndMacros: { globalSubAppData: hardcodedEventsBecauseOfTheLackOfTime.eventsWithNeeds.libraryOfTemplateEvents.find(
-    //
-    // ) },
-  };
+const contexts: GlobalReduxContextsType = {
+  // ChildA: { keyNameA: "valueA" },
+  // ChildB: { keyNameA: "valueB" },
+
+  Global: {},
+
+  // SubApp - meals-and-macros
+  MealsAndMacros: {
+    globalSubAppData: {
+      ingredientsAvailable: [],
+      mealsAvailable: [],
+      periodOfDaysOfEating: {},
+    },
+
+    contentVariant: "periods",
+
+    dayOfMealPlanIndex: 1,
+
+    mealOfTheDayIndex: 0,
+
+    additionalCalories: 0,
+  },
+};
 // We don't need to write the "fR" prefix in the state name, because the "forceRerender" is already in
 // the name of the state path when we will use the useAppSelector hook
 const forceRerender = {
   // ChildA: false,
   // ChildB: false,
+
+  // SubApp - project-cost-calculator
   FeatureRanges: false,
   UserStoryAndBuildingBlocks: false,
+
+  // SubApp - meals-and-macros
+  ChosenMealOfTheDay: false,
+  Meal: false,
+  CaloriesOfTodaysMeals: false,
 };
 
 const appDataOfCurrentUserSlice = createSlice({

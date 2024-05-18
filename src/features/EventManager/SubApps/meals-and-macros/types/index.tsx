@@ -1,6 +1,8 @@
 import { Ingredient, MealsAndMacrosSubAppPayload } from "@/types";
 
-export type MealsAndMacrosProps = { payload: MealsAndMacrosSubAppPayload };
+export type MealsAndMacrosProps = {
+  globalSubAppData: MealsAndMacrosSubAppPayload;
+};
 
 export type MealProps = {
   details: MealsAndMacrosSubAppPayload["mealsAvailable"][0];

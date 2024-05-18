@@ -10,6 +10,7 @@ import Video from "@/features/EventManager/SubApps/yt-watcher/components/Video";
 import { Ingredient } from "./Ingredient";
 import { MealsAndMacrosContext } from "../context/MealsAndMacrosContext";
 import { useContext } from "react";
+import { useAppSelector } from "@/store/redux/hooks";
 
 const mealCss = {
   container: css(universalCss.container),
@@ -39,40 +40,32 @@ const mealCss = {
 };
 
 export const Meal = ({ details, hideContentUnderNamedButton }: MealProps) => {
-  const { payload, dayOfMealPlanIndex, mealOfTheDayIndex } = useContext(
-    MealsAndMacrosContext
-  );
+  const { MealsAndMacros } = useAppSelector((state) => state.contextsReducer);
 
   const [hideDetails, setHideDetails] = useState(
     hideContentUnderNamedButton || false
   );
 
-  const currentMeal = useMemo(() => {
-    return payload.mealsAvailable[
-      payload.periodOfDaysOfEating[dayOfMealPlanIndex.current][
-        mealOfTheDayIndex.current
-      ].mealId
-    ];
-  }, [
-    dayOfMealPlanIndex,
-    mealOfTheDayIndex,
-    payload.mealsAvailable,
-    payload.periodOfDaysOfEating,
-  ]);
-
   const currentIngredients = useMemo(() => {
-    return currentMeal.ingredientsIds.map((ingredientId) => {
-      return payload.ingredientsAvailable[ingredientId];
+    return details.ingredientsIds.map((ingredientId) => {
+      return MealsAndMacros.globalSubAppData.ingredientsAvailable[ingredientId];
     });
-  }, [currentMeal.ingredientsIds, payload.ingredientsAvailable]);
+  }, [
+    details.ingredientsIds,
+    MealsAndMacros.globalSubAppData.ingredientsAvailable,
+  ]);
 
   const getTotalMealCalories = () => {
     let totalCalories = 0;
 
     currentIngredients.forEach((ingredient) => {
-      totalCalories +=
+      const addThisAmountOfCalories =
         (ingredient.macros.calories / ingredient.macros.forThisAmount) *
         ingredient.amount;
+
+      // "=== 0" so that we dont divide by zero
+      totalCalories +=
+        ingredient.macros.forThisAmount === 0 ? 0 : addThisAmountOfCalories;
     });
 
     return totalCalories;
@@ -82,10 +75,12 @@ export const Meal = ({ details, hideContentUnderNamedButton }: MealProps) => {
     let totalPrice = 0;
 
     currentIngredients.forEach((ingredient) => {
-      totalPrice +=
+      const addThisAmountOfPrice =
         (ingredient.priceDetails.price /
           ingredient.priceDetails.forThisAmount) *
         ingredient.amount;
+      totalPrice +=
+        ingredient.priceDetails.forThisAmount === 0 ? 0 : addThisAmountOfPrice;
     });
 
     return totalPrice;
@@ -93,6 +88,7 @@ export const Meal = ({ details, hideContentUnderNamedButton }: MealProps) => {
 
   return (
     <div css={mealCss.container}>
+      {/* Toggles the visibility of clicked meals - used in the "all-meals" visibility variant, to de-clutter the list from unwanted meal content */}
       {hideContentUnderNamedButton && (
         <button
           onClick={() => {
@@ -106,6 +102,8 @@ export const Meal = ({ details, hideContentUnderNamedButton }: MealProps) => {
           </p>
         </button>
       )}
+
+      {/* Content of the meal */}
       {(!hideContentUnderNamedButton || !hideDetails) && (
         <div>
           <Video yTvideoId={details.ytVideoId} />
@@ -117,11 +115,11 @@ export const Meal = ({ details, hideContentUnderNamedButton }: MealProps) => {
           <div css={mealCss.totalCalories}>
             <p>{`Meal *`}</p>
             <div>
-              <div>{`${getTotalMealCalories()}`}</div>
+              <div>{`${getTotalMealCalories().toFixed(0)}`}</div>
               <span>🔥</span>
             </div>
             <div>
-              <div>{`${getTotalMealPrice()}`}</div>
+              <div>{`${getTotalMealPrice().toFixed(2)}`}</div>
               <span>💸</span>
             </div>
           </div>

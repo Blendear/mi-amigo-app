@@ -50,7 +50,7 @@ export type Meal = {
   ingredientsIds: number[];
 };
 
-export type MealsAndMacrosSubAppPayload = {
+export type MealsAndMacrosProps = {
   ingredientsAvailable: Ingredient[];
   mealsAvailable: Meal[];
   periodOfDaysOfEating: {
@@ -65,13 +65,15 @@ export type MealsAndMacrosSubAppPayload = {
   };
 };
 
+export type MealsAndMacrosSubAppPayload = MealsAndMacrosProps;
+
 export type YTVideoWatcherSubAppPayload = {
   ytVideoIds: string[];
 };
 
 export type SubappPayloads = {
   "yt-video-watcher": YTVideoWatcherSubAppPayload;
-  "meals-and-macros": MealsAndMacrosSubAppPayload;
+  "meals-and-macros": MealsAndMacrosProps;
   // Add more subapps and their respective payload types as needed
 };
 
@@ -86,6 +88,19 @@ export type YouTubeVideoIFrameProps = {};
 
 export type ModifyContentButtonsProps = {};
 
+export type YTWatcherProps = {
+  listOfYouTubeVideoIDs: string[];
+};
+
+export type SubAppaGlobalData = {
+  YTWatcher: {
+    [variantName: string]: YTWatcherProps;
+  };
+  MealsAndMacros: {
+    [variantName: string]: MealsAndMacrosProps;
+  };
+};
+
 export type AppDataOfCurrentUser = {
   eventsWithNeeds: {
     chestWithAllDayLongEvents: {
@@ -99,11 +114,24 @@ export type AppDataOfCurrentUser = {
     libraryOfTemplateEvents: EventWithNeeds[];
     sheduleOfHourlyPlannedEvents: any[]; // TODO: TS types and implement
   };
-  // The SubApp payload for the given event is stored in the state of the event. Because oftenly,
-  // like in Yt Watcher, the videos are depended on the event. Not one global state
+
+  // All properties will be an object of variants kets, which will store the variant of data for the subappa
+  // YTWatcher will have different content depending on the event type for example
+  // App will allow to create your own variants in the future
+  subAppsGlobalData: SubAppaGlobalData;
 };
 
 export type GlobalReduxContextsType = {
-  // SubApp - MealsAndMacros
-  MealsAndMacros: { globalSubAppData: MealsAndMacrosSubAppPayload };
+  // ONLY non-dyanmic data, aka not the data that will be change depending on the user
+  // &
+  // data (even the dynamic, user specific one) that would create prop drilling if stored as a context value
+  Global: {};
+
+  MealsAndMacros: {
+    globalSubAppData: MealsAndMacrosProps;
+    dayOfMealPlanIndex: number; // starts from 1
+    mealOfTheDayIndex: number;
+    contentVariant: "periods" | "all-meals";
+    additionalCalories: number;
+  };
 };

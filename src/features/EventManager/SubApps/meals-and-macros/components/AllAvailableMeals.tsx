@@ -1,10 +1,9 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
+import { Meal } from "./Meal";
 // import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
 // import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 // import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
-
-import { AComponentProps } from "../types";
 
 // two words fully written, the rest are initials
 const OneTwoTFWCNCss = {
@@ -36,6 +35,17 @@ const OneTwoTFWCNCss = {
   }),
 };
 
-export const OneTwoThreeFourWordComponentName = ({}: AComponentProps) => {
-  return <div>AComponent</div>;
+export const AllAvailableMeals = () => {
+  return (
+    <section>
+      {" "}
+      <p>
+        KOCHANIUTKI, widziana porcja oznacza 1/6 ugotowanej całości, żebyśmy -
+        ja i Zuza - mieli 1 porcję danego dania przez 3 dni
+      </p>
+      {payload.mealsAvailable.map((meal, index) => {
+        return <Meal hideContentUnderNamedButton details={meal} key={index} />;
+      })}
+    </section>
+  );
 };

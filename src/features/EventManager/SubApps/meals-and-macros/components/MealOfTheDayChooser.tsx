@@ -36,7 +36,7 @@ const variantsCss = {
   }),
 };
 
-export const DayChooser = ({}) => {
+export const MealOfTheDayChooser = ({}) => {
   const { MealsAndMacros } = useAppSelector((state) => state.contextsReducer);
   const dispatch = useAppDispatch();
 
@@ -44,47 +44,40 @@ export const DayChooser = ({}) => {
     <SwiperCustom
       swiperContainerCss={variantsCss.container}
       spaceBetweenSlides="10rem"
-      activeSlide={MealsAndMacros.dayOfMealPlanIndex - 1}
-      setActiveSlide={(index) => {
+      activeSlide={MealsAndMacros.mealOfTheDayIndex}
+      setActiveSlide={(index) =>
         dispatch(
           contextsSliceActions.setContextKeyValue({
             contextName: "MealsAndMacros",
             keyName: "mealOfTheDayIndex",
-            newValue: 0,
+            newValue: index,
           })
-        ),
-          dispatch(
-            contextsSliceActions.setContextKeyValue({
-              contextName: "MealsAndMacros",
-              keyName: "dayOfMealPlanIndex",
-              newValue: index + 1,
-            })
-          );
-      }}
+        )
+      }
       forceUpdate={() => {
         dispatch(
           forceRerenderSliceActions.forceRerender("MealsForTheChosenDay")
         );
       }}
     >
-      {Object.keys(MealsAndMacros.globalSubAppData.periodOfDaysOfEating).map(
-        (dayNumber, index) => (
-          <SwiperSlide key={index}>
-            <div
-              css={[
-                universalCss.button(
-                  index === MealsAndMacros.dayOfMealPlanIndex - 1,
-                  `rgb(${colors.tertiaryLight})`,
-                  `rgb(${colors.whiteLight})`
-                ),
-                variantsCss.variant,
-              ]}
-            >
-              {dayNumber}
-            </div>
-          </SwiperSlide>
-        )
-      )}
+      {MealsAndMacros.globalSubAppData.periodOfDaysOfEating[
+        MealsAndMacros.dayOfMealPlanIndex
+      ].map((meal, index) => (
+        <SwiperSlide key={index}>
+          <div
+            css={[
+              universalCss.button(
+                index === MealsAndMacros.mealOfTheDayIndex,
+                `rgb(${colors.tertiaryLight})`,
+                `rgb(${colors.whiteLight})`
+              ),
+              variantsCss.variant,
+            ]}
+          >
+            {MealsAndMacros.globalSubAppData.mealsAvailable[meal.mealId].name}
+          </div>
+        </SwiperSlide>
+      ))}
     </SwiperCustom>
   );
 };
