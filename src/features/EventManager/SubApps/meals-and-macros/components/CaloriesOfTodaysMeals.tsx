@@ -5,6 +5,7 @@ import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universa
 // import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { useContext, useMemo } from "react";
 import { MealsAndMacrosContext } from "../context/MealsAndMacrosContext";
+import { useAppSelector } from "@/store/redux/hooks";
 
 const caloriesOfTodaysMealsCss = {
   container: css([
@@ -30,9 +31,8 @@ const caloriesOfTodaysMealsCss = {
 };
 
 export const CaloriesOfTodaysMeals = () => {
-  const { payload, dayOfMealPlanIndex, mealOfTheDayIndex } = useContext(
-    MealsAndMacrosContext
-  );
+  const { MealsAndMacros } = useAppSelector((state) => state.contextsReducer);
+
   // const [additionalCalories, setAdditionalCalories] = useState(() => {
   //   // Get value from local storage, default to 0 if not present
   //   return "0";
@@ -47,20 +47,25 @@ export const CaloriesOfTodaysMeals = () => {
   const getTotalDailyCalories = () => {
     let totalCalories = 0;
 
-    payload.periodOfDaysOfEating[dayOfMealPlanIndex.current].forEach(
-      (mealReference) => {
-        payload.mealsAvailable[mealReference.mealId].ingredientsIds.forEach(
-          (ingredientId) => {
-            const currentIngredient =
-              payload.ingredientsAvailable[ingredientId];
-            totalCalories +=
-              (currentIngredient.macros.calories /
-                currentIngredient.macros.forThisAmount) *
-              currentIngredient.amount;
-          }
-        );
-      }
-    );
+    MealsAndMacros.globalSubAppData.periodOfDaysOfEating[
+      MealsAndMacros.dayOfMealPlanIndex
+    ].forEach((mealReference) => {
+      MealsAndMacros.globalSubAppData.mealsAvailable[
+        mealReference.mealId
+      ].ingredientsIds.forEach((ingredientId) => {
+        const currentIngredient =
+          MealsAndMacros.globalSubAppData.ingredientsAvailable[ingredientId];
+
+        const caloriesToAdd =
+          (currentIngredient.macros.calories /
+            currentIngredient.macros.forThisAmount) *
+          currentIngredient.amount;
+
+        // "=== 0" to prevent division by zero
+        totalCalories +=
+          currentIngredient.macros.forThisAmount === 0 ? 0 : caloriesToAdd;
+      });
+    });
 
     return totalCalories;
   };
@@ -69,7 +74,7 @@ export const CaloriesOfTodaysMeals = () => {
     <div css={caloriesOfTodaysMealsCss.container}>
       <p>{`Daily *`}</p>
       <div>
-        <div>{`${getTotalDailyCalories()}`}</div>
+        <div>{`${getTotalDailyCalories().toFixed(0)}`}</div>
         <span>🔥</span>
       </div>
     </div>

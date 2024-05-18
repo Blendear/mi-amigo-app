@@ -39,7 +39,6 @@ const WhichMealsTSCCss = {
 };
 
 export const ChosenMealOfTheDay = () => {
-  // Redux context manipulation
   const { MealsAndMacros } = useAppSelector((state) => state.contextsReducer);
 
   useForceRerender("ChosenMealOfTheDay");

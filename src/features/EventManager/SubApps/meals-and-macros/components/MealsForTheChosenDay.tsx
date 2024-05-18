@@ -41,6 +41,8 @@ const OneTwoTFWCNCss = {
 
 export const MealsForTheChosenDay = () => {
   useForceRerender("MealsForTheChosenDay");
+
+  console.log("MealsForTheChosenDay");
   return (
     <section>
       <DayChooser />
@@ -49,7 +51,7 @@ export const MealsForTheChosenDay = () => {
 
       <ChosenMealOfTheDay />
 
-      {/* <CaloriesOfTodaysMeals /> */}
+      <CaloriesOfTodaysMeals />
 
       {/* save and get it from local storage */}
       {/* <div css={mealsAndMacrosCss.additionalCalories}>
