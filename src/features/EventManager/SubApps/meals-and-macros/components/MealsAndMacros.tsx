@@ -13,7 +13,7 @@ import { WhichMealsToShowChooser } from "./WhichMealsToShowChooser";
 
 const mealsAndMacrosCss = {
   container: css({
-    padding: "1rem 1rem 3rem 1rem",
+    padding: "1rem 1rem 15rem 1rem",
   }),
 
   additionalCalories: css([
