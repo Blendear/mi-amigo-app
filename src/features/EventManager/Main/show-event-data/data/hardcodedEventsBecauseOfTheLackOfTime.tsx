@@ -1807,8 +1807,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 0,
             name: "Kabanosy",
-            description: "Cała paczka | Tarczyński - drób/wieprz (nie wędzone)",
-            amount: 1, // whole package
+            description: "Pół paczki | Tarczyński - drób/wieprz (nie wędzone)",
+            amount: 0.5, // whole package
             unit: "szt",
             macros: {
               forThisAmount: 1,
@@ -1852,15 +1852,15 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 4,
             name: "Banan",
-            description: "1/10 z 250g kostki | Rama (niebieska) - Carrefour",
-            amount: 40, // 200 / 5 = 40g for 2 buns
-            unit: "g",
+            description: "Średni | Carrefour",
+            amount: 1,
+            unit: "szt",
             macros: {
-              forThisAmount: 100,
-              calories: 713,
+              forThisAmount: 1,
+              calories: 100,
             },
             priceDetails: {
-              price: 4.99,
+              price: 1.5,
               forThisAmount: 1,
             },
           },
@@ -2584,7 +2584,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             imagePaths:
               "https://polskie-mieso.pl/wp-content/uploads/2021/03/kabanosy.jpg",
             ytVideoId: "F1Hq8eVOMHs",
-            ingredientsIds: [1, 2, 3, 4],
+            ingredientsIds: [0, 1, 2, 4],
           },
           {
             id: 1,

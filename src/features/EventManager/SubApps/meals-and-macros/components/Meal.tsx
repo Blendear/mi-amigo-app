@@ -48,7 +48,13 @@ export const Meal = ({ details, hideContentUnderNamedButton }: MealProps) => {
 
   const currentIngredients = useMemo(() => {
     return details.ingredientsIds.map((ingredientId) => {
-      return MealsAndMacros.globalSubAppData.ingredientsAvailable[ingredientId];
+      const searchedIngredient =
+        MealsAndMacros.globalSubAppData.ingredientsAvailable.find(
+          (ingredient) => ingredient.id === ingredientId
+        );
+      console.log(searchedIngredient);
+
+      return searchedIngredient;
     });
   }, [
     details.ingredientsIds,
