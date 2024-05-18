@@ -16,31 +16,6 @@ const mealsAndMacrosCss = {
     padding: "1rem 1rem 15rem 1rem",
   }),
 
-  additionalCalories: css([
-    universalCss.container,
-    {
-      display: "grid",
-      gridAutoFlow: "column",
-      gridTemplateColumns: "7fr 3fr",
-      justifyItems: "start",
-
-      "& *": {
-        color: "orange",
-        fontSize: "2rem",
-      },
-
-      "& > div": {
-        justifySelf: "end",
-        display: "flex",
-
-        "& > input": {
-          width: "5rem",
-          textAlign: "end",
-        },
-      },
-    },
-  ]),
-
   explanation: css({ fontSize: "1.1rem", color: `darkgrey` }),
 };
 

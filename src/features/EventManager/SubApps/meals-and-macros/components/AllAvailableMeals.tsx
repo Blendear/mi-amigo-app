@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { Meal } from "./Meal";
+import { useAppSelector } from "@/store/redux/hooks";
 // import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
 // import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 // import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
@@ -36,6 +37,8 @@ const OneTwoTFWCNCss = {
 };
 
 export const AllAvailableMeals = () => {
+  const { MealsAndMacros } = useAppSelector((state) => state.contextsReducer);
+
   return (
     <section>
       {" "}
@@ -43,7 +46,7 @@ export const AllAvailableMeals = () => {
         KOCHANIUTKI, widziana porcja oznacza 1/6 ugotowanej całości, żebyśmy -
         ja i Zuza - mieli 1 porcję danego dania przez 3 dni
       </p>
-      {payload.mealsAvailable.map((meal, index) => {
+      {MealsAndMacros.globalSubAppData.mealsAvailable.map((meal, index) => {
         return <Meal hideContentUnderNamedButton details={meal} key={index} />;
       })}
     </section>

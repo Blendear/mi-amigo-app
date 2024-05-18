@@ -5,11 +5,11 @@ import { MealOfTheDayChooser } from "./MealOfTheDayChooser";
 import { ChosenMealOfTheDay } from "./ChosenMealOfTheDay";
 import { useForceRerender } from "@/hooks/useForceRerender";
 import { CaloriesOfTodaysMeals } from "./CaloriesOfTodaysMeals";
+import { UnplannedEatenCalories } from "./UnplannedEatenCalories";
 // import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
 // import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 // import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 
-// two words fully written, the rest are initials
 const OneTwoTFWCNCss = {
   container: css({
     // gridRow: "1 / 3",
@@ -42,7 +42,6 @@ const OneTwoTFWCNCss = {
 export const MealsForTheChosenDay = () => {
   useForceRerender("MealsForTheChosenDay");
 
-  console.log("MealsForTheChosenDay");
   return (
     <section>
       <DayChooser />
@@ -53,23 +52,7 @@ export const MealsForTheChosenDay = () => {
 
       <CaloriesOfTodaysMeals />
 
-      {/* save and get it from local storage */}
-      {/* <div css={mealsAndMacrosCss.additionalCalories}>
-        <label htmlFor="additionalCalories">Additional</label>
-        <div>
-          <input
-            type="number"
-            id="additionalCalories"
-            defaultValue={additionalCalories}
-            onChange={(e) => setAdditionalCalories(e.target.value)}
-          />
-          <span>🔥</span>
-        </div>
-      </div>
-
-      <p css={mealsAndMacrosCss.explanation}>
-        {"* Default value, without recounting after ingredient amounts change"}
-      </p> */}
+      <UnplannedEatenCalories />
     </section>
   );
 };
