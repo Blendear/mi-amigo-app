@@ -1807,7 +1807,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 0,
             name: "Kabanosy",
-            description: "Pół paczki | Tarczyński - drób/wieprz (nie wędzone)",
+            description:
+              "Ta porcja = Pół paczki | Tarczyński - drób/wieprz (nie wędzone)",
             amount: 0.5, // whole package
             unit: "szt",
             macros: {
@@ -1822,7 +1823,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 1,
             name: "Bułka",
-            description: "Średnia, wyższa kajzerka lub kwadratowa z ziarnami",
+            description:
+              "Ta porcja = 1 bułka, Średnia, wyższa kajzerka lub kwadratowa z ziarnami",
             amount: 2,
             unit: "szt",
             macros: {
@@ -1837,7 +1839,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 2,
             name: "Masło Wegańskie",
-            description: "1/10 z 250g kostki | Rama (niebieska) - Carrefour",
+            description:
+              "Ta porcja = 1/10 z 250g kostki | Rama (niebieska) - Carrefour",
             amount: 40, // 200 / 5 = 40g for 2 buns
             unit: "g",
             macros: {
@@ -1850,9 +1853,25 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             },
           },
           {
+            id: 3,
+            name: "Białko wegańskie - SFD",
+            description:
+              "Ta porcja = 1 próbka plastikowa (jest w pudełku) | SFD",
+            amount: 1,
+            unit: "szt",
+            macros: {
+              forThisAmount: 1,
+              calories: 102,
+            },
+            priceDetails: {
+              price: 39.99,
+              forThisAmount: 17,
+            },
+          },
+          {
             id: 4,
             name: "Banan",
-            description: "Średni | Carrefour",
+            description: "Ta porcja = 1 Średni | Carrefour",
             amount: 1,
             unit: "szt",
             macros: {
@@ -1868,7 +1887,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             id: 5,
             name: "Makaron - Świderek",
             description:
-              "porcja = 1/6 z 750g, czyli 1,5 opakowania po 0.5 | Simply z pszenicy - Carrefour",
+              "Ta porcja = 1/6 z 750g (1/6 z 1,5 opakowania 500g'owego) | Simply z pszenicy - Carrefour",
             amount: 125, // 750 (1.5 * 500g package) / 6 = 125
             unit: "g",
             macros: {
@@ -1883,7 +1902,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 6,
             name: "Cukinia",
-            description: "porcja = 1/6 z 1100g, czyli 2 średnie sztuki",
+            description: "Ta porcja = 1/6 z 1100g (dwóch średnich cukinii)",
             amount: 183, // 1100 (2 pieces) / 6 = 183.33
             unit: "g",
             macros: {
@@ -1898,22 +1917,23 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 7,
             name: "Sos śmietanowy",
-            description: "",
-            amount: 0,
-            unit: "g",
+            description:
+              "TODO - ilość kalorii i gramatura porcji ogarnij - 3 sosy, czy 2 starczą?",
+            amount: 0.5,
+            unit: "szt",
             macros: {
-              forThisAmount: 0,
+              forThisAmount: 1,
               calories: 0,
             },
             priceDetails: {
-              price: 0,
-              forThisAmount: 0,
+              price: 2.55,
+              forThisAmount: 1,
             },
           },
           {
             id: 8,
             name: "Kurczak Filet Z Piersi",
-            description: "porcja = 1/6 z 500g",
+            description: "Ta porcja = 1/6 z 500g'wego opakowania",
             amount: 83.33, // 500 / 6 = 83.33
             unit: "g",
             macros: {
@@ -1928,7 +1948,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 9,
             name: "Olej rzepakowy",
-            description: "8ml = 1 łyżka duża, stołowa | Kujawski - Carrefour",
+            description:
+              "Ta porcja = 8ml = 1 łyżka duża, stołowa | Kujawski - Carrefour",
             amount: 8,
             unit: "ml",
             macros: {
@@ -1944,7 +1965,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             id: 10,
             name: "Szpinak KONIECZNIE TAŃSZY, Mrożony Brykiet",
             description:
-              "porcja = 1/6 z 900g, czyli z 2 opakowań po 450g | Carrefour",
+              "Ta porcja = 1/6 z 900g (z dwóch opakowań po 450g) | Carrefour",
             amount: 150,
             unit: "g",
             macros: {
@@ -1960,12 +1981,12 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             id: 11,
             name: "Pomidory suszone & Olej z nich",
             description:
-              "porcja = 1/6 słoika NEETO, aka 57.5/6. ALE SŁOIK TO W POŁOWEI OLEJ, więc kalorie i geramature porcji licz netto, | Ole! - Carrefour",
+              "Ta porcja = 1/6 słoika NEETO, aka 57.5/6. ALE SŁOIK TO W POŁOWEI OLEJ, więc kalorie i geramature porcji licz netto, | Ole! - Carrefour",
             amount: 9.58, //115 / 2 = 57.5 TODO: Check if thats the actual amonts of calories for "netto" tomato
             unit: "g",
             macros: {
               forThisAmount: 100,
-              calories: 178,
+              calories: 178, // TODO - check, since it might be diferrent per specific brand
             },
             priceDetails: {
               // price: 11.79,
@@ -1976,7 +1997,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 12,
             name: "Sos sojowy",
-            description: "1 łyżka = 10ml | TaoTao - Carrefour",
+            description: "Ta porcja = 1 łyżka = 10ml | TaoTao - Carrefour",
             amount: 10,
             unit: "ml",
             macros: {
@@ -2051,7 +2072,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 17,
             name: "Sos teriyaki",
-            description: "hook1 - w carreofurze nie ma chyba?",
+            description: "Ta porcja = ??? | TODO - w carreofurze nie ma chyba?",
             amount: 0,
             unit: "g",
             macros: {
@@ -2066,7 +2087,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 18,
             name: "Ryż biały",
-            description: "Gramy | Kuchnia Gosposi 1kg pakowany- Carrefur",
+            description:
+              "Ta porcja = 1 saszetka 100g'owa lub zważ 100g z 1kg paczki | Kuchnia Gosposi 1kg pakowany- Carrefur",
             amount: 100,
             unit: "g",
             macros: {
@@ -2081,31 +2103,32 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 19,
             name: "Brokuł",
-            description: "1szt = 500g | Carrefour",
-            amount: 1,
-            unit: "szt",
+            description: "Ta porcja = 1/6 sztuki (z 500g) | Carrefour",
+            amount: 83.33,
+            unit: "g",
             macros: {
-              forThisAmount: 1,
+              forThisAmount: 500,
               calories: 155,
             },
             priceDetails: {
               price: 6.59,
-              forThisAmount: 1,
+              forThisAmount: 500,
             },
           },
           {
             id: 20,
             name: "Ziemniaki",
-            description: "Młode? Najtańsze? Od kogoś?",
-            amount: 0,
-            unit: "___",
+            description:
+              "Ta porcja = 1/6 z 1kg | Ziemniaki jadalne do gotowania `Jakość z Natury Carrefour` 2 kg",
+            amount: 166.67,
+            unit: "g",
             macros: {
-              forThisAmount: 0,
-              calories: 0,
+              forThisAmount: 100,
+              calories: 71,
             },
             priceDetails: {
-              price: 0,
-              forThisAmount: 0,
+              price: 4.5,
+              forThisAmount: 1000,
             },
           },
           {
@@ -2126,23 +2149,23 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 22,
             name: "Przyprawa do kurczaka",
-            description: "_ | Selgros",
-            amount: 0,
-            unit: "___",
+            description: "Ta porcja = ??? TODO | Selgros",
+            amount: 100, // TODO
+            unit: "g",
             macros: {
-              forThisAmount: 0,
-              calories: 0,
+              forThisAmount: 100,
+              calories: 209,
             },
             priceDetails: {
-              price: 0, //hook1
-              forThisAmount: 0,
+              price: 40, // TODO
+              forThisAmount: 1000,
             },
           },
           {
             id: 23,
             name: "Jajko",
-            description: "L'ka | Marka Carrefourowska",
-            amount: 1,
+            description: "Ta porcja = 4 jajka typu L'ka | Marka Carrefourowska",
+            amount: 4,
             unit: "szt",
             macros: {
               forThisAmount: 1,
@@ -2157,7 +2180,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             id: 24,
             name: "Panierka ryżowa z CH",
             description:
-              "1 łyżka  = 5g (hook1 sprawdz to) (licz wysokosc napelnienia równa głębokości łyżki)| Szwajcarska",
+              "Ta porcja = 1 łyżka  = 5g (TODO sprawdz to) (licz wysokosc napelnienia równa głębokości łyżki)| Szwajcarska",
             amount: 5, // hook1
             unit: "g",
             macros: {
@@ -2172,7 +2195,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 25,
             name: "Rolada wołowa / Zraz wołowy",
-            description: "___",
+            description: "Ta porcja = 1 sztuka, 'średnia'",
             amount: 1,
             unit: "szt",
             macros: {
@@ -2180,15 +2203,16 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
               calories: 269,
             },
             priceDetails: {
-              price: 0, //hook1
+              price: 0, // TODO
               forThisAmount: 1,
             },
           },
           {
             id: 26,
             name: "Kluski",
-            description: "Paczka 500g | Carrefour",
-            amount: 1,
+            description:
+              "Ta porcja = 1/6 z 1.5 paczki 500g'owych (aka 1/4 jednej paczki 500'gmowej) | Carrefour",
+            amount: 0.25,
             unit: "szt",
             macros: {
               forThisAmount: 1,
@@ -2201,38 +2225,39 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
           {
             id: 27,
-            name: "Buraczki (z) chrzanem?)",
-            description: "Pudełko 480g | Multismak - Carrefour",
-            amount: 1,
+            name: "Buraczki (z chrzanem?)",
+            description: "TODO... Pudełko 480g | Multismak - Carrefour", //TODO
+            amount: 1, //TODO
             unit: "szt",
             macros: {
               forThisAmount: 1,
-              calories: 412.5,
+              calories: 412.5, //TODO
             },
             priceDetails: {
-              price: 4.89,
+              price: 4.89, //TODO
               forThisAmount: 1,
             },
           },
           {
             id: 28,
             name: "Sos pieczeniowy ciemny",
-            description: "___", //hook1
-            amount: 0,
-            unit: "ml",
+            description: "Ta porcja = 0.5 paczki | Winiary - Carrefour",
+            amount: 0.5,
+            unit: "szt",
             macros: {
-              forThisAmount: 0,
-              calories: 0,
+              forThisAmount: 1,
+              calories: 108, //27 * 4 = 108
             },
             priceDetails: {
-              price: 0,
-              forThisAmount: 0,
+              price: 2.85,
+              forThisAmount: 1,
             },
           },
           {
             id: 29,
             name: "Mięso mielone z indyka",
-            description: "Na gramy | Indykpol - Carrefour",
+            description:
+              "Ta porcja = 1/6 z 750g'owego pudełka | Indykpol - Carrefour",
             amount: 750,
             unit: "g",
             macros: {
@@ -2254,7 +2279,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             unit: "szt",
             macros: {
               forThisAmount: 1,
-              calories: 42, // (hook1 - sprawdz sam też na opakoniu w sklepie)
+              calories: 42, // (TODO - sprawdz sam też na opakoniu w sklepie)
             },
             priceDetails: {
               price: 5.99,
@@ -2265,8 +2290,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             id: 31,
             name: "Sałata karbowana",
             description:
-              "1 bukiet - Nie warto liczyć kalorii, 50kcal na cały bukiet | Carrefour",
-            amount: 1,
+              "Ta porcja = 1/10 z 1 bukietu - Nie warto liczyć kalorii, 50kcal na cały bukiet | Carrefour",
+            amount: 0.1,
             unit: "szt",
             macros: {
               forThisAmount: 1,
@@ -2280,8 +2305,9 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 32,
             name: "Kalafior",
-            description: "Dupny, ~880g, 1 otwarta dłoń",
-            amount: 1,
+            description:
+              "Ta porcja = 1/6 z 1 dupnego, ~880g'wego (średnica jak 1 otwarta dłoń)",
+            amount: 0.166,
             unit: "szt",
             macros: {
               forThisAmount: 1,
@@ -2295,7 +2321,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 33,
             name: "Kasza orkiszowa",
-            description: "1 torebka po 100g | Cenos - Carrefour",
+            description: "Ta porcja = 1 torebka po 100g | Cenos - Carrefour",
             amount: 1,
             unit: "szt",
             macros: {
@@ -2310,8 +2336,9 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 34,
             name: "Sos spaghetti",
-            description: "Cała paczka | Żółte opaowanie (winiary?) - Carrefour",
-            amount: 1,
+            description:
+              "Ta porcja = 0.5 paczki | Żółte opaowanie (winiary?) - Carrefour",
+            amount: 0.5,
             unit: "szt",
             macros: {
               forThisAmount: 1,
@@ -2325,8 +2352,9 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 35,
             name: "Makaron spaghetti",
-            description: "Na gramy | Marka Carrefourowska",
-            amount: 500,
+            description:
+              "Ta porcja = 1/6 z 1.5 paczki (z 750g w sumie) | Marka Carrefourowska",
+            amount: 125,
             unit: "g",
             macros: {
               forThisAmount: 100,
@@ -2340,7 +2368,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 36,
             name: "Sos pieczeniowy jasny",
-            description: "1 paczka | Winiary żółty - Carrefour",
+            description: "Ta porcja = 0.5 paczki | Winiary żółty - Carrefour",
             amount: 1,
             unit: "szt",
             macros: {
@@ -2355,7 +2383,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 37,
             name: "Makaron Konjac",
-            description: "Gramy| ??? - Carrefour",
+            description: "TODO| ??? - Carrefour",
             amount: 100,
             unit: "g",
             macros: {
@@ -2363,14 +2391,14 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
               calories: 6,
             },
             priceDetails: {
-              price: 0, //hook1
+              price: 0, // TODO
               forThisAmount: 100,
             },
           },
           {
             id: 38,
             name: "Makaron Chiński, a la spaghetti",
-            description: "1 paczka 100g | Tao Tao - Carrefour",
+            description: "Ta porcja = TODO | Tao Tao - Carrefour",
             amount: 1,
             unit: "szt",
             macros: {
@@ -2385,8 +2413,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 39,
             name: "Sos chiński",
-            description: "1 paczka | Knorr - Carrefour",
-            amount: 1,
+            description: "Ta porcja = 0.5 paczki | Knorr - Carrefour",
+            amount: 0.5,
             unit: "szt",
             macros: {
               forThisAmount: 1,
@@ -2400,7 +2428,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 40,
             name: "Pesto",
-            description: "1 łyżka = 20g | Marka Carrefourowska (Classic)",
+            description:
+              "Ta porcja = TODO, ale 1 łyżka = 20g | Marka Carrefourowska (Classic)",
             amount: 20,
             unit: "g",
             macros: {
@@ -2415,7 +2444,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 41,
             name: "Łosoś", // hook1
-            description: "Gramy, bez skóry | ??? - Carrefour",
+            description:
+              "Ta porcja = TODO, i to bez skóry ile| ??? - Carrefour",
             amount: 0,
             unit: "g",
             macros: {
@@ -2445,7 +2475,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 43,
             name: "Niebieska kapusta",
-            description: "1 łyżka = | Rolnik - Carrefour",
+            description:
+              "Ta porcja = TODO, ale 1 łyżka = ~15g (TODO tez sprawdz) | Rolnik - Carrefour",
             amount: 15,
             unit: "g",
             macros: {
@@ -2460,7 +2491,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 45,
             name: "Erytrytol, NIE KSYLITOL (Drogi)",
-            description: "Gramy | ??? - Carrefour",
+            description:
+              "BEZ 'Ta porcja...', tu już użyjemy dedykowanego 'nonDefaultAmount' | ??? - Carrefour",
             amount: 500,
             unit: "g",
             macros: {
@@ -2475,7 +2507,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 46,
             name: "Cynamon mielony (fiolka)",
-            description: "1 łyzka płaska = g | Kamias - Carrefour",
+            description:
+              "Ta porcja = TODO, wlicz tyle ile dajesz na raz do ryżu z mlekiem, ale 1 łyzka płaska = 4g podobno | Kamias - Carrefour",
             amount: 4,
             unit: "g",
             macros: {
