@@ -45,6 +45,19 @@ const ingredientCss = {
     },
   }),
 
+  description: css({
+    color: "rgb(255,255,255,0.5)",
+
+    "&:after": {
+      content: '""',
+      display: "block",
+      height: "1px",
+      width: "100%",
+      backgroundColor: "rgb(255,255,255,0.5)",
+      margin: "0.5rem 0",
+    },
+  }),
+
   macrosList: css({
     "& *": {
       color: "rgb(255,255,255,0.5)",
@@ -83,6 +96,10 @@ export const Ingredient = ({ details }: IngredientProps) => {
           (details.macros.calories * amount) / details.macros.forThisAmount
         } kcal`}</span>
       </h3>
+
+      <p css={ingredientCss.description}>
+        {details.description ? details.description : ""}
+      </p>
 
       <div css={ingredientCss.amount}>
         <div>Amount</div>
