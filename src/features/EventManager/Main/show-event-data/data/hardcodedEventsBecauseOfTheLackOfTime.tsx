@@ -1686,7 +1686,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
       {
         id: 1,
-        title: "P. Pieszczę & K. Kreuję (0.5 & 1.5) [T.Saska] > [LTC]",
+        title:
+          "NA LEŻĄCO P. Pieszczę & K. Kreuję | L. Lepię (0.5 & 1.5) [T.Saska] > [LTC]",
         startDate: new Date(2024, 0, 19, 7, 30),
         endDate: new Date(2024, 0, 19, 9, 30),
         image: "https://pliki.propertynews.pl/i/06/43/23/064323_r0_940.jpg",

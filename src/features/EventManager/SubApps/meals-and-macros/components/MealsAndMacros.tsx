@@ -10,6 +10,7 @@ import { contextsSliceActions } from "@/store/redux/store-redux";
 import { MealsForTheChosenDay } from "./MealsForTheChosenDay";
 import { AllAvailableMeals } from "./AllAvailableMeals";
 import { WhichMealsToShowChooser } from "./WhichMealsToShowChooser";
+import { hardcodedEventsBecauseOfTheLackOfTime } from "@/features/EventManager/Main/show-event-data/data/hardcodedEventsBecauseOfTheLackOfTime";
 
 const mealsAndMacrosCss = {
   container: css({
@@ -27,7 +28,11 @@ export const MealsAndMacros = ({ globalSubAppData }: MealsAndMacrosProps) => {
       contextsSliceActions.setContextKeyValue({
         contextName: "MealsAndMacros",
         keyName: "globalSubAppData",
-        newValue: globalSubAppData,
+        // TODO: Remake in the final app, so that it's taken from the users local storage
+        // For now it will only used by me, so I can just leave it hardcoded
+        newValue:
+          hardcodedEventsBecauseOfTheLackOfTime.subAppsGlobalData
+            .MealsAndMacros["healthy-diet"],
       })
     );
   }, []);
