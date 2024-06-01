@@ -14,6 +14,7 @@ import {
   contextsSliceActions,
   forceRerenderSliceActions,
 } from "@/store/redux/store-redux";
+import ImageWithWrapper from "@/components/ImageWithWrapper";
 
 const variantsCss = {
   container: css({
@@ -81,7 +82,18 @@ export const MealOfTheDayChooser = ({}) => {
               variantsCss.variant,
             ]}
           >
-            {MealsAndMacros.globalSubAppData.mealsAvailable[meal.mealId].name}
+            {/* {MealsAndMacros.globalSubAppData.mealsAvailable[meal.mealId].name} */}
+            <ImageWithWrapper
+              src={
+                MealsAndMacros.globalSubAppData.mealsAvailable[meal.mealId]
+                  .imagePaths
+              }
+              alt={
+                MealsAndMacros.globalSubAppData.mealsAvailable[meal.mealId].name
+              }
+              width="85px"
+              height="85px"
+            />
           </div>
         </SwiperSlide>
       ))}
