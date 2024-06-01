@@ -2,7 +2,7 @@
 import { css } from "@emotion/react";
 // import { variables } from "@/styles/emotion-css-experiment/abstracts/variables";
 import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
-// import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
+import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { IngredientProps } from "../types";
 import { useEffect, useRef, useState } from "react";
 import { useForceRerender } from "@/hooks/useForceRerender";
@@ -15,7 +15,7 @@ const ingredientCss = {
     gridAutoFlow: "column",
     gridTemplateColumns: "1fr max-content",
     justifyItems: "start",
-    borderBottom: "1px solid rgb(255,255,255,0.5)",
+    borderBottom: "1px solid rgb(255,255,255,0.3)",
 
     "& > span:nth-of-type(2)": {
       justifySelf: "end",
@@ -28,7 +28,7 @@ const ingredientCss = {
     justifyItems: "end",
 
     "& *": {
-      color: "rgb(255,255,255,0.5)",
+      color: "rgb(255,255,255,0.3)",
     },
 
     "& > div:first-of-type": {
@@ -44,34 +44,28 @@ const ingredientCss = {
       justifySelf: "end",
       display: "flex",
     },
+
+    "& > div:nth-of-type(2)": {
+      color: `rgb(${colors.whiteLight}, 0.5)`,
+    },
   }),
 
   description: css({
-    color: "rgb(255,255,255,0.5)",
+    color: "rgb(255,255,255,0.3)",
 
-    "&:after": {
+    "&:after, :before": {
       content: '""',
       display: "block",
       height: "1px",
       width: "100%",
-      backgroundColor: "rgb(255,255,255,0.5)",
+      backgroundColor: "rgb(255,255,255,0.3)",
       margin: "0.5rem 0",
     },
   }),
 
   macrosList: css({
     "& *": {
-      color: "rgb(255,255,255,0.5)",
-    },
-
-    // add a line to divide the list with the amount
-    "&:before": {
-      content: '""',
-      display: "block",
-      height: "1px",
-      width: "100%",
-      backgroundColor: "rgb(255,255,255,0.5)",
-      margin: "0.5rem 0",
+      color: "rgb(255,255,255,0.3)",
     },
 
     "& > li": {
@@ -98,14 +92,14 @@ export const Ingredient = ({ details, nonDefaultAmount }: IngredientProps) => {
         } kcal`}</span>
       </h3>
 
-      <p css={ingredientCss.description}>
-        {details.description ? details.description : ""}
-      </p>
-
       <div css={ingredientCss.amount}>
         <div>Amount</div>
         <div>{`${amount} ${details.unit}`}</div>
       </div>
+
+      <p css={ingredientCss.description}>
+        {details.description ? details.description : ""}
+      </p>
 
       <ul css={ingredientCss.macrosList}>
         <li>
