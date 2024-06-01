@@ -24,10 +24,15 @@ const variantsCss = {
 
     ".swiper-slide": {
       width: "max-content",
+      maxWidth: "200px",
       display: "grid",
       justifyItems: "center",
       alignItems: "center",
       fontSize: variables.fontSize.regular,
+
+      "& > div": {
+        padding: "7.5px",
+      },
     },
   }),
 
