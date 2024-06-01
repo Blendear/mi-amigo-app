@@ -43,15 +43,19 @@ export const ChosenMealOfTheDay = () => {
 
   useForceRerender("ChosenMealOfTheDay");
 
+  const mealsList = MealsAndMacros.globalSubAppData.mealsAvailable;
+
+  const todaysMealsIdsAndAmounts =
+    MealsAndMacros.globalSubAppData.periodOfDaysOfEating[
+      MealsAndMacros.dayOfMealPlanIndex
+    ];
+
+  const customMealData =
+    todaysMealsIdsAndAmounts[MealsAndMacros.mealOfTheDayIndex];
+
+  const meal = mealsList[customMealData.mealId];
+
   return (
-    <Meal
-      details={
-        MealsAndMacros.globalSubAppData.mealsAvailable[
-          MealsAndMacros.globalSubAppData.periodOfDaysOfEating[
-            MealsAndMacros.dayOfMealPlanIndex
-          ][MealsAndMacros.mealOfTheDayIndex].mealId
-        ]
-      }
-    />
+    <Meal details={meal} nonDefaultAmounts={customMealData.nonDefaultAmounts} />
   );
 };

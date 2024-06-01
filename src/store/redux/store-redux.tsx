@@ -1,6 +1,7 @@
 import { createSlice, configureStore, PayloadAction } from "@reduxjs/toolkit";
 import { AppDataOfCurrentUser, GlobalReduxContextsType } from "@/types";
 import { hardcodedEventsBecauseOfTheLackOfTime } from "@/features/EventManager/Main/show-event-data/data/hardcodedEventsBecauseOfTheLackOfTime";
+import { Ingredient } from "@/features/EventManager/SubApps/meals-and-macros/components/Ingredient";
 
 // Why context and appDataOfCurrentUser separately? Because contexts are for countering prop drilling only,
 // and appDataOfCurrentUser is for reading/editing data of the current user

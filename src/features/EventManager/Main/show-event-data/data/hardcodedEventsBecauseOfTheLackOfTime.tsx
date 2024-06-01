@@ -2259,7 +2259,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             name: "Mięso mielone z indyka",
             description:
               "Ta porcja = 1/6 z 750g'owego pudełka | Indykpol - Carrefour",
-            amount: 750,
+            amount: 125, // 750 / 6 = 125
             unit: "g",
             macros: {
               forThisAmount: 100,
@@ -2793,14 +2793,17 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           1: [
             {
               mealId: 0,
+              nonDefaultAmounts: [],
             },
             {
               mealId: 1,
+              nonDefaultAmounts: [],
             },
           ],
           2: [
             {
               mealId: 0,
+              nonDefaultAmounts: [],
             },
           ],
         },

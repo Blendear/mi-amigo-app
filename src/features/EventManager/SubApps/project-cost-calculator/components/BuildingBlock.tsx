@@ -64,8 +64,6 @@ export const BuildingBlock = ({
 }: BuildingBlockProps) => {
   const dispatch = useAppDispatch();
 
-  console.log("BuildingBlock rerendered");
-
   const [isResearchNeeded, setIsResearchNeeded] = useState(
     block.needsResearchBeforeCalculationWillBePossible
   );

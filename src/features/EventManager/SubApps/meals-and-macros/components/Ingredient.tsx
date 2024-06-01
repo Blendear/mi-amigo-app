@@ -4,7 +4,8 @@ import { css } from "@emotion/react";
 import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 // import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { IngredientProps } from "../types";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useForceRerender } from "@/hooks/useForceRerender";
 
 const ingredientCss = {
   container: css(universalCss.container),
@@ -85,9 +86,9 @@ const ingredientCss = {
   }),
 };
 
-export const Ingredient = ({ details }: IngredientProps) => {
-  // const amount = useRef(details.amount);
-  const [amount, setAmount] = useState(details.amount);
+export const Ingredient = ({ details, nonDefaultAmount }: IngredientProps) => {
+  const amount = nonDefaultAmount === null ? details.amount : nonDefaultAmount;
+
   return (
     <div css={ingredientCss.container}>
       <h3 css={ingredientCss.header}>
@@ -103,14 +104,7 @@ export const Ingredient = ({ details }: IngredientProps) => {
 
       <div css={ingredientCss.amount}>
         <div>Amount</div>
-        <input
-          type="number"
-          defaultValue={amount}
-          onChange={(e) => {
-            setAmount(Number(e.target.value));
-          }}
-        />
-        <div>{details.unit}</div>
+        <div>{`${amount} ${details.unit}`}</div>
       </div>
 
       <ul css={ingredientCss.macrosList}>

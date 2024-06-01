@@ -11,6 +11,7 @@ import { Ingredient } from "./Ingredient";
 import { MealsAndMacrosContext } from "../context/MealsAndMacrosContext";
 import { useContext } from "react";
 import { useAppSelector } from "@/store/redux/hooks";
+import { useForceRerender } from "@/hooks/useForceRerender";
 
 const mealCss = {
   container: css(universalCss.container),
@@ -39,7 +40,11 @@ const mealCss = {
   ]),
 };
 
-export const Meal = ({ details, hideContentUnderNamedButton }: MealProps) => {
+export const Meal = ({
+  details,
+  nonDefaultAmounts,
+  hideContentUnderNamedButton,
+}: MealProps) => {
   const { MealsAndMacros } = useAppSelector((state) => state.contextsReducer);
 
   const [hideDetails, setHideDetails] = useState(
@@ -52,7 +57,6 @@ export const Meal = ({ details, hideContentUnderNamedButton }: MealProps) => {
         MealsAndMacros.globalSubAppData.ingredientsAvailable.find(
           (ingredient) => ingredient.id === ingredientId
         );
-      console.log(searchedIngredient);
 
       return searchedIngredient;
     });
@@ -64,10 +68,14 @@ export const Meal = ({ details, hideContentUnderNamedButton }: MealProps) => {
   const getTotalMealCalories = () => {
     let totalCalories = 0;
 
-    currentIngredients.forEach((ingredient) => {
+    currentIngredients.forEach((ingredient, index) => {
+      const amount =
+        nonDefaultAmounts.length > 0
+          ? nonDefaultAmounts[index]
+          : ingredient.amount;
+
       const addThisAmountOfCalories =
-        (ingredient.macros.calories / ingredient.macros.forThisAmount) *
-        ingredient.amount;
+        (ingredient.macros.calories / ingredient.macros.forThisAmount) * amount;
 
       // "=== 0" so that we dont divide by zero
       totalCalories +=
@@ -80,11 +88,17 @@ export const Meal = ({ details, hideContentUnderNamedButton }: MealProps) => {
   const getTotalMealPrice = () => {
     let totalPrice = 0;
 
-    currentIngredients.forEach((ingredient) => {
+    currentIngredients.forEach((ingredient, index) => {
+      const amount =
+        nonDefaultAmounts.length > 0
+          ? nonDefaultAmounts[index]
+          : ingredient.amount;
+
       const addThisAmountOfPrice =
         (ingredient.priceDetails.price /
           ingredient.priceDetails.forThisAmount) *
-        ingredient.amount;
+        amount;
+
       totalPrice +=
         ingredient.priceDetails.forThisAmount === 0 ? 0 : addThisAmountOfPrice;
     });
@@ -116,7 +130,17 @@ export const Meal = ({ details, hideContentUnderNamedButton }: MealProps) => {
           <Video yTvideoId={details.ytVideoId} />
           <ul>
             {currentIngredients.map((ingredient, index) => {
-              return <Ingredient key={index} details={ingredient} />;
+              return (
+                <Ingredient
+                  key={index}
+                  details={ingredient}
+                  nonDefaultAmount={
+                    nonDefaultAmounts.length > 0
+                      ? nonDefaultAmounts[index]
+                      : null
+                  }
+                />
+              );
             })}
           </ul>
           <div css={mealCss.totalCalories}>

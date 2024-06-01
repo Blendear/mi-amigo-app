@@ -45,15 +45,17 @@ export const MealOfTheDayChooser = ({}) => {
       swiperContainerCss={variantsCss.container}
       spaceBetweenSlides="10rem"
       activeSlide={MealsAndMacros.mealOfTheDayIndex}
-      setActiveSlide={(index) =>
+      setActiveSlide={(index) => {
         dispatch(
           contextsSliceActions.setContextKeyValue({
             contextName: "MealsAndMacros",
             keyName: "mealOfTheDayIndex",
             newValue: index,
           })
-        )
-      }
+        );
+
+        dispatch(forceRerenderSliceActions.forceRerender("Ingredient"));
+      }}
       forceUpdate={() => {
         dispatch(
           forceRerenderSliceActions.forceRerender("MealsForTheChosenDay")

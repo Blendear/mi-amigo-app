@@ -47,7 +47,14 @@ export const AllAvailableMeals = () => {
         ja i Zuza - mieli 1 porcję danego dania przez 3 dni
       </p>
       {MealsAndMacros.globalSubAppData.mealsAvailable.map((meal, index) => {
-        return <Meal hideContentUnderNamedButton details={meal} key={index} />;
+        return (
+          <Meal
+            hideContentUnderNamedButton
+            details={meal}
+            nonDefaultAmounts={[]}
+            key={index}
+          />
+        );
       })}
     </section>
   );

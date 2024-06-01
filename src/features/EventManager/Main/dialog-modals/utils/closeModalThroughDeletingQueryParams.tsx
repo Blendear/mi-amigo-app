@@ -3,7 +3,6 @@ import { parseModalQueryStringToAnArrayOfStrings } from "./parseModalQueryString
 
 export const closeModalThroughDeletingQueryParams = (router, modalName) => {
   if (modalName === "null") {
-    console.log("null");
     // "modals=null" = hide all modals
     updateTheQueryParamsNamesAndValues(router, "modals", "null");
   } else {

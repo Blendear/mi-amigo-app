@@ -41,8 +41,6 @@ export const SpecificFeatures = ({}: SpecificFeaturesProps) => {
     forceUpdate((prev) => !prev);
   }, [userChoicesRef.current.finalChoice]);
 
-  console.log(userChoicesRef.current.finalChoice);
-
   const features: SpecificFeatureType[] =
     userChoicesRef.current.finalChoice.calculationContent.specificFeatures;
 

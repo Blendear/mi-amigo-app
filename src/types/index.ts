@@ -58,9 +58,11 @@ export type MealsAndMacrosProps = {
     // duplicate "Meal" objectsa ain two places on every updatea of its data
     [dayIndex: number]: {
       mealId: number;
-      // it must be an array of numbers,a since it will be used for an array of ingredients
-      // (3 values will be needed to uverwrite - 0 means "dont change default in this ingredient")
-      nonDefaultAmounts?: number[];
+      // number index will be connecte to the ingredient index, which are added to the meal
+      // 2, 40, 3, 7 = 1st ingredient amount is set to 2, 2nd to 40, 3rd is set to 3, 4th is set to 7
+      //
+      // EVERY number overwrites the default one, so you need to give exactly as many numbers as there are ingredients
+      nonDefaultAmounts: number[];
     }[];
   };
 };

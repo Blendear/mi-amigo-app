@@ -40,24 +40,36 @@ export const CaloriesOfTodaysMeals = () => {
     // since nothing is actually calculating all the meals calories/prices
     // The meal calories / price calculation is only for the chosen meal,
     // not for all of the daily meals
-    MealsAndMacros.globalSubAppData.periodOfDaysOfEating[
-      MealsAndMacros.dayOfMealPlanIndex
-    ].forEach((mealReference) => {
-      MealsAndMacros.globalSubAppData.mealsAvailable[
-        mealReference.mealId
-      ].ingredientsIds.forEach((ingredientId) => {
-        const currentIngredient =
-          MealsAndMacros.globalSubAppData.ingredientsAvailable[ingredientId];
+    const mealsList = MealsAndMacros.globalSubAppData.mealsAvailable;
 
-        const caloriesToAdd =
-          (currentIngredient.macros.calories /
-            currentIngredient.macros.forThisAmount) *
-          currentIngredient.amount;
+    const todaysMealsIdsAndAmounts =
+      MealsAndMacros.globalSubAppData.periodOfDaysOfEating[
+        MealsAndMacros.dayOfMealPlanIndex
+      ];
 
-        // "=== 0" to prevent division by zero
-        totalCalories +=
-          currentIngredient.macros.forThisAmount === 0 ? 0 : caloriesToAdd;
-      });
+    todaysMealsIdsAndAmounts.forEach((mealReference) => {
+      mealsList[mealReference.mealId].ingredientsIds.forEach(
+        (ingredientId, index) => {
+          const currentIngredient =
+            MealsAndMacros.globalSubAppData.ingredientsAvailable[ingredientId];
+
+          const nonDefaultAmounts = mealReference.nonDefaultAmounts;
+
+          const amount =
+            nonDefaultAmounts.length > 0
+              ? nonDefaultAmounts[index]
+              : currentIngredient.amount;
+
+          const caloriesToAdd =
+            (currentIngredient.macros.calories /
+              currentIngredient.macros.forThisAmount) *
+            amount;
+
+          // "=== 0" to prevent division by zero
+          totalCalories +=
+            currentIngredient.macros.forThisAmount === 0 ? 0 : caloriesToAdd;
+        }
+      );
     });
 
     return totalCalories;
