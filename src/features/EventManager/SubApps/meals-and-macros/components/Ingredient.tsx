@@ -87,9 +87,10 @@ export const Ingredient = ({ details, nonDefaultAmount }: IngredientProps) => {
     <div css={ingredientCss.container}>
       <h3 css={ingredientCss.header}>
         <span>{details.name}</span>
-        <span>{` ${
-          (details.macros.calories * amount) / details.macros.forThisAmount
-        } kcal`}</span>
+        <span>{` ${(
+          (details.macros.calories * amount) /
+          details.macros.forThisAmount
+        ).toFixed(0)} kcal`}</span>
       </h3>
 
       <div css={ingredientCss.amount}>
