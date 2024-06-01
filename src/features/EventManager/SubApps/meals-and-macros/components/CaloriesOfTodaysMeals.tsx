@@ -51,7 +51,9 @@ export const CaloriesOfTodaysMeals = () => {
       mealsList[mealReference.mealId].ingredientsIds.forEach(
         (ingredientId, index) => {
           const currentIngredient =
-            MealsAndMacros.globalSubAppData.ingredientsAvailable[ingredientId];
+            MealsAndMacros.globalSubAppData.ingredientsAvailable.find(
+              (ingredient) => ingredient.id === ingredientId
+            );
 
           const nonDefaultAmounts = mealReference.nonDefaultAmounts;
 

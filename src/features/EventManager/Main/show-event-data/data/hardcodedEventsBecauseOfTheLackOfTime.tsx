@@ -1841,8 +1841,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             id: 2,
             name: "Masło Wegańskie",
             description:
-              "Ta porcja = 1/10 z 250g kostki | Rama (niebieska) - Carrefour",
-            amount: 40, // 200 / 5 = 40g for 2 buns
+              "Jedna kostka = 25g = 1/10 z 250g kostki | Rama (niebieska) - Carrefour",
+            amount: 25,
             unit: "g",
             macros: {
               forThisAmount: 100,
@@ -1850,7 +1850,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             },
             priceDetails: {
               price: 4.99,
-              forThisAmount: 1,
+              forThisAmount: 250,
             },
           },
           {
@@ -2612,15 +2612,62 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
               forThisAmount: 270,
             },
           },
+          {
+            id: 53,
+            name: "Ser Gouda Klasyczny",
+            description:
+              "1 plaster = 25g (hook1 - sprawdz sam też) | Carrefour Classic",
+            amount: 25,
+            unit: "g",
+            macros: {
+              forThisAmount: 100,
+              calories: 344, // (TODO - sprawdz sam też na opakoniu w sklepie)
+            },
+            priceDetails: {
+              price: 17.49,
+              forThisAmount: 500,
+            },
+          },
+          {
+            id: 54,
+            name: "Ketchup",
+            description:
+              "1 łyżka = 15g (hook1 - sprawdz sam też), łyżka o wysokości ketchupu równej głębokości łyżki | Carrefour Classic",
+            amount: 15,
+            unit: "g",
+            macros: {
+              forThisAmount: 100,
+              calories: 148, // (TODO - sprawdz sam też na opakoniu w sklepie)
+            },
+            priceDetails: {
+              price: 12.49,
+              forThisAmount: 990,
+            },
+          },
+          {
+            id: 55,
+            name: "Tost pszenny",
+            description: "1 tost | Carrefour Classic",
+            amount: 1,
+            unit: "szt",
+            macros: {
+              forThisAmount: 1,
+              calories: 56,
+            },
+            priceDetails: {
+              price: 0,
+              forThisAmount: 0, // (TODO - policz)
+            },
+          },
         ],
         mealsAvailable: [
           {
             id: 0,
-            name: "Kabanosy z bułkami + Banan (zapychacz)",
+            name: "Kabanosy z tostami z serem i ketchupem + Banan (zapychacz)",
             imagePaths:
               "https://polskie-mieso.pl/wp-content/uploads/2021/03/kabanosy.jpg",
             ytVideoId: "F1Hq8eVOMHs",
-            ingredientsIds: [0, 1, 2, 4],
+            ingredientsIds: [0, 55, 2, 53, 54, 4],
           },
           {
             id: 1,
@@ -2793,11 +2840,11 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           1: [
             {
               mealId: 0,
-              nonDefaultAmounts: [],
+              nonDefaultAmounts: [0.5, 4, 25, 50, 22.5, 1.5],
             },
             {
-              mealId: 1,
-              nonDefaultAmounts: [],
+              mealId: 0,
+              nonDefaultAmounts: [0.5, 4, 25, 50, 22.5, 1.5],
             },
           ],
           2: [
