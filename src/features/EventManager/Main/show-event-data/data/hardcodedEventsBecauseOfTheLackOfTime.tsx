@@ -1759,6 +1759,14 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           "https://static.wikia.nocookie.net/hearthstone_gamepedia/images/6/6a/Rest_and_Relaxation_full.jpg/revision/latest?cb=20210407211101",
         soundToHowl: "https://freesound.org/s/740843/",
       },
+      {
+        id: 11,
+        title: "Devlogi DWA, końcowy i startowy, przed jutrem (15)",
+        startDate: new Date(2024, 0, 19, 20, 30),
+        endDate: new Date(2024, 0, 19, 20, 45),
+        image: "https://i.ytimg.com/vi/PeR-IhuWr-0/maxresdefault.jpg",
+        soundToHowl: "https://freesound.org/s/740843/",
+      },
       // {
       //   id: 50,
       //   title: "Giełda (60)",
