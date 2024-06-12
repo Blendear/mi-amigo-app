@@ -1628,12 +1628,21 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
     libraryOfTemplateEvents: [],
     sheduleOfHourlyPlannedEvents: [
       {
+        id: 999,
+        title: "Test howler",
+        startDate: new Date(2024, 0, 19, 11, 53), // January 19, 2024, 06:00 AM
+        endDate: new Date(2024, 0, 19, 12, 0),
+        image: "/images/aaa",
+        soundToHowl: "http://goldfirestudios.com/proj/howlerjs/sound.ogg",
+      },
+      {
         id: 0,
         title: "YT & Nightwatch (15/45)",
         startDate: new Date(2024, 0, 19, 6, 0), // January 19, 2024, 06:00 AM
         endDate: new Date(2024, 0, 19, 7, 0),
         image:
           "https://assets1.ignimgs.com/2017/01/13/kabal-1280-1484265942243_160w.jpg?width=1280",
+        soundToHowl: "https://freesound.org/s/740843/",
       },
 
       {
@@ -1643,6 +1652,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         endDate: new Date(2024, 0, 19, 7, 30),
         image:
           "https://static.wikia.nocookie.net/hearthstone_gamepedia/images/1/17/Priest_of_the_Feast_full.jpg/revision/latest?cb=20160807055512",
+        soundToHowl: "https://freesound.org/s/740843/",
       },
       {
         id: 1,
@@ -1652,6 +1662,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         endDate: new Date(2024, 0, 19, 9, 30),
         image: "https://pliki.propertynews.pl/i/06/43/23/064323_r0_940.jpg",
         // "https://www.dexerto.com/cdn-image/wp-content/uploads/2024/02/13/Whizbangs-Workshop.v1-1.jpg?width=3840&quality=75&format=auto",
+        soundToHowl: "https://freesound.org/s/740843/",
       },
       {
         id: 3,
@@ -1660,6 +1671,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         endDate: new Date(2024, 0, 19, 9, 45),
         image:
           "https://store-images.s-microsoft.com/image/apps.36788.66915708565277087.92a7f9c3-e394-4fbf-841e-3d065f91d41a.7d021b57-059f-4a91-99a2-76aefa87c421?q=90&w=480&h=270",
+        soundToHowl: "https://freesound.org/s/740843/",
       },
       {
         id: 101,
@@ -1668,6 +1680,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         endDate: new Date(2024, 0, 19, 12, 15),
         image: "https://pliki.propertynews.pl/i/06/43/23/064323_r0_940.jpg",
         // "https://www.dexerto.com/cdn-image/wp-content/uploads/2024/02/13/Whizbangs-Workshop.v1-1.jpg?width=3840&quality=75&format=auto",
+        soundToHowl: "https://freesound.org/s/740843/",
       },
       {
         id: 102,
@@ -1676,6 +1689,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         endDate: new Date(2024, 0, 19, 12, 45),
         image:
           "https://store-images.s-microsoft.com/image/apps.36788.66915708565277087.92a7f9c3-e394-4fbf-841e-3d065f91d41a.7d021b57-059f-4a91-99a2-76aefa87c421?q=90&w=480&h=270",
+        soundToHowl: "https://freesound.org/s/740843/",
       },
       {
         id: 4,
@@ -1684,6 +1698,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         endDate: new Date(2024, 0, 19, 13, 15),
         image:
           "https://storage.googleapis.com/pai-images/b32936677c904bf09fe002c7895dcce5.jpeg",
+        soundToHowl: "https://freesound.org/s/740843/",
       },
       {
         id: 107,
@@ -1691,6 +1706,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         startDate: new Date(2024, 0, 19, 13, 15),
         endDate: new Date(2024, 0, 19, 14, 15),
         image: "https://wallpapercave.com/wp/wp1843569.jpg",
+        soundToHowl: "https://freesound.org/s/740843/",
       },
       {
         id: 6,
@@ -1698,6 +1714,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         startDate: new Date(2024, 0, 19, 14, 30),
         endDate: new Date(2024, 0, 19, 15, 0),
         image: "https://images.alphacoders.com/125/1252351.png",
+        soundToHowl: "https://freesound.org/s/740843/",
       },
       {
         id: 5,
@@ -1706,14 +1723,16 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         endDate: new Date(2024, 0, 19, 15, 30),
         image:
           "https://preview.redd.it/nwzxu16avgp01.jpg?auto=webp&s=b71fbea1d7e6f973dcdcc1dc47231169b89bdacd",
+        soundToHowl: "https://freesound.org/s/740843/",
       },
       {
-        id: 101,
+        id: 190,
         title: "P. Pieszczę (1) [Mi Amigo (P.C.C. & Cldr) | Wrld RPG]",
-        startDate: new Date(2024, 0, 19, 13, 30),
-        endDate: new Date(2024, 0, 19, 14, 30),
+        startDate: new Date(2024, 0, 19, 15, 30),
+        endDate: new Date(2024, 0, 19, 16, 30),
         image: "https://pliki.propertynews.pl/i/06/43/23/064323_r0_940.jpg",
         // "https://www.dexerto.com/cdn-image/wp-content/uploads/2024/02/13/Whizbangs-Workshop.v1-1.jpg?width=3840&quality=75&format=auto",
+        soundToHowl: "https://freesound.org/s/740843/",
       },
       {
         id: 7,
@@ -1721,6 +1740,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         startDate: new Date(2024, 0, 19, 16, 30),
         endDate: new Date(2024, 0, 19, 19, 0),
         image: "https://wallpapercave.com/wp/wp1843569.jpg",
+        soundToHowl: "https://freesound.org/s/740843/",
       },
       {
         id: 8,
@@ -1728,6 +1748,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         startDate: new Date(2024, 0, 19, 19, 0),
         endDate: new Date(2024, 0, 19, 20, 0),
         image: "https://i.ytimg.com/vi/H-_jP9zM8vk/maxresdefault.jpg",
+        soundToHowl: "https://freesound.org/s/740843/",
       },
       {
         id: 9,
@@ -1736,15 +1757,17 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         endDate: new Date(2024, 0, 19, 20, 30),
         image:
           "https://static.wikia.nocookie.net/hearthstone_gamepedia/images/6/6a/Rest_and_Relaxation_full.jpg/revision/latest?cb=20210407211101",
+        soundToHowl: "https://freesound.org/s/740843/",
       },
-      {
-        id: 50,
-        title: "Giełda (60)",
-        startDate: new Date(2024, 0, 19, 20, 30),
-        endDate: new Date(2024, 0, 19, 21, 30),
-        image:
-          "https://www.investopedia.com/thmb/ASStR21rMu9-9_nj1x07H83zbUs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/close-up-of-stock-market-data-on-digital-display-1058454392-c48e2501742f4c21ad57c25d6a087bd0.jpg",
-      },
+      // {
+      //   id: 50,
+      //   title: "Giełda (60)",
+      //   startDate: new Date(2024, 0, 19, 20, 30),
+      //   endDate: new Date(2024, 0, 19, 21, 30),
+      //   image:
+      //     "https://www.investopedia.com/thmb/ASStR21rMu9-9_nj1x07H83zbUs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/close-up-of-stock-market-data-on-digital-display-1058454392-c48e2501742f4c21ad57c25d6a087bd0.jpg",
+      //   soundToHowl: "https://freesound.org/s/740843/",
+      // },
       {
         id: 10,
         title: "Audiobuczek z głąsku z szoszo (30)",
@@ -1752,6 +1775,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         endDate: new Date(2024, 0, 19, 22, 15),
         image:
           "https://static.wikia.nocookie.net/hearthstone_gamepedia/images/7/74/Babbling_Book_full.jpg/revision/latest/scale-to-width-down/400?cb=20160807055711",
+        soundToHowl: "https://freesound.org/s/740843/",
       },
     ],
   },

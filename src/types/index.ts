@@ -114,13 +114,23 @@ export type AppDataOfCurrentUser = {
       monstersManual?: EventWithNeeds[];
     };
     libraryOfTemplateEvents: EventWithNeeds[];
-    sheduleOfHourlyPlannedEvents: any[]; // TODO: TS types and implement
+    sheduleOfHourlyPlannedEvents: TemporaryTypeForPartialEventDataObjectType[]; // TODO: TS types and implement
   };
 
   // All properties will be an object of variants kets, which will store the variant of data for the subappa
   // YTWatcher will have different content depending on the event type for example
   // App will allow to create your own variants in the future
   subAppsGlobalData: SubAppaGlobalData;
+};
+
+//TODO: Remove it in the future, since all features should use the same event data object type
+export type TemporaryTypeForPartialEventDataObjectType = {
+  id: number;
+  title: string;
+  startDate: Date;
+  endDate: Date;
+  image: string;
+  soundToHowl: string;
 };
 
 export type GlobalReduxContextsType = {

@@ -12,6 +12,7 @@ import ImageWithWrapper from "@/components/ImageWithWrapper";
 import calculateEventPosition from "../utils/calculateEventPosition";
 import calculateActiveBlock from "../utils/calculateActiveBlock";
 import { hardcodedEventsBecauseOfTheLackOfTime } from "../../show-event-data/data/hardcodedEventsBecauseOfTheLackOfTime";
+import { HowlerOfIncomingOrActiveEvent } from "../components/HowlerOfIncomingOrActiveEvent";
 
 const Scheduler = () =>
   // { events }: DailyScheduleProps
@@ -41,6 +42,7 @@ const Scheduler = () =>
     return (
       <div className={styles["schedule"]}>
         {/* <p>Czasunio: {formatTimeOutOfDate(currentTime)}</p> */}
+        <HowlerOfIncomingOrActiveEvent currentTime={currentTime} />
         <DynamicTime setTime={setCurrentTime} />
         <div className={styles["schedule__grid"]}>
           <div className={styles["schedule__grid__time-blocks"]}>

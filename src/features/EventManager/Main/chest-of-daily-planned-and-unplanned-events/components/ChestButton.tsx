@@ -8,7 +8,7 @@ import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universa
 import { useState } from "react";
 import { hardcodedEventsBecauseOfTheLackOfTime } from "../../show-event-data/data/hardcodedEventsBecauseOfTheLackOfTime";
 
-const biggerSmaller = keyframes`
+export const biggerSmaller = keyframes`
   0% {
     transform: scale(1);
     filter: drop-shadow(0 0 0.5rem black) brightness(1);
@@ -29,7 +29,7 @@ const chestButtonCss = {
   }),
 
   questIcon: css([
-    universalCss.wrapperWithCenteredSvg("40%", "100%"),
+    universalCss.wrapperWithCenteredSvg("40px", "100%"),
     {
       position: "absolute",
       top: "0",
