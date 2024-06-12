@@ -5,100 +5,54 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
     chestWithAllDayLongEvents: {
       necessary: [
         {
-          name: "Testowy tydzień 'ideolo' wprowadź w życie",
-          description:
-            "co 2 dzien inny ekipa gamingowa / inna gra, i co drugi inny aktywnosc duporuszna etc.",
-          imagePath:
-            "https://paperlypeople.com/wp-content/uploads/2015/09/yellow-is-for-admin.png",
-          imageAltText: "",
-          eventGroupId: 0,
-          eventInstanceId: 0,
-          GIFPath: "",
-          isAllDayLong: false,
-          allDayLongVariantProps: {
-            importance: "",
-            date: new Date(),
-          },
-          timedVariantProps: {
-            startDateAndTime: new Date(),
-            endDateAndTime: new Date(),
-          },
-          deadlineVariant: "none",
-          addOnsByVariants: {
-            variant1: {
-              step1: {},
-            },
-          },
-          needsFulfilledByVariant: {
-            variant1: {
-              isWant: false,
-              isCreate: false,
-              isAbsorb: false,
-              isChill: false,
-              isVent: false,
-              isSquad: false,
-              isActive: false,
-              isWilderness: false,
-              isFresh: false,
-            },
-          },
-          vocalNotifications: {
-            startEventSound: "",
-            xMinutesBeforeStartAmount: null,
-            xMinutesBeforeStartSound: "",
-            endEventSound: "",
-          },
-        },
-        {
-          name: "Dotacje unijne na dział. gospodarczą",
-          description:
-            "Rozpisz i dowiedz się telefonicznie / z linka lukasa / od innych - co trzeba zrobić i jak zwiekszyc szanse na next time & skąd wiedzieć kiedyd okładnie są next times",
-          imagePath:
-            "https://cdn.streamlabs.com/users/23272890/library/cute_money.gif",
-          imageAltText: "",
-          eventGroupId: 0,
-          eventInstanceId: 0,
-          GIFPath: "",
-          isAllDayLong: false,
-          allDayLongVariantProps: {
-            importance: "",
-            date: new Date(),
-          },
-          timedVariantProps: {
-            startDateAndTime: new Date(),
-            endDateAndTime: new Date(),
-          },
-          deadlineVariant: "none",
-          addOnsByVariants: {
-            variant1: {
-              step1: {},
-            },
-          },
-          needsFulfilledByVariant: {
-            variant1: {
-              isWant: false,
-              isCreate: false,
-              isAbsorb: false,
-              isChill: false,
-              isVent: false,
-              isSquad: false,
-              isActive: false,
-              isWilderness: false,
-              isFresh: false,
-            },
-          },
-          vocalNotifications: {
-            startEventSound: "",
-            xMinutesBeforeStartAmount: null,
-            xMinutesBeforeStartSound: "",
-            endEventSound: "",
-          },
-        },
-        {
-          name: "Webdev - Kosztorys swój zrób & Zleceniodawców znajdź (Tomek Saska / Rodzice Zuzy) & Cover letter zautomaytzowany & CV wysyłanie stwórz",
+          name: "WSB dyplom odbiera   &   Backup go na DB",
           description: "",
           imagePath:
-            "https://cdn.dribbble.com/users/1124806/screenshots/4871258/ezgif.com-optimize.gif",
+            "https://upload.wikimedia.org/wikipedia/commons/d/d6/Budynek_WSB_we_Wroc%C5%82awiu.jpg",
+          imageAltText: "",
+          eventGroupId: 0,
+          eventInstanceId: 0,
+          GIFPath: "",
+          isAllDayLong: false,
+          allDayLongVariantProps: {
+            importance: "",
+            date: new Date(),
+          },
+          timedVariantProps: {
+            startDateAndTime: new Date(),
+            endDateAndTime: new Date(),
+          },
+          deadlineVariant: "none",
+          addOnsByVariants: {
+            variant1: {
+              step1: {},
+            },
+          },
+          needsFulfilledByVariant: {
+            variant1: {
+              isWant: false,
+              isCreate: false,
+              isAbsorb: false,
+              isChill: false,
+              isVent: false,
+              isSquad: false,
+              isActive: false,
+              isWilderness: false,
+              isFresh: false,
+            },
+          },
+          vocalNotifications: {
+            startEventSound: "",
+            xMinutesBeforeStartAmount: null,
+            xMinutesBeforeStartSound: "",
+            endEventSound: "",
+          },
+        },
+        {
+          name: "Ing wpłać euro i pln   &   Zainwestuj na giełdzie wg taty",
+          description: "",
+          imagePath:
+            "https://images.indianexpress.com/2021/08/investing-pixabay-1200.jpg",
           imageAltText: "",
           eventGroupId: 0,
           eventInstanceId: 0,
@@ -698,7 +652,12 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                   {
                     subappName: "yt-video-watcher",
                     payload: {
-                      ytVideoIds: ["Kodqwraxa1I", "Z8ANihFXlgU", "s_i4s2yL8T0"],
+                      ytVideoIds: [
+                        "XxEhuSJF780",
+                        "Kodqwraxa1I",
+                        "Z8ANihFXlgU",
+                        "s_i4s2yL8T0",
+                      ],
                     },
                   },
                 ],
@@ -1557,7 +1516,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
               "TYLKO dlatego że o tym myślisz & że trzeba myśleć do robienia czegoś - dlatego to czujesz. Dlatego SŁUCHAWKI, odpal workflow 'Tworzę', najlepiej 'Pieszczę' + MÓWIONY (najlepiej friends, like PKP or CR) podcast pod maximum zajęcia i po 5 minut muzyka":
                 {},
               "Gitarra. Naucz się a banger song": {},
-              "'Want' + 'Wataha' & Omów tą niechęć z nimi": {},
+              "'Want' + 'Wataha' (choćby cofocus / focusmatea.com) & Omów tą niechęć z nimi":
+                {},
               "Rememberer odpal": {},
             },
             "Planuję 5h, zamiast tworzyć w 1h i w 2h nakierować / poprawić": {
