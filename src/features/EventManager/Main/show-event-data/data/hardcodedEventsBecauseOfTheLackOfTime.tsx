@@ -1764,7 +1764,9 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         title: "Devlogi DWA, końcowy i startowy, przed jutrem (15)",
         startDate: new Date(2024, 0, 19, 20, 30),
         endDate: new Date(2024, 0, 19, 20, 45),
-        image: "https://i.ytimg.com/vi/PeR-IhuWr-0/maxresdefault.jpg",
+        image:
+          "https://syntystore.com/cdn/shop/files/finals_102_0010.png?v=1694124210&width=1762",
+        // "https://i.ytimg.com/vi/PeR-IhuWr-0/maxresdefault.jpg",
         soundToHowl: "https://freesound.org/s/740843/",
       },
       // {
