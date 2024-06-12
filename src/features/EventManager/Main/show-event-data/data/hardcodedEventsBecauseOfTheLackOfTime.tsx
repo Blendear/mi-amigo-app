@@ -1627,14 +1627,14 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
     },
     libraryOfTemplateEvents: [],
     sheduleOfHourlyPlannedEvents: [
-      {
-        id: 999,
-        title: "Test howler",
-        startDate: new Date(2024, 0, 19, 11, 53), // January 19, 2024, 06:00 AM
-        endDate: new Date(2024, 0, 19, 12, 0),
-        image: "/images/aaa",
-        soundToHowl: "http://goldfirestudios.com/proj/howlerjs/sound.ogg",
-      },
+      // {
+      //   id: 999,
+      //   title: "Test howler",
+      //   startDate: new Date(2024, 0, 19, 11, 53), // January 19, 2024, 06:00 AM
+      //   endDate: new Date(2024, 0, 19, 12, 0),
+      //   image: "/images/aaa",
+      //   soundToHowl: "http://goldfirestudios.com/proj/howlerjs/sound.ogg",
+      // },
       {
         id: 0,
         title: "YT & Nightwatch (15/45)",
