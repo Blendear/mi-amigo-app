@@ -1656,12 +1656,10 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
       {
         id: 1,
-        title:
-          "NA LEŻĄCO P. Pieszczę & K. Kreuję | L. Lepię (0.5 & 1.5) [T.Saska] > [LTC]",
+        title: "Projekt KKK : Wrld RPG (2)",
         startDate: new Date(2024, 0, 19, 7, 30),
         endDate: new Date(2024, 0, 19, 9, 30),
         image: "https://pliki.propertynews.pl/i/06/43/23/064323_r0_940.jpg",
-        // "https://www.dexerto.com/cdn-image/wp-content/uploads/2024/02/13/Whizbangs-Workshop.v1-1.jpg?width=3840&quality=75&format=auto",
         soundToHowl: "https://freesound.org/s/740843/",
       },
       {
@@ -1675,11 +1673,18 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
       {
         id: 101,
-        title: "L. Lepię & P. Pieszczę (1.5 & 1) [T.Saska] > [LTC]",
+        title: "Projekt KKK : Wrld RPG (2)",
         startDate: new Date(2024, 0, 19, 9, 45),
+        endDate: new Date(2024, 0, 19, 11, 45),
+        image: "https://pliki.propertynews.pl/i/06/43/23/064323_r0_940.jpg",
+        soundToHowl: "https://freesound.org/s/740843/",
+      },
+      {
+        id: 103,
+        title: "Projekt Money : LTC (0.5)",
+        startDate: new Date(2024, 0, 19, 11, 45),
         endDate: new Date(2024, 0, 19, 12, 15),
         image: "https://pliki.propertynews.pl/i/06/43/23/064323_r0_940.jpg",
-        // "https://www.dexerto.com/cdn-image/wp-content/uploads/2024/02/13/Whizbangs-Workshop.v1-1.jpg?width=3840&quality=75&format=auto",
         soundToHowl: "https://freesound.org/s/740843/",
       },
       {
@@ -1727,11 +1732,10 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
       {
         id: 190,
-        title: "P. Pieszczę (1) [Mi Amigo (P.C.C. & Cldr) | Wrld RPG]",
+        title: "Projekt Health : Mi Amigo",
         startDate: new Date(2024, 0, 19, 15, 30),
         endDate: new Date(2024, 0, 19, 16, 30),
         image: "https://pliki.propertynews.pl/i/06/43/23/064323_r0_940.jpg",
-        // "https://www.dexerto.com/cdn-image/wp-content/uploads/2024/02/13/Whizbangs-Workshop.v1-1.jpg?width=3840&quality=75&format=auto",
         soundToHowl: "https://freesound.org/s/740843/",
       },
       {
@@ -1766,7 +1770,6 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         endDate: new Date(2024, 0, 19, 20, 45),
         image:
           "https://syntystore.com/cdn/shop/files/finals_102_0010.png?v=1694124210&width=1762",
-        // "https://i.ytimg.com/vi/PeR-IhuWr-0/maxresdefault.jpg",
         soundToHowl: "https://freesound.org/s/740843/",
       },
       // {
