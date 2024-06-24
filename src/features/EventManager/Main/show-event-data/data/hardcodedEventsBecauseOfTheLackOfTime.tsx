@@ -1656,7 +1656,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
       {
         id: 1,
-        title: "Projekt KKK : Wrld RPG (2)",
+        title: "Wrld RPG (2)",
         startDate: new Date(2024, 0, 19, 7, 30),
         endDate: new Date(2024, 0, 19, 9, 30),
         image: "https://pliki.propertynews.pl/i/06/43/23/064323_r0_940.jpg",
@@ -1673,7 +1673,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
       {
         id: 101,
-        title: "Projekt KKK : Wrld RPG (2)",
+        title: "LTC (2)",
         startDate: new Date(2024, 0, 19, 9, 45),
         endDate: new Date(2024, 0, 19, 11, 45),
         image: "https://pliki.propertynews.pl/i/06/43/23/064323_r0_940.jpg",
@@ -1681,17 +1681,17 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
       {
         id: 103,
-        title: "Projekt Money : LTC (0.5)",
+        title: "LTC -> Giełda || Mi Amigo (45 min)",
         startDate: new Date(2024, 0, 19, 11, 45),
-        endDate: new Date(2024, 0, 19, 12, 15),
+        endDate: new Date(2024, 0, 19, 12, 30),
         image: "https://pliki.propertynews.pl/i/06/43/23/064323_r0_940.jpg",
         soundToHowl: "https://freesound.org/s/740843/",
       },
       {
         id: 102,
         title: "Słucham & 2ga połowa treningu 'od pasa w górę' (30)",
-        startDate: new Date(2024, 0, 19, 12, 15),
-        endDate: new Date(2024, 0, 19, 12, 45),
+        startDate: new Date(2024, 0, 19, 12, 30),
+        endDate: new Date(2024, 0, 19, 13, 0),
         image:
           "https://store-images.s-microsoft.com/image/apps.36788.66915708565277087.92a7f9c3-e394-4fbf-841e-3d065f91d41a.7d021b57-059f-4a91-99a2-76aefa87c421?q=90&w=480&h=270",
         soundToHowl: "https://freesound.org/s/740843/",
@@ -1699,8 +1699,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       {
         id: 4,
         title: "La Toiletta (30)",
-        startDate: new Date(2024, 0, 19, 12, 45),
-        endDate: new Date(2024, 0, 19, 13, 15),
+        startDate: new Date(2024, 0, 19, 13, 0),
+        endDate: new Date(2024, 0, 19, 13, 30),
         image:
           "https://storage.googleapis.com/pai-images/b32936677c904bf09fe002c7895dcce5.jpeg",
         soundToHowl: "https://freesound.org/s/740843/",
@@ -1708,8 +1708,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       {
         id: 107,
         title: "FUN - MeTime / Zuzu / Ekipka / Spontaniczny amigo (1)",
-        startDate: new Date(2024, 0, 19, 13, 15),
-        endDate: new Date(2024, 0, 19, 14, 15),
+        startDate: new Date(2024, 0, 19, 13, 30),
+        endDate: new Date(2024, 0, 19, 14, 30),
         image: "https://wallpapercave.com/wp/wp1843569.jpg",
         soundToHowl: "https://freesound.org/s/740843/",
       },
@@ -1732,7 +1732,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
       {
         id: 190,
-        title: "Projekt Health : Mi Amigo",
+        title: "LTC -> Giełda || Mi Amigo (45 min)",
         startDate: new Date(2024, 0, 19, 15, 30),
         endDate: new Date(2024, 0, 19, 16, 30),
         image: "https://pliki.propertynews.pl/i/06/43/23/064323_r0_940.jpg",
