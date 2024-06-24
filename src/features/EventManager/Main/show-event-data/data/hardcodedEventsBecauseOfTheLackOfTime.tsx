@@ -1772,6 +1772,15 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           "https://syntystore.com/cdn/shop/files/finals_102_0010.png?v=1694124210&width=1762",
         soundToHowl: "https://freesound.org/s/740843/",
       },
+      {
+        id: 121,
+        title: "Backup projekty na DB & Harddrives (15)",
+        startDate: new Date(2024, 0, 19, 20, 45),
+        endDate: new Date(2024, 0, 19, 21, 0),
+        image:
+          "https://png.pngtree.com/thumb_back/fh260/background/20230630/pngtree-3d-render-of-majestic-clouds-in-the-sky-image_3694765.jpg",
+        soundToHowl: "https://freesound.org/s/740843/",
+      },
       // {
       //   id: 50,
       //   title: "Giełda (60)",
