@@ -487,287 +487,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                   {
                     subappName: "yt-video-watcher",
                     payload: {
-                      playlists: [
-                        {
-                          name: "Treść - W tle, dla towarzystwa",
-                          ytVideoIds: [],
-                          thirdPartyLinks: [
-                            {
-                              title: "Ewronik - gaming z ekipą",
-                              imageOrGifPath:
-                                "https://play-lh.googleusercontent.com/QLQzL-MXtxKEDlbhrQCDw-REiDsA9glUH4m16syfar_KVLRXlzOhN7tmAceiPerv4Jg",
-                              linkURL:
-                                "https://www.twitch.tv/ewroon/videos?filter=all&sort=time",
-                            },
-                            {
-                              title: "Graham Norton Show",
-                              imageOrGifPath:
-                                "https://ichef.bbci.co.uk/images/ic/1200x675/p080f5wc.jpg",
-                              linkURL:
-                                "https://www.dailymotion.com/tgnshow/playlists",
-                            },
-                          ],
-                        },
-                        {
-                          name: "Treść - Wypoczęty - oczy i uszy",
-                          ytVideoIds: [],
-                          thirdPartyLinks: [],
-                        },
-
-                        {
-                          name: "Treść - Wypoczęty - uszy",
-                          ytVideoIds: [],
-                          thirdPartyLinks: [
-                            {
-                              title: "Audiobook - Ziemiomorze",
-                              imageOrGifPath:
-                                "https://play-lh.googleusercontent.com/E7Son8NCq7CSqiberd-FabMUehC3DqCSvp_ow5qzHbu9ZshPq_xnwx_guf2S8g4ErMM",
-                              linkURL:
-                                "https://audioteka.com/pl/search/cycle?query=Ziemiomorze",
-                            },
-                            {
-                              title: "Audiobook - Terry Pratchett",
-                              imageOrGifPath:
-                                "https://play-lh.googleusercontent.com/E7Son8NCq7CSqiberd-FabMUehC3DqCSvp_ow5qzHbu9ZshPq_xnwx_guf2S8g4ErMM",
-                              linkURL:
-                                "https://audioteka.com/pl/search/author?query=Terry%20Pratchett",
-                            },
-                            {
-                              title: "Audiobook - Stop Prawa",
-                              imageOrGifPath:
-                                "https://covers.storytel.com/jpg-640/0408311112571.6cfcc6e0-43ce-4a46-9b8e-ec39392c3d92?optimize=high&quality=70",
-                              linkURL:
-                                "https://www.storytel.com/pl/books/stop-prawa-187574",
-                            },
-
-                            {
-                              title: "Audiobook - Złodziejska Magia",
-                              imageOrGifPath:
-                                "https://covers.storytel.com/jpg-640/0408311112571.6cfcc6e0-43ce-4a46-9b8e-ec39392c3d92?optimize=high&quality=70",
-                              linkURL:
-                                "https://www.storytel.com/mh/en/books/z%C5%82odziejska-magia-1336520",
-                            },
-                          ],
-                        },
-
-                        {
-                          name: "Treść - Braindead - oczy i uszy",
-                          ytVideoIds: [],
-                          thirdPartyLinks: [],
-                        },
-
-                        {
-                          name: "Treść - Braindead - uszy",
-                          ytVideoIds: [],
-                          thirdPartyLinks: [],
-                        },
-
-                        {
-                          name: "Muzyka - Uzupełniacz momentu - Cisza doprawiona ambientem",
-                          ytVideoIds: [
-                            "XxEhuSJF780",
-                            "Kodqwraxa1I",
-                            "Z8ANihFXlgU",
-                            "s_i4s2yL8T0",
-                          ],
-                          thirdPartyLinks: [],
-                        },
-
-                        {
-                          name: "Muzyka - Uzupełniacz momentu - Rytmiczne niskie tony",
-                          ytVideoIds: ["Z8ANihFXlgU", "s_i4s2yL8T0"],
-                          thirdPartyLinks: [],
-                        },
-
-                        {
-                          name: "Muzyka - Uzupełniacz momentu - Średnie tony instrumentalne, spokojne",
-                          ytVideoIds: [
-                            "6l_lLA-Ytls",
-                            "WUhMLw6vq8g",
-                            "_BroK8h0eZg",
-                          ],
-                          thirdPartyLinks: [
-                            {
-                              title: "Spotify",
-                              imageOrGifPath:
-                                "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
-                              linkURL:
-                                "https://open.spotify.com/track/4jNQkWhuzqrbqQuqanFFJ6?si=8ea25551086e4f3b",
-                            },
-                          ],
-                        },
-
-                        {
-                          name: "Muzyka - Booster siły - Średnie tony instrumentalne, rozkręcające się",
-                          ytVideoIds: [
-                            "a3pz0OOhfEk",
-                            "d7ON2yxxAWY",
-                            "80IhjDsVVQc",
-                          ],
-                          thirdPartyLinks: [],
-                        },
-
-                        {
-                          name: "Muzyka - Booster siły - Średnie tony wokalne, rozkręcające się",
-                          ytVideoIds: [],
-                          thirdPartyLinks: [
-                            {
-                              title: "Spotify",
-                              imageOrGifPath:
-                                "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
-                              linkURL:
-                                "https://open.spotify.com/playlist/6m1MtOP3yQRR7BJyC6aUJe?si=f15d16006fd04efc",
-                            },
-                          ],
-                        },
-
-                        {
-                          name: "Muzyka - Booster siły - Średnie tony wokalne, mocne",
-                          ytVideoIds: [],
-                          thirdPartyLinks: [],
-                        },
-
-                        {
-                          name: "Muzyka - Booster siły - Średnie tony wokalne, z pierdolnięciem",
-                          ytVideoIds: ["gCYcHz2k5x0"],
-                          thirdPartyLinks: [
-                            {
-                              title: "Spotify",
-                              imageOrGifPath:
-                                "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
-                              linkURL:
-                                "https://open.spotify.com/playlist/4OqKhqHMeT1vdurU3xEmdR?si=600abb2d9ea14989",
-                            },
-                            {
-                              title: "Spotify",
-                              imageOrGifPath:
-                                "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
-                              linkURL:
-                                "https://open.spotify.com/playlist/7u4oojYRzMXigiexbycYSi?si=b43d140e54df498a",
-                            },
-                            {
-                              title: "Spotify",
-                              imageOrGifPath:
-                                "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
-                              linkURL:
-                                "https://open.spotify.com/playlist/4t0fKkZM4hKVP9ykjHabmu?si=76c09a3f55ac4b0b",
-                            },
-                            {
-                              title: "Spotify",
-                              imageOrGifPath:
-                                "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
-                              linkURL:
-                                "https://open.spotify.com/playlist/4ebfRcRErLsu1YUQJOYS4q?si=baa15067ea954477",
-                            },
-                            {
-                              title: "Spotify",
-                              imageOrGifPath:
-                                "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
-                              linkURL:
-                                "https://open.spotify.com/playlist/4Bd7OJIYL2gvi7IDMVFkps?si=e1365fa95236456a",
-                            },
-                            {
-                              title: "Spotify",
-                              imageOrGifPath:
-                                "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
-                              linkURL:
-                                "https://open.spotify.com/playlist/0qXIN56lvg0gbpXYQBIOvO?si=b5832da2ed36434c",
-                            },
-                            {
-                              title: "Spotify",
-                              imageOrGifPath:
-                                "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
-                              linkURL:
-                                "https://open.spotify.com/playlist/3QdcEI8NTPhJPXPADdzFbI?si=2ae774d6bde94c8f",
-                            },
-                          ],
-                        },
-
-                        {
-                          name: "Muzyka - Ostatni bastion wyiskrzenia mocy - Rapsy słowem wyrywające",
-                          ytVideoIds: [],
-                          thirdPartyLinks: [
-                            {
-                              title: "Spotify",
-                              imageOrGifPath:
-                                "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
-                              linkURL:
-                                "https://open.spotify.com/playlist/5YKbFmAlZpqb6Yu2HXdQn1?si=27a0715b95e74f73",
-                            },
-                            {
-                              title: "Spotify",
-                              imageOrGifPath:
-                                "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
-                              linkURL:
-                                "https://open.spotify.com/playlist/6JyDsPPVMMsUBcqRImKP0E?si=8dcc61fca0724a33",
-                            },
-                          ],
-                        },
-
-                        {
-                          name: "Muzyka - Ostatni bastion wyiskrzenia mocy - Bangers & Karaoke",
-                          ytVideoIds: [],
-                          thirdPartyLinks: [
-                            {
-                              title: "Spotify",
-                              imageOrGifPath:
-                                "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
-                              linkURL:
-                                "https://open.spotify.com/playlist/6uXoc49RxVQ5MuVynGPTK3?si=2a905705f8084cff",
-                            },
-
-                            {
-                              title: "Spotify",
-                              imageOrGifPath:
-                                "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
-                              linkURL:
-                                "https://open.spotify.com/playlist/41lv5bRYJQYOboGwBZ5RTs?si=b1d5838965e14b9a",
-                            },
-                          ],
-                        },
-
-                        {
-                          name: "Zagłuszacz - Niskie FQ",
-                          ytVideoIds: [],
-                          thirdPartyLinks: [],
-                        },
-
-                        {
-                          name: "Zagłuszacz - Średnie FQ",
-                          ytVideoIds: [],
-                          thirdPartyLinks: [
-                            {
-                              title: "Spotify",
-                              imageOrGifPath:
-                                "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
-                              linkURL:
-                                "https://open.spotify.com/track/06MHkVkRCnyzsTCk0XhqMR?si=4b5adfda706a4b06",
-                            },
-
-                            {
-                              title: "Spotify",
-                              imageOrGifPath:
-                                "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
-                              linkURL:
-                                "https://open.spotify.com/track/0tK5Zvy4HttHXp9ldVm0EV?si=a3aa0e08291c42e5",
-                            },
-                          ],
-                        },
-
-                        {
-                          name: "Zagłuszacz - Wysokie FQ",
-                          ytVideoIds: [],
-                          thirdPartyLinks: [
-                            {
-                              title: "Spotify",
-                              imageOrGifPath:
-                                "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
-                              linkURL:
-                                "https://open.spotify.com/track/5Y3bt7xbhZwwHfTPK5hWEg?si=ac6309c16d374293",
-                            },
-                          ],
-                        },
-                      ],
+                      playlists: [],
                     },
                   },
                 ],
@@ -1726,7 +1446,281 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
     ],
   },
   subAppsGlobalData: {
-    YTWatcher: {},
+    YTWatcher: {
+      "energy-level-based": {
+        playlists: [
+          {
+            name: "Treść - W tle, dla towarzystwa",
+            ytVideoIds: [],
+            thirdPartyLinks: [
+              {
+                title: "Ewronik - gaming z ekipą",
+                imageOrGifPath:
+                  "https://play-lh.googleusercontent.com/QLQzL-MXtxKEDlbhrQCDw-REiDsA9glUH4m16syfar_KVLRXlzOhN7tmAceiPerv4Jg",
+                linkURL:
+                  "https://www.twitch.tv/ewroon/videos?filter=all&sort=time",
+              },
+              {
+                title: "Graham Norton Show",
+                imageOrGifPath:
+                  "https://ichef.bbci.co.uk/images/ic/1200x675/p080f5wc.jpg",
+                linkURL: "https://www.dailymotion.com/tgnshow/playlists",
+              },
+            ],
+          },
+          {
+            name: "Treść - Wypoczęty - oczy i uszy",
+            ytVideoIds: [],
+            thirdPartyLinks: [],
+          },
+
+          {
+            name: "Treść - Wypoczęty - uszy",
+            ytVideoIds: [],
+            thirdPartyLinks: [
+              {
+                title: "Audiobook - Ziemiomorze",
+                imageOrGifPath:
+                  "https://play-lh.googleusercontent.com/E7Son8NCq7CSqiberd-FabMUehC3DqCSvp_ow5qzHbu9ZshPq_xnwx_guf2S8g4ErMM",
+                linkURL:
+                  "https://audioteka.com/pl/search/cycle?query=Ziemiomorze",
+              },
+              {
+                title: "Audiobook - Terry Pratchett",
+                imageOrGifPath:
+                  "https://play-lh.googleusercontent.com/E7Son8NCq7CSqiberd-FabMUehC3DqCSvp_ow5qzHbu9ZshPq_xnwx_guf2S8g4ErMM",
+                linkURL:
+                  "https://audioteka.com/pl/search/author?query=Terry%20Pratchett",
+              },
+              {
+                title: "Audiobook - Stop Prawa",
+                imageOrGifPath:
+                  "https://covers.storytel.com/jpg-640/0408311112571.6cfcc6e0-43ce-4a46-9b8e-ec39392c3d92?optimize=high&quality=70",
+                linkURL: "https://www.storytel.com/pl/books/stop-prawa-187574",
+              },
+
+              {
+                title: "Audiobook - Złodziejska Magia",
+                imageOrGifPath:
+                  "https://covers.storytel.com/jpg-640/0408311112571.6cfcc6e0-43ce-4a46-9b8e-ec39392c3d92?optimize=high&quality=70",
+                linkURL:
+                  "https://www.storytel.com/mh/en/books/z%C5%82odziejska-magia-1336520",
+              },
+            ],
+          },
+
+          {
+            name: "Treść - Braindead - oczy i uszy",
+            ytVideoIds: [],
+            thirdPartyLinks: [],
+          },
+
+          {
+            name: "Treść - Braindead - uszy",
+            ytVideoIds: [],
+            thirdPartyLinks: [],
+          },
+
+          {
+            name: "Muzyka - Uzupełniacz momentu - Cisza doprawiona ambientem",
+            ytVideoIds: [
+              "XxEhuSJF780",
+              "Kodqwraxa1I",
+              "Z8ANihFXlgU",
+              "s_i4s2yL8T0",
+            ],
+            thirdPartyLinks: [],
+          },
+
+          {
+            name: "Muzyka - Uzupełniacz momentu - Rytmiczne niskie tony",
+            ytVideoIds: ["Z8ANihFXlgU", "s_i4s2yL8T0"],
+            thirdPartyLinks: [],
+          },
+
+          {
+            name: "Muzyka - Uzupełniacz momentu - Średnie tony instrumentalne, spokojne",
+            ytVideoIds: ["6l_lLA-Ytls", "WUhMLw6vq8g", "_BroK8h0eZg"],
+            thirdPartyLinks: [
+              {
+                title: "Spotify",
+                imageOrGifPath:
+                  "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+                linkURL:
+                  "https://open.spotify.com/track/4jNQkWhuzqrbqQuqanFFJ6?si=8ea25551086e4f3b",
+              },
+            ],
+          },
+
+          {
+            name: "Muzyka - Booster siły - Średnie tony instrumentalne, rozkręcające się",
+            ytVideoIds: ["a3pz0OOhfEk", "d7ON2yxxAWY", "80IhjDsVVQc"],
+            thirdPartyLinks: [],
+          },
+
+          {
+            name: "Muzyka - Booster siły - Średnie tony wokalne, rozkręcające się",
+            ytVideoIds: [],
+            thirdPartyLinks: [
+              {
+                title: "Spotify",
+                imageOrGifPath:
+                  "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+                linkURL:
+                  "https://open.spotify.com/playlist/6m1MtOP3yQRR7BJyC6aUJe?si=f15d16006fd04efc",
+              },
+            ],
+          },
+
+          {
+            name: "Muzyka - Booster siły - Średnie tony wokalne, mocne",
+            ytVideoIds: [],
+            thirdPartyLinks: [],
+          },
+
+          {
+            name: "Muzyka - Booster siły - Średnie tony wokalne, z pierdolnięciem",
+            ytVideoIds: ["gCYcHz2k5x0"],
+            thirdPartyLinks: [
+              {
+                title: "Spotify",
+                imageOrGifPath:
+                  "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+                linkURL:
+                  "https://open.spotify.com/playlist/4OqKhqHMeT1vdurU3xEmdR?si=600abb2d9ea14989",
+              },
+              {
+                title: "Spotify",
+                imageOrGifPath:
+                  "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+                linkURL:
+                  "https://open.spotify.com/playlist/7u4oojYRzMXigiexbycYSi?si=b43d140e54df498a",
+              },
+              {
+                title: "Spotify",
+                imageOrGifPath:
+                  "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+                linkURL:
+                  "https://open.spotify.com/playlist/4t0fKkZM4hKVP9ykjHabmu?si=76c09a3f55ac4b0b",
+              },
+              {
+                title: "Spotify",
+                imageOrGifPath:
+                  "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+                linkURL:
+                  "https://open.spotify.com/playlist/4ebfRcRErLsu1YUQJOYS4q?si=baa15067ea954477",
+              },
+              {
+                title: "Spotify",
+                imageOrGifPath:
+                  "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+                linkURL:
+                  "https://open.spotify.com/playlist/4Bd7OJIYL2gvi7IDMVFkps?si=e1365fa95236456a",
+              },
+              {
+                title: "Spotify",
+                imageOrGifPath:
+                  "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+                linkURL:
+                  "https://open.spotify.com/playlist/0qXIN56lvg0gbpXYQBIOvO?si=b5832da2ed36434c",
+              },
+              {
+                title: "Spotify",
+                imageOrGifPath:
+                  "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+                linkURL:
+                  "https://open.spotify.com/playlist/3QdcEI8NTPhJPXPADdzFbI?si=2ae774d6bde94c8f",
+              },
+            ],
+          },
+
+          {
+            name: "Muzyka - Ostatni bastion wyiskrzenia mocy - Rapsy słowem wyrywające",
+            ytVideoIds: [],
+            thirdPartyLinks: [
+              {
+                title: "Spotify",
+                imageOrGifPath:
+                  "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+                linkURL:
+                  "https://open.spotify.com/playlist/5YKbFmAlZpqb6Yu2HXdQn1?si=27a0715b95e74f73",
+              },
+              {
+                title: "Spotify",
+                imageOrGifPath:
+                  "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+                linkURL:
+                  "https://open.spotify.com/playlist/6JyDsPPVMMsUBcqRImKP0E?si=8dcc61fca0724a33",
+              },
+            ],
+          },
+
+          {
+            name: "Muzyka - Ostatni bastion wyiskrzenia mocy - Bangers & Karaoke",
+            ytVideoIds: [],
+            thirdPartyLinks: [
+              {
+                title: "Spotify",
+                imageOrGifPath:
+                  "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+                linkURL:
+                  "https://open.spotify.com/playlist/6uXoc49RxVQ5MuVynGPTK3?si=2a905705f8084cff",
+              },
+
+              {
+                title: "Spotify",
+                imageOrGifPath:
+                  "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+                linkURL:
+                  "https://open.spotify.com/playlist/41lv5bRYJQYOboGwBZ5RTs?si=b1d5838965e14b9a",
+              },
+            ],
+          },
+
+          {
+            name: "Zagłuszacz - Niskie FQ",
+            ytVideoIds: [],
+            thirdPartyLinks: [],
+          },
+
+          {
+            name: "Zagłuszacz - Średnie FQ",
+            ytVideoIds: [],
+            thirdPartyLinks: [
+              {
+                title: "Spotify",
+                imageOrGifPath:
+                  "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+                linkURL:
+                  "https://open.spotify.com/track/06MHkVkRCnyzsTCk0XhqMR?si=4b5adfda706a4b06",
+              },
+
+              {
+                title: "Spotify",
+                imageOrGifPath:
+                  "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+                linkURL:
+                  "https://open.spotify.com/track/0tK5Zvy4HttHXp9ldVm0EV?si=a3aa0e08291c42e5",
+              },
+            ],
+          },
+
+          {
+            name: "Zagłuszacz - Wysokie FQ",
+            ytVideoIds: [],
+            thirdPartyLinks: [
+              {
+                title: "Spotify",
+                imageOrGifPath:
+                  "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+                linkURL:
+                  "https://open.spotify.com/track/5Y3bt7xbhZwwHfTPK5hWEg?si=ac6309c16d374293",
+              },
+            ],
+          },
+        ],
+      },
+    },
 
     MealsAndMacros: {
       "healthy-diet": {

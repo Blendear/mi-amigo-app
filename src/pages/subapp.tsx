@@ -45,7 +45,11 @@ const SubApp = () => {
       />
     ),
 
-    YTWatcher: <YTWatcher playlists />,
+    YTWatcher: (
+      <YTWatcher
+        playlists={(subAppNameAndPayload.payload as YTWatcherProps).playlists}
+      />
+    ),
   }[subAppNameAndPayload.name];
 };
 
