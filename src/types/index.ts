@@ -69,12 +69,8 @@ export type MealsAndMacrosProps = {
 
 export type MealsAndMacrosSubAppPayload = MealsAndMacrosProps;
 
-export type YTVideoWatcherSubAppPayload = {
-  ytVideoIds: string[];
-};
-
 export type SubappPayloads = {
-  "yt-video-watcher": YTVideoWatcherSubAppPayload;
+  "yt-video-watcher": YTWatcherProps;
   "meals-and-macros": MealsAndMacrosProps;
   // Add more subapps and their respective payload types as needed
 };
@@ -91,7 +87,15 @@ export type YouTubeVideoIFrameProps = {};
 export type ModifyContentButtonsProps = {};
 
 export type YTWatcherProps = {
-  listOfYouTubeVideoIDs: string[];
+  playlists: {
+    name: string;
+    ytVideoIds: string[];
+    thirdPartyLinks: {
+      title: string;
+      imageOrGifPath: string;
+      linkURL: string;
+    }[];
+  }[];
 };
 
 export type SubAppaGlobalData = {

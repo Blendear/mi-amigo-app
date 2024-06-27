@@ -9,6 +9,7 @@ import { MealsAndMacros } from "@/features/EventManager/SubApps/meals-and-macros
 import { useAppSelector } from "@/store/redux/hooks";
 import { MealsAndMacrosProps, YTWatcherProps } from "..";
 import Playlist from "@/features/EventManager/SubApps/yt-watcher/components/Playlist";
+import { YTWatcher } from "@/features/EventManager/SubApps/yt-watcher/components/YTWatcher";
 
 const SubApp = () => {
   const router = useRouter();
@@ -44,15 +45,7 @@ const SubApp = () => {
       />
     ),
 
-    YTWatcher: (
-      // TODO: Refactor this hack solution, since I don't have a YTWatcher component yet,
-      // thats why I'm using Playlist component from the yt-watcher feature folder
-      <Playlist
-        listOfYouTubeVideoIDs={
-          (subAppNameAndPayload.payload as YTWatcherProps).listOfYouTubeVideoIDs
-        }
-      />
-    ),
+    YTWatcher: <YTWatcher playlists />,
   }[subAppNameAndPayload.name];
 };
 
