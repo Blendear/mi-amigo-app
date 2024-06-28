@@ -22,14 +22,11 @@ const SubAppsTogglers = ({ subappsToToggle }: SubAppsTogglersProps) => {
           {subappsToToggle.map((identifyingData, index) => {
             return (
               <li key={index}>
-                <Link
-                  href={`/subapp?name=${identifyingData.name}&variant=${identifyingData.variant}`}
-                >
-                  <PortalesqueLink
-                    title={identifyingData.name}
-                    imageOrGifPath={identifyingData.imagePath}
-                  />
-                </Link>
+                <PortalesqueLink
+                  title={identifyingData.name}
+                  imageOrGifPath={identifyingData.imagePath}
+                  linkURL={`/subapp?name=${identifyingData.name}&variant=${identifyingData.variant}`}
+                />
               </li>
             );
           })}
