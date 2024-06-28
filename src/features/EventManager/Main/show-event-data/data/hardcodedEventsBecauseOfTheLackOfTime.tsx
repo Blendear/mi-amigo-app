@@ -429,12 +429,10 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
               _: {
                 toolsSubApps: [
                   {
-                    subappName: "meals-and-macros",
-                    payload: {
-                      ingredientsAvailable: [],
-                      mealsAvailable: [],
-                      periodOfDaysOfEating: {},
-                    },
+                    name: "meals-and-macros",
+                    variant: "healthy-diet",
+                    imagePath:
+                      "https://www.escapistmagazine.com/wp-content/uploads/2024/01/Delicious-in-Dungeon.jpg?fit=1200%2C910",
                   },
                 ],
               },
@@ -485,10 +483,10 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
               _: {
                 toolsSubApps: [
                   {
-                    subappName: "yt-video-watcher",
-                    payload: {
-                      playlists: [],
-                    },
+                    name: "yt-video-watcher",
+                    variant: "energy-level-based",
+                    imagePath:
+                      "https://www.kupobserwujacych.pl/wp-content/uploads/2021/09/kup-obserwujacych-youtube-yt.png",
                   },
                 ],
               },
@@ -1446,11 +1444,13 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
     ],
   },
   subAppsGlobalData: {
-    YTWatcher: {
+    "yt-video-watcher": {
       "energy-level-based": {
         playlists: [
           {
             name: "Treść - W tle, dla towarzystwa",
+            imagePath:
+              "https://www.freeiconspng.com/thumbs/circle-of-friends-icon-png/circle-of-friends-icon-png-17.jpg",
             ytVideoIds: [],
             thirdPartyLinks: [
               {
@@ -1470,12 +1470,15 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
           {
             name: "Treść - Wypoczęty - oczy i uszy",
+            imagePath:
+              "https://icon-library.com/images/watch-tv-icon/watch-tv-icon-6.jpg",
             ytVideoIds: [],
             thirdPartyLinks: [],
           },
 
           {
             name: "Treść - Wypoczęty - uszy",
+            imagePath: "https://static.thenounproject.com/png/2296288-200.png",
             ytVideoIds: [],
             thirdPartyLinks: [
               {
@@ -1511,18 +1514,24 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
 
           {
             name: "Treść - Braindead - oczy i uszy",
+            imagePath:
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3ZvxUQRsOMiM99rCuaE0zpyh4JaSbVLFgwWt7ruP_7Vngn_QZ7ECJZIAXFn12duQIZWc&usqp=CAU",
             ytVideoIds: [],
             thirdPartyLinks: [],
           },
 
           {
             name: "Treść - Braindead - uszy",
+            imagePath:
+              "https://upload.wikimedia.org/wikipedia/commons/3/32/Audioplay_icon.svg",
             ytVideoIds: [],
             thirdPartyLinks: [],
           },
 
           {
             name: "Muzyka - Uzupełniacz momentu - Cisza doprawiona ambientem",
+            imagePath:
+              "https://cdn-icons-png.flaticon.com/512/2823/2823511.png",
             ytVideoIds: [
               "XxEhuSJF780",
               "Kodqwraxa1I",
@@ -1534,12 +1543,14 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
 
           {
             name: "Muzyka - Uzupełniacz momentu - Rytmiczne niskie tony",
+            imagePath: "https://cdn-icons-png.freepik.com/512/2653/2653928.png",
             ytVideoIds: ["Z8ANihFXlgU", "s_i4s2yL8T0"],
             thirdPartyLinks: [],
           },
 
           {
             name: "Muzyka - Uzupełniacz momentu - Średnie tony instrumentalne, spokojne",
+            imagePath: "https://cdn-icons-png.freepik.com/512/1597/1597789.png",
             ytVideoIds: ["6l_lLA-Ytls", "WUhMLw6vq8g", "_BroK8h0eZg"],
             thirdPartyLinks: [
               {
@@ -1554,32 +1565,16 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
 
           {
             name: "Muzyka - Booster siły - Średnie tony instrumentalne, rozkręcające się",
+            imagePath:
+              "https://static.vecteezy.com/system/resources/previews/014/601/654/original/violin-icon-free-vector.jpg",
             ytVideoIds: ["a3pz0OOhfEk", "d7ON2yxxAWY", "80IhjDsVVQc"],
             thirdPartyLinks: [],
           },
 
           {
-            name: "Muzyka - Booster siły - Średnie tony wokalne, rozkręcające się",
-            ytVideoIds: [],
-            thirdPartyLinks: [
-              {
-                title: "Spotify",
-                imageOrGifPath:
-                  "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
-                linkURL:
-                  "https://open.spotify.com/playlist/6m1MtOP3yQRR7BJyC6aUJe?si=f15d16006fd04efc",
-              },
-            ],
-          },
-
-          {
-            name: "Muzyka - Booster siły - Średnie tony wokalne, mocne",
-            ytVideoIds: [],
-            thirdPartyLinks: [],
-          },
-
-          {
             name: "Muzyka - Booster siły - Średnie tony wokalne, z pierdolnięciem",
+            imagePath:
+              "https://www.freeiconspng.com/uploads/wolf-howling-icon-png-11.png",
             ytVideoIds: ["gCYcHz2k5x0"],
             thirdPartyLinks: [
               {
@@ -1636,6 +1631,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
 
           {
             name: "Muzyka - Ostatni bastion wyiskrzenia mocy - Rapsy słowem wyrywające",
+            imagePath:
+              "https://previews.123rf.com/images/premiumdesign/premiumdesign1209/premiumdesign120900010/15115437-bear-roar.jpg",
             ytVideoIds: [],
             thirdPartyLinks: [
               {
@@ -1657,6 +1654,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
 
           {
             name: "Muzyka - Ostatni bastion wyiskrzenia mocy - Bangers & Karaoke",
+            imagePath:
+              "https://www.shutterstock.com/image-vector/angry-tiger-roaring-vector-art-600w-2324265285.jpg",
             ytVideoIds: [],
             thirdPartyLinks: [
               {
@@ -1679,12 +1678,14 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
 
           {
             name: "Zagłuszacz - Niskie FQ",
+            imagePath: "https://static.thenounproject.com/png/2349204-200.png",
             ytVideoIds: [],
             thirdPartyLinks: [],
           },
 
           {
             name: "Zagłuszacz - Średnie FQ",
+            imagePath: "https://static.thenounproject.com/png/156688-200.png",
             ytVideoIds: [],
             thirdPartyLinks: [
               {
@@ -1707,6 +1708,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
 
           {
             name: "Zagłuszacz - Wysokie FQ",
+            imagePath:
+              "https://cdn1.iconfinder.com/data/icons/car-parts-14/32/Car_automobile_music_load_speaker-512.png",
             ytVideoIds: [],
             thirdPartyLinks: [
               {
@@ -1722,7 +1725,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
     },
 
-    MealsAndMacros: {
+    "meals-and-macros": {
       "healthy-diet": {
         ingredientsAvailable: [
           {

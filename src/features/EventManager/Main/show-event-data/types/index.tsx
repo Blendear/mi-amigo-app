@@ -1,5 +1,5 @@
 import React from "react";
-import { Subapp } from "@/types";
+import { SubappIdentifier } from "@/types";
 
 export type HandleDataChange = (
   formDataRef: React.MutableRefObject<EventWithNeeds>,
@@ -30,7 +30,7 @@ export type AddOn = {
   habits?: number[]; // id's of habits
   howAndTips?: HowAndTips;
   toolsWhere?: Tool[];
-  toolsSubApps?: Subapp[]; // data to locate and equip the subapp
+  toolsSubApps?: SubappIdentifier[]; // data to locate and equip the subapp
   toolsPhysicalOrThirdParty?: Tool[];
 };
 
@@ -191,5 +191,5 @@ export type EventDisplaySmallProps = {
 };
 
 export type SubAppsTogglersProps = {
-  content: Subapp[];
+  subappsToToggle: SubappIdentifier[];
 };

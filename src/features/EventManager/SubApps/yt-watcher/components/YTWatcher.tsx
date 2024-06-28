@@ -6,44 +6,58 @@ import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import Playlist from "./Playlist";
 import { YTWatcherProps } from "@/types";
 import ImageWithWrapper from "@/components/ImageWithWrapper";
+import { TitleBarWithTogglableContent } from "@/components/TitleBarWithTogglableContent";
 
 const yTWatcherCss = {
   container: css({}),
 
-  youtubeVideos: css({}),
+  videosAndLinks: {
+    container: css({ display: "grid", gridTemplateColumns: "1fr 1fr" }),
 
-  thirdPartyLinks: css({}),
+    titleImage: css({
+      backgroundColor: "white",
+    }),
+
+    video: css({}),
+
+    links: css({
+      display: "grid",
+      justifyItems: "center",
+      gridTemplateColumns: "repeat(3, 1fr)",
+      gap: "2rem",
+    }),
+  },
 };
 
 export const YTWatcher = ({ playlists }: YTWatcherProps) => {
   return (
     <article css={yTWatcherCss.container}>
-      <section css={yTWatcherCss.youtubeVideos}>
+      <section css={yTWatcherCss.videosAndLinks.container}>
         {playlists.map((playlist, index) => (
-          <div key={index}>
+          <TitleBarWithTogglableContent
+            key={index}
+            titleBarContent={
+              <ImageWithWrapper
+                src={playlist.imagePath}
+                width="25vw"
+                wrapperCss={yTWatcherCss.videosAndLinks.titleImage}
+              />
+            }
+          >
             <h2>{playlist.name}</h2>
             <Playlist listOfYouTubeVideoIDs={playlist.ytVideoIds} />
-          </div>
-        ))}
-      </section>
-
-      <section css={yTWatcherCss.thirdPartyLinks}>
-        <h2>Third party links</h2>
-        <ul>
-          {playlists.map((playlist, index) => (
-            <li key={index}>
+            <ul css={yTWatcherCss.videosAndLinks.links}>
               {playlist.thirdPartyLinks.map((link, index) => (
-                <div key={index}>
-                  <h3>{link.title}</h3>
-                  <ImageWithWrapper src={link.imageOrGifPath} />
+                <li key={index}>
                   <a href={link.linkURL} target="_blank" rel="noreferrer">
-                    {link.linkURL}
+                    <ImageWithWrapper src={link.imageOrGifPath} />
+                    <h3>{link.title}</h3>
                   </a>
-                </div>
+                </li>
               ))}
-            </li>
-          ))}
-        </ul>
+            </ul>
+          </TitleBarWithTogglableContent>
+        ))}
       </section>
     </article>
   );

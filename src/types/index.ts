@@ -75,9 +75,10 @@ export type SubappPayloads = {
   // Add more subapps and their respective payload types as needed
 };
 
-export type Subapp = {
-  subappName: keyof SubappPayloads;
-  payload: SubappPayloads[keyof SubappPayloads];
+export type SubappIdentifier = {
+  name: keyof SubappPayloads;
+  variant: string;
+  imagePath: string;
 };
 
 export type RGBColorString = string | `rgb(${string})`;
@@ -89,6 +90,7 @@ export type ModifyContentButtonsProps = {};
 export type YTWatcherProps = {
   playlists: {
     name: string;
+    imagePath: string;
     ytVideoIds: string[];
     thirdPartyLinks: {
       title: string;
@@ -99,10 +101,10 @@ export type YTWatcherProps = {
 };
 
 export type SubAppaGlobalData = {
-  YTWatcher: {
+  "yt-video-watcher": {
     [variantName: string]: YTWatcherProps;
   };
-  MealsAndMacros: {
+  "meals-and-macros": {
     [variantName: string]: MealsAndMacrosProps;
   };
 };

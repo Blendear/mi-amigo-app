@@ -4,11 +4,8 @@ import { css } from "@emotion/react";
 // import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 // import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { SubAppsTogglersProps } from "../types";
-import DialogModal from "@/components/DialogModal";
-import { useState } from "react";
-import { getSubAppImageAndComponent } from "../data/getSubAppImageAndComponent";
 import PortalesqueLink from "./PortalesqueLink";
-import { Subapp } from "@/types";
+import Link from "next/link";
 
 const subAppsTogglersCss = {
   container: css({
@@ -17,53 +14,28 @@ const subAppsTogglersCss = {
   }),
 };
 
-const SubAppsTogglers = ({ content }: SubAppsTogglersProps) => {
-  const [showSubApp, setShowSubApp] = useState<boolean>(false);
-  const [openedSubAppData, setOpenedSubAppData] = useState<Subapp | null>(null);
+const SubAppsTogglers = ({ subappsToToggle }: SubAppsTogglersProps) => {
   return (
     <div css={subAppsTogglersCss.container}>
-      {content ? (
+      {subappsToToggle ? (
         <ul>
-          {content.map((portal, index) => {
+          {subappsToToggle.map((identifyingData, index) => {
             return (
               <li key={index}>
-                <button
-                  onClick={() => {
-                    setShowSubApp(true);
-                    setOpenedSubAppData(portal);
-                  }}
+                <Link
+                  href={`/subapp?name=${identifyingData.name}&variant=${identifyingData.variant}`}
                 >
                   <PortalesqueLink
-                    title={portal.subappName}
-                    imageOrGifPath={
-                      getSubAppImageAndComponent({
-                        subAppName: portal.subappName,
-                      }).imageOrGifPath
-                    }
+                    title={identifyingData.name}
+                    imageOrGifPath={identifyingData.imagePath}
                   />
-                </button>
+                </Link>
               </li>
             );
           })}
         </ul>
       ) : (
-        <p>No content</p>
-      )}
-      {showSubApp && (
-        <DialogModal
-          isOpen={showSubApp}
-          onClose={() => {
-            setShowSubApp(false);
-          }}
-          zIndex={1002}
-        >
-          {
-            getSubAppImageAndComponent({
-              subAppName: openedSubAppData.subappName,
-              payload: openedSubAppData.payload,
-            }).component
-          }
-        </DialogModal>
+        <p>No subappsToToggle</p>
       )}
     </div>
   );

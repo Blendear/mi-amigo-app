@@ -39,13 +39,13 @@ const SubApp = () => {
   return {
     // Find a type which will automatically assume the type of the payload, by mapping
     // the keys of the subAppsGlobalData object or something like that
-    MealsAndMacros: (
+    "meals-and-macros": (
       <MealsAndMacros
         globalSubAppData={subAppNameAndPayload.payload as MealsAndMacrosProps}
       />
     ),
 
-    YTWatcher: (
+    "yt-video-watcher": (
       <YTWatcher
         playlists={(subAppNameAndPayload.payload as YTWatcherProps).playlists}
       />
