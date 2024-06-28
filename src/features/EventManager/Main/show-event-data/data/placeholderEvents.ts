@@ -85,14 +85,7 @@ export const placeholderEvent1: EventWithNeeds = {
             imageOrGifPath: "yes",
           },
         ],
-        toolsSubApps: [
-          {
-            subappName: "yt-video-watcher",
-            payload: {
-              ytVideoIds: ["a1", "b2"],
-            },
-          },
-        ],
+        toolsSubApps: [],
         toolsPhysicalOrThirdParty: [
           {
             title: "tool-title-1",
