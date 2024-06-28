@@ -144,7 +144,7 @@ const AddOns = () => {
               "how-and-tips": <HowAndTips content={addOnData.howAndTips} />,
               where: <WhereAndTools content={addOnData.toolsWhere} />,
               "tool-subapp": (
-                <SubAppsTogglers content={addOnData.toolsSubApps} />
+                <SubAppsTogglers subappsToToggle={addOnData.toolsSubApps} />
               ),
               "tool-physical-or-3rd-party": (
                 <WhereAndTools content={addOnData.toolsPhysicalOrThirdParty} />
