@@ -31,8 +31,9 @@ export const MealsAndMacros = ({ globalSubAppData }: MealsAndMacrosProps) => {
         // TODO: Remake in the final app, so that it's taken from the users local storage
         // For now it will only used by me, so I can just leave it hardcoded
         newValue:
-          hardcodedEventsBecauseOfTheLackOfTime.subAppsGlobalData
-            .MealsAndMacros["healthy-diet"],
+          hardcodedEventsBecauseOfTheLackOfTime.subAppsGlobalData[
+            "meals-and-macros"
+          ]["healthy-diet"],
       })
     );
   }, []);
