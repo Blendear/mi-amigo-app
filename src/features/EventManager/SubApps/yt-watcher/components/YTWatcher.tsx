@@ -12,7 +12,7 @@ const yTWatcherCss = {
   container: css({}),
 
   videosAndLinks: {
-    container: css({ display: "grid", gridTemplateColumns: "1fr 1fr" }),
+    container: css({}),
 
     titleImage: css({
       backgroundColor: "white",
