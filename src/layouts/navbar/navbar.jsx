@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <nav className={styles["navbar__container"]}>
-      <button onClick={openModal}>+</button>
+      {/* <button onClick={openModal}>+</button> */}
       {isModalOpen && (
         <DialogModal isOpen={isModalOpen} onClose={closeModal}>
           <EventDisplay variant="creating" />

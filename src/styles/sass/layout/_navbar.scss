@@ -5,6 +5,7 @@
 
 .navbar {
   &__container {
+    height: 3rem;
     background-color: colors.$tertiary-light;
     & > button {
       width: 5rem;
