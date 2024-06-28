@@ -1450,7 +1450,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             name: "Treść - W tle, dla towarzystwa",
             imagePath:
-              "https://www.freeiconspng.com/thumbs/circle-of-friends-icon-png/circle-of-friends-icon-png-17.jpg",
+              "https://i.fbcd.co/products/original/b2afafafae3488aff0c4d4078eb2538e5d6cae3f18e5a16bbf7ee291200a3947.jpg",
             ytVideoIds: [],
             thirdPartyLinks: [
               {
@@ -1574,7 +1574,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             name: "Muzyka - Booster siły - Średnie tony wokalne, z pierdolnięciem",
             imagePath:
-              "https://www.freeiconspng.com/uploads/wolf-howling-icon-png-11.png",
+              "https://static.vecteezy.com/system/resources/previews/005/738/986/original/modern-shape-wolf-howl-logo-symbol-icon-illustration-graphic-design-vector.jpg",
             ytVideoIds: ["gCYcHz2k5x0"],
             thirdPartyLinks: [
               {
