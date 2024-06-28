@@ -9,7 +9,9 @@ import ImageWithWrapper from "@/components/ImageWithWrapper";
 import { TitleBarWithTogglableContent } from "@/components/TitleBarWithTogglableContent";
 
 const yTWatcherCss = {
-  container: css({}),
+  container: css({
+    padding: "0 0 10rem 0",
+  }),
 
   videosAndLinks: {
     container: css({}),
