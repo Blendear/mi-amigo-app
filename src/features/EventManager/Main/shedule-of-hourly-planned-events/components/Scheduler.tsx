@@ -25,6 +25,11 @@ const Scheduler = () =>
     const scheduleRef = useRef(null);
     const [currentTime, setCurrentTime] = useState(new Date());
 
+    const [hardcodedEventsInSchedule, setHardcodedEventsInSchedule] = useState(
+      hardcodedEventsBecauseOfTheLackOfTime.eventsWithNeeds
+        .sheduleOfHourlyPlannedEvents
+    );
+
     useEffect(() => {
       executeScroll();
       if (scheduleRef.current) {
@@ -39,6 +44,12 @@ const Scheduler = () =>
       }
     }, [currentTime]);
 
+    const handleDeleteEvent = (eventId) => {
+      setHardcodedEventsInSchedule((prevEvents) =>
+        prevEvents.filter((event) => event.id !== eventId)
+      );
+    };
+
     return (
       <div className={styles["schedule"]}>
         {/* <p>Czasunio: {formatTimeOutOfDate(currentTime)}</p> */}
@@ -51,28 +62,27 @@ const Scheduler = () =>
             />
           </div>
           <div className={styles["schedule__grid__events"]}>
-            {hardcodedEventsBecauseOfTheLackOfTime.eventsWithNeeds.sheduleOfHourlyPlannedEvents.map(
-              (event, index) => {
-                const eventPosition = calculateEventPosition(event);
-                const activeBlockPosition = calculateActiveBlock(currentTime);
-                const isEventActive =
-                  activeBlockPosition + 1 >= eventPosition.gridRowStart &&
-                  activeBlockPosition + 1 <= eventPosition.gridRowEnd;
+            {hardcodedEventsInSchedule.map((event, index) => {
+              const eventPosition = calculateEventPosition(event);
+              const activeBlockPosition = calculateActiveBlock(currentTime);
+              const isEventActive =
+                activeBlockPosition + 1 >= eventPosition.gridRowStart &&
+                activeBlockPosition + 1 <= eventPosition.gridRowEnd;
 
-                return (
-                  <div
-                    ref={isEventActive ? scrollHereRef : dontScrollHereRef}
-                    key={event.id}
-                    className={styles["schedule__grid__events__event"]}
-                    style={calculateEventPosition(event)}
-                    css={{ fontSize: "1rem" }}
-                  >
-                    <ImageWithWrapper src={event.image} width="100%" />
-                    <div>{event.title}</div>
-                  </div>
-                );
-              }
-            )}
+              return (
+                <button
+                  onDoubleClick={() => handleDeleteEvent(event.id)}
+                  ref={isEventActive ? scrollHereRef : dontScrollHereRef}
+                  key={event.id}
+                  className={styles["schedule__grid__events__event"]}
+                  style={calculateEventPosition(event)}
+                  css={{ fontSize: "1rem" }}
+                >
+                  <ImageWithWrapper src={event.image} width="100%" />
+                  <div>{event.title}</div>
+                </button>
+              );
+            })}
           </div>
           <div>Test</div>
         </div>
