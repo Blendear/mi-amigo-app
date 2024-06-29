@@ -85,14 +85,11 @@ export const MealOfTheDayChooser = ({}) => {
             {/* {MealsAndMacros.globalSubAppData.mealsAvailable[meal.mealId].name} */}
             <ImageWithWrapper
               src={
-                MealsAndMacros.globalSubAppData.mealsAvailable.find(
-                  (mealAvailable) => mealAvailable.id === meal.mealId
-                ).imagePaths
+                MealsAndMacros.globalSubAppData.mealsAvailable[meal.mealId]
+                  .imagePaths
               }
               alt={
-                MealsAndMacros.globalSubAppData.mealsAvailable.find(
-                  (mealAvailable) => mealAvailable.id === meal.mealId
-                ).name
+                MealsAndMacros.globalSubAppData.mealsAvailable[meal.mealId].name
               }
               width="85px"
               height="85px"

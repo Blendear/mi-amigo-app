@@ -2259,7 +2259,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             id: 34,
             name: "Sos spaghetti",
             description:
-              "Ta porcja = 0.5 paczki | Żółte opaowanie (winiary?) - Carrefour",
+              "Ta porcja = 0.5 z 3 paczek | Żółte opaowanie (winiary?) - Carrefour",
             amount: 0.5,
             unit: "szt",
             macros: {
@@ -2284,7 +2284,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             },
             priceDetails: {
               price: 3.9,
-              forThisAmount: 1,
+              forThisAmount: 500,
             },
           },
           {
@@ -2751,6 +2751,15 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             ingredientsIds: [8, 57],
           },
           {
+            id: 11,
+            name: "Pierogi nie-zapiekane",
+            imagePaths:
+              "https://ocdn.eu/pulscms-transforms/1/SsJk9kpTURBXy84Zjg0NTA5NmY3OGM2YzczYjQzZmY5ODY4ZTdjMjUzMi5qcGeTlQMAIs0D6M0CMpMJpmFlNjg3ZQaTBc0EsM0Cdt4AAaEwAQ/pierogi-z-kapusta-i-grzybami-to-potrawa-ktorej-nie-moze-zabraknac-na-wigilijnym-stole.jpg",
+            ytVideoId: "___",
+            ingredientsIds: [57],
+          },
+
+          {
             id: 12,
             name: "Spaghetti z mięsem z indyka",
             imagePaths:
@@ -2789,14 +2798,6 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
               "https://www.kwestiasmaku.com/sites/v123.kwestiasmaku.com/files/ryz_zapiekany_z_jablkami_01.jpg",
             ytVideoId: "___",
             ingredientsIds: [56],
-          },
-          {
-            id: 11,
-            name: "Pierogi nie-zapiekane",
-            imagePaths:
-              "https://ocdn.eu/pulscms-transforms/1/SsJk9kpTURBXy84Zjg0NTA5NmY3OGM2YzczYjQzZmY5ODY4ZTdjMjUzMi5qcGeTlQMAIs0D6M0CMpMJpmFlNjg3ZQaTBc0EsM0Cdt4AAaEwAQ/pierogi-z-kapusta-i-grzybami-to-potrawa-ktorej-nie-moze-zabraknac-na-wigilijnym-stole.jpg",
-            ytVideoId: "___",
-            ingredientsIds: [57],
           },
 
           {
@@ -2930,11 +2931,11 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           13: [
             {
               mealId: 12,
-              nonDefaultAmounts: [],
+              nonDefaultAmounts: [0, 8, 125, 0.5, 125, 283.33],
             },
             {
               mealId: 12,
-              nonDefaultAmounts: [],
+              nonDefaultAmounts: [0, 8, 125, 0.5, 125, 566.66],
             },
           ],
           14: [
