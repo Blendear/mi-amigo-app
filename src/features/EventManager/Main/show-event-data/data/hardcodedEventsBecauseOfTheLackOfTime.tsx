@@ -1332,7 +1332,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         soundToHowl: "https://freesound.org/s/740843/",
       },
       {
-        id: 1,
+        id: 269,
         title:
           "(Dla chętnego) Dzień wolny = Wrld RPG | Dzień zarobkowy = LTC (1)",
         startDate: new Date(2024, 0, 19, 13, 30),
