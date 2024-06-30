@@ -2618,7 +2618,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 59,
             name: "Granola - Orzech & Kakao",
-            description: "66.67 = 1/6 śmietany 400g | Sante Fit, Kaufland",
+            description: "66.67 = 1/6 opakowania 300g | Sante Fit, Kaufland",
             amount: 100,
             unit: "g",
             macros: {
@@ -2644,6 +2644,21 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             priceDetails: {
               price: 1.69,
               forThisAmount: 400,
+            },
+          },
+          {
+            id: 61,
+            name: "Białko w proszku chocolate (wegańskie)",
+            description: "1 porcja  | All nutrition, SFD",
+            amount: 1,
+            unit: "szt",
+            macros: {
+              forThisAmount: 1,
+              calories: 102,
+            },
+            priceDetails: {
+              price: 34.99,
+              forThisAmount: 17,
             },
           },
         ],
@@ -2710,11 +2725,11 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
           {
             id: 7,
-            name: "Granola z jogurtem naturalnym i bananami",
+            name: "Białko w proszku & Granola z jogurtem naturalnym i bananami",
             imagePaths:
               "https://thermodieta.pl/thumbs_photo/8d85e26ccae3048c7e7e96d41fa6b0ff_1889617_1000_100000_80_jpg",
             ytVideoId: "___",
-            ingredientsIds: [4, 59, 60],
+            ingredientsIds: [61, 4, 59, 60],
           },
           {
             id: 8,
@@ -2825,8 +2840,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             },
           ],
           3: [
-            { mealId: 7, nonDefaultAmounts: [2, 150, 200] },
-            { mealId: 7, nonDefaultAmounts: [2, 150, 200] },
+            { mealId: 7, nonDefaultAmounts: [1, 2, 150, 150] },
+            { mealId: 7, nonDefaultAmounts: [0, 1, 150, 150] },
           ],
           4: [
             {
