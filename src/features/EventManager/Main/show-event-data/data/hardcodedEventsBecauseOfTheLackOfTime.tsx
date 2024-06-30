@@ -2618,7 +2618,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 59,
             name: "Granola - Orzech & Kakao",
-            description: "66.67 = 1/6 opakowania 300g | Sante Fit, Kaufland",
+            description: "Opakowanie ma 300g | Sante Fit, Kaufland",
             amount: 100,
             unit: "g",
             macros: {
@@ -2633,8 +2633,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 60,
             name: "Jogurt naturalny",
-            description:
-              "200 = połowa z 3ech jogurtów po 400g | Simpl, Carrefour",
+            description: "Duże opakowanie ma 400g | Simpl, Carrefour",
             amount: 200,
             unit: "g",
             macros: {
