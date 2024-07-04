@@ -90,7 +90,7 @@ export const MyBeautifulTimer = () => {
         {({ remainingTime }) => formatTime(remainingTime)}
       </CountdownCircleTimer>
       <button
-        onClick={() => handleSetTimer(50, 30, "adventure")}
+        onClick={() => handleSetTimer(50, 15, "adventure")}
         style={{
           filter: gifTypeRef.current !== "adventure" ? "saturate(0%)" : "none",
         }}
@@ -105,7 +105,7 @@ export const MyBeautifulTimer = () => {
         />
       </button>
       <button
-        onClick={() => handleSetTimer(9, 30, "chill")}
+        onClick={() => handleSetTimer(9, 15, "chill")}
         style={{
           filter: gifTypeRef.current !== "chill" ? "saturate(0%)" : "none",
         }}
