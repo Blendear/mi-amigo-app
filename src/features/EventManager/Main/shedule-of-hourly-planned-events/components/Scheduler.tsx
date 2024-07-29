@@ -84,7 +84,6 @@ const Scheduler = () =>
               );
             })}
           </div>
-          <div>Test</div>
         </div>
       </div>
     );

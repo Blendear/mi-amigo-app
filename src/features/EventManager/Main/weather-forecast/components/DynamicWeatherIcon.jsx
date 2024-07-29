@@ -12,27 +12,23 @@ import {
   TiWeatherSnow,
 } from "react-icons/ti";
 import { MdLocationOff } from "react-icons/md";
+import { useState } from "react";
+import { biggerSmaller } from "../../chest-of-daily-planned-and-unplanned-events/components/ChestButton";
 
 const dynamicWeatherICss = {
-  container: (weather) =>
-    css({
-      "& > svg": {
-        fontSize: "70px",
-
-        "& > path": {
-          color: {
-            Clear: `rgb(${colors.whiteLight}, 0.25)`,
-            Clouds: `aqua`,
-            Mist: `aqua`,
-            Drizzle: "aqua",
-            Rain: "aqua",
-            Extreme: "aqua",
-            Thunderstorm: "aqua",
-            Snow: "aqua",
-          }[weather],
+  container: (isIconGrey) =>
+    css([
+      universalCss.wrapperWithCenteredSvg("100px", "70%"),
+      {
+        "& *": {
+          color: isIconGrey ? `rgb(${colors.whiteLight}, 0.25)` : `white`,
         },
       },
-    }),
+
+      !isIconGrey && {
+        animation: `${biggerSmaller} 1s infinite`,
+      },
+    ]),
 };
 
 const weatherIcons = {
@@ -48,9 +44,16 @@ const weatherIcons = {
 };
 
 export const DynamicWeatherIcon = ({ weatherDescription }) => {
+  const [isIconGrey, setIsIconGrey] = useState(false);
+
   return (
-    <div css={dynamicWeatherICss.container(weatherDescription)}>
+    <button
+      css={dynamicWeatherICss.container(
+        isIconGrey ? true : weatherDescription === "Clear"
+      )}
+      onClick={() => setIsIconGrey(!isIconGrey)}
+    >
       {weatherIcons[weatherDescription]}
-    </div>
+    </button>
   );
 };

@@ -6,6 +6,7 @@ import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 
 const temperatureCss = {
   container: css({
+    alignSelf: "end",
     fontSize: variables.fontSize.regular,
     color: `rgb(${colors.whiteLight}, 0.25)`,
   }),

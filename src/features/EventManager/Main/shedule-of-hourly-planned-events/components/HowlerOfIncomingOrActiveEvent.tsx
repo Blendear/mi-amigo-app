@@ -80,7 +80,7 @@ export const HowlerOfIncomingOrActiveEvent = ({ currentTime }) => {
             zIndex: 1,
             position: "absolute",
             right: "10px",
-            animation: `${biggerSmaller} 2s infinite`,
+            animation: `${biggerSmaller} 1s infinite`,
           },
         ]}
         onClick={() => {

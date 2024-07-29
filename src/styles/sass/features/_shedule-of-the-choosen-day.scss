@@ -4,7 +4,7 @@
 @use "../../../styles/sass/base/typography";
 
 .schedule {
-  height: 67.5vh;
+  height: 76vh;
   width: 100%;
   overflow-y: scroll;
 
@@ -34,6 +34,10 @@
         width: $width;
         height: 0.2rem;
         background-color: rgb(colors.$primary-light, 0.3);
+      }
+
+      & > div > span {
+        color: rgb(colors.$primary-light, 0.3);
       }
 
       & > div > span {

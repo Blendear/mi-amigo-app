@@ -5,8 +5,10 @@ import ImageWithWrapper from "@/components/ImageWithWrapper";
 import { ChestButtonProps } from "../types";
 import { GiScrollQuill } from "react-icons/gi";
 import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
+import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { useState } from "react";
 import { hardcodedEventsBecauseOfTheLackOfTime } from "../../show-event-data/data/hardcodedEventsBecauseOfTheLackOfTime";
+import { GiLockedChest } from "react-icons/gi";
 
 export const biggerSmaller = keyframes`
   0% {
@@ -14,7 +16,7 @@ export const biggerSmaller = keyframes`
     filter: drop-shadow(0 0 0.5rem black) brightness(1);
   }
   50% {
-    transform: scale(1.5);
+    transform: scale(1.25);
     filter: drop-shadow(0 0 0.5rem black) brightness(1.25);
   }
   100% {
@@ -24,9 +26,13 @@ export const biggerSmaller = keyframes`
 `;
 
 const chestButtonCss = {
-  container: css({
-    position: "relative",
-  }),
+  container: css([
+    universalCss.wrapperWithCenteredSvg("100px", "60%"),
+
+    {
+      "& *": { color: `rgb(${colors.whiteLight}, 0.25)` },
+    },
+  ]),
 
   questIcon: css([
     universalCss.wrapperWithCenteredSvg("40px", "100%"),
@@ -34,7 +40,7 @@ const chestButtonCss = {
       position: "absolute",
       top: "0",
       right: "0",
-      animation: `${biggerSmaller} 2s infinite`,
+      animation: `${biggerSmaller} 1s infinite`,
     },
   ]),
 };
@@ -51,15 +57,16 @@ const ChestButton = ({ onClick }: ChestButtonProps) => {
       onClick={onClick}
       className={styles["event-manager__chest-button"]}
     >
-      <ImageWithWrapper
+      <GiLockedChest />
+      {/* <ImageWithWrapper
         src="https://static.vecteezy.com/system/resources/previews/022/913/766/non_2x/game-equipment-chest-illustration-3d-png.png"
         width="10rem"
-      />
-      {showQuestIcon && (
+      /> */}
+      {/* {showQuestIcon && (
         <div css={chestButtonCss.questIcon}>
           <GiScrollQuill size="4rem" />
         </div>
-      )}
+      )} */}
     </button>
   );
 };

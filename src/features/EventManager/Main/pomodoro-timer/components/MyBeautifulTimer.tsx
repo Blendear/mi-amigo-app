@@ -13,7 +13,7 @@ export const MyBeautifulTimer = () => {
   const howlerRef = useRef(null);
   const [timerKey, setTimerKey] = useState(0);
   const [isTimerPlaying, setIsTimerPlaying] = useState(true);
-  const [currentTime, setCurrentTime] = useState(3030);
+  const [currentTime, setCurrentTime] = useState(3015);
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handleSetTimer = (minutes, seconds, gifType) => {
@@ -56,6 +56,8 @@ export const MyBeautifulTimer = () => {
             : "/mp3/timer/chill-end.mp3"
         }
         playing={isPlaying}
+        // current 'adveture' sound is too loud, so it's volume is set to 25%
+        volume={gifTypeRef.current === "adventure" ? 0.25 : 1}
         loop={false}
       />
       <svg style={{ height: "0rem" }}>
@@ -83,7 +85,17 @@ export const MyBeautifulTimer = () => {
         strokeLinecap="square"
         strokeWidth={15}
         onComplete={() => {
-          setIsTimerPlaying(false);
+          // Instead of stopping the timer, we will just force-play the 'boy, another 10 minutes
+          // just passed without your interaction' it after 15 seconds, since everyday I'm 'pausing
+          // it just for a moment' to do something else and then I simply forget to turn it on, and
+          // I dont keep to the planned events
+          //
+          // setIsTimerPlaying(false);
+          setTimeout(() => {
+            !isTimerPlaying && handleSetTimer(9, 15, "chill");
+            !isTimerPlaying && handleRestartTimer();
+          }, 3000);
+
           handleToggleSound(true);
         }}
       >
