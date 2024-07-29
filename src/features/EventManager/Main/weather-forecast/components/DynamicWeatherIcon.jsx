@@ -22,8 +22,8 @@ const dynamicWeatherICss = {
         "& > path": {
           color: {
             Clear: `rgb(${colors.whiteLight}, 0.25)`,
-            Clouds: `rgb(${colors.whiteLight}, 0.25)`,
-            Mist: `rgb(${colors.whiteLight}, 0.25)`,
+            Clouds: `aqua`,
+            Mist: `aqua`,
             Drizzle: "aqua",
             Rain: "aqua",
             Extreme: "aqua",

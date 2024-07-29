@@ -1298,7 +1298,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
       {
         id: 1,
-        title: "Dzień wolny = Wrld RPG | Dzień zarobkowy = LTC (4)",
+        title: "(Z KIMŚ) Dzień wolny = Wrld RPG | Dzień zarobkowy = LTC (4)",
         startDate: new Date(2024, 0, 19, 7, 30),
         endDate: new Date(2024, 0, 19, 11, 30),
         image:
@@ -1334,7 +1334,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       {
         id: 269,
         title:
-          "(Dla chętnego) Dzień wolny = Wrld RPG | Dzień zarobkowy = LTC (1)",
+          "(Z KIMŚ) (Dla chętnego) Dzień wolny = Wrld RPG | Dzień zarobkowy = LTC (1)",
         startDate: new Date(2024, 0, 19, 13, 30),
         endDate: new Date(2024, 0, 19, 14, 30),
         image:
