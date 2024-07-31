@@ -10,9 +10,7 @@ import { DialogModal } from "..";
 import ChestButton from "@/features/EventManager/Main/chest-of-daily-planned-and-unplanned-events/components/ChestButton";
 import Scheduler from "@/features/EventManager/Main/shedule-of-hourly-planned-events/components/Scheduler";
 import { CurrentWeather } from "@/features/EventManager/Main/weather-forecast/components/CurrentWeather";
-import { SiGooglecalendar } from "react-icons/si";
-import { BsCalendar2Check } from "react-icons/bs";
-import { TbCalendarTime } from "react-icons/tb";
+import { GoogleCalendarLink } from "@/features/EventManager/Main/google-calendar-link/components/GoogleCalendarLink";
 
 const eventManagerCss = {
   container: css({
@@ -46,14 +44,7 @@ const EventManager = () => {
       <div css={eventManagerCss.container}>
         <CurrentWeather />
         <ChestButton onClick={openModal} />
-        <a
-          css={eventManagerCss.googleCalendarLink}
-          href="https://calendar.google.com/calendar/u/0/r/week"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <TbCalendarTime />
-        </a>
+        <GoogleCalendarLink />
       </div>
 
       {/* <Diagram /> */}

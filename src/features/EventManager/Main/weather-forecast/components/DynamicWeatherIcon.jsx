@@ -15,7 +15,7 @@ import { MdLocationOff } from "react-icons/md";
 import { useState } from "react";
 import { biggerSmaller } from "../../chest-of-daily-planned-and-unplanned-events/components/ChestButton";
 
-const dynamicWeatherICss = {
+export const dynamicWeatherICss = {
   container: (isIconGrey) =>
     css([
       universalCss.wrapperWithCenteredSvg("100px", "70%"),
@@ -52,6 +52,10 @@ export const DynamicWeatherIcon = ({ weatherDescription }) => {
         isIconGrey ? true : weatherDescription === "Clear"
       )}
       onClick={() => setIsIconGrey(!isIconGrey)}
+      onDoubleClick={() => {
+        window.location.href =
+          "https://www.google.com/search?q=pogoda&oq=pogoda&gs_lcrp=EgZjaHJvbWUyFwgAEEUYORhDGIMBGLEDGMkDGIAEGIoFMgkIARBFGDsYgAQyBggCEEUYOzIGCAMQRRg7MgYIBBBFGDsyBggFECMYJzIMCAYQIxgnGIAEGIoFMgoIBxAAGJIDGIAEMhIICBAAGEMYgwEYsQMYgAQYigUyEggJEAAYQxiDARixAxiABBiKBdIBCDQ0MzJqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8";
+      }}
     >
       {weatherIcons[weatherDescription]}
     </button>
