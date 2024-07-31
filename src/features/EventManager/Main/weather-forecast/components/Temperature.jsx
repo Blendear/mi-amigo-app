@@ -14,7 +14,7 @@ const temperatureCss = {
 
 export const Temperature = ({ temperature, isDefault }) => {
   return isDefault ? (
-    <div css={temperatureCss.container}>{"Loading GPS data..."}</div>
+    <div css={temperatureCss.container}>{"Loading..."}</div>
   ) : (
     <div css={temperatureCss.container}>{temperature} &#8451; </div>
   );

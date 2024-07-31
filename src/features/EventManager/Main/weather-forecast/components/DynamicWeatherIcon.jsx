@@ -32,7 +32,7 @@ export const dynamicWeatherICss = {
 };
 
 const weatherIcons = {
-  default: <MdLocationOff />,
+  default: <MdLocationOff style={{ width: "50%", height: "50%" }} />,
   Clear: <TiWeatherSunny />,
   Clouds: <TiWeatherCloudy />,
   Mist: <TiWeatherCloudy />,
