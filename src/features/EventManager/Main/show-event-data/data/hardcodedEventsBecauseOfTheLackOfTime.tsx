@@ -1469,7 +1469,42 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             name: "Treść - Wypoczęty - uszy",
             imagePath: "https://static.thenounproject.com/png/2296288-200.png",
-            ytVideoIds: [],
+            ytVideoIds: [
+              "O0xvu0daFfs",
+              "LXk5BwBejUc",
+              "sWRiI6q3N",
+              "soVx5FAqCgs",
+              "yXmI1gOQ7uM",
+              "kazDL45hXag",
+              "cY9FSbG5cso",
+              "t9GCXZOTUME",
+              "n0tkcsvxPh0",
+              "klbq9iakmuI",
+              "kc75oDGFWOk",
+              "H8huYWCJBFM",
+              "jzn8PL3lA4Q",
+              "4WYsRbuGbX0",
+              "ZgZ7R_8xY0A",
+              "HSYozrAzOzc",
+              "JDcLwmraccw",
+              "YWgFzC6hF2Y",
+              "0iCf28jaFs8",
+              "iwzgXl8qrFM",
+              "a4tzWAign9U",
+              "5hZgGTOYYJM",
+              "bUxxNKAt-G0",
+              "dAR_wfti6NU",
+              "drXR_8x3XDg",
+              "ScMOzV-P0-w",
+              "X5rR2F78_Tk",
+              "_uProYGXHa4",
+              "hqXBRErNKcc",
+              "zt6i6vVgiO4",
+              "OqlPU1CKEpI",
+              "0JLvspXC77s",
+              "G7Mb03MJvDA",
+              "r4Tnhnn45Vg",
+            ],
             thirdPartyLinks: [
               {
                 title: "Audiobook - Ziemiomorze",
@@ -1477,27 +1512,6 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
                   "https://play-lh.googleusercontent.com/E7Son8NCq7CSqiberd-FabMUehC3DqCSvp_ow5qzHbu9ZshPq_xnwx_guf2S8g4ErMM",
                 linkURL:
                   "https://audioteka.com/pl/search/cycle?query=Ziemiomorze",
-              },
-              {
-                title: "Audiobook - Terry Pratchett",
-                imageOrGifPath:
-                  "https://play-lh.googleusercontent.com/E7Son8NCq7CSqiberd-FabMUehC3DqCSvp_ow5qzHbu9ZshPq_xnwx_guf2S8g4ErMM",
-                linkURL:
-                  "https://audioteka.com/pl/search/author?query=Terry%20Pratchett",
-              },
-              {
-                title: "Audiobook - Stop Prawa",
-                imageOrGifPath:
-                  "https://covers.storytel.com/jpg-640/0408311112571.6cfcc6e0-43ce-4a46-9b8e-ec39392c3d92?optimize=high&quality=70",
-                linkURL: "https://www.storytel.com/pl/books/stop-prawa-187574",
-              },
-
-              {
-                title: "Audiobook - Złodziejska Magia",
-                imageOrGifPath:
-                  "https://covers.storytel.com/jpg-640/0408311112571.6cfcc6e0-43ce-4a46-9b8e-ec39392c3d92?optimize=high&quality=70",
-                linkURL:
-                  "https://www.storytel.com/mh/en/books/z%C5%82odziejska-magia-1336520",
               },
             ],
           },
