@@ -132,6 +132,7 @@ export type AppDataOfCurrentUser = {
 //TODO: Remove it in the future, since all features should use the same event data object type
 export type TemporaryTypeForPartialEventDataObjectType = {
   id: number;
+  variant: "create" | "absorb" | "chill";
   title: string;
   startDate: Date;
   endDate: Date;

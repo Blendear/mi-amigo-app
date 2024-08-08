@@ -14,6 +14,12 @@ import calculateActiveBlock from "../utils/calculateActiveBlock";
 import { hardcodedEventsBecauseOfTheLackOfTime } from "../../show-event-data/data/hardcodedEventsBecauseOfTheLackOfTime";
 import { HowlerOfIncomingOrActiveEvent } from "../components/HowlerOfIncomingOrActiveEvent";
 
+const colorOfBoxShadow = {
+  create: "189, 16, 77",
+  absorb: "16, 189, 183",
+  chill: "111, 189, 16",
+};
+
 const Scheduler = () =>
   // { events }: DailyScheduleProps
   {
@@ -69,6 +75,8 @@ const Scheduler = () =>
                 activeBlockPosition + 1 >= eventPosition.gridRowStart &&
                 activeBlockPosition + 1 <= eventPosition.gridRowEnd;
 
+              const colorForNeed = colorOfBoxShadow[event.variant];
+
               return (
                 <button
                   onDoubleClick={() => handleDeleteEvent(event.id)}
@@ -76,7 +84,13 @@ const Scheduler = () =>
                   key={event.id}
                   className={styles["schedule__grid__events__event"]}
                   style={calculateEventPosition(event)}
-                  css={{ fontSize: "1rem" }}
+                  css={{
+                    fontSize: "1rem",
+                    // boxShadow: `inset 0 0 1rem 0.1rem rgb(${colorForNeed}, 0.75)`,
+                    filter: `drop-shadow(0px 0 10px rgb(${colorForNeed},0.5))`,
+                    border: `1px solid rgb(${colorForNeed})`,
+                    backgroundColor: "black",
+                  }}
                 >
                   <ImageWithWrapper src={event.image} width="100%" />
                   <div>{event.title}</div>

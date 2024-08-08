@@ -1279,6 +1279,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       // },
       {
         id: 0,
+        variant: "absorb",
         title: "YT & Nightwatch (15/45)",
         startDate: new Date(2024, 0, 19, 6, 0), // January 19, 2024, 06:00 AM
         endDate: new Date(2024, 0, 19, 7, 0),
@@ -1289,6 +1290,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
 
       {
         id: 2,
+        variant: "absorb",
         title: "Jedzonko na 1 lub 2 razy zjedzone (30))",
         startDate: new Date(2024, 0, 19, 7, 0),
         endDate: new Date(2024, 0, 19, 7, 30),
@@ -1298,6 +1300,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
       {
         id: 1,
+        variant: "create",
         title: "(Z KIMŚ) Dzień wolny = Wrld RPG | Dzień zarobkowy = LTC (4)",
         startDate: new Date(2024, 0, 19, 7, 30),
         endDate: new Date(2024, 0, 19, 11, 30),
@@ -1307,6 +1310,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
       {
         id: 102,
+        variant: "chill",
         title: "Słucham & Trening 'klatka 3, barki 2, biceps 2' (1)",
         startDate: new Date(2024, 0, 19, 11, 30),
         endDate: new Date(2024, 0, 19, 12, 30),
@@ -1316,6 +1320,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
       {
         id: 107,
+        variant: "create",
         title: "FUN - MeTime / Zuzu / Ekipka / Spontaniczny amigo (0,5)",
         startDate: new Date(2024, 0, 19, 12, 30),
         endDate: new Date(2024, 0, 19, 13, 0),
@@ -1324,6 +1329,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
       {
         id: 4,
+        variant: "chill",
         title: "La Toiletta (30)",
         startDate: new Date(2024, 0, 19, 13, 0),
         endDate: new Date(2024, 0, 19, 13, 30),
@@ -1333,6 +1339,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
       {
         id: 269,
+        variant: "create",
         title:
           "(Z KIMŚ) (Dla chętnego) Dzień wolny = Wrld RPG | Dzień zarobkowy = LTC (1)",
         startDate: new Date(2024, 0, 19, 13, 30),
@@ -1343,6 +1350,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
       {
         id: 103,
+        variant: "create",
         title:
           "(Dla chętnego) Dzień zarobkowy = Giełda | Dzień wolny Mi Amigo (1)",
         startDate: new Date(2024, 0, 19, 15, 30),
@@ -1354,6 +1362,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
 
       {
         id: 6,
+        variant: "absorb",
         title: "Jedzonko z YT (30)",
         startDate: new Date(2024, 0, 19, 14, 30),
         endDate: new Date(2024, 0, 19, 15, 0),
@@ -1362,6 +1371,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
       {
         id: 5,
+        variant: "chill",
         title: "Drzemusia (30)",
         startDate: new Date(2024, 0, 19, 15, 0),
         endDate: new Date(2024, 0, 19, 15, 30),
@@ -1372,6 +1382,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
 
       {
         id: 7,
+        variant: "create",
         title: "FUN - MeTime / Zuzu / Ekipka / Spontaniczny amigo (2,5h)",
         startDate: new Date(2024, 0, 19, 16, 30),
         endDate: new Date(2024, 0, 19, 19, 0),
@@ -1380,6 +1391,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
       {
         id: 8,
+        variant: "absorb",
         title: "Gotowankowy lub Zakupowy Nightwatch (60)",
         startDate: new Date(2024, 0, 19, 19, 0),
         endDate: new Date(2024, 0, 19, 20, 0),
@@ -1388,6 +1400,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
       {
         id: 9,
+        variant: "absorb",
         title: "Kąpielowo-golny nightwatch (30)",
         startDate: new Date(2024, 0, 19, 20, 0),
         endDate: new Date(2024, 0, 19, 20, 30),
@@ -1397,6 +1410,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
       {
         id: 11,
+        variant: "create",
         title: "Devlogi DWA, końcowy i startowy, przed jutrem (15)",
         startDate: new Date(2024, 0, 19, 20, 30),
         endDate: new Date(2024, 0, 19, 20, 45),
@@ -1406,6 +1420,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
       {
         id: 121,
+        variant: "absorb",
         title: "Backup na DB etc. | KW's, phone, mess, calendar (15)",
         startDate: new Date(2024, 0, 19, 20, 45),
         endDate: new Date(2024, 0, 19, 21, 0),
@@ -1424,6 +1439,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       // },
       {
         id: 10,
+        variant: "absorb",
         title: "Audiobuczek z głąsku z szoszo (30)",
         startDate: new Date(2024, 0, 19, 21, 45),
         endDate: new Date(2024, 0, 19, 22, 15),
