@@ -79,6 +79,9 @@ const Scheduler = () =>
 
               return (
                 <button
+                  onClick={() => {
+                    alert(event.title);
+                  }}
                   onDoubleClick={() => handleDeleteEvent(event.id)}
                   ref={isEventActive ? scrollHereRef : dontScrollHereRef}
                   key={event.id}
@@ -93,7 +96,8 @@ const Scheduler = () =>
                   }}
                 >
                   <ImageWithWrapper src={event.image} width="100%" />
-                  <div>{event.title}</div>
+                  {/* The title will be shown on click only */}
+                  {/* <div>{event.title}</div> */}
                 </button>
               );
             })}
