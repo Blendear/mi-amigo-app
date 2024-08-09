@@ -1418,7 +1418,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         title: "Nocna Wartunia",
         startDate: new Date(2024, 0, 19, 19, 0),
         endDate: new Date(2024, 0, 19, 20, 0),
-        image: "https://pbs.twimg.com/media/FKOWYwvVgAAvREf.jpg",
+        image: "/images/events-manager/cleaning.jpg",
         // "https://www.laughingplace.com/w/wp-content/uploads/2019/12/amphibia-6247d4a4-5357-4ac3-9980-09f14a44527f.jpg/video_wide",
         soundToHowl: "https://freesound.org/s/740843/",
       },
