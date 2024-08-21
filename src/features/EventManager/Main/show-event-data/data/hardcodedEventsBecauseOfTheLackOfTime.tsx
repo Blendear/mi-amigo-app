@@ -1319,7 +1319,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         id: 1,
         variant: "create",
         title:
-          "(Z KIMŚ) Dzień wolny = Wrld RPG | Dzień zarobkowy = INFINITI cookies > Mind Movies > PEF website > Grzejś website > Giełda",
+          "(Z KIMŚ) Dzień wolny = Wrld RPG | Dzień zarobkowy = INFINITI > LTC > Mind Movies > PEF website > Grzejś website > Giełda",
         startDate: new Date(2024, 0, 19, 8, 45),
         endDate: new Date(2024, 0, 19, 11, 45),
         image: "https://i.ytimg.com/vi/tnQR08eATvk/hqdefault.jpg", // https://i.ytimg.com/vi/Y9_pA7YdsMI/hqdefault.jpg
