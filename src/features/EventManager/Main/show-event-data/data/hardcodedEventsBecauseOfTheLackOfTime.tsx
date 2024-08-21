@@ -1280,7 +1280,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       {
         id: 0,
         variant: "create",
-        title: "Easy TODO & YT",
+        title: "Słuchając music/remember yt... Easy TODO, pewniaczek, robię",
         startDate: new Date(2024, 0, 19, 6, 15), // January 19, 2024, 06:00 AM
         endDate: new Date(2024, 0, 19, 7, 15),
         image: "https://i.ytimg.com/vi/Y9_pA7YdsMI/hqdefault.jpg",
@@ -1319,7 +1319,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         id: 1,
         variant: "create",
         title:
-          "(Z KIMŚ) Dzień wolny = Wrld RPG | Dzień zarobkowy = Mind Movies or PEF website or Grzejś website or Giełda",
+          "(Z KIMŚ) Dzień wolny = Wrld RPG | Dzień zarobkowy = Mind Movies > PEF website > Grzejś website > Giełda",
         startDate: new Date(2024, 0, 19, 8, 45),
         endDate: new Date(2024, 0, 19, 11, 45),
         image: "https://i.ytimg.com/vi/tnQR08eATvk/hqdefault.jpg", // https://i.ytimg.com/vi/Y9_pA7YdsMI/hqdefault.jpg
@@ -1337,7 +1337,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       {
         id: 223,
         variant: "chill",
-        title: "Podróż do mobilnej kuźni",
+        title: "Podróż z mobilnej kuźni",
         startDate: new Date(2024, 0, 19, 12, 45),
         endDate: new Date(2024, 0, 19, 13, 15),
         image:
