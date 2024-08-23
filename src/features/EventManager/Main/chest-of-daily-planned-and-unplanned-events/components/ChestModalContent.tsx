@@ -91,7 +91,9 @@ const ChestModalContent = ({}: ChestModalContentProps) => {
       <section>
         <TitleBarWithTogglableContent
           titleBarContent={
-            <h2 css={chestModalCss.titleBarWithContent}>Codzienne</h2>
+            <h2 css={chestModalCss.titleBarWithContent}>
+              Templatki powtarzalnych
+            </h2>
           }
         >
           {filteredEvents.libraryOfTemplateEvents.map((event, index) => {
