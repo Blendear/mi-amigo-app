@@ -138,6 +138,7 @@ export type TemporaryTypeForPartialEventDataObjectType = {
   endDate: Date;
   image: string;
   soundToHowl: string;
+  workflowsAkaKWLinks?: string[];
 };
 
 export type GlobalReduxContextsType = {

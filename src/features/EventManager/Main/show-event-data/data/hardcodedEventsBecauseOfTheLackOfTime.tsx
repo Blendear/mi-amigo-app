@@ -95,139 +95,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       ],
       oneDay: [
         {
-          name: "edytowalny mi amigo calendar / dodawania w appce wydarzen (zrob dedykowany firebase account pod mi amigo po prostu) niż wrld. trace ogrom czasu na re-orderingu caledarza czy przepisywanie todo's etc",
-          description: "",
-          imagePath:
-            "https://i.gifer.com/origin/04/0479f858b813dc34eb808c990c380919.gif",
-          imageAltText: "",
-          eventGroupId: 0,
-          eventInstanceId: 0,
-          GIFPath: "",
-          isAllDayLong: false,
-          allDayLongVariantProps: {
-            importance: "",
-            date: new Date(),
-          },
-          timedVariantProps: {
-            startDateAndTime: new Date(),
-            endDateAndTime: new Date(),
-          },
-          deadlineVariant: "none",
-          addOnsByVariants: {
-            variant1: {
-              step1: {},
-            },
-          },
-          needsFulfilledByVariant: {
-            variant1: {
-              isWant: false,
-              isCreate: false,
-              isAbsorb: false,
-              isChill: false,
-              isVent: false,
-              isSquad: false,
-              isActive: false,
-              isWilderness: false,
-              isFresh: false,
-            },
-          },
-          vocalNotifications: {
-            startEventSound: "",
-            xMinutesBeforeStartAmount: null,
-            xMinutesBeforeStartSound: "",
-            endEventSound: "",
-          },
-        },
-        {
-          name: "devlogi wplanuj w codzienny tworzenie, NAWET TE NIEWRLDOWSKIE",
-          description: "",
-          imagePath:
-            "https://media.indiedb.com/images/members/3/2980/2979813/profile/gif2.gif",
-          imageAltText: "",
-          eventGroupId: 0,
-          eventInstanceId: 0,
-          GIFPath: "",
-          isAllDayLong: false,
-          allDayLongVariantProps: {
-            importance: "",
-            date: new Date(),
-          },
-          timedVariantProps: {
-            startDateAndTime: new Date(),
-            endDateAndTime: new Date(),
-          },
-          deadlineVariant: "none",
-          addOnsByVariants: {
-            variant1: {
-              step1: {},
-            },
-          },
-          needsFulfilledByVariant: {
-            variant1: {
-              isWant: false,
-              isCreate: false,
-              isAbsorb: false,
-              isChill: false,
-              isVent: false,
-              isSquad: false,
-              isActive: false,
-              isWilderness: false,
-              isFresh: false,
-            },
-          },
-          vocalNotifications: {
-            startEventSound: "",
-            xMinutesBeforeStartAmount: null,
-            xMinutesBeforeStartSound: "",
-            endEventSound: "",
-          },
-        },
-        {
-          name: "Blendlogi na kompa io db zgraj",
-          description: "",
-          imagePath:
-            "https://beebom.com/wp-content/uploads/2023/07/Animated-image-in-OBS-Studio.gif?w=640",
-          imageAltText: "",
-          eventGroupId: 0,
-          eventInstanceId: 0,
-          GIFPath: "",
-          isAllDayLong: false,
-          allDayLongVariantProps: {
-            importance: "",
-            date: new Date(),
-          },
-          timedVariantProps: {
-            startDateAndTime: new Date(),
-            endDateAndTime: new Date(),
-          },
-          deadlineVariant: "none",
-          addOnsByVariants: {
-            variant1: {
-              step1: {},
-            },
-          },
-          needsFulfilledByVariant: {
-            variant1: {
-              isWant: false,
-              isCreate: false,
-              isAbsorb: false,
-              isChill: false,
-              isVent: false,
-              isSquad: false,
-              isActive: false,
-              isWilderness: false,
-              isFresh: false,
-            },
-          },
-          vocalNotifications: {
-            startEventSound: "",
-            xMinutesBeforeStartAmount: null,
-            xMinutesBeforeStartSound: "",
-            endEventSound: "",
-          },
-        },
-        {
-          name: "Wpisz onenoteowy hook1 i hook2 do mi amigo do 'one day' etc,",
+          name: "Wpisz do mi amigo'wego 'one day' - zapisane na telefonie, w onenote, TODOsy ze starej formy hook1 i hook2",
           description: "",
           imagePath:
             "https://i.pinimg.com/originals/42/a0/1c/42a01cd7d928a9f62f166c98a15f1b30.gif",
@@ -397,6 +265,61 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
               isActive: false,
               isWilderness: false,
               isFresh: true,
+            },
+          },
+          vocalNotifications: {
+            startEventSound: "",
+            xMinutesBeforeStartAmount: null,
+            xMinutesBeforeStartSound: "",
+            endEventSound: "",
+          },
+        },
+        {
+          name: "Podróżuję",
+          description: "Na miejscu rowerkiem, albo autem/samolotem po światach",
+          imagePath:
+            "https://images.squarespace-cdn.com/content/v1/5e6c6d81898be713ac68c06e/1599983996424-QZSLQWIOOS8AKXGEM9F6/owlhouse7.png",
+          imageAltText: "",
+          eventGroupId: 0,
+          eventInstanceId: 0,
+          GIFPath: "",
+          isAllDayLong: false,
+          allDayLongVariantProps: {
+            importance: "",
+            date: new Date(),
+          },
+          timedVariantProps: {
+            startDateAndTime: new Date(),
+            endDateAndTime: new Date(),
+          },
+          deadlineVariant: "none",
+          workflowAkaBookOfKnowledgeLink:
+            "https://www.dropbox.com/scl/fi/1d7j7ig4w9q75ktdlzo4o/KW-Podr-uj.docx?rlkey=m7sq8yrdfahwgxpxdrymsbrk6&st=j4jq657h&dl=0",
+          addOnsByVariants: {
+            _: {
+              _: {
+                toolsSubApps: [
+                  {
+                    name: "meals-and-macros",
+                    variant: "healthy-diet",
+                    imagePath:
+                      "https://www.escapistmagazine.com/wp-content/uploads/2024/01/Delicious-in-Dungeon.jpg?fit=1200%2C910",
+                  },
+                ],
+              },
+            },
+          },
+          needsFulfilledByVariant: {
+            variant1: {
+              isWant: true,
+              isCreate: false,
+              isAbsorb: true,
+              isChill: false,
+              isVent: false,
+              isSquad: false,
+              isActive: false,
+              isWilderness: false,
+              isFresh: false,
             },
           },
           vocalNotifications: {
@@ -906,67 +829,6 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
         },
         {
-          name: "Budżetem miesięcznym / życiowym kupuję",
-          description:
-            "Ile mogę wydać miesięcznie || ogólnie na zainwestowanie coś ponad potrzeby",
-          imagePath:
-            "https://www.bhmpics.com/downloads/wallpaper-shakes-and-fidget/5.daily_login_background_jpg.jpg",
-          imageAltText: "",
-          eventGroupId: 0,
-          eventInstanceId: 0,
-          GIFPath: "",
-          isAllDayLong: false,
-          allDayLongVariantProps: {
-            importance: "",
-            date: new Date(),
-          },
-          timedVariantProps: {
-            startDateAndTime: new Date(),
-            endDateAndTime: new Date(),
-          },
-          deadlineVariant: "none",
-          addOnsByVariants: {
-            _: {
-              _: {
-                howAndTips: {
-                  ytVideoId: "",
-                  notes: [
-                    {
-                      title:
-                        "Warte notatki do przemienienia w część do workflowu",
-                      description: `
-                    Gry:
-                    ) Monster Hunter One (coop ma)
-                    ) Enter The Gungoen (save scumming pod niefrusturjący roguelike experience)
-                      
-                      `,
-                    },
-                  ],
-                },
-              },
-            },
-          },
-          needsFulfilledByVariant: {
-            variant1: {
-              isWant: true,
-              isCreate: false,
-              isAbsorb: false,
-              isChill: false,
-              isVent: false,
-              isSquad: false,
-              isActive: false,
-              isWilderness: false,
-              isFresh: true,
-            },
-          },
-          vocalNotifications: {
-            startEventSound: "",
-            xMinutesBeforeStartAmount: null,
-            xMinutesBeforeStartSound: "",
-            endEventSound: "",
-          },
-        },
-        {
           name: "Programowanie & Design",
           description: "Tworzenie programów oraz ich visual developmentu",
           imagePath:
@@ -1285,6 +1147,9 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         endDate: new Date(2024, 0, 19, 7, 15),
         image: "https://i.ytimg.com/vi/Y9_pA7YdsMI/hqdefault.jpg",
         soundToHowl: "https://freesound.org/s/740843/",
+        workflowsAkaKWLinks: [
+          "https://www.dropbox.com/scl/fi/1d7j7ig4w9q75ktdlzo4o/KW-Podr-uj.docx?rlkey=m7sq8yrdfahwgxpxdrymsbrk6&st=j4jq657h&dl=0",
+        ],
       },
 
       {

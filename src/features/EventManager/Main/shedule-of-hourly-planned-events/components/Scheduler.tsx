@@ -13,6 +13,14 @@ import calculateEventPosition from "../utils/calculateEventPosition";
 import calculateActiveBlock from "../utils/calculateActiveBlock";
 import { hardcodedEventsBecauseOfTheLackOfTime } from "../../show-event-data/data/hardcodedEventsBecauseOfTheLackOfTime";
 import { HowlerOfIncomingOrActiveEvent } from "../components/HowlerOfIncomingOrActiveEvent";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+const toastProps = {
+  hideProgressBar: true,
+  closeOnClick: true,
+  autoClose: 1500,
+};
 
 const colorOfBoxShadow = {
   create: "189, 16, 77",
@@ -80,7 +88,22 @@ const Scheduler = () =>
               return (
                 <button
                   onClick={() => {
-                    alert(event.title);
+                    // alert(event.title);
+                    toast.info(
+                      <div>
+                        <h1>{event.title}</h1>
+                        {event.workflowsAkaKWLinks && (
+                          <ul>
+                            {event.workflowsAkaKWLinks.map((link, index) => (
+                              <li key={index}>
+                                <a href={link}>Link {index + 1}</a>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>,
+                      toastProps
+                    );
                   }}
                   onDoubleClick={() => handleDeleteEvent(event.id)}
                   ref={isEventActive ? scrollHereRef : dontScrollHereRef}
