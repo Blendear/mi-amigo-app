@@ -115,7 +115,12 @@ export const Meal = ({
             setHideDetails((prev) => !prev);
           }}
         >
-          <ImageWithWrapper src={details.imagePaths} width="16rem" />
+          <ImageWithWrapper
+            src={details.imagePaths}
+            wrapperCss={{
+              width: "16rem",
+            }}
+          />
           <p>{details.name}</p>
           <p>a</p>
           <p css={{ fontSize: "0.8rem" }}>
