@@ -45,13 +45,17 @@ export const MealsForTheChosenDay = () => {
 
       <ImageWithWrapper
         src="/images/subapps/meals-and-macros/vimed-kcal-1.jpg"
-        width="100%"
-        aspectRatio="3/4"
+        wrapperCss={{
+          width: "100%",
+          aspectRatio: "3/4",
+        }}
       />
       <ImageWithWrapper
         src="/images/subapps/meals-and-macros/vimed-kcal-2.jpg"
-        width="100%"
-        aspectRatio="3/4"
+        wrapperCss={{
+          width: "100%",
+          aspectRatio: "3/4",
+        }}
       />
     </section>
   );
