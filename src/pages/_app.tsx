@@ -6,6 +6,7 @@ import store from "../store/redux/store-redux";
 import { Provider } from "react-redux";
 import Layout from "../layouts/layout/layout";
 import Head from "next/head";
+import { ToastContainer } from "react-toastify";
 
 function MyApp({ Component, pageProps }: AppProps<{}>) {
   return (
@@ -25,6 +26,7 @@ function MyApp({ Component, pageProps }: AppProps<{}>) {
         </Head>
         {/* //       _._. Base Next.js component, visible to users */}
         <Component {...pageProps} />
+        <ToastContainer theme="dark" />
       </Layout>
     </Provider>
   );

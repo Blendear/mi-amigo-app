@@ -14,9 +14,6 @@ export interface DialogModalProps {
 }
 
 export type ImageWithWrapperProps = {
-  width?: string;
-  height?: string;
-  aspectRatio?: string;
   src: string;
   alt?: string;
   wrapperCss?: {};
@@ -138,7 +135,7 @@ export type TemporaryTypeForPartialEventDataObjectType = {
   endDate: Date;
   image: string;
   soundToHowl: string;
-  workflowsAkaKWLinks?: string[];
+  workflowsAkaKWLinks?: { imagePath: string; link: string }[];
 };
 
 export type GlobalReduxContextsType = {

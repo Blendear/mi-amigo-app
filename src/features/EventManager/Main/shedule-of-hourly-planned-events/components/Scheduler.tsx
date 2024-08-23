@@ -18,14 +18,29 @@ import "react-toastify/dist/ReactToastify.css";
 
 const toastProps = {
   hideProgressBar: true,
-  closeOnClick: true,
-  autoClose: 1500,
+  closeOnClick: false,
+  icon: false,
 };
 
 const colorOfBoxShadow = {
   create: "189, 16, 77",
   absorb: "16, 189, 183",
   chill: "111, 189, 16",
+};
+
+const toastCss = {
+  container: css({}),
+
+  ul: css({
+    display: "grid",
+    gridTemplateColumns: "repeat(2, 1fr)",
+    justifyItems: "center",
+  }),
+
+  liImage: css({
+    width: "100px",
+    aspectRatio: "1/1",
+  }),
 };
 
 const Scheduler = () =>
@@ -88,20 +103,26 @@ const Scheduler = () =>
               return (
                 <button
                   onClick={() => {
-                    // alert(event.title);
                     toast.info(
                       <div>
                         <h1>{event.title}</h1>
+
                         {event.workflowsAkaKWLinks && (
-                          <ul>
-                            {event.workflowsAkaKWLinks.map((link, index) => (
+                          <ul css={toastCss.ul}>
+                            {event.workflowsAkaKWLinks.map((data, index) => (
                               <li key={index}>
-                                <a href={link}>Link {index + 1}</a>
+                                <a href={data.link}>
+                                  <ImageWithWrapper
+                                    src={data.imagePath}
+                                    wrapperCss={toastCss.liImage}
+                                  />
+                                </a>
                               </li>
                             ))}
                           </ul>
                         )}
                       </div>,
+
                       toastProps
                     );
                   }}
@@ -118,7 +139,12 @@ const Scheduler = () =>
                     backgroundColor: "black",
                   }}
                 >
-                  <ImageWithWrapper src={event.image} width="100%" />
+                  <ImageWithWrapper
+                    src={event.image}
+                    wrapperCss={{
+                      width: "100%",
+                    }}
+                  />
                   {/* The title will be shown on click only */}
                   {/* <div>{event.title}</div> */}
                 </button>

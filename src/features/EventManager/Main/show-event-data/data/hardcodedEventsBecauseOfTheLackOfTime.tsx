@@ -1147,9 +1147,6 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         endDate: new Date(2024, 0, 19, 7, 15),
         image: "https://i.ytimg.com/vi/Y9_pA7YdsMI/hqdefault.jpg",
         soundToHowl: "https://freesound.org/s/740843/",
-        workflowsAkaKWLinks: [
-          "https://www.dropbox.com/scl/fi/1d7j7ig4w9q75ktdlzo4o/KW-Podr-uj.docx?rlkey=m7sq8yrdfahwgxpxdrymsbrk6&st=j4jq657h&dl=0",
-        ],
       },
 
       {
@@ -1179,6 +1176,12 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         image:
           "https://images.squarespace-cdn.com/content/v1/5e6c6d81898be713ac68c06e/1599983996424-QZSLQWIOOS8AKXGEM9F6/owlhouse7.png",
         soundToHowl: "https://freesound.org/s/740843/",
+        workflowsAkaKWLinks: [
+          {
+            imagePath: "https://i.ytimg.com/vi/Y9_pA7YdsMI/hqdefault.jpg",
+            link: "https://www.dropbox.com/scl/fi/1d7j7ig4w9q75ktdlzo4o/KW-Podr-uj.docx?rlkey=m7sq8yrdfahwgxpxdrymsbrk6&st=j4jq657h&dl=0",
+          },
+        ],
       },
       {
         id: 1,
