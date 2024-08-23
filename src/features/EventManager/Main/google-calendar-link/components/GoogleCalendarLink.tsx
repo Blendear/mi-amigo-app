@@ -8,7 +8,7 @@ import { TbCalendarTime } from "react-icons/tb";
 import { biggerSmaller } from "../../chest-of-daily-planned-and-unplanned-events/components/ChestButton";
 import { useState } from "react";
 
-const googleCalendarLCss = {
+export const googleCalendarLCss = {
   container: (isIconGrey) =>
     css([
       universalCss.wrapperWithCenteredSvg("100px", "50%"),
@@ -30,14 +30,17 @@ export const GoogleCalendarLink = ({}: GoogleCalendarLinkProps) => {
   const [isIconGrey, setIsIconGrey] = useState(false);
 
   return (
-    <a
+    <button
       css={googleCalendarLCss.container(isIconGrey)}
       onClick={() => setIsIconGrey(!isIconGrey)}
-      href="https://calendar.google.com/calendar/u/0/r/week"
-      target="_blank"
-      rel="noreferrer"
+      onDoubleClick={() => {
+        window.open(
+          "https://calendar.google.com/calendar/u/0/r/week",
+          "_blank"
+        );
+      }}
     >
       <TbCalendarTime />
-    </a>
+    </button>
   );
 };

@@ -9,6 +9,7 @@ import { colors } from "@/styles/emotion-css-experiment/abstracts/colors";
 import { useState } from "react";
 import { hardcodedEventsBecauseOfTheLackOfTime } from "../../show-event-data/data/hardcodedEventsBecauseOfTheLackOfTime";
 import { GiLockedChest } from "react-icons/gi";
+import { googleCalendarLCss } from "../../google-calendar-link/components/GoogleCalendarLink";
 
 export const biggerSmaller = keyframes`
   0% {
@@ -47,14 +48,15 @@ const chestButtonCss = {
 
 const ChestButton = ({ onClick }: ChestButtonProps) => {
   // TODO: Get the value from redux before app goes live (for now it's hardcoded)
-  const showQuestIcon =
-    hardcodedEventsBecauseOfTheLackOfTime.eventsWithNeeds
-      .chestWithAllDayLongEvents.necessary.length > 0;
+  const [isIconGrey, setIsIconGrey] = useState(false);
 
   return (
     <button
-      css={chestButtonCss.container}
-      onClick={onClick}
+      css={googleCalendarLCss.container(isIconGrey)}
+      onClick={() => {
+        setIsIconGrey(!isIconGrey);
+      }}
+      onDoubleClick={onClick}
       className={styles["event-manager__chest-button"]}
     >
       <GiLockedChest />
