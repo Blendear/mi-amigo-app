@@ -5,6 +5,50 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
     chestWithAllDayLongEvents: {
       necessary: [
         {
+          name: "Wymyśl sposób backupowania DB'owego '~~~Toby~~~' nie na PC, a tylko niezbedne na PC a reszta na DB i na dyskach twardych  (zawala prawie 1TB danych, i będzie rosnął przez Wrld RPG)",
+          description: "",
+          imagePath:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsKIEgmLNfu9e8qkH3FEOzCQQueACq8FAJNh-4VW4cHdyj8MqiaElgEsGnifsJRIeg8Z4&usqp=CAU",
+          imageAltText: "",
+          eventGroupId: 0,
+          eventInstanceId: 0,
+          GIFPath: "",
+          isAllDayLong: false,
+          allDayLongVariantProps: {
+            importance: "",
+            date: new Date(),
+          },
+          timedVariantProps: {
+            startDateAndTime: new Date(),
+            endDateAndTime: new Date(),
+          },
+          deadlineVariant: "none",
+          addOnsByVariants: {
+            variant1: {
+              step1: {},
+            },
+          },
+          needsFulfilledByVariant: {
+            variant1: {
+              isWant: false,
+              isCreate: false,
+              isAbsorb: false,
+              isChill: false,
+              isVent: false,
+              isSquad: false,
+              isActive: false,
+              isWilderness: false,
+              isFresh: false,
+            },
+          },
+          vocalNotifications: {
+            startEventSound: "",
+            xMinutesBeforeStartAmount: null,
+            xMinutesBeforeStartSound: "",
+            endEventSound: "",
+          },
+        },
+        {
           name: "WSB dyplom odbiera   &   Backup go na DB",
           description: "",
           imagePath:
@@ -140,6 +184,141 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         },
       ],
       libraryOfTemplateEvents: [
+        {
+          name: "I need help - Księga Potworów",
+          description:
+            "Spis wszystkich spotkanych myślami demonów, sposoób na ich ogranie, a nawet wejście w symbiotyczną znajomość",
+          imagePath: "https://images8.alphacoders.com/113/1132674.jpg",
+          imageAltText: "",
+          eventGroupId: 0,
+          eventInstanceId: 0,
+          GIFPath: "",
+          isAllDayLong: false,
+          workflowAkaBookOfKnowledgeLink:
+            "https://www.dropbox.com/scl/fo/11kqinxcahufqbd5qlwl0/AK9QfHz_aS6UiG4a-mtIL7c?rlkey=9bxcsgg655fcgv83tb8ocui5v&st=5za383ti&dl=0",
+          allDayLongVariantProps: {
+            importance: "",
+            date: new Date(),
+          },
+          timedVariantProps: {
+            startDateAndTime: new Date(),
+            endDateAndTime: new Date(),
+          },
+          deadlineVariant: "none",
+          addOnsByVariants: {
+            "Nie chce mi się. NIC.": {
+              "Potrzebujesz się 'focusmate' lub spotkać live z amigo || wyjść do galerii do ludzi chociaż":
+                {},
+              "TYLKO dlatego że o tym myślisz & że trzeba myśleć do robienia czegoś - dlatego to czujesz. Dlatego SŁUCHAWKI, odpal workflow 'Tworzę', najlepiej 'Pieszczę' + MÓWIONY (najlepiej friends, like PKP or CR) podcast pod maximum zajęcia i po 5 minut muzyka":
+                {},
+              "Gitarra. Naucz się a banger song": {},
+              "'Want' + 'Wataha' (choćby cofocus / focusmatea.com) & Omów tą niechęć z nimi":
+                {},
+              "Rememberer odpal": {},
+            },
+            "Planuję 5h, zamiast tworzyć w 1h i w 2h nakierować / poprawić": {
+              "Fail fast. BANALNIE I PRZYJMENIE jest poprawić surowy szkic, W UJ TRUDNO jest idealnie zapełnmić pusta kartkę za pierwszym razem":
+                {},
+            },
+            "Przytłoczony/zestresowany życiem/problemem X": {
+              "Z Ewronikiem, Jordanem, Joe'm || Ekipą omów problem": {},
+              "Wicofie. Teraz damy wam z siostrzyczką przykład": {
+                howAndTips: {
+                  ytVideoId: "",
+                  notes: [
+                    {
+                      title: "Ewronik",
+                      description: "_",
+                    },
+                    {
+                      title: "Jordan Peterson",
+                      description: "_",
+                    },
+                  ],
+                },
+              },
+              "Wi all roleplaying kiddos.": {},
+              "Medytnijmy. Dobra. Tyle, że po naszemu.": {},
+            },
+            "Overworked. Wypalam się.": {
+              Mniej: {},
+              "Architekuturj/Rozbij potwora na 1 lub 2 godzinne chunki": {
+                howAndTips: {
+                  ytVideoId: "",
+                  notes: [
+                    {
+                      title:
+                        "Przeraża cię 'nie wiem jak go ograć / gdzie zacząć' po prostu",
+                      description: "_",
+                    },
+                  ],
+                },
+              },
+              "80/20": {
+                howAndTips: {
+                  ytVideoId: "",
+                  notes: [
+                    {
+                      title: "Skup się na istotnych 20% zadań",
+                      description: "_",
+                    },
+                  ],
+                },
+              },
+            },
+            "Chcę chcieć tworzyć, ale nie chce mi się tworzyć": {
+              "'Want' i'Chłonę' w uszy & PEWNY, 'Fresh', 'Pieszczę' quest ": {
+                howAndTips: {
+                  ytVideoId: "ODt3lA6UHHI",
+                  notes: [
+                    {
+                      title:
+                        "Brakuje ci właśnie 'want' i 'fresh', a'chłonę' zatamuje niechęć",
+                      description:
+                        "5-min remember developerski & Leć, koniecznienie z PEWNYM pieszczę (samo chłonę to u mnie x-godzinyn copying mechanizm w limbo opierdolu i misery), np. 3d model wg planu / lineart wedle szkiców. A chłone - Np. Asmongold banteurjący o grze i 3D po paru dniach programowania",
+                    },
+                  ],
+                },
+              },
+            },
+            "Kasa. Brakuje mi & Ludzie jej wymagają ode mnie": {
+              "Nie żydzę, a zbieram na...": {
+                howAndTips: {
+                  ytVideoId: "",
+                  notes: [
+                    {
+                      title:
+                        "Powiedz szczerze, 'Wolę mieć na wypad/inwestycję X, niż na item Y'",
+                      description: "_",
+                    },
+                  ],
+                },
+              },
+            },
+            "Problem X": {
+              "Ostatnio zaorało go to": {},
+            },
+          },
+          needsFulfilledByVariant: {
+            variant1: {
+              isWant: false,
+              isCreate: false,
+              isAbsorb: false,
+              isChill: false,
+              isVent: false,
+              isSquad: false,
+              isActive: false,
+              isWilderness: false,
+              isFresh: false,
+            },
+          },
+          vocalNotifications: {
+            startEventSound: "",
+            xMinutesBeforeStartAmount: null,
+            xMinutesBeforeStartSound: "",
+            endEventSound: "",
+          },
+        },
         {
           name: "Budżetem miesięcznym / życiowym kupuję",
           description:
@@ -993,141 +1172,6 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
         },
       ],
-      monstersManual: [
-        {
-          name: "I need help - Księga Potworów",
-          description:
-            "Spis wszystkich spotkanych myślami demonów, sposoób na ich ogranie, a nawet wejście w symbiotyczną znajomość",
-          imagePath: "https://images8.alphacoders.com/113/1132674.jpg",
-          imageAltText: "",
-          eventGroupId: 0,
-          eventInstanceId: 0,
-          GIFPath: "",
-          isAllDayLong: false,
-          allDayLongVariantProps: {
-            importance: "",
-            date: new Date(),
-          },
-          timedVariantProps: {
-            startDateAndTime: new Date(),
-            endDateAndTime: new Date(),
-          },
-          deadlineVariant: "none",
-          addOnsByVariants: {
-            "Nie chce mi się. NIC.": {
-              "Potrzebujesz się 'focusmate' lub spotkać live z amigo || wyjść do galerii do ludzi chociaż":
-                {},
-              "TYLKO dlatego że o tym myślisz & że trzeba myśleć do robienia czegoś - dlatego to czujesz. Dlatego SŁUCHAWKI, odpal workflow 'Tworzę', najlepiej 'Pieszczę' + MÓWIONY (najlepiej friends, like PKP or CR) podcast pod maximum zajęcia i po 5 minut muzyka":
-                {},
-              "Gitarra. Naucz się a banger song": {},
-              "'Want' + 'Wataha' (choćby cofocus / focusmatea.com) & Omów tą niechęć z nimi":
-                {},
-              "Rememberer odpal": {},
-            },
-            "Planuję 5h, zamiast tworzyć w 1h i w 2h nakierować / poprawić": {
-              "Fail fast. BANALNIE I PRZYJMENIE jest poprawić surowy szkic, W UJ TRUDNO jest idealnie zapełnmić pusta kartkę za pierwszym razem":
-                {},
-            },
-            "Przytłoczony/zestresowany życiem/problemem X": {
-              "Z Ewronikiem, Jordanem, Joe'm || Ekipą omów problem": {},
-              "Wicofie. Teraz damy wam z siostrzyczką przykład": {
-                howAndTips: {
-                  ytVideoId: "",
-                  notes: [
-                    {
-                      title: "Ewronik",
-                      description: "_",
-                    },
-                    {
-                      title: "Jordan Peterson",
-                      description: "_",
-                    },
-                  ],
-                },
-              },
-              "Wi all roleplaying kiddos.": {},
-              "Medytnijmy. Dobra. Tyle, że po naszemu.": {},
-            },
-            "Overworked. Wypalam się.": {
-              Mniej: {},
-              "Architekuturj/Rozbij potwora na 1 lub 2 godzinne chunki": {
-                howAndTips: {
-                  ytVideoId: "",
-                  notes: [
-                    {
-                      title:
-                        "Przeraża cię 'nie wiem jak go ograć / gdzie zacząć' po prostu",
-                      description: "_",
-                    },
-                  ],
-                },
-              },
-              "80/20": {
-                howAndTips: {
-                  ytVideoId: "",
-                  notes: [
-                    {
-                      title: "Skup się na istotnych 20% zadań",
-                      description: "_",
-                    },
-                  ],
-                },
-              },
-            },
-            "Chcę chcieć tworzyć, ale nie chce mi się tworzyć": {
-              "'Want' i'Chłonę' w uszy & PEWNY, 'Fresh', 'Pieszczę' quest ": {
-                howAndTips: {
-                  ytVideoId: "ODt3lA6UHHI",
-                  notes: [
-                    {
-                      title:
-                        "Brakuje ci właśnie 'want' i 'fresh', a'chłonę' zatamuje niechęć",
-                      description:
-                        "5-min remember developerski & Leć, koniecznienie z PEWNYM pieszczę (samo chłonę to u mnie x-godzinyn copying mechanizm w limbo opierdolu i misery), np. 3d model wg planu / lineart wedle szkiców. A chłone - Np. Asmongold banteurjący o grze i 3D po paru dniach programowania",
-                    },
-                  ],
-                },
-              },
-            },
-            "Kasa. Brakuje mi & Ludzie jej wymagają ode mnie": {
-              "Nie żydzę, a zbieram na...": {
-                howAndTips: {
-                  ytVideoId: "",
-                  notes: [
-                    {
-                      title:
-                        "Powiedz szczerze, 'Wolę mieć na wypad/inwestycję X, niż na item Y'",
-                      description: "_",
-                    },
-                  ],
-                },
-              },
-            },
-            "Problem X": {
-              "Ostatnio zaorało go to": {},
-            },
-          },
-          needsFulfilledByVariant: {
-            variant1: {
-              isWant: false,
-              isCreate: false,
-              isAbsorb: false,
-              isChill: false,
-              isVent: false,
-              isSquad: false,
-              isActive: false,
-              isWilderness: false,
-              isFresh: false,
-            },
-          },
-          vocalNotifications: {
-            startEventSound: "",
-            xMinutesBeforeStartAmount: null,
-            xMinutesBeforeStartSound: "",
-            endEventSound: "",
-          },
-        },
-      ],
     },
     libraryOfTemplateEvents: [],
     sheduleOfHourlyPlannedEvents: [
@@ -1178,7 +1222,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         soundToHowl: "https://freesound.org/s/740843/",
         workflowsAkaKWLinks: [
           {
-            imagePath: "https://i.ytimg.com/vi/Y9_pA7YdsMI/hqdefault.jpg",
+            imagePath:
+              "https://img.icons8.com/fluent-systems-regular/200/FFFFFF/external-link.png",
             link: "https://www.dropbox.com/scl/fi/1d7j7ig4w9q75ktdlzo4o/KW-Podr-uj.docx?rlkey=m7sq8yrdfahwgxpxdrymsbrk6&st=j4jq657h&dl=0",
           },
         ],
@@ -1211,6 +1256,13 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         image:
           "https://images.squarespace-cdn.com/content/v1/5e6c6d81898be713ac68c06e/1599983996424-QZSLQWIOOS8AKXGEM9F6/owlhouse7.png",
         soundToHowl: "https://freesound.org/s/740843/",
+        workflowsAkaKWLinks: [
+          {
+            imagePath:
+              "https://img.icons8.com/fluent-systems-regular/200/FFFFFF/external-link.png",
+            link: "https://www.dropbox.com/scl/fi/1d7j7ig4w9q75ktdlzo4o/KW-Podr-uj.docx?rlkey=m7sq8yrdfahwgxpxdrymsbrk6&st=j4jq657h&dl=0",
+          },
+        ],
       },
       {
         id: 107,

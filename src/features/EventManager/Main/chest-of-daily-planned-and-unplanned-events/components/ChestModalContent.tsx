@@ -49,28 +49,26 @@ const ChestModalContent = ({}: ChestModalContentProps) => {
     libraryOfTemplateEvents: filterEvents(
       chestWithAllDayLongEvents.libraryOfTemplateEvents || []
     ),
-    monstersManual: filterEvents(
-      chestWithAllDayLongEvents.monstersManual || []
-    ),
   };
 
   return (
     <div css={chestModalCss.container}>
-      <CheckboxesToFilterEvents onChange={handleCheckboxChange} />
-      <section>
+      {/* <CheckboxesToFilterEvents onChange={handleCheckboxChange} /> */}
+
+      {/* TODO: map over all chestWithAllDayLongEvents.necessary, and tender only those which "deadline" is for today or in the past */}
+      {/* <section>
         <TitleBarWithTogglableContent
           titleBarContent={
             <h2 css={chestModalCss.titleBarWithContent}>For Today</h2>
           }
         >
-          {/* TODO: map over all chestWithAllDayLongEvents.necessary, and tender only those which "deadline" is for today or in the past */}
           ....
         </TitleBarWithTogglableContent>
-      </section>
+      </section> */}
       <section>
         <TitleBarWithTogglableContent
           titleBarContent={
-            <h2 css={chestModalCss.titleBarWithContent}>Necessary</h2>
+            <h2 css={chestModalCss.titleBarWithContent}>TODO Konieczne</h2>
           }
         >
           {filteredEvents.necessary.map((event, index) => {
@@ -81,7 +79,7 @@ const ChestModalContent = ({}: ChestModalContentProps) => {
       <section>
         <TitleBarWithTogglableContent
           titleBarContent={
-            <h2 css={chestModalCss.titleBarWithContent}>One day</h2>
+            <h2 css={chestModalCss.titleBarWithContent}>TODO Opcjonalne</h2>
           }
         >
           {filteredEvents.oneDay.map((event, index) => {
@@ -89,23 +87,11 @@ const ChestModalContent = ({}: ChestModalContentProps) => {
           })}
         </TitleBarWithTogglableContent>
       </section>
+
       <section>
         <TitleBarWithTogglableContent
           titleBarContent={
-            <h2 css={chestModalCss.titleBarWithContent}>Monsters Manual</h2>
-          }
-        >
-          {filteredEvents.monstersManual.map((event, index) => {
-            return <EventDisplaySmall key={index} event={event} />;
-          })}
-        </TitleBarWithTogglableContent>
-      </section>
-      <section>
-        <TitleBarWithTogglableContent
-          titleBarContent={
-            <h2 css={chestModalCss.titleBarWithContent}>
-              Library of Templates
-            </h2>
+            <h2 css={chestModalCss.titleBarWithContent}>Codzienne</h2>
           }
         >
           {filteredEvents.libraryOfTemplateEvents.map((event, index) => {

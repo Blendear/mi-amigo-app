@@ -114,7 +114,6 @@ export type AppDataOfCurrentUser = {
 
       // temporarily added here, before creating separate places for them
       libraryOfTemplateEvents?: EventWithNeeds[];
-      monstersManual?: EventWithNeeds[];
     };
     libraryOfTemplateEvents: EventWithNeeds[];
     sheduleOfHourlyPlannedEvents: TemporaryTypeForPartialEventDataObjectType[]; // TODO: TS types and implement
