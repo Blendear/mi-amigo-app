@@ -28,8 +28,10 @@ const EventDisplaySmall = ({ event }: EventDisplaySmallProps) => {
       >
         <ImageWithWrapper
           src={event.GIFPath !== "" ? event.GIFPath : event.imagePath}
-          width="100%"
-          aspectRatio="2.63/1"
+          wrapperCss={{
+            width: "100%",
+            aspectRatio: "2.63/1",
+          }}
         />
         <div>{event.name}</div>
       </button>

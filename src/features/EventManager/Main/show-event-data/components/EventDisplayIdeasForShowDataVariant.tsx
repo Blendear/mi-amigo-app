@@ -45,7 +45,9 @@ const EventDisplayIdeasForShowDataVariant = ({ eventData }) => {
     <section className={styles["event-data-display__container"]}>
       <ImageWithWrapper
         src={eventData.GIFPath !== "" ? eventData.GIFPath : eventData.imagePath}
-        width="20vw"
+        wrapperCss={{
+          width: "20vw",
+        }}
       />
 
       <h1>{eventData.name}</h1>

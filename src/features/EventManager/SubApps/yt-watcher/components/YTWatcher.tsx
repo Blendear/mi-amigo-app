@@ -41,8 +41,10 @@ export const YTWatcher = ({ playlists }: YTWatcherProps) => {
             titleBarContent={
               <ImageWithWrapper
                 src={playlist.imagePath}
-                width="25vw"
-                wrapperCss={yTWatcherCss.videosAndLinks.titleImage}
+                wrapperCss={[
+                  { ...yTWatcherCss.videosAndLinks.titleImage },
+                  { width: "25vw" },
+                ]}
               />
             }
           >

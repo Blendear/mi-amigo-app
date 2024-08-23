@@ -32,8 +32,10 @@ export const ExplanationQuickShort = () => {
           <>
             <ImageWithWrapper
               src={contentChosen.explanation.quickShort.fun.imagePath}
-              width="100%"
-              aspectRatio="16/9"
+              wrapperCss={{
+                width: "100%",
+                aspectRatio: "16/9",
+              }}
               alt="visualisation of the more fun, quick reminder"
             />
 

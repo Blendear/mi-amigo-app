@@ -117,8 +117,10 @@ export const ExplanationLongFull = () => {
                     <ImageWithWrapper
                       key={index}
                       src={transcriptChunk.content}
-                      width="100%"
-                      aspectRatio="946/713"
+                      wrapperCss={{
+                        width: "100%",
+                        aspectRatio: "946/713",
+                      }}
                     />
                   </div>
                 ) : (

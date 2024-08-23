@@ -91,8 +91,10 @@ export const MealOfTheDayChooser = ({}) => {
               alt={
                 MealsAndMacros.globalSubAppData.mealsAvailable[meal.mealId].name
               }
-              width="85px"
-              height="85px"
+              wrapperCss={{
+                width: "85px",
+                height: "85px",
+              }}
             />
           </div>
         </SwiperSlide>

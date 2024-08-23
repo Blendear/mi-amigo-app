@@ -108,7 +108,7 @@ export const MyBeautifulTimer = () => {
         }}
       >
         <ImageWithWrapper
-          width="6rem"
+          wrapperCss={{ width: "6rem" }}
           src={
             gifTypeRef.current === "adventure"
               ? "https://media.tenor.com/0rK1mUAoy_IAAAAj/jake-the-dog-adventure-time.gif"
@@ -123,7 +123,7 @@ export const MyBeautifulTimer = () => {
         }}
       >
         <ImageWithWrapper
-          width="6rem"
+          wrapperCss={{ width: "6rem" }}
           src={
             gifTypeRef.current === "chill"
               ? "https://media.tenor.com/eT65efTNamoAAAAj/bonfire-darksouls.gif"

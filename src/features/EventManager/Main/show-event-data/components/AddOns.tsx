@@ -131,7 +131,6 @@ const AddOns = () => {
                 wrapperCss={addOnsCss.bookOfAddons(
                   workflowBookOfAddonsIndex.current === index
                 )}
-                width="10rem"
               />
             </SwiperSlide>
           ))}

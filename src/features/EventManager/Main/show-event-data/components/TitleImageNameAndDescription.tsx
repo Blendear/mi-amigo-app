@@ -94,8 +94,10 @@ const TitleImageNameAndDescription = () => {
       <div css={titleINADCss.visualWithInput}>
         <ImageWithWrapper
           src={formDataRef.current.GIFPath || showGIF ? GIFPath : imagePath}
-          width="100%"
-          aspectRatio="1.82/1"
+          wrapperCss={{
+            width: "100%",
+            aspectRatio: "1.82/1",
+          }}
         />
         {!isShowing.current && (
           <div>

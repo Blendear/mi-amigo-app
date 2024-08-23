@@ -59,8 +59,10 @@ export const Exercises = ({ contentChosen }) => {
                     contentChosen.exercisesWithSolutions[activeExerciseIndex]
                       .imagePath
                   }
-                  width="100%"
-                  aspectRatio="946/713"
+                  wrapperCss={{
+                    width: "100%",
+                    aspectRatio: "946/713",
+                  }}
                 />
               </div>
 

@@ -49,8 +49,20 @@ const PortalesqueLink = ({
         target="_blank"
         rel="noopener noreferrer"
       >
-        <ImageWithWrapper src={portalGifUrl} width="100%" aspectRatio="1/1" />
-        <ImageWithWrapper src={imageOrGifPath} width="65%" aspectRatio="1/1" />
+        <ImageWithWrapper
+          src={portalGifUrl}
+          wrapperCss={{
+            width: "100%",
+            aspectRatio: "1/1",
+          }}
+        />
+        <ImageWithWrapper
+          src={imageOrGifPath}
+          wrapperCss={{
+            width: "65%",
+            aspectRatio: "1/1",
+          }}
+        />
       </a>
 
       <input

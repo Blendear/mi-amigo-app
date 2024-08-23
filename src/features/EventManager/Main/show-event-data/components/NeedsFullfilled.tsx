@@ -49,20 +49,18 @@ const NeedsFullfilled = () => {
               {/* Render your ImageWithWrapper and other content here */}
               <ImageWithWrapper
                 src={needsImagePaths[need].ifTrue || needsImagePaths[need]}
-                width="100%"
-                height="100%"
-                // wrapperClassName={
-                //   needs[selectedVariant][need] ? "" : styles["disabled"]
-                // }
+                wrapperCss={{
+                  width: "100%",
+                  height: "100%",
+                }}
               />
               {(index === 0 || index > 4) && (
                 <ImageWithWrapper
                   src={needsImagePaths[need].ifFalse}
-                  width="100%"
-                  height="100%"
-                  // wrapperClassName={`${
-                  //   needs[selectedVariant][need] ? styles["disabled"] : ""
-                  // }`}
+                  wrapperCss={{
+                    width: "100%",
+                    height: "100%",
+                  }}
                 />
               )}
               {/* Add other content as needed */}
