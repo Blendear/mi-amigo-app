@@ -658,176 +658,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           workflowAkaBookOfKnowledgeLink:
             "https://www.dropbox.com/personal/Workflows%20(Ksi%C4%99gi%20Wiedzy)/Nocna%20Warta#",
           addOnsByVariants: {
-            tradycyjnie: {
-              "Telefonowe Linearowe zadania wpisz w prawdziwe miejsce na PC": {
-                howAndTips: {
-                  ytVideoId: "",
-                  notes: [
-                    {
-                      title: "Zapominasz o gold nuggetsach wykminionych",
-                      description:
-                        "Bo zapisujesz gold-nuggets wiedzy  / update'u życia, i zapominasz otym, bo nie wprowadzasz w część używanego, oryginalnego workflowu",
-                    },
-                  ],
-                },
-              },
-              "(H) Przećwicz 5 minut 'Mam potrzebę X, odpalam Mi Amigowksie Y'":
-                {
-                  howAndTips: {
-                    ytVideoId: "",
-                    notes: [],
-                  },
-                },
-              "Budżet stan aktualizuj o dzisiejsze wydatki": {
-                howAndTips: {
-                  ytVideoId: "",
-                  notes: [
-                    {
-                      title: "Np. Jeśli kupiłeś grę, zmniejsz `Mam na gry`",
-                      description: "",
-                    },
-                  ],
-                },
-              },
-              "Odkurz co-poniedziałkowo": {},
-              "Zęby (dla Halo)": {},
-              "Jedno 'necessary' quest z Mi Amigo?": {},
-              "Prosiaczki przyszły?": {
-                howAndTips: {
-                  ytVideoId: "",
-                  notes: [
-                    {
-                      title: "Sprawdź wiadomości w komunikatorach z toolsów",
-                      description: "",
-                    },
-                  ],
-                },
-                toolsPhysicalOrThirdParty: [
-                  {
-                    title: "Gmail",
-                    imageOrGifPath:
-                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRehBkcICeAaY5qdgGWJCTIGBP_RYYE4A0ciDVWTpmOWA&s",
-                  },
-                  {
-                    title: "Messenger",
-                    imageOrGifPath:
-                      "https://cdn3.vectorstock.com/i/1000x1000/61/72/facebook-messenger-logo-vector-41086172.jpg",
-                  },
-                  {
-                    title: "Discord",
-                    imageOrGifPath:
-                      "https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxsG72wAo9EWJR4yQWyJJaDb6rYcBtJvTvH3UoAS4JFNDaxGhmKNaMwgElLURlRFeVkLCjkfnXmWtINWZIrPGYq0-&format=source",
-                  },
-                ],
-              },
-              Herbatka: {
-                howAndTips: {
-                  ytVideoId: "",
-                  notes: [
-                    {
-                      title:
-                        "Cały termos herbatki na biurko / w podróz, zamiast coli",
-                      description: "",
-                    },
-                  ],
-                },
-              },
-              "Telefonowe notatki do projektów / worda wpisz": {},
-              "Ładuj słuchawki, telefon i powerbanka": {},
-              "Tygodniowy Harmonogram przejżyj": {},
-              "Umówiajta 3-3-1": {
-                howAndTips: {
-                  ytVideoId: "",
-                  notes: [
-                    {
-                      title:
-                        "Tradycje stwórz, regularnie, przewidywalnie spontanicznie spotkanie organizując",
-                      description:
-                        "'Umówmy się co tydzień na X brzmi strasznie dla nieplanujących osób'. Lepiej podświadomie nawyki wyrabiać bez presji",
-                    },
-                    {
-                      title:
-                        "3 we-time, 3 amigo-time, 1 me-time, wg poniższej rozpiski",
-                      description:
-                        "* PORANNY żeby mieć po co wstawac \n nawyki nowe bros \n * tradycje \n * kursy \n * świeże przeżycia/wypadziki \n * Facebook \n * PIK wroclaw \n * Kiwi Portal\n * duporuch\n * online gaming / LAN-planszówkowe",
-                    },
-                    {
-                      title: "eventy w next tygodniach ogarnij",
-                      description:
-                        "wrocławskie portale \n red bull events \n fantasy events",
-                    },
-                  ],
-                },
-              },
-              "Hooksa jednego chcesz ogarnąć?": {},
-              Zakupki: {
-                toolsPhysicalOrThirdParty: [
-                  {
-                    title: "SubApp Zakupowy",
-                    imageOrGifPath:
-                      "https://img.freepik.com/premium-vector/cute-banana-cartoon-vector-icon-illustration-logo-mascot-hand-drawn-concept-trandy-cartoon_519183-187.jpg?w=2000",
-                    linkURL: "https://mi-amigo-green.vercel.app/landing-page",
-                  },
-                ],
-              },
-              "Porcjuj || Rozpisz tegotygodniowe || Przygotuj ingredients || Gotuj":
-                {
-                  howAndTips: {
-                    ytVideoId: "",
-                    notes: [
-                      {
-                        title: "Np. pokrój cukinie, dopraw i pokruj kurczaka",
-                        description:
-                          "Lwia część ognia jedzeniowego idzie właśnie na prep posiłku tóż przed zjedzeniem, kiedy ani nie masz czasu, ani ochoty na to (przy okazji psująć pomodoro, bo 10 minut nie starcza na prep i zjedzenie)",
-                      },
-                    ],
-                  },
-                },
-              "ZLEW TEŻ i naczynia ZABEZPIECZ przed kapaniem na drewno (dając na suszarkę lub wytrzyj) po umyciu || Ściągnij ":
-                {},
-              "Śmieci wychędoż": {
-                howAndTips: {
-                  ytVideoId: "",
-                  notes: [
-                    {
-                      title:
-                        "Zmywak & Lodówka & Łazienka & Inne pokoje random finds",
-                      description: "",
-                    },
-                  ],
-                },
-              },
-              "Przygotuj || Zrób pranie": {},
-
-              "Tnij, kąp i czyść": {
-                howAndTips: {
-                  ytVideoId: "",
-                  notes: [
-                    {
-                      title:
-                        "Gól & Włosy oszczydznij & Kąp bez włosów || Z nimi i ułóż je już wieczorem & Uszka & Kły nić, pasta i listerine & Pazury & Gąszcze rozległe skróć",
-                      description: "",
-                    },
-                  ],
-                },
-              },
-              "1 z 20 kroków sprzątania, pod wolne weekendy": {},
-              "Strój ćwiczebny & Armor dzienny przygotuj": {
-                howAndTips: {
-                  ytVideoId: "",
-                  notes: [
-                    {
-                      title:
-                        "W 'Toby > Backup > Stylówy ubraniowe--ss' rozpisałeś",
-                      description: "",
-                    },
-                  ],
-                },
-              },
-              "Paragony podlicz": {},
-              "Ręczniki & Kocyk & Prześcieradło wymień": {},
-              Poczta: {},
-            },
+            tradycyjnie: {},
           },
           needsFulfilledByVariant: {
             zakupy: {
@@ -1175,22 +1006,27 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
     },
     libraryOfTemplateEvents: [],
     sheduleOfHourlyPlannedEvents: [
-      // {
-      //   id: 999,
-      //   title: "Test howler",
-      //   startDate: new Date(2024, 0, 19, 11, 53), // January 19, 2024, 06:00 AM
-      //   endDate: new Date(2024, 0, 19, 12, 0),
-      //   image: "/images/aaa",
-      //   soundToHowl: "http://goldfirestudios.com/proj/howlerjs/sound.ogg",
-      // },
       {
         id: 0,
         variant: "create",
-        title: "Słuchając music/remember yt... Easy TODO, pewniaczek, robię",
-        startDate: new Date(2024, 0, 19, 6, 15), // January 19, 2024, 06:00 AM
+        title:
+          "Leżąco, słuchając music/remember yt, pewny i prosty mobilny TODO robię",
+        startDate: new Date(2024, 0, 19, 6, 15),
         endDate: new Date(2024, 0, 19, 7, 15),
         image: "https://i.ytimg.com/vi/Y9_pA7YdsMI/hqdefault.jpg",
         soundToHowl: "https://freesound.org/s/740843/",
+        workflowsAkaKWLinks: [
+          {
+            imagePath:
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHZFvd3U_GpwrajRYwx_BZMzxPt66WbrFaeg&s",
+            link: "https://www.youtube.com/playlist?list=PLxkQhY8mrb6-NZOOEDwQhRlHQ2vXo3B6m",
+          },
+          {
+            imagePath:
+              "https://cdn.pixabay.com/photo/2016/11/19/03/08/youtube-1837872_640.png",
+            link: "https://mi-amigo-app-theta.vercel.app/subapp?name=yt-video-watcher&variant=energy-level-based",
+          },
+        ],
       },
 
       {
@@ -1201,6 +1037,13 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         endDate: new Date(2024, 0, 19, 7, 45),
         image: "https://pbs.twimg.com/media/FIDIksBVcAAmbxm.jpg",
         soundToHowl: "https://freesound.org/s/740843/",
+        workflowsAkaKWLinks: [
+          {
+            imagePath:
+              "https://cdn.pixabay.com/photo/2016/11/19/03/08/youtube-1837872_640.png",
+            link: "https://mi-amigo-app-theta.vercel.app/subapp?name=yt-video-watcher&variant=energy-level-based",
+          },
+        ],
       },
       {
         id: 69,
@@ -1210,6 +1053,13 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         endDate: new Date(2024, 0, 19, 8, 15),
         image: "https://pbs.twimg.com/media/FVVi9pOUsAAMzpL.jpg",
         soundToHowl: "https://freesound.org/s/740843/",
+        workflowsAkaKWLinks: [
+          {
+            imagePath:
+              "https://cdn.pixabay.com/photo/2016/11/19/03/08/youtube-1837872_640.png",
+            link: "https://mi-amigo-app-theta.vercel.app/subapp?name=yt-video-watcher&variant=energy-level-based",
+          },
+        ],
       },
       {
         id: 222,
@@ -1223,8 +1073,13 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         workflowsAkaKWLinks: [
           {
             imagePath:
-              "https://img.icons8.com/fluent-systems-regular/200/FFFFFF/external-link.png",
+              "https://cdn.icon-icons.com/icons2/1735/PNG/512/libreofficewriter_113234.png",
             link: "https://www.dropbox.com/scl/fi/1d7j7ig4w9q75ktdlzo4o/KW-Podr-uj.docx?rlkey=m7sq8yrdfahwgxpxdrymsbrk6&st=j4jq657h&dl=0",
+          },
+          {
+            imagePath:
+              "https://cdn.pixabay.com/photo/2016/11/19/03/08/youtube-1837872_640.png",
+            link: "https://mi-amigo-app-theta.vercel.app/subapp?name=yt-video-watcher&variant=energy-level-based",
           },
         ],
       },
@@ -1232,11 +1087,53 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         id: 1,
         variant: "create",
         title:
-          "(Z KIMŚ) Dzień wolny = Wrld RPG | Dzień zarobkowy = INFINITI > LTC > Mind Movies > PEF website > Grzejś website > Giełda",
+          "🍀 Wrld lub Mi Amigo | 🔥 Reszta, kolejno       PEF website  Giełda",
         startDate: new Date(2024, 0, 19, 8, 45),
         endDate: new Date(2024, 0, 19, 11, 45),
-        image: "https://i.ytimg.com/vi/tnQR08eATvk/hqdefault.jpg", // https://i.ytimg.com/vi/Y9_pA7YdsMI/hqdefault.jpg
+        image: "https://i.ytimg.com/vi/tnQR08eATvk/hqdefault.jpg",
         soundToHowl: "https://freesound.org/s/740843/",
+        workflowsAkaKWLinks: [
+          {
+            imagePath:
+              "https://www.kumatex.pl/media/images/images/koaprka%20Hitachi%20du%C5%BCa.jpg",
+            link: "https://linear.app/res-grzejs-szymanski/view/1340aad9-f877-462f-9148-46610559db99",
+          },
+          {
+            imagePath:
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdsMNrdBP-t3-rKKwgqFn-AwHVG1camG8uCg&s",
+            link: "https://linear.app/infiniti/team/INF/active",
+          },
+          {
+            imagePath:
+              "https://www.ltc-investments.pl/_next/image?url=%2Fimages%2Fbrand%2Fltc-investments-logo.png&w=1920&q=75",
+            link: "https://linear.app/ltc-web-app/team/LTC/active",
+          },
+          {
+            imagePath:
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQisPzyIxfDU5IMyPa4TjvTWQF7eTnSJXAv3URU-AhJ556ZX2PQnp2OezlpQce6y2d-l58&usqp=CAU",
+            link: "https://www.google.com/search?q=link&oq=link&gs_lcrp=EgZjaHJvbWUyDggAEEUYJxg5GIAEGIoFMgYIARBFGDwyDAgCECMYJxiABBiKBTIQCAMQLhjHARixAxjRAxiABDINCAQQLhiDARixAxiABDIOCAUQRRg7GEMYgAQYigUyBggGEEUYPDIGCAcQRRg80gEIMTA0NmowajeoAgCwAgA&sourceid=chrome&ie=UTF-8",
+          },
+          {
+            imagePath:
+              "https://t3.ftcdn.net/jpg/04/68/42/26/360_F_468422632_EvzI7Rr3rVHO4KFTRNVmi5Vx168fq2Ki.jpg",
+            link: "https://www.google.com/search?q=link&oq=link&gs_lcrp=EgZjaHJvbWUyDggAEEUYJxg5GIAEGIoFMgYIARBFGDwyDAgCECMYJxiABBiKBTIQCAMQLhjHARixAxjRAxiABDINCAQQLhiDARixAxiABDIOCAUQRRg7GEMYgAQYigUyBggGEEUYPDIGCAcQRRg80gEIMTA0NmowajeoAgCwAgA&sourceid=chrome&ie=UTF-8",
+          },
+          {
+            imagePath:
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnQK9RuMONTafiZCcvicgxp2yiAOdKD9jdVQ&s",
+            link: "https://www.google.com/search?q=link&oq=link&gs_lcrp=EgZjaHJvbWUyDggAEEUYJxg5GIAEGIoFMgYIARBFGDwyDAgCECMYJxiABBiKBTIQCAMQLhjHARixAxjRAxiABDINCAQQLhiDARixAxiABDIOCAUQRRg7GEMYgAQYigUyBggGEEUYPDIGCAcQRRg80gEIMTA0NmowajeoAgCwAgA&sourceid=chrome&ie=UTF-8",
+          },
+          {
+            imagePath:
+              "/images/events-manager/temporaryHardcodedVisuals/event-image/wrld-rpg.png",
+            link: "https://linear.app/wrld-rpg/view/def0d871-31ec-4f9b-a1a7-e9be938169d2",
+          },
+          {
+            imagePath:
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlHXSPSdC_ZyOiWFUDoiQV5gOWPYO4GjxpJsTWSXuAENqEe92rtinKAJPD-detho0R6iY&usqp=CAU",
+            link: "https://linear.app/mi-amigo/team/SL/all",
+          },
+        ],
       },
       {
         id: 102,
@@ -1246,6 +1143,13 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         endDate: new Date(2024, 0, 19, 12, 45),
         image: "https://i.ytimg.com/vi/khdcfWnRB3g/maxresdefault.jpg",
         soundToHowl: "https://freesound.org/s/740843/",
+        workflowsAkaKWLinks: [
+          {
+            imagePath:
+              "https://cdn.pixabay.com/photo/2016/11/19/03/08/youtube-1837872_640.png",
+            link: "https://mi-amigo-app-theta.vercel.app/subapp?name=yt-video-watcher&variant=energy-level-based",
+          },
+        ],
       },
       {
         id: 223,
@@ -1259,8 +1163,13 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         workflowsAkaKWLinks: [
           {
             imagePath:
-              "https://img.icons8.com/fluent-systems-regular/200/FFFFFF/external-link.png",
+              "https://cdn.icon-icons.com/icons2/1735/PNG/512/libreofficewriter_113234.png",
             link: "https://www.dropbox.com/scl/fi/1d7j7ig4w9q75ktdlzo4o/KW-Podr-uj.docx?rlkey=m7sq8yrdfahwgxpxdrymsbrk6&st=j4jq657h&dl=0",
+          },
+          {
+            imagePath:
+              "https://cdn.pixabay.com/photo/2016/11/19/03/08/youtube-1837872_640.png",
+            link: "https://mi-amigo-app-theta.vercel.app/subapp?name=yt-video-watcher&variant=energy-level-based",
           },
         ],
       },
@@ -1283,17 +1192,6 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           "https://i.pinimg.com/736x/76/b9/98/76b9987ad369b4f615145f9bfd576fa1.jpg",
         soundToHowl: "https://freesound.org/s/740843/",
       },
-      // {
-      //   id: 269,
-      //   variant: "create",
-      //   title:
-      //     "(Z KIMŚ) (Dla chętnego) Dzień wolny = Wrld RPG | Dzień zarobkowy = LTC (1)",
-      //   startDate: new Date(2024, 0, 19, 13, 30),
-      //   endDate: new Date(2024, 0, 19, 14, 30),
-      //   image: "https://i.ytimg.com/vi/tnQR08eATvk/hqdefault.jpg", // https://i.ytimg.com/vi/Y9_pA7YdsMI/hqdefault.jpg
-      //   soundToHowl: "https://freesound.org/s/740843/",
-      // },
-
       {
         id: 6,
         variant: "absorb",
@@ -1302,6 +1200,13 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         endDate: new Date(2024, 0, 19, 16, 0),
         image: "https://pbs.twimg.com/media/FIDIksBVcAAmbxm.jpg",
         soundToHowl: "https://freesound.org/s/740843/",
+        workflowsAkaKWLinks: [
+          {
+            imagePath:
+              "https://cdn.pixabay.com/photo/2016/11/19/03/08/youtube-1837872_640.png",
+            link: "https://mi-amigo-app-theta.vercel.app/subapp?name=yt-video-watcher&variant=energy-level-based",
+          },
+        ],
       },
       {
         id: 5,
@@ -1313,16 +1218,6 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           "https://pbs.twimg.com/ext_tw_video_thumb/1368250695443357698/pu/img/XIe27QP3pA8oQodZ.jpg:large",
         soundToHowl: "https://freesound.org/s/740843/",
       },
-      // {
-      //   id: 103,
-      //   variant: "create",
-      //   title:
-      //     "(Dla chętnego) Dzień zarobkowy = Giełda | Dzień wolny Mi Amigo (1)",
-      //   startDate: new Date(2024, 0, 19, 15, 30),
-      //   endDate: new Date(2024, 0, 19, 16, 30),
-      //   image: "https://i.ytimg.com/vi/tnQR08eATvk/hqdefault.jpg", // https://i.ytimg.com/vi/Y9_pA7YdsMI/hqdefault.jpg
-      //   soundToHowl: "https://freesound.org/s/740843/",
-      // },
       {
         id: 7,
         variant: "create",
@@ -1339,8 +1234,19 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         startDate: new Date(2024, 0, 19, 19, 0),
         endDate: new Date(2024, 0, 19, 20, 0),
         image: "/images/events-manager/cleaning.jpg",
-        // "https://www.laughingplace.com/w/wp-content/uploads/2019/12/amphibia-6247d4a4-5357-4ac3-9980-09f14a44527f.jpg/video_wide",
         soundToHowl: "https://freesound.org/s/740843/",
+        workflowsAkaKWLinks: [
+          {
+            imagePath:
+              "https://cdn.icon-icons.com/icons2/1735/PNG/512/libreofficewriter_113234.png",
+            link: "https://www.dropbox.com/work/Tobias%20Cibis/~~~Toby~~~/Ksi%C4%99gi%20Wiedzy%20-%20Do%20Nauki/KW%20Nocna%20Warta",
+          },
+          {
+            imagePath:
+              "https://cdn.pixabay.com/photo/2016/11/19/03/08/youtube-1837872_640.png",
+            link: "https://mi-amigo-app-theta.vercel.app/subapp?name=yt-video-watcher&variant=energy-level-based",
+          },
+        ],
       },
       {
         id: 9,
@@ -1350,6 +1256,13 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         endDate: new Date(2024, 0, 19, 20, 30),
         image: "https://pbs.twimg.com/media/FVVi9pOUsAAMzpL.jpg",
         soundToHowl: "https://freesound.org/s/740843/",
+        workflowsAkaKWLinks: [
+          {
+            imagePath:
+              "https://cdn.pixabay.com/photo/2016/11/19/03/08/youtube-1837872_640.png",
+            link: "https://mi-amigo-app-theta.vercel.app/subapp?name=yt-video-watcher&variant=energy-level-based",
+          },
+        ],
       },
       {
         id: 11,
@@ -1361,17 +1274,14 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         image:
           "https://64.media.tumblr.com/eb6af236bce825947be668ca41aa7dab/4a7aeb7d0ac93f36-08/s1280x1920/50ad6113d157f50602e012379d49e4f31c27798f.png",
         soundToHowl: "https://freesound.org/s/740843/",
+        workflowsAkaKWLinks: [
+          {
+            imagePath:
+              "https://img.icons8.com/pastel_glyph/200/FFFFFF/info.png",
+            link: "https://www.google.com/search?q=KW+Devlogowanie&sca_esv=33efa13a2b517c28&sca_upv=1&sxsrf=ADLYWIK2Mn2-qPHuuYu6bj7vOk36m4UlVA%3A1724598029089&ei=DUfLZrGRBYiHxc8PjfWvwQU&ved=0ahUKEwjxy52ntJCIAxWIQ_EDHY36K1gQ4dUDCA8&uact=5&oq=KW+Devlogowanie&gs_lp=Egxnd3Mtd2l6LXNlcnAiD0tXIERldmxvZ293YW5pZTIFECEYoAEyBRAhGKABMgUQIRigAUigIFCBCViiH3AHeAGQAQGYAeMBoAGnE6oBBjAuMTQuMbgBA8gBAPgBAZgCFaACqxLCAgoQABiwAxjWBBhHwgIFEAAYgATCAgcQABiABBgKwgILEC4YgAQYxwEYrwHCAg4QLhiABBjHARjLARivAcICCBAAGIAEGMsBwgIIEAAYFhgKGB7CAgYQABgWGB7CAgoQABgWGAoYHhgPwgIKEAAYCBgNGB4YD8ICCBAAGIAEGKIEwgIEECMYJ5gDAIgGAZAGCJIHBjcuMTMuMaAH5k8&sclient=gws-wiz-serp",
+          },
+        ],
       },
-
-      // {
-      //   id: 50,
-      //   title: "Giełda (60)",
-      //   startDate: new Date(2024, 0, 19, 20, 30),
-      //   endDate: new Date(2024, 0, 19, 21, 30),
-      //   image:
-      //     "https://www.investopedia.com/thmb/ASStR21rMu9-9_nj1x07H83zbUs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/close-up-of-stock-market-data-on-digital-display-1058454392-c48e2501742f4c21ad57c25d6a087bd0.jpg",
-      //   soundToHowl: "https://freesound.org/s/740843/",
-      // },
       {
         id: 10,
         variant: "absorb",
@@ -1381,6 +1291,13 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         image:
           "https://preview.redd.it/just-a-reminder-that-sasha-and-anne-slept-together-and-that-v0-qlcee9zog26a1.jpg?auto=webp&s=dd61c38ad0261e3d8a25fba674d1805e11231215",
         soundToHowl: "https://freesound.org/s/740843/",
+        workflowsAkaKWLinks: [
+          {
+            imagePath:
+              "https://pbs.twimg.com/profile_images/1468257357872390150/CBE_SG7M_400x400.jpg",
+            link: "https://www.storytel.com/pl/books/fourth-wing-czwarte-skrzyd%C5%82o-2598272",
+          },
+        ],
       },
     ],
   },
