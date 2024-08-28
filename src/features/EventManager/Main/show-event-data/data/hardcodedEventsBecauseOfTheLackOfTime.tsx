@@ -1239,7 +1239,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             imagePath:
               "https://cdn.icon-icons.com/icons2/1735/PNG/512/libreofficewriter_113234.png",
-            link: "https://www.dropbox.com/work/Tobias%20Cibis/~~~Toby~~~/Ksi%C4%99gi%20Wiedzy%20-%20Do%20Nauki/KW%20Nocna%20Warta",
+            link: "https://www.dropbox.com/scl/fi/l0uiwap5jdd4vq1nd6itm/KW-Nocna-Warta.docx?rlkey=plrtqla2uusra86fvug9guyiq&st=ae7cqavw&dl=0",
           },
           {
             imagePath:
