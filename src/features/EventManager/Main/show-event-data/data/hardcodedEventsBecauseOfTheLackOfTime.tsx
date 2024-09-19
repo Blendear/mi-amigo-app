@@ -2798,8 +2798,16 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             },
           ],
           3: [
-            { mealId: 7, nonDefaultAmounts: [1, 2, 150, 150] },
-            { mealId: 7, nonDefaultAmounts: [0, 1, 150, 150] },
+            // calories of meal 2 are wicked, to mark, that i need to use the dry tomatoes and check its needed amounts, before writing the correct calories etc
+
+            {
+              mealId: 2,
+              nonDefaultAmounts: [],
+            },
+            {
+              mealId: 2,
+              nonDefaultAmounts: [],
+            },
           ],
           4: [
             {
@@ -2823,14 +2831,15 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           ],
           6: [
             {
-              mealId: 5,
-              nonDefaultAmounts: [],
+              mealId: 12,
+              nonDefaultAmounts: [0, 8, 125, 0.5, 125, 283.33],
             },
             {
-              mealId: 5,
-              nonDefaultAmounts: [],
+              mealId: 12,
+              nonDefaultAmounts: [0, 8, 125, 0.5, 125, 566.66],
             },
           ],
+
           7: [
             {
               mealId: 6,
@@ -2843,11 +2852,11 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           ],
           8: [
             {
-              mealId: 17,
+              mealId: 16,
               nonDefaultAmounts: [],
             },
             {
-              mealId: 17,
+              mealId: 16,
               nonDefaultAmounts: [],
             },
           ],
@@ -2893,12 +2902,12 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           ],
           13: [
             {
-              mealId: 12,
-              nonDefaultAmounts: [0, 8, 125, 0.5, 125, 283.33],
+              mealId: 5,
+              nonDefaultAmounts: [],
             },
             {
-              mealId: 12,
-              nonDefaultAmounts: [0, 8, 125, 0.5, 125, 566.66],
+              mealId: 5,
+              nonDefaultAmounts: [],
             },
           ],
           14: [
@@ -2928,28 +2937,6 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             },
             {
               mealId: 15,
-              nonDefaultAmounts: [],
-            },
-          ],
-          17: [
-            {
-              mealId: 16,
-              nonDefaultAmounts: [],
-            },
-            {
-              mealId: 16,
-              nonDefaultAmounts: [],
-            },
-          ],
-          18: [
-            // calories of meal 2 are wicked, to mark, that i need to use the dry tomatoes and check its needed amounts, before writing the correct calories etc
-
-            {
-              mealId: 2,
-              nonDefaultAmounts: [],
-            },
-            {
-              mealId: 2,
               nonDefaultAmounts: [],
             },
           ],
