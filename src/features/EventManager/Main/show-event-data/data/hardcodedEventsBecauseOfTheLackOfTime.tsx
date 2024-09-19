@@ -1697,22 +1697,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
               forThisAmount: 250,
             },
           },
-          {
-            id: 3,
-            name: "Białko wegańskie - SFD",
-            description:
-              "Ta porcja = 1 próbka plastikowa (jest w pudełku) | SFD",
-            amount: 1,
-            unit: "szt",
-            macros: {
-              forThisAmount: 1,
-              calories: 102,
-            },
-            priceDetails: {
-              price: 39.99,
-              forThisAmount: 17,
-            },
-          },
+
           {
             id: 4,
             name: "Banan",
@@ -2579,16 +2564,32 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 61,
             name: "Białko w proszku chocolate (wegańskie)",
-            description: "1 porcja  | All nutrition, SFD",
+            description: "1 porcja = 2 scoops  | All nutrition, SFD",
             amount: 1,
             unit: "szt",
             macros: {
               forThisAmount: 1,
               calories: 102,
+              proteins: 21,
             },
             priceDetails: {
-              price: 34.99,
+              price: 39.99,
               forThisAmount: 17,
+            },
+          },
+          {
+            id: 62,
+            name: "Granola - Z cukrem",
+            description: "Opakowanie ma 500g | Vitanella, Biedronka",
+            amount: 100,
+            unit: "g",
+            macros: {
+              forThisAmount: 100,
+              calories: 568,
+            },
+            priceDetails: {
+              price: 10.5,
+              forThisAmount: 500,
             },
           },
         ],
@@ -2599,7 +2600,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             imagePaths:
               "https://polskie-mieso.pl/wp-content/uploads/2021/03/kabanosy.jpg",
             ytVideoId: "F1Hq8eVOMHs",
-            ingredientsIds: [0, 55, 2, 53, 54, 4],
+            ingredientsIds: [0, 55, 53, 54],
           },
           {
             id: 1,
@@ -2655,12 +2656,23 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
           {
             id: 7,
-            name: "Białko w proszku & Granola z jogurtem naturalnym i bananami",
+            name: " Granola Z CUKREM & jogurtem naturalnym i bananem",
             imagePaths:
               "https://thermodieta.pl/thumbs_photo/8d85e26ccae3048c7e7e96d41fa6b0ff_1889617_1000_100000_80_jpg",
             ytVideoId: "___",
-            ingredientsIds: [61, 4, 59, 60],
+            // granola, banan, jogurt naturalny
+            ingredientsIds: [62, 4, 60],
           },
+          // {
+          //   id: 7,
+          //   name: " Granola BEZ CUKRU z jogurtem naturalnym i bananami",
+          //   imagePaths:
+          //     "https://thermodieta.pl/thumbs_photo/8d85e26ccae3048c7e7e96d41fa6b0ff_1889617_1000_100000_80_jpg",
+          //   ytVideoId: "___",
+          //   ingredientsIds: [61, 4, 59,
+
+          //   ],
+          // },
           {
             id: 8,
             name: "Buchty z kisielem malinowym",
@@ -2743,16 +2755,32 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             ytVideoId: "___",
             ingredientsIds: [56],
           },
+          {
+            id: 18,
+            name: "Białko",
+            imagePaths:
+              "https://sklep.sfd.pl/produkt_img/9ceb5d838d9e6676764685c0d3a41108Vegan_Pea_Protein_i40740_d250x250.jpg",
+            ytVideoId: "___",
+            ingredientsIds: [61],
+          },
         ],
         periodOfDaysOfEating: {
           1: [
             {
-              mealId: 0,
-              nonDefaultAmounts: [0.5, 4, 25, 50, 22.5, 1],
+              mealId: 18,
+              nonDefaultAmounts: [1],
+            },
+            {
+              mealId: 7,
+              nonDefaultAmounts: [105, 1, 105],
             },
             {
               mealId: 0,
-              nonDefaultAmounts: [0.5, 2, 25, 50, 22.5, 1],
+              nonDefaultAmounts: [0.5, 2, 25, 11.25],
+            },
+            {
+              mealId: 0,
+              nonDefaultAmounts: [0.5, 2, 25, 11.25],
             },
           ],
           2: [
