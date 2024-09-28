@@ -1125,24 +1125,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
         ],
       },
-      {
-        id: 102,
-        variant: "chill",
-        title: "Duporuch || Siłunia (klatka 3, barki 2, biceps 2)",
-        startDate: new Date(2024, 0, 19, 8, 30),
-        endDate: new Date(2024, 0, 19, 9, 15),
-        image: "https://i.ytimg.com/vi/qoUhoIIK8ho/hqdefault.jpg",
-        // "https://static.wikia.nocookie.net/the-owl-house/images/d/d1/Any_Sport_in_a_Storm_-_1120.png/revision/latest/scale-to-width-down/1920?cb=20220415194032",
-        // "https://i.ytimg.com/vi/khdcfWnRB3g/maxresdefault.jpg",
-        soundToHowl: "https://freesound.org/s/740843/",
-        workflowsAkaKWLinks: [
-          {
-            imagePath:
-              "https://cdn.pixabay.com/photo/2016/11/19/03/08/youtube-1837872_640.png",
-            link: "https://mi-amigo-app-theta.vercel.app/subapp?name=yt-video-watcher&variant=energy-level-based",
-          },
-        ],
-      },
+
       {
         id: 1,
         variant: "create",
@@ -1202,7 +1185,40 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
         ],
       },
-
+      {
+        id: 102,
+        variant: "chill",
+        title: "Duporuch || Siłunia (klatka 3, barki 2, biceps 2)",
+        startDate: new Date(2024, 0, 19, 13, 15),
+        endDate: new Date(2024, 0, 19, 14, 0),
+        image: "https://i.ytimg.com/vi/qoUhoIIK8ho/hqdefault.jpg",
+        // "https://static.wikia.nocookie.net/the-owl-house/images/d/d1/Any_Sport_in_a_Storm_-_1120.png/revision/latest/scale-to-width-down/1920?cb=20220415194032",
+        // "https://i.ytimg.com/vi/khdcfWnRB3g/maxresdefault.jpg",
+        soundToHowl: "https://freesound.org/s/740843/",
+        workflowsAkaKWLinks: [
+          {
+            imagePath:
+              "https://cdn.pixabay.com/photo/2016/11/19/03/08/youtube-1837872_640.png",
+            link: "https://mi-amigo-app-theta.vercel.app/subapp?name=yt-video-watcher&variant=energy-level-based",
+          },
+        ],
+      },
+      {
+        id: 9,
+        variant: "absorb",
+        title: "Dolna kąpiel & Golonko & Kły",
+        startDate: new Date(2024, 0, 19, 14, 0),
+        endDate: new Date(2024, 0, 19, 14, 30),
+        image: "https://pbs.twimg.com/media/FVVi9pOUsAAMzpL.jpg",
+        soundToHowl: "https://freesound.org/s/740843/",
+        workflowsAkaKWLinks: [
+          {
+            imagePath:
+              "https://cdn.pixabay.com/photo/2016/11/19/03/08/youtube-1837872_640.png",
+            link: "https://mi-amigo-app-theta.vercel.app/subapp?name=yt-video-watcher&variant=energy-level-based",
+          },
+        ],
+      },
       // w trakcie przerw pomodoro często lecę, więc na razie bez tego eventu wpisanego
       //
       // {
@@ -1218,9 +1234,10 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       {
         id: 107,
         variant: "create",
-        title: "FUN",
-        startDate: new Date(2024, 0, 19, 13, 45),
-        endDate: new Date(2024, 0, 19, 15, 15),
+        title:
+          "1_EKIPA_Gaming_Competitive 2_ME_YT_Watching_CR_Gameplaye_AcqInc_etc 3_ZUZU_Gaming_Coop_or_watching___albo___EKIPA_LAN_or_planszowy 4_EKIPA_Sporcik_Wg_Weekly_Planu_Wg_Pory_Roku 5_ME_Słuchawki_Z_Braindead_Gaming 6_EKIPA_Wypad_Pół_Or_Całodzienny 7_ME_Słuchawki_I_Research_tak_nie_z_gier_seriali_etc_pod_Wrld",
+        startDate: new Date(2024, 0, 19, 14, 30),
+        endDate: new Date(2024, 0, 19, 16, 0),
         image: "https://i.redd.it/l59qattlpdx91.jpg",
         soundToHowl: "https://freesound.org/s/740843/",
       },
@@ -1229,8 +1246,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         id: 6,
         variant: "absorb",
         title: "Papu z YT",
-        startDate: new Date(2024, 0, 19, 15, 45),
-        endDate: new Date(2024, 0, 19, 16, 15),
+        startDate: new Date(2024, 0, 19, 15, 30),
+        endDate: new Date(2024, 0, 19, 16, 0),
         image: "https://pbs.twimg.com/media/FIDIksBVcAAmbxm.jpg",
         soundToHowl: "https://freesound.org/s/740843/",
         workflowsAkaKWLinks: [
@@ -1245,8 +1262,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         id: 5,
         variant: "chill",
         title: "Drzemusia",
-        startDate: new Date(2024, 0, 19, 16, 15),
-        endDate: new Date(2024, 0, 19, 16, 45),
+        startDate: new Date(2024, 0, 19, 16, 0),
+        endDate: new Date(2024, 0, 19, 16, 30),
         image:
           "https://pbs.twimg.com/ext_tw_video_thumb/1368250695443357698/pu/img/XIe27QP3pA8oQodZ.jpg:large",
         soundToHowl: "https://freesound.org/s/740843/",
@@ -1256,8 +1273,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         id: 112,
         variant: "create",
         title: "Mi Amigo",
-        startDate: new Date(2024, 0, 19, 16, 45),
-        endDate: new Date(2024, 0, 19, 17, 45),
+        startDate: new Date(2024, 0, 19, 17, 0),
+        endDate: new Date(2024, 0, 19, 18, 0),
         image:
           "https://img.game8.co/3225654/4427543c73747d78048e40563a4a13a2.png/show",
         soundToHowl: "https://freesound.org/s/740843/",
@@ -1268,28 +1285,13 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
         ],
       },
-      {
-        id: 9,
-        variant: "absorb",
-        title: "Dolna kąpiel & Golonko & Kły",
-        startDate: new Date(2024, 0, 19, 15, 15),
-        endDate: new Date(2024, 0, 19, 15, 45),
-        image: "https://pbs.twimg.com/media/FVVi9pOUsAAMzpL.jpg",
-        soundToHowl: "https://freesound.org/s/740843/",
-        workflowsAkaKWLinks: [
-          {
-            imagePath:
-              "https://cdn.pixabay.com/photo/2016/11/19/03/08/youtube-1837872_640.png",
-            link: "https://mi-amigo-app-theta.vercel.app/subapp?name=yt-video-watcher&variant=energy-level-based",
-          },
-        ],
-      },
+
       {
         id: 113,
         variant: "create",
         title: "Overkill | (Pn-Śr) Wrld | (Cz-Sb) Grzejś RES",
-        startDate: new Date(2024, 0, 19, 17, 45),
-        endDate: new Date(2024, 0, 19, 18, 45),
+        startDate: new Date(2024, 0, 19, 18, 0),
+        endDate: new Date(2024, 0, 19, 19, 0),
         image: "https://i.ytimg.com/vi/Y9_pA7YdsMI/hqdefault.jpg",
         soundToHowl: "https://freesound.org/s/740843/",
         workflowsAkaKWLinks: [
@@ -1309,8 +1311,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         variant: "create",
         title:
           "1_EKIPA_Gaming_Competitive 2_ME_YT_Watching_CR_Gameplaye_AcqInc_etc 3_ZUZU_Gaming_Coop___albo___EKIPA_LAN_or_planszowy 4_EKIPA_Sporcik_Wg_Weekly_Planu_Wg_Pory_Roku 5_ME_Słuchawki_Z_Braindead_Gaming 6_EKIPA_Wypad_Pół_Or_Całodzienny 7_ME_Słuchawki_I_Research_tak_nie_z_gier_seriali_etc_pod_Wrld",
-        startDate: new Date(2024, 0, 19, 18, 45),
-        endDate: new Date(2024, 0, 19, 20, 45),
+        startDate: new Date(2024, 0, 19, 19, 0),
+        endDate: new Date(2024, 0, 19, 21, 0),
         image: "https://i.redd.it/l59qattlpdx91.jpg",
         soundToHowl: "https://freesound.org/s/740843/",
       },
