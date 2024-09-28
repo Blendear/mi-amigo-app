@@ -1010,7 +1010,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         id: 8,
         variant: "absorb",
         title: "1 nogę postaw & Nocna Wartunia | Słuchając music/remember",
-        startDate: new Date(2024, 0, 19, 6, 15),
+        startDate: new Date(2024, 0, 19, 6, 30),
         endDate: new Date(2024, 0, 19, 7, 15),
         image: "/images/events-manager/cleaning.jpg",
         soundToHowl: "https://freesound.org/s/740843/",
@@ -1018,7 +1018,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             imagePath:
               "https://cdn.icon-icons.com/icons2/1735/PNG/512/libreofficewriter_113234.png",
-            link: "https://www.dropbox.com/scl/fi/l0uiwap5jdd4vq1nd6itm/KW-Nocna-Warta.docx?rlkey=plrtqla2uusra86fvug9guyiq&st=ae7cqavw&dl=0",
+            link: "https://www.dropbox.com/scl/fi/6wjg8fqqaol43tn33yury/KW-Nocna-Warta.docx?rlkey=uqweqi5x5l1pgprb2yoph9qtm&st=lqrd0x8z&dl=0",
           },
           {
             imagePath:
@@ -1082,43 +1082,26 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
         ],
       },
-      {
-        id: 111,
-        variant: "absorb",
-        title: "Backup | DB, dysk, email, laptop",
-        startDate: new Date(2024, 0, 19, 8, 0),
-        endDate: new Date(2024, 0, 19, 8, 15),
-        image:
-          "https://png.pngtree.com/thumb_back/fh260/background/20230303/pngtree-cartoon-sky-vector-day-landscape-anime-style-clouds-background-design-image_1755673.jpg",
-        // "https://64.media.tumblr.com/eb6af236bce825947be668ca41aa7dab/4a7aeb7d0ac93f36-08/s1280x1920/50ad6113d157f50602e012379d49e4f31c27798f.png",
-        soundToHowl: "https://freesound.org/s/740843/",
-        workflowsAkaKWLinks: [
-          {
-            imagePath:
-              "https://img.icons8.com/pastel_glyph/200/FFFFFF/info.png",
-            link: "https://www.google.com/search?q=KW+Devlogowanie&sca_esv=33efa13a2b517c28&sca_upv=1&sxsrf=ADLYWIK2Mn2-qPHuuYu6bj7vOk36m4UlVA%3A1724598029089&ei=DUfLZrGRBYiHxc8PjfWvwQU&ved=0ahUKEwjxy52ntJCIAxWIQ_EDHY36K1gQ4dUDCA8&uact=5&oq=KW+Devlogowanie&gs_lp=Egxnd3Mtd2l6LXNlcnAiD0tXIERldmxvZ293YW5pZTIFECEYoAEyBRAhGKABMgUQIRigAUigIFCBCViiH3AHeAGQAQGYAeMBoAGnE6oBBjAuMTQuMbgBA8gBAPgBAZgCFaACqxLCAgoQABiwAxjWBBhHwgIFEAAYgATCAgcQABiABBgKwgILEC4YgAQYxwEYrwHCAg4QLhiABBjHARjLARivAcICCBAAGIAEGMsBwgIIEAAYFhgKGB7CAgYQABgWGB7CAgoQABgWGAoYHhgPwgIKEAAYCBgNGB4YD8ICCBAAGIAEGKIEwgIEECMYJ5gDAIgGAZAGCJIHBjcuMTMuMaAH5k8&sclient=gws-wiz-serp",
-          },
-        ],
-      },
-      {
-        id: 11,
-        variant: "create",
-        title:
-          // Cholernie mi 'Co dzisiaj' pomoże w mentalnym przygotowaniu do rocket-startu gdy juz 4-h-chunk tworzenia
-          "'Co dzisiaj i Co wczoraj' | Devlog parominutowy",
-        startDate: new Date(2024, 0, 19, 8, 15),
-        endDate: new Date(2024, 0, 19, 8, 30),
-        image:
-          "https://static.vecteezy.com/system/resources/previews/003/503/497/non_2x/video-editing-timeline-photo.jpg",
-        soundToHowl: "https://freesound.org/s/740843/",
-        workflowsAkaKWLinks: [
-          {
-            imagePath:
-              "https://img.icons8.com/pastel_glyph/200/FFFFFF/info.png",
-            link: "https://www.google.com/search?q=KW+Devlogowanie&sca_esv=33efa13a2b517c28&sca_upv=1&sxsrf=ADLYWIK2Mn2-qPHuuYu6bj7vOk36m4UlVA%3A1724598029089&ei=DUfLZrGRBYiHxc8PjfWvwQU&ved=0ahUKEwjxy52ntJCIAxWIQ_EDHY36K1gQ4dUDCA8&uact=5&oq=KW+Devlogowanie&gs_lp=Egxnd3Mtd2l6LXNlcnAiD0tXIERldmxvZ293YW5pZTIFECEYoAEyBRAhGKABMgUQIRigAUigIFCBCViiH3AHeAGQAQGYAeMBoAGnE6oBBjAuMTQuMbgBA8gBAPgBAZgCFaACqxLCAgoQABiwAxjWBBhHwgIFEAAYgATCAgcQABiABBgKwgILEC4YgAQYxwEYrwHCAg4QLhiABBjHARjLARivAcICCBAAGIAEGMsBwgIIEAAYFhgKGB7CAgYQABgWGB7CAgoQABgWGAoYHhgPwgIKEAAYCBgNGB4YD8ICCBAAGIAEGKIEwgIEECMYJ5gDAIgGAZAGCJIHBjcuMTMuMaAH5k8&sclient=gws-wiz-serp",
-          },
-        ],
-      },
+
+      // {
+      //   id: 11,
+      //   variant: "create",
+      //   title:
+      //     // Cholernie mi 'Co dzisiaj' pomoże w mentalnym przygotowaniu do rocket-startu gdy juz 4-h-chunk tworzenia
+      //     "'Co dzisiaj i Co wczoraj' | Devlog parominutowy",
+      //   startDate: new Date(2024, 0, 19, 8, 15),
+      //   endDate: new Date(2024, 0, 19, 8, 30),
+      //   image:
+      //     "https://static.vecteezy.com/system/resources/previews/003/503/497/non_2x/video-editing-timeline-photo.jpg",
+      //   soundToHowl: "https://freesound.org/s/740843/",
+      //   workflowsAkaKWLinks: [
+      //     {
+      //       imagePath:
+      //         "https://img.icons8.com/pastel_glyph/200/FFFFFF/info.png",
+      //       link: "https://www.google.com/search?q=KW+Devlogowanie&sca_esv=33efa13a2b517c28&sca_upv=1&sxsrf=ADLYWIK2Mn2-qPHuuYu6bj7vOk36m4UlVA%3A1724598029089&ei=DUfLZrGRBYiHxc8PjfWvwQU&ved=0ahUKEwjxy52ntJCIAxWIQ_EDHY36K1gQ4dUDCA8&uact=5&oq=KW+Devlogowanie&gs_lp=Egxnd3Mtd2l6LXNlcnAiD0tXIERldmxvZ293YW5pZTIFECEYoAEyBRAhGKABMgUQIRigAUigIFCBCViiH3AHeAGQAQGYAeMBoAGnE6oBBjAuMTQuMbgBA8gBAPgBAZgCFaACqxLCAgoQABiwAxjWBBhHwgIFEAAYgATCAgcQABiABBgKwgILEC4YgAQYxwEYrwHCAg4QLhiABBjHARjLARivAcICCBAAGIAEGMsBwgIIEAAYFhgKGB7CAgYQABgWGB7CAgoQABgWGAoYHhgPwgIKEAAYCBgNGB4YD8ICCBAAGIAEGKIEwgIEECMYJ5gDAIgGAZAGCJIHBjcuMTMuMaAH5k8&sclient=gws-wiz-serp",
+      //     },
+      //   ],
+      // },
 
       {
         id: 222,
@@ -1143,63 +1126,11 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         ],
       },
       {
-        id: 1,
-        variant: "create",
-        title: "(Pn-Śr) Wrld | (Cz-Sb) Grzejś RES",
-        startDate: new Date(2024, 0, 19, 9, 15),
-        endDate: new Date(2024, 0, 19, 13, 15),
-        image: "https://i.ytimg.com/vi/tnQR08eATvk/hqdefault.jpg",
-        soundToHowl: "https://freesound.org/s/740843/",
-        workflowsAkaKWLinks: [
-          {
-            imagePath:
-              "https://www.kumatex.pl/media/images/images/koaprka%20Hitachi%20du%C5%BCa.jpg",
-            link: "https://linear.app/res-grzejs-szymanski/view/1340aad9-f877-462f-9148-46610559db99",
-          },
-          {
-            imagePath:
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdsMNrdBP-t3-rKKwgqFn-AwHVG1camG8uCg&s",
-            link: "https://linear.app/infiniti/team/INF/active",
-          },
-          {
-            imagePath:
-              "https://www.ltc-investments.pl/_next/image?url=%2Fimages%2Fbrand%2Fltc-investments-logo.png&w=1920&q=75",
-            link: "https://linear.app/ltc-web-app/team/LTC/active",
-          },
-          {
-            imagePath:
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQisPzyIxfDU5IMyPa4TjvTWQF7eTnSJXAv3URU-AhJ556ZX2PQnp2OezlpQce6y2d-l58&usqp=CAU",
-            link: "https://www.google.com/search?q=link&oq=link&gs_lcrp=EgZjaHJvbWUyDggAEEUYJxg5GIAEGIoFMgYIARBFGDwyDAgCECMYJxiABBiKBTIQCAMQLhjHARixAxjRAxiABDINCAQQLhiDARixAxiABDIOCAUQRRg7GEMYgAQYigUyBggGEEUYPDIGCAcQRRg80gEIMTA0NmowajeoAgCwAgA&sourceid=chrome&ie=UTF-8",
-          },
-          {
-            imagePath:
-              "https://t3.ftcdn.net/jpg/04/68/42/26/360_F_468422632_EvzI7Rr3rVHO4KFTRNVmi5Vx168fq2Ki.jpg",
-            link: "https://www.google.com/search?q=link&oq=link&gs_lcrp=EgZjaHJvbWUyDggAEEUYJxg5GIAEGIoFMgYIARBFGDwyDAgCECMYJxiABBiKBTIQCAMQLhjHARixAxjRAxiABDINCAQQLhiDARixAxiABDIOCAUQRRg7GEMYgAQYigUyBggGEEUYPDIGCAcQRRg80gEIMTA0NmowajeoAgCwAgA&sourceid=chrome&ie=UTF-8",
-          },
-          {
-            imagePath:
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnQK9RuMONTafiZCcvicgxp2yiAOdKD9jdVQ&s",
-            link: "https://www.google.com/search?q=link&oq=link&gs_lcrp=EgZjaHJvbWUyDggAEEUYJxg5GIAEGIoFMgYIARBFGDwyDAgCECMYJxiABBiKBTIQCAMQLhjHARixAxjRAxiABDINCAQQLhiDARixAxiABDIOCAUQRRg7GEMYgAQYigUyBggGEEUYPDIGCAcQRRg80gEIMTA0NmowajeoAgCwAgA&sourceid=chrome&ie=UTF-8",
-          },
-          {
-            imagePath:
-              "/images/events-manager/temporaryHardcodedVisuals/event-image/wrld-rpg.png",
-            link: "https://linear.app/wrld-rpg/view/def0d871-31ec-4f9b-a1a7-e9be938169d2",
-          },
-          {
-            imagePath:
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlHXSPSdC_ZyOiWFUDoiQV5gOWPYO4GjxpJsTWSXuAENqEe92rtinKAJPD-detho0R6iY&usqp=CAU",
-            link: "https://linear.app/mi-amigo/team/SL/all",
-          },
-        ],
-      },
-
-      {
         id: 102,
         variant: "chill",
         title: "Duporuch || Siłunia (klatka 3, barki 2, biceps 2)",
-        startDate: new Date(2024, 0, 19, 13, 15),
-        endDate: new Date(2024, 0, 19, 14, 15),
+        startDate: new Date(2024, 0, 19, 8, 30),
+        endDate: new Date(2024, 0, 19, 9, 15),
         image: "https://i.ytimg.com/vi/qoUhoIIK8ho/hqdefault.jpg",
         // "https://static.wikia.nocookie.net/the-owl-house/images/d/d1/Any_Sport_in_a_Storm_-_1120.png/revision/latest/scale-to-width-down/1920?cb=20220415194032",
         // "https://i.ytimg.com/vi/khdcfWnRB3g/maxresdefault.jpg",
@@ -1212,13 +1143,49 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
         ],
       },
-
+      {
+        id: 1,
+        variant: "create",
+        title: "(Pn-Śr) Wrld | (Cz-Sb) Grzejś RES",
+        startDate: new Date(2024, 0, 19, 9, 15),
+        endDate: new Date(2024, 0, 19, 13, 15),
+        image: "https://i.ytimg.com/vi/tnQR08eATvk/hqdefault.jpg",
+        soundToHowl: "https://freesound.org/s/740843/",
+        workflowsAkaKWLinks: [
+          {
+            imagePath: "https://pageflows.com/media/logos/linear.png",
+            link: "https://linear.app/wrld-rpg/view/questy-dla-mnie-bb901c161e9a7",
+          },
+          {
+            imagePath: "https://pageflows.com/media/logos/linear.png",
+            link: "https://linear.app/res-grzejs-szymanski/view/questy-dla-mnie-47ebce59f452",
+          },
+        ],
+      },
+      {
+        id: 111,
+        variant: "absorb",
+        title: "Backup | DB, dysk, email, laptop",
+        startDate: new Date(2024, 0, 19, 13, 0),
+        endDate: new Date(2024, 0, 19, 13, 15),
+        image:
+          "https://png.pngtree.com/thumb_back/fh260/background/20230303/pngtree-cartoon-sky-vector-day-landscape-anime-style-clouds-background-design-image_1755673.jpg",
+        // "https://64.media.tumblr.com/eb6af236bce825947be668ca41aa7dab/4a7aeb7d0ac93f36-08/s1280x1920/50ad6113d157f50602e012379d49e4f31c27798f.png",
+        soundToHowl: "https://freesound.org/s/740843/",
+        workflowsAkaKWLinks: [
+          {
+            imagePath:
+              "https://img.icons8.com/pastel_glyph/200/FFFFFF/info.png",
+            link: "https://www.google.com/search?q=KW+Devlogowanie&sca_esv=33efa13a2b517c28&sca_upv=1&sxsrf=ADLYWIK2Mn2-qPHuuYu6bj7vOk36m4UlVA%3A1724598029089&ei=DUfLZrGRBYiHxc8PjfWvwQU&ved=0ahUKEwjxy52ntJCIAxWIQ_EDHY36K1gQ4dUDCA8&uact=5&oq=KW+Devlogowanie&gs_lp=Egxnd3Mtd2l6LXNlcnAiD0tXIERldmxvZ293YW5pZTIFECEYoAEyBRAhGKABMgUQIRigAUigIFCBCViiH3AHeAGQAQGYAeMBoAGnE6oBBjAuMTQuMbgBA8gBAPgBAZgCFaACqxLCAgoQABiwAxjWBBhHwgIFEAAYgATCAgcQABiABBgKwgILEC4YgAQYxwEYrwHCAg4QLhiABBjHARjLARivAcICCBAAGIAEGMsBwgIIEAAYFhgKGB7CAgYQABgWGB7CAgoQABgWGAoYHhgPwgIKEAAYCBgNGB4YD8ICCBAAGIAEGKIEwgIEECMYJ5gDAIgGAZAGCJIHBjcuMTMuMaAH5k8&sclient=gws-wiz-serp",
+          },
+        ],
+      },
       {
         id: 223,
         variant: "chill",
         title: "Spakowanie & Podróż z mobilnej kuźni",
-        startDate: new Date(2024, 0, 19, 14, 15),
-        endDate: new Date(2024, 0, 19, 14, 45),
+        startDate: new Date(2024, 0, 19, 13, 15),
+        endDate: new Date(2024, 0, 19, 13, 45),
         image:
           "https://images.squarespace-cdn.com/content/v1/5e6c6d81898be713ac68c06e/1599983996424-QZSLQWIOOS8AKXGEM9F6/owlhouse7.png",
         soundToHowl: "https://freesound.org/s/740843/",
@@ -1251,9 +1218,9 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       {
         id: 107,
         variant: "create",
-        title: "FUN - MeTime / Zuzu / Ekipka / Spontaniczny amigo",
-        startDate: new Date(2024, 0, 19, 14, 45),
-        endDate: new Date(2024, 0, 19, 15, 45),
+        title: "FUN",
+        startDate: new Date(2024, 0, 19, 13, 45),
+        endDate: new Date(2024, 0, 19, 15, 15),
         image: "https://i.redd.it/l59qattlpdx91.jpg",
         soundToHowl: "https://freesound.org/s/740843/",
       },
@@ -1286,11 +1253,27 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
 
       {
+        id: 112,
+        variant: "create",
+        title: "Mi Amigo",
+        startDate: new Date(2024, 0, 19, 16, 45),
+        endDate: new Date(2024, 0, 19, 17, 45),
+        image:
+          "https://img.game8.co/3225654/4427543c73747d78048e40563a4a13a2.png/show",
+        soundToHowl: "https://freesound.org/s/740843/",
+        workflowsAkaKWLinks: [
+          {
+            imagePath: "https://pageflows.com/media/logos/linear.png",
+            link: "https://linear.app/mi-amigo/team/SL/all",
+          },
+        ],
+      },
+      {
         id: 9,
         variant: "absorb",
         title: "Dolna kąpiel & Golonko & Kły",
-        startDate: new Date(2024, 0, 19, 16, 45),
-        endDate: new Date(2024, 0, 19, 17, 15),
+        startDate: new Date(2024, 0, 19, 15, 15),
+        endDate: new Date(2024, 0, 19, 15, 45),
         image: "https://pbs.twimg.com/media/FVVi9pOUsAAMzpL.jpg",
         soundToHowl: "https://freesound.org/s/740843/",
         workflowsAkaKWLinks: [
@@ -1302,15 +1285,56 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         ],
       },
       {
+        id: 113,
+        variant: "create",
+        title: "Overkill | (Pn-Śr) Wrld | (Cz-Sb) Grzejś RES",
+        startDate: new Date(2024, 0, 19, 17, 45),
+        endDate: new Date(2024, 0, 19, 18, 45),
+        image: "https://i.ytimg.com/vi/Y9_pA7YdsMI/hqdefault.jpg",
+        soundToHowl: "https://freesound.org/s/740843/",
+        workflowsAkaKWLinks: [
+          {
+            imagePath: "https://pageflows.com/media/logos/linear.png",
+            link: "https://linear.app/wrld-rpg/view/questy-dla-mnie-bb901c161e9a7",
+          },
+          {
+            imagePath: "https://pageflows.com/media/logos/linear.png",
+            link: "https://linear.app/res-grzejs-szymanski/view/questy-dla-mnie-47ebce59f452",
+          },
+        ],
+      },
+
+      {
         id: 7,
         variant: "create",
-        title: "FUN - MeTime / Zuzu / Ekipka / Spontaniczny amigo",
-        startDate: new Date(2024, 0, 19, 17, 15),
-        endDate: new Date(2024, 0, 19, 19, 15),
+        title:
+          "1_EKIPA_Gaming_Competitive 2_ME_YT_Watching_CR_Gameplaye_AcqInc_etc 3_ZUZU_Gaming_Coop___albo___EKIPA_LAN_or_planszowy 4_EKIPA_Sporcik_Wg_Weekly_Planu_Wg_Pory_Roku 5_ME_Słuchawki_Z_Braindead_Gaming 6_EKIPA_Wypad_Pół_Or_Całodzienny 7_ME_Słuchawki_I_Research_tak_nie_z_gier_seriali_etc_pod_Wrld",
+        startDate: new Date(2024, 0, 19, 18, 45),
+        endDate: new Date(2024, 0, 19, 20, 45),
         image: "https://i.redd.it/l59qattlpdx91.jpg",
         soundToHowl: "https://freesound.org/s/740843/",
       },
-
+      {
+        id: 88,
+        variant: "absorb",
+        title: "Nocna Wartunia | Słuchając music/remember",
+        startDate: new Date(2024, 0, 19, 21, 0),
+        endDate: new Date(2024, 0, 19, 21, 45),
+        image: "/images/events-manager/cleaning.jpg",
+        soundToHowl: "https://freesound.org/s/740843/",
+        workflowsAkaKWLinks: [
+          {
+            imagePath:
+              "https://cdn.icon-icons.com/icons2/1735/PNG/512/libreofficewriter_113234.png",
+            link: "https://www.dropbox.com/scl/fi/6wjg8fqqaol43tn33yury/KW-Nocna-Warta.docx?rlkey=uqweqi5x5l1pgprb2yoph9qtm&st=lqrd0x8z&dl=0",
+          },
+          {
+            imagePath:
+              "https://cdn.pixabay.com/photo/2016/11/19/03/08/youtube-1837872_640.png",
+            link: "https://mi-amigo-app-theta.vercel.app/subapp?name=yt-video-watcher&variant=energy-level-based",
+          },
+        ],
+      },
       {
         id: 10,
         variant: "absorb",
