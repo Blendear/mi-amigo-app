@@ -28,7 +28,9 @@ const EventDisplayIdeasForShowDataVariant = ({ eventData }) => {
                 for subapp components, which I will use as an objetc to get a specific component by name
                 from. Through {}[subappName] */}
                 {addOn.subappName === "video-watcher" ? (
-                  <Playlist listOfYouTubeVideoIDs={addOn.payload.ytVideoIds} />
+                  <Playlist
+                    hardcodedListOfYouTubeVideoIDs={addOn.payload.ytVideoIds}
+                  />
                 ) : (
                   // Handle other subApps accordingly
                   <div>what to show in non-subapps?</div>
