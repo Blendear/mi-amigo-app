@@ -87,7 +87,7 @@ const Playlist = ({
 
   return (
     <div css={playlistCss.container}>
-      <h2>{title || "Default Playlist"}</h2>
+      {/* <h2>{title || "Default Playlist"}</h2> */}
       <p css={{ color: "#3b3b3b" }}>
         Video {finalYTIdsList.length > 0 ? currentVideoIndex + 1 : 0} of{" "}
         {finalYTIdsList.length}
