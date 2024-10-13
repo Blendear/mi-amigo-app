@@ -10,10 +10,6 @@ const playlistCss = {
     display: "grid",
     gridAutoRows: "max-content",
     rowGap: "1rem",
-
-    "& > *": {
-      color: "white",
-    },
   }),
   buttons: css({
     display: "grid",
