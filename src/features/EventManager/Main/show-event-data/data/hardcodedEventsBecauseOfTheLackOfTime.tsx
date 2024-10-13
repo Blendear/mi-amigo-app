@@ -1946,17 +1946,17 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
           {
             id: 17,
-            name: "Sos teriyaki",
-            description: "Ta porcja = ??? | TODO - w carreofurze nie ma chyba?",
-            amount: 0,
-            unit: "g",
+            name: "Sos Szanghajski",
+            description: "Paczka | Carrefour",
+            amount: 1,
+            unit: "szt",
             macros: {
-              forThisAmount: 0,
-              calories: 0,
+              forThisAmount: 1,
+              calories: 123.6,
             },
             priceDetails: {
-              price: 0,
-              forThisAmount: 0,
+              price: 5.09,
+              forThisAmount: 1,
             },
           },
           {
@@ -2832,15 +2832,20 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           ],
           2: [
             {
-              mealId: 1,
-              nonDefaultAmounts: [
-                10, 116.66, 183, 0.5, 66.67, 83.33, 8, 283.33,
-              ],
+              mealId: 7,
+              nonDefaultAmounts: [100, 1, 100],
             },
             {
               mealId: 1,
               nonDefaultAmounts: [
-                10, 116.66, 183, 0.5, 66.67, 83.33, 8, 283.33,
+                10,
+                105,
+                183,
+                0.5,
+                100,
+                175,
+                8, // 16 / 2, assuming that 50% stays on the pan
+                283.33,
               ],
             },
           ],
@@ -2858,12 +2863,12 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           ],
           4: [
             {
-              mealId: 3,
-              nonDefaultAmounts: [],
+              mealId: 7,
+              nonDefaultAmounts: [100, 1, 100],
             },
             {
               mealId: 3,
-              nonDefaultAmounts: [],
+              nonDefaultAmounts: [0, 175, 8, 0.66, 140, 166.66, 283.33],
             },
           ],
           5: [
@@ -2878,12 +2883,12 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           ],
           6: [
             {
-              mealId: 12,
-              nonDefaultAmounts: [0, 8, 125, 0.5, 125, 283.33],
+              mealId: 7,
+              nonDefaultAmounts: [100, 1, 100],
             },
             {
               mealId: 12,
-              nonDefaultAmounts: [0, 8, 125, 0.5, 125, 566.66],
+              nonDefaultAmounts: [0, 8, 133.33, 0.66, 125, 566.66],
             },
           ],
 
@@ -3029,6 +3034,394 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
               ingredient: "Ketchup",
               amount: 3,
               unit: "łyżka",
+            },
+          ],
+
+          2: [
+            {
+              ingredient: "Granola Z CUKREM",
+              amount: 315,
+              unit: "g",
+            },
+            {
+              ingredient: "Jogurt naturalny",
+              amount: 315,
+              unit: "g",
+            },
+            {
+              ingredient: "Banany",
+              amount: 3,
+              unit: "szt.",
+            },
+            {
+              ingredient: "Sól",
+              amount: 30,
+              unit: "g",
+            },
+            {
+              ingredient: "Cukinia",
+              amount: 366,
+              unit: "g",
+            },
+            {
+              ingredient: "Sos śmietanowo-ziołowy",
+              amount: 1,
+              unit: "szt.",
+            },
+            {
+              ingredient: "Śmietana 12%",
+              amount: 200,
+              unit: "g",
+            },
+
+            {
+              ingredient: "Makaron świderek",
+              amount: 325, // ~10g sticks to the pot
+              unit: "g",
+            },
+            {
+              ingredient: "Kurczak pierś",
+              amount: 540, // ~15g is cut out
+              unit: "g",
+            },
+            {
+              ingredient: "Kubuś nie-bananowy",
+              amount: 1,
+              unit: "szt.",
+            },
+          ],
+
+          3: [
+            {
+              ingredient: "Granola Z CUKREM",
+              amount: 315,
+              unit: "g",
+            },
+            {
+              ingredient: "Jogurt naturalny",
+              amount: 315,
+              unit: "g",
+            },
+            {
+              ingredient: "Banany",
+              amount: 3,
+              unit: "szt.",
+            },
+            {
+              ingredient: "Sól",
+              amount: 30,
+              unit: "g",
+            },
+            {
+              ingredient: "Kurczak pierś",
+              amount: 540, // ~15g is cut out
+              unit: "g",
+            },
+            {
+              ingredient: "Kubuś nie-bananowy",
+              amount: 1,
+              unit: "szt.",
+            },
+          ],
+          4: [
+            {
+              ingredient: "Granola Z CUKREM",
+              amount: 315,
+              unit: "g",
+            },
+            {
+              ingredient: "Jogurt naturalny",
+              amount: 315,
+              unit: "g",
+            },
+            {
+              ingredient: "Banany",
+              amount: 3,
+              unit: "szt.",
+            },
+            {
+              ingredient: "Sól",
+              amount: 30,
+              unit: "g",
+            },
+            {
+              ingredient: "Kurczak pierś",
+              amount: 540, // ~15g is cut out
+              unit: "g",
+            },
+            {
+              ingredient: "Kubuś nie-bananowy",
+              amount: 1,
+              unit: "szt.",
+            },
+            {
+              ingredient: "Olej rzepakowy",
+              amount: 48,
+              unit: "ml",
+            },
+            {
+              ingredient: "Sos Szanghajski",
+              amount: 2,
+              unit: "szt.",
+            },
+            {
+              ingredient: "Ryż jaśminowy",
+              amount: 435, // ~15g sticks to the pot
+              unit: "g",
+            },
+            {
+              ingredient: "Brokuł",
+              amount: 500,
+              unit: "g",
+            },
+          ],
+          5: [
+            {
+              ingredient: "Granola Z CUKREM",
+              amount: 315,
+              unit: "g",
+            },
+            {
+              ingredient: "Jogurt naturalny",
+              amount: 315,
+              unit: "g",
+            },
+            {
+              ingredient: "Banany",
+              amount: 3,
+              unit: "szt.",
+            },
+          ],
+          6: [
+            {
+              ingredient: "Granola Z CUKREM",
+              amount: 315,
+              unit: "g",
+            },
+            {
+              ingredient: "Jogurt naturalny",
+              amount: 315,
+              unit: "g",
+            },
+            {
+              ingredient: "Banany",
+              amount: 3,
+              unit: "szt.",
+            },
+            {
+              ingredient: "Olej rzepakowy",
+              amount: 48,
+              unit: "ml",
+            },
+            {
+              ingredient: "Sól",
+              amount: 30,
+              unit: "g",
+            },
+            {
+              ingredient: "Kubuś nie-bananowy",
+              amount: 1,
+              unit: "szt.",
+            },
+            {
+              ingredient: "Makaron spaghetti",
+              amount: 375,
+              unit: "g",
+            },
+            {
+              ingredient: "Sos spaghetti",
+              amount: 2,
+              unit: "szt.",
+            },
+            {
+              ingredient: "Indyk mielony",
+              amount: 400,
+              unit: "g",
+            },
+          ],
+          7: [
+            {
+              ingredient: "Granola Z CUKREM",
+              amount: 315,
+              unit: "g",
+            },
+            {
+              ingredient: "Jogurt naturalny",
+              amount: 315,
+              unit: "g",
+            },
+            {
+              ingredient: "Banany",
+              amount: 3,
+              unit: "szt.",
+            },
+          ],
+          8: [
+            {
+              ingredient: "Granola Z CUKREM",
+              amount: 315,
+              unit: "g",
+            },
+            {
+              ingredient: "Jogurt naturalny",
+              amount: 315,
+              unit: "g",
+            },
+            {
+              ingredient: "Banany",
+              amount: 3,
+              unit: "szt.",
+            },
+          ],
+          9: [
+            {
+              ingredient: "Granola Z CUKREM",
+              amount: 315,
+              unit: "g",
+            },
+            {
+              ingredient: "Jogurt naturalny",
+              amount: 315,
+              unit: "g",
+            },
+            {
+              ingredient: "Banany",
+              amount: 3,
+              unit: "szt.",
+            },
+          ],
+          10: [
+            {
+              ingredient: "Granola Z CUKREM",
+              amount: 315,
+              unit: "g",
+            },
+            {
+              ingredient: "Jogurt naturalny",
+              amount: 315,
+              unit: "g",
+            },
+            {
+              ingredient: "Banany",
+              amount: 3,
+              unit: "szt.",
+            },
+            {
+              ingredient: "Sól",
+              amount: 30,
+              unit: "g",
+            },
+            {
+              ingredient: "Kurczak pierś",
+              amount: 540, // ~15g is cut out
+              unit: "g",
+            },
+            {
+              ingredient: "Kubuś nie-bananowy",
+              amount: 1,
+              unit: "szt.",
+            },
+          ],
+          11: [
+            {
+              ingredient: "Granola Z CUKREM",
+              amount: 315,
+              unit: "g",
+            },
+            {
+              ingredient: "Jogurt naturalny",
+              amount: 315,
+              unit: "g",
+            },
+            {
+              ingredient: "Banany",
+              amount: 3,
+              unit: "szt.",
+            },
+          ],
+          12: [
+            {
+              ingredient: "Granola Z CUKREM",
+              amount: 315,
+              unit: "g",
+            },
+            {
+              ingredient: "Jogurt naturalny",
+              amount: 315,
+              unit: "g",
+            },
+            {
+              ingredient: "Banany",
+              amount: 3,
+              unit: "szt.",
+            },
+          ],
+          13: [
+            {
+              ingredient: "Granola Z CUKREM",
+              amount: 315,
+              unit: "g",
+            },
+            {
+              ingredient: "Jogurt naturalny",
+              amount: 315,
+              unit: "g",
+            },
+            {
+              ingredient: "Banany",
+              amount: 3,
+              unit: "szt.",
+            },
+          ],
+          14: [
+            {
+              ingredient: "Granola Z CUKREM",
+              amount: 315,
+              unit: "g",
+            },
+            {
+              ingredient: "Jogurt naturalny",
+              amount: 315,
+              unit: "g",
+            },
+            {
+              ingredient: "Banany",
+              amount: 3,
+              unit: "szt.",
+            },
+          ],
+          15: [
+            {
+              ingredient: "Granola Z CUKREM",
+              amount: 315,
+              unit: "g",
+            },
+            {
+              ingredient: "Jogurt naturalny",
+              amount: 315,
+              unit: "g",
+            },
+            {
+              ingredient: "Banany",
+              amount: 3,
+              unit: "szt.",
+            },
+          ],
+          16: [
+            {
+              ingredient: "Granola Z CUKREM",
+              amount: 315,
+              unit: "g",
+            },
+            {
+              ingredient: "Jogurt naturalny",
+              amount: 315,
+              unit: "g",
+            },
+            {
+              ingredient: "Banany",
+              amount: 3,
+              unit: "szt.",
             },
           ],
         },
