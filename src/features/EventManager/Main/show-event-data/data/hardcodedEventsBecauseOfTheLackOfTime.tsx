@@ -1053,7 +1053,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       {
         id: 69,
         variant: "absorb",
-        title: "Górna kąpiel",
+        title: "Zęby & Górna kąpiel & Old spice",
         startDate: new Date(2024, 0, 19, 7, 15),
         endDate: new Date(2024, 0, 19, 7, 30),
         image: "https://pbs.twimg.com/media/FVVi9pOUsAAMzpL.jpg",
@@ -1206,7 +1206,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       {
         id: 9,
         variant: "absorb",
-        title: "Dolna kąpiel & Golonko & Kły",
+        title: "Dolna kąpiel & Golonko (c:, -I, . ., l^l) & Kły",
         startDate: new Date(2024, 0, 19, 14, 0),
         endDate: new Date(2024, 0, 19, 14, 30),
         image: "https://pbs.twimg.com/media/FVVi9pOUsAAMzpL.jpg",
