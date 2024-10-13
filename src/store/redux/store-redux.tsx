@@ -25,6 +25,7 @@ const contexts: GlobalReduxContextsType = {
       ingredientsAvailable: [],
       mealsAvailable: [],
       periodOfDaysOfEating: {},
+      shoppingLists: [],
     },
 
     contentVariant: "periods",
