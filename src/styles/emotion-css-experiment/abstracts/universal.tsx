@@ -15,7 +15,7 @@ export const universalCss = {
       borderRadius: "1rem",
       border: "none",
       backgroundColor: bgColor || `rgb(${colors.whiteLight})`,
-      color: textColor || `rgb(0,0,0)`,
+      color: textColor || `rgb(255,255,255)`,
       filter: !active && `brightness(0.5) saturate(0)`,
 
       // "&:enabled": {

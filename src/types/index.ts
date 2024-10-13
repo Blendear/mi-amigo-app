@@ -88,6 +88,8 @@ export type YTWatcherProps = {
   playlists: {
     name: string;
     imagePath: string;
+    // yt video ids can be taken from localStorage, but hardcoded
+    // ones will also be added
     ytVideoIds: string[];
     thirdPartyLinks: {
       title: string;
