@@ -15,6 +15,8 @@ import {
   forceRerenderSliceActions,
 } from "@/store/redux/store-redux";
 import ImageWithWrapper from "@/components/ImageWithWrapper";
+import { TitleBarWithTogglableContent } from "@/components/TitleBarWithTogglableContent";
+import { FaShoppingCart } from "react-icons/fa";
 
 const variantsCss = {
   container: css({
@@ -47,58 +49,97 @@ export const MealOfTheDayChooser = ({}) => {
   const dispatch = useAppDispatch();
 
   return (
-    <SwiperCustom
-      swiperContainerCss={variantsCss.container}
-      spaceBetweenSlides="10rem"
-      activeSlide={MealsAndMacros.mealOfTheDayIndex}
-      setActiveSlide={(index) => {
-        dispatch(
-          contextsSliceActions.setContextKeyValue({
-            contextName: "MealsAndMacros",
-            keyName: "mealOfTheDayIndex",
-            newValue: index,
-          })
-        );
+    <>
+      {/* Temporary, hardcoded shopping lsit for each day */}
+      <div
+        css={[
+          universalCss.container,
+          {
+            justifySelf: "center",
 
-        dispatch(forceRerenderSliceActions.forceRerender("Ingredient"));
-      }}
-      forceUpdate={() => {
-        dispatch(
-          forceRerenderSliceActions.forceRerender("MealsForTheChosenDay")
-        );
-      }}
-    >
-      {MealsAndMacros.globalSubAppData.periodOfDaysOfEating[
-        MealsAndMacros.dayOfMealPlanIndex
-      ].map((meal, index) => (
-        <SwiperSlide key={index}>
-          <div
-            css={[
-              universalCss.button(
-                index === MealsAndMacros.mealOfTheDayIndex,
-                `rgb(${colors.tertiaryLight})`,
-                `rgb(${colors.whiteLight})`
-              ),
-              variantsCss.variant,
-            ]}
+            "& svg": {
+              fontSize: "2rem",
+            },
+          },
+        ]}
+      >
+        <TitleBarWithTogglableContent titleBarContent={<FaShoppingCart />}>
+          <ul
+            css={{
+              display: "grid",
+              rowGap: "1rem",
+              fontSize: "2rem",
+
+              "& > li": {
+                textAlign: "start",
+              },
+            }}
           >
-            {/* {MealsAndMacros.globalSubAppData.mealsAvailable[meal.mealId].name} */}
-            <ImageWithWrapper
-              src={
-                MealsAndMacros.globalSubAppData.mealsAvailable[meal.mealId]
-                  .imagePaths
-              }
-              alt={
-                MealsAndMacros.globalSubAppData.mealsAvailable[meal.mealId].name
-              }
-              wrapperCss={{
-                width: "85px",
-                height: "85px",
-              }}
-            />
-          </div>
-        </SwiperSlide>
-      ))}
-    </SwiperCustom>
+            {MealsAndMacros.globalSubAppData.shoppingLists[
+              MealsAndMacros.dayOfMealPlanIndex
+            ].map((ing, index) => (
+              <li key={index}>
+                {ing.ingredient} - {ing.amount} {ing.unit}
+              </li>
+            ))}
+          </ul>
+        </TitleBarWithTogglableContent>
+      </div>
+
+      <SwiperCustom
+        swiperContainerCss={variantsCss.container}
+        spaceBetweenSlides="10rem"
+        activeSlide={MealsAndMacros.mealOfTheDayIndex}
+        setActiveSlide={(index) => {
+          dispatch(
+            contextsSliceActions.setContextKeyValue({
+              contextName: "MealsAndMacros",
+              keyName: "mealOfTheDayIndex",
+              newValue: index,
+            })
+          );
+
+          dispatch(forceRerenderSliceActions.forceRerender("Ingredient"));
+        }}
+        forceUpdate={() => {
+          dispatch(
+            forceRerenderSliceActions.forceRerender("MealsForTheChosenDay")
+          );
+        }}
+      >
+        {MealsAndMacros.globalSubAppData.periodOfDaysOfEating[
+          MealsAndMacros.dayOfMealPlanIndex
+        ].map((meal, index) => (
+          <SwiperSlide key={index}>
+            <div
+              css={[
+                universalCss.button(
+                  index === MealsAndMacros.mealOfTheDayIndex,
+                  `rgb(${colors.tertiaryLight})`,
+                  `rgb(${colors.whiteLight})`
+                ),
+                variantsCss.variant,
+              ]}
+            >
+              {/* {MealsAndMacros.globalSubAppData.mealsAvailable[meal.mealId].name} */}
+              <ImageWithWrapper
+                src={
+                  MealsAndMacros.globalSubAppData.mealsAvailable[meal.mealId]
+                    .imagePaths
+                }
+                alt={
+                  MealsAndMacros.globalSubAppData.mealsAvailable[meal.mealId]
+                    .name
+                }
+                wrapperCss={{
+                  width: "85px",
+                  height: "85px",
+                }}
+              />
+            </div>
+          </SwiperSlide>
+        ))}
+      </SwiperCustom>
+    </>
   );
 };

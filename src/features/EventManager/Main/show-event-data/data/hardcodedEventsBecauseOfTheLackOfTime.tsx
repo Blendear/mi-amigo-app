@@ -2988,6 +2988,50 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             },
           ],
         },
+        shoppingLists: {
+          1: [
+            {
+              ingredient: "Białko",
+              amount: 3,
+              unit: "porcja",
+            },
+            {
+              ingredient: "Granola Z CUKREM",
+              amount: 315,
+              unit: "g",
+            },
+            {
+              ingredient: "Jogurt naturalny",
+              amount: 315,
+              unit: "g",
+            },
+            {
+              ingredient: "Banany",
+              amount: 3,
+              unit: "szt.",
+            },
+            {
+              ingredient: "Kabanosy - paczka",
+              amount: 3,
+              unit: "szt.",
+            },
+            {
+              ingredient: "Tost pszenny - kromka",
+              amount: 12,
+              unit: "szt.",
+            },
+            {
+              ingredient: "Ser gouda (w plastrach)",
+              amount: 50,
+              unit: "g",
+            },
+            {
+              ingredient: "Ketchup",
+              amount: 3,
+              unit: "łyżka",
+            },
+          ],
+        },
       },
     },
   },

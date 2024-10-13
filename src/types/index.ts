@@ -62,6 +62,16 @@ export type MealsAndMacrosProps = {
       nonDefaultAmounts: number[];
     }[];
   };
+
+  // temporary, dirty solution for showing hardcoded shoppinglist of the day (for the chosen day)
+  shoppingLists: {
+    // hardcoded stirngs with amounts
+    [dayIndex: number]: {
+      ingredient: string;
+      amount: number;
+      unit: "łyżka" | "porcja" | "szt." | "g" | "ml";
+    }[];
+  };
 };
 
 export type MealsAndMacrosSubAppPayload = MealsAndMacrosProps;

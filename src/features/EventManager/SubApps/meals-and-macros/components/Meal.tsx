@@ -12,6 +12,7 @@ import { MealsAndMacrosContext } from "../context/MealsAndMacrosContext";
 import { useContext } from "react";
 import { useAppSelector } from "@/store/redux/hooks";
 import { useForceRerender } from "@/hooks/useForceRerender";
+import { TitleBarWithTogglableContent } from "@/components/TitleBarWithTogglableContent";
 
 const mealCss = {
   container: css(universalCss.container),
@@ -122,7 +123,7 @@ export const Meal = ({
             }}
           />
           <p>{details.name}</p>
-          <p>a</p>
+          {/* <p>a</p> */}
           <p css={{ fontSize: "0.8rem" }}>
             {details.description ? details.description : ""}
           </p>
