@@ -51,8 +51,11 @@ export const YTWatcher = ({ playlists }: YTWatcherProps) => {
               />
             }
           >
-            <h2>{playlist.name}</h2>
-            <Playlist hardcodedListOfYouTubeVideoIDs={playlist.ytVideoIds} />
+            <h2 css={{ color: "#3b3b3b" }}>{playlist.name}</h2>
+            <Playlist
+              hardcodedListOfYouTubeVideoIDs={playlist.ytVideoIds}
+              title={playlist.name}
+            />
             <ul css={yTWatcherCss.videosAndLinks.links}>
               {playlist.thirdPartyLinks.map((link, index) => (
                 <li key={index}>

@@ -30,6 +30,7 @@ const EventDisplayIdeasForShowDataVariant = ({ eventData }) => {
                 {addOn.subappName === "video-watcher" ? (
                   <Playlist
                     hardcodedListOfYouTubeVideoIDs={addOn.payload.ytVideoIds}
+                    title={addOn.name}
                   />
                 ) : (
                   // Handle other subApps accordingly

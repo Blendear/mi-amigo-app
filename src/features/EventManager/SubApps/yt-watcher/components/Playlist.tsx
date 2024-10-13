@@ -4,39 +4,57 @@ import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universa
 import { useState, useEffect } from "react";
 import Video from "./Video";
 import { MyTemporaryStyle } from "../types/index";
+import { TiPlus, TiArrowLeftThick, TiArrowRightThick } from "react-icons/ti";
+import { RiDeleteBin7Fill } from "react-icons/ri";
 
 const playlistCss = {
   container: css({
     display: "grid",
     gridAutoRows: "max-content",
     rowGap: "1rem",
+
+    "& svg": {
+      fontSize: "4rem",
+    },
   }),
   buttons: css({
     display: "grid",
-    gridAutoFlow: "column",
+    gridTemplateColumns: "max-content max-content 1fr max-content",
     gap: "1rem",
+
+    "& > button": {
+      width: "max-content",
+    },
   }),
 };
 
-const Playlist = ({ hardcodedListOfYouTubeVideoIDs }: MyTemporaryStyle) => {
+const Playlist = ({
+  hardcodedListOfYouTubeVideoIDs,
+  title,
+}: MyTemporaryStyle) => {
   const [finalYTIdsList, setFinalYTIdsList] = useState([]);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [newVideoID, setNewVideoID] = useState("");
 
+  // Use the title prop as the key for storing the playlist in localStorage
+  const storageKey = title
+    ? `youtubePlaylist_${title}`
+    : "youtubePlaylist_default";
+
   // Load playlist from localStorage or use the hardcoded list as fallback
   useEffect(() => {
     const savedPlaylist =
-      JSON.parse(localStorage.getItem("youtubePlaylist")) ||
+      JSON.parse(localStorage.getItem(storageKey)) ||
       hardcodedListOfYouTubeVideoIDs;
     setFinalYTIdsList(savedPlaylist);
-  }, [hardcodedListOfYouTubeVideoIDs]);
+  }, [hardcodedListOfYouTubeVideoIDs, storageKey]);
 
   // Update localStorage whenever the playlist changes
   useEffect(() => {
     if (finalYTIdsList.length > 0) {
-      localStorage.setItem("youtubePlaylist", JSON.stringify(finalYTIdsList));
+      localStorage.setItem(storageKey, JSON.stringify(finalYTIdsList));
     }
-  }, [finalYTIdsList]);
+  }, [finalYTIdsList, storageKey]);
 
   const handleNextVideo = () => {
     setCurrentVideoIndex((prevIndex) =>
@@ -69,6 +87,12 @@ const Playlist = ({ hardcodedListOfYouTubeVideoIDs }: MyTemporaryStyle) => {
 
   return (
     <div css={playlistCss.container}>
+      <h2>{title || "Default Playlist"}</h2>
+      <p css={{ color: "#3b3b3b" }}>
+        Video {finalYTIdsList.length > 0 ? currentVideoIndex + 1 : 0} of{" "}
+        {finalYTIdsList.length}
+      </p>
+
       {finalYTIdsList.length > 0 ? (
         <Video yTvideoId={finalYTIdsList[currentVideoIndex]} />
       ) : (
@@ -81,42 +105,43 @@ const Playlist = ({ hardcodedListOfYouTubeVideoIDs }: MyTemporaryStyle) => {
           onClick={handlePrevVideo}
           disabled={finalYTIdsList.length === 0}
         >
-          Previous
+          <TiArrowLeftThick />
         </button>
         <button
           css={[universalCss.button(true), universalCss.container]}
           onClick={handleNextVideo}
           disabled={finalYTIdsList.length === 0}
         >
-          Next
+          <TiArrowRightThick />
         </button>
+        <div></div>
         <button
           css={[universalCss.button(true), universalCss.container]}
           onClick={handleDeleteCurrentVideo}
           disabled={finalYTIdsList.length === 0}
         >
-          Delete Current Video
+          <RiDeleteBin7Fill />
         </button>
       </div>
-
-      <p>
-        Video {finalYTIdsList.length > 0 ? currentVideoIndex + 1 : 0} of{" "}
-        {finalYTIdsList.length}
-      </p>
 
       {/* Input field to add new video */}
       <div>
         <input
+          css={[universalCss.container, { color: "#3b3b3b" }]}
           type="text"
           placeholder="Add YouTube Video ID"
           value={newVideoID}
           onChange={(e) => setNewVideoID(e.target.value)}
         />
         <button
-          css={[universalCss.button(true), universalCss.container]}
+          css={[
+            universalCss.button(true),
+            universalCss.container,
+            { width: "max-content" },
+          ]}
           onClick={handleAddVideo}
         >
-          Add Video
+          <TiPlus />
         </button>
       </div>
     </div>

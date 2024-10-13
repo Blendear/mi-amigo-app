@@ -1361,7 +1361,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       "energy-level-based": {
         playlists: [
           {
-            name: "Treść - W tle, dla towarzystwa",
+            name: "Treść - W tle, dla towarzystwa".replace(/\s+/g, "_"),
             imagePath:
               "https://i.fbcd.co/products/original/b2afafafae3488aff0c4d4078eb2538e5d6cae3f18e5a16bbf7ee291200a3947.jpg",
             ytVideoIds: [],
@@ -1382,7 +1382,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             ],
           },
           {
-            name: "Treść - Wypoczęty - oczy i uszy",
+            name: "Treść - Wypoczęty - oczy i uszy".replace(/\s+/g, "_"),
             imagePath:
               "https://icon-library.com/images/watch-tv-icon/watch-tv-icon-6.jpg",
             ytVideoIds: [
@@ -1407,7 +1407,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
 
           {
-            name: "Treść - Wypoczęty - uszy",
+            name: "Treść - Wypoczęty - uszy".replace(/\s+/g, "_"),
             imagePath: "https://static.thenounproject.com/png/2296288-200.png",
             ytVideoIds: [
               "yXmI1gOQ7uM",
@@ -1460,7 +1460,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
 
           {
-            name: "Treść - Braindead - oczy i uszy",
+            name: "Treść - Braindead - oczy i uszy".replace(/\s+/g, "_"),
             imagePath:
               "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3ZvxUQRsOMiM99rCuaE0zpyh4JaSbVLFgwWt7ruP_7Vngn_QZ7ECJZIAXFn12duQIZWc&usqp=CAU",
             ytVideoIds: [],
@@ -1468,7 +1468,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
 
           {
-            name: "Treść - Braindead - uszy",
+            name: "Treść - Braindead - uszy".replace(/\s+/g, "_"),
             imagePath:
               "https://upload.wikimedia.org/wikipedia/commons/3/32/Audioplay_icon.svg",
             ytVideoIds: [],
@@ -1476,7 +1476,10 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
 
           {
-            name: "Muzyka - Uzupełniacz momentu - Cisza doprawiona ambientem",
+            name: "Muzyka - Uzupełniacz momentu - Cisza doprawiona ambientem".replace(
+              /\s+/g,
+              "_"
+            ),
             imagePath:
               "https://cdn-icons-png.flaticon.com/512/2823/2823511.png",
             ytVideoIds: [
@@ -1489,14 +1492,20 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
 
           {
-            name: "Muzyka - Uzupełniacz momentu - Rytmiczne niskie tony",
+            name: "Muzyka - Uzupełniacz momentu - Rytmiczne niskie tony".replace(
+              /\s+/g,
+              "_"
+            ),
             imagePath: "https://cdn-icons-png.freepik.com/512/2653/2653928.png",
             ytVideoIds: ["Z8ANihFXlgU", "s_i4s2yL8T0"],
             thirdPartyLinks: [],
           },
 
           {
-            name: "Muzyka - Uzupełniacz momentu - Średnie tony instrumentalne, spokojne",
+            name: "Muzyka - Uzupełniacz momentu - Średnie tony instrumentalne, spokojne".replace(
+              /\s+/g,
+              "_"
+            ),
             imagePath: "https://cdn-icons-png.freepik.com/512/1597/1597789.png",
             ytVideoIds: ["6l_lLA-Ytls", "WUhMLw6vq8g", "_BroK8h0eZg"],
             thirdPartyLinks: [
@@ -1511,7 +1520,10 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
 
           {
-            name: "Muzyka - Booster siły - Średnie tony instrumentalne, rozkręcające się",
+            name: "Muzyka - Booster siły - Średnie tony instrumentalne, rozkręcające się".replace(
+              /\s+/g,
+              "_"
+            ),
             imagePath:
               "https://static.vecteezy.com/system/resources/previews/014/601/654/original/violin-icon-free-vector.jpg",
             ytVideoIds: ["a3pz0OOhfEk", "d7ON2yxxAWY", "80IhjDsVVQc"],
@@ -1519,7 +1531,10 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
 
           {
-            name: "Muzyka - Booster siły - Średnie tony wokalne, z pierdolnięciem",
+            name: "Muzyka - Booster siły - Średnie tony wokalne, z pierdolnięciem".replace(
+              /\s+/g,
+              "_"
+            ),
             imagePath:
               "https://static.vecteezy.com/system/resources/previews/005/738/986/original/modern-shape-wolf-howl-logo-symbol-icon-illustration-graphic-design-vector.jpg",
             ytVideoIds: ["gCYcHz2k5x0"],
@@ -1577,7 +1592,10 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
 
           {
-            name: "Muzyka - Ostatni bastion wyiskrzenia mocy - Rapsy słowem wyrywające",
+            name: "Muzyka - Ostatni bastion wyiskrzenia mocy - Rapsy słowem wyrywające".replace(
+              /\s+/g,
+              "_"
+            ),
             imagePath:
               "https://previews.123rf.com/images/premiumdesign/premiumdesign1209/premiumdesign120900010/15115437-bear-roar.jpg",
             ytVideoIds: [],
@@ -1600,7 +1618,10 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
 
           {
-            name: "Muzyka - Ostatni bastion wyiskrzenia mocy - Bangers & Karaoke",
+            name: "Muzyka - Ostatni bastion wyiskrzenia mocy - Bangers & Karaoke".replace(
+              /\s+/g,
+              "_"
+            ),
             imagePath:
               "https://www.shutterstock.com/image-vector/angry-tiger-roaring-vector-art-600w-2324265285.jpg",
             ytVideoIds: [],
@@ -1624,14 +1645,14 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
 
           {
-            name: "Zagłuszacz - Niskie FQ",
+            name: "Zagłuszacz - Niskie FQ".replace(/\s+/g, "_"),
             imagePath: "https://static.thenounproject.com/png/2349204-200.png",
             ytVideoIds: [],
             thirdPartyLinks: [],
           },
 
           {
-            name: "Zagłuszacz - Średnie FQ",
+            name: "Zagłuszacz - Średnie FQ".replace(/\s+/g, "_"),
             imagePath: "https://static.thenounproject.com/png/156688-200.png",
             ytVideoIds: [],
             thirdPartyLinks: [
@@ -1654,7 +1675,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
 
           {
-            name: "Zagłuszacz - Wysokie FQ",
+            name: "Zagłuszacz - Wysokie FQ".replace(/\s+/g, "_"),
             imagePath:
               "https://cdn1.iconfinder.com/data/icons/car-parts-14/32/Car_automobile_music_load_speaker-512.png",
             ytVideoIds: [],
