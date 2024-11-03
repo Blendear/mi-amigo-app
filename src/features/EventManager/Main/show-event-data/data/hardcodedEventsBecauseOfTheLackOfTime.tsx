@@ -1811,7 +1811,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             unit: "g",
             macros: {
               forThisAmount: 100,
-              calories: 62,
+              calories: 17,
             },
             priceDetails: {
               price: 8.99,
@@ -1821,13 +1821,12 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 7,
             name: "Sos śmietanowy",
-            description:
-              "TODO - ilość kalorii i gramatura porcji ogarnij - 3 sosy, czy 2 starczą?",
-            amount: 0.5,
+            description: "1 sos na 3 dni starcza",
+            amount: 0.33,
             unit: "szt",
             macros: {
               forThisAmount: 1,
-              calories: 0,
+              calories: 60,
             },
             priceDetails: {
               price: 2.55,
@@ -1842,7 +1841,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             unit: "g",
             macros: {
               forThisAmount: 100,
-              calories: 178,
+              // calories: 178,
+              calories: 120,
             },
             priceDetails: {
               price: 29.99,
@@ -1853,12 +1853,12 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             id: 9,
             name: "Olej rzepakowy",
             description:
-              "Ta porcja = 8ml = 1 łyżka duża, stołowa | Kujawski - Carrefour",
-            amount: 8,
+              "2 łyżki per dzień, z 6 na 3 dniowe gotowanie. Kalorycznie 50% zakładamy, że się wchłania, stąd 1 łyżka (8ml) zakladamy 450, nie 900 kcal | Kujawski - Carrefour",
+            amount: 16,
             unit: "ml",
             macros: {
               forThisAmount: 100,
-              calories: 900,
+              calories: 450,
             },
             priceDetails: {
               price: 9.95,
@@ -2081,8 +2081,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             id: 24,
             name: "Panierka ryżowa z CH",
             description:
-              "Ta porcja = 1 łyżka  = 5g (TODO sprawdz to) (licz wysokosc napelnienia równa głębokości łyżki)| Szwajcarska",
-            amount: 5, // hook1
+              "145g starcza na 525g (540 brutto) kurczaka | Szwajcarska",
+            amount: 100, // hook1
             unit: "g",
             macros: {
               forThisAmount: 100,
@@ -2592,16 +2592,16 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 58,
             name: "Śmietana 12%",
-            description: "66.67 = 1/6 śmietany 400g | Simpl Carrefour",
-            amount: 66.67,
+            description: "Opakowanie 200g | Simpl Carrefour",
+            amount: 200,
             unit: "g",
             macros: {
               forThisAmount: 100,
               calories: 134,
             },
             priceDetails: {
-              price: 3.65,
-              forThisAmount: 400,
+              price: 2.1,
+              forThisAmount: 200,
             },
           },
           {
@@ -2652,17 +2652,63 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
           {
             id: 62,
-            name: "Granola - Z cukrem",
-            description: "Opakowanie ma 500g | Vitanella, Biedronka",
+            name: "Granola - BEZ cukru - Fit Granola Orzechy Kakao",
+            description: "Opakowanie ma 300g | Sante, Carrefour lub online",
             amount: 100,
             unit: "g",
             macros: {
               forThisAmount: 100,
-              calories: 568,
+              calories: 419,
             },
             priceDetails: {
-              price: 10.5,
-              forThisAmount: 500,
+              price: 9.5,
+              forThisAmount: 300,
+            },
+          },
+          {
+            id: 63,
+            name: "Belvita choco",
+            description: "1 szt = 1 ciastko, nie 4-pak ciastek",
+            amount: 1,
+            unit: "szt",
+            macros: {
+              forThisAmount: 1,
+              calories: 55,
+            },
+            priceDetails: {
+              price: 9.9,
+              forThisAmount: 24,
+            },
+          },
+          {
+            id: 64,
+            name: "Kucharek",
+            description:
+              "6 łyżek na 525g (540 brutto) kurczaka. 1 duża łyżka, ot nasza miara",
+            amount: 1,
+            unit: "DŁyż",
+            macros: {
+              forThisAmount: 1,
+              calories: 30,
+            },
+            priceDetails: {
+              price: 0,
+              forThisAmount: 1,
+            },
+          },
+          {
+            id: 65,
+            name: "Frytki",
+            description: "Proste mrożone | Classic, Carrefour",
+            amount: 100,
+            unit: "g",
+            macros: {
+              forThisAmount: 100,
+              calories: 305,
+            },
+            priceDetails: {
+              price: 7.49,
+              forThisAmount: 750,
             },
           },
         ],
@@ -2685,16 +2731,13 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
           {
             id: 2,
-            name: "Makaron ze szpinakiem i suszonymi pomidorami",
+            name: "Nuggetsy z frytkami i brokułem",
             imagePaths:
-              "https://www.lastingredient.com/wp-content/uploads/2022/02/sun-dried-tomato-pasta1.jpg",
-            ytVideoId:
-              "Ugotować makaron.Szpinak pokroić. Na patelnię na średnim ogniu dać masło,  pokrojony czosnek i dużo soli. Rozgrzać aż masło się roztopi. Nie można dopuścić, by spaliło się. Dodać szpinak i mieszać od czasu do czasu. Gdy szpinak będzie miękki, dodać sos sojowy i pokrojone pomidory suszone. Do smaku dodać łyżkę oleju z pomidorów. Przyprawić do smaku - powinien być mocny.Ugotowany makaron odcedzić na sitku i wsypać na patelnie. Smażyć ze szpinakiem, aż wszystko się obklei. Dosolić, jeżeli jest za mało wyraziste.",
-            ingredientsIds: [
-              16, 5, 10, 11, 12, 57,
-              // 14, 15, 13 - Isn't necessary IMO
-            ],
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiUePS1rC8nBgA8meDoMU47FoQ2XEXezzMa9jFkCPZ-YuKzlo_V-zutO7VM2xEIeHQw0o&usqp=CAU",
+            ytVideoId: "V5wWuktIpfA",
+            ingredientsIds: [16, 19, 8, 64, 65, 23, 24, 56, 54],
           },
+
           {
             id: 3,
             name: "Kurczak teriyaki z ryżem",
@@ -2836,6 +2879,22 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             ytVideoId: "___",
             ingredientsIds: [61],
           },
+          {
+            id: 19,
+            name: "Ciastka belvita",
+            imagePaths: "https://m.media-amazon.com/images/I/91nZby-nYdL.jpg",
+            ytVideoId: "___",
+            ingredientsIds: [63],
+          },
+          {
+            id: 20,
+            name: "Makaron ze szpinakiem i suszonymi pomidorami",
+            imagePaths:
+              "https://www.lastingredient.com/wp-content/uploads/2022/02/sun-dried-tomato-pasta1.jpg",
+            ytVideoId:
+              "Ugotować makaron.Szpinak pokroić. Na patelnię na średnim ogniu dać masło,  pokrojony czosnek i dużo soli. Rozgrzać aż masło się roztopi. Nie można dopuścić, by spaliło się. Dodać szpinak i mieszać od czasu do czasu. Gdy szpinak będzie miękki, dodać sos sojowy i pokrojone pomidory suszone. Do smaku dodać łyżkę oleju z pomidorów. Przyprawić do smaku - powinien być mocny.Ugotowany makaron odcedzić na sitku i wsypać na patelnie. Smażyć ze szpinakiem, aż wszystko się obklei. Dosolić, jeżeli jest za mało wyraziste.",
+            ingredientsIds: [16, 5, 10, 11, 12, 57],
+          },
         ],
         periodOfDaysOfEating: {
           1: [
@@ -2845,11 +2904,11 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             },
             {
               mealId: 7,
-              nonDefaultAmounts: [105, 1, 105],
+              nonDefaultAmounts: [100, 1, 120],
             },
             {
               mealId: 0,
-              nonDefaultAmounts: [0.5, 2, 25, 11.25],
+              nonDefaultAmounts: [0.5, 4, 50, 22.5],
             },
             {
               mealId: 0,
@@ -2858,39 +2917,34 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           ],
           2: [
             {
+              mealId: 19,
+              nonDefaultAmounts: [2],
+            },
+            {
               mealId: 7,
-              nonDefaultAmounts: [100, 1, 100],
+              nonDefaultAmounts: [100, 1, 120],
             },
             {
               mealId: 1,
-              nonDefaultAmounts: [
-                10,
-                105,
-                183,
-                0.5,
-                100,
-                175,
-                8, // 16 / 2, assuming that 50% stays on the pan
-                283.33,
-              ],
+              nonDefaultAmounts: [10, 175, 122, 0.33, 66.67, 175, 16, 283.33],
             },
           ],
           3: [
-            // calories of meal 2 are wicked, to mark, that i need to use the dry tomatoes and check its needed amounts, before writing the correct calories etc
-
             {
-              mealId: 2,
-              nonDefaultAmounts: [],
+              mealId: 7,
+              nonDefaultAmounts: [100, 1, 120],
             },
             {
               mealId: 2,
-              nonDefaultAmounts: [],
+              nonDefaultAmounts: [
+                10, 166.66, 175, 2, 166, 0.66, 48.33, 283.33, 45,
+              ],
             },
           ],
           4: [
             {
               mealId: 7,
-              nonDefaultAmounts: [100, 1, 100],
+              nonDefaultAmounts: [100, 1, 120],
             },
             {
               mealId: 3,
@@ -2910,7 +2964,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           6: [
             {
               mealId: 7,
-              nonDefaultAmounts: [100, 1, 100],
+              nonDefaultAmounts: [100, 1, 120],
             },
             {
               mealId: 12,
@@ -3018,9 +3072,41 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
               nonDefaultAmounts: [],
             },
           ],
+          // 17: [
+          //   // calories of meal 2 are wicked, to mark, that i need to use the dry tomatoes and check its needed amounts, before writing the correct calories etc
+
+          //   {
+          //     mealId: 20,
+          //     nonDefaultAmounts: [],
+          //   },
+          //   {
+          //     mealId: 20,
+          //     nonDefaultAmounts: [],
+          //   },
+          // ],
         },
         shoppingLists: {
           1: [
+            {
+              ingredient: "Słodkie | Belvita czy coś",
+              amount: 1,
+              unit: "szt.",
+            },
+            {
+              ingredient: "Słodkie | (2) Krem czeko bez cukru & Tosty",
+              amount: 1,
+              unit: "szt.",
+            },
+            {
+              ingredient: "Słone | (3) Tosty & Ser & Kabanosy",
+              amount: 1,
+              unit: "szt.",
+            },
+            {
+              ingredient: "Słone | Zupka chińska",
+              amount: 2,
+              unit: "szt.",
+            },
             {
               ingredient: "Białko",
               amount: 3,
@@ -3028,12 +3114,12 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             },
             {
               ingredient: "Granola Z CUKREM",
-              amount: 315,
+              amount: 300,
               unit: "g",
             },
             {
               ingredient: "Jogurt naturalny",
-              amount: 315,
+              amount: 375, // 15g zostaje na bokacg opakowania
               unit: "g",
             },
             {
@@ -3065,13 +3151,38 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
 
           2: [
             {
+              ingredient: "Słodkie | Belvita czy coś",
+              amount: 1,
+              unit: "szt.",
+            },
+            {
+              ingredient: "Słodkie | (2) Krem czeko bez cukru & Tosty",
+              amount: 1,
+              unit: "szt.",
+            },
+            {
+              ingredient: "Słodkie | (2) Krem czeko bez cukru & Tosty",
+              amount: 1,
+              unit: "szt.",
+            },
+            {
+              ingredient: "Słone | (3) Tosty & Ser & Kabanosy",
+              amount: 1,
+              unit: "szt.",
+            },
+            {
+              ingredient: "Słone | Zupka chińska",
+              amount: 2,
+              unit: "szt.",
+            },
+            {
               ingredient: "Granola Z CUKREM",
-              amount: 315,
+              amount: 300,
               unit: "g",
             },
             {
               ingredient: "Jogurt naturalny",
-              amount: 315,
+              amount: 375, // 15g zostaje na bokacg opakowania
               unit: "g",
             },
             {
@@ -3102,7 +3213,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
 
             {
               ingredient: "Makaron świderek",
-              amount: 325, // ~10g sticks to the pot
+              amount: 535, // ~10g sticks to the pot
               unit: "g",
             },
             {
@@ -3119,13 +3230,38 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
 
           3: [
             {
+              ingredient: "Słodkie | Belvita czy coś",
+              amount: 1,
+              unit: "szt.",
+            },
+            {
+              ingredient: "Słodkie | (2) Krem czeko bez cukru & Tosty",
+              amount: 1,
+              unit: "szt.",
+            },
+            {
+              ingredient: "Słodkie | (2) Krem czeko bez cukru & Tosty",
+              amount: 1,
+              unit: "szt.",
+            },
+            {
+              ingredient: "Słone | (3) Tosty & Ser & Kabanosy",
+              amount: 1,
+              unit: "szt.",
+            },
+            {
+              ingredient: "Słone | Zupka chińska",
+              amount: 2,
+              unit: "szt.",
+            },
+            {
               ingredient: "Granola Z CUKREM",
-              amount: 315,
+              amount: 300,
               unit: "g",
             },
             {
               ingredient: "Jogurt naturalny",
-              amount: 315,
+              amount: 375, // 15g zostaje na bokacg opakowania
               unit: "g",
             },
             {
@@ -3151,13 +3287,38 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           ],
           4: [
             {
+              ingredient: "Słodkie | Belvita czy coś",
+              amount: 1,
+              unit: "szt.",
+            },
+            {
+              ingredient: "Słodkie | (2) Krem czeko bez cukru & Tosty",
+              amount: 1,
+              unit: "szt.",
+            },
+            {
+              ingredient: "Słodkie | (2) Krem czeko bez cukru & Tosty",
+              amount: 1,
+              unit: "szt.",
+            },
+            {
+              ingredient: "Słone | (3) Tosty & Ser & Kabanosy",
+              amount: 1,
+              unit: "szt.",
+            },
+            {
+              ingredient: "Słone | Zupka chińska",
+              amount: 2,
+              unit: "szt.",
+            },
+            {
               ingredient: "Granola Z CUKREM",
-              amount: 315,
+              amount: 300,
               unit: "g",
             },
             {
               ingredient: "Jogurt naturalny",
-              amount: 315,
+              amount: 375, // 15g zostaje na bokacg opakowania
               unit: "g",
             },
             {
@@ -3204,12 +3365,12 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           5: [
             {
               ingredient: "Granola Z CUKREM",
-              amount: 315,
+              amount: 300,
               unit: "g",
             },
             {
               ingredient: "Jogurt naturalny",
-              amount: 315,
+              amount: 375, // 15g zostaje na bokacg opakowania
               unit: "g",
             },
             {
@@ -3221,12 +3382,12 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           6: [
             {
               ingredient: "Granola Z CUKREM",
-              amount: 315,
+              amount: 300,
               unit: "g",
             },
             {
               ingredient: "Jogurt naturalny",
-              amount: 315,
+              amount: 375, // 15g zostaje na bokacg opakowania
               unit: "g",
             },
             {
@@ -3268,12 +3429,12 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           7: [
             {
               ingredient: "Granola Z CUKREM",
-              amount: 315,
+              amount: 300,
               unit: "g",
             },
             {
               ingredient: "Jogurt naturalny",
-              amount: 315,
+              amount: 375, // 15g zostaje na bokacg opakowania
               unit: "g",
             },
             {
@@ -3285,12 +3446,12 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           8: [
             {
               ingredient: "Granola Z CUKREM",
-              amount: 315,
+              amount: 300,
               unit: "g",
             },
             {
               ingredient: "Jogurt naturalny",
-              amount: 315,
+              amount: 375, // 15g zostaje na bokacg opakowania
               unit: "g",
             },
             {
@@ -3302,12 +3463,12 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           9: [
             {
               ingredient: "Granola Z CUKREM",
-              amount: 315,
+              amount: 300,
               unit: "g",
             },
             {
               ingredient: "Jogurt naturalny",
-              amount: 315,
+              amount: 375, // 15g zostaje na bokacg opakowania
               unit: "g",
             },
             {
@@ -3319,12 +3480,12 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           10: [
             {
               ingredient: "Granola Z CUKREM",
-              amount: 315,
+              amount: 300,
               unit: "g",
             },
             {
               ingredient: "Jogurt naturalny",
-              amount: 315,
+              amount: 375, // 15g zostaje na bokacg opakowania
               unit: "g",
             },
             {
@@ -3351,12 +3512,12 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           11: [
             {
               ingredient: "Granola Z CUKREM",
-              amount: 315,
+              amount: 300,
               unit: "g",
             },
             {
               ingredient: "Jogurt naturalny",
-              amount: 315,
+              amount: 375, // 15g zostaje na bokacg opakowania
               unit: "g",
             },
             {
@@ -3368,12 +3529,12 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           12: [
             {
               ingredient: "Granola Z CUKREM",
-              amount: 315,
+              amount: 300,
               unit: "g",
             },
             {
               ingredient: "Jogurt naturalny",
-              amount: 315,
+              amount: 375, // 15g zostaje na bokacg opakowania
               unit: "g",
             },
             {
@@ -3385,12 +3546,12 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           13: [
             {
               ingredient: "Granola Z CUKREM",
-              amount: 315,
+              amount: 300,
               unit: "g",
             },
             {
               ingredient: "Jogurt naturalny",
-              amount: 315,
+              amount: 375, // 15g zostaje na bokacg opakowania
               unit: "g",
             },
             {
@@ -3402,12 +3563,12 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           14: [
             {
               ingredient: "Granola Z CUKREM",
-              amount: 315,
+              amount: 300,
               unit: "g",
             },
             {
               ingredient: "Jogurt naturalny",
-              amount: 315,
+              amount: 375, // 15g zostaje na bokacg opakowania
               unit: "g",
             },
             {
@@ -3419,12 +3580,12 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           15: [
             {
               ingredient: "Granola Z CUKREM",
-              amount: 315,
+              amount: 300,
               unit: "g",
             },
             {
               ingredient: "Jogurt naturalny",
-              amount: 315,
+              amount: 375, // 15g zostaje na bokacg opakowania
               unit: "g",
             },
             {
@@ -3436,12 +3597,12 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           16: [
             {
               ingredient: "Granola Z CUKREM",
-              amount: 315,
+              amount: 300,
               unit: "g",
             },
             {
               ingredient: "Jogurt naturalny",
-              amount: 315,
+              amount: 375, // 15g zostaje na bokacg opakowania
               unit: "g",
             },
             {
