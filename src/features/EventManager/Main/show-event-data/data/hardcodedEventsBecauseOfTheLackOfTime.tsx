@@ -1007,11 +1007,22 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
     libraryOfTemplateEvents: [],
     sheduleOfHourlyPlannedEvents: [
       {
+        id: 88,
+        variant: "create",
+        title: "Genshin / Wowik / Singleplayer",
+        startDate: new Date(2024, 0, 19, 6, 15),
+        endDate: new Date(2024, 0, 19, 7, 0),
+        image:
+          "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1d75f02f-da4d-43f7-bb0a-2c049d2b0697/deofybq-28af2ea6-9bce-42af-8e5f-13ffa7e0be15.png/v1/fill/w_1192,h_670,q_70,strp/genshin_impact_screenshot_wallpaper_ps4_by_thesupport_deofybq-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvMWQ3NWYwMmYtZGE0ZC00M2Y3LWJiMGEtMmMwNDlkMmIwNjk3XC9kZW9meWJxLTI4YWYyZWE2LTliY2UtNDJhZi04ZTVmLTEzZmZhN2UwYmUxNS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.571pWEyJ2PnoGiUGncBP6p17BHbNXHvM4v_2RIhJoPk",
+        soundToHowl: "https://freesound.org/s/740843/",
+        workflowsAkaKWLinks: [],
+      },
+      {
         id: 8,
         variant: "absorb",
         title: "1 nogę postaw & Nocna Wartunia | Słuchając music/remember",
-        startDate: new Date(2024, 0, 19, 6, 30),
-        endDate: new Date(2024, 0, 19, 7, 15),
+        startDate: new Date(2024, 0, 19, 7, 0),
+        endDate: new Date(2024, 0, 19, 7, 45),
         image: "/images/events-manager/cleaning.jpg",
         soundToHowl: "https://freesound.org/s/740843/",
         workflowsAkaKWLinks: [
@@ -1054,8 +1065,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         id: 69,
         variant: "absorb",
         title: "Zęby & Górna kąpiel & Old spice",
-        startDate: new Date(2024, 0, 19, 7, 15),
-        endDate: new Date(2024, 0, 19, 7, 30),
+        startDate: new Date(2024, 0, 19, 7, 45),
+        endDate: new Date(2024, 0, 19, 8, 0),
         image: "https://pbs.twimg.com/media/FVVi9pOUsAAMzpL.jpg",
         soundToHowl: "https://freesound.org/s/740843/",
         workflowsAkaKWLinks: [
@@ -1070,8 +1081,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         id: 2,
         variant: "absorb",
         title: "Papu z YT",
-        startDate: new Date(2024, 0, 19, 7, 30),
-        endDate: new Date(2024, 0, 19, 8, 0),
+        startDate: new Date(2024, 0, 19, 8, 0),
+        endDate: new Date(2024, 0, 19, 8, 30),
         image: "https://pbs.twimg.com/media/FIDIksBVcAAmbxm.jpg",
         soundToHowl: "https://freesound.org/s/740843/",
         workflowsAkaKWLinks: [
@@ -1142,6 +1153,22 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             imagePath: "https://pageflows.com/media/logos/linear.png",
             link: "https://linear.app/res-grzejs-szymanski/view/questy-dla-mnie-47ebce59f452",
+          },
+        ],
+      },
+      {
+        id: 6,
+        variant: "absorb",
+        title: "Papu - w trakcie drugiego eventu",
+        startDate: new Date(2024, 0, 19, 11, 15),
+        endDate: new Date(2024, 0, 19, 11, 30),
+        image: "https://pbs.twimg.com/media/FIDIksBVcAAmbxm.jpg",
+        soundToHowl: "https://freesound.org/s/740843/",
+        workflowsAkaKWLinks: [
+          {
+            imagePath:
+              "https://cdn.pixabay.com/photo/2016/11/19/03/08/youtube-1837872_640.png",
+            link: "https://mi-amigo-app-theta.vercel.app/subapp?name=yt-video-watcher&variant=energy-level-based",
           },
         ],
       },
@@ -1245,8 +1272,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       {
         id: 6,
         variant: "absorb",
-        title: "Papu z YT",
-        startDate: new Date(2024, 0, 19, 15, 30),
+        title: "Papu - w trakcie drugiego eventu",
+        startDate: new Date(2024, 0, 19, 15, 45),
         endDate: new Date(2024, 0, 19, 16, 0),
         image: "https://pbs.twimg.com/media/FIDIksBVcAAmbxm.jpg",
         soundToHowl: "https://freesound.org/s/740843/",
@@ -1779,7 +1806,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 6,
             name: "Cukinia",
-            description: "Ta porcja = 1/6 z 1100g (dwóch średnich cukinii)",
+            description: "Zważ po prostu w sklepie",
             amount: 183,
             unit: "g",
             macros: {
@@ -1810,7 +1837,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 8,
             name: "Kurczak Filet Z Piersi",
-            description: "Ta porcja = 1/6 z 500g'wego opakowania",
+            description: "",
             amount: 83.33, // 500 / 6 = 83.33
             unit: "g",
             macros: {
@@ -1962,8 +1989,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 18,
             name: "Ryż biały",
-            description:
-              "Ta porcja = 1 saszetka 100g'owa lub zważ 100g z 1kg paczki | Kuchnia Gosposi 1kg pakowany- Carrefur",
+            description: "Kuchnia Gosposi 1kg pakowany- Carrefur",
             amount: 100,
             unit: "g",
             macros: {
@@ -1978,7 +2004,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           {
             id: 19,
             name: "Brokuł",
-            description: "Ta porcja = 1/6 sztuki (z 500g) | Carrefour",
+            description: "Ta porcja = 1/3 sztuki (z 500g) | Carrefour",
             amount: 83.33,
             unit: "g",
             macros: {
