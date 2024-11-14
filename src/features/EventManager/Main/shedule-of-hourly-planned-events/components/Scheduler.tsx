@@ -82,7 +82,7 @@ const Scheduler = () =>
     return (
       <div className={styles["schedule"]}>
         {/* <p>Czasunio: {formatTimeOutOfDate(currentTime)}</p> */}
-        <HowlerOfIncomingOrActiveEvent currentTime={currentTime} />
+        {/* <HowlerOfIncomingOrActiveEvent currentTime={currentTime} /> */}
         <DynamicTime setTime={setCurrentTime} />
         <div className={styles["schedule__grid"]}>
           <div className={styles["schedule__grid__time-blocks"]}>
