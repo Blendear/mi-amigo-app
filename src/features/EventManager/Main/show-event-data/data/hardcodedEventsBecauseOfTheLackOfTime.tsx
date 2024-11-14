@@ -1024,7 +1024,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         ],
       },
       {
-        id: 69,
+        id: 692,
         variant: "absorb",
         title: "Stretch 8-min'utowy",
         startDate: new Date(2024, 0, 19, 6, 30),
@@ -1082,7 +1082,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         workflowsAkaKWLinks: [],
       },
       {
-        id: 1,
+        id: 155,
         variant: "create",
         title: "Wrld",
         startDate: new Date(2024, 0, 19, 8, 0),
@@ -1097,7 +1097,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         ],
       },
       {
-        id: 88,
+        id: 885,
         variant: "create",
         title: "Genshin / Wowik / Singleplayer - zatrzymywalny gdy zechcesz",
         startDate: new Date(2024, 0, 19, 8, 30),
@@ -1108,7 +1108,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         workflowsAkaKWLinks: [],
       },
       {
-        id: 222,
+        id: 2223,
         variant: "chill",
         title: "Podróż do mobilnej kuźni & Rozłożenie się",
         startDate: new Date(2024, 0, 19, 8, 45),
@@ -1130,7 +1130,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         ],
       },
       {
-        id: 1,
+        id: 134,
         variant: "create",
         title: "Wrld",
         startDate: new Date(2024, 0, 19, 9, 30),
@@ -1145,7 +1145,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         ],
       },
       {
-        id: 1,
+        id: 144,
         variant: "create",
         title: "RES",
         startDate: new Date(2024, 0, 19, 10, 30),
@@ -1161,7 +1161,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
 
       {
-        id: 6,
+        id: 62,
         variant: "absorb",
         title: "Papu - w trakcie drugiego eventu",
         startDate: new Date(2024, 0, 19, 11, 15),
@@ -1177,7 +1177,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         ],
       },
       {
-        id: 1,
+        id: 19,
         variant: "create",
         title: "RES",
         startDate: new Date(2024, 0, 19, 11, 30),
@@ -1232,7 +1232,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
       // if nie-silowy, a cardio day
       {
-        id: 102,
+        id: 107,
         variant: "chill",
         title:
           "Gibki day -> Skatepark rowerkiem or inne amigo-cardio (rozpisane w 'Nocna Warta - '5 - Week planujmy'",
@@ -1255,7 +1255,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
 
       {
-        id: 107,
+        id: 108,
         variant: "create",
         title:
           "1_EKIPA_Gaming_Competitive 2_ME_YT_Watching_CR_Gameplaye_AcqInc_etc 3_ZUZU_Gaming_Coop_or_watching___albo___EKIPA_LAN_or_planszowy 4_EKIPA_Sporcik_Wg_Weekly_Planu_Wg_Pory_Roku 5_ME_Słuchawki_Z_Braindead_Gaming 6_EKIPA_Wypad_Pół_Or_Całodzienny 7_ME_Słuchawki_I_Research_tak_nie_z_gier_seriali_etc_pod_Wrld",
@@ -1266,7 +1266,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
 
       {
-        id: 6,
+        id: 63,
         variant: "absorb",
         title: "Papu - w trakcie drugiego eventu",
         startDate: new Date(2024, 0, 19, 15, 45),
@@ -1282,7 +1282,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         ],
       },
       {
-        id: 5,
+        id: 59,
         variant: "chill",
         title: "Drzemusia",
         startDate: new Date(2024, 0, 19, 16, 0),
@@ -1309,7 +1309,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
 
       {
-        id: 7,
+        id: 71,
         variant: "create",
         title:
           "1_EKIPA_Gaming_Competitive 2_ME_YT_Watching_CR_Gameplaye_AcqInc_etc 3_ZUZU_Gaming_Coop___albo___EKIPA_LAN_or_planszowy 4_EKIPA_Sporcik_Wg_Weekly_Planu_Wg_Pory_Roku 5_ME_Słuchawki_Z_Braindead_Gaming 6_EKIPA_Wypad_Pół_Or_Całodzienny 7_ME_Słuchawki_I_Research_tak_nie_z_gier_seriali_etc_pod_Wrld",
@@ -1319,7 +1319,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         soundToHowl: "https://freesound.org/s/740843/",
       },
       {
-        id: 88,
+        id: 74,
         variant: "absorb",
         title: "Nocna Wartunia | Słuchając music/remember",
         startDate: new Date(2024, 0, 19, 20, 0),
