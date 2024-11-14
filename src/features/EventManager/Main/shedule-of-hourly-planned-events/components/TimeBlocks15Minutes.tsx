@@ -13,7 +13,8 @@ const TimeBlocks15Minutes = ({ activeBlockNr }) => {
           }`}
         >
           <span>
-            {String(Math.floor(block / 4)).padStart(2, "0")}:
+            {/* + 1 only for winter, since i wake up at 7 to have sunlight on wakeup */}
+            {String(Math.floor(block / 4) + 1).padStart(2, "0")}:
             {String((block % 4) * 15).padStart(2, "0")}
           </span>
         </div>
