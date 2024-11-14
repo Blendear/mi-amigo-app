@@ -1235,12 +1235,17 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         id: 102,
         variant: "chill",
         title:
-          "Gibki day -> Skatepark rowerem/hulajnogą/rolkami || łyżwy || inny amigo-umówiony/spontan duporuch",
+          "Gibki day -> Skatepark rowerkiem or inne amigo-cardio (rozpisane w 'Nocna Warta - '5 - Week planujmy'",
         startDate: new Date(2024, 0, 19, 12, 30),
         endDate: new Date(2024, 0, 19, 14, 30),
         image: "/images/events-manager/cardio.png",
         soundToHowl: "https://freesound.org/s/740843/",
         workflowsAkaKWLinks: [
+          {
+            imagePath:
+              "https://cdn.icon-icons.com/icons2/1735/PNG/512/libreofficewriter_113234.png",
+            link: "https://www.dropbox.com/scl/fi/6wjg8fqqaol43tn33yury/KW-Nocna-Warta.docx?rlkey=uqweqi5x5l1pgprb2yoph9qtm&st=lqrd0x8z&dl=0",
+          },
           {
             imagePath:
               "https://cdn.pixabay.com/photo/2016/11/19/03/08/youtube-1837872_640.png",
