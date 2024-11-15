@@ -59,6 +59,27 @@ const Scheduler = () =>
         .sheduleOfHourlyPlannedEvents
     );
 
+    const holdTimeout = useRef(null);
+    const handleMouseDown = (eventId) => {
+      // Start a timeout when the button is pressed
+      holdTimeout.current = setTimeout(() => {
+        // alert("Button held for specified duration!");
+        handleDeleteEvent(eventId);
+      }, 1000); // Duration in milliseconds
+    };
+    const handleMouseUpOrLeave = () => {
+      // Clear the timeout if the user releases or leaves early
+      if (holdTimeout.current) {
+        clearTimeout(holdTimeout.current);
+        holdTimeout.current = null;
+      }
+    };
+    const handleDeleteEvent = (eventId) => {
+      setHardcodedEventsInSchedule((prevEvents) =>
+        prevEvents.filter((event) => event.id !== eventId)
+      );
+    };
+
     useEffect(() => {
       executeScroll();
       if (scheduleRef.current) {
@@ -71,13 +92,8 @@ const Scheduler = () =>
           scheduleRef.current.scrollTop = activeBlockElement.offsetTop;
         }
       }
-    }, [currentTime]);
-
-    const handleDeleteEvent = (eventId) => {
-      setHardcodedEventsInSchedule((prevEvents) =>
-        prevEvents.filter((event) => event.id !== eventId)
-      );
-    };
+      // }, [currentTime]); // only once is enough for now, because I often change the focused event manually
+    }, []);
 
     return (
       <div className={styles["schedule"]}>
@@ -126,7 +142,18 @@ const Scheduler = () =>
                       toastProps
                     );
                   }}
-                  onDoubleClick={() => handleDeleteEvent(event.id)}
+                  // hold=delete will be better UX, as it seems
+                  // onDoubleClick={() => handleDeleteEvent(event.id)}
+                  // \/
+                  onMouseDown={() => {
+                    handleMouseDown(event.id);
+                  }}
+                  onMouseUp={handleMouseUpOrLeave}
+                  onMouseLeave={handleMouseUpOrLeave}
+                  onTouchStart={() => {
+                    handleMouseDown(event.id);
+                  }}
+                  onTouchEnd={handleMouseUpOrLeave}
                   ref={isEventActive ? scrollHereRef : dontScrollHereRef}
                   key={event.id}
                   className={styles["schedule__grid__events__event"]}
