@@ -15,6 +15,7 @@ import { hardcodedEventsBecauseOfTheLackOfTime } from "../../show-event-data/dat
 import { HowlerOfIncomingOrActiveEvent } from "../components/HowlerOfIncomingOrActiveEvent";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { BiReset } from "react-icons/bi";
 
 const toastProps = {
   hideProgressBar: true,
@@ -241,6 +242,24 @@ const Scheduler = () =>
             })}
           </div>
         </div>
+        <button
+          css={{
+            fontSize: "100px",
+          }}
+          onClick={() => {
+            localStorage.setItem("deletedEventIds", JSON.stringify([]));
+            setHardcodedEventsInSchedule(
+              hardcodedEventsBecauseOfTheLackOfTime.eventsWithNeeds
+                .sheduleOfHourlyPlannedEvents
+            );
+            localStorage.setItem(
+              "dateOfUpdatingTheSchedule",
+              getTodayDateString()
+            );
+          }}
+        >
+          <BiReset />
+        </button>
       </div>
     );
   };
