@@ -43,6 +43,11 @@ const toastCss = {
   }),
 };
 
+const getTodayDateString = () => {
+  const today = new Date();
+  return today.toISOString().split("T")[0]; // Returns 'YYYY-MM-DD' format
+};
+
 const Scheduler = () =>
   // { events }: DailyScheduleProps
   {
@@ -59,6 +64,14 @@ const Scheduler = () =>
         .sheduleOfHourlyPlannedEvents
     );
 
+    // Needed for showing current events list, if the date is today
+    // (otherwise, show the original list)
+    const getDeletedEventIds = () =>
+      JSON.parse(localStorage.getItem("deletedEventIds")) || [];
+    const getLastUpdateDate = () =>
+      localStorage.getItem("dateOfUpdatingTheSchedule");
+
+    // Deleting events onHold
     const holdTimeout = useRef(null);
     const handleMouseDown = (eventId) => {
       // Start a timeout when the button is pressed
@@ -74,11 +87,60 @@ const Scheduler = () =>
         holdTimeout.current = null;
       }
     };
+    // Delete & Save list of deleted events in localStorage
     const handleDeleteEvent = (eventId) => {
-      setHardcodedEventsInSchedule((prevEvents) =>
-        prevEvents.filter((event) => event.id !== eventId)
-      );
+      const deletedEventIds = getDeletedEventIds();
+
+      // Add event ID to the deleted list if not already deleted
+      if (!deletedEventIds.includes(eventId)) {
+        deletedEventIds.push(eventId);
+        localStorage.setItem(
+          "deletedEventIds",
+          JSON.stringify(deletedEventIds)
+        );
+      }
+
+      // Update schedule by filtering out the deleted event
+      setHardcodedEventsInSchedule((prevEvents) => {
+        const updatedEvents = prevEvents.filter(
+          (event) => event.id !== eventId
+        );
+        return updatedEvents;
+      });
+
+      // Update the date of the schedule update in localStorage to today
+      localStorage.setItem("dateOfUpdatingTheSchedule", getTodayDateString());
     };
+
+    // If i deleted events today - Gets the events without the deleted ones
+    // If it was not today - Get the original events & reset the deleted events list
+    useEffect(() => {
+      // Get the current date and the last update date from localStorage
+      const todayDateString = getTodayDateString();
+      const lastUpdateDate = getLastUpdateDate();
+      console.log("lastUpdateDate", lastUpdateDate);
+      console.log("todayDateString", todayDateString);
+      console.log(
+        "lastUpdateDate === todayDateString",
+        lastUpdateDate === todayDateString
+      );
+      if (lastUpdateDate !== todayDateString) {
+        // If the schedule was updated NOT today, reset the deleted events list
+        localStorage.setItem("deletedEventIds", JSON.stringify([]));
+        setHardcodedEventsInSchedule(
+          hardcodedEventsBecauseOfTheLackOfTime.eventsWithNeeds
+            .sheduleOfHourlyPlannedEvents
+        );
+      } else {
+        // Otherwise, filter out deleted events, which i deleted today
+        const deletedEventIds = getDeletedEventIds();
+        const filteredEvents =
+          hardcodedEventsBecauseOfTheLackOfTime.eventsWithNeeds.sheduleOfHourlyPlannedEvents.filter(
+            (event) => !deletedEventIds.includes(event.id)
+          );
+        setHardcodedEventsInSchedule(filteredEvents);
+      }
+    }, []);
 
     useEffect(() => {
       executeScroll();
