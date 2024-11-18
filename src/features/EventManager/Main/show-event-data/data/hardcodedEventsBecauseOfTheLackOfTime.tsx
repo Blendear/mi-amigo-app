@@ -1023,6 +1023,11 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
           {
             imagePath:
+              "https://img.freepik.com/premium-photo/ancient-fantasy-book-cosmic-knowledge-book-open-with-space-magic-inside_854727-16320.jpg",
+            link: "https://www.bookbeat.com/pl/book/pustynny-ksiaze-ksiega-1-578843",
+          },
+          {
+            imagePath:
               "https://preview.redd.it/new-episode-w-dr-k-healthygamergg-out-now-link-in-comments-v0-06em6kqbh1ya1.jpg?auto=webp&s=35050c5bcd26beaca41954fd5900cf31c0abd13a",
             link: "https://www.youtube.com/watch?v=GevxekO9Kyc&list=PLYxtGyYUCbEGk0TkTw6iLZrYObQ-OGqCR&index=5",
           },
@@ -1148,6 +1153,11 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
           {
             imagePath:
+              "https://img.freepik.com/premium-photo/ancient-fantasy-book-cosmic-knowledge-book-open-with-space-magic-inside_854727-16320.jpg",
+            link: "https://www.bookbeat.com/pl/book/pustynny-ksiaze-ksiega-1-578843",
+          },
+          {
+            imagePath:
               "https://preview.redd.it/new-episode-w-dr-k-healthygamergg-out-now-link-in-comments-v0-06em6kqbh1ya1.jpg?auto=webp&s=35050c5bcd26beaca41954fd5900cf31c0abd13a",
             link: "https://www.youtube.com/watch?v=GevxekO9Kyc&list=PLYxtGyYUCbEGk0TkTw6iLZrYObQ-OGqCR&index=5",
           },
@@ -1248,6 +1258,11 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
           {
             imagePath:
+              "https://img.freepik.com/premium-photo/ancient-fantasy-book-cosmic-knowledge-book-open-with-space-magic-inside_854727-16320.jpg",
+            link: "https://www.bookbeat.com/pl/book/pustynny-ksiaze-ksiega-1-578843",
+          },
+          {
+            imagePath:
               "https://preview.redd.it/new-episode-w-dr-k-healthygamergg-out-now-link-in-comments-v0-06em6kqbh1ya1.jpg?auto=webp&s=35050c5bcd26beaca41954fd5900cf31c0abd13a",
             link: "https://www.youtube.com/watch?v=GevxekO9Kyc&list=PLYxtGyYUCbEGk0TkTw6iLZrYObQ-OGqCR&index=5",
           },
@@ -1283,6 +1298,11 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             imagePath:
               "https://images.blackmagicdesign.com/images/media/releases/2021/20210817_corridor/carousel/1-corridor.jpg?_v=1628743889",
             link: "https://open.spotify.com/show/3zrfNMZ59eblwQs0jWbG40",
+          },
+          {
+            imagePath:
+              "https://img.freepik.com/premium-photo/ancient-fantasy-book-cosmic-knowledge-book-open-with-space-magic-inside_854727-16320.jpg",
+            link: "https://www.bookbeat.com/pl/book/pustynny-ksiaze-ksiega-1-578843",
           },
           {
             imagePath:
@@ -1330,6 +1350,11 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
           {
             imagePath:
+              "https://img.freepik.com/premium-photo/ancient-fantasy-book-cosmic-knowledge-book-open-with-space-magic-inside_854727-16320.jpg",
+            link: "https://www.bookbeat.com/pl/book/pustynny-ksiaze-ksiega-1-578843",
+          },
+          {
+            imagePath:
               "https://preview.redd.it/new-episode-w-dr-k-healthygamergg-out-now-link-in-comments-v0-06em6kqbh1ya1.jpg?auto=webp&s=35050c5bcd26beaca41954fd5900cf31c0abd13a",
             link: "https://www.youtube.com/watch?v=GevxekO9Kyc&list=PLYxtGyYUCbEGk0TkTw6iLZrYObQ-OGqCR&index=5",
           },
@@ -1364,6 +1389,11 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             imagePath:
               "https://images.blackmagicdesign.com/images/media/releases/2021/20210817_corridor/carousel/1-corridor.jpg?_v=1628743889",
             link: "https://open.spotify.com/show/3zrfNMZ59eblwQs0jWbG40",
+          },
+          {
+            imagePath:
+              "https://img.freepik.com/premium-photo/ancient-fantasy-book-cosmic-knowledge-book-open-with-space-magic-inside_854727-16320.jpg",
+            link: "https://www.bookbeat.com/pl/book/pustynny-ksiaze-ksiega-1-578843",
           },
           {
             imagePath:
@@ -1474,6 +1504,11 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
           {
             imagePath:
+              "https://img.freepik.com/premium-photo/ancient-fantasy-book-cosmic-knowledge-book-open-with-space-magic-inside_854727-16320.jpg",
+            link: "https://www.bookbeat.com/pl/book/pustynny-ksiaze-ksiega-1-578843",
+          },
+          {
+            imagePath:
               "https://preview.redd.it/new-episode-w-dr-k-healthygamergg-out-now-link-in-comments-v0-06em6kqbh1ya1.jpg?auto=webp&s=35050c5bcd26beaca41954fd5900cf31c0abd13a",
             link: "https://www.youtube.com/watch?v=GevxekO9Kyc&list=PLYxtGyYUCbEGk0TkTw6iLZrYObQ-OGqCR&index=5",
           },
@@ -1508,6 +1543,11 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
             imagePath:
               "https://images.blackmagicdesign.com/images/media/releases/2021/20210817_corridor/carousel/1-corridor.jpg?_v=1628743889",
             link: "https://open.spotify.com/show/3zrfNMZ59eblwQs0jWbG40",
+          },
+          {
+            imagePath:
+              "https://img.freepik.com/premium-photo/ancient-fantasy-book-cosmic-knowledge-book-open-with-space-magic-inside_854727-16320.jpg",
+            link: "https://www.bookbeat.com/pl/book/pustynny-ksiaze-ksiega-1-578843",
           },
           {
             imagePath:
