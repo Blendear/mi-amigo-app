@@ -1010,15 +1010,37 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         id: 69,
         variant: "absorb",
         title:
-          "LODOWATA po 1 min kąpiel górna (bo i need pompa) & Listerine & Old spice",
+          "(4) Friends-having-challanging-fun podcast & LODOWATA po 1 min kąpiel górna (bo i need pompa) & Listerine & Old spice",
         startDate: new Date(2024, 0, 19, 6, 15),
         endDate: new Date(2024, 0, 19, 6, 30),
-        image: "https://pbs.twimg.com/media/FVVi9pOUsAAMzpL.jpg",
+        image: "/images/events-manager/kapiel-small.png",
         soundToHowl: "https://freesound.org/s/740843/",
         workflowsAkaKWLinks: [
           {
             imagePath:
-              "https://cdn.pixabay.com/photo/2016/11/19/03/08/youtube-1837872_640.png",
+              "https://images.blackmagicdesign.com/images/media/releases/2021/20210817_corridor/carousel/1-corridor.jpg?_v=1628743889",
+            link: "https://open.spotify.com/show/3zrfNMZ59eblwQs0jWbG40",
+          },
+          {
+            imagePath:
+              "https://preview.redd.it/new-episode-w-dr-k-healthygamergg-out-now-link-in-comments-v0-06em6kqbh1ya1.jpg?auto=webp&s=35050c5bcd26beaca41954fd5900cf31c0abd13a",
+            link: "https://www.youtube.com/watch?v=GevxekO9Kyc&list=PLYxtGyYUCbEGk0TkTw6iLZrYObQ-OGqCR&index=5",
+          },
+
+          {
+            imagePath:
+              "https://tvn.pl/_e/i/aktualnosci/cdn-zdjecie-6262692-top-model-joanna-krupa-sofia-konecka-menescal-ph8083481/alternates/WEBP_LANDSCAPE_480",
+            link: "https://play.max.com/show/d4ec69c1-539a-45c5-aa4b-fd7f3b04e42b",
+          },
+          {
+            imagePath:
+              "https://media.npr.org/assets/img/2022/01/20/gettyimages-1223897013-edit-7948700fd12061b3e214087deb4abfacbbaa3afb.jpg",
+            link: "https://open.spotify.com/show/4rOoJ6Egrf8K2IrywzwOMk",
+          },
+
+          {
+            imagePath:
+              "https://static1.thegamerimages.com/wordpress/wp-content/uploads/2022/12/ellywick-v1-cropped.jpg",
             link: "https://mi-amigo-app-theta.vercel.app/subapp?name=yt-video-watcher&variant=energy-level-based",
           },
         ],
@@ -1027,15 +1049,36 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         id: 692,
         variant: "absorb",
         title: "Stretch 8-min'utowy",
-        startDate: new Date(2024, 0, 19, 6, 30),
-        endDate: new Date(2024, 0, 19, 6, 45),
-        image: "/images/events-manager/stretching.png",
+        startDate: new Date(2024, 0, 19, 16, 30),
+        endDate: new Date(2024, 0, 19, 16, 45),
+        image: "/images/events-manager/stretre.png",
         soundToHowl: "https://freesound.org/s/740843/",
         workflowsAkaKWLinks: [
           {
             imagePath:
-              "https://goodly.co.in/wp-content/uploads/2023/10/youtube-logo-png-46016-1.png",
+              "https://ksalms.arabou.edu.kw/pluginfile.php/580605/course/section/81809/video-tutorial-image.jpg",
             link: "https://www.youtube.com/watch?v=FI51zRzgIe4",
+          },
+          {
+            imagePath:
+              "https://img.freepik.com/premium-photo/ancient-fantasy-book-cosmic-knowledge-book-open-with-space-magic-inside_854727-16320.jpg",
+            link: "https://www.bookbeat.com/pl/book/pustynny-ksiaze-ksiega-1-578843",
+          },
+        ],
+      },
+
+      {
+        id: 1,
+        variant: "create",
+        title: "Leżąco - Wrld",
+        startDate: new Date(2024, 0, 19, 6, 30),
+        endDate: new Date(2024, 0, 19, 7, 15),
+        image: "/images/events-manager/create-mobile.png",
+        soundToHowl: "https://freesound.org/s/740843/",
+        workflowsAkaKWLinks: [
+          {
+            imagePath: "https://pageflows.com/media/logos/linear.png",
+            link: "https://linear.app/wrld-rpg/view/questy-dla-mnie-bb901c161e9a7",
           },
         ],
       },
@@ -1043,38 +1086,24 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         id: 2,
         variant: "absorb",
         title: "Papu z YT",
-        startDate: new Date(2024, 0, 19, 6, 45),
-        endDate: new Date(2024, 0, 19, 7, 15),
+        startDate: new Date(2024, 0, 19, 7, 15),
+        endDate: new Date(2024, 0, 19, 7, 30),
         image: "https://pbs.twimg.com/media/FIDIksBVcAAmbxm.jpg",
         soundToHowl: "https://freesound.org/s/740843/",
         workflowsAkaKWLinks: [
           {
             imagePath:
-              "https://cdn.pixabay.com/photo/2016/11/19/03/08/youtube-1837872_640.png",
+              "https://static1.thegamerimages.com/wordpress/wp-content/uploads/2022/12/ellywick-v1-cropped.jpg",
             link: "https://mi-amigo-app-theta.vercel.app/subapp?name=yt-video-watcher&variant=energy-level-based",
-          },
-        ],
-      },
-      {
-        id: 1,
-        variant: "create",
-        title: "Wrld",
-        startDate: new Date(2024, 0, 19, 7, 15),
-        endDate: new Date(2024, 0, 19, 7, 45),
-        image: "/images/events-manager/wrld.png",
-        soundToHowl: "https://freesound.org/s/740843/",
-        workflowsAkaKWLinks: [
-          {
-            imagePath: "https://pageflows.com/media/logos/linear.png",
-            link: "https://linear.app/wrld-rpg/view/questy-dla-mnie-bb901c161e9a7",
           },
         ],
       },
       {
         id: 88,
         variant: "create",
-        title: "Genshin / Wowik / Singleplayer - zatrzymywalny gdy zechcesz",
-        startDate: new Date(2024, 0, 19, 7, 45),
+        title:
+          "Genshin or Singleplayer - zatrzymywalny gdy zechcesz|| seansik z SzoSzo",
+        startDate: new Date(2024, 0, 19, 7, 30),
         endDate: new Date(2024, 0, 19, 8, 0),
         image:
           "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1d75f02f-da4d-43f7-bb0a-2c049d2b0697/deofybq-28af2ea6-9bce-42af-8e5f-13ffa7e0be15.png/v1/fill/w_1192,h_670,q_70,strp/genshin_impact_screenshot_wallpaper_ps4_by_thesupport_deofybq-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvMWQ3NWYwMmYtZGE0ZC00M2Y3LWJiMGEtMmMwNDlkMmIwNjk3XC9kZW9meWJxLTI4YWYyZWE2LTliY2UtNDJhZi04ZTVmLTEzZmZhN2UwYmUxNS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.571pWEyJ2PnoGiUGncBP6p17BHbNXHvM4v_2RIhJoPk",
@@ -1082,12 +1111,12 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         workflowsAkaKWLinks: [],
       },
       {
-        id: 155,
+        id: 1,
         variant: "create",
-        title: "Wrld",
+        title: "Leżąco - Wrld",
         startDate: new Date(2024, 0, 19, 8, 0),
-        endDate: new Date(2024, 0, 19, 8, 30),
-        image: "/images/events-manager/wrld.png",
+        endDate: new Date(2024, 0, 19, 8, 45),
+        image: "/images/events-manager/create-mobile.png",
         soundToHowl: "https://freesound.org/s/740843/",
         workflowsAkaKWLinks: [
           {
@@ -1096,17 +1125,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
         ],
       },
-      {
-        id: 885,
-        variant: "create",
-        title: "Genshin / Wowik / Singleplayer - zatrzymywalny gdy zechcesz",
-        startDate: new Date(2024, 0, 19, 8, 30),
-        endDate: new Date(2024, 0, 19, 8, 45),
-        image:
-          "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1d75f02f-da4d-43f7-bb0a-2c049d2b0697/deofybq-28af2ea6-9bce-42af-8e5f-13ffa7e0be15.png/v1/fill/w_1192,h_670,q_70,strp/genshin_impact_screenshot_wallpaper_ps4_by_thesupport_deofybq-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvMWQ3NWYwMmYtZGE0ZC00M2Y3LWJiMGEtMmMwNDlkMmIwNjk3XC9kZW9meWJxLTI4YWYyZWE2LTliY2UtNDJhZi04ZTVmLTEzZmZhN2UwYmUxNS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.571pWEyJ2PnoGiUGncBP6p17BHbNXHvM4v_2RIhJoPk",
-        soundToHowl: "https://freesound.org/s/740843/",
-        workflowsAkaKWLinks: [],
-      },
+
       {
         id: 2223,
         variant: "chill",
@@ -1124,33 +1143,40 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
           {
             imagePath:
-              "https://cdn.pixabay.com/photo/2016/11/19/03/08/youtube-1837872_640.png",
+              "https://images.blackmagicdesign.com/images/media/releases/2021/20210817_corridor/carousel/1-corridor.jpg?_v=1628743889",
+            link: "https://open.spotify.com/show/3zrfNMZ59eblwQs0jWbG40",
+          },
+          {
+            imagePath:
+              "https://preview.redd.it/new-episode-w-dr-k-healthygamergg-out-now-link-in-comments-v0-06em6kqbh1ya1.jpg?auto=webp&s=35050c5bcd26beaca41954fd5900cf31c0abd13a",
+            link: "https://www.youtube.com/watch?v=GevxekO9Kyc&list=PLYxtGyYUCbEGk0TkTw6iLZrYObQ-OGqCR&index=5",
+          },
+
+          {
+            imagePath:
+              "https://tvn.pl/_e/i/aktualnosci/cdn-zdjecie-6262692-top-model-joanna-krupa-sofia-konecka-menescal-ph8083481/alternates/WEBP_LANDSCAPE_480",
+            link: "https://play.max.com/show/d4ec69c1-539a-45c5-aa4b-fd7f3b04e42b",
+          },
+          {
+            imagePath:
+              "https://media.npr.org/assets/img/2022/01/20/gettyimages-1223897013-edit-7948700fd12061b3e214087deb4abfacbbaa3afb.jpg",
+            link: "https://open.spotify.com/show/4rOoJ6Egrf8K2IrywzwOMk",
+          },
+          {
+            imagePath:
+              "https://static1.thegamerimages.com/wordpress/wp-content/uploads/2022/12/ellywick-v1-cropped.jpg",
             link: "https://mi-amigo-app-theta.vercel.app/subapp?name=yt-video-watcher&variant=energy-level-based",
           },
         ],
       },
-      {
-        id: 134,
-        variant: "create",
-        title: "Wrld",
-        startDate: new Date(2024, 0, 19, 9, 30),
-        endDate: new Date(2024, 0, 19, 10, 30),
-        image: "/images/events-manager/wrld.png",
-        soundToHowl: "https://freesound.org/s/740843/",
-        workflowsAkaKWLinks: [
-          {
-            imagePath: "https://pageflows.com/media/logos/linear.png",
-            link: "https://linear.app/wrld-rpg/view/questy-dla-mnie-bb901c161e9a7",
-          },
-        ],
-      },
+
       {
         id: 144,
         variant: "create",
-        title: "RES",
-        startDate: new Date(2024, 0, 19, 10, 30),
-        endDate: new Date(2024, 0, 19, 11, 15),
-        image: "/images/events-manager/res.png",
+        title: "Siedząco - RES",
+        startDate: new Date(2024, 0, 19, 10, 15),
+        endDate: new Date(2024, 0, 19, 11, 0),
+        image: "/images/events-manager/create-laptop.png",
         soundToHowl: "https://freesound.org/s/740843/",
         workflowsAkaKWLinks: [
           {
@@ -1164,14 +1190,14 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         id: 62,
         variant: "absorb",
         title: "Papu - w trakcie drugiego eventu",
-        startDate: new Date(2024, 0, 19, 11, 15),
+        startDate: new Date(2024, 0, 19, 11, 0),
         endDate: new Date(2024, 0, 19, 11, 30),
         image: "https://pbs.twimg.com/media/FIDIksBVcAAmbxm.jpg",
         soundToHowl: "https://freesound.org/s/740843/",
         workflowsAkaKWLinks: [
           {
             imagePath:
-              "https://cdn.pixabay.com/photo/2016/11/19/03/08/youtube-1837872_640.png",
+              "https://static1.thegamerimages.com/wordpress/wp-content/uploads/2022/12/ellywick-v1-cropped.jpg",
             link: "https://mi-amigo-app-theta.vercel.app/subapp?name=yt-video-watcher&variant=energy-level-based",
           },
         ],
@@ -1179,10 +1205,10 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       {
         id: 19,
         variant: "create",
-        title: "RES",
+        title: "Siedząco - RES",
         startDate: new Date(2024, 0, 19, 11, 30),
-        endDate: new Date(2024, 0, 19, 12, 30),
-        image: "/images/events-manager/res.png",
+        endDate: new Date(2024, 0, 19, 12, 15),
+        image: "/images/events-manager/create-laptop.png",
         soundToHowl: "https://freesound.org/s/740843/",
         workflowsAkaKWLinks: [
           {
@@ -1195,8 +1221,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         id: 223,
         variant: "chill",
         title: "Spakowanie & Podróż z mobilnej kuźni",
-        startDate: new Date(2024, 0, 19, 12, 30),
-        endDate: new Date(2024, 0, 19, 13, 15),
+        startDate: new Date(2024, 0, 19, 12, 15),
+        endDate: new Date(2024, 0, 19, 13, 0),
         image:
           "https://images.squarespace-cdn.com/content/v1/5e6c6d81898be713ac68c06e/1599983996424-QZSLQWIOOS8AKXGEM9F6/owlhouse7.png",
         soundToHowl: "https://freesound.org/s/740843/",
@@ -1208,7 +1234,28 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
           {
             imagePath:
-              "https://cdn.pixabay.com/photo/2016/11/19/03/08/youtube-1837872_640.png",
+              "https://images.blackmagicdesign.com/images/media/releases/2021/20210817_corridor/carousel/1-corridor.jpg?_v=1628743889",
+            link: "https://open.spotify.com/show/3zrfNMZ59eblwQs0jWbG40",
+          },
+          {
+            imagePath:
+              "https://preview.redd.it/new-episode-w-dr-k-healthygamergg-out-now-link-in-comments-v0-06em6kqbh1ya1.jpg?auto=webp&s=35050c5bcd26beaca41954fd5900cf31c0abd13a",
+            link: "https://www.youtube.com/watch?v=GevxekO9Kyc&list=PLYxtGyYUCbEGk0TkTw6iLZrYObQ-OGqCR&index=5",
+          },
+
+          {
+            imagePath:
+              "https://tvn.pl/_e/i/aktualnosci/cdn-zdjecie-6262692-top-model-joanna-krupa-sofia-konecka-menescal-ph8083481/alternates/WEBP_LANDSCAPE_480",
+            link: "https://play.max.com/show/d4ec69c1-539a-45c5-aa4b-fd7f3b04e42b",
+          },
+          {
+            imagePath:
+              "https://media.npr.org/assets/img/2022/01/20/gettyimages-1223897013-edit-7948700fd12061b3e214087deb4abfacbbaa3afb.jpg",
+            link: "https://open.spotify.com/show/4rOoJ6Egrf8K2IrywzwOMk",
+          },
+          {
+            imagePath:
+              "https://static1.thegamerimages.com/wordpress/wp-content/uploads/2022/12/ellywick-v1-cropped.jpg",
             link: "https://mi-amigo-app-theta.vercel.app/subapp?name=yt-video-watcher&variant=energy-level-based",
           },
         ],
@@ -1218,14 +1265,35 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         variant: "chill",
         title:
           "Potężny day -> Siłunia (klatka 3, barki 2, biceps 2, opcj. triceps 2)",
-        startDate: new Date(2024, 0, 19, 13, 15),
-        endDate: new Date(2024, 0, 19, 14, 30),
+        startDate: new Date(2024, 0, 19, 13, 0),
+        endDate: new Date(2024, 0, 19, 14, 15),
         image: "https://i.ytimg.com/vi/qoUhoIIK8ho/hqdefault.jpg",
         soundToHowl: "https://freesound.org/s/740843/",
         workflowsAkaKWLinks: [
           {
             imagePath:
-              "https://cdn.pixabay.com/photo/2016/11/19/03/08/youtube-1837872_640.png",
+              "https://images.blackmagicdesign.com/images/media/releases/2021/20210817_corridor/carousel/1-corridor.jpg?_v=1628743889",
+            link: "https://open.spotify.com/show/3zrfNMZ59eblwQs0jWbG40",
+          },
+          {
+            imagePath:
+              "https://preview.redd.it/new-episode-w-dr-k-healthygamergg-out-now-link-in-comments-v0-06em6kqbh1ya1.jpg?auto=webp&s=35050c5bcd26beaca41954fd5900cf31c0abd13a",
+            link: "https://www.youtube.com/watch?v=GevxekO9Kyc&list=PLYxtGyYUCbEGk0TkTw6iLZrYObQ-OGqCR&index=5",
+          },
+
+          {
+            imagePath:
+              "https://tvn.pl/_e/i/aktualnosci/cdn-zdjecie-6262692-top-model-joanna-krupa-sofia-konecka-menescal-ph8083481/alternates/WEBP_LANDSCAPE_480",
+            link: "https://play.max.com/show/d4ec69c1-539a-45c5-aa4b-fd7f3b04e42b",
+          },
+          {
+            imagePath:
+              "https://media.npr.org/assets/img/2022/01/20/gettyimages-1223897013-edit-7948700fd12061b3e214087deb4abfacbbaa3afb.jpg",
+            link: "https://open.spotify.com/show/4rOoJ6Egrf8K2IrywzwOMk",
+          },
+          {
+            imagePath:
+              "https://static1.thegamerimages.com/wordpress/wp-content/uploads/2022/12/ellywick-v1-cropped.jpg",
             link: "https://mi-amigo-app-theta.vercel.app/subapp?name=yt-video-watcher&variant=energy-level-based",
           },
         ],
@@ -1236,8 +1304,8 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         variant: "chill",
         title:
           "Gibki day -> Skatepark rowerkiem or inne amigo-cardio (rozpisane w 'Nocna Warta - '5 - Week planujmy'",
-        startDate: new Date(2024, 0, 19, 12, 30),
-        endDate: new Date(2024, 0, 19, 14, 30),
+        startDate: new Date(2024, 0, 19, 13, 0),
+        endDate: new Date(2024, 0, 19, 14, 15),
         image: "/images/events-manager/cardio.png",
         soundToHowl: "https://freesound.org/s/740843/",
         workflowsAkaKWLinks: [
@@ -1248,7 +1316,65 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
           {
             imagePath:
-              "https://cdn.pixabay.com/photo/2016/11/19/03/08/youtube-1837872_640.png",
+              "https://images.blackmagicdesign.com/images/media/releases/2021/20210817_corridor/carousel/1-corridor.jpg?_v=1628743889",
+            link: "https://open.spotify.com/show/3zrfNMZ59eblwQs0jWbG40",
+          },
+          {
+            imagePath:
+              "https://preview.redd.it/new-episode-w-dr-k-healthygamergg-out-now-link-in-comments-v0-06em6kqbh1ya1.jpg?auto=webp&s=35050c5bcd26beaca41954fd5900cf31c0abd13a",
+            link: "https://www.youtube.com/watch?v=GevxekO9Kyc&list=PLYxtGyYUCbEGk0TkTw6iLZrYObQ-OGqCR&index=5",
+          },
+
+          {
+            imagePath:
+              "https://tvn.pl/_e/i/aktualnosci/cdn-zdjecie-6262692-top-model-joanna-krupa-sofia-konecka-menescal-ph8083481/alternates/WEBP_LANDSCAPE_480",
+            link: "https://play.max.com/show/d4ec69c1-539a-45c5-aa4b-fd7f3b04e42b",
+          },
+          {
+            imagePath:
+              "https://media.npr.org/assets/img/2022/01/20/gettyimages-1223897013-edit-7948700fd12061b3e214087deb4abfacbbaa3afb.jpg",
+            link: "https://open.spotify.com/show/4rOoJ6Egrf8K2IrywzwOMk",
+          },
+          {
+            imagePath:
+              "https://static1.thegamerimages.com/wordpress/wp-content/uploads/2022/12/ellywick-v1-cropped.jpg",
+            link: "https://mi-amigo-app-theta.vercel.app/subapp?name=yt-video-watcher&variant=energy-level-based",
+          },
+        ],
+      },
+      {
+        id: 1022,
+        variant: "chill",
+        title: "Świeże zakupki po drodze",
+        startDate: new Date(2024, 0, 19, 14, 15),
+        endDate: new Date(2024, 0, 19, 14, 45),
+        image: "https://assets.puzzlefactory.com/puzzle/233/293/original.jpg",
+        soundToHowl: "https://freesound.org/s/740843/",
+        workflowsAkaKWLinks: [
+          {
+            imagePath:
+              "https://images.blackmagicdesign.com/images/media/releases/2021/20210817_corridor/carousel/1-corridor.jpg?_v=1628743889",
+            link: "https://open.spotify.com/show/3zrfNMZ59eblwQs0jWbG40",
+          },
+          {
+            imagePath:
+              "https://preview.redd.it/new-episode-w-dr-k-healthygamergg-out-now-link-in-comments-v0-06em6kqbh1ya1.jpg?auto=webp&s=35050c5bcd26beaca41954fd5900cf31c0abd13a",
+            link: "https://www.youtube.com/watch?v=GevxekO9Kyc&list=PLYxtGyYUCbEGk0TkTw6iLZrYObQ-OGqCR&index=5",
+          },
+
+          {
+            imagePath:
+              "https://tvn.pl/_e/i/aktualnosci/cdn-zdjecie-6262692-top-model-joanna-krupa-sofia-konecka-menescal-ph8083481/alternates/WEBP_LANDSCAPE_480",
+            link: "https://play.max.com/show/d4ec69c1-539a-45c5-aa4b-fd7f3b04e42b",
+          },
+          {
+            imagePath:
+              "https://media.npr.org/assets/img/2022/01/20/gettyimages-1223897013-edit-7948700fd12061b3e214087deb4abfacbbaa3afb.jpg",
+            link: "https://open.spotify.com/show/4rOoJ6Egrf8K2IrywzwOMk",
+          },
+          {
+            imagePath:
+              "https://static1.thegamerimages.com/wordpress/wp-content/uploads/2022/12/ellywick-v1-cropped.jpg",
             link: "https://mi-amigo-app-theta.vercel.app/subapp?name=yt-video-watcher&variant=energy-level-based",
           },
         ],
@@ -1259,7 +1385,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         variant: "create",
         title:
           "1_EKIPA_Gaming_Competitive 2_ME_YT_Watching_CR_Gameplaye_AcqInc_etc 3_ZUZU_Gaming_Coop_or_watching___albo___EKIPA_LAN_or_planszowy 4_EKIPA_Sporcik_Wg_Weekly_Planu_Wg_Pory_Roku 5_ME_Słuchawki_Z_Braindead_Gaming 6_EKIPA_Wypad_Pół_Or_Całodzienny 7_ME_Słuchawki_I_Research_tak_nie_z_gier_seriali_etc_pod_Wrld",
-        startDate: new Date(2024, 0, 19, 14, 30),
+        startDate: new Date(2024, 0, 19, 14, 45),
         endDate: new Date(2024, 0, 19, 15, 45),
         image: "https://i.redd.it/l59qattlpdx91.jpg",
         soundToHowl: "https://freesound.org/s/740843/",
@@ -1276,7 +1402,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         workflowsAkaKWLinks: [
           {
             imagePath:
-              "https://cdn.pixabay.com/photo/2016/11/19/03/08/youtube-1837872_640.png",
+              "https://static1.thegamerimages.com/wordpress/wp-content/uploads/2022/12/ellywick-v1-cropped.jpg",
             link: "https://mi-amigo-app-theta.vercel.app/subapp?name=yt-video-watcher&variant=energy-level-based",
           },
         ],
@@ -1334,7 +1460,28 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
           {
             imagePath:
-              "https://cdn.pixabay.com/photo/2016/11/19/03/08/youtube-1837872_640.png",
+              "https://images.blackmagicdesign.com/images/media/releases/2021/20210817_corridor/carousel/1-corridor.jpg?_v=1628743889",
+            link: "https://open.spotify.com/show/3zrfNMZ59eblwQs0jWbG40",
+          },
+          {
+            imagePath:
+              "https://preview.redd.it/new-episode-w-dr-k-healthygamergg-out-now-link-in-comments-v0-06em6kqbh1ya1.jpg?auto=webp&s=35050c5bcd26beaca41954fd5900cf31c0abd13a",
+            link: "https://www.youtube.com/watch?v=GevxekO9Kyc&list=PLYxtGyYUCbEGk0TkTw6iLZrYObQ-OGqCR&index=5",
+          },
+
+          {
+            imagePath:
+              "https://tvn.pl/_e/i/aktualnosci/cdn-zdjecie-6262692-top-model-joanna-krupa-sofia-konecka-menescal-ph8083481/alternates/WEBP_LANDSCAPE_480",
+            link: "https://play.max.com/show/d4ec69c1-539a-45c5-aa4b-fd7f3b04e42b",
+          },
+          {
+            imagePath:
+              "https://media.npr.org/assets/img/2022/01/20/gettyimages-1223897013-edit-7948700fd12061b3e214087deb4abfacbbaa3afb.jpg",
+            link: "https://open.spotify.com/show/4rOoJ6Egrf8K2IrywzwOMk",
+          },
+          {
+            imagePath:
+              "https://static1.thegamerimages.com/wordpress/wp-content/uploads/2022/12/ellywick-v1-cropped.jpg",
             link: "https://mi-amigo-app-theta.vercel.app/subapp?name=yt-video-watcher&variant=energy-level-based",
           },
         ],
@@ -1350,7 +1497,28 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         workflowsAkaKWLinks: [
           {
             imagePath:
-              "https://cdn.pixabay.com/photo/2016/11/19/03/08/youtube-1837872_640.png",
+              "https://images.blackmagicdesign.com/images/media/releases/2021/20210817_corridor/carousel/1-corridor.jpg?_v=1628743889",
+            link: "https://open.spotify.com/show/3zrfNMZ59eblwQs0jWbG40",
+          },
+          {
+            imagePath:
+              "https://preview.redd.it/new-episode-w-dr-k-healthygamergg-out-now-link-in-comments-v0-06em6kqbh1ya1.jpg?auto=webp&s=35050c5bcd26beaca41954fd5900cf31c0abd13a",
+            link: "https://www.youtube.com/watch?v=GevxekO9Kyc&list=PLYxtGyYUCbEGk0TkTw6iLZrYObQ-OGqCR&index=5",
+          },
+
+          {
+            imagePath:
+              "https://tvn.pl/_e/i/aktualnosci/cdn-zdjecie-6262692-top-model-joanna-krupa-sofia-konecka-menescal-ph8083481/alternates/WEBP_LANDSCAPE_480",
+            link: "https://play.max.com/show/d4ec69c1-539a-45c5-aa4b-fd7f3b04e42b",
+          },
+          {
+            imagePath:
+              "https://media.npr.org/assets/img/2022/01/20/gettyimages-1223897013-edit-7948700fd12061b3e214087deb4abfacbbaa3afb.jpg",
+            link: "https://open.spotify.com/show/4rOoJ6Egrf8K2IrywzwOMk",
+          },
+          {
+            imagePath:
+              "https://static1.thegamerimages.com/wordpress/wp-content/uploads/2022/12/ellywick-v1-cropped.jpg",
             link: "https://mi-amigo-app-theta.vercel.app/subapp?name=yt-video-watcher&variant=energy-level-based",
           },
         ],
