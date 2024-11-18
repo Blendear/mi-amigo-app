@@ -11,7 +11,7 @@ import {
   TiWeatherStormy,
   TiWeatherSnow,
 } from "react-icons/ti";
-import { MdLocationOff } from "react-icons/md";
+import { MdLocationOn } from "react-icons/md";
 import { useState } from "react";
 import { biggerSmaller } from "../../chest-of-daily-planned-and-unplanned-events/components/ChestButton";
 
@@ -32,7 +32,11 @@ export const dynamicWeatherICss = {
 };
 
 const weatherIcons = {
-  default: <MdLocationOff style={{ width: "50%", height: "50%" }} />,
+  // temporarily changeg to 'on' icon, since I usually dont even
+  // turn it on, but just go to the weather link
+  //
+  //   default: <MdLocationOff style={{ width: "50%", height: "50%" }} />,
+  default: <MdLocationOn style={{ width: "50%", height: "50%" }} />,
   Clear: <TiWeatherSunny />,
   Clouds: <TiWeatherCloudy />,
   Mist: <TiWeatherCloudy />,

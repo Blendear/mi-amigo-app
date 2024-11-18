@@ -144,7 +144,7 @@ const Scheduler = () =>
     }, []);
 
     useEffect(() => {
-      executeScroll();
+      // executeScroll();
       if (scheduleRef.current) {
         // calculateActiveBlock();
         const activeBlockElement = scheduleRef.current.querySelector(

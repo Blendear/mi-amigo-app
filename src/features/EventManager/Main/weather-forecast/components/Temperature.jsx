@@ -14,8 +14,12 @@ const temperatureCss = {
 
 export const Temperature = ({ temperature, isDefault }) => {
   return isDefault ? (
-    <div css={temperatureCss.container}>{"Loading..."}</div>
+    // temporarily removed the loading text, since i just click the link
+    // instead of turning the localisation on
+    //
+    <div css={temperatureCss.container}>{""}</div>
   ) : (
+    // <div css={temperatureCss.container}>{"Loading..."}</div>
     <div css={temperatureCss.container}>{temperature} &#8451; </div>
   );
 };
