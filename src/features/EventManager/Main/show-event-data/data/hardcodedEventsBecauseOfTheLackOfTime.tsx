@@ -1007,7 +1007,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
     libraryOfTemplateEvents: [],
     sheduleOfHourlyPlannedEvents: [
       {
-        id: 69,
+        id: 1,
         variant: "absorb",
         title:
           "(4) Friends-having-challanging-fun podcast & LODOWATA po 1 min kąpiel górna (bo i need pompa) & Listerine & Old spice",
@@ -1051,7 +1051,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         ],
       },
       {
-        id: 692,
+        id: 2,
         variant: "absorb",
         title: "Stretch 8-min'utowy",
         startDate: new Date(2024, 0, 19, 16, 30),
@@ -1073,7 +1073,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
 
       {
-        id: 1,
+        id: 3,
         variant: "create",
         title: "Leżąco - Wrld",
         startDate: new Date(2024, 0, 19, 6, 30),
@@ -1088,7 +1088,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         ],
       },
       {
-        id: 2,
+        id: 4,
         variant: "absorb",
         title: "Papu z YT",
         startDate: new Date(2024, 0, 19, 7, 15),
@@ -1104,7 +1104,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         ],
       },
       {
-        id: 88,
+        id: 5,
         variant: "create",
         title:
           "Genshin or Singleplayer - zatrzymywalny gdy zechcesz|| seansik z SzoSzo",
@@ -1116,7 +1116,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         workflowsAkaKWLinks: [],
       },
       {
-        id: 1,
+        id: 6,
         variant: "create",
         title: "Leżąco - Wrld",
         startDate: new Date(2024, 0, 19, 8, 0),
@@ -1132,7 +1132,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
 
       {
-        id: 2223,
+        id: 7,
         variant: "chill",
         title: "Podróż do mobilnej kuźni & Rozłożenie się",
         startDate: new Date(2024, 0, 19, 8, 45),
@@ -1180,7 +1180,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         ],
       },
       {
-        id: 1009,
+        id: 8,
         variant: "chill",
         title: "Srajtaśmą z mydłem wytrzyj stolik",
         startDate: new Date(2024, 0, 19, 9, 15),
@@ -1190,7 +1190,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         workflowsAkaKWLinks: [],
       },
       {
-        id: 144,
+        id: 9,
         variant: "create",
         title: "Siedząco - RES",
         startDate: new Date(2024, 0, 19, 10, 15),
@@ -1206,7 +1206,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
 
       {
-        id: 62,
+        id: 10,
         variant: "absorb",
         title: "Papu - w trakcie drugiego eventu",
         startDate: new Date(2024, 0, 19, 11, 0),
@@ -1222,7 +1222,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         ],
       },
       {
-        id: 19,
+        id: 11,
         variant: "create",
         title: "Siedząco - RES",
         startDate: new Date(2024, 0, 19, 11, 30),
@@ -1237,7 +1237,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         ],
       },
       {
-        id: 223,
+        id: 12,
         variant: "chill",
         title: "Spakowanie & Podróż z mobilnej kuźni",
         startDate: new Date(2024, 0, 19, 12, 15),
@@ -1285,7 +1285,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         ],
       },
       {
-        id: 102,
+        id: 13,
         variant: "chill",
         title:
           "Potężny day -> Siłunia (klatka 3, barki 2, biceps 2, opcj. triceps 2)",
@@ -1329,7 +1329,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
       // if nie-silowy, a cardio day
       {
-        id: 107,
+        id: 14,
         variant: "chill",
         title:
           "Gibki day -> Skatepark rowerkiem or inne amigo-cardio (rozpisane w 'Nocna Warta - '5 - Week planujmy'",
@@ -1377,7 +1377,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         ],
       },
       {
-        id: 1022,
+        id: 15,
         variant: "chill",
         title: "Świeże zakupki po drodze",
         startDate: new Date(2024, 0, 19, 14, 15),
@@ -1420,7 +1420,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
 
       {
-        id: 108,
+        id: 16,
         variant: "create",
         title:
           "1_EKIPA_Gaming_Competitive 2_ME_YT_Watching_CR_Gameplaye_AcqInc_etc 3_ZUZU_Gaming_Coop_or_watching___albo___EKIPA_LAN_or_planszowy 4_EKIPA_Sporcik_Wg_Weekly_Planu_Wg_Pory_Roku 5_ME_Słuchawki_Z_Braindead_Gaming 6_EKIPA_Wypad_Pół_Or_Całodzienny 7_ME_Słuchawki_I_Research_tak_nie_z_gier_seriali_etc_pod_Wrld",
@@ -1431,7 +1431,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
 
       {
-        id: 63,
+        id: 17,
         variant: "absorb",
         title: "Papu - w trakcie drugiego eventu",
         startDate: new Date(2024, 0, 19, 15, 45),
@@ -1447,7 +1447,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         ],
       },
       {
-        id: 59,
+        id: 18,
         variant: "chill",
         title: "Drzemusia",
         startDate: new Date(2024, 0, 19, 16, 0),
@@ -1458,7 +1458,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
 
       {
-        id: 112,
+        id: 19,
         variant: "create",
         title: "Mi Amigo || Sweet side-skill",
         startDate: new Date(2024, 0, 19, 17, 30),
@@ -1474,7 +1474,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       },
 
       {
-        id: 71,
+        id: 20,
         variant: "create",
         title:
           "1_EKIPA_Gaming_Competitive 2_ME_YT_Watching_CR_Gameplaye_AcqInc_etc 3_ZUZU_Gaming_Coop___albo___EKIPA_LAN_or_planszowy 4_EKIPA_Sporcik_Wg_Weekly_Planu_Wg_Pory_Roku 5_ME_Słuchawki_Z_Braindead_Gaming 6_EKIPA_Wypad_Pół_Or_Całodzienny 7_ME_Słuchawki_I_Research_tak_nie_z_gier_seriali_etc_pod_Wrld",
@@ -1484,7 +1484,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         soundToHowl: "https://freesound.org/s/740843/",
       },
       {
-        id: 74,
+        id: 21,
         variant: "absorb",
         title: "Nocna Wartunia | Słuchając music/remember",
         startDate: new Date(2024, 0, 19, 20, 0),
@@ -1531,7 +1531,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         ],
       },
       {
-        id: 9,
+        id: 22,
         variant: "absorb",
         title: "Dolna kąpiel & Kły & Golonko (c:, -I, . ., l^l)",
         startDate: new Date(2024, 0, 19, 21, 30),
@@ -1573,7 +1573,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         ],
       },
       {
-        id: 10,
+        id: 23,
         variant: "absorb",
         title: "Audiobuczek i spanko",
         startDate: new Date(2024, 0, 19, 22, 0),
