@@ -1382,7 +1382,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         title: "Świeże zakupki po drodze",
         startDate: new Date(2024, 0, 19, 14, 15),
         endDate: new Date(2024, 0, 19, 14, 45),
-        image: "https://assets.puzzlefactory.com/puzzle/233/293/original.jpg",
+        image: "/images/events-manager/shopping.png",
         soundToHowl: "https://freesound.org/s/740843/",
         workflowsAkaKWLinks: [
           {
