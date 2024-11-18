@@ -1131,7 +1131,7 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
         variant: "chill",
         title: "Podróż do mobilnej kuźni & Rozłożenie się",
         startDate: new Date(2024, 0, 19, 8, 45),
-        endDate: new Date(2024, 0, 19, 9, 30),
+        endDate: new Date(2024, 0, 19, 9, 15),
         image:
           "https://images.squarespace-cdn.com/content/v1/5e6c6d81898be713ac68c06e/1599983996424-QZSLQWIOOS8AKXGEM9F6/owlhouse7.png",
         soundToHowl: "https://freesound.org/s/740843/",
@@ -1169,7 +1169,16 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
           },
         ],
       },
-
+      {
+        id: 1009,
+        variant: "chill",
+        title: "Srajtaśmą z mydłem wytrzyj stolik",
+        startDate: new Date(2024, 0, 19, 9, 15),
+        endDate: new Date(2024, 0, 19, 9, 30),
+        image: "/images/events-manager/table.png",
+        soundToHowl: "https://freesound.org/s/740843/",
+        workflowsAkaKWLinks: [],
+      },
       {
         id: 144,
         variant: "create",
