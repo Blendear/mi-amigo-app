@@ -26,26 +26,6 @@ export const biggerSmaller = keyframes`
   }
 `;
 
-const chestButtonCss = {
-  container: css([
-    universalCss.wrapperWithCenteredSvg("100px", "60%"),
-
-    {
-      "& *": { color: `rgb(${colors.whiteLight}, 0.25)` },
-    },
-  ]),
-
-  questIcon: css([
-    universalCss.wrapperWithCenteredSvg("40px", "100%"),
-    {
-      position: "absolute",
-      top: "0",
-      right: "0",
-      animation: `${biggerSmaller} 1s infinite`,
-    },
-  ]),
-};
-
 const ChestButton = ({ onClick }: ChestButtonProps) => {
   // TODO: Get the value from redux before app goes live (for now it's hardcoded)
   const [isIconGrey, setIsIconGrey] = useState(false);

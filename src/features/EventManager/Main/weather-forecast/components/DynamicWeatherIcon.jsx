@@ -18,7 +18,7 @@ import { biggerSmaller } from "../../chest-of-daily-planned-and-unplanned-events
 export const dynamicWeatherICss = {
   container: (isIconGrey) =>
     css([
-      universalCss.wrapperWithCenteredSvg("100px", "70%"),
+      universalCss.wrapperWithCenteredSvg("75px", "100%"),
       {
         "& *": {
           color: isIconGrey ? `rgb(${colors.whiteLight}, 0.25)` : `white`,

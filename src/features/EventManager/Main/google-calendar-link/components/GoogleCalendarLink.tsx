@@ -11,7 +11,7 @@ import { useState } from "react";
 export const googleCalendarLCss = {
   container: (isIconGrey) =>
     css([
-      universalCss.wrapperWithCenteredSvg("100px", "50%"),
+      universalCss.wrapperWithCenteredSvg("75px", "55%"),
 
       {
         "& *": {
