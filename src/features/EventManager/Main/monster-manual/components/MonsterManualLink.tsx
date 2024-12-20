@@ -35,7 +35,7 @@ export const MonsterManualLink = ({}: MonsterManualProps) => {
       onClick={() => setIsIconGrey(!isIconGrey)}
       onDoubleClick={() => {
         window.open(
-          "https://www.dropbox.com/work/Tobias%20Cibis/~~~Toby~~~/Ksi%C4%99gi%20Wiedzy%20-%20Do%20Nauki/KW%20Ksi%C4%99ga%20Potwor%C3%B3w?preview=KW+Ksi%C4%99ga+Potwor%C3%B3w.docx",
+          "https://www.dropbox.com/scl/fi/ka0it6sb8vm859ek6cckg/KW-Ksi-ga-Potwor-w.docx?rlkey=hk0duoqi93brcrdcrfeve3lbq&st=nuhq4zuf&dl=0",
           "_blank"
         );
       }}
