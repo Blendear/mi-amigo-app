@@ -11,21 +11,14 @@ import ChestButton from "@/features/EventManager/Main/chest-of-daily-planned-and
 import Scheduler from "@/features/EventManager/Main/shedule-of-hourly-planned-events/components/Scheduler";
 import { CurrentWeather } from "@/features/EventManager/Main/weather-forecast/components/CurrentWeather";
 import { GoogleCalendarLink } from "@/features/EventManager/Main/google-calendar-link/components/GoogleCalendarLink";
+import { MonsterManualLink } from "@/features/EventManager/Main/monster-manual/components/MonsterManualLink";
 
 const eventManagerCss = {
   container: css({
     margin: "0 0 20px 0",
     display: "grid",
-    gridTemplateColumns: "repeat(3, 1fr)",
+    gridTemplateColumns: "repeat(4, 1fr)",
   }),
-
-  googleCalendarLink: css([
-    universalCss.wrapperWithCenteredSvg("100px", "50%"),
-
-    {
-      "& *": { color: `#484848`, strokeWidth: "1.5px" },
-    },
-  ]),
 };
 
 const EventManager = () => {
@@ -42,6 +35,7 @@ const EventManager = () => {
   return (
     <div className={styles["event-manager__container"]}>
       <div css={eventManagerCss.container}>
+        <MonsterManualLink />
         <CurrentWeather />
         <ChestButton onClick={openModal} />
         <GoogleCalendarLink />
