@@ -34,7 +34,6 @@ const yTWatcherCss = {
 export const YTWatcher = ({ playlists }: YTWatcherProps) => {
   return (
     <article css={yTWatcherCss.container}>
-      
       <section css={yTWatcherCss.videosAndLinks.container}>
         {playlists.map((playlist, index) => (
           <TitleBarWithTogglableContent
@@ -52,7 +51,9 @@ export const YTWatcher = ({ playlists }: YTWatcherProps) => {
               />
             }
           >
-            <h2 css={{ color: "#3b3b3b" }}>{playlist.name}</h2>
+            {/* <h2 css={{ color: "#3b3b3b",maxWidth: "100vw",
+    whiteSpace: "normal",
+    overflowWrap: "break-word", }}>{playlist.name}</h2> */}
             <Playlist
               hardcodedListOfYouTubeVideoIDs={playlist.ytVideoIds}
               title={playlist.name}
