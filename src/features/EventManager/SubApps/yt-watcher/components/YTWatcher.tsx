@@ -34,6 +34,7 @@ const yTWatcherCss = {
 export const YTWatcher = ({ playlists }: YTWatcherProps) => {
   return (
     <article css={yTWatcherCss.container}>
+      
       <section css={yTWatcherCss.videosAndLinks.container}>
         {playlists.map((playlist, index) => (
           <TitleBarWithTogglableContent

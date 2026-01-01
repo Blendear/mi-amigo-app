@@ -1,9 +1,216 @@
+// /** @jsxImportSource @emotion/react */
+// import { css } from "@emotion/react";
+// import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
+// import { useState, useEffect } from "react";
+// import Video from "./Video";
+// import { MyTemporaryStyle, VideoItem } from "../types/index";
+// import { TiPlus, TiArrowLeftThick, TiArrowRightThick } from "react-icons/ti";
+// import { RiDeleteBin7Fill } from "react-icons/ri";
+
+
+
+// const playlistCss = {
+//   container: css({
+//     display: "grid",
+//     gridAutoRows: "max-content",
+//     rowGap: "1rem",
+
+//     "& svg": {
+//       fontSize: "4rem",
+//     },
+//   }),
+//   buttons: css({
+//     display: "grid",
+//     gridTemplateColumns: "max-content max-content 1fr max-content",
+//     gap: "1rem",
+
+//     "& > button": {
+//       width: "max-content",
+//     },
+//   }),
+// };
+
+// const Playlist = ({
+//   hardcodedListOfYouTubeVideoIDs,
+//   title,
+// }: MyTemporaryStyle) => {
+//   const [finalYTList, setFinalYTList] = useState<VideoItem[]>([]);
+//   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+//   const [newVideoID, setNewVideoID] = useState("");
+// const [newVideoTimeText, setNewVideoTimeText] = useState(""); // dowolny tekst
+
+//   // Use the title prop as the key for storing the playlist in localStorage
+//   const storageKey = title
+//     ? `youtubePlaylist_${title}`
+//     : "youtubePlaylist_default";
+
+//   // Load playlist from localStorage or use the hardcoded list as fallback
+//   useEffect(() => {
+//   const savedPlaylist: VideoItem[] =
+//     JSON.parse(localStorage.getItem(storageKey)) ||
+//     hardcodedListOfYouTubeVideoIDs.map((id) => ({
+//   yTvideoId: id,
+//   timeText: "",
+// }));
+//   setFinalYTList(savedPlaylist);
+// }, [hardcodedListOfYouTubeVideoIDs, storageKey]);
+
+//   // Update localStorage whenever the playlist changes
+//  useEffect(() => {
+//   if (finalYTList.length > 0) {
+//     localStorage.setItem(storageKey, JSON.stringify(finalYTList));
+//   }
+// }, [finalYTList, storageKey]);
+
+//   const handleNextVideo = () => {
+//     setCurrentVideoIndex((prevIndex) =>
+//       prevIndex < finalYTList.length - 1 ? prevIndex + 1 : 0
+//     );
+//   };
+
+//   const handlePrevVideo = () => {
+//     setCurrentVideoIndex((prevIndex) =>
+//       prevIndex > 0 ? prevIndex - 1 : finalYTList.length - 1
+//     );
+//   };
+
+//   const handleAddVideo = () => {
+//   if (newVideoID.trim()) {
+//     setFinalYTList([
+//       ...finalYTList,
+//       {
+//         yTvideoId: newVideoID.trim(),
+//         timeText: newVideoTimeText,
+//       },
+//     ]);
+//     setNewVideoID("");
+//     setNewVideoTimeText("");
+//   }
+// };
+
+//  const handleDeleteCurrentVideo = () => {
+//   if (finalYTList.length > 0) {
+//     const updatedPlaylist = finalYTList.filter(
+//       (_, index) => index !== currentVideoIndex
+//     );
+//     setFinalYTList(updatedPlaylist);
+//     setCurrentVideoIndex(0);
+//   }
+// };
+
+//   return (
+//     <div css={playlistCss.container}>
+//       {/* <h2>{title || "Default Playlist"}</h2> */}
+//       <p css={{ color: "#3b3b3b" }}>
+//         Video {finalYTList.length > 0 ? currentVideoIndex + 1 : 0} of{" "}
+//         {finalYTList.length}
+//       </p>
+
+//       {finalYTList.length > 0 ? (
+//   <Video yTvideoId={finalYTList[currentVideoIndex].yTvideoId} />
+// ) : (
+//   <p>No videos in the playlist</p>
+// )}
+
+//       <div css={playlistCss.buttons}>
+//         <button
+//           css={[universalCss.button(true), universalCss.container]}
+//           onClick={handlePrevVideo}
+//           disabled={finalYTList.length === 0}
+//         >
+//           <TiArrowLeftThick />
+//         </button>
+//         <button
+//           css={[universalCss.button(true), universalCss.container]}
+//           onClick={handleNextVideo}
+//           disabled={finalYTList.length === 0}
+//         >
+//           <TiArrowRightThick />
+//         </button>
+//         <div></div>
+//         <button
+//           css={[universalCss.button(true), universalCss.container]}
+//           onClick={handleDeleteCurrentVideo}
+//           disabled={finalYTList.length === 0}
+//         >
+//           <RiDeleteBin7Fill />
+//         </button>
+//       </div>
+
+//       {/* Input field to add new video */}
+//       <div>
+//         <input
+//           css={[universalCss.container, { color: "#3b3b3b" }]}
+//           type="text"
+//           placeholder="Add YouTube Video ID"
+//           value={newVideoID}
+//           onChange={(e) => setNewVideoID(e.target.value)}
+//         />
+//         <button
+//           css={[
+//             universalCss.button(true),
+//             universalCss.container,
+//             { width: "max-content" },
+//           ]}
+//           onClick={handleAddVideo}
+//         >
+//           <TiPlus />
+//         </button>
+//       </div>
+
+
+
+// {/* Add "paused at" time*/}
+//       <div>
+//   <input
+//   type="text"
+//   value={finalYTList[currentVideoIndex]?.timeText || ""}
+//   placeholder="Dowolny tekst"
+//   onChange={(e) => {
+//     const updatedList = [...finalYTList];
+//     updatedList[currentVideoIndex] = {
+//       ...updatedList[currentVideoIndex],
+//       timeText: e.target.value,
+//     };
+//     setFinalYTList(updatedList);
+//   }}
+// />
+//   <button
+//     css={[universalCss.button(true), universalCss.container]}
+//     onClick={() => {
+//       // zapis do localStorage już działa w useEffect
+//     }}
+//   >
+//     Ustaw czas
+//   </button>
+
+//   <div>
+//  <input
+//   type="text"
+//   placeholder="Dowolny tekst (czas)"
+//   value={newVideoTimeText}
+//   onChange={(e) => setNewVideoTimeText(e.target.value)}
+// />
+//   <button
+//     css={[universalCss.button(true), universalCss.container, { width: "max-content" }]}
+//     onClick={handleAddVideo}
+//   >
+//     <TiPlus />
+//   </button>
+// </div>
+// </div>
+//     </div>
+//   );
+// };
+
+// export default Playlist;
+
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import { universalCss } from "@/styles/emotion-css-experiment/abstracts/universal";
 import { useState, useEffect } from "react";
 import Video from "./Video";
-import { MyTemporaryStyle } from "../types/index";
+import { MyTemporaryStyle, VideoItem } from "../types/index";
 import { TiPlus, TiArrowLeftThick, TiArrowRightThick } from "react-icons/ti";
 import { RiDeleteBin7Fill } from "react-icons/ri";
 
@@ -12,105 +219,119 @@ const playlistCss = {
     display: "grid",
     gridAutoRows: "max-content",
     rowGap: "1rem",
-
-    "& svg": {
-      fontSize: "4rem",
-    },
+    "& svg": { fontSize: "4rem" },
   }),
   buttons: css({
     display: "grid",
     gridTemplateColumns: "max-content max-content 1fr max-content",
     gap: "1rem",
-
-    "& > button": {
-      width: "max-content",
-    },
+    "& > button": { width: "max-content" },
   }),
 };
 
-const Playlist = ({
-  hardcodedListOfYouTubeVideoIDs,
-  title,
-}: MyTemporaryStyle) => {
-  const [finalYTIdsList, setFinalYTIdsList] = useState([]);
+const Playlist = ({ hardcodedListOfYouTubeVideoIDs, title }: MyTemporaryStyle) => {
+  const [finalYTList, setFinalYTList] = useState<VideoItem[]>([]);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [newVideoID, setNewVideoID] = useState("");
 
-  // Use the title prop as the key for storing the playlist in localStorage
   const storageKey = title
     ? `youtubePlaylist_${title}`
     : "youtubePlaylist_default";
 
-  // Load playlist from localStorage or use the hardcoded list as fallback
+  // Load playlist from localStorage or fallback to hardcoded IDs
   useEffect(() => {
-    const savedPlaylist =
+    const savedPlaylist: VideoItem[] =
       JSON.parse(localStorage.getItem(storageKey)) ||
-      hardcodedListOfYouTubeVideoIDs;
-    setFinalYTIdsList(savedPlaylist);
+      hardcodedListOfYouTubeVideoIDs.map((id) => ({
+        yTvideoId: id,
+        timeText: "",
+      }));
+    setFinalYTList(savedPlaylist);
   }, [hardcodedListOfYouTubeVideoIDs, storageKey]);
 
-  // Update localStorage whenever the playlist changes
+  // Save playlist to localStorage whenever it changes
   useEffect(() => {
-    if (finalYTIdsList.length > 0) {
-      localStorage.setItem(storageKey, JSON.stringify(finalYTIdsList));
+    if (finalYTList.length > 0) {
+      localStorage.setItem(storageKey, JSON.stringify(finalYTList));
     }
-  }, [finalYTIdsList, storageKey]);
+  }, [finalYTList, storageKey]);
 
   const handleNextVideo = () => {
-    setCurrentVideoIndex((prevIndex) =>
-      prevIndex < finalYTIdsList.length - 1 ? prevIndex + 1 : 0
+    setCurrentVideoIndex((prev) =>
+      prev < finalYTList.length - 1 ? prev + 1 : 0
     );
   };
 
   const handlePrevVideo = () => {
-    setCurrentVideoIndex((prevIndex) =>
-      prevIndex > 0 ? prevIndex - 1 : finalYTIdsList.length - 1
+    setCurrentVideoIndex((prev) =>
+      prev > 0 ? prev - 1 : finalYTList.length - 1
     );
   };
 
   const handleAddVideo = () => {
     if (newVideoID.trim()) {
-      setFinalYTIdsList([...finalYTIdsList, newVideoID.trim()]);
-      setNewVideoID(""); // Clear input after adding
+      setFinalYTList([
+        ...finalYTList,
+        { yTvideoId: newVideoID.trim(), timeText: "" },
+      ]);
+      setNewVideoID("");
     }
   };
 
   const handleDeleteCurrentVideo = () => {
-    if (finalYTIdsList.length > 0) {
-      const updatedPlaylist = finalYTIdsList.filter(
+    if (finalYTList.length > 0) {
+      const updatedPlaylist = finalYTList.filter(
         (_, index) => index !== currentVideoIndex
       );
-      setFinalYTIdsList(updatedPlaylist);
-      setCurrentVideoIndex(0); // Reset to first video
+      setFinalYTList(updatedPlaylist);
+      setCurrentVideoIndex(0);
     }
   };
 
   return (
     <div css={playlistCss.container}>
-      {/* <h2>{title || "Default Playlist"}</h2> */}
       <p css={{ color: "#3b3b3b" }}>
-        Video {finalYTIdsList.length > 0 ? currentVideoIndex + 1 : 0} of{" "}
-        {finalYTIdsList.length}
+        Video {finalYTList.length > 0 ? currentVideoIndex + 1 : 0} of{" "}
+        {finalYTList.length}
       </p>
 
-      {finalYTIdsList.length > 0 ? (
-        <Video yTvideoId={finalYTIdsList[currentVideoIndex]} />
+       {/* Input for current video's text */}
+      {finalYTList.length > 0 && (
+  <input
+    type="text"
+    style={{fontSize:"40px"}}
+    value={finalYTList[currentVideoIndex]?.timeText || ""}
+    placeholder="Dowolny tekst"
+    onChange={(e) => {
+      const updatedList = [...finalYTList];
+      updatedList[currentVideoIndex] = {
+        ...updatedList[currentVideoIndex],
+        timeText: e.target.value,
+      };
+      setFinalYTList(updatedList);
+    }}
+  />
+)}
+
+      {finalYTList.length > 0 ? (
+        <Video yTvideoId={finalYTList[currentVideoIndex].yTvideoId} />
       ) : (
         <p>No videos in the playlist</p>
       )}
 
+      {/* Navigation buttons */}
       <div css={playlistCss.buttons}>
         <button
           css={[universalCss.button(true), universalCss.container]}
           onClick={handlePrevVideo}
-          disabled={finalYTIdsList.length === 0}
+          disabled={finalYTList.length === 0}
         >
           <TiArrowLeftThick />
         </button>
         <button
           css={[universalCss.button(true), universalCss.container]}
           onClick={handleNextVideo}
-          disabled={finalYTIdsList.length === 0}
+          disabled={finalYTList.length === 0}
         >
           <TiArrowRightThick />
         </button>
@@ -118,13 +339,13 @@ const Playlist = ({
         <button
           css={[universalCss.button(true), universalCss.container]}
           onClick={handleDeleteCurrentVideo}
-          disabled={finalYTIdsList.length === 0}
+          disabled={finalYTList.length === 0}
         >
           <RiDeleteBin7Fill />
         </button>
       </div>
 
-      {/* Input field to add new video */}
+      {/* Input to add new video (without text) */}
       <div>
         <input
           css={[universalCss.container, { color: "#3b3b3b" }]}
@@ -134,16 +355,14 @@ const Playlist = ({
           onChange={(e) => setNewVideoID(e.target.value)}
         />
         <button
-          css={[
-            universalCss.button(true),
-            universalCss.container,
-            { width: "max-content" },
-          ]}
+          css={[universalCss.button(true), universalCss.container, { width: "max-content" }]}
           onClick={handleAddVideo}
         >
           <TiPlus />
         </button>
       </div>
+
+     
     </div>
   );
 };

@@ -1596,334 +1596,281 @@ export const hardcodedEventsBecauseOfTheLackOfTime: AppDataOfCurrentUser = {
       "energy-level-based": {
         playlists: [
           {
-            name: "Treść - W tle, dla towarzystwa".replace(/\s+/g, "_"),
+            name: "Rano - Wstawanko & Łazienka (Bardzo stymulujace, żeby nie myslec o procesie łazienkowym - np. corridor crew)".replace(/\s+/g, "_"),
             imagePath:
-              "https://i.fbcd.co/products/original/b2afafafae3488aff0c4d4078eb2538e5d6cae3f18e5a16bbf7ee291200a3947.jpg",
+              "https://i.redd.it/q3gx68g0c3k11.jpg",
             ytVideoIds: [],
             thirdPartyLinks: [
-              {
-                title: "Ewronik - gaming z ekipą",
-                imageOrGifPath:
-                  "https://play-lh.googleusercontent.com/QLQzL-MXtxKEDlbhrQCDw-REiDsA9glUH4m16syfar_KVLRXlzOhN7tmAceiPerv4Jg",
-                linkURL:
-                  "https://www.twitch.tv/ewroon/videos?filter=all&sort=time",
-              },
-              {
-                title: "Graham Norton Show",
-                imageOrGifPath:
-                  "https://ichef.bbci.co.uk/images/ic/1200x675/p080f5wc.jpg",
-                linkURL: "https://www.dailymotion.com/tgnshow/playlists",
-              },
+              // {
+              //   title: "Ewronik - gaming z ekipą",
+              //   imageOrGifPath:
+              //     "https://play-lh.googleusercontent.com/QLQzL-MXtxKEDlbhrQCDw-REiDsA9glUH4m16syfar_KVLRXlzOhN7tmAceiPerv4Jg",
+              //   linkURL:
+              //     "https://www.twitch.tv/ewroon/videos?filter=all&sort=time",
+              // },
+              // {
+              //   title: "Graham Norton Show",
+              //   imageOrGifPath:
+              //     "https://ichef.bbci.co.uk/images/ic/1200x675/p080f5wc.jpg",
+              //   linkURL: "https://www.dailymotion.com/tgnshow/playlists",
+              // },
             ],
           },
           {
-            name: "Treść - Wypoczęty - oczy i uszy".replace(/\s+/g, "_"),
+            name: "W ciągu dnia - Papu / Przerwunie (Good friendly vibebezpod niemyślenie o queście na chwilkę, bez tak dużej stymulacji, żeby nie chcialo sie wrócić do questu zprzed papu - np. dimension 20 / acq inc)".replace(/\s+/g, "_"),
             imagePath:
-              "https://icon-library.com/images/watch-tv-icon/watch-tv-icon-6.jpg",
+              "https://m.media-amazon.com/images/S/pv-target-images/dcae4c4c63eb1daa04dc8dcee5c7fcdb563b5426ecd6570289f204a8dc3bb48f._SX1080_FMjpg_.jpg",
             ytVideoIds: [
-              "dQmBxZjs6F8",
-              "cXjwcAUkTCk",
-              "cLj2vtkxkrw",
-              "xomkXByoxbk",
-              "xdiQvzhUzCE",
-              "byhxlzd_T1g",
-              "PrJnohpcYJk",
-              "zbPBOUdoJOc",
-              "f-HtO4vgvbI",
-              "lAOSPJsVFGI",
-              "1M79geszEko",
-              "R9oQrrtQSgw",
-              "aA3ggnJX2Vk",
-              "8LOs63lPUrA",
-              "ivlAapZhDlE",
-              "q5mz6NNvM7k",
+              
             ],
             thirdPartyLinks: [],
           },
 
           {
-            name: "Treść - Wypoczęty - uszy".replace(/\s+/g, "_"),
-            imagePath: "https://static.thenounproject.com/png/2296288-200.png",
-            ytVideoIds: [
-              "yXmI1gOQ7uM",
-              "kazDL45hXag",
-              "cY9FSbG5cso",
-              "O0xvu0daFfs",
-              "LXk5BwBejUc",
-              "sWRiI6q3N",
-              "soVx5FAqCgs",
-              "yXmI1gOQ7uM",
-              "kazDL45hXag",
-              "cY9FSbG5cso",
-              "t9GCXZOTUME",
-              "n0tkcsvxPh0",
-              "klbq9iakmuI",
-              "kc75oDGFWOk",
-              "H8huYWCJBFM",
-              "jzn8PL3lA4Q",
-              "4WYsRbuGbX0",
-              "ZgZ7R_8xY0A",
-              "HSYozrAzOzc",
-              "JDcLwmraccw",
-              "YWgFzC6hF2Y",
-              "0iCf28jaFs8",
-              "iwzgXl8qrFM",
-              "a4tzWAign9U",
-              "5hZgGTOYYJM",
-              "bUxxNKAt-G0",
-              "dAR_wfti6NU",
-              "drXR_8x3XDg",
-              "ScMOzV-P0-w",
-              "X5rR2F78_Tk",
-              "_uProYGXHa4",
-              "hqXBRErNKcc",
-              "zt6i6vVgiO4",
-              "OqlPU1CKEpI",
-              "0JLvspXC77s",
-              "G7Mb03MJvDA",
-              "r4Tnhnn45Vg",
-            ],
-            thirdPartyLinks: [
-              {
-                title: "Audiobook - Ziemiomorze",
-                imageOrGifPath:
-                  "https://play-lh.googleusercontent.com/E7Son8NCq7CSqiberd-FabMUehC3DqCSvp_ow5qzHbu9ZshPq_xnwx_guf2S8g4ErMM",
-                linkURL:
-                  "https://audioteka.com/pl/search/cycle?query=Ziemiomorze",
-              },
-            ],
-          },
-
-          {
-            name: "Treść - Braindead - oczy i uszy".replace(/\s+/g, "_"),
-            imagePath:
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3ZvxUQRsOMiM99rCuaE0zpyh4JaSbVLFgwWt7ruP_7Vngn_QZ7ECJZIAXFn12duQIZWc&usqp=CAU",
-            ytVideoIds: [],
-            thirdPartyLinks: [],
-          },
-
-          {
-            name: "Treść - Braindead - uszy".replace(/\s+/g, "_"),
-            imagePath:
-              "https://upload.wikimedia.org/wikipedia/commons/3/32/Audioplay_icon.svg",
-            ytVideoIds: [],
-            thirdPartyLinks: [],
-          },
-
-          {
-            name: "Muzyka - Uzupełniacz momentu - Cisza doprawiona ambientem".replace(
-              /\s+/g,
-              "_"
-            ),
-            imagePath:
-              "https://cdn-icons-png.flaticon.com/512/2823/2823511.png",
-            ytVideoIds: [
-              "XxEhuSJF780",
-              "Kodqwraxa1I",
-              "Z8ANihFXlgU",
-              "s_i4s2yL8T0",
-            ],
-            thirdPartyLinks: [],
-          },
-
-          {
-            name: "Muzyka - Uzupełniacz momentu - Rytmiczne niskie tony".replace(
-              /\s+/g,
-              "_"
-            ),
-            imagePath: "https://cdn-icons-png.freepik.com/512/2653/2653928.png",
-            ytVideoIds: ["Z8ANihFXlgU", "s_i4s2yL8T0"],
-            thirdPartyLinks: [],
-          },
-
-          {
-            name: "Muzyka - Uzupełniacz momentu - Średnie tony instrumentalne, spokojne".replace(
-              /\s+/g,
-              "_"
-            ),
-            imagePath: "https://cdn-icons-png.freepik.com/512/1597/1597789.png",
-            ytVideoIds: ["6l_lLA-Ytls", "WUhMLw6vq8g", "_BroK8h0eZg"],
-            thirdPartyLinks: [
-              {
-                title: "Spotify",
-                imageOrGifPath:
-                  "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
-                linkURL:
-                  "https://open.spotify.com/track/4jNQkWhuzqrbqQuqanFFJ6?si=8ea25551086e4f3b",
-              },
-            ],
-          },
-
-          {
-            name: "Muzyka - Booster siły - Średnie tony instrumentalne, rozkręcające się".replace(
-              /\s+/g,
-              "_"
-            ),
-            imagePath:
-              "https://static.vecteezy.com/system/resources/previews/014/601/654/original/violin-icon-free-vector.jpg",
-            ytVideoIds: ["a3pz0OOhfEk", "d7ON2yxxAWY", "80IhjDsVVQc"],
-            thirdPartyLinks: [],
-          },
-
-          {
-            name: "Muzyka - Booster siły - Średnie tony wokalne, z pierdolnięciem".replace(
-              /\s+/g,
-              "_"
-            ),
-            imagePath:
-              "https://static.vecteezy.com/system/resources/previews/005/738/986/original/modern-shape-wolf-howl-logo-symbol-icon-illustration-graphic-design-vector.jpg",
-            ytVideoIds: ["gCYcHz2k5x0"],
-            thirdPartyLinks: [
-              {
-                title: "Spotify",
-                imageOrGifPath:
-                  "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
-                linkURL:
-                  "https://open.spotify.com/playlist/4OqKhqHMeT1vdurU3xEmdR?si=600abb2d9ea14989",
-              },
-              {
-                title: "Spotify",
-                imageOrGifPath:
-                  "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
-                linkURL:
-                  "https://open.spotify.com/playlist/7u4oojYRzMXigiexbycYSi?si=b43d140e54df498a",
-              },
-              {
-                title: "Spotify",
-                imageOrGifPath:
-                  "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
-                linkURL:
-                  "https://open.spotify.com/playlist/4t0fKkZM4hKVP9ykjHabmu?si=76c09a3f55ac4b0b",
-              },
-              {
-                title: "Spotify",
-                imageOrGifPath:
-                  "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
-                linkURL:
-                  "https://open.spotify.com/playlist/4ebfRcRErLsu1YUQJOYS4q?si=baa15067ea954477",
-              },
-              {
-                title: "Spotify",
-                imageOrGifPath:
-                  "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
-                linkURL:
-                  "https://open.spotify.com/playlist/4Bd7OJIYL2gvi7IDMVFkps?si=e1365fa95236456a",
-              },
-              {
-                title: "Spotify",
-                imageOrGifPath:
-                  "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
-                linkURL:
-                  "https://open.spotify.com/playlist/0qXIN56lvg0gbpXYQBIOvO?si=b5832da2ed36434c",
-              },
-              {
-                title: "Spotify",
-                imageOrGifPath:
-                  "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
-                linkURL:
-                  "https://open.spotify.com/playlist/3QdcEI8NTPhJPXPADdzFbI?si=2ae774d6bde94c8f",
-              },
-            ],
-          },
-
-          {
-            name: "Muzyka - Ostatni bastion wyiskrzenia mocy - Rapsy słowem wyrywające".replace(
-              /\s+/g,
-              "_"
-            ),
-            imagePath:
-              "https://previews.123rf.com/images/premiumdesign/premiumdesign1209/premiumdesign120900010/15115437-bear-roar.jpg",
+            name: "Wieczór - Łazienka & Nocna warta (Ultraciekawiące mnie słuchowiska - Krzysztof Maj, Lotek podcast etc.)".replace(/\s+/g, "_"),
+            imagePath: "https://i.pinimg.com/736x/9e/7c/30/9e7c30bfada9b402e770fdefdc11a8e9.jpg",
             ytVideoIds: [],
             thirdPartyLinks: [
-              {
-                title: "Spotify",
-                imageOrGifPath:
-                  "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
-                linkURL:
-                  "https://open.spotify.com/playlist/5YKbFmAlZpqb6Yu2HXdQn1?si=27a0715b95e74f73",
-              },
-              {
-                title: "Spotify",
-                imageOrGifPath:
-                  "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
-                linkURL:
-                  "https://open.spotify.com/playlist/6JyDsPPVMMsUBcqRImKP0E?si=8dcc61fca0724a33",
-              },
+              // {
+              //   title: "Audiobook - Ziemiomorze",
+              //   imageOrGifPath:
+              //     "https://play-lh.googleusercontent.com/E7Son8NCq7CSqiberd-FabMUehC3DqCSvp_ow5qzHbu9ZshPq_xnwx_guf2S8g4ErMM",
+              //   linkURL:
+              //     "https://audioteka.com/pl/search/cycle?query=Ziemiomorze",
+              // },
             ],
           },
 
-          {
-            name: "Muzyka - Ostatni bastion wyiskrzenia mocy - Bangers & Karaoke".replace(
-              /\s+/g,
-              "_"
-            ),
-            imagePath:
-              "https://www.shutterstock.com/image-vector/angry-tiger-roaring-vector-art-600w-2324265285.jpg",
-            ytVideoIds: [],
-            thirdPartyLinks: [
-              {
-                title: "Spotify",
-                imageOrGifPath:
-                  "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
-                linkURL:
-                  "https://open.spotify.com/playlist/6uXoc49RxVQ5MuVynGPTK3?si=2a905705f8084cff",
-              },
+          // {
+          //   name: "Treść - Braindead - oczy i uszy".replace(/\s+/g, "_"),
+          //   imagePath:
+          //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3ZvxUQRsOMiM99rCuaE0zpyh4JaSbVLFgwWt7ruP_7Vngn_QZ7ECJZIAXFn12duQIZWc&usqp=CAU",
+          //   ytVideoIds: [],
+          //   thirdPartyLinks: [],
+          // },
 
-              {
-                title: "Spotify",
-                imageOrGifPath:
-                  "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
-                linkURL:
-                  "https://open.spotify.com/playlist/41lv5bRYJQYOboGwBZ5RTs?si=b1d5838965e14b9a",
-              },
-            ],
-          },
+          // {
+          //   name: "Treść - Braindead - uszy".replace(/\s+/g, "_"),
+          //   imagePath:
+          //     "https://upload.wikimedia.org/wikipedia/commons/3/32/Audioplay_icon.svg",
+          //   ytVideoIds: [],
+          //   thirdPartyLinks: [],
+          // },
 
-          {
-            name: "Zagłuszacz - Niskie FQ".replace(/\s+/g, "_"),
-            imagePath: "https://static.thenounproject.com/png/2349204-200.png",
-            ytVideoIds: [],
-            thirdPartyLinks: [],
-          },
+          // {
+          //   name: "Muzyka - Uzupełniacz momentu - Cisza doprawiona ambientem".replace(
+          //     /\s+/g,
+          //     "_"
+          //   ),
+          //   imagePath:
+          //     "https://cdn-icons-png.flaticon.com/512/2823/2823511.png",
+          //   ytVideoIds: [
+          //     "XxEhuSJF780",
+          //     "Kodqwraxa1I",
+          //     "Z8ANihFXlgU",
+          //     "s_i4s2yL8T0",
+          //   ],
+          //   thirdPartyLinks: [],
+          // },
 
-          {
-            name: "Zagłuszacz - Średnie FQ".replace(/\s+/g, "_"),
-            imagePath: "https://static.thenounproject.com/png/156688-200.png",
-            ytVideoIds: [],
-            thirdPartyLinks: [
-              {
-                title: "Spotify",
-                imageOrGifPath:
-                  "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
-                linkURL:
-                  "https://open.spotify.com/track/06MHkVkRCnyzsTCk0XhqMR?si=4b5adfda706a4b06",
-              },
+          // {
+          //   name: "Muzyka - Uzupełniacz momentu - Rytmiczne niskie tony".replace(
+          //     /\s+/g,
+          //     "_"
+          //   ),
+          //   imagePath: "https://cdn-icons-png.freepik.com/512/2653/2653928.png",
+          //   ytVideoIds: ["Z8ANihFXlgU", "s_i4s2yL8T0"],
+          //   thirdPartyLinks: [],
+          // },
 
-              {
-                title: "Spotify",
-                imageOrGifPath:
-                  "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
-                linkURL:
-                  "https://open.spotify.com/track/0tK5Zvy4HttHXp9ldVm0EV?si=a3aa0e08291c42e5",
-              },
-            ],
-          },
+          // {
+          //   name: "Muzyka - Uzupełniacz momentu - Średnie tony instrumentalne, spokojne".replace(
+          //     /\s+/g,
+          //     "_"
+          //   ),
+          //   imagePath: "https://cdn-icons-png.freepik.com/512/1597/1597789.png",
+          //   ytVideoIds: ["6l_lLA-Ytls", "WUhMLw6vq8g", "_BroK8h0eZg"],
+          //   thirdPartyLinks: [
+          //     {
+          //       title: "Spotify",
+          //       imageOrGifPath:
+          //         "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+          //       linkURL:
+          //         "https://open.spotify.com/track/4jNQkWhuzqrbqQuqanFFJ6?si=8ea25551086e4f3b",
+          //     },
+          //   ],
+          // },
 
-          {
-            name: "Zagłuszacz - Wysokie FQ".replace(/\s+/g, "_"),
-            imagePath:
-              "https://cdn1.iconfinder.com/data/icons/car-parts-14/32/Car_automobile_music_load_speaker-512.png",
-            ytVideoIds: [],
-            thirdPartyLinks: [
-              {
-                title: "Spotify",
-                imageOrGifPath:
-                  "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
-                linkURL:
-                  "https://open.spotify.com/track/5Y3bt7xbhZwwHfTPK5hWEg?si=ac6309c16d374293",
-              },
-            ],
-          },
+          // {
+          //   name: "Muzyka - Booster siły - Średnie tony instrumentalne, rozkręcające się".replace(
+          //     /\s+/g,
+          //     "_"
+          //   ),
+          //   imagePath:
+          //     "https://static.vecteezy.com/system/resources/previews/014/601/654/original/violin-icon-free-vector.jpg",
+          //   ytVideoIds: ["a3pz0OOhfEk", "d7ON2yxxAWY", "80IhjDsVVQc"],
+          //   thirdPartyLinks: [],
+          // },
+
+          // {
+          //   name: "Muzyka - Booster siły - Średnie tony wokalne, z pierdolnięciem".replace(
+          //     /\s+/g,
+          //     "_"
+          //   ),
+          //   imagePath:
+          //     "https://static.vecteezy.com/system/resources/previews/005/738/986/original/modern-shape-wolf-howl-logo-symbol-icon-illustration-graphic-design-vector.jpg",
+          //   ytVideoIds: ["gCYcHz2k5x0"],
+          //   thirdPartyLinks: [
+          //     {
+          //       title: "Spotify",
+          //       imageOrGifPath:
+          //         "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+          //       linkURL:
+          //         "https://open.spotify.com/playlist/4OqKhqHMeT1vdurU3xEmdR?si=600abb2d9ea14989",
+          //     },
+          //     {
+          //       title: "Spotify",
+          //       imageOrGifPath:
+          //         "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+          //       linkURL:
+          //         "https://open.spotify.com/playlist/7u4oojYRzMXigiexbycYSi?si=b43d140e54df498a",
+          //     },
+          //     {
+          //       title: "Spotify",
+          //       imageOrGifPath:
+          //         "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+          //       linkURL:
+          //         "https://open.spotify.com/playlist/4t0fKkZM4hKVP9ykjHabmu?si=76c09a3f55ac4b0b",
+          //     },
+          //     {
+          //       title: "Spotify",
+          //       imageOrGifPath:
+          //         "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+          //       linkURL:
+          //         "https://open.spotify.com/playlist/4ebfRcRErLsu1YUQJOYS4q?si=baa15067ea954477",
+          //     },
+          //     {
+          //       title: "Spotify",
+          //       imageOrGifPath:
+          //         "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+          //       linkURL:
+          //         "https://open.spotify.com/playlist/4Bd7OJIYL2gvi7IDMVFkps?si=e1365fa95236456a",
+          //     },
+          //     {
+          //       title: "Spotify",
+          //       imageOrGifPath:
+          //         "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+          //       linkURL:
+          //         "https://open.spotify.com/playlist/0qXIN56lvg0gbpXYQBIOvO?si=b5832da2ed36434c",
+          //     },
+          //     {
+          //       title: "Spotify",
+          //       imageOrGifPath:
+          //         "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+          //       linkURL:
+          //         "https://open.spotify.com/playlist/3QdcEI8NTPhJPXPADdzFbI?si=2ae774d6bde94c8f",
+          //     },
+          //   ],
+          // },
+
+          // {
+          //   name: "Muzyka - Ostatni bastion wyiskrzenia mocy - Rapsy słowem wyrywające".replace(
+          //     /\s+/g,
+          //     "_"
+          //   ),
+          //   imagePath:
+          //     "https://previews.123rf.com/images/premiumdesign/premiumdesign1209/premiumdesign120900010/15115437-bear-roar.jpg",
+          //   ytVideoIds: [],
+          //   thirdPartyLinks: [
+          //     {
+          //       title: "Spotify",
+          //       imageOrGifPath:
+          //         "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+          //       linkURL:
+          //         "https://open.spotify.com/playlist/5YKbFmAlZpqb6Yu2HXdQn1?si=27a0715b95e74f73",
+          //     },
+          //     {
+          //       title: "Spotify",
+          //       imageOrGifPath:
+          //         "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+          //       linkURL:
+          //         "https://open.spotify.com/playlist/6JyDsPPVMMsUBcqRImKP0E?si=8dcc61fca0724a33",
+          //     },
+          //   ],
+          // },
+
+          // {
+          //   name: "Muzyka - Ostatni bastion wyiskrzenia mocy - Bangers & Karaoke".replace(
+          //     /\s+/g,
+          //     "_"
+          //   ),
+          //   imagePath:
+          //     "https://www.shutterstock.com/image-vector/angry-tiger-roaring-vector-art-600w-2324265285.jpg",
+          //   ytVideoIds: [],
+          //   thirdPartyLinks: [
+          //     {
+          //       title: "Spotify",
+          //       imageOrGifPath:
+          //         "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+          //       linkURL:
+          //         "https://open.spotify.com/playlist/6uXoc49RxVQ5MuVynGPTK3?si=2a905705f8084cff",
+          //     },
+
+          //     {
+          //       title: "Spotify",
+          //       imageOrGifPath:
+          //         "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+          //       linkURL:
+          //         "https://open.spotify.com/playlist/41lv5bRYJQYOboGwBZ5RTs?si=b1d5838965e14b9a",
+          //     },
+          //   ],
+          // },
+
+          // {
+          //   name: "Zagłuszacz - Niskie FQ".replace(/\s+/g, "_"),
+          //   imagePath: "https://static.thenounproject.com/png/2349204-200.png",
+          //   ytVideoIds: [],
+          //   thirdPartyLinks: [],
+          // },
+
+          // {
+          //   name: "Zagłuszacz - Średnie FQ".replace(/\s+/g, "_"),
+          //   imagePath: "https://static.thenounproject.com/png/156688-200.png",
+          //   ytVideoIds: [],
+          //   thirdPartyLinks: [
+          //     {
+          //       title: "Spotify",
+          //       imageOrGifPath:
+          //         "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+          //       linkURL:
+          //         "https://open.spotify.com/track/06MHkVkRCnyzsTCk0XhqMR?si=4b5adfda706a4b06",
+          //     },
+
+          //     {
+          //       title: "Spotify",
+          //       imageOrGifPath:
+          //         "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+          //       linkURL:
+          //         "https://open.spotify.com/track/0tK5Zvy4HttHXp9ldVm0EV?si=a3aa0e08291c42e5",
+          //     },
+          //   ],
+          // },
+
+          // {
+          //   name: "Zagłuszacz - Wysokie FQ".replace(/\s+/g, "_"),
+          //   imagePath:
+          //     "https://cdn1.iconfinder.com/data/icons/car-parts-14/32/Car_automobile_music_load_speaker-512.png",
+          //   ytVideoIds: [],
+          //   thirdPartyLinks: [
+          //     {
+          //       title: "Spotify",
+          //       imageOrGifPath:
+          //         "https://play-lh.googleusercontent.com/eN0IexSzxpUDMfFtm-OyM-nNs44Y74Q3k51bxAMhTvrTnuA4OGnTi_fodN4cl-XxDQc",
+          //       linkURL:
+          //         "https://open.spotify.com/track/5Y3bt7xbhZwwHfTPK5hWEg?si=ac6309c16d374293",
+          //     },
+          //   ],
+          // },
         ],
       },
     },
