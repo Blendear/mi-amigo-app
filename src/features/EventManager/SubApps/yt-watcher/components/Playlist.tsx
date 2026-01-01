@@ -166,6 +166,54 @@ const Playlist = ({ hardcodedListOfYouTubeVideoIDs, title }: MyTemporaryStyle) =
     <RiDeleteBin7Fill />
   </button>
 </div>
+<div
+  css={{
+    display: "grid",
+    gridTemplateColumns: "repeat(5, 1fr)", // 5 równych kolumn
+    gap: "1rem",
+  }}
+>
+  {/* <button
+    css={[universalCss.button(true), universalCss.container]}
+    onClick={() => setTimeout(() => window.location.reload(), 5 * 1 * 1000)}
+  >
+    5 sec
+  </button> */}
+  <button
+    css={[universalCss.button(true), universalCss.container]}
+    onClick={() => setTimeout(() => window.location.reload(), 5 * 60 * 1000)}
+  >
+    5 min
+  </button>
+
+  <button
+    css={[universalCss.button(true), universalCss.container]}
+    onClick={() => setTimeout(() => window.location.reload(), 10 * 60 * 1000)}
+  >
+    10 min
+  </button>
+
+  <button
+    css={[universalCss.button(true), universalCss.container]}
+    onClick={() => setTimeout(() => window.location.reload(), 15 * 60 * 1000)}
+  >
+    15 min
+  </button>
+
+  <button
+    css={[universalCss.button(true), universalCss.container]}
+    onClick={() => setTimeout(() => window.location.reload(), 30 * 60 * 1000)}
+  >
+    30 min
+  </button>
+
+  <button
+    css={[universalCss.button(true), universalCss.container]}
+    onClick={() => setTimeout(() => window.location.reload(), 60 * 60 * 1000)}
+  >
+    60 min
+  </button>
+</div>
 
       {/* Input to add new video (without text)
       <div>
