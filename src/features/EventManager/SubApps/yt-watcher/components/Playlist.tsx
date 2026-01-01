@@ -16,11 +16,10 @@ const playlistCss = {
     rowGap: "1rem",
     "& svg": { fontSize: "4rem" },
   }),
-  buttons: css({
+  controls: css({
     display: "grid",
-    gridTemplateColumns: "max-content max-content 1fr max-content",
+    gridTemplateColumns: "repeat(5, 1fr)", // 5 równych kolumn
     gap: "1rem",
-    "& > button": { width: "max-content" },
   }),
 };
 
@@ -85,9 +84,7 @@ const Playlist = ({ hardcodedListOfYouTubeVideoIDs, title }: MyTemporaryStyle) =
 
   return (
     <div css={playlistCss.container}>
-      <p css={{ color: "#3b3b3b", maxWidth: "300px",
-    whiteSpace: "normal",
-    overflowWrap: "break-word", }}>
+      <p css={{ color: "#3b3b3b",  }}>
         Video {finalYTList.length > 0 ? currentVideoIndex + 1 : 0} of{" "}
         {finalYTList.length}
       </p>
@@ -96,9 +93,9 @@ const Playlist = ({ hardcodedListOfYouTubeVideoIDs, title }: MyTemporaryStyle) =
       {finalYTList.length > 0 && (
   <input
     type="text"
-    style={{fontSize:"40px"}}
+    style={{fontSize:"20px"}}
     value={finalYTList[currentVideoIndex]?.timeText || ""}
-    placeholder="Dowolny tekst"
+    placeholder="00:00:00"
     onChange={(e) => {
       const updatedList = [...finalYTList];
       updatedList[currentVideoIndex] = {
@@ -117,32 +114,60 @@ const Playlist = ({ hardcodedListOfYouTubeVideoIDs, title }: MyTemporaryStyle) =
       )}
 
       {/* Navigation buttons */}
-      <div css={playlistCss.buttons}>
-        <button
-          css={[universalCss.button(true), universalCss.container]}
-          onClick={handlePrevVideo}
-          disabled={finalYTList.length === 0}
-        >
-          <TiArrowLeftThick />
-        </button>
-        <button
-          css={[universalCss.button(true), universalCss.container]}
-          onClick={handleNextVideo}
-          disabled={finalYTList.length === 0}
-        >
-          <TiArrowRightThick />
-        </button>
-        <div></div>
-        <button
-          css={[universalCss.button(true), universalCss.container]}
-          onClick={handleDeleteCurrentVideo}
-          disabled={finalYTList.length === 0}
-        >
-          <RiDeleteBin7Fill />
-        </button>
-      </div>
+      <div css={playlistCss.controls}>
 
-      {/* Input to add new video (without text) */}
+{/* 5. Input + przycisk dodawania */}
+  
+    <input
+      css={[universalCss.container, { textAlign: "center", aspectRatio: "1 / 1" }]}
+      type="text"
+      placeholder="ID"
+      value={newVideoID}
+      onChange={(e) => setNewVideoID(e.target.value)}
+    />
+    <button
+      css={[universalCss.button(true), universalCss.container, { aspectRatio: "1 / 1" }]}
+      onClick={handleAddVideo}
+    >
+      <TiPlus />
+    </button>
+  
+
+  {/* 1. Poprzednie wideo */}
+  <button
+    css={[universalCss.button(true), universalCss.container]}
+    onClick={handlePrevVideo}
+    disabled={finalYTList.length === 0}
+  >
+    <TiArrowLeftThick />
+  </button>
+
+  {/* 2. Następne wideo */}
+  <button
+    css={[universalCss.button(true), universalCss.container]}
+    onClick={handleNextVideo}
+    disabled={finalYTList.length === 0}
+  >
+    <TiArrowRightThick />
+  </button>
+
+  
+
+ 
+
+  
+
+   {/* 4. Usuń wideo */}
+  <button
+    css={[universalCss.button(true), universalCss.container]}
+    onClick={handleDeleteCurrentVideo}
+    disabled={finalYTList.length === 0}
+  >
+    <RiDeleteBin7Fill />
+  </button>
+</div>
+
+      {/* Input to add new video (without text)
       <div>
         <input
           css={[universalCss.container, { color: "#3b3b3b" }]}
@@ -157,7 +182,7 @@ const Playlist = ({ hardcodedListOfYouTubeVideoIDs, title }: MyTemporaryStyle) =
         >
           <TiPlus />
         </button>
-      </div>
+      </div> */}
 
      
     </div>
