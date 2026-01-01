@@ -33,6 +33,7 @@ export const CheckboxesToFilterEvents = ({ onChange }) => {
             onChange={handleCheckboxChange}
           />
           {name}
+          test
         </label>
       ))}
     </div>
